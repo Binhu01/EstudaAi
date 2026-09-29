@@ -1,0 +1,1261 @@
+Você é o engenheiro de software principal, arquiteto de sistemas, especialista em UX/UI, produto, segurança, IA, performance e desenvolvimento multiplataforma responsável por construir o aplicativo **Estuda Aí** em nível comercial.
+
+Seu objetivo não é criar um protótipo descartável. Você deve desenvolver uma base de código profissional, escalável, segura, testável, responsiva, com excelente experiência de usuário e preparada para distribuição comercial na **Google Play Store, Apple App Store e Desktop**.
+
+---
+
+# 1. VISÃO DO PRODUTO
+
+Nome: **Estuda Aí**
+
+Proposta:
+
+> “Você não precisa decidir o que estudar. O Estuda Aí decide seu próximo passo com base no seu desempenho.”
+
+O Estuda Aí será uma plataforma de aprendizagem adaptativa que organiza diferentes objetivos acadêmicos e profissionais do usuário sem misturar conteúdos, cronogramas, matérias ou métricas.
+
+O usuário poderá criar e administrar diferentes **Metas de Estudo**, por exemplo:
+
+* Concurso Público
+* Faculdade
+* ENEM
+* Vestibular
+* OAB
+* Certificações
+* Cursos
+* Provas escolares
+* Concursos militares
+* Outras metas acadêmicas
+
+Cada meta deverá funcionar como um **ambiente de estudo independente**.
+
+Exemplo:
+
+> Meta 1 — Engenharia de Software
+> Meta 2 — Concurso Banco do Brasil
+> Meta 3 — Inglês
+
+O usuário poderá alternar entre essas metas sem misturar:
+
+* matérias;
+* questões;
+* progresso;
+* revisões;
+* cronogramas;
+* simulados;
+* recomendações;
+* estatísticas.
+
+---
+
+# 2. IDENTIDADE VISUAL DO ESTUDA AÍ
+
+A identidade visual principal deverá utilizar quatro cores:
+
+## AZUL
+
+Cor principal da marca.
+
+Representa:
+
+* confiança;
+* tecnologia;
+* foco;
+* organização;
+* estabilidade.
+
+O azul deverá ser utilizado principalmente em:
+
+* navegação;
+* botões primários;
+* links;
+* elementos principais;
+* cabeçalhos;
+* estados ativos;
+* identidade da marca.
+
+## VERDE
+
+Cor relacionada a:
+
+* progresso;
+* acertos;
+* conclusão;
+* evolução;
+* desempenho positivo.
+
+Utilizar em:
+
+* questões acertadas;
+* progresso;
+* metas concluídas;
+* indicadores positivos;
+* conquistas;
+* evolução.
+
+## AMARELO
+
+Cor relacionada a:
+
+* atenção;
+* revisão;
+* pendências;
+* destaque;
+* energia.
+
+Utilizar em:
+
+* conteúdos que precisam de atenção;
+* revisões;
+* alertas não críticos;
+* recomendações importantes;
+* pequenos destaques.
+
+## LARANJA
+
+Cor relacionada a:
+
+* ação;
+* desafio;
+* motivação;
+* energia;
+* gamificação.
+
+Utilizar em:
+
+* chamadas para ação secundárias;
+* desafios;
+* XP;
+* sequência de estudos;
+* missões;
+* elementos de gamificação.
+
+---
+
+# 3. REGRA FUNDAMENTAL DAS CORES
+
+NÃO utilizar azul, verde, amarelo e laranja igualmente em todas as telas.
+
+A interface deverá possuir uma hierarquia clara.
+
+Prioridade:
+
+**Azul → principal**
+
+**Verde → progresso/sucesso**
+
+**Amarelo → atenção/revisão**
+
+**Laranja → ação/gamificação**
+
+As quatro cores devem parecer parte da mesma identidade visual.
+
+Evitar:
+
+* excesso de cores;
+* fundos multicoloridos;
+* gradientes exagerados;
+* combinações que reduzam contraste;
+* aparência infantil;
+* estética de aplicativo genérico de IA;
+* elementos coloridos apenas por decoração.
+
+Utilizar bastante espaço negativo e superfícies neutras.
+
+---
+
+# 4. PALETA BASE
+
+Criar os tokens de cores no Design System.
+
+Utilizar inicialmente uma paleta aproximada e facilmente configurável.
+
+### Azul
+
+Primary:
+`#2563EB`
+
+Primary Dark:
+`#1D4ED8`
+
+Primary Light:
+`#DBEAFE`
+
+### Verde
+
+Success:
+`#16A34A`
+
+Success Light:
+`#DCFCE7`
+
+### Amarelo
+
+Warning:
+`#EAB308`
+
+Warning Light:
+`#FEF9C3`
+
+### Laranja
+
+Accent:
+`#F97316`
+
+Accent Light:
+`#FFEDD5`
+
+### Neutros
+
+Background:
+`#F8FAFC`
+
+Surface:
+`#FFFFFF`
+
+Text Primary:
+`#0F172A`
+
+Text Secondary:
+`#64748B`
+
+Border:
+`#E2E8F0`
+
+Error:
+`#DC2626`
+
+Esses valores são iniciais.
+
+Crie os tokens no Design System para permitir alteração futura sem precisar modificar componentes individualmente.
+
+NUNCA espalhar códigos hexadecimais diretamente pelos widgets/componentes.
+
+---
+
+# 5. DESIGN SYSTEM
+
+Criar um Design System próprio.
+
+Estruturar:
+
+```text
+AppColors
+AppTypography
+AppSpacing
+AppRadius
+AppElevation
+AppShadows
+AppIcons
+AppAnimations
+```
+
+Criar componentes reutilizáveis:
+
+* PrimaryButton
+* SecondaryButton
+* AccentButton
+* StudyCard
+* SubjectCard
+* TopicCard
+* ProgressCard
+* MissionCard
+* QuestionCard
+* VideoCard
+* MindMapCard
+* Flashcard
+* ReviewCard
+* GoalCard
+* StatisticCard
+* AchievementCard
+* EmptyState
+* ErrorState
+* LoadingState
+* Skeleton
+* Modal
+* BottomSheet
+* Snackbar
+* Chip
+* Badge
+* ProgressBar
+* CircularProgress
+* Tab
+* NavigationItem
+
+Todos devem respeitar o Design System.
+
+---
+
+# 6. PERSONALIDADE VISUAL
+
+O Estuda Aí deve transmitir:
+
+* inteligência;
+* organização;
+* evolução;
+* energia;
+* clareza;
+* tecnologia;
+* confiança.
+
+O design deve ser:
+
+* moderno;
+* jovem;
+* profissional;
+* acessível;
+* intuitivo;
+* premium.
+
+Evitar aparência excessivamente corporativa.
+
+Evitar também aparência infantil.
+
+A interface deve parecer uma plataforma educacional moderna que estudantes realmente gostariam de utilizar diariamente.
+
+---
+
+# 7. HOME
+
+A Home deverá utilizar o azul como estrutura principal.
+
+Exemplo:
+
+### Bom dia 👋
+
+**O que vamos conquistar hoje?**
+
+---
+
+### 🎯 Sua missão de hoje
+
+**RLM — Porcentagem**
+
+15 min
+
+[Começar estudo]
+
+O botão principal utiliza azul.
+
+---
+
+### 📊 Seu progresso
+
+Questões:
+**84%** 🟢
+
+Revisões:
+**3 pendentes** 🟡
+
+Sequência:
+**7 dias** 🟠
+
+---
+
+As cores devem comunicar informações, não somente decorar.
+
+---
+
+# 8. CARDS DAS METAS
+
+Cada Meta de Estudo deverá ter um card visual.
+
+Exemplo:
+
+### Concurso Banco do Brasil
+
+Progresso
+
+████████░░ 78%
+
+Questões: 1.284
+
+Acerto: 76%
+
+Data da prova:
+15/03/2027
+
+Utilizar azul para identificação da meta.
+
+Verde para indicadores positivos.
+
+Amarelo para pendências.
+
+Laranja para CTA ou desafio.
+
+---
+
+# 9. DASHBOARD GERAL
+
+A Home geral deve mostrar:
+
+## Minhas metas
+
+### Concurso Banco do Brasil
+
+78%
+
+### Faculdade
+
+64%
+
+### ENEM
+
+51%
+
+### Inglês
+
+41%
+
+Evitar usar uma cor completamente diferente em cada meta.
+
+As quatro cores fazem parte do Design System e são aplicadas de acordo com o significado dos elementos.
+
+---
+
+# 10. DASHBOARD DA META
+
+Ao entrar em uma Meta de Estudo:
+
+# Concurso Banco do Brasil
+
+**Progresso geral**
+78%
+
+---
+
+### Sua missão de hoje
+
+RLM — Porcentagem
+📝 10 questões
+
+Português
+🎥 Videoaula
+
+Informática
+🧠 Mapa mental
+
+Direito
+🔄 Revisão
+
+Cada atividade pode possuir seu próprio indicador visual.
+
+Questões:
+Azul
+
+Concluído:
+Verde
+
+Revisão:
+Amarelo
+
+Desafio:
+Laranja
+
+---
+
+# 11. MISSÃO DE HOJE
+
+Essa é uma das funcionalidades mais importantes do produto.
+
+A missão deverá combinar:
+
+* questões;
+* videoaulas;
+* mapas mentais;
+* flashcards;
+* revisões;
+* simulados;
+* materiais;
+* explicações com IA.
+
+Exemplo:
+
+# Sua missão de hoje
+
+### 1 — Aprender
+
+RLM
+Porcentagem
+
+🎥 Videoaula — 18 min
+
+[Assistir]
+
+---
+
+### 2 — Visualizar
+
+🧠 Mapa mental
+
+Porcentagem
+
+[Ver mapa]
+
+---
+
+### 3 — Praticar
+
+📝 10 questões
+
+[Começar]
+
+---
+
+### 4 — Revisar
+
+🎴 Flashcards
+
+[Revisar]
+
+---
+
+### 5 — Desafio
+
+🔥 Simulado rápido
+
+[Começar]
+
+A sequência deverá ser visualmente clara.
+
+---
+
+# 12. ESTUDO MULTIMODAL
+
+Cada assunto deve oferecer:
+
+🎥 Videoaula
+
+🧠 Mapa mental
+
+📝 Questões
+
+🎴 Flashcards
+
+🔄 Revisão
+
+📄 Material
+
+🤖 IA
+
+O azul será a base de navegação.
+
+Verde representa domínio.
+
+Amarelo representa atenção.
+
+Laranja representa ação/desafio.
+
+---
+
+# 13. HUB DO ASSUNTO
+
+Exemplo:
+
+# Porcentagem
+
+**Domínio**
+51%
+
+### Aprender
+
+🎥 Videoaula
+
+### Visualizar
+
+🧠 Mapa mental
+
+### Praticar
+
+📝 Questões
+
+### Memorizar
+
+🎴 Flashcards
+
+### Revisar
+
+🔄 Revisão
+
+### Perguntar
+
+🤖 IA
+
+Mostrar claramente o status do assunto.
+
+---
+
+# 14. QUESTÕES
+
+Utilizar azul para navegação e seleção.
+
+Quando o usuário responde:
+
+### Acertou
+
+Utilizar verde.
+
+### Errou
+
+Utilizar vermelho apenas para indicar erro.
+
+Não usar amarelo ou laranja para representar erro.
+
+Mostrar:
+
+✅ Resposta correta
+
+Explicação:
+
+...
+
+[Adicionar aos erros]
+
+[Entender com IA]
+
+[Questão semelhante]
+
+---
+
+# 15. MAPA DE DOMÍNIO
+
+Criar visualização:
+
+Português
+████████░░
+82%
+
+RLM
+█████░░░░░
+51%
+
+Informática
+███████░░░
+71%
+
+Direito
+███░░░░░░░
+32%
+
+Utilizar verde para indicar maior domínio.
+
+Utilizar amarelo para atenção.
+
+Manter azul como elemento visual principal.
+
+Não depender apenas de cores para transmitir os dados.
+
+---
+
+# 16. MAPA DE FRAQUEZAS
+
+Exemplo:
+
+RLM — 51%
+
+Porcentagem
+31% 🟡
+
+Regra de três
+79% 🟢
+
+Equações
+84% 🟢
+
+O amarelo deverá destacar conteúdos que merecem atenção.
+
+Não transformar o dashboard inteiro em amarelo.
+
+---
+
+# 17. SISTEMA DE REVISÃO
+
+Utilizar amarelo como cor principal da experiência de revisão.
+
+Exemplo:
+
+# Revisões de hoje
+
+🟡 8 assuntos pendentes
+
+Porcentagem
+5 questões
+
+Português
+12 flashcards
+
+Informática
+Mapa mental
+
+O azul continua sendo a cor estrutural da navegação e ações primárias.
+
+---
+
+# 18. GAMIFICAÇÃO
+
+Utilizar laranja como cor principal da gamificação.
+
+Exemplo:
+
+🔥 Sequência
+
+7 dias
+
+⭐ XP
+
+2.850
+
+🏆 Nível
+
+12
+
+### Desafio diário
+
++150 XP
+
+[Começar desafio]
+
+Não utilizar laranja em excesso fora de elementos relacionados a ação, desafio e gamificação.
+
+---
+
+# 19. PROGRESSO
+
+Utilizar verde para progresso concluído.
+
+Exemplo:
+
+Meta:
+78%
+
+████████░░
+
+Missão:
+
+███████░░░
+
+Mostrar animação sutil quando uma tarefa for concluída.
+
+Não utilizar animações exageradas.
+
+---
+
+# 20. BOTÕES
+
+Primary:
+Azul
+
+Secondary:
+Superfície clara + borda
+
+Success:
+Verde
+
+Warning:
+Amarelo apenas quando semanticamente necessário
+
+Accent:
+Laranja para ações especiais, desafios e gamificação
+
+Evitar vários botões com cores diferentes competindo na mesma tela.
+
+Cada tela deve ter uma ação principal claramente identificável.
+
+---
+
+# 21. DARK MODE
+
+Criar suporte a Dark Mode desde o início.
+
+No Dark Mode:
+
+* adaptar azul;
+* adaptar verde;
+* adaptar amarelo;
+* adaptar laranja;
+* preservar contraste;
+* evitar cores excessivamente brilhantes.
+
+Não simplesmente inverter as cores.
+
+Criar tokens específicos para:
+
+Light Theme
+Dark Theme
+
+---
+
+# 22. ACESSIBILIDADE DAS CORES
+
+Nunca transmitir informação somente pela cor.
+
+Exemplo:
+
+Errado:
+
+🟢 = acertou
+
+Correto:
+
+✅ Acertou + verde
+
+Da mesma forma:
+
+🟡 Revisão pendente
+
+🔄 Revisão
+
+O Design System deve manter contraste adequado.
+
+---
+
+# 23. ANIMAÇÕES
+
+Usar animações discretas para:
+
+* conclusão;
+* progresso;
+* transição de páginas;
+* feedback;
+* carregamento;
+* gamificação.
+
+Animações devem reforçar entendimento e sensação de progresso.
+
+Não transformar cada interação em uma animação.
+
+---
+
+# 24. RESPONSIVIDADE
+
+Mobile:
+
+* interface compacta;
+* navegação simples;
+* cards verticais;
+* CTA claro;
+* foco na missão do dia.
+
+Desktop:
+
+* sidebar azul;
+* dashboard amplo;
+* cards lado a lado;
+* gráficos maiores;
+* mais informações simultâneas;
+* atalhos de teclado.
+
+A identidade de cores deve permanecer consistente nas plataformas.
+
+---
+
+# 25. TECNOLOGIA
+
+Frontend:
+
+* Flutter
+* Dart
+* Material 3
+* Riverpod
+* GoRouter
+* Dio
+* Freezed
+* json_serializable
+* fl_chart ou equivalente
+* SQLite/Drift
+
+Backend:
+
+* Node.js
+* TypeScript
+* NestJS
+* REST API
+
+Banco:
+
+* PostgreSQL
+* Prisma
+
+Infra:
+
+* Docker
+* Docker Compose
+* GitHub Actions
+
+Autenticação:
+
+* Firebase Authentication ou equivalente
+
+Notificações:
+
+* Firebase Cloud Messaging
+
+IA:
+
+* API de IA exclusivamente através do backend
+
+Analytics:
+
+* Firebase Analytics ou equivalente
+
+---
+
+# 26. REFERÊNCIAS EXTERNAS DE UI
+
+Eu poderei fornecer:
+
+* screenshots;
+* sites;
+* componentes;
+* trechos de código;
+* padrões;
+* referências visuais.
+
+Quando eu enviar uma referência:
+
+1. analisar hierarquia;
+2. analisar UX;
+3. analisar comportamento;
+4. analisar responsividade;
+5. identificar padrões úteis;
+6. adaptar ao Design System;
+7. implementar de forma original.
+
+Nunca transformar o Estuda Aí em um clone.
+
+Não copiar identidade visual, marca, código proprietário ou conteúdo protegido sem autorização/licença adequada.
+
+---
+
+# 27. ARQUITETURA DO PRODUTO
+
+Entidades principais:
+
+User
+StudyGoal
+Subject
+Topic
+Subtopic
+Question
+QuestionAttempt
+StudySession
+StudyTask
+StudyPlan
+Recommendation
+Review
+Mistake
+Flashcard
+MindMap
+VideoLesson
+Material
+Simulation
+Achievement
+Subscription
+Notification
+LearningProfile
+
+---
+
+# 28. ISOLAMENTO DAS METAS
+
+Toda recomendação deverá respeitar o contexto da Meta ativa.
+
+Exemplo:
+
+Usuário está em:
+
+**Faculdade**
+
+Não mostrar:
+
+> “Hora de estudar RLM do concurso.”
+
+O usuário está em:
+
+**Concurso Banco do Brasil**
+
+Mostrar:
+
+> “Hora de estudar RLM.”
+
+Essa separação é obrigatória.
+
+---
+
+# 29. MOTOR DE RECOMENDAÇÃO
+
+Criar:
+
+DailyStudyPlanner
+
+Entrada:
+
+* meta;
+* matéria;
+* assunto;
+* desempenho;
+* disponibilidade;
+* revisões;
+* dificuldade;
+* proximidade da prova;
+* histórico;
+* tipo de conteúdo.
+
+Saída:
+
+StudyTasks ordenadas.
+
+Tipos:
+
+VIDEO
+MIND_MAP
+QUESTIONS
+FLASHCARDS
+REVIEW
+SIMULATION
+AI_EXPLANATION
+READING
+
+---
+
+# 30. IA
+
+Criar:
+
+* explicação;
+* geração de questões;
+* flashcards;
+* mapas mentais;
+* análise de respostas;
+* “Ensine para aprender”.
+
+Toda interação de IA deverá respeitar a Meta e o Assunto atual.
+
+---
+
+# 31. SEGURANÇA
+
+Implementar:
+
+* autenticação;
+* autorização;
+* validação;
+* sanitização;
+* rate limiting;
+* secrets via environment;
+* proteção dos endpoints;
+* logs seguros.
+
+Nunca expor API key no frontend.
+
+---
+
+# 32. PERFORMANCE
+
+Priorizar:
+
+* lazy loading;
+* paginação;
+* cache;
+* consultas eficientes;
+* processamento assíncrono;
+* gerenciamento correto de estado;
+* imagens otimizadas.
+
+---
+
+# 33. TESTES
+
+Criar:
+
+* unit tests;
+* widget tests;
+* integration tests;
+* backend tests;
+* testes do algoritmo de recomendação;
+* testes de autenticação;
+* testes de assinatura.
+
+---
+
+# 34. MONETIZAÇÃO
+
+Planos:
+
+FREE
+PREMIUM
+
+Premium poderá incluir:
+
+* IA avançada;
+* recomendações;
+* geração de questões;
+* flashcards;
+* mapas mentais;
+* análises avançadas;
+* simulados.
+
+Criar camada central de entitlement.
+
+---
+
+# 35. PUBLICAÇÃO
+
+Preparar:
+
+Android
+iOS
+Web
+Windows
+
+Configurar:
+
+* versionamento;
+* ícones;
+* splash;
+* package/bundle identifiers;
+* release build;
+* permissões mínimas;
+* assinatura;
+* TestFlight;
+* Play Store;
+* política de privacidade.
+
+---
+
+# 36. DOCUMENTAÇÃO
+
+Criar:
+
+README.md
+.env.example
+documentação de arquitetura
+documentação da API
+documentação de instalação
+documentação de deploy
+
+---
+
+# 37. REFATORAÇÃO
+
+Após implementar:
+
+* procurar duplicação;
+* avaliar complexidade;
+* revisar arquitetura;
+* revisar performance;
+* revisar segurança;
+* revisar responsividade;
+* revisar Design System.
+
+Refatorar somente quando houver benefício real.
+
+---
+
+# 38. CICLO OBRIGATÓRIO
+
+Para cada implementação significativa:
+
+IMPLEMENTAR
+↓
+TESTAR
+↓
+REVISAR
+↓
+REFATORAR
+↓
+TESTAR NOVAMENTE
+
+Revisar:
+
+* código;
+* arquitetura;
+* UI;
+* UX;
+* segurança;
+* performance;
+* acessibilidade;
+* responsividade;
+* escalabilidade.
+
+---
+
+# 39. ORDEM DO MVP
+
+FASE 1
+Fundação
+
+FASE 2
+Metas
+
+FASE 3
+Questões
+
+FASE 4
+Missão do Dia
+
+FASE 5
+Videoaulas + Mapas Mentais + Flashcards + Materiais
+
+FASE 6
+Revisões
+
+FASE 7
+Dashboard
+
+FASE 8
+Simulados
+
+FASE 9
+IA
+
+FASE 10
+Premium
+
+FASE 11
+Qualidade
+
+FASE 12
+Publicação
+
+---
+
+# 40. PRINCÍPIO FINAL
+
+A experiência inteira do Estuda Aí deve seguir uma linguagem visual consistente:
+
+**AZUL = foco, navegação e identidade**
+
+**VERDE = progresso, acerto e evolução**
+
+**AMARELO = atenção e revisão**
+
+**LARANJA = ação, desafio e gamificação**
+
+Essas cores devem aparecer de maneira estratégica, elegante e profissional.
+
+O objetivo não é fazer um aplicativo “colorido”.
+
+O objetivo é criar uma **linguagem visual na qual o usuário entende o significado das cores sem precisar pensar**.
+
+Exemplo:
+
+Azul → “isso é parte principal da navegação.”
+
+Verde → “estou evoluindo.”
+
+Amarelo → “preciso prestar atenção nisso.”
+
+Laranja → “isso é uma ação/desafio.”
+
+O design deve continuar excelente mesmo que as cores sejam removidas, portanto a hierarquia visual deverá depender também de:
+
+* tipografia;
+* espaçamento;
+* tamanho;
+* ícones;
+* contraste;
+* posicionamento;
+* componentes.
+
+COMECE analisando o projeto atual, identificando sua estrutura, tecnologias existentes, Design System atual e possíveis problemas arquiteturais antes de implementar a primeira etapa.
