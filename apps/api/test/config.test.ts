@@ -7,6 +7,13 @@ test('Firebase REST key is optional but never exposed as a configuration error',
   assert.equal(readConfig(valid).firebaseWebApiKey, undefined);
   assert.equal(readConfig({...valid, FIREBASE_WEB_API_KEY:'server-only'}).firebaseWebApiKey, 'server-only');
 });
+test('Steve only enables a paired key/model and coherent daily limits', () => {
+  assert.equal(readConfig(valid).steveDailyLimit,10);
+  for (const extra of [{OPENAI_API_KEY:'SECRET'}, {STEVE_MODEL:'configured-model'}, {STEVE_DAILY_LIMIT:'0'}, {STEVE_DAILY_LIMIT:'2',STEVE_GLOBAL_DAILY_LIMIT:'1'}]) {
+    assert.throws(()=>readConfig({...valid,...extra}),(e:unknown)=>e instanceof Error && !e.message.includes('SECRET'));
+  }
+  assert.equal(readConfig({...valid,OPENAI_API_KEY:'server',STEVE_MODEL:'configured-model'}).steveModel,'configured-model');
+});
 test('configuration fails closed for missing values and never leaks their contents', () => {
   assert.throws(() => readConfig({}));
   assert.throws(() => readConfig({ ...valid, PORT: '0' }));

@@ -184,6 +184,229 @@
           "Me"
         ]
       }
+    },
+    "/v1/auth/register": {
+      "post": {
+        "operationId": "AuthController_register",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSessionDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos."
+          },
+          "401": {
+            "description": "Não foi possível autenticar com esses dados."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Autenticação temporariamente indisponível."
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/login": {
+      "post": {
+        "operationId": "AuthController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSessionDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos."
+          },
+          "401": {
+            "description": "Não foi possível autenticar com esses dados."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Autenticação temporariamente indisponível."
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/refresh": {
+      "post": {
+        "operationId": "AuthController_refresh",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSessionDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos."
+          },
+          "401": {
+            "description": "Não foi possível autenticar com esses dados."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Autenticação temporariamente indisponível."
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/password-reset": {
+      "post": {
+        "operationId": "AuthController_reset",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResetAcceptedDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Dados inválidos."
+          },
+          "401": {
+            "description": "Não foi possível autenticar com esses dados."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Autenticação temporariamente indisponível."
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/steve/messages": {
+      "post": {
+        "operationId": "SteveController_reply",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SteveInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SteveReplyDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Assunto, mensagem ou histórico inválidos."
+          },
+          "401": {
+            "description": "Entre na sua conta."
+          },
+          "413": {
+            "description": "Mensagem muito grande."
+          },
+          "429": {
+            "description": "Aguarde ou volte após a renovação da cota diária (resetAt)."
+          },
+          "503": {
+            "description": "Steve temporariamente indisponível."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "Steve"
+        ]
+      }
     }
   },
   "info": {
@@ -241,6 +464,7 @@
               "UNAUTHENTICATED",
               "FORBIDDEN",
               "NOT_FOUND",
+              "PAYLOAD_TOO_LARGE",
               "RATE_LIMITED",
               "UNAVAILABLE",
               "INTERNAL_ERROR"
@@ -283,6 +507,10 @@
       "CapabilitiesResponse": {
         "type": "object",
         "properties": {
+          "steve": {
+            "type": "boolean",
+            "example": true
+          },
           "advancedAi": {
             "type": "boolean",
             "example": false
@@ -297,9 +525,23 @@
           }
         },
         "required": [
+          "steve",
           "advancedAi",
           "generatedQuestions",
           "advancedAnalytics"
+        ]
+      },
+      "LimitsResponse": {
+        "type": "object",
+        "properties": {
+          "steveDailyMessages": {
+            "type": "number",
+            "example": 10,
+            "minimum": 1
+          }
+        },
+        "required": [
+          "steveDailyMessages"
         ]
       },
       "EntitlementsResponse": {
@@ -313,11 +555,247 @@
           },
           "capabilities": {
             "$ref": "#/components/schemas/CapabilitiesResponse"
+          },
+          "limits": {
+            "$ref": "#/components/schemas/LimitsResponse"
           }
         },
         "required": [
           "plan",
-          "capabilities"
+          "capabilities",
+          "limits"
+        ]
+      },
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 254
+          },
+          "password": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 128,
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "AuthSessionDto": {
+        "type": "object",
+        "properties": {
+          "idToken": {
+            "type": "string",
+            "readOnly": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "readOnly": true
+          },
+          "expiresInSeconds": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 86400
+          }
+        },
+        "required": [
+          "idToken",
+          "refreshToken",
+          "expiresInSeconds"
+        ]
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 254
+          },
+          "password": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "RefreshDto": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "maxLength": 8192,
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "refreshToken"
+        ]
+      },
+      "EmailDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 254
+          }
+        },
+        "required": [
+          "email"
+        ]
+      },
+      "ResetAcceptedDto": {
+        "type": "object",
+        "properties": {
+          "accepted": {
+            "type": "boolean",
+            "example": true
+          }
+        },
+        "required": [
+          "accepted"
+        ]
+      },
+      "ChatMessageDto": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "role",
+          "text"
+        ]
+      },
+      "SteveInputDto": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "enum": [
+              "porcentagem",
+              "interpretacao-texto",
+              "ecologia"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "history": {
+            "maxItems": 8,
+            "description": "Até 12.000 caracteres no total.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChatMessageDto"
+            }
+          }
+        },
+        "required": [
+          "topicId",
+          "message",
+          "history"
+        ]
+      },
+      "SourceDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "url"
+        ]
+      },
+      "QuotaDto": {
+        "type": "object",
+        "properties": {
+          "remaining": {
+            "type": "number",
+            "minimum": 0
+          },
+          "resetAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "remaining",
+          "resetAt"
+        ]
+      },
+      "SteveReplyDto": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "enum": [
+              "porcentagem",
+              "interpretacao-texto",
+              "ecologia"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "completed",
+              "refused",
+              "incomplete"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 16000
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceDto"
+            }
+          },
+          "quota": {
+            "$ref": "#/components/schemas/QuotaDto"
+          },
+          "requestId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "topicId",
+          "status",
+          "text",
+          "sources",
+          "quota",
+          "requestId"
         ]
       }
     }

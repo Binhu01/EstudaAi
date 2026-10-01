@@ -5,15 +5,23 @@ import { readConfig } from './config';
 import { PrismaDatabase } from './database/prisma';
 import { FirebaseIdentityVerifier } from './auth/firebase.identity';
 import { FirebaseRestAuth } from './auth/firebase-rest.auth';
+import { loadStudyCatalog } from './catalog/study-catalog';
+import { QuotaRepository } from './steve/quota.repository';
+import { SteveService } from './steve/steve.service';
+import { OpenAiSteveProvider } from './steve/openai.provider';
 
 async function bootstrap() {
   const config = readConfig(process.env);
   const firebase = initializeApp({ credential: applicationDefault(), projectId: config.firebaseProject });
   const database = new PrismaDatabase(config.databaseUrl);
   const identity = new FirebaseIdentityVerifier(getAuth(firebase));
+  const quota = new QuotaRepository(database,{userDaily:config.steveDailyLimit,globalDaily:config.steveGlobalDailyLimit});
+  const provider = config.openaiApiKey && config.steveModel ? new OpenAiSteveProvider(config.openaiApiKey,config.steveModel) : undefined;
   const app = await createApp({
     identity, users: database,
     auth: new FirebaseRestAuth(config.firebaseWebApiKey, identity),
+    steve: new SteveService(loadStudyCatalog(),quota,provider),
+    steveDailyLimit: config.steveDailyLimit,
     ready: () => database.ready(), origins: config.origins,
     log: (event) => process.stdout.write(JSON.stringify(event) + '\n'),
   });

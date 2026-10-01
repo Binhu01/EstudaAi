@@ -1,6 +1,7 @@
-export function freeEntitlements() {
+export function freeEntitlements(steveDailyMessages = 10) {
   return {
     plan: 'FREE' as const,
-    capabilities: { advancedAi: false, generatedQuestions: false, advancedAnalytics: false },
+    capabilities: { steve:true, advancedAi: false, generatedQuestions: false, advancedAnalytics: false },
+    limits: {steveDailyMessages},
   };
 }

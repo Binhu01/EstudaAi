@@ -5,7 +5,8 @@ import { SkipThrottle, ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler
 import { SwaggerModule, DocumentBuilder, ApiBearerAuth, ApiOkResponse, ApiProperty, ApiUnauthorizedResponse, ApiResponse } from '@nestjs/swagger';
 import helmet from 'helmet';
 import { randomUUID } from 'node:crypto';
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction, json } from 'express';
+import { SteveController } from './steve/steve.controller';
 import { AppDependencies, DEPENDENCIES } from './contracts';
 import { AuthController } from './auth/auth.controller';
 import { IpThrottlerGuard, UserThrottlerGuard } from './auth/rate.guards';
@@ -20,16 +21,19 @@ class ProfileResponse {
   @ApiProperty({ enum: ['FREE'] }) plan!: string;
 }
 class CapabilitiesResponse {
+  @ApiProperty({example:true}) steve!: boolean;
   @ApiProperty({ example: false }) advancedAi!: boolean;
   @ApiProperty({ example: false }) generatedQuestions!: boolean;
   @ApiProperty({ example: false }) advancedAnalytics!: boolean;
 }
+class LimitsResponse { @ApiProperty({example:10,minimum:1}) steveDailyMessages!: number; }
 class EntitlementsResponse {
   @ApiProperty({ enum: ['FREE'] }) plan!: string;
   @ApiProperty({ type: CapabilitiesResponse }) capabilities!: CapabilitiesResponse;
+  @ApiProperty({type:LimitsResponse}) limits!: LimitsResponse;
 }
 class SafeErrorResponse {
-  @ApiProperty({ enum: ['INVALID_INPUT', 'UNAUTHENTICATED', 'FORBIDDEN', 'NOT_FOUND', 'RATE_LIMITED', 'UNAVAILABLE', 'INTERNAL_ERROR'] }) code!: string;
+  @ApiProperty({ enum: ['INVALID_INPUT', 'UNAUTHENTICATED', 'FORBIDDEN', 'NOT_FOUND', 'PAYLOAD_TOO_LARGE', 'RATE_LIMITED', 'UNAVAILABLE', 'INTERNAL_ERROR'] }) code!: string;
   @ApiProperty({ description: 'Mensagem segura em português, sem detalhes internos.' }) message!: string;
   @ApiProperty({ format: 'uuid' }) requestId!: string;
 }
@@ -66,18 +70,19 @@ class HealthController {
 @ApiResponse({ status: 503, type: SafeErrorResponse, description: 'Validação de sessão temporariamente indisponível.' })
 @ApiResponse({ status: 500, type: SafeErrorResponse, description: 'Falha interna sem divulgação de detalhes.' })
 class MeController {
+  constructor(@Inject(DEPENDENCIES) private readonly dependencies:AppDependencies) {}
   @Get()
   @ApiOkResponse({ type: ProfileResponse })
   me(@Req() request: AuthenticatedRequest) { return { id: request.user.id, plan: 'FREE' }; }
   @Get('entitlements')
   @ApiOkResponse({ type: EntitlementsResponse })
-  entitlements() { return freeEntitlements(); }
+  entitlements() { return freeEntitlements(this.dependencies.steveDailyLimit); }
 }
 
 export async function createApp(dependencies: AppDependencies) {
   @Module({
     imports: [ThrottlerModule.forRoot([{ ttl: 60_000, limit: dependencies.rateLimit ?? 60 }])],
-    controllers: [HealthController, MeController, AuthController],
+    controllers: [HealthController, MeController, AuthController, SteveController],
     providers: [
       { provide: DEPENDENCIES, useValue: dependencies },
       { provide: APP_GUARD, useClass: IpThrottlerGuard },
@@ -86,7 +91,7 @@ export async function createApp(dependencies: AppDependencies) {
     ],
   })
   class AppModule {}
-  const app = await NestFactory.create(AppModule, { logger: false, bodyParser: true });
+  const app = await NestFactory.create(AppModule, { logger: false, bodyParser: false });
   app.getHttpAdapter().getInstance().disable('x-powered-by');
   app.use(helmet());
   app.use((request: Request, response: Response, next: NextFunction) => {
@@ -103,6 +108,7 @@ export async function createApp(dependencies: AppDependencies) {
     next();
   });
   app.enableCors({ origin: (origin: string | undefined, callback: (error: Error | null, allow?: boolean) => void) => callback(null, !origin || dependencies.origins.includes(origin)), credentials: false });
+  app.use(json({limit:'64kb'}));
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, transform: true }));
   app.useGlobalFilters(new SafeExceptionFilter());
   return app;

@@ -1,4 +1,5 @@
 export type Identity = Readonly<{ externalId: string }>;
+import type { SteveService } from './steve/steve.service';
 export type User = Readonly<{ id: string }>;
 export interface IdentityVerifier { verify(token: string): Promise<Identity>; }
 export interface UserRepository { resolve(externalId: string): Promise<User>; }
@@ -9,6 +10,8 @@ export interface AppDependencies {
   origins: string[];
   rateLimit?: number;
   auth?: AuthGateway;
+  steve?: SteveService;
+  steveDailyLimit?: number;
   log?: (event: Readonly<Record<string, unknown>>) => void;
 }
 import type { AuthGateway } from './auth/auth.gateway';

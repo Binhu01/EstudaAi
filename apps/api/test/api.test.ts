@@ -53,7 +53,7 @@ test('verified identity resolves server-owned user and never accepts Premium fro
     assert.equal(res.status, 200);
     assert.deepEqual(await res.json(), { id: 'internal-user', plan: 'FREE' });
     const entitlements = await f.get('/v1/me/entitlements', 'valid-token');
-    assert.deepEqual(await entitlements.json(), { plan: 'FREE', capabilities: { advancedAi: false, generatedQuestions: false, advancedAnalytics: false } });
+    assert.deepEqual(await entitlements.json(), { plan: 'FREE', capabilities: { steve:true, advancedAi: false, generatedQuestions: false, advancedAnalytics: false }, limits:{steveDailyMessages:10} });
   } finally { await f.app.close(); }
 });
 

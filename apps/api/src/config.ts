@@ -2,6 +2,10 @@ export interface Configuration {
   databaseUrl: string;
   firebaseProject: string;
   firebaseWebApiKey?: string;
+  openaiApiKey?: string;
+  steveModel?: string;
+  steveDailyLimit: number;
+  steveGlobalDailyLimit: number;
   origins: string[];
   port: number;
   production: boolean;
@@ -26,5 +30,13 @@ export function readConfig(env: NodeJS.ProcessEnv): Configuration {
   })) invalid('CORS_ORIGINS');
   if (production && env.FIREBASE_AUTH_EMULATOR_HOST) invalid('FIREBASE_AUTH_EMULATOR_HOST');
   const firebaseWebApiKey = env.FIREBASE_WEB_API_KEY?.trim() || undefined;
-  return { databaseUrl, firebaseProject, firebaseWebApiKey, origins, port, production };
+  const openaiApiKey = env.OPENAI_API_KEY?.trim() || undefined;
+  const steveModel = env.STEVE_MODEL?.trim() || undefined;
+  if (!!openaiApiKey !== !!steveModel) invalid('OPENAI_API_KEY / STEVE_MODEL');
+  if (steveModel && !/^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$/.test(steveModel)) invalid('STEVE_MODEL');
+  const steveDailyLimit = Number(env.STEVE_DAILY_LIMIT ?? 10);
+  const steveGlobalDailyLimit = Number(env.STEVE_GLOBAL_DAILY_LIMIT ?? 1000);
+  if (!Number.isSafeInteger(steveDailyLimit) || steveDailyLimit < 1 || steveDailyLimit > 1000) invalid('STEVE_DAILY_LIMIT');
+  if (!Number.isSafeInteger(steveGlobalDailyLimit) || steveGlobalDailyLimit < steveDailyLimit || steveGlobalDailyLimit > 100000) invalid('STEVE_GLOBAL_DAILY_LIMIT');
+  return { databaseUrl, firebaseProject, firebaseWebApiKey, openaiApiKey, steveModel, steveDailyLimit, steveGlobalDailyLimit, origins, port, production };
 }
