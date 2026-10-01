@@ -1,6 +1,6 @@
 # Evidências da experiência de estudo
 
-Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.47.5/Dart 3.13.4. Trabalho isolado em `codex/experiencia-estudo`, baseado na fundação `967b6a6`, no EstudaAi separado da AlmaPet.
+Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.47.5/Dart 3.13.4. Trabalho isolado em `codex/experiencia-estudo`, baseado na fundação `967b6a6`, no EstudaAi separado da AlmaPet. Integração local por fast-forward em `codex/estuda-ai-foundation`; geração dos modelos, formatação, análise, 35 testes API, 58 testes Flutter e build Web foram repetidos no checkout integrado. Nenhum push ou publicação.
 
 | Verificação executada | Resultado |
 | --- | --- |
@@ -13,10 +13,10 @@ Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.
 | `flutter build web --release --no-web-resources-cdn` | Build Web/shader/fontes/assets gerados |
 | `npm run test:visual` | Chromium 1440×1000, 360×800, 768×1024; tema, teclado, shader, persistência e reduced motion |
 | `npm run test:study` | Nove percursos por assunto/viewport, 45 questões, 18 seleções de aula/links externos; zero erro interno |
-| Catálogo Flutter/API/bundle Web | SHA256 idêntico: `9c06a46b7de8060c2cd6a4bb37d7bb816e2fb951bcd18a1cd8d1484eea91b790` |
+| Catálogo Flutter/API/bundle Web do checkout integrado | SHA256 idêntico: `116ab1a7daae5dff2782bd3dab6f659791bb5a1d7c674bc8e5752f11351bdff6` |
 | Docker/Compose e GitHub Actions | Preparados; execução remota não realizada |
 
-Web/testes usaram `FLUTTER_WINDOWS=false` no processo devido ao privilégio de symlink de plugins Windows indisponível. Não se alterou Developer Mode ou configuração global. Na fundação de 30/09, instalação pelo lock, geração Prisma/modelos e auditoria npm foram executadas; a consulta daquela data reportou zero advisories. Não foi feita nova auditoria nesta entrega.
+Web/testes usaram `FLUTTER_WINDOWS=false` no processo devido ao privilégio de symlink de plugins Windows indisponível. Não se alterou Developer Mode ou configuração global. O hash anterior do catálogo no worktree era `9c06a46b7de8060c2cd6a4bb37d7bb816e2fb951bcd18a1cd8d1484eea91b790`; o checkout Windows converteu finais de linha para CRLF, sem alterar o conteúdo JSON. As três cópias integradas são idênticas. O `main.dart.js` reconstruído no primário também é idêntico ao bundle validado no navegador. Na fundação de 30/09, instalação pelo lock, geração Prisma/modelos e auditoria npm foram executadas; a consulta daquela data reportou zero advisories. Não foi feita nova auditoria nesta entrega.
 
 ## Cobertura e natureza dos testes
 
