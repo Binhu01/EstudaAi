@@ -20,3 +20,4 @@ apps/client/ios/Pods/
 apps/client/ios/.symlinks/
 apps/client/ios/Flutter/ephemeral/
 apps/client/windows/flutter/ephemeral/
+.worktrees/
