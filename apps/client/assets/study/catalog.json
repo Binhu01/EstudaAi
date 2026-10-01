@@ -56,7 +56,7 @@
             "0,35%"
           ],
           "correctIndex": 1,
-          "explanation": "Para escrever um decimal em porcentagem, multiplicamos por 100: 0,35 × 100 = 35%."
+          "explanation": "0,35 equivale a 35/100, portanto 35%. Para obter a quantidade de pontos percentuais, multiplicamos o decimal por 100."
         },
         {
           "id": "porcentagem-q3",
@@ -104,7 +104,7 @@
             "15%"
           ],
           "correctIndex": 1,
-          "explanation": "O aumento de 30 é comparado ao valor inicial: 30 ÷ 120 × 100 = 25%."
+          "explanation": "O aumento de 30 é comparado ao valor inicial: 30 ÷ 120 = 0,25, equivalente a 25%."
         },
         {
           "id": "porcentagem-q7",
@@ -160,7 +160,7 @@
       "id": "interpretacao-texto",
       "title": "Interpretação de texto",
       "subject": "Português",
-      "level": "Fundamental e Ensino Médio",
+      "level": "Fundamental • revisão básica",
       "summary": "Leia as pistas, reconheça intenções e sustente suas conclusões no texto.",
       "notes": "Compreender um texto envolve localizar informações explícitas e fazer inferências apoiadas nas pistas e no contexto. Identifique finalidade, assunto central, referentes de pronomes e relações entre ideias. Conectores podem indicar causa, contraste ou consequência. Diferencie informação verificável de avaliação pessoal e evite conclusões sem evidências.",
       "sources": [
@@ -190,7 +190,7 @@
       "questions": [
         {
           "id": "interpretacao-q1",
-          "prompt": "Leia: “O céu escureceu. Lia guardou o livro e correu para casa.” O que o texto sugere?",
+          "prompt": "Leia: “Nuvens escuras cobriram o céu. Lia guardou o livro e correu para casa.” O que o texto sugere?",
           "options": [
             "Lia terminou um curso",
             "Lia perdeu o livro",
@@ -198,7 +198,7 @@
             "Lia foi à biblioteca"
           ],
           "correctIndex": 2,
-          "explanation": "O céu escurecendo e a pressa permitem inferir que Lia esperava chuva. Não é uma afirmação explícita."
+          "explanation": "As nuvens escuras e a pressa permitem inferir que Lia provavelmente esperava chuva. Não é uma afirmação explícita."
         },
         {
           "id": "interpretacao-q2",
@@ -380,7 +380,7 @@
         },
         {
           "id": "ecologia-q4",
-          "prompt": "Ao passar pelos níveis tróficos, a energia:",
+          "prompt": "Ao longo de uma cadeia alimentar, a energia disponível para o nível trófico seguinte:",
           "options": [
             "Aumenta sempre",
             "É reciclada integralmente",
@@ -388,7 +388,7 @@
             "Diminui, com parte dissipada como calor"
           ],
           "correctIndex": 3,
-          "explanation": "Há transferência de energia e dissipação como calor. Ela não retorna integralmente ao início da cadeia."
+          "explanation": "A energia se conserva, mas parte se transforma em calor e fica indisponível para a transferência ao nível seguinte. Ela não retorna integralmente ao início da cadeia."
         },
         {
           "id": "ecologia-q5",
