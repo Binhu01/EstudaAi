@@ -74,6 +74,10 @@ flutter:
     - assets/images/study-hero.webp
   shaders:
     - shaders/study_gradient.frag
+  fonts:
+    - family: PressStart2P
+      fonts:
+        - asset: assets/fonts/PressStart2P-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:

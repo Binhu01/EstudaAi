@@ -11,6 +11,20 @@ double contrast(Color a, Color b) {
 
 void main() {
   test(
+    'quiz alternatives preserve contrast without relying on color alone',
+    () {
+      for (var i = 0; i < 4; i++) {
+        expect(
+          contrast(
+            i == 2 ? AppColors.pixelInk : AppColors.white,
+            AppColors.quizAnswers[i],
+          ),
+          greaterThanOrEqualTo(4.5),
+        );
+      }
+    },
+  );
+  test(
     'text and semantic states preserve at least 4.5 contrast in both themes',
     () {
       for (final colors in [AppColors.light, AppColors.dark]) {

@@ -134,6 +134,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     icon: const Icon(Icons.play_circle_outline),
                     label: const Text('Aprender com videoaulas'),
                   ),
+                  const SizedBox(height: 12),
+                  OutlinedButton.icon(
+                    onPressed: () => context.go(
+                      '/desafios/${ref.read(learningProvider).topicId}',
+                    ),
+                    icon: const Icon(Icons.quiz_outlined),
+                    label: const Text('Jogar um desafio'),
+                  ),
                 ],
               ),
               const SizedBox(height: 48),

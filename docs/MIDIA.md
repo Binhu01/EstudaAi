@@ -1,4 +1,6 @@
 # Mídia e curadoria
+Fonte Press Start 2P, CodeMan38, distribuída localmente sob SIL Open Font License 1.1. [Origem](https://github.com/google/fonts/tree/main/ofl/pressstart2p); licença incluída em assets/fonts/OFL.txt. Avatar pixel de Steve e confete desenhados originalmente no aplicativo.
+
 Fotografia do hero: Zoshua Colah, “Student studies at a library with books”, Suzzallo Library. [Original](https://unsplash.com/photos/student-studies-at-a-library-with-books-klbApl9mxr0), [licença Unsplash](https://unsplash.com/license). Asset local WebP 1600 × 1067, 402.964 bytes, obtido em 01/10/2026. Sem carregamento remoto da fotografia no app.
 
 As seis videoaulas permanecem no YouTube, com autoria e link externo visíveis. IDs e incorporação foram verificados por metadados em 30/09/2026; a disponibilidade pode mudar. O app não baixa vídeos.

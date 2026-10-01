@@ -51,6 +51,14 @@ class AppColors {
   static const heroFallback = Color(0xFF17281F);
   static const heroScrimTop = Color(0xB8000000);
   static const heroScrimBottom = Color(0xDB000000);
+  static const pixelInk = Color(0xFF172033);
+  static const pixelViolet = Color(0xFF9F7AEA);
+  static const quizAnswers = [
+    Color(0xFFB91C1C),
+    Color(0xFF1D4ED8),
+    Color(0xFFFDE047),
+    Color(0xFF166534),
+  ];
   static const shaderYellow = Color(0xFFD6CE36);
   static const shaderBlue = Color(0xFF0000D8);
   static const shaderViolet = Color(0xFF9147FF);
@@ -152,6 +160,11 @@ abstract final class AppAnimations {
 }
 
 abstract final class AppTypography {
+  static const pixel = TextStyle(
+    fontFamily: 'PressStart2P',
+    fontSize: 12,
+    height: 1.8,
+  );
   static const textTheme = TextTheme(
     displaySmall: TextStyle(
       fontSize: 36,
