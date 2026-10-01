@@ -11,6 +11,22 @@ model User {
   externalId String @unique @db.VarChar(128)
   createdAt DateTime @default(now()) @db.Timestamptz(3)
   goals StudyGoal[]
+  aiReservations AiQuotaReservation[]
+}
+model AiDailyUsage {
+  dayUTC DateTime @db.Date
+  scope String @db.VarChar(64)
+  count Int @default(0)
+  @@id([dayUTC, scope])
+}
+model AiQuotaReservation {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  dayUTC DateTime @db.Date
+  releasedAt DateTime? @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId, dayUTC])
 }
 model StudyGoal {
   id String @id @default(uuid()) @db.Uuid

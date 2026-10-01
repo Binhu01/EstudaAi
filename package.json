@@ -18,6 +18,7 @@
   "scripts": {
     "build": "npm run build -w apps/api",
     "test": "npm test -w apps/api",
+    "test:pg:local": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/test-postgres.ps1",
     "dev:api": "npm run dev -w apps/api",
     "db:generate": "npm run db:generate -w apps/api",
     "db:deploy": "npm run db:deploy -w apps/api",

@@ -1,5 +1,8 @@
 import { ArgumentsHost, Catch, ExceptionFilter, HttpException } from '@nestjs/common';
 import { Response } from 'express';
+export class DailyQuotaExceeded extends HttpException {
+  constructor(readonly resetAt:string) { super('Limite diário atingido.',429); }
+}
 
 const errors: Record<number, readonly [string, string]> = {
   400: ['INVALID_INPUT', 'Verifique os dados enviados.'],
@@ -15,6 +18,11 @@ export class SafeExceptionFilter implements ExceptionFilter {
     const response = host.switchToHttp().getResponse<Response>();
     const status = error instanceof HttpException ? error.getStatus() : 500;
     const [code, message] = errors[status] ?? ['INTERNAL_ERROR', 'Não foi possível concluir esta ação.'];
+    if (error instanceof DailyQuotaExceeded) {
+      response.setHeader('retry-after',Math.max(1,Math.ceil((Date.parse(error.resetAt)-Date.now())/1000)));
+      response.status(429).json({code,message:'O limite diário do Steve foi atingido. Volte após a renovação da cota.',resetAt:error.resetAt,requestId:response.getHeader('x-request-id')});
+      return;
+    }
     response.status(status).json({ code, message, requestId: response.getHeader('x-request-id') });
   }
 }
