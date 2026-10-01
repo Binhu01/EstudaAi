@@ -23,7 +23,7 @@ export class FirebaseRestAuth implements AuthGateway {
         const message = typeof error?.message === 'string' ? error.message : '';
         if (reset && /^EMAIL_NOT_FOUND\b/.test(message)) return {};
         if (response.status === 429 || /^TOO_MANY_ATTEMPTS/.test(message)) throw new HttpException('Aguarde um momento.', 429);
-        if (/^(INVALID_LOGIN_CREDENTIALS|EMAIL_NOT_FOUND|INVALID_PASSWORD|INVALID_ID_TOKEN|TOKEN_EXPIRED|INVALID_REFRESH_TOKEN|USER_DISABLED|EMAIL_EXISTS|WEAK_PASSWORD|INVALID_EMAIL)\b/.test(message)) throw new UnauthorizedException();
+        if (/^(INVALID_LOGIN_CREDENTIALS|EMAIL_NOT_FOUND|INVALID_PASSWORD|INVALID_ID_TOKEN|TOKEN_EXPIRED|INVALID_REFRESH_TOKEN|USER_DISABLED|USER_NOT_FOUND|EMAIL_EXISTS|WEAK_PASSWORD|INVALID_EMAIL)\b/.test(message)) throw new UnauthorizedException();
         throw new ServiceUnavailableException();
       }
       return record;

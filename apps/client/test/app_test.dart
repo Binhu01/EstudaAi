@@ -10,6 +10,7 @@ import 'package:estuda_ai/features/settings/settings_controller.dart';
 import 'package:estuda_ai/features/learning/study_catalog.dart';
 import 'package:estuda_ai/features/learning/learning_controller.dart';
 import 'package:estuda_ai/features/learning/external_links.dart';
+import 'package:estuda_ai/features/steve/steve_controller.dart';
 
 Future<void> openApp(
   WidgetTester tester, {
@@ -17,6 +18,7 @@ Future<void> openApp(
   double scale = 1,
   Future<bool> Function(Uri)? openLink,
   Dio? dio,
+  DateTime Function()? steveClock,
 }) async {
   tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1;
@@ -32,6 +34,8 @@ Future<void> openApp(
         catalogProvider.overrideWith((ref) async => catalog!),
         if (openLink != null) externalLinkProvider.overrideWithValue(openLink),
         if (dio != null) dioProvider.overrideWithValue(dio),
+        if (steveClock != null)
+          steveClockProvider.overrideWithValue(steveClock),
       ],
       child: MediaQuery(
         data: MediaQueryData(size: size, textScaler: TextScaler.linear(scale)),

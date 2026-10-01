@@ -47,6 +47,21 @@ async function fixture() {
   await app.listen(0,'127.0.0.1');
   return {app, passwords, post: async (route: string, body: object) => fetch(await app.getUrl() + '/v1/auth/' + route, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})};
 }
+
+test('deleted Firebase user returns permanent 401 through the refresh HTTP contract', async () => {
+  const identity = { async verify() { throw Error('must not verify a deleted-user response'); } };
+  const auth = new FirebaseRestAuth('test-key', identity, async () =>
+    Response.json({error:{message:'USER_NOT_FOUND'}},{status:400}));
+  const app = await createApp({identity, auth, users:{async resolve(){throw Error('must not resolve');}}, ready:async()=>true,origins:[]});
+  await app.listen(0,'127.0.0.1');
+  try {
+    const res = await fetch(await app.getUrl()+'/v1/auth/refresh',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({refreshToken:'REFRESH.TEST'})});
+    assert.equal(res.status,401);
+    const error = await res.json();
+    assert.equal(error.code,'UNAUTHENTICATED');
+    assert.ok(!JSON.stringify(error).includes('USER_NOT_FOUND'));
+  } finally {await app.close();}
+});
 test('public authentication has a shared IP budget and a separate refresh budget', async () => {
   const f = await fixture();
   try {

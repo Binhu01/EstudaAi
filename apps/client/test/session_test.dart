@@ -46,6 +46,7 @@ void main() {
     controller.signOut();
     expect(await controller.accessToken(), isNull);
     expect(c.read(sessionProvider).status, SessionStatus.signedOut);
+    expect(c.read(sessionProvider).profile, isNull);
   });
   test('logout while refresh is pending never restores a session', () async {
     var now = DateTime.utc(2026, 10, 1);
@@ -110,6 +111,7 @@ void main() {
     status = 401;
     expect(await controller.accessToken(), isNull);
     expect(c.read(sessionProvider).status, SessionStatus.signedOut);
+    expect(c.read(sessionProvider).profile, isNull);
   });
   test('temporary profile failure can be resumed without claiming a verified student', () async {
     var meStatus = 503, logins = 0;

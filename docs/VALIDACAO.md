@@ -4,11 +4,11 @@ Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.
 
 | Verificação executada | Resultado |
 | --- | --- |
-| `npm test` | 34/34; build TypeScript e catálogo incluídos |
+| `npm test` | 35/35; build TypeScript e catálogo incluídos |
 | `npm run test:pg:local` | 1/1 integração Prisma/PostgreSQL 18, com múltiplos cenários concorrentes |
 | `npm run openapi` | Contrato Nest gerado sem listener/identidade simulada |
 | `dart format --output=none --set-exit-if-changed lib test` | Sem alterações pendentes |
-| `flutter test` | 56/56 |
+| `flutter test` | 58/58 |
 | `flutter analyze` | Nenhum achado |
 | `flutter build web --release --no-web-resources-cdn` | Build Web/shader/fontes/assets gerados |
 | `npm run test:visual` | Chromium 1440×1000, 360×800, 768×1024; tema, teclado, shader, persistência e reduced motion |
@@ -32,7 +32,7 @@ Web/testes usaram `FLUTTER_WINDOWS=false` no processo devido ao privilégio de s
 
 ## Navegador e fronteiras externas
 
-Relatórios em `artifacts/web-verification.json` e `artifacts/study-verification.json`; capturas em `artifacts/screenshots` e `artifacts/study`, ignorados pelo Git. Scripts reproduzíveis: `tools/verify-web.mjs` e `tools/verify-study.mjs`. Prévia `http://127.0.0.1:4173` enquanto o servidor estiver em execução; links de rotas Web usam `/#/aprender/porcentagem`, por exemplo.
+Relatórios em `artifacts/web-verification.json` e `artifacts/study-verification.json`; capturas em `artifacts/screenshots` e `artifacts/study`, ignorados pelo Git. A cópia preservada desta entrega no checkout primário está em `artifacts/2026-10-01-experiencia`, incluindo os registros de execução. Scripts reproduzíveis: `tools/verify-web.mjs` e `tools/verify-study.mjs`. Prévia `http://127.0.0.1:4173` enquanto o servidor estiver em execução; links de rotas Web usam `/#/aprender/porcentagem`, por exemplo.
 
 O roteiro verificou todos os seis iframes com ID/título corretos e abertura de URL YouTube em popup por gesto real, em cada viewport. Pedidos externos abortados ao trocar/dispor player são registrados separadamente; não provam indisponibilidade do vídeo nem reprodução. Inspeção adicional confirmou playback real da primeira aula de porcentagem, `TEhv11SkDUs`: após clicar “Assistir vídeo”, o tempo avançou de0 para6,2 e12,2 segundos, `paused=false`, `readyState=4`, sem erro de mídia. Capturas/estado estão em `artifacts/playback`. Não se generaliza essa reprodução para as outras cinco aulas ou aparelhos.
 
@@ -53,4 +53,6 @@ Não há homologação por leitor de tela real ou suíte completa de acessibilid
 
 ## Revisão final
 
-Revisão independente da branch em andamento após os testes. O registro será atualizado com achados e resolução antes da integração local.
+Revisão independente somente leitura do HEAD `b7407e6` identificou dois achados importantes e nenhum crítico/menor: refresh de usuário excluído devolvia503; saldo do chat permanecia anunciado como disponível após falha de tentativa e renovação UTC. Ambos foram reproduzidos antes da correção e resolvidos em uma passagem, com regressões HTTP/cliente e suíte completa verde. `USER_NOT_FOUND` agora devolve401 (conforme [Firebase REST](https://firebase.google.com/docs/reference/rest/auth#section-refresh-token)); o cliente já limpa a sessão em401. O saldo só volta a ser mostrado após confirmação válida do servidor, desaparece em envio/erro ou no reset, e a interface explica consumo de cota quando não chega resposta. Não se calcula reembolso no cliente.
+
+Serviços externos sem configuração, cinco playbacks não observados, builds nativos/containers/CI/deploy e proxies/múltiplas instâncias permanecem fora da evidência atual. A preferência “Animação de fundo” controla o fundo; rolagem do CTA respeita movimento reduzido do dispositivo. Decisões de execução e custos estão em [Decisões da entrega](DECISOES-ENTREGA.md). Nenhum achado menor foi adiado.

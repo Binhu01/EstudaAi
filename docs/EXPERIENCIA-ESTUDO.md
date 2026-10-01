@@ -22,7 +22,7 @@ O histórico enviado contém até quatro pares concluídos e no máximo12.000 ca
 
 Configure no servidor `OPENAI_API_KEY` junto com `STEVE_MODEL`; não há modelo padrão escolhido silenciosamente. A API usa Responses, `store:false`, até800 tokens de saída e prazo30s. Alguns modelos podem consumir o orçamento em raciocínio e responder incompleto. `store:false` desativa armazenamento recuperável de Responses; não constitui promessa geral de ausência de retenção pelo provedor.
 
-Há limite3 mensagens/minuto por usuário e uma chamada simultânea por instância, além da cota diária persistida (padrão10 por usuário/1000 global). A reserva é transacional no PostgreSQL e renova à meia-noite UTC. Só cancelamento antes do envio ao provedor devolve a reserva; timeout posterior pode consumir cota. A UI exibe o saldo retornado pelo servidor e a renovação em horário local quando o limite é atingido. Falha conserva a pergunta para edição/tentativa manual, sem criar uma resposta fictícia.
+Há limite3 mensagens/minuto por usuário e uma chamada simultânea por instância, além da cota diária persistida (padrão10 por usuário/1000 global). A reserva é transacional no PostgreSQL e renova à meia-noite UTC. Só cancelamento antes do envio ao provedor devolve a reserva; timeout posterior pode consumir cota. A UI exibe somente saldo confirmado pelo servidor antes de sua renovação; envio/falha ou chegada do reset retira o saldo antigo. A renovação do limite é mostrada em horário local. A interface explica que uma tentativa enviada pode consumir cota mesmo sem resposta. Falha conserva a pergunta para edição/tentativa manual, sem criar uma resposta fictícia.
 
 ## Configuração e verificação ao vivo
 

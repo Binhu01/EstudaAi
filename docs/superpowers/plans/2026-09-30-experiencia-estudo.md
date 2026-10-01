@@ -70,4 +70,4 @@ Steve HTTP: entrada `SteveInput={topicId:string,message:string,history:ChatMessa
 
 Cobertura: seções 1–2 da spec → contratos e A1; 3 → A2/A3; 4 → B1/B2; 5 → A1/A3; 6 → C1/D1; 7 → C2/C3/D2; 8–9 → D3; 10 → referências nos planos. Os cinco itens de Review Focus têm testes nomeados nas tarefas proprietárias. Valores e contratos têm uma definição comum; cada plano aponta para este índice. Não há decisões de produto pendentes.
 
-Estado: implementação A1–D2 concluída e verificada; D3 em verificação final. Evidências e fronteiras não verificadas estão em [Validação](../../VALIDACAO.md).
+Estado: implementação A1–D3 concluída e verificada. A revisão independente apontou dois achados importantes, corrigidos com regressões RED→GREEN e suítes completas de 35 testes API e 58 testes Flutter. Build Web e percursos em três viewports foram repetidos após as correções. Evidências e fronteiras não verificadas estão em [Validação](../../VALIDACAO.md).

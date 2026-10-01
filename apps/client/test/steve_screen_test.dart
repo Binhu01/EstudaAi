@@ -12,6 +12,50 @@ import 'auth_api_test.dart' show ScriptAdapter, jsonResponse, authResponse;
 import 'steve_api_test.dart' show steveResponse, testCatalog;
 
 void main() {
+  testWidgets(
+    'confirmed balance expires at renewal and the interface explains uncertain attempts',
+    (tester) async {
+      var now = DateTime.utc(2026, 10, 1, 23, 59, 50);
+      final dio = Dio()
+        ..httpClientAdapter = ScriptAdapter((r) async {
+          if (r.path.endsWith('/v1/me')) {
+            return jsonResponse({'id': 'internal', 'plan': 'FREE'});
+          }
+          if (r.path.endsWith('/messages')) {
+            return jsonResponse(steveResponse('porcentagem'));
+          }
+          return jsonResponse(authResponse('id-token', 3600));
+        });
+      await openApp(tester, dio: dio, steveClock: () => now);
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+      final c = ProviderScope.containerOf(
+        tester.element(find.byType(EstudaAiApp)),
+      );
+      await tester.runAsync(
+        () =>
+            c.read(sessionProvider.notifier).login('a@example.com', 'password'),
+      );
+      c.read(routerProvider).go('/steve/porcentagem');
+      await tester.pumpAndSettle();
+      final field = find.byKey(const ValueKey('steve-message-field'));
+      await tester.ensureVisible(field);
+      await tester.enterText(field, 'Olá');
+      await tester.testTextInput.receiveAction(TextInputAction.send);
+      await tester.pumpAndSettle();
+      expect(find.text('9 mensagens disponíveis hoje'), findsOneWidget);
+      now = now.add(const Duration(seconds: 11));
+      await tester.pump(const Duration(seconds: 11));
+      expect(find.text('9 mensagens disponíveis hoje'), findsNothing);
+      expect(
+        find.text(
+          'Uma pergunta enviada pode consumir o limite diário mesmo se a resposta não chegar. Nova conversa interrompe o pedido.',
+        ),
+        findsOneWidget,
+      );
+      expect(tester.takeException(), isNull);
+    },
+  );
   testWidgets('Steve requires login and lessons stay usable at 200%', (
     tester,
   ) async {

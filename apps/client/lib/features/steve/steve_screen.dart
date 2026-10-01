@@ -216,6 +216,10 @@ class _ChatState extends ConsumerState<_Chat> {
                   const Text(
                     'As respostas são geradas por IA e podem conter erros. Confira as fontes e os passos da explicação.',
                   ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    'Uma pergunta enviada pode consumir o limite diário mesmo se a resposta não chegar. Nova conversa interrompe o pedido.',
+                  ),
                 ],
                 const SizedBox(height: 24),
               ],
