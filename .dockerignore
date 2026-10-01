@@ -1,0 +1,18 @@
+# O contexto contém somente entradas necessárias ao build da API.
+**
+!package.json
+!package-lock.json
+!apps/
+!apps/api/
+!apps/api/package.json
+!apps/api/tsconfig.json
+!apps/api/Dockerfile
+!apps/api/src/
+!apps/api/src/**
+!apps/api/test/
+!apps/api/test/**
+!apps/api/prisma/
+!apps/api/prisma/**
+**/.env
+**/.env.*
+**/*service-account*.json

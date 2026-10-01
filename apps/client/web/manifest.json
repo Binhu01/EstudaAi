@@ -1,0 +1,18 @@
+{
+    "name": "Estuda Aí",
+    "short_name": "Estuda Aí",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#F8FAFC",
+    "theme_color": "#2563EB",
+    "description": "Um espaço para cada objetivo de estudo.",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "brand.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}

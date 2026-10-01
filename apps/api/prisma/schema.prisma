@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+  engineType = "client"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model User {
+  id String @id @default(uuid()) @db.Uuid
+  externalId String @unique @db.VarChar(128)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  goals StudyGoal[]
+}
+model StudyGoal {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  name String @db.VarChar(120)
+  category String @db.VarChar(40)
+  examDate DateTime? @db.Date
+  timezone String @default("America/Sao_Paulo") @db.VarChar(80)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([userId, id])
+  @@index([userId, createdAt, id])
+}

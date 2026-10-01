@@ -1,6 +1,6 @@
 # Estuda Aí — Especificação da Fase 1: Fundação
 
-Data: 29/09/2026. Estado: proposta para revisão, ainda não implementada.
+Data: 29/09/2026. Estado: aprovada e implementada; verificação local em 30/09/2026 conforme [evidências e limites](../../VALIDACAO.md).
 
 ## 1. Objetivo e entendimento
 
