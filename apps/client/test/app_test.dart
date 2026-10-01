@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
+import 'package:estuda_ai/core/api_origin.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -14,6 +16,7 @@ Future<void> openApp(
   Size size = const Size(360, 800),
   double scale = 1,
   Future<bool> Function(Uri)? openLink,
+  Dio? dio,
 }) async {
   tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1;
@@ -28,6 +31,7 @@ Future<void> openApp(
         preferencesProvider.overrideWithValue(prefs),
         catalogProvider.overrideWith((ref) async => catalog!),
         if (openLink != null) externalLinkProvider.overrideWithValue(openLink),
+        if (dio != null) dioProvider.overrideWithValue(dio),
       ],
       child: MediaQuery(
         data: MediaQueryData(size: size, textScaler: TextScaler.linear(scale)),

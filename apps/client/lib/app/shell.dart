@@ -73,6 +73,12 @@ class AppShell extends ConsumerWidget {
                               onPressed: () => navigate(3),
                             ),
                             const Spacer(),
+                            NavigationItem(
+                              label: 'Conta',
+                              icon: Icons.account_circle_outlined,
+                              selected: location == '/conta',
+                              onPressed: () => context.go('/conta'),
+                            ),
                             const Divider(color: AppColors.white),
                             const SizedBox(height: AppSpacing.lg),
                             const Text(
@@ -107,6 +113,11 @@ class AppShell extends ConsumerWidget {
                       child: Icon(AppIcons.brand, size: 28),
                     ),
                     labelType: NavigationRailLabelType.all,
+                    trailing: IconButton(
+                      tooltip: 'Conta',
+                      onPressed: () => context.go('/conta'),
+                      icon: const Icon(Icons.account_circle_outlined),
+                    ),
                     destinations: const [
                       NavigationRailDestination(
                         icon: Icon(AppIcons.home),
@@ -133,7 +144,16 @@ class AppShell extends ConsumerWidget {
           );
         }
         return Scaffold(
-          appBar: AppBar(title: const Brand()),
+          appBar: AppBar(
+            title: const Brand(),
+            actions: [
+              IconButton(
+                tooltip: 'Conta',
+                onPressed: () => context.go('/conta'),
+                icon: const Icon(Icons.account_circle_outlined),
+              ),
+            ],
+          ),
           body: child,
           bottomNavigationBar: NavigationBar(
             selectedIndex: selected,

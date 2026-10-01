@@ -1,11 +1,20 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../features/auth/session_controller.dart';
+import 'api_origin.dart';
+import 'api_failure.dart';
+export 'api_failure.dart';
 
 import 'models/user_profile.dart';
 
-class ApiFailure implements Exception {
-  const ApiFailure(this.code);
-  final String code;
-}
+final apiClientProvider = Provider<ApiClient>(
+  (ref) => ApiClient(
+    baseUrl: ref.read(apiOriginProvider),
+    token: ref.read(sessionProvider.notifier).accessToken,
+    dio: ref.read(dioProvider),
+  ),
+);
 
 class ApiClient {
   ApiClient({required this.baseUrl, required this.token, Dio? dio})
