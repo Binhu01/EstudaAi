@@ -1,6 +1,7 @@
 export interface Configuration {
   databaseUrl: string;
   firebaseProject: string;
+  firebaseWebApiKey?: string;
   origins: string[];
   port: number;
   production: boolean;
@@ -24,5 +25,6 @@ export function readConfig(env: NodeJS.ProcessEnv): Configuration {
     } catch { return true; }
   })) invalid('CORS_ORIGINS');
   if (production && env.FIREBASE_AUTH_EMULATOR_HOST) invalid('FIREBASE_AUTH_EMULATOR_HOST');
-  return { databaseUrl, firebaseProject, origins, port, production };
+  const firebaseWebApiKey = env.FIREBASE_WEB_API_KEY?.trim() || undefined;
+  return { databaseUrl, firebaseProject, firebaseWebApiKey, origins, port, production };
 }

@@ -3,6 +3,10 @@ import assert from 'node:assert/strict';
 import { readConfig } from '../src/config';
 
 const valid = { DATABASE_URL: 'postgresql://user:private@localhost:5432/study', FIREBASE_PROJECT_ID: 'estuda-ai-test', CORS_ORIGINS: 'http://localhost:4173', PORT: '3001' };
+test('Firebase REST key is optional but never exposed as a configuration error', () => {
+  assert.equal(readConfig(valid).firebaseWebApiKey, undefined);
+  assert.equal(readConfig({...valid, FIREBASE_WEB_API_KEY:'server-only'}).firebaseWebApiKey, 'server-only');
+});
 test('configuration fails closed for missing values and never leaks their contents', () => {
   assert.throws(() => readConfig({}));
   assert.throws(() => readConfig({ ...valid, PORT: '0' }));

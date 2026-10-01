@@ -8,5 +8,8 @@ export interface AppDependencies {
   ready: () => Promise<boolean>;
   origins: string[];
   rateLimit?: number;
+  auth?: AuthGateway;
   log?: (event: Readonly<Record<string, unknown>>) => void;
 }
+import type { AuthGateway } from './auth/auth.gateway';
+export const DEPENDENCIES = 'APP_DEPENDENCIES';

@@ -4,13 +4,16 @@ import { createApp } from './app';
 import { readConfig } from './config';
 import { PrismaDatabase } from './database/prisma';
 import { FirebaseIdentityVerifier } from './auth/firebase.identity';
+import { FirebaseRestAuth } from './auth/firebase-rest.auth';
 
 async function bootstrap() {
   const config = readConfig(process.env);
   const firebase = initializeApp({ credential: applicationDefault(), projectId: config.firebaseProject });
   const database = new PrismaDatabase(config.databaseUrl);
+  const identity = new FirebaseIdentityVerifier(getAuth(firebase));
   const app = await createApp({
-    identity: new FirebaseIdentityVerifier(getAuth(firebase)), users: database,
+    identity, users: database,
+    auth: new FirebaseRestAuth(config.firebaseWebApiKey, identity),
     ready: () => database.ready(), origins: config.origins,
     log: (event) => process.stdout.write(JSON.stringify(event) + '\n'),
   });

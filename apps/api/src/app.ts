@@ -6,23 +6,14 @@ import { SwaggerModule, DocumentBuilder, ApiBearerAuth, ApiOkResponse, ApiProper
 import helmet from 'helmet';
 import { randomUUID } from 'node:crypto';
 import { Request, Response, NextFunction } from 'express';
-import { AppDependencies } from './contracts';
+import { AppDependencies, DEPENDENCIES } from './contracts';
+import { AuthController } from './auth/auth.controller';
+import { IpThrottlerGuard, UserThrottlerGuard } from './auth/rate.guards';
 import { AuthGuard, AuthenticatedRequest } from './auth/auth.guard';
 import { SafeExceptionFilter } from './errors';
 import { freeEntitlements } from './entitlements/entitlements';
 import { PublicRoute } from './auth/public-route';
 
-export const DEPENDENCIES = 'APP_DEPENDENCIES';
-
-@Injectable()
-class UserThrottlerGuard extends ThrottlerGuard {
-  protected async getTracker(request: AuthenticatedRequest) {
-    return `user:${request.user.id}`;
-  }
-  protected generateKey(_context: ExecutionContext, tracker: string, name: string) {
-    return `${name}:${tracker}`;
-  }
-}
 
 class ProfileResponse {
   @ApiProperty({ format: 'uuid' }) id!: string;
@@ -86,10 +77,10 @@ class MeController {
 export async function createApp(dependencies: AppDependencies) {
   @Module({
     imports: [ThrottlerModule.forRoot([{ ttl: 60_000, limit: dependencies.rateLimit ?? 60 }])],
-    controllers: [HealthController, MeController],
+    controllers: [HealthController, MeController, AuthController],
     providers: [
       { provide: DEPENDENCIES, useValue: dependencies },
-      { provide: APP_GUARD, useClass: ThrottlerGuard },
+      { provide: APP_GUARD, useClass: IpThrottlerGuard },
       { provide: APP_GUARD, useFactory: () => new AuthGuard(dependencies) },
       { provide: APP_GUARD, useClass: UserThrottlerGuard },
     ],
