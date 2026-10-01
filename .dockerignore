@@ -3,6 +3,12 @@
 !package.json
 !package-lock.json
 !apps/
+!apps/client/
+!apps/client/assets/
+!apps/client/assets/study/
+!apps/client/assets/study/catalog.json
+!tools/
+!tools/package-catalog.mjs
 !apps/api/
 !apps/api/package.json
 !apps/api/tsconfig.json

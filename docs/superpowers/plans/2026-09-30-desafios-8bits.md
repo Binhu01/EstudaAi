@@ -18,7 +18,7 @@ Todas as restrições do índice. Cinco perguntas sem repetição, quatro opçõ
 
 Resposta repetida não pontua; erro corta bônus; recorde menor chegando depois não sobrescreve maior. Troca de tópico abandona rodada antiga. Alternativa longa e teclado em 360 px continuam utilizáveis.
 
-### B1 — Motor da rodada e melhor pontuação
+### Task 1: B1 — Motor da rodada e melhor pontuação
 
 **Files:** Criar `apps/client/lib/features/quiz/quiz_engine.dart`, `quiz_controller.dart`, `best_score_repository.dart`; testar `apps/client/test/quiz_engine_test.dart`, `best_score_test.dart`.
 
@@ -30,7 +30,7 @@ Resposta repetida não pontua; erro corta bônus; recorde menor chegando depois 
 - [ ] Implementar controller e serialização de gravações máximas em SharedPreferences. Chave inequívoca inclui tópico/versão; após dispose, resultado de persistência não atualiza estado. Carregar recorde real, sem XP. Falha de gravação não perde resultado da rodada e mostra aviso seguro de recorde não salvo.
 - [ ] Rodar `flutter test test/quiz_engine_test.dart test/best_score_test.dart`; expected todos passam, inclusive concorrência; commit `feat: criar motor de desafios por assunto`.
 
-### B2 — Tela do jogo 8 bits e navegação
+### Task 2: B2 — Tela do jogo 8 bits e navegação
 
 **Files:** Criar `apps/client/lib/features/quiz/quiz_screen.dart`, `answer_tile.dart`, `quiz_result.dart`, `design_system/components/pixel_avatar.dart`, `assets/fonts/PressStart2P-Regular.ttf`, `assets/fonts/OFL.txt`; modificar `pubspec.yaml`, `design_system/tokens.dart`, `app/app.dart`, `app/shell.dart`, `features/home/home_screen.dart`, `docs/MIDIA.md`; testar `apps/client/test/quiz_screen_test.dart`, atualizar `design_system_test.dart`.
 

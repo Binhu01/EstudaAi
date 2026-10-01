@@ -18,7 +18,7 @@ Aplicam-se todas as restrições do índice. Catálogo: três IDs exatos, dez qu
 
 Catálogo inválido deve falhar com estado de recuperação; tópico de URL desconhecido não ativa outro contexto. Fotografia ausente não remove CTA. Mudança de aula remove iframe anterior; título longo e 200% não encobrem navegação.
 
-### A1 — Catálogo comum e contexto validado
+### Task 1: A1 — Catálogo comum e contexto validado
 
 **Files:** Criar `apps/client/assets/study/catalog.json`, `apps/client/lib/features/learning/study_catalog.dart`, `learning_controller.dart`, `topic_scope.dart`, `tools/package-catalog.mjs`, `apps/api/src/catalog/study-catalog.ts`; modificar `apps/client/pubspec.yaml`, `apps/api/package.json`, `.dockerignore`, `apps/api/Dockerfile`; testar `apps/client/test/catalog_test.dart`, `learning_context_test.dart`, `apps/api/test/catalog.test.ts`.
 
@@ -31,7 +31,7 @@ Catálogo inválido deve falhar com estado de recuperação; tópico de URL desc
 - [ ] Executar os testes e igualdade dos bytes fonte/empacotado. Teste de contexto: trocar porcentagem→ecologia aumenta geração uma vez; seleção inválida mantém estado; loader não depende do cwd do processo.
 - [ ] Revisar os 30 enunciados e explicações à luz das três fontes educacionais da spec; registrar curadoria e commit `feat: adicionar catálogo e contexto de estudo livre`.
 
-### A2 — Hero educacional e Home utilizável
+### Task 2: A2 — Hero educacional e Home utilizável
 
 **Files:** Criar `apps/client/assets/images/study-hero.webp`, `apps/client/lib/features/home/education_hero.dart`, `word_reveal.dart`, `topic_picker.dart`, `docs/MIDIA.md`; modificar `home_screen.dart`, `design_system/tokens.dart`, `pubspec.yaml`; testar `apps/client/test/hero_test.dart`, modificar `app_test.dart`.
 
@@ -44,7 +44,7 @@ Catálogo inválido deve falhar com estado de recuperação; tópico de URL desc
 - [ ] Substituir Home vazia por hero e seleção funcional; manter Preferências e marca. Não exibir estatísticas ou botões para rotas ainda não entregues. Rodar testes, `flutter analyze`; verificar contraste e reflow com temas e texto 200%.
 - [ ] Commit `feat: adaptar hero educacional ao Flutter` com apenas os arquivos da tarefa.
 
-### A3 — Aulas, player Web e rotas reais
+### Task 3: A3 — Aulas, player Web e rotas reais
 
 **Files:** Criar `apps/client/lib/features/learning/learning_screen.dart`, `topic_not_found.dart`, `lesson_player.dart`, `lesson_player_web.dart`, `lesson_player_native.dart`, `external_links.dart`; modificar `app/app.dart`, `app/shell.dart`, `features/home/home_screen.dart`; testar `apps/client/test/learning_screen_test.dart`, `media_test.dart`.
 

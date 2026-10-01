@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": 1,
+  "topics": [
+    {
+      "id": "porcentagem",
+      "title": "Porcentagem",
+      "subject": "Matemática",
+      "level": "Fundamental • 9º ano",
+      "summary": "Do desconto no livro ao aumento de um preço: entenda as porcentagens.",
+      "notes": "Porcentagem significa uma parte em cada cem. Para calcular p% de x, use (p/100) × x. Compare variações ao valor inicial. Em aumentos sucessivos, cada percentual incide sobre o valor já atualizado. Converter frações e decimais ajuda a interpretar proporções.",
+      "sources": [
+        {
+          "title": "Khan Academy — Porcentagens",
+          "url": "https://pt.khanacademy.org/math/pt-9-ano/numeros-9ano/pt-equaes-moda-antiga-com-sal/v/taking-percentages"
+        }
+      ],
+      "lessons": [
+        {
+          "id": "porcentagem-1",
+          "title": "Porcentagem e decimal",
+          "channel": "Khan Academy Brasil",
+          "description": "Aprenda a conectar decimais, frações e porcentagens.",
+          "level": "Fundamental e revisão",
+          "videoId": "TEhv11SkDUs"
+        },
+        {
+          "id": "porcentagem-2",
+          "title": "Aumento por porcentagem",
+          "channel": "Khan Academy Brasil",
+          "description": "Use porcentagens para calcular aumentos de valores.",
+          "level": "Fundamental e revisão",
+          "videoId": "V9QV6lDitGg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "porcentagem-q1",
+          "prompt": "Quanto é 20% de 150?",
+          "options": [
+            "30",
+            "20",
+            "50",
+            "75"
+          ],
+          "correctIndex": 0,
+          "explanation": "20% equivale a 0,20. Multiplicar 150 por 0,20 resulta em 30."
+        },
+        {
+          "id": "porcentagem-q2",
+          "prompt": "O decimal 0,35 corresponde a qual porcentagem?",
+          "options": [
+            "3,5%",
+            "35%",
+            "350%",
+            "0,35%"
+          ],
+          "correctIndex": 1,
+          "explanation": "Para escrever um decimal em porcentagem, multiplicamos por 100: 0,35 × 100 = 35%."
+        },
+        {
+          "id": "porcentagem-q3",
+          "prompt": "Um produto de R$ 80 teve aumento de 25%. Qual é o novo preço?",
+          "options": [
+            "R$ 85",
+            "R$ 95",
+            "R$ 100",
+            "R$ 105"
+          ],
+          "correctIndex": 2,
+          "explanation": "25% de 80 é 20. O preço final é 80 + 20 = 100 reais."
+        },
+        {
+          "id": "porcentagem-q4",
+          "prompt": "Um curso de R$ 200 tem desconto de 15%. Quanto você paga?",
+          "options": [
+            "R$ 185",
+            "R$ 150",
+            "R$ 30",
+            "R$ 170"
+          ],
+          "correctIndex": 3,
+          "explanation": "15% de 200 é 30. O desconto é subtraído: 200 − 30 = 170 reais."
+        },
+        {
+          "id": "porcentagem-q5",
+          "prompt": "De 60 estudantes, 18 foram de bicicleta. Qual é a porcentagem?",
+          "options": [
+            "30%",
+            "18%",
+            "42%",
+            "60%"
+          ],
+          "correctIndex": 0,
+          "explanation": "A razão é 18 ÷ 60 = 0,30. Logo, 30% dos estudantes foram de bicicleta."
+        },
+        {
+          "id": "porcentagem-q6",
+          "prompt": "Uma turma passou de 120 para 150 alunos. Qual foi o aumento percentual?",
+          "options": [
+            "30%",
+            "25%",
+            "20%",
+            "15%"
+          ],
+          "correctIndex": 1,
+          "explanation": "O aumento de 30 é comparado ao valor inicial: 30 ÷ 120 × 100 = 25%."
+        },
+        {
+          "id": "porcentagem-q7",
+          "prompt": "Se 40% de um número é 28, qual é esse número?",
+          "options": [
+            "40",
+            "56",
+            "70",
+            "112"
+          ],
+          "correctIndex": 2,
+          "explanation": "Chamando o número de x, 0,40x = 28. Portanto x = 28 ÷ 0,40 = 70."
+        },
+        {
+          "id": "porcentagem-q8",
+          "prompt": "R$ 100 aumentam 10% e depois mais 10%. Qual é o valor final?",
+          "options": [
+            "R$ 110",
+            "R$ 120",
+            "R$ 122",
+            "R$ 121"
+          ],
+          "correctIndex": 3,
+          "explanation": "O primeiro aumento leva a 110. O segundo é 10% de 110, ou 11: total 121."
+        },
+        {
+          "id": "porcentagem-q9",
+          "prompt": "Um livro de R$ 250 recebeu desconto de 20%. Qual é o preço final?",
+          "options": [
+            "R$ 200",
+            "R$ 230",
+            "R$ 50",
+            "R$ 225"
+          ],
+          "correctIndex": 0,
+          "explanation": "20% de 250 é 50. O preço final é 250 − 50 = 200 reais."
+        },
+        {
+          "id": "porcentagem-q10",
+          "prompt": "A fração 3/4 equivale a qual porcentagem?",
+          "options": [
+            "25%",
+            "75%",
+            "34%",
+            "80%"
+          ],
+          "correctIndex": 1,
+          "explanation": "3 dividido por 4 é 0,75. Multiplicando por 100, obtemos 75%."
+        }
+      ]
+    },
+    {
+      "id": "interpretacao-texto",
+      "title": "Interpretação de texto",
+      "subject": "Português",
+      "level": "Fundamental e Ensino Médio",
+      "summary": "Leia as pistas, reconheça intenções e sustente suas conclusões no texto.",
+      "notes": "Compreender um texto envolve localizar informações explícitas e fazer inferências apoiadas nas pistas e no contexto. Identifique finalidade, assunto central, referentes de pronomes e relações entre ideias. Conectores podem indicar causa, contraste ou consequência. Diferencie informação verificável de avaliação pessoal e evite conclusões sem evidências.",
+      "sources": [
+        {
+          "title": "CEALE/UFMG — Compreensão leitora",
+          "url": "https://ceale.fae.ufmg.br/glossarioceale/verbetes/compreensao-leitora"
+        }
+      ],
+      "lessons": [
+        {
+          "id": "interpretacao-1",
+          "title": "Compreensão x Interpretação no ENEM",
+          "channel": "Professor Noslen",
+          "description": "Reconheça informações explícitas e interpretações apoiadas em pistas.",
+          "level": "Ensino Médio • revisão ENEM",
+          "videoId": "rf1lg2foSG4"
+        },
+        {
+          "id": "interpretacao-2",
+          "title": "Compreensão e Interpretação de Texto",
+          "channel": "Professor Noslen",
+          "description": "Revise estratégias para ler e interpretar enunciados.",
+          "level": "Ensino Médio • revisão ENEM",
+          "videoId": "XsN0e_xPyNI"
+        }
+      ],
+      "questions": [
+        {
+          "id": "interpretacao-q1",
+          "prompt": "Leia: “O céu escureceu. Lia guardou o livro e correu para casa.” O que o texto sugere?",
+          "options": [
+            "Lia terminou um curso",
+            "Lia perdeu o livro",
+            "Lia esperava chuva",
+            "Lia foi à biblioteca"
+          ],
+          "correctIndex": 2,
+          "explanation": "O céu escurecendo e a pressa permitem inferir que Lia esperava chuva. Não é uma afirmação explícita."
+        },
+        {
+          "id": "interpretacao-q2",
+          "prompt": "Leia: “A feira acontece aos sábados, das 8h às 12h.” Qual informação está explícita?",
+          "options": [
+            "A feira vende frutas",
+            "A feira é gratuita",
+            "A feira é coberta",
+            "A feira ocorre aos sábados"
+          ],
+          "correctIndex": 3,
+          "explanation": "O dia é informado diretamente. Os outros detalhes não aparecem no trecho."
+        },
+        {
+          "id": "interpretacao-q3",
+          "prompt": "Leia: “Ravi estudou bastante, porém ficou nervoso.” A palavra “porém” indica:",
+          "options": [
+            "Contraste",
+            "Causa",
+            "Conclusão",
+            "Tempo"
+          ],
+          "correctIndex": 0,
+          "explanation": "“Porém” apresenta oposição entre estudar bastante e ainda ficar nervoso."
+        },
+        {
+          "id": "interpretacao-q4",
+          "prompt": "Leia: “Ana encontrou Bia e entregou a ela o caderno de Bia.” A quem se refere “ela”?",
+          "options": [
+            "Ana",
+            "Bia",
+            "Uma professora",
+            "Uma pessoa não citada"
+          ],
+          "correctIndex": 1,
+          "explanation": "Bia é a destinatária do caderno; o pronome retoma esse nome no contexto."
+        },
+        {
+          "id": "interpretacao-q5",
+          "prompt": "Qual frase expressa uma opinião?",
+          "options": [
+            "A aula começa às 9h",
+            "A sala tem 25 mesas",
+            "Esta é a melhor matéria",
+            "A prova terá 10 questões"
+          ],
+          "correctIndex": 2,
+          "explanation": "“Melhor” expressa uma avaliação pessoal. As demais frases apresentam informações verificáveis."
+        },
+        {
+          "id": "interpretacao-q6",
+          "prompt": "Leia: “Traga sua garrafa e reduza o uso de copos descartáveis!” Qual é a finalidade?",
+          "options": [
+            "Narrar uma viagem",
+            "Relatar um resultado",
+            "Definir uma palavra",
+            "Incentivar uma atitude"
+          ],
+          "correctIndex": 3,
+          "explanation": "O convite no imperativo busca convencer o leitor a reduzir o uso de descartáveis."
+        },
+        {
+          "id": "interpretacao-q7",
+          "prompt": "Leia: “Marta levou um casaco porque esfriou.” O trecho após “porque” apresenta:",
+          "options": [
+            "A causa da ação",
+            "Uma comparação",
+            "Uma dúvida",
+            "Uma consequência futura"
+          ],
+          "correctIndex": 0,
+          "explanation": "O frio explica a razão de Marta levar o casaco."
+        },
+        {
+          "id": "interpretacao-q8",
+          "prompt": "Leia: “A horta da escola recebeu novas mudas. Os alunos organizaram o plantio.” Qual título resume o trecho?",
+          "options": [
+            "Uma aula de natação",
+            "Novas mudas na horta escolar",
+            "A compra de computadores",
+            "A viagem dos alunos"
+          ],
+          "correctIndex": 1,
+          "explanation": "O título reúne o assunto central: mudas e plantio na horta da escola."
+        },
+        {
+          "id": "interpretacao-q9",
+          "prompt": "Leia: “O ônibus atrasou, então Pedro chegou depois do início da aula.” “Então” introduz:",
+          "options": [
+            "Um contraste",
+            "Uma definição",
+            "Uma consequência",
+            "Uma condição"
+          ],
+          "correctIndex": 2,
+          "explanation": "Chegar depois foi a consequência do atraso do ônibus, sinalizada por “então”."
+        },
+        {
+          "id": "interpretacao-q10",
+          "prompt": "Leia: “A biblioteca abriu mais cedo para receber os estudantes antes da prova.” O que NÃO pode ser concluído?",
+          "options": [
+            "A biblioteca abriu mais cedo",
+            "A abertura tinha uma finalidade",
+            "Havia uma prova prevista",
+            "Todos os estudantes passaram na prova"
+          ],
+          "correctIndex": 3,
+          "explanation": "O trecho não informa o resultado da prova. Concluir que todos passaram excede as evidências."
+        }
+      ]
+    },
+    {
+      "id": "ecologia",
+      "title": "Ecologia",
+      "subject": "Ciências",
+      "level": "Fundamental • 7º ano",
+      "summary": "Descubra as conexões entre os seres vivos, os ambientes e a energia.",
+      "notes": "Ecossistemas incluem seres vivos, fatores não vivos e suas interações. Produtores formam matéria orgânica, consumidores a obtêm pela alimentação e decompositores devolvem nutrientes ao ambiente. A matéria participa de ciclos; a energia flui e parte se dissipa como calor. Habitat é o local de vida; nicho inclui modo de vida e relações. Biomas reúnem características ambientais amplas.",
+      "sources": [
+        {
+          "title": "Khan Academy — O que é um ecossistema?",
+          "url": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza/ecossistemas-e-biomas/a/what-is-an-ecosystem-article"
+        }
+      ],
+      "lessons": [
+        {
+          "id": "ecologia-1",
+          "title": "Ecossistemas e biomas",
+          "channel": "Khan Academy Brasil",
+          "description": "Conheça os componentes e as interações de um ecossistema.",
+          "level": "Fundamental e revisão",
+          "videoId": "gEV3nOs0EjY"
+        },
+        {
+          "id": "ecologia-2",
+          "title": "Fluxo de energia e matéria",
+          "channel": "Khan Academy Brasil",
+          "description": "Compare a transferência de energia com os ciclos da matéria.",
+          "level": "Fundamental e revisão",
+          "videoId": "qj6RWzK7cYI"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ecologia-q1",
+          "prompt": "Um ecossistema inclui:",
+          "options": [
+            "Seres vivos e fatores do ambiente em interação",
+            "Somente os animais",
+            "Somente plantas de uma espécie",
+            "Somente o clima"
+          ],
+          "correctIndex": 0,
+          "explanation": "Um ecossistema reúne componentes bióticos e abióticos e as relações entre eles."
+        },
+        {
+          "id": "ecologia-q2",
+          "prompt": "Qual exemplo é um fator abiótico?",
+          "options": [
+            "Uma árvore",
+            "A luz solar",
+            "Um fungo",
+            "Uma bactéria"
+          ],
+          "correctIndex": 1,
+          "explanation": "Luz solar é um componente não vivo do ambiente. Os outros exemplos são seres vivos."
+        },
+        {
+          "id": "ecologia-q3",
+          "prompt": "Na cadeia capim → gafanhoto → sapo, o capim é:",
+          "options": [
+            "Decompositor",
+            "Consumidor secundário",
+            "Produtor",
+            "Predador"
+          ],
+          "correctIndex": 2,
+          "explanation": "O capim produz matéria orgânica pela fotossíntese e ocupa o nível dos produtores."
+        },
+        {
+          "id": "ecologia-q4",
+          "prompt": "Ao passar pelos níveis tróficos, a energia:",
+          "options": [
+            "Aumenta sempre",
+            "É reciclada integralmente",
+            "Surge do nada",
+            "Diminui, com parte dissipada como calor"
+          ],
+          "correctIndex": 3,
+          "explanation": "Há transferência de energia e dissipação como calor. Ela não retorna integralmente ao início da cadeia."
+        },
+        {
+          "id": "ecologia-q5",
+          "prompt": "Qual é o papel dos decompositores?",
+          "options": [
+            "Transformar matéria orgânica e devolver nutrientes ao ambiente",
+            "Criar luz solar",
+            "Eliminar todo o oxigênio",
+            "Impedir a circulação de nutrientes"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fungos e bactérias decompositores participam da reciclagem da matéria e liberam nutrientes."
+        },
+        {
+          "id": "ecologia-q6",
+          "prompt": "Habitat é:",
+          "options": [
+            "A função de uma espécie no ecossistema",
+            "O lugar em que uma espécie vive",
+            "O conjunto de predadores",
+            "A quantidade de energia de uma planta"
+          ],
+          "correctIndex": 1,
+          "explanation": "Habitat descreve o local de vida. Nicho ecológico inclui modo de vida e relações da espécie."
+        },
+        {
+          "id": "ecologia-q7",
+          "prompt": "O nicho ecológico envolve:",
+          "options": [
+            "Somente o tamanho do animal",
+            "A localização de uma cidade",
+            "O modo de vida e as relações de uma espécie",
+            "Somente a temperatura"
+          ],
+          "correctIndex": 2,
+          "explanation": "Alimentação, atividade e relações com outras espécies integram o nicho ecológico."
+        },
+        {
+          "id": "ecologia-q8",
+          "prompt": "Na cadeia capim → gafanhoto → sapo, o sapo é:",
+          "options": [
+            "Produtor",
+            "Consumidor primário",
+            "Decompositor",
+            "Consumidor secundário"
+          ],
+          "correctIndex": 3,
+          "explanation": "O gafanhoto consome o produtor e é primário; o sapo, que o consome, é secundário."
+        },
+        {
+          "id": "ecologia-q9",
+          "prompt": "Sobre matéria e energia em ecossistemas, é correto dizer:",
+          "options": [
+            "A matéria participa de ciclos e a energia flui",
+            "Ambas são recicladas integralmente",
+            "A matéria sempre desaparece",
+            "A energia é criada pelos consumidores"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nutrientes circulam em ciclos. A energia entra, é transferida e parte se dissipa como calor."
+        },
+        {
+          "id": "ecologia-q10",
+          "prompt": "Um bioma reúne áreas com características semelhantes de:",
+          "options": [
+            "Horário das escolas",
+            "Clima e vegetação, entre outros fatores",
+            "Número de habitantes apenas",
+            "Construções urbanas apenas"
+          ],
+          "correctIndex": 1,
+          "explanation": "Clima, vegetação e outras condições ambientais ajudam a caracterizar grandes conjuntos chamados biomas."
+        }
+      ]
+    }
+  ]
+}

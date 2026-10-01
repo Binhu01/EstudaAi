@@ -18,7 +18,7 @@ Todas as restrições do índice. Token/refresh só em memória e login novament
 
 Refresh simultâneo compartilha uma chamada; logout no meio dele não restaura token. 429/503 preserva credencial em memória sem enviar token vencido. Troca de assunto/conta ou ida e volta não insere mensagem antiga. Falha de API deixa aulas/quiz disponíveis. Fontes nunca viram HTML executável.
 
-### D1 — Cliente de auth, sessão e formulário
+### Task 1: D1 — Cliente de auth, sessão e formulário
 
 **Files:** Criar `apps/client/lib/features/auth/auth_api.dart`, `session_controller.dart`, `account_screen.dart`, `auth_models.dart`, `core/api_origin.dart`; modificar `main.dart`, `core/api_client.dart`, `app/app.dart`, `app/shell.dart`; criar `test/auth_api_test.dart`, `session_test.dart`, `account_screen_test.dart`, modificar `api_client_test.dart`.
 
@@ -30,7 +30,7 @@ Refresh simultâneo compartilha uma chamada; logout no meio dele não restaura t
 - [ ] Formulário `/conta`: Entrar/Criar conta/Recuperar senha, labels associados, validação/erros em português, ocultação da senha, loading e prevenção de duplicados; informar que fechar/recarregar exige novo login. Limpar senha após operação/saída e dispose de controllers. Falha do backend mostra recuperação útil sem pedir chaves API ao aluno.
 - [ ] Testar widget submit/login/erro e recuperação, teclado/Enter, texto200% e feedback sem revelar conta existente. Integrar Conta/Entrar/Sair e provedores, sem mudar origem segurança da ApiClient; `flutter analyze` e commit `feat: conectar conta e sessão em memória`.
 
-### D2 — Cliente e chat Steve contextual
+### Task 2: D2 — Cliente e chat Steve contextual
 
 **Files:** Criar `apps/client/lib/features/steve/steve_api.dart`, `steve_models.dart`, `steve_controller.dart`, `steve_screen.dart`, `steve_message.dart`; modificar `app/app.dart`, `app/shell.dart`, `features/home/home_screen.dart`, `features/learning/learning_screen.dart`; criar `test/steve_api_test.dart`, `steve_context_test.dart`, `steve_screen_test.dart`.
 
@@ -42,7 +42,7 @@ Refresh simultâneo compartilha uma chamada; logout no meio dele não restaura t
 - [ ] Implementar tela com nome Steve, avatar pixel, assunto/Estudo livre, sugestões autorais e campo/envio. Sem sessão, mostrar entrar na conta. Renderizar resposta como Text seguro, links do catálogo em ações separadas. completed/refused/incomplete têm texto de estado distinto; incompleta não entra no histórico como explicação completa. Erro conserva pergunta para edição/tentativa manual e não grava resposta vazia.
 - [ ] Integrar Steve nas três navegações, hero e ação Perguntar ao Steve na aula com mesmo tópico. Verificar quiz→aula→Steve e trocas rápidas; erro/ausência de API não bloqueia aulas/quiz. Rodar testes, análise, texto200%/teclado e commit `feat: entregar chat do Steve por assunto`.
 
-### D3 — Experiência completa, revisão e documentação
+### Task 3: D3 — Experiência completa, revisão e documentação
 
 **Files:** Modificar `tools/verify-web.mjs`, `README.md`, `docs/INSTALACAO.md`, `docs/ARQUITETURA.md`, `docs/VALIDACAO.md`, `docs/DEPLOY.md`, `.github/workflows/ci.yml`; criar `docs/EXPERIENCIA-ESTUDO.md`, `tools/verify-study.mjs`, `apps/client/test/study_flow_test.dart`; manter relatório/capturas em `artifacts/` ignorado e checkboxes dos planos.
 

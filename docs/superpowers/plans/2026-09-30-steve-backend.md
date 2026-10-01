@@ -18,7 +18,7 @@ Todas as restrições do índice. Auth IP 10/min para cadastro/login/reset, 60/m
 
 Rotas públicas não podem desativar quota IP nem dereferenciar user ausente. Key REST de outro projeto não retorna sessão. Última vaga, falha intermediária, liberação repetida/meia-noite e reinício preservam quotas. Payload de sistema ou catálogo inválido não chega ao modelo; respostas vazias/refusals/incomplete não parecem resposta concluída.
 
-### C1 — Gateway Firebase REST, DTOs e guards
+### Task 1: C1 — Gateway Firebase REST, DTOs e guards
 
 **Files:** Criar `apps/api/src/auth/auth.gateway.ts`, `firebase-rest.auth.ts`, `auth.dto.ts`, `auth.controller.ts`, `rate.guards.ts`; modificar `src/contracts.ts`, `config.ts`, `app.ts`, `main.ts`, `errors.ts`; criar `test/auth.test.ts`, modificar `config.test.ts`, `api.test.ts`.
 
@@ -31,7 +31,7 @@ Rotas públicas não podem desativar quota IP nem dereferenciar user ausente. Ke
 - [ ] Implementar IpThrottlerGuard.handleRequest(ThrottlerRequest) com orçamento por metadata de grupo registrado: auth=10, refresh=60, API privada usa default atual. generateKey separa grupos. UserThrottlerGuard.canActivate só pula metadata pública, conserva quota comum de endpoints privados. Usar os tipos da versão instalada de Throttler, sem SkipThrottle no auth.
 - [ ] readConfig aceita FIREBASE_WEB_API_KEY opcional; core de banco/projeto/CORS continua exigido. Injetar gateway em main, adequar fixtures/OpenAPI e rodar suíte; commit `feat: autenticar contas com Firebase pelo backend`.
 
-### C2 — Quota persistida e integração PostgreSQL
+### Task 2: C2 — Quota persistida e integração PostgreSQL
 
 **Files:** Criar `apps/api/src/database/transaction.ts`, `src/steve/quota.repository.ts`, `prisma/migrations/202609300001_ai_quotas/migration.sql`, `test/quota.test.ts`, `test/integration/quota-postgres.test.ts`, `tools/test-postgres.ps1`; modificar `src/database/prisma.ts`, `prisma/schema.prisma`, `apps/api/package.json`, root `package.json`, `.github/workflows/ci.yml`.
 
@@ -45,7 +45,7 @@ Rotas públicas não podem desativar quota IP nem dereferenciar user ausente. Ke
 - [ ] Teste de integração usa exclusivamente TEST_DATABASE_URL, nunca fallback DATABASE_URL, e exige banco novo criado pelo helper/CI; se schema já tiver tabelas, recusa preparar migrações, sem DROP/TRUNCATE de dados existentes. CI API recebe service postgres:17-bookworm dedicado, health check e database de teste, então `npm run test:integration -w apps/api`. Não alegar CI executado localmente.
 - [ ] Rodar geração Prisma, unitários e `npm run test:pg:local` para comprovar adapter/concorrência no cluster18. Se binários não executarem, conservar testes e registrar bloqueio real, sem confundir PGlite com contenção PG. Commit `feat: persistir cotas atômicas do Steve`.
 
-### C3 — Adaptador Responses, serviço Steve e operação
+### Task 3: C3 — Adaptador Responses, serviço Steve e operação
 
 **Files:** Criar `apps/api/src/steve/steve.dto.ts`, `steve.controller.ts`, `steve.service.ts`, `steve.provider.ts`, `openai.provider.ts`, `steve.prompt.ts`; criar `test/steve.test.ts`, `provider.test.ts`; modificar `src/contracts.ts`, `config.ts`, `app.ts`, `main.ts`, `errors.ts`, `entitlements/entitlements.ts`, `.env.example`, `infra/compose.yaml`, `tools/openapi.mjs`, `contracts/openapi.json`; adicionar DTO de entitlement/limite conforme necessário.
 
