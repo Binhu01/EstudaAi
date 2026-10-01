@@ -13,6 +13,8 @@ class AppShell extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selected = location.startsWith('/preferencias')
+        ? 4
+        : location.startsWith('/steve')
         ? 3
         : location.startsWith('/desafios')
         ? 2
@@ -24,6 +26,7 @@ class AppShell extends ConsumerWidget {
         '/',
         '/aprender/${ref.read(learningProvider).topicId}',
         '/desafios/${ref.read(learningProvider).topicId}',
+        '/steve/${ref.read(learningProvider).topicId}',
         '/preferencias',
       ][index],
     );
@@ -67,10 +70,17 @@ class AppShell extends ConsumerWidget {
                             ),
                             const SizedBox(height: AppSpacing.sm),
                             NavigationItem(
-                              label: 'Preferências',
-                              icon: AppIcons.settings,
+                              label: 'Steve',
+                              icon: Icons.chat_bubble_outline,
                               selected: selected == 3,
                               onPressed: () => navigate(3),
+                            ),
+                            const SizedBox(height: AppSpacing.sm),
+                            NavigationItem(
+                              label: 'Preferências',
+                              icon: AppIcons.settings,
+                              selected: selected == 4,
+                              onPressed: () => navigate(4),
                             ),
                             const Spacer(),
                             NavigationItem(
@@ -132,6 +142,10 @@ class AppShell extends ConsumerWidget {
                         label: Text('Desafios'),
                       ),
                       NavigationRailDestination(
+                        icon: Icon(Icons.chat_bubble_outline),
+                        label: Text('Steve'),
+                      ),
+                      NavigationRailDestination(
                         icon: Icon(AppIcons.settings),
                         label: Text('Preferências'),
                       ),
@@ -167,6 +181,10 @@ class AppShell extends ConsumerWidget {
               NavigationDestination(
                 icon: Icon(AppIcons.questions),
                 label: 'Desafios',
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.chat_bubble_outline),
+                label: 'Steve',
               ),
               NavigationDestination(
                 icon: Icon(AppIcons.settings),

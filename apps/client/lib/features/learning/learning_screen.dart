@@ -214,6 +214,12 @@ class _LessonsState extends ConsumerState<_Lessons> {
                       },
                     ),
                   ),
+                const SizedBox(height: 24),
+                FilledButton.icon(
+                  onPressed: () => context.go('/steve/${topic.id}'),
+                  icon: const Icon(Icons.chat_bubble_outline),
+                  label: const Text('Perguntar ao Steve'),
+                ),
               ],
             ),
           ),

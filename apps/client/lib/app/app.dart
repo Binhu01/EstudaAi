@@ -10,6 +10,7 @@ import '../features/home/home_screen.dart';
 import '../features/learning/learning_screen.dart';
 import '../features/quiz/quiz_screen.dart';
 import '../features/auth/account_screen.dart';
+import '../features/steve/steve_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/settings/settings_controller.dart';
 import '../design_system/gallery.dart';
@@ -26,6 +27,11 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/conta',
             builder: (context, state) => const AccountScreen(),
+          ),
+          GoRoute(
+            path: '/steve/:topicId',
+            builder: (context, state) =>
+                SteveScreen(topicId: state.pathParameters['topicId']!),
           ),
           GoRoute(
             path: '/desafios/:topicId',

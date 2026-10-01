@@ -142,6 +142,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     icon: const Icon(Icons.quiz_outlined),
                     label: const Text('Jogar um desafio'),
                   ),
+                  const SizedBox(height: 12),
+                  OutlinedButton.icon(
+                    onPressed: () => context.go(
+                      '/steve/${ref.read(learningProvider).topicId}',
+                    ),
+                    icon: const Icon(Icons.chat_bubble_outline),
+                    label: const Text('Conversar com o Steve'),
+                  ),
                 ],
               ),
               const SizedBox(height: 48),

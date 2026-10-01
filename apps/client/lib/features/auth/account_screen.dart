@@ -110,6 +110,13 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
                   const SizedBox(height: 24),
                   FilledButton(
                     onPressed: () => context.go(
+                      '/steve/${ref.read(learningProvider).topicId}',
+                    ),
+                    child: const Text('Conversar com o Steve'),
+                  ),
+                  const SizedBox(height: 12),
+                  OutlinedButton(
+                    onPressed: () => context.go(
                       '/aprender/${ref.read(learningProvider).topicId}',
                     ),
                     child: const Text('Retomar os estudos'),
