@@ -1,6 +1,6 @@
 # Estuda Aí — Hero, desafios 8 bits, videoaulas e Steve
 
-Data: 30/09/2026. Estado: proposta aprovada em conversa; especificação escrita aguardando revisão do usuário. Implementação ainda não iniciada.
+Data: 30/09/2026. Estado: especificação escrita aprovada pelo usuário; plano de implementação em revisão. Implementação ainda não iniciada.
 
 ## 1. Objetivo e decisões do usuário
 
