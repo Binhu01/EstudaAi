@@ -1,4 +1,4 @@
-name: Fundação
+name: Estuda Aí
 
 on:
   push:
@@ -75,6 +75,33 @@ jobs:
       - run: flutter analyze
       - run: flutter test
       - run: flutter build web --release --no-web-resources-cdn
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Instalar navegador e ferramentas de verificação
+        working-directory: .
+        run: |
+          npm ci --ignore-scripts
+          npx playwright install --with-deps chromium
+      - name: Verificar build no navegador
+        working-directory: .
+        run: |
+          mkdir -p artifacts
+          node tools/preview.mjs > artifacts/preview.log 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid"' EXIT
+          curl --retry 20 --retry-connrefused --retry-delay 1 --fail http://127.0.0.1:4173/ -o /dev/null
+          npm run test:visual
+          npm run test:study
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: always()
+        with:
+          name: estuda-ai-verification
+          path: artifacts
+          if-no-files-found: ignore
+          retention-days: 7
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: estuda-ai-web

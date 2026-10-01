@@ -14,6 +14,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Estudo livre'), findsOneWidget);
     expect(find.text('Porcentagem'), findsOneWidget);
+    expect(find.byIcon(Icons.arrow_downward), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
   testWidgets('missing photo and reduced motion keep the action at 200%', (

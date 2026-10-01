@@ -56,9 +56,14 @@ class _AnswerTileState extends State<AnswerTile> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ExcludeSemantics(
-            child: Text(
-              ['▲', '◆', '■', '●'][widget.index],
-              style: const TextStyle(fontSize: 23),
+            child: Icon(
+              [
+                Icons.change_history,
+                Icons.diamond_outlined,
+                Icons.square,
+                Icons.circle,
+              ][widget.index],
+              size: 23,
             ),
           ),
           const SizedBox(width: 16),

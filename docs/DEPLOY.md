@@ -1,6 +1,6 @@
 # Operação e preparação de deploy
 
-**Nenhum deploy foi feito.** Docker/Compose, integração Firebase real e adapter Prisma/PostgreSQL não foram executados nesta sessão. Este guia define o procedimento a validar em ambiente separado. A fundação não está homologada para operação comercial.
+**Nenhum deploy foi feito.** Docker/Compose e integração Firebase/OpenAI real não foram executados nesta sessão. Prisma/PostgreSQL18 foi testado em cluster temporário isolado; isso não homologa migrações nem credenciais de produção. Este guia define o procedimento a validar no destino.
 
 ## Imagem e migração
 
@@ -26,7 +26,7 @@ O Compose é um ponto de partida local de instância única: portas ficam em loo
 - Configurar domínio e terminação HTTPS; CORS exige origens exatas, sem wildcard.
 - Implementar e testar confiança em proxies conhecidos no backend antes de depender de IP encaminhado. O código atual não configura `trust proxy`; atrás de um proxy, o limite por IP pode agrupar clientes pelo endereço do proxy.
 - Manter uma instância enquanto o rate limiter usar memória. Armazenamento compartilhado e testes de múltiplas réplicas são pré-requisitos para escala horizontal.
-- Validar o adapter Prisma com PostgreSQL real, o job de migração e as credenciais Firebase; PGlite/doubles não cobrem essas integrações.
+- Ensaiar o job de migração e a versão PostgreSQL do destino; o teste local usa18 e a CI preparada usa17. Configurar e validar credenciais Firebase e provedor/modelo Steve.
 - Verificar token inválido, expirado, revogado e de outro projeto com o serviço Firebase real, sem registrar tokens.
 - Definir backups, retenção, restauração, rotação de credenciais e monitoramento de indisponibilidade.
 
@@ -34,9 +34,9 @@ O Compose é um ponto de partida local de instância única: portas ficam em loo
 
 ## Cliente Web
 
-O build `flutter build web --release --no-web-resources-cdn` gera `apps/client/build/web` com os recursos do renderizador locais. Confira a saída com `npm run preview` e `npm run test:visual`, seguindo a preparação Playwright em [Instalação](INSTALACAO.md). Publique essa pasta somente depois de validação visual e testes do ambiente. Configure o host para devolver `index.html` ao navegar diretamente para rotas do aplicativo e sirva por HTTPS. A Home e Preferências não dependem de login nesta entrega; o bootstrap ainda não integra autenticação ou conexão à API.
+O build `flutter build web --release --no-web-resources-cdn --dart-define=API_ORIGIN=https://api.seu-dominio.example` gera `apps/client/build/web` com renderizador local e origem pública da API. Confira `npm run preview`, `npm run test:visual` e `npm run test:study`, seguindo [Instalação](INSTALACAO.md). Configure HTTPS e fallback `index.html`. Home, aulas e quiz são públicos; conta e Steve usam a API. Firebase Email/Password deve estar habilitado; configure o par chave/modelo exclusivamente no backend. Login fica apenas em memória e requer novo acesso ao recarregar.
 
-A CI preparada em `.github/workflows/ci.yml` verifica API e Flutter Web no Ubuntu e disponibiliza o build Web como artefato. Ela não publica imagens, sites ou apps, não executa migração em banco remoto e não fornece credenciais de produção. **O workflow ainda não foi executado no GitHub; não há resultado remoto verde declarado.**
+A CI preparada verifica API, PostgreSQL17 isolado, Flutter Web e fluxos Chromium, disponibilizando build/capturas como artefatos. Ela não publica, migra banco remoto nem fornece credenciais de produção. **O workflow ainda não foi executado no GitHub; não há resultado remoto verde declarado.**
 
 As actions foram fixadas por SHA após consulta das tags oficiais em 30/09/2026: [checkout v7](https://github.com/actions/checkout/tree/v7), [setup-node v7](https://github.com/actions/setup-node/tree/v7), [upload-artifact v7](https://github.com/actions/upload-artifact/tree/v7) e [flutter-action v2](https://github.com/subosito/flutter-action/tree/v2). A existência dessas referências não confirma uma execução da CI.
 

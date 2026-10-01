@@ -5,10 +5,37 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:estuda_ai/app/app.dart';
 import 'package:estuda_ai/features/quiz/quiz_controller.dart';
 import 'package:estuda_ai/features/quiz/quiz_engine.dart';
+import 'package:estuda_ai/features/quiz/answer_tile.dart';
 
 import 'app_test.dart' show openApp;
 
 void main() {
+  testWidgets(
+    'four answer shapes use bundled icons instead of unavailable text glyphs',
+    (tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: Column(
+              children: [
+                for (var i = 0; i < 4; i++)
+                  AnswerTile(index: i, text: 'Resposta $i', onPressed: () {}),
+              ],
+            ),
+          ),
+        ),
+      );
+      for (final shape in [
+        Icons.change_history,
+        Icons.diamond_outlined,
+        Icons.square,
+        Icons.circle,
+      ]) {
+        expect(find.byIcon(shape), findsOneWidget);
+      }
+      expect(tester.takeException(), isNull);
+    },
+  );
   testWidgets('each topic plays a complete round and repeat resets the score', (
     tester,
   ) async {

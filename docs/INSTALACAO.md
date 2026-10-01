@@ -1,6 +1,6 @@
 # Instalação e execução local
 
-Execute os comandos na raiz do **EstudaAi**, separada da AlmaPet. A fundação possui cliente Flutter e API NestJS; o fluxo executável do cliente é Home/Preferências. Login completo e operações de metas chegam na Fase 2. O cliente atual pode abrir sem API ou credenciais Firebase.
+Execute os comandos na raiz do **EstudaAi**, separada da AlmaPet. Cliente Flutter e API NestJS oferecem Home, aulas, desafios, conta e Steve. Home/aulas/quiz abrem sem API; conta e chat requerem configuração do backend. Operações de metas ainda não são expostas.
 
 ## Ferramentas e versões
 
@@ -38,7 +38,9 @@ npm run build
 npm run openapi
 ```
 
-`npm ci --ignore-scripts` usa o `package-lock.json` da raiz e resolve o workspace `apps/api`, sem executar scripts de instalação de dependências, incluindo a telemetria Scarf. A geração Prisma é explícita e cria o cliente necessário ao build. `npm run openapi` atualiza o contrato a partir dos metadados Nest sem iniciar um servidor ou simular uma sessão autenticada. Os testes HTTP inicializam uma aplicação Nest real com dependências controladas; os testes SQL usam PGlite. Eles não configuram Firebase real nem demonstram integração do adapter Prisma com PostgreSQL completo.
+`npm ci --ignore-scripts` usa o lockfile da raiz sem executar scripts de dependências. A geração Prisma é explícita. `npm run openapi` gera metadados Nest sem listener ou conta simulada. `npm test` inclui HTTP real com transportes controlados e SQL em PGlite; não configura Firebase/OpenAI reais.
+
+Com binários PostgreSQL 18 instalados em `C:\Program Files\PostgreSQL\18\bin`, `npm run test:pg:local` cria um cluster temporário próprio em loopback55432, aplica as duas migrações em banco vazio, testa concorrência pelo Prisma e o encerra. Não usa nem altera um banco de estudo existente. O script Windows pressupõe esse caminho; para outras instalações, use um banco de teste isolado e `npm run test:integration -w apps/api`. Na CI, esse comando usa `TEST_DATABASE_URL` de banco novo chamado exatamente `estuda_ai_integration_test`; o teste recusa tabelas pré-existentes e nunca usa `DATABASE_URL` como fallback.
 
 ## Instalar e abrir o cliente
 
@@ -50,10 +52,10 @@ dart format --output=none --set-exit-if-changed lib test
 flutter analyze
 flutter test
 flutter build web --release --no-web-resources-cdn
-flutter run -d chrome --web-port 4173
+flutter run -d chrome --web-port 4173 --dart-define=API_ORIGIN=http://127.0.0.1:3001
 ```
 
-O último comando abre o cliente em desenvolvimento, com galeria em `/componentes`. A galeria é excluída das rotas no build de produção. Home fica em `/` e Preferências em `/preferencias`. Tokens administrativos, senhas de banco e chaves de IA não pertencem a `--dart-define` nem aos arquivos do cliente. Esta fundação ainda não usa uma variável pública de ambiente para conectar o bootstrap do cliente à API.
+O último comando abre o cliente em desenvolvimento; a galeria `/componentes` é excluída da produção. Rotas: `/`, `/aprender/:topicId`, `/desafios/:topicId`, `/steve/:topicId`, `/conta` e `/preferencias`. `API_ORIGIN` informa somente a origem pública HTTPS da API; HTTP é aceito apenas em loopback. Defina-a também no build de release para um host remoto. Sem define, a prévia em loopback usa3001; release remoto sem origem falha com mensagem segura. Segredos administrativos, senha de banco e chave de IA ficam no backend.
 
 ## Prévia do build Web e checagem visual
 
@@ -71,9 +73,10 @@ Em outro terminal na raiz, prepare o navegador de teste em uma pasta local ignor
 $env:PLAYWRIGHT_BROWSERS_PATH = (Join-Path (Get-Location) '.tooling/playwright')
 npx playwright install chromium
 npm run test:visual
+npm run test:study
 ```
 
-Use o mesmo `PLAYWRIGHT_BROWSERS_PATH` nos comandos de instalação e teste. O script verifica navegação, tema persistido, shader animado/pausado, movimento reduzido, teclado e console em viewports de 360, 768 e 1440 px. Capturas ficam em `artifacts/screenshots` e o relatório em `artifacts/web-verification.json`. `PREVIEW_PORT` altera a porta do servidor; ao usá-la, defina também `PREVIEW_URL` para o teste. Veja [Validação](VALIDACAO.md) para o resultado efetivamente obtido, separado destas instruções.
+Use o mesmo `PLAYWRIGHT_BROWSERS_PATH` na instalação e teste. `test:visual` verifica temas, shader, persistência, teclado e movimento reduzido em360/768/1440. `test:study` verifica todos os assuntos, seis iframes/links com gesto real, cinco questões por rodada, resultado e contexto até conta/Steve. Este roteiro espera a API local ausente ou indisponível e não entra com credenciais reais; para ambiente configurado, use uma conta de teste e confira os casos do guia de experiência. Capturas/relatórios ficam em `artifacts/`. `PREVIEW_PORT` altera a porta; defina `PREVIEW_URL` correspondente. Veja [Validação](VALIDACAO.md).
 
 ## Configurar a API real
 
@@ -91,11 +94,15 @@ Preencha `DATABASE_URL`, `FIREBASE_PROJECT_ID`, `CORS_ORIGINS` e a credencial ad
 | --- | --- |
 | `DATABASE_URL` | URL PostgreSQL usada pela API/CLI Prisma no host; codifique caracteres especiais da senha |
 | `FIREBASE_PROJECT_ID` | ID do projeto que emite os ID tokens aceitos pelo Admin |
+| `FIREBASE_WEB_API_KEY` | Chave do mesmo projeto com Email/Password habilitado; utilizada pelo gateway REST no servidor |
 | `GOOGLE_APPLICATION_CREDENTIALS` | Caminho externo da credencial para o processo Node no host |
 | `FIREBASE_ADMIN_CREDENTIALS_FILE` | Caminho externo do mesmo arquivo para o secret do Compose |
 | `CORS_ORIGINS` | Origens exatas, separadas por vírgula; HTTPS obrigatório com `NODE_ENV=production` |
 | `PORT` | Porta do processo Node no host; padrão 3001 |
 | `POSTGRES_*` e `API_PORT` | Banco e portas locais do Compose |
+| `OPENAI_API_KEY` e `STEVE_MODEL` | Par obrigatório para habilitar Steve; escolher um modelo que aceite Responses e o contrato de texto |
+| `STEVE_DAILY_LIMIT` | Cota por usuário/dia UTC, padrão10, intervalo1–1000 |
+| `STEVE_GLOBAL_DAILY_LIMIT` | Cota global/dia UTC, padrão1000, até100000, nunca menor que a cota individual |
 
 O Compose monta a credencial em `/run/secrets/firebase_admin` e define o caminho dentro do container. Garanta que o usuário `node` (UID 1000) consiga ler o arquivo montado sem ampliar acesso desnecessariamente; esse acesso também precisa de teste no host de containers. Ele compõe sua própria URL usando o hostname `postgres`; a URL do host usa `127.0.0.1`. Não são intercambiáveis. Os valores obrigatórios são avaliados no arquivo Compose inteiro: prepare também o caminho da credencial antes de usar seus comandos, mesmo ao iniciar apenas o banco.
 

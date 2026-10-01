@@ -1,55 +1,56 @@
-# Evidências da fundação
+# Evidências da experiência de estudo
 
-Verificação local em 30/09/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.47.5 e Dart 3.13.4. Projeto independente na branch `codex/estuda-ai-foundation`.
+Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.47.5/Dart 3.13.4. Trabalho isolado em `codex/experiencia-estudo`, baseado na fundação `967b6a6`, no EstudaAi separado da AlmaPet.
 
 | Verificação executada | Resultado |
 | --- | --- |
-| `npm ci --ignore-scripts` com lockfile corrigido | Instalação concluída |
-| `npm run db:generate` | Prisma Client 6.19.3 gerado |
-| `npm test` | 13 testes passaram; build TypeScript incluído |
-| `npm run openapi` | Contrato gerado da aplicação Nest, sem listener |
-| `npm audit --json` | Zero vulnerabilidades reportadas na consulta |
-| `dart run build_runner build` | Modelos Freezed/JSON gerados |
-| `dart format --output=none --set-exit-if-changed lib test` | Formatação verificada |
-| `flutter test` | 18 testes passaram |
-| `flutter analyze` | Nenhum alerta |
-| `flutter build web --release --no-web-resources-cdn` | Build Web e shader compilados |
-| `npm run test:visual` | Chromium: 1440×1000, 360×800 e 768×1024 |
-| Docker/Compose e GitHub Actions | Revisão estática; execução não realizada |
+| `npm test` | 34/34; build TypeScript e catálogo incluídos |
+| `npm run test:pg:local` | 1/1 integração Prisma/PostgreSQL 18, com múltiplos cenários concorrentes |
+| `npm run openapi` | Contrato Nest gerado sem listener/identidade simulada |
+| `dart format --output=none --set-exit-if-changed lib test` | Sem alterações pendentes |
+| `flutter test` | 56/56 |
+| `flutter analyze` | Nenhum achado |
+| `flutter build web --release --no-web-resources-cdn` | Build Web/shader/fontes/assets gerados |
+| `npm run test:visual` | Chromium 1440×1000, 360×800, 768×1024; tema, teclado, shader, persistência e reduced motion |
+| `npm run test:study` | Nove percursos por assunto/viewport, 45 questões, 18 seleções de aula/links externos; zero erro interno |
+| Catálogo Flutter/API/bundle Web | SHA256 idêntico: `9c06a46b7de8060c2cd6a4bb37d7bb816e2fb951bcd18a1cd8d1484eea91b790` |
+| Docker/Compose e GitHub Actions | Preparados; execução remota não realizada |
 
-Web/testes usaram `FLUTTER_WINDOWS=false` no processo porque o privilégio de symlink de plugins Windows não estava disponível. Não foi alterado Developer Mode ou outra configuração global.
+Web/testes usaram `FLUTTER_WINDOWS=false` no processo devido ao privilégio de symlink de plugins Windows indisponível. Não se alterou Developer Mode ou configuração global. Na fundação de 30/09, instalação pelo lock, geração Prisma/modelos e auditoria npm foram executadas; a consulta daquela data reportou zero advisories. Não foi feita nova auditoria nesta entrega.
 
-## Cobertura comprovada
+## Cobertura e natureza dos testes
 
-- HTTP Nest real: saúde, sessão obrigatória, perfil interno, FREE, sanitização de falhas/logs, request ID, CORS e quotas por IP e por usuário entre endpoints.
-- O teste HTTP usa um verificador injetado. Strings `expired`/`other-project` nesse teste demonstram recusa do guard, não emissão/expiração real de tokens.
-- Um teste separado usa Firebase Admin real para rejeitar JWT malformado e audiência de outro projeto antes de consultar certificados/usuários. Login válido, assinatura de token emitido, expiração/revogação e credenciais reais permanecem sem teste de ponta a ponta.
-- PGlite aplica o SQL real da migração e executa consultas parametrizadas do repositório: dois usuários/metas, acesso cruzado, atualização alheia, SQL literal e restrições de banco. Não equivale a executar o adapter Prisma com PostgreSQL completo.
-- Cliente: chave de cache separada por usuário/meta, descarte de resposta antiga inclusive ao voltar à meta, logout, callback de cancelamento, preferências corrompidas, persistência e alterações simultâneas.
-- Dio: origem configurada, bearer do contrato de sessão, prazo de conexão, redirects desativados, sessão ausente/401, resposta inválida e códigos seguros para timeout, rede indisponível e cancelamento. A rede usa adapter controlado nos testes; o bootstrap ainda não tem login nem conexão com a API.
-- UI: navegação e tema em 360/1440; texto a 200% em celular; pares de contraste nos dois temas; locale pt-BR. A revisão independente também conferiu texto a 200% no desktop.
-- Shader real compilado: avanço do tempo, pausa/retomada por lifecycle, movimento reduzido e rolagem; falha do programa mantém o fundo estático utilizável.
-- Chromium no build de produção: temas, animação, reabertura com escolhas persistidas, Enter/Tab e nenhum erro no console nos três viewports. Comparação de uma faixa de pixels decorativos verifica movimento e pausa sem confundir foco com shader. Uma janela adicional verifica `prefers-reduced-motion: reduce`.
+- HTTP Nest real: saúde, autenticação, DTOs estritos, request ID, CORS, quotas IP/usuário, sanitização, corpo 64 KiB e cancelamento HTTP. Transportes Firebase/Responses são controlados explicitamente nos testes; não representam contas/provedores externos.
+- Firebase Admin real rejeita JWT malformado/audiência de outro projeto antes de consultar serviços externos. Cadastro/login/refresh validam os ID tokens devolvidos pelo gateway. Não foram emitidos tokens reais nem comprovadas expiração/revogação de uma conta configurada.
+- PGlite executa SQL/migrações/repositórios, isolamento de proprietário, restrições e rollback. Integração separada aplica ambas as migrações em PostgreSQL 18 vazio e usa dois PrismaClients: 20 reservas concorrentes respeitam 10 vagas, dois usuários disputam a última vaga global, devolução duplicada só decrementa uma vez, falha de insert faz rollback e novo dia tem buckets próprios. O cluster temporário é identificado pelo `data_directory` e encerrado; nenhum banco/serviço existente é alterado.
+- Responses: campos enviados, múltiplos blocos, reasoning antes de texto, fase final versus comentário, recusa, resposta incompleta inclusive sem texto, timeout/abort e ausência de retry. Cota permanece consumida após envio incerto; abort antes do transporte libera uma vez. IDs/e-mail não entram no pedido ao provedor.
+- Cliente: origem HTTPS/loopback, bearer, timeout/redirects, códigos seguros, refresh compartilhado, logout durante refresh, falha temporária com token ainda válido, recusa de token expirado, perfil não confirmado e recuperação sem afirmar acesso.
+- Chat: uma chamada pendente, assunto/conta/geração/nova conversa/dispose cancelam e descartam conclusão tardia; pares completos até oito mensagens/12.000 caracteres; resposta incompleta/longa não entra como explicação completa. 503 preserva a pergunta sem inventar resposta; 401 remove a sessão.
+- Quiz: cinco questões e alternativas embaralhadas, escolha única, explicação/avanço, sequência, perfeito 700, recorde serializado por assunto/versão e recuperação de falha local. Conteúdo de 30 questões revisado; notação percentual, inferência e energia disponível foram ajustadas.
+- UI: três assuntos, navegações/rotas/contexto, seis players sob escolha, resultado→aula→Steve→conta, texto 200% e teclado, contraste nos dois temas, locale pt-BR. Capturas revelaram símbolos sem glifo; regressões foram reproduzidas antes de usar ícones Material empacotados. Fotografia local e quatro formas inspecionadas após build.
+- Shader: compilação real, movimento por pixels, pausa/reabertura/persistência, lifecycle, detalhe fora da tela e movimento reduzido.
 
-Capturas e relatório locais: `artifacts/screenshots/` e `artifacts/web-verification.json`, ignorados pelo Git. Script reproduzível: `tools/verify-web.mjs`. Prévia: `http://127.0.0.1:4173`, enquanto `npm run preview` estiver em execução.
+## Navegador e fronteiras externas
 
-## Revisão e correções
+Relatórios em `artifacts/web-verification.json` e `artifacts/study-verification.json`; capturas em `artifacts/screenshots` e `artifacts/study`, ignorados pelo Git. Scripts reproduzíveis: `tools/verify-web.mjs` e `tools/verify-study.mjs`. Prévia `http://127.0.0.1:4173` enquanto o servidor estiver em execução; links de rotas Web usam `/#/aprender/porcentagem`, por exemplo.
 
-A revisão independente identificou concorrência nas preferências, timeout de conexão ausente, falta de quota por usuário e respostas ausentes no OpenAPI. As falhas foram reproduzidas antes das correções; regressões passaram depois. A revisão final não apontou novos problemas materiais. Operação foi revisada separadamente; actions foram fixadas em SHAs de tags oficiais conferidas.
+O roteiro verificou todos os seis iframes com ID/título corretos e abertura de URL YouTube em popup por gesto real, em cada viewport. Pedidos externos abortados ao trocar/dispor player são registrados separadamente; não provam indisponibilidade do vídeo nem reprodução. Inspeção adicional confirmou playback real da primeira aula de porcentagem, `TEhv11SkDUs`: após clicar “Assistir vídeo”, o tempo avançou de0 para6,2 e12,2 segundos, `paused=false`, `readyState=4`, sem erro de mídia. Capturas/estado estão em `artifacts/playback`. Não se generaliza essa reprodução para as outras cinco aulas ou aparelhos.
 
-Overrides corrigem `js-yaml`, `deepmerge-ts` e o `uuid` transitivo de `gaxios`. A árvore foi re-resolvida sem o lock antigo; instalação, geração Prisma e testes passaram. Zero avisos de auditoria é uma consulta pontual de advisories, não ausência absoluta de risco.
+Não há `.env` local de projeto com configuração Firebase/OpenAI demonstrada nem API atendendo 3001. A tentativa real de acesso no navegador recebe `ERR_CONNECTION_REFUSED` e mensagem segura de indisponibilidade. Esse erro esperado é separado dos erros internos. HTTP 503 por configuração ausente foi comprovado nos testes Nest, não alegado como resposta de um servidor local inexistente. Login e três respostas reais de matérias ficam pendentes de configuração; nenhum double entra no produto.
 
-## Limites da entrega
+## Plataformas e entrega
 
 | Área | Estado |
 | --- | --- |
-| Flutter Web/Chromium local | Build e fluxo verificados |
-| Android | Scaffold; sem SDK/aparelho/build ou assinatura de release verificados |
-| iOS | Scaffold; sem macOS/Xcode/build ou assinatura verificados |
-| Windows nativo | Scaffold; sem compilação C++/symlinks autorizados verificados |
-| Firebase com tokens emitidos | Configuração e teste real pendentes |
-| Prisma/PostgreSQL real e migration deploy | Pendentes de infraestrutura |
-| Docker e CI remota | Não executados |
-| Stores/deploy comercial | Não publicados |
+| Flutter Web/Chromium local | Build e percursos verificados |
+| Android/iOS/Windows nativos | Scaffolds; builds/aparelhos/assinaturas não verificados |
+| Prisma/PostgreSQL 18 isolado | Migrações e concorrência verificadas localmente |
+| PostgreSQL 17 da CI/destino e job Compose | Configurados, ainda sem execução comprovada |
+| Firebase/OpenAI com conta/chaves reais | Integração de código/testes pronta; validação ao vivo pendente |
+| Docker/CI remota/stores/deploy | Não executados/publicados |
 
-Não foram medidos bateria, GPU, dispositivos reais, LCP/INP ou carga multiusuário. Não há homologação por suíte completa de acessibilidade ou leitor de tela real; a evidência atual cobre contraste, semântica/controles, teclado e reflow. Readiness verifica `SELECT 1`, não schema ou Firebase. Login/CRUD de metas, estudo adaptativo, IA e Premium comercial pertencem às próximas fases.
+Não há homologação por leitor de tela real ou suíte completa de acessibilidade. A evidência cobre controles semânticos, contraste, teclado e reflow. Não foram medidos LCP/INP, bateria, GPU, carga comercial ou rollback do destino. Readiness executa `SELECT 1`; não confirma schema nem Firebase. CRUD de metas, adaptatividade, XP/ranking global e Premium comercial permanecem fora desta entrega.
+
+## Revisão final
+
+Revisão independente da branch em andamento após os testes. O registro será atualizado com achados e resolução antes da integração local.

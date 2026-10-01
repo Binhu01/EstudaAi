@@ -9,7 +9,7 @@ const reports = [];
 async function enableSemantics(page) {
   await page.locator('flt-semantics-placeholder').waitFor();
   await page.locator('flt-semantics-placeholder').dispatchEvent('click');
-  await expect(page.getByText('Minha jornada', { exact: true })).toBeVisible();
+  await expect(page.getByText('Seu próximo nível começa com uma descoberta.', { exact: true })).toBeVisible();
 }
 async function stableFrame(page, label) {
   await page.waitForTimeout(700);
@@ -21,10 +21,18 @@ async function stableFrame(page, label) {
   expect(second.equals(first), `Paused shader keeps its pixels unchanged: ${label}`).toBe(true);
 }
 async function shaderClip(page) {
-  const heading = await page.getByText(/O que vamos/).boundingBox();
-  expect(heading).toBeTruthy();
+  const hint = page.getByText('Explore os assuntos abaixo', { exact: true });
+  await hint.scrollIntoViewIfNeeded();
+  const bottom = await hint.boundingBox();
+  const brand = await page.getByText('Estuda Aí', { exact: true }).last().boundingBox();
+  expect(bottom).toBeTruthy();
+  expect(brand).toBeTruthy();
   const width = page.viewportSize().width;
-  return { x: width - (width < 600 ? 16 : 32) - 12, y: heading.y - 12, width: 6, height: 64 };
+  const right = width - (width < 600 ? 16 + 24 : 32 + 40);
+  const inline = brand.x + brand.width + 24 + 92 <= right;
+  // Inner pixels of the 92×48 shader, clear of rounded edges and text.
+  return { x: (inline ? brand.x + brand.width + 24 : brand.x) + 12,
+    y: bottom.y - 16 - 48 + 12, width: 64, height: 16 };
 }
 function navigation(page, name) {
   const prefix = new RegExp(`^${name}(?:\\s|$)`);
@@ -56,7 +64,7 @@ try {
     expect(await page.evaluate(() => localStorage.getItem('flutter.theme'))).toBe('"dark"');
     expect(await page.evaluate(() => localStorage.getItem('flutter.animate'))).toBe('false');
     await navigation(page, 'Início').click();
-    await expect(page.getByText('Minha jornada', { exact: true })).toBeVisible();
+    await expect(page.getByText('Seu próximo nível começa com uma descoberta.', { exact: true })).toBeVisible();
     await stableFrame(page, `${viewport.width}-dark-paused`);
     await page.reload();
     await enableSemantics(page);

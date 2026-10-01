@@ -53,7 +53,7 @@ Dart: `StudyTopic`, `StudyLesson`, `StudyQuestion`, `StudySource`, `LearningCata
 
 TypeScript: `StudyCatalog` valida a mesma estrutura; `loadStudyCatalog(): StudyCatalog`, `StudyTopic | undefined StudyCatalog.find(id: string)`. JSON empacotado em `apps/api/dist/src/catalog/catalog.json`, lido por `__dirname`. Nada busca automaticamente documentos/vídeos externos durante execução.
 
-Sessão HTTP: `AuthSessionResponse={idToken:string,refreshToken:string,expiresInSeconds:number}`. Cliente obtém identidade interna por `/v1/me`. DTOs públicos auth só recebem email/password ou refreshToken; reset recebe email. Resposta de reset: `{status:'accepted'}`; erro sempre seguro.
+Sessão HTTP: `AuthSessionResponse={idToken:string,refreshToken:string,expiresInSeconds:number}`. Cliente obtém identidade interna por `/v1/me`. DTOs públicos auth só recebem email/password ou refreshToken; reset recebe email. Resposta de reset: `{accepted:true}`; erro sempre seguro. O formato foi alinhado ao OpenAPI e ao cliente/servidor verificados, preservando a confirmação genérica da especificação.
 
 Steve HTTP: entrada `SteveInput={topicId:string,message:string,history:ChatMessage[]}` com `ChatMessage={role:'user'|'assistant',text:string}`. Retorno `SteveReply={topicId,status:'completed'|'refused'|'incomplete',text,sources:StudySource[],quota:{remaining:number,resetAt:string},requestId:string}`. Estado incompleto/recusado tem apresentação própria. Fontes vêm do catálogo do servidor, sem executar links/HTML gerados pelo modelo.
 
@@ -70,4 +70,4 @@ Steve HTTP: entrada `SteveInput={topicId:string,message:string,history:ChatMessa
 
 Cobertura: seções 1–2 da spec → contratos e A1; 3 → A2/A3; 4 → B1/B2; 5 → A1/A3; 6 → C1/D1; 7 → C2/C3/D2; 8–9 → D3; 10 → referências nos planos. Os cinco itens de Review Focus têm testes nomeados nas tarefas proprietárias. Valores e contratos têm uma definição comum; cada plano aponta para este índice. Não há decisões de produto pendentes.
 
-Estado: plano escrito para revisão do usuário; implementação não iniciada. Após aprovação e escolha do modo de execução, implementar tarefa a tarefa e registrar as caixas e evidências reais.
+Estado: implementação A1–D2 concluída e verificada; D3 em verificação final. Evidências e fronteiras não verificadas estão em [Validação](../../VALIDACAO.md).

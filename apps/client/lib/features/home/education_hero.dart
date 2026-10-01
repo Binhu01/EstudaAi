@@ -145,9 +145,22 @@ class EducationHero extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Text(
-                  'Explore os assuntos abaixo ↓',
-                  style: TextStyle(color: AppColors.white, fontSize: 13),
+                const Wrap(
+                  spacing: 8,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    Text(
+                      'Explore os assuntos abaixo',
+                      style: TextStyle(color: AppColors.white, fontSize: 13),
+                    ),
+                    ExcludeSemantics(
+                      child: Icon(
+                        Icons.arrow_downward,
+                        color: AppColors.white,
+                        size: 16,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
