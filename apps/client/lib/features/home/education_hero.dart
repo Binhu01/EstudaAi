@@ -11,10 +11,14 @@ class EducationHero extends StatelessWidget {
     required this.animate,
     required this.visible,
     this.imagePath = 'assets/images/study-hero.webp',
+    this.gradientKey,
+    this.shaderVisible,
   });
   final VoidCallback onChooseTopic;
   final bool animate, visible;
   final String imagePath;
+  final Key? gradientKey;
+  final bool? shaderVisible;
   @override
   Widget build(BuildContext context) {
     final compact = MediaQuery.sizeOf(context).width < 600;
@@ -131,8 +135,9 @@ class EducationHero extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(24),
                           child: StudyGradient(
+                            key: gradientKey,
                             animate: animate,
-                            visible: visible,
+                            visible: shaderVisible ?? visible,
                           ),
                         ),
                       ),

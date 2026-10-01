@@ -7,11 +7,13 @@ import 'package:estuda_ai/app/app.dart';
 import 'package:estuda_ai/features/settings/settings_controller.dart';
 import 'package:estuda_ai/features/learning/study_catalog.dart';
 import 'package:estuda_ai/features/learning/learning_controller.dart';
+import 'package:estuda_ai/features/learning/external_links.dart';
 
 Future<void> openApp(
   WidgetTester tester, {
   Size size = const Size(360, 800),
   double scale = 1,
+  Future<bool> Function(Uri)? openLink,
 }) async {
   tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1;
@@ -25,6 +27,7 @@ Future<void> openApp(
       overrides: [
         preferencesProvider.overrideWithValue(prefs),
         catalogProvider.overrideWith((ref) async => catalog!),
+        if (openLink != null) externalLinkProvider.overrideWithValue(openLink),
       ],
       child: MediaQuery(
         data: MediaQueryData(size: size, textScaler: TextScaler.linear(scale)),

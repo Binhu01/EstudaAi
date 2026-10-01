@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart';
+import 'package:estuda_ai/features/learning/study_catalog.dart';
+import 'package:estuda_ai/features/learning/learning_controller.dart';
 
 Finder get _gradient => find.byType(StudyGradient, skipOffstage: false);
 
@@ -44,12 +47,18 @@ void main() {
     });
     SharedPreferences.setMockInitialValues({'animate': true});
     final preferences = await SharedPreferences.getInstance();
+    final catalog = await tester.runAsync(() => loadCatalog(rootBundle));
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [preferencesProvider.overrideWithValue(preferences)],
+        overrides: [
+          preferencesProvider.overrideWithValue(preferences),
+          catalogProvider.overrideWith((ref) async => catalog!),
+        ],
         child: const EstudaAiApp(),
       ),
     );
+    await tester.pump();
+    await tester.ensureVisible(_gradient);
     await tester.pump();
     final initial = _shaderTime(tester);
     await tester.pump(const Duration(milliseconds: 200));
@@ -83,7 +92,7 @@ void main() {
     final offscreen = _shaderTime(tester);
     await tester.pump(const Duration(milliseconds: 300));
     expect(_shaderTime(tester), offscreen);
-    await tester.drag(scroll, const Offset(0, 1000));
+    await tester.ensureVisible(_gradient);
     await tester.pump();
     expect(tester.widget<StudyGradient>(_gradient).visible, true);
     await tester.pump(const Duration(milliseconds: 200));

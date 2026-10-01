@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../features/learning/learning_controller.dart';
 
 import '../design_system/tokens.dart';
 
-class AppShell extends StatelessWidget {
+class AppShell extends ConsumerWidget {
   const AppShell({super.key, required this.location, required this.child});
   final String location;
   final Widget child;
   @override
-  Widget build(BuildContext context) {
-    final selected = location == '/' ? 0 : 1;
-    void navigate(int index) => context.go(index == 0 ? '/' : '/preferencias');
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selected = location.startsWith('/preferencias')
+        ? 2
+        : location.startsWith('/aprender')
+        ? 1
+        : 0;
+    void navigate(int index) => context.go(
+      [
+        '/',
+        '/aprender/${ref.read(learningProvider).topicId}',
+        '/preferencias',
+      ][index],
+    );
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth >= 1024) {
@@ -37,10 +50,17 @@ class AppShell extends StatelessWidget {
                             ),
                             const SizedBox(height: AppSpacing.sm),
                             NavigationItem(
-                              label: 'Preferências',
-                              icon: AppIcons.settings,
+                              label: 'Aprender',
+                              icon: AppIcons.video,
                               selected: selected == 1,
                               onPressed: () => navigate(1),
+                            ),
+                            const SizedBox(height: AppSpacing.sm),
+                            NavigationItem(
+                              label: 'Preferências',
+                              icon: AppIcons.settings,
+                              selected: selected == 2,
+                              onPressed: () => navigate(2),
                             ),
                             const Spacer(),
                             const Divider(color: AppColors.white),
@@ -83,6 +103,10 @@ class AppShell extends StatelessWidget {
                         label: Text('Início'),
                       ),
                       NavigationRailDestination(
+                        icon: Icon(AppIcons.video),
+                        label: Text('Aprender'),
+                      ),
+                      NavigationRailDestination(
                         icon: Icon(AppIcons.settings),
                         label: Text('Preferências'),
                       ),
@@ -102,6 +126,10 @@ class AppShell extends StatelessWidget {
             onDestinationSelected: navigate,
             destinations: const [
               NavigationDestination(icon: Icon(AppIcons.home), label: 'Início'),
+              NavigationDestination(
+                icon: Icon(AppIcons.video),
+                label: 'Aprender',
+              ),
               NavigationDestination(
                 icon: Icon(AppIcons.settings),
                 label: 'Preferências',

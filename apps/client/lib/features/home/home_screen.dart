@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../settings/settings_controller.dart';
 import '../learning/learning_controller.dart';
@@ -15,11 +16,14 @@ class HomeScreen extends ConsumerStatefulWidget {
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   final _scroll = ScrollController();
   final _hero = GlobalKey(), _topics = GlobalKey();
+  final _gradient = GlobalKey();
   bool _visible = true;
+  bool _shaderVisible = true;
   @override
   void initState() {
     super.initState();
     _scroll.addListener(_checkVisibility);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _checkVisibility());
   }
 
   void _checkVisibility() {
@@ -28,7 +32,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final y = box.localToGlobal(Offset.zero).dy;
     final visible =
         y + box.size.height > 0 && y < MediaQuery.sizeOf(context).height;
-    if (visible != _visible) setState(() => _visible = visible);
+    final shaderBox = _gradient.currentContext?.findRenderObject();
+    var shaderVisible = visible;
+    if (shaderBox is RenderBox && shaderBox.hasSize) {
+      final shaderY = shaderBox.localToGlobal(Offset.zero).dy;
+      shaderVisible =
+          shaderY + shaderBox.size.height > 0 &&
+          shaderY < MediaQuery.sizeOf(context).height;
+    }
+    if (visible != _visible || shaderVisible != _shaderVisible) {
+      setState(() {
+        _visible = visible;
+        _shaderVisible = shaderVisible;
+      });
+    }
   }
 
   void _choose() {
@@ -65,6 +82,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             children: [
               EducationHero(
                 key: _hero,
+                gradientKey: _gradient,
+                shaderVisible: _shaderVisible,
                 animate: ref.watch(settingsProvider).animate,
                 visible: _visible,
                 onChooseTopic: _choose,
@@ -107,6 +126,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               .selectTopic,
                         ),
                       ),
+                  const SizedBox(height: 24),
+                  FilledButton.icon(
+                    onPressed: () => context.go(
+                      '/aprender/${ref.read(learningProvider).topicId}',
+                    ),
+                    icon: const Icon(Icons.play_circle_outline),
+                    label: const Text('Aprender com videoaulas'),
+                  ),
                 ],
               ),
               const SizedBox(height: 48),

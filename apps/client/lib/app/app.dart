@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 
 import '../design_system/theme.dart';
 import '../features/home/home_screen.dart';
+import '../features/learning/learning_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/settings/settings_controller.dart';
 import '../design_system/gallery.dart';
@@ -20,6 +21,11 @@ final routerProvider = Provider<GoRouter>((ref) {
             AppShell(location: state.uri.path, child: child),
         routes: [
           GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
+          GoRoute(
+            path: '/aprender/:topicId',
+            builder: (context, state) =>
+                LearningScreen(topicId: state.pathParameters['topicId']!),
+          ),
           GoRoute(
             path: '/preferencias',
             builder: (context, state) => const SettingsScreen(),
