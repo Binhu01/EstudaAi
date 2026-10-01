@@ -3,34 +3,39 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 Map<String, dynamic> _object(dynamic value) {
-  if (value is! Map<String, dynamic>)
+  if (value is! Map<String, dynamic>) {
     throw const FormatException('Objeto inválido');
+  }
   return value;
 }
 
 String _text(dynamic value) {
-  if (value is! String || value.trim().isEmpty)
+  if (value is! String || value.trim().isEmpty) {
     throw const FormatException('Texto inválido');
+  }
   return value;
 }
 
 String _id(dynamic value) {
   final id = _text(value);
-  if (!RegExp(r'^[a-z0-9-]+$').hasMatch(id))
+  if (!RegExp(r'^[a-z0-9-]+$').hasMatch(id)) {
     throw const FormatException('ID inválido');
+  }
   return id;
 }
 
 List<T> _list<T>(dynamic value, T Function(dynamic) parse) {
-  if (value is! List || value.isEmpty)
+  if (value is! List || value.isEmpty) {
     throw const FormatException('Lista inválida');
+  }
   return List<T>.unmodifiable(value.map(parse));
 }
 
 void _unique(Iterable<String> values) {
   final list = values.toList();
-  if (list.toSet().length != list.length)
+  if (list.toSet().length != list.length) {
     throw const FormatException('Valor duplicado');
+  }
 }
 
 class StudySource {
@@ -43,8 +48,9 @@ class StudySource {
     if (uri == null ||
         uri.scheme != 'https' ||
         uri.host.isEmpty ||
-        uri.userInfo.isNotEmpty)
+        uri.userInfo.isNotEmpty) {
       throw const FormatException('Fonte insegura');
+    }
     return StudySource(_text(s['title']), url);
   }
 }
@@ -63,8 +69,9 @@ class StudyLesson {
   factory StudyLesson.parse(dynamic value) {
     final l = _object(value);
     final video = _text(l['videoId']);
-    if (!RegExp(r'^[A-Za-z0-9_-]{11}$').hasMatch(video))
+    if (!RegExp(r'^[A-Za-z0-9_-]{11}$').hasMatch(video)) {
       throw const FormatException('Vídeo inválido');
+    }
     return StudyLesson(
       _id(l['id']),
       _text(l['title']),
@@ -92,8 +99,9 @@ class StudyQuestion {
     final options = _list(q['options'], _text);
     _unique(options.map((s) => s.trim().toLowerCase()));
     final correct = q['correctIndex'];
-    if (options.length != 4 || correct is! int || correct < 0 || correct > 3)
+    if (options.length != 4 || correct is! int || correct < 0 || correct > 3) {
       throw const FormatException('Questão inválida');
+    }
     return StudyQuestion(
       _id(q['id']),
       _text(q['prompt']),
@@ -124,8 +132,9 @@ class StudyTopic {
     final t = _object(value);
     final lessons = _list(t['lessons'], StudyLesson.parse);
     final questions = _list(t['questions'], StudyQuestion.parse);
-    if (lessons.length != 2 || questions.length != 10)
+    if (lessons.length != 2 || questions.length != 10) {
       throw const FormatException('Tamanho inválido');
+    }
     _unique(lessons.map((l) => l.id));
     _unique(questions.map((q) => q.id));
     return StudyTopic(
@@ -148,8 +157,9 @@ class LearningCatalog {
   final List<StudyTopic> topics;
   factory LearningCatalog.fromJson(Map<String, dynamic> root) {
     final version = root['catalogVersion'];
-    if (root['schemaVersion'] != 1 || version is! int || version < 1)
+    if (root['schemaVersion'] != 1 || version is! int || version < 1) {
       throw const FormatException('Versão inválida');
+    }
     final topics = _list(root['topics'], StudyTopic.parse);
     _unique(topics.map((t) => t.id));
     return LearningCatalog(version, topics);

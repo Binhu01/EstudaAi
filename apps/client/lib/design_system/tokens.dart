@@ -48,6 +48,9 @@ class AppColors {
       sidebar;
   static const white = Color(0xFFFFFFFF);
   static const scrim = Color(0xFF000000);
+  static const heroFallback = Color(0xFF17281F);
+  static const heroScrimTop = Color(0xB8000000);
+  static const heroScrimBottom = Color(0xDB000000);
   static const shaderYellow = Color(0xFFD6CE36);
   static const shaderBlue = Color(0xFF0000D8);
   static const shaderViolet = Color(0xFF9147FF);

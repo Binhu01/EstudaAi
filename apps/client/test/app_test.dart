@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:estuda_ai/app/app.dart';
 import 'package:estuda_ai/features/settings/settings_controller.dart';
+import 'package:estuda_ai/features/learning/study_catalog.dart';
+import 'package:estuda_ai/features/learning/learning_controller.dart';
 
 Future<void> openApp(
   WidgetTester tester, {
@@ -16,9 +19,13 @@ Future<void> openApp(
   addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
   SharedPreferences.setMockInitialValues({'animate': false});
   final prefs = await SharedPreferences.getInstance();
+  final catalog = await tester.runAsync(() => loadCatalog(rootBundle));
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [preferencesProvider.overrideWithValue(prefs)],
+      overrides: [
+        preferencesProvider.overrideWithValue(prefs),
+        catalogProvider.overrideWith((ref) async => catalog!),
+      ],
       child: MediaQuery(
         data: MediaQueryData(size: size, textScaler: TextScaler.linear(scale)),
         child: const EstudaAiApp(),
@@ -36,12 +43,19 @@ void main() {
       await openApp(tester, size: size);
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
-      expect(find.text('Minha jornada'), findsOneWidget);
       expect(
-        Localizations.localeOf(tester.element(find.text('Minha jornada'))),
+        find.text('Seu próximo nível começa com uma descoberta.'),
+        findsOneWidget,
+      );
+      expect(
+        Localizations.localeOf(
+          tester.element(
+            find.text('Seu próximo nível começa com uma descoberta.'),
+          ),
+        ),
         const Locale('pt', 'BR'),
       );
-      expect(find.text('Nenhuma meta por aqui, ainda'), findsOneWidget);
+      expect(find.text('Escolher meu assunto'), findsOneWidget);
       await tester.tap(find.text('Preferências').first);
       await tester.pumpAndSettle();
       expect(find.text('Aparência'), findsOneWidget);
@@ -59,7 +73,7 @@ void main() {
   ) async {
     await openApp(tester, scale: 2);
     expect(
-      MediaQuery.textScalerOf(tester.element(find.text('Minha jornada')))
+      MediaQuery.textScalerOf(tester.element(find.text('Escolher meu assunto')))
           .scale(10),
       20,
     );

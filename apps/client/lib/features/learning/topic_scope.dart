@@ -14,8 +14,9 @@ class TopicScope extends ConsumerStatefulWidget {
 class _TopicScopeState extends ConsumerState<TopicScope> {
   void _sync() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted)
+      if (mounted) {
         ref.read(learningProvider.notifier).selectTopic(widget.topicId);
+      }
     });
   }
 

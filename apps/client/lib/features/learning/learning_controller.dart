@@ -22,9 +22,11 @@ class LearningController extends Notifier<LearningState> {
   LearningState build() => const LearningState();
   void selectTopic(String id) {
     final catalog = ref.read(catalogProvider).asData?.value;
-    if (catalog == null || catalog.find(id) == null)
+    if (catalog == null || catalog.find(id) == null) {
       throw ArgumentError.value(id, 'topicId');
-    if (state.topicId != id)
+    }
+    if (state.topicId != id) {
       state = LearningState(topicId: id, generation: state.generation + 1);
+    }
   }
 }
