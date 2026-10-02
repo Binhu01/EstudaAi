@@ -10,7 +10,7 @@ Base: `ed177722a93fd91ba4acd7b20a9d1a2637c2fc1f`. Branch de trabalho: `codex/rot
 
 ## Abordagem escolhida
 
-O servidor guarda o histórico confirmado por conta. Salvar apenas no dispositivo seria mais simples, mas não permitiria consultar o mesmo caderno em outro dispositivo. Uma fila offline persistente acrescentaria sincronização e conflitos; nesta primeira versão, falhas têm reenvio explícito ou a opção de continuar sem salvar. O feedback da questão continua imediato.
+O servidor guarda o histórico confirmado por conta. Salvar apenas no dispositivo seria mais simples, mas não permitiria consultar o mesmo caderno em outro dispositivo. Uma fila offline persistente acrescentaria sincronização e conflitos; nesta primeira versão, falhas têm reenvio explícito ou a opção de continuar estudando. O feedback da questão continua imediato.
 
 Reutilizar as integrações atuais de conta/Steve é preferível a introduzir outro provedor. A implantação inicial pode usar PostgreSQL local persistente, sem exigir hospedagem de banco para testar a experiência. A configuração externa será guiada por documentação e diagnóstico local que informa apenas presença/validade das configurações, sem imprimir segredos.
 
@@ -68,9 +68,9 @@ Programação espaçada, notificações, flashcards, simulados e algoritmo adapt
 
 O registro de cada resposta ocorre quando o aluno responde, mesmo se abandonar a rodada depois. O UUID é gerado uma vez nesse toque e reutilizado nas novas tentativas de envio. A escolha trava e o comentário aparece imediatamente; avançar aguarda a confirmação ou uma decisão explícita em caso de falha.
 
-Em falha, mostrar “Tentar novamente” e “Continuar sem salvar”, explicando que aquela resposta ainda não entrou no painel ou no caderno. Continuar sem salvar abandona o envio, sem afirmar sincronização futura. Não criar uma fila offline silenciosa.
+Em falha, mostrar “Tentar novamente” e “Continuar estudo”, com “Não foi possível confirmar o registro desta resposta. Tente novamente ou continue estudando.” Se o servidor recebeu a resposta, mas a confirmação se perdeu, o registro pode já existir. Reenvio com o mesmo UUID recupera a confirmação, sem duplicar. Continuar abandona o envio e não agenda sincronização futura; não promete que o servidor deixou de salvar. Painel e caderno sempre refletem os registros realmente aceitos no servidor, e não um contador otimista do cliente. Não criar uma fila offline silenciosa.
 
-Capturar usuário, meta e geração da sessão no toque. Cancelar e descartar respostas de requisições antigas em saída, troca de conta ou contexto. Antes de obter o token e antes de enviar, conferir que o contexto original continua ativo. Nunca reenviar uma resposta da conta anterior na nova conta.
+Capturar usuário, meta e geração da sessão no toque. Cancelar e descartar respostas de requisições antigas em saída, troca de conta ou contexto. Antes de obter o token e antes de enviar, conferir que o contexto original continua ativo. Nunca reenviar uma resposta da conta anterior na nova conta. Na saída, limpar dados pessoais de memória e armazenamento local; uma troca de meta usa cache separado e nunca exibe o resumo da meta anterior como atual.
 
 O quiz anônimo continua disponível e conserva seu recorde local. O histórico privado e o caderno exigem conta. Pontuação de rodada e recorde local permanecem separados das métricas confirmadas de estudo.
 
@@ -91,7 +91,7 @@ Todas as rotas exigem autenticação, validação estrita, limites de requisiç�
 - Dois usuários e duas metas do mesmo usuário não conseguem ler/gravar histórico cruzado; saída e troca de conta/contexto não reutilizam dados ou respostas pendentes.
 - Índices embaralhados são convertidos corretamente em opções canônicas. Questão inválida, versão antiga, meta incompatível e propriedades extras são recusadas.
 - Reenvio após confirmação perdida não duplica dados. Reutilização incompatível de UUID resulta em conflito. Gravações concorrentes preservam contagens e a ordem do caderno.
-- Uma rodada interrompida conserva respostas já confirmadas. Falhas e “Continuar sem salvar” não criam resultados fictícios.
+- Uma rodada interrompida conserva respostas já confirmadas no servidor. Uma confirmação perdida pode ser recuperada sem duplicar; falhas e “Continuar estudo” não criam resultados fictícios nem prometem que uma gravação recebida pelo servidor foi desfeita.
 - Meta diária conta questões diferentes; acertos contam tentativas. Passagem da meia-noite UTC e da meia-noite no fuso da meta têm testes com relógio controlado.
 - Erro → acerto → novo erro produz pendente → revisado → pendente. A revisão não marca domínio.
 - Telas são utilizáveis em 360×800, 768×1024 e 1440×1000, com texto a 200%, teclado, estados acessíveis e tema existente. Navegação conserva área/módulo ao ir para conta ou Steve.
