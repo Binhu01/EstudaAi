@@ -71,6 +71,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/study/catalog.json
+    - assets/contests/bb2026/catalog.json
     - assets/images/study-hero.webp
   shaders:
     - shaders/study_gradient.frag
