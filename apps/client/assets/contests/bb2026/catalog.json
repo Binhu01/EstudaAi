@@ -12766,7 +12766,7 @@
           "sources": [
             {
               "title": "British Council — vocabulário por nível",
-              "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2-vocabulary"
+              "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2"
             }
           ],
           "updatedAt": "2026-10-02",
@@ -12864,7 +12864,7 @@
                 "bb2026-e01-q03"
               ],
               "sourceUrls": [
-                "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2-vocabulary"
+                "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2"
               ]
             },
             {
@@ -12881,7 +12881,7 @@
                 "bb2026-e01-q06"
               ],
               "sourceUrls": [
-                "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2-vocabulary"
+                "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2"
               ]
             }
           ]
@@ -13669,6 +13669,14 @@
             {
               "title": "British Council — contrasting ideas",
               "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+            },
+            {
+              "title": "British Council — preposições de tempo",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on"
+            },
+            {
+              "title": "British Council — preposições de lugar",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/prepositions-place"
             }
           ],
           "updatedAt": "2026-10-02",
@@ -13766,7 +13774,9 @@
                 "bb2026-e06-q03"
               ],
               "sourceUrls": [
-                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/prepositions-place"
               ]
             },
             {
@@ -13783,7 +13793,9 @@
                 "bb2026-e06-q06"
               ],
               "sourceUrls": [
-                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/prepositions-place"
               ]
             }
           ]
