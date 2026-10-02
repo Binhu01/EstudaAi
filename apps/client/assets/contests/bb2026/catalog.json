@@ -17782,7 +17782,1516 @@
           "videoId": "X652ApXFTJA"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-f01",
+          "researchId": "F01",
+          "title": "Operação e linha do tempo",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar capital, juros, montante e datas dos fluxos · Transportar valor no tempo sob taxa e regime definidos",
+          "objectives": [
+            "Identificar capital, juros, montante e datas dos fluxos",
+            "Transportar valor no tempo sob taxa e regime definidos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Data é parte do valor",
+              "text": "Capital é valor de referência inicial; juros são remuneração/custo no regime definido; montante é capital mais juros na data final. Em fluxo, sinal depende da perspectiva: entrada para um agente pode ser saída para outro. Linha do tempo coloca recebimentos/pagamentos em instantes para evitar somar valores de datas distintas sem transporte. Capitalização leva valor para frente; desconto o traz para data anterior segundo critério informado. No regime composto de taxa i por período, futuro=P(1+i)^n e presente=futuro/(1+i)^n. Trocar data focal sem respeitar regime muda a conta. Taxa nominal publicada pode exigir identificação da capitalização; custo efetivo do contrato real pode incluir encargos ausentes neste modelo."
+            },
+            {
+              "type": "list",
+              "title": "Hipóteses dos exercícios",
+              "items": [
+                "Casos didáticos com taxa constante, sem tarifas, tributos, seguros ou indexação, salvo indicação expressa.",
+                "Taxa e período precisam de unidades compatíveis.",
+                "Fluxos ocorrem nas datas indicadas; não são recomendação de investimento ou crédito.",
+                "Preserve precisão intermediária; valores em centavos são arredondados ao final quando solicitado."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "R$300 no instante0, taxa composta de10% por período. Qual equivalente no instante2?",
+              "steps": [
+                "Linha do tempo tem duas transições:0→1→2.",
+                "Instante1:330; instante2:363."
+              ],
+              "answer": "R$363.",
+              "check": "363/(1,10)²=300; descontar e capitalizar reconciliam as datas."
+            }
+          ],
+          "pitfalls": [
+            "Somar diretamente fluxos de datas diferentes.",
+            "Confundir juros com montante."
+          ],
+          "recap": [
+            "Capital e montante têm data de referência.",
+            "Sinal depende de perspectiva.",
+            "Transporte precisa de taxa, regime e períodos."
+          ],
+          "retrieval": [
+            "R$100 hoje é igual aR$100 depois com taxa positiva?",
+            "Por que definir quem recebe e paga?"
+          ],
+          "notes": "Operação e linha do tempo\nCapital e montante têm data de referência.\nSinal depende de perspectiva.\nTransporte precisa de taxa, regime e períodos.\nSomar diretamente fluxos de datas diferentes.\nConfundir juros com montante.",
+          "suggestions": [
+            "Desenhe uma linha do tempo em texto.",
+            "Distinga capital, juros e montante.",
+            "Traga um fluxo futuro para uma data focal."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — modelos exponenciais",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+            },
+            {
+              "title": "BCB — glossário de cidadania financeira",
+              "url": "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f01-q01",
+              "prompt": "Montante no modelo de capital e juros é:",
+              "options": [
+                "Capital menos prazo",
+                "Só a taxa",
+                "Capital mais juros na data final",
+                "Somente juros"
+              ],
+              "correctIndex": 2,
+              "explanation": "M=P+J; taxa e prazo determinam J conforme o regime."
+            },
+            {
+              "id": "bb2026-f01-q02",
+              "prompt": "Para comparar fluxos em datas diferentes, deve-se:",
+              "options": [
+                "Somar sem ajuste sempre",
+                "Ignorar datas",
+                "Usar só o nome da operação",
+                "Transportar à mesma data sob regime/taxa definidos"
+              ],
+              "correctIndex": 3,
+              "explanation": "Equivalência temporal exige hipótese e data focal."
+            },
+            {
+              "id": "bb2026-f01-q03",
+              "prompt": "Entrada de dinheiro para credor é, no mesmo pagamento, para devedor:",
+              "options": [
+                "Saída",
+                "Entrada também por definição",
+                "Taxa",
+                "Prazo"
+              ],
+              "correctIndex": 0,
+              "explanation": "Sinal do fluxo depende da perspectiva do agente."
+            },
+            {
+              "id": "bb2026-f01-q04",
+              "prompt": "R$200 no instante0 a10% compostos por período equivalem no instante2 a quantos reais?",
+              "options": [
+                "220",
+                "242",
+                "240",
+                "200"
+              ],
+              "correctIndex": 1,
+              "explanation": "200×1,10²=242, com duas capitalizações."
+            },
+            {
+              "id": "bb2026-f01-q05",
+              "prompt": "R$242 no instante2, taxa composta10% por período, valem quantos reais no instante0?",
+              "options": [
+                "220",
+                "240",
+                "200",
+                "266,20"
+              ],
+              "correctIndex": 2,
+              "explanation": "242/(1,10²)=200; desconto traz o fluxo para trás."
+            },
+            {
+              "id": "bb2026-f01-q06",
+              "prompt": "Juros deR$40 sobre capitalR$500 dão montante:",
+              "options": [
+                "R$460",
+                "R$40",
+                "R$500",
+                "R$540"
+              ],
+              "correctIndex": 3,
+              "explanation": "500+40=540; não se troca o capital pelo valor dos juros."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f01-q01",
+                "bb2026-f01-q02",
+                "bb2026-f01-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f01-q04",
+                "bb2026-f01-q05",
+                "bb2026-f01-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-f02",
+          "researchId": "F02",
+          "title": "Juros simples",
+          "level": "Fundamentos e aplicação",
+          "summary": "Calcular juros sobre base constante · Compatibilizar taxa/prazo e resolver incógnitas",
+          "objectives": [
+            "Calcular juros sobre base constante",
+            "Compatibilizar taxa/prazo e resolver incógnitas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A base dos juros permanece o capital",
+              "text": "No regime simples, cada período remunera o capital inicial, sem incorporar juros anteriores à base: J=P·i·n e M=P(1+i·n). Taxa i é decimal por período, e n precisa contar essa mesma unidade. Uma taxa simples anual de24% aplicada por3meses usa n=3/12ano ou taxa proporcional6% no trimestre; não se presume equivalência composta. Para descobrir prazo, isole n=J/(P·i) quando denominador não zero. O resultado é linear no tempo sob essas hipóteses, mas contratos reais podem ter outras convenções de dias, encargos e pagamento. Convenção de mês/ano comercial só deve ser usada quando declarada."
+            },
+            {
+              "type": "formula",
+              "title": "Juros simples",
+              "expression": "J=P·i·n; M=P+J",
+              "variables": [
+                {
+                  "name": "P",
+                  "meaning": "Capital inicial",
+                  "unit": "reais"
+                },
+                {
+                  "name": "i",
+                  "meaning": "Taxa decimal por unidade temporal",
+                  "unit": "por período"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Prazo na mesma unidade da taxa",
+                  "unit": "períodos"
+                }
+              ],
+              "conditions": [
+                "Base constante, sem juros sobre juros.",
+                "Taxa e prazo compatíveis."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "R$750 a2% simples ao mês por4meses. Calcule juros e montante.",
+              "steps": [
+                "J=750×0,02×4=60.",
+                "M=750+60=810."
+              ],
+              "answer": "JurosR$60; montanteR$810.",
+              "check": "Cada mês geraR$15 sobre750; quatro parcelas de15 dão60, conferindo por soma."
+            }
+          ],
+          "pitfalls": [
+            "Usar2 em vez de0,02 para2%.",
+            "Combinar taxa mensal e prazo em anos sem converter."
+          ],
+          "recap": [
+            "Base dos juros simples é constante.",
+            "Taxa decimal e unidade temporal devem combinar.",
+            "Montante inclui capital e juros."
+          ],
+          "retrieval": [
+            "Qual base do juro no quarto mês simples?",
+            "Como usar taxa anual num trimestre simples?"
+          ],
+          "notes": "Juros simples\nBase dos juros simples é constante.\nTaxa decimal e unidade temporal devem combinar.\nMontante inclui capital e juros.\nUsar2 em vez de0,02 para2%.\nCombinar taxa mensal e prazo em anos sem converter.",
+          "suggestions": [
+            "Confira juros simples por soma de períodos.",
+            "Converta prazo para unidade da taxa.",
+            "Isole prazo numa equação de juros simples."
+          ],
+          "sources": [
+            {
+              "title": "BCB — glossário de cidadania financeira",
+              "url": "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f02-q01",
+              "prompt": "No regime simples, os juros de cada período usam:",
+              "options": [
+                "Capital inicial como base",
+                "Montante anterior obrigatoriamente",
+                "Taxa sem capital",
+                "Prazo sem taxa"
+              ],
+              "correctIndex": 0,
+              "explanation": "Não há incorporação dos juros anteriores à base no modelo simples."
+            },
+            {
+              "id": "bb2026-f02-q02",
+              "prompt": "2% em forma decimal é:",
+              "options": [
+                "2",
+                "0,02",
+                "0,2",
+                "0,002"
+              ],
+              "correctIndex": 1,
+              "explanation": "Percentual dividido por100:2/100=0,02."
+            },
+            {
+              "id": "bb2026-f02-q03",
+              "prompt": "Taxa mensal e prazo em anos exigem:",
+              "options": [
+                "Somar as unidades",
+                "Ignorar o prazo",
+                "Conversão para unidades compatíveis",
+                "Usar sempre365 sem convenção"
+              ],
+              "correctIndex": 2,
+              "explanation": "É preciso expressar i e n na mesma unidade temporal."
+            },
+            {
+              "id": "bb2026-f02-q04",
+              "prompt": "R$1.200 a2% simples ao mês por3meses geram juros, em reais, de:",
+              "options": [
+                "1.272",
+                "24",
+                "36",
+                "72"
+              ],
+              "correctIndex": 3,
+              "explanation": "1200×0,02×3=72;1272 é o montante."
+            },
+            {
+              "id": "bb2026-f02-q05",
+              "prompt": "Juros simples deR$72 sobreR$1.200 a2% ao mês correspondem a quantos meses?",
+              "options": [
+                "3",
+                "6",
+                "2",
+                "4"
+              ],
+              "correctIndex": 0,
+              "explanation": "72/(1200×0,02)=3; três juros de24 conferem."
+            },
+            {
+              "id": "bb2026-f02-q06",
+              "prompt": "24% simples ao ano, por3meses, correspondem a qual percentual sobre o capital?",
+              "options": [
+                "8%",
+                "6%",
+                "24%",
+                "26,82%"
+              ],
+              "correctIndex": 1,
+              "explanation": "Taxa proporcional no regime simples:24×3/12=6%."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f02-q01",
+                "bb2026-f02-q02",
+                "bb2026-f02-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f02-q04",
+                "bb2026-f02-q05",
+                "bb2026-f02-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-f03",
+          "researchId": "F03",
+          "title": "Juros compostos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Calcular evolução com juros sobre saldo capitalizado · Comparar composto e simples sob as mesmas condições",
+          "objectives": [
+            "Calcular evolução com juros sobre saldo capitalizado",
+            "Comparar composto e simples sob as mesmas condições"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A base incorpora a capitalização anterior",
+              "text": "No regime composto, a cada período o saldo é multiplicado por1+i: M=P(1+i)^n e J=M−P. Taxa constante e períodos compatíveis precisam ser declarados. Para n inteiro, multiplicações sucessivas conferem a potência. Aumentos percentuais sucessivos não se somam:10% em cada um de dois períodos gera21% total. Com taxa positiva e prazo inteiro maior que1, composto supera simples para mesmo capital e taxa por período; um período dá o mesmo resultado. Prazo fracionário depende da convenção/modelo declarado, não de extrapolação automática do contrato. Uma taxa alta de simulação não é cotação atual nem promessa de rendimento."
+            },
+            {
+              "type": "formula",
+              "title": "Montante composto",
+              "expression": "M=P(1+i)^n",
+              "variables": [
+                {
+                  "name": "P",
+                  "meaning": "Capital no instante inicial",
+                  "unit": "reais"
+                },
+                {
+                  "name": "i",
+                  "meaning": "Taxa efetiva decimal por período",
+                  "unit": "por período"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Número de períodos",
+                  "unit": "períodos"
+                }
+              ],
+              "conditions": [
+                "Taxa constante e capitalização em cada período.",
+                "Sem fluxos intermediários neste modelo."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "R$600 a5% compostos por período por2períodos.",
+              "steps": [
+                "Primeiro saldo:600×1,05=630.",
+                "Segundo:630×1,05=661,50.",
+                "Juros totais:661,50−600."
+              ],
+              "answer": "MontanteR$661,50; jurosR$61,50.",
+              "check": "Simples daria600+2×30=660; a diferença1,50 é5% dos30 capitalizados no primeiro período."
+            }
+          ],
+          "pitfalls": [
+            "Somar taxas de capitalizações sucessivas.",
+            "Confundir taxa de simulação com retorno garantido."
+          ],
+          "recap": [
+            "Composto multiplica fatores por período.",
+            "Juros são montante menos capital.",
+            "Comparação requer mesmos parâmetros e fluxos."
+          ],
+          "retrieval": [
+            "Dois períodos de10% dão20% ou21%?",
+            "Por que um período iguala simples e composto?"
+          ],
+          "notes": "Juros compostos\nComposto multiplica fatores por período.\nJuros são montante menos capital.\nComparação requer mesmos parâmetros e fluxos.\nSomar taxas de capitalizações sucessivas.\nConfundir taxa de simulação com retorno garantido.",
+          "suggestions": [
+            "Calcule saldo composto por períodos.",
+            "Compare simples e composto com dados idênticos.",
+            "Confira juros subtraindo capital do montante."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — modelos exponenciais",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+            },
+            {
+              "title": "BCB — glossário de cidadania financeira",
+              "url": "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f03-q01",
+              "prompt": "A base no segundo período composto é:",
+              "options": [
+                "Somente o juro anterior",
+                "O saldo após primeira capitalização",
+                "Sempre zero",
+                "Só a taxa"
+              ],
+              "correctIndex": 1,
+              "explanation": "O saldo inclui capital e juros do período anterior."
+            },
+            {
+              "id": "bb2026-f03-q02",
+              "prompt": "Para obter juros totais a partir do montante, faça:",
+              "options": [
+                "M+P",
+                "M/P sempre",
+                "M−P",
+                "P−M sempre"
+              ],
+              "correctIndex": 2,
+              "explanation": "Montante contém capital e juros; subtrair capital isola os juros."
+            },
+            {
+              "id": "bb2026-f03-q03",
+              "prompt": "Mesmo capital/taxa positiva por um período:",
+              "options": [
+                "Composto sempre dobra simples",
+                "Simples sempre maior",
+                "Não se podem calcular",
+                "Simples e composto dão mesmo montante"
+              ],
+              "correctIndex": 3,
+              "explanation": "P(1+i·1)=P(1+i)^1."
+            },
+            {
+              "id": "bb2026-f03-q04",
+              "prompt": "R$800 a5% compostos por período,2períodos, dão montante em reais de:",
+              "options": [
+                "882",
+                "880",
+                "840",
+                "82"
+              ],
+              "correctIndex": 0,
+              "explanation": "800×1,05²=882;82 são os juros."
+            },
+            {
+              "id": "bb2026-f03-q05",
+              "prompt": "Dois períodos sucessivos de10% compostos geram taxa total de:",
+              "options": [
+                "20%",
+                "21%",
+                "10%",
+                "22%"
+              ],
+              "correctIndex": 1,
+              "explanation": "1,10²=1,21; crescimento21%."
+            },
+            {
+              "id": "bb2026-f03-q06",
+              "prompt": "R$1.000 a10% compostos por período durante2períodos dão montante em reais de:",
+              "options": [
+                "1.200",
+                "1.100",
+                "1.210",
+                "210"
+              ],
+              "correctIndex": 2,
+              "explanation": "1000×1,10×1,10=1210; capitalização do primeiro juro soma10 ao simples."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f03-q01",
+                "bb2026-f03-q02",
+                "bb2026-f03-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f03-q04",
+                "bb2026-f03-q05",
+                "bb2026-f03-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-f04",
+          "researchId": "F04",
+          "title": "Taxas e períodos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir proporcionalidade nominal e equivalência efetiva · Converter taxa composta por igualdade de fatores",
+          "objectives": [
+            "Distinguir proporcionalidade nominal e equivalência efetiva",
+            "Converter taxa composta por igualdade de fatores"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O nome da taxa precisa da convenção",
+              "text": "Taxas proporcionais dividem/multiplicam pela quantidade de unidades; essa operação não cria equivalência composta automaticamente. Taxa nominal anual com capitalização mensal informa convenção proporcional para obter taxa por mês, conforme enunciado. Taxa efetiva mede o fator no período da capitalização. Equivalência composta exige1+i_longo=(1+i_curto)^k, onde k períodos curtos compõem o longo. Para descobrir curto: (1+i_longo)^(1/k)−1. Taxa real distingue poder de compra sob inflação definida; não se deve simplesmente subtrair taxas quando se exige equivalência exata. Datas e convenções de dias também podem influenciar contrato; exercícios aqui usam períodos uniformes expressos."
+            },
+            {
+              "type": "formula",
+              "title": "Equivalência composta",
+              "expression": "1+i_L=(1+i_C)^k",
+              "variables": [
+                {
+                  "name": "i_L",
+                  "meaning": "Taxa efetiva no período longo",
+                  "unit": "decimal por período longo"
+                },
+                {
+                  "name": "i_C",
+                  "meaning": "Taxa efetiva no curto",
+                  "unit": "decimal por período curto"
+                },
+                {
+                  "name": "k",
+                  "meaning": "Quantidade de curtos no longo",
+                  "unit": "períodos"
+                }
+              ],
+              "conditions": [
+                "Fatores positivos no modelo real.",
+                "Taxa constante e períodos compatíveis."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Taxa efetiva de21% ao ano. Qual equivalente por semestre com dois semestres uniformes?",
+              "steps": [
+                "1+i_sem=√1,21=1,10.",
+                "i_sem=0,10."
+              ],
+              "answer": "10% efetivos por semestre.",
+              "check": "(1,10)²=1,21; dividir21 por2 daria10,5%, cujo fator anual é1,221025, diferente."
+            }
+          ],
+          "pitfalls": [
+            "Dividir taxa efetiva anual por12 para equivalência composta.",
+            "Omitir frequência de capitalização da taxa nominal."
+          ],
+          "recap": [
+            "Nominal precisa da capitalização.",
+            "Efetiva mede fator do período.",
+            "Equivalência composta iguala fatores, não soma taxas."
+          ],
+          "retrieval": [
+            "12% nominal anual mensal é igual a12% efetivo anual?",
+            "Como conferir taxa semestral equivalente?"
+          ],
+          "notes": "Taxas e períodos\nNominal precisa da capitalização.\nEfetiva mede fator do período.\nEquivalência composta iguala fatores, não soma taxas.\nDividir taxa efetiva anual por12 para equivalência composta.\nOmitir frequência de capitalização da taxa nominal.",
+          "suggestions": [
+            "Converta taxa efetiva por fatores.",
+            "Compare nominal e efetiva com capitalização declarada.",
+            "Explique por que anual/12 pode ser inadequado."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — modelos exponenciais",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+            },
+            {
+              "title": "BCB — metodologia das prestações fixas",
+              "url": "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f04-q01",
+              "prompt": "Equivalência composta entre períodos exige:",
+              "options": [
+                "Somar todas as taxas",
+                "Dividir qualquer anual por12",
+                "Igualar fatores de capitalização",
+                "Ignorar frequência"
+              ],
+              "correctIndex": 2,
+              "explanation": "(1+i_curto)^k deve corresponder ao fator longo."
+            },
+            {
+              "id": "bb2026-f04-q02",
+              "prompt": "Taxa nominal anual capitalizada mensalmente precisa informar:",
+              "options": [
+                "Só o número anual",
+                "Somente a marca",
+                "Só a inflação",
+                "Convenção e frequência da capitalização"
+              ],
+              "correctIndex": 3,
+              "explanation": "O número nominal não basta para conhecer a taxa efetiva do horizonte."
+            },
+            {
+              "id": "bb2026-f04-q03",
+              "prompt": "Para taxa efetiva anual de21%, obter semestre por21/2 produz:",
+              "options": [
+                "Taxa proporcional, diferente da equivalente composta10%",
+                "Sempre equivalência exata",
+                "Taxa mensal de1%",
+                "Nenhum número calculável"
+              ],
+              "correctIndex": 0,
+              "explanation": "10,5% é proporcional;(1,105)² não é1,21."
+            },
+            {
+              "id": "bb2026-f04-q04",
+              "prompt": "A taxa efetiva semestral equivalente a21% efetivos anuais é:",
+              "options": [
+                "10,5%",
+                "10%",
+                "21%",
+                "5%"
+              ],
+              "correctIndex": 1,
+              "explanation": "√1,21−1=.10, com dois semestres por ano."
+            },
+            {
+              "id": "bb2026-f04-q05",
+              "prompt": "R$1.000 a1% efetivo ao mês por12meses, sem fluxos, dão montante arredondado a centavos de:",
+              "options": [
+                "1.120,00",
+                "1.010,00",
+                "1.126,83",
+                "126,83"
+              ],
+              "correctIndex": 2,
+              "explanation": "1000×1,01¹²≈1126,82503; arredondamento final1126,83."
+            },
+            {
+              "id": "bb2026-f04-q06",
+              "prompt": "24% nominais ao ano com capitalização mensal pela convenção proporcional dão taxa efetiva mensal de:",
+              "options": [
+                "24%",
+                "12%",
+                "1%",
+                "2%"
+              ],
+              "correctIndex": 3,
+              "explanation": "Taxa do período:24/12=2% mensal; a efetiva anual resultante seria(1,02)¹²−1."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f04-q01",
+                "bb2026-f04-q02",
+                "bb2026-f04-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f04-q04",
+                "bb2026-f04-q05",
+                "bb2026-f04-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f04-q01",
+                "bb2026-f04-q02",
+                "bb2026-f04-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f04-q04",
+                "bb2026-f04-q05",
+                "bb2026-f04-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-f05",
+          "researchId": "F05",
+          "title": "Equivalência financeira",
+          "level": "Fundamentos e aplicação",
+          "summary": "Comparar fluxos transportados à mesma data focal · Distinguir valor presente e soma nominal dos pagamentos",
+          "objectives": [
+            "Comparar fluxos transportados à mesma data focal",
+            "Distinguir valor presente e soma nominal dos pagamentos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Fluxos equivalem na taxa e no regime definidos",
+              "text": "No modelo composto, valor presente de pagamentos F_t é soma F_t/(1+i)^t para data focal0. Valores podem ser equivalentes nessa taxa sem ter soma nominal igual. Data focal posterior pode ser usada capitalizando cada fluxo pelo tempo restante; preserve as mesmas hipóteses. Entrada no instante0 não sofre desconto; pagamento no instante1 sofre um período. Alterar taxa altera equivalência, portanto conclusão não é universal. Em comparação didática sem encargos, use fluxo completo; comparar só prestação pode esconder prazo maior. Contrato real exige também tarifas, tributos e demais condições de custo."
+            },
+            {
+              "type": "formula",
+              "title": "Valor presente de fluxos",
+              "expression": "VP=Σ F_t/(1+i)^t",
+              "variables": [
+                {
+                  "name": "F_t",
+                  "meaning": "Fluxo na data t, com sinal da perspectiva",
+                  "unit": "reais"
+                },
+                {
+                  "name": "i",
+                  "meaning": "Taxa decimal efetiva por período",
+                  "unit": "por período"
+                },
+                {
+                  "name": "t",
+                  "meaning": "Distância à data focal0",
+                  "unit": "períodos"
+                }
+              ],
+              "conditions": [
+                "Regime composto e taxa constante.",
+                "Datas/sinais conhecidos."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "R$220 no instante1 eR$242 no instante2, taxa10% composta por período. Qual total equivalente no instante0?",
+              "steps": [
+                "220/1,10=200.",
+                "242/1,21=200.",
+                "Soma presente:400."
+              ],
+              "answer": "R$400 no instante0.",
+              "check": "Transportar400 ao instante2 dá484; primeiro pagamento220 capitalizado um período dá242, mais242=484."
+            }
+          ],
+          "pitfalls": [
+            "Somar pagamentos nominais como se fossem presentes.",
+            "Descontar fluxo do instante0 por um período inexistente."
+          ],
+          "recap": [
+            "Equivalência depende da taxa/regime.",
+            "Cada fluxo usa sua distância temporal.",
+            "Prazo e custos completos importam na comparação."
+          ],
+          "retrieval": [
+            "Pagamento hoje sofre quantos períodos de desconto?",
+            "Soma nominal maior pode ter mesmo valor presente?"
+          ],
+          "notes": "Equivalência financeira\nEquivalência depende da taxa/regime.\nCada fluxo usa sua distância temporal.\nPrazo e custos completos importam na comparação.\nSomar pagamentos nominais como se fossem presentes.\nDescontar fluxo do instante0 por um período inexistente.",
+          "suggestions": [
+            "Compare dois fluxos numa data focal.",
+            "Confira equivalência levando todos à data final.",
+            "Explique diferença entre soma nominal e valor presente."
+          ],
+          "sources": [
+            {
+              "title": "BCB — metodologia das prestações fixas",
+              "url": "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+            },
+            {
+              "title": "OpenStax — modelos exponenciais",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f05-q01",
+              "prompt": "Valor presente soma:",
+              "options": [
+                "Cada fluxo descontado pelo tempo até a data focal",
+                "Somente valores nominais sem datas",
+                "Apenas o primeiro juro",
+                "Taxas sem capitais"
+              ],
+              "correctIndex": 0,
+              "explanation": "Cada data exige fator de transporte próprio e sinal pertinente."
+            },
+            {
+              "id": "bb2026-f05-q02",
+              "prompt": "Fluxo no instante0 em cálculo presente no instante0:",
+              "options": [
+                "É descontado duas vezes",
+                "Não sofre desconto temporal",
+                "Sempre vale zero",
+                "É capitalizado por prazo desconhecido"
+              ],
+              "correctIndex": 1,
+              "explanation": "t=0 dá fator1."
+            },
+            {
+              "id": "bb2026-f05-q03",
+              "prompt": "Equivalência numa taxa implica equivalência em qualquer taxa?",
+              "options": [
+                "Sim, sempre",
+                "Sim, se montante positivo",
+                "Não; a taxa altera fatores",
+                "Sim, ignorando prazo"
+              ],
+              "correctIndex": 2,
+              "explanation": "A conclusão depende das hipóteses e pode mudar com a taxa."
+            },
+            {
+              "id": "bb2026-f05-q04",
+              "prompt": "R$100 no instante1 maisR$121 no instante2, taxa10% composta por período: valor presente em reais, a centavos?",
+              "options": [
+                "221,00",
+                "200,00",
+                "210,00",
+                "190,91"
+              ],
+              "correctIndex": 3,
+              "explanation": "100/1,1+121/1,21≈90,90909+100=190,91."
+            },
+            {
+              "id": "bb2026-f05-q05",
+              "prompt": "R$1.000 hoje equivalem, a10% compostos por período, no instante2, a quantos reais?",
+              "options": [
+                "1.210",
+                "1.200",
+                "1.100",
+                "1.000"
+              ],
+              "correctIndex": 0,
+              "explanation": "1000×1,1²=1210; são dois períodos."
+            },
+            {
+              "id": "bb2026-f05-q06",
+              "prompt": "R$110 no instante1 eR$121 no instante2, taxa10% composta por período, são:",
+              "options": [
+                "Não equivalentes",
+                "Equivalentes na taxa indicada",
+                "Iguais nominalmente",
+                "Equivalentes em toda taxa possível"
+              ],
+              "correctIndex": 1,
+              "explanation": "110/1,1=100 e121/1,21=100; equivalência é contextual, não igualdade nominal."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f05-q01",
+                "bb2026-f05-q02",
+                "bb2026-f05-q03"
+              ],
+              "sourceUrls": [
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas",
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-f05-q04",
+                "bb2026-f05-q05",
+                "bb2026-f05-q06"
+              ],
+              "sourceUrls": [
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas",
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-f06",
+          "researchId": "F06",
+          "title": "SAC",
+          "level": "Fundamentos e aplicação",
+          "summary": "Separar amortização, juros e prestação · Reconstruir saldo e reconciliar o capital quitado",
+          "objectives": [
+            "Separar amortização, juros e prestação",
+            "Reconstruir saldo e reconciliar o capital quitado"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Amortização constante não é prestação constante",
+              "text": "No Sistema de Amortização Constante didático, amortização A=P/n é fixa. Juros de cada período são i vezes saldo antes do pagamento; prestação soma A+juros. Como o saldo cai, juros e prestações caem para i positiva. Após k pagamentos, saldo=P−kA. Pressupostos aqui: principal no instante0, pagamentos ao fim de períodos iguais, taxa constante positiva, sem encargos/indexação. Arredondamento de contratos reais pode exigir ajuste final; no exemplo, amortização é exata em centavos. Total amortizado deve igualar principal, último saldo deve ser zero e total de prestações deve igualar principal mais juros."
+            },
+            {
+              "type": "formula",
+              "title": "SAC didático",
+              "expression": "A=P/n; J_k=i·saldo_(k−1); prestação_k=A+J_k",
+              "variables": [
+                {
+                  "name": "P",
+                  "meaning": "Principal financiado no início",
+                  "unit": "reais"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Número de pagamentos",
+                  "unit": "períodos"
+                },
+                {
+                  "name": "i",
+                  "meaning": "Taxa decimal por período",
+                  "unit": "por período"
+                },
+                {
+                  "name": "k",
+                  "meaning": "Índice do pagamento, começando em1",
+                  "unit": "pagamentos"
+                }
+              ],
+              "conditions": [
+                "Pagamentos ao final do período.",
+                "Sem encargos ou indexação.",
+                "Amortização constante e taxa fixa."
+              ]
+            },
+            {
+              "type": "table",
+              "title": "Exemplo P600/n3/i1%",
+              "columns": [
+                "Período",
+                "Juros",
+                "Amortização",
+                "Prestação",
+                "Saldo após"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "6",
+                  "200",
+                  "206",
+                  "400"
+                ],
+                [
+                  "2",
+                  "4",
+                  "200",
+                  "204",
+                  "200"
+                ],
+                [
+                  "3",
+                  "2",
+                  "200",
+                  "202",
+                  "0"
+                ]
+              ],
+              "caption": "Valores em reais; precisão exata em centavos nas hipóteses declaradas."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Confira a tabela SAC deR$600,3pagamentos,1% por período.",
+              "steps": [
+                "Amortização200 a cada pagamento.",
+                "Juros6+4+2=12.",
+                "Prestações206+204+202=612."
+              ],
+              "answer": "Principal600 e juros12 reconciliam total612; saldo final0.",
+              "check": "Saldos600→400→200→0 diminuem200; cada juro é1% do saldo anterior."
+            }
+          ],
+          "pitfalls": [
+            "Chamar prestação de amortização.",
+            "Aplicar juros sempre ao capital inicial no SAC."
+          ],
+          "recap": [
+            "Amortização fixa; juros sobre saldo.",
+            "Prestação pode diminuir com taxa positiva.",
+            "Saldo e soma amortizada precisam reconciliar."
+          ],
+          "retrieval": [
+            "No exemplo, por que segundo juro é4?",
+            "Qual parte da prestação reduz principal?"
+          ],
+          "notes": "SAC\nAmortização fixa; juros sobre saldo.\nPrestação pode diminuir com taxa positiva.\nSaldo e soma amortizada precisam reconciliar.\nChamar prestação de amortização.\nAplicar juros sempre ao capital inicial no SAC.",
+          "suggestions": [
+            "Monte tabela SAC com saldo antes/depois.",
+            "Distinga amortização e prestação.",
+            "Confira total pago e saldo final."
+          ],
+          "sources": [
+            {
+              "title": "BCB — glossário de cidadania financeira",
+              "url": "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f06-q01",
+              "prompt": "No SAC didático, a parte constante é:",
+              "options": [
+                "Toda prestação",
+                "Taxa total paga em reais",
+                "Amortização do principal",
+                "Saldo antes do pagamento"
+              ],
+              "correctIndex": 2,
+              "explanation": "A=P/n é fixa; juros e prestação diminuem sob taxa positiva fixa."
+            },
+            {
+              "id": "bb2026-f06-q02",
+              "prompt": "Juros do período incidem sobre:",
+              "options": [
+                "Só a amortização",
+                "Sempre o principal inicial",
+                "Sempre zero",
+                "Saldo devedor antes do pagamento"
+              ],
+              "correctIndex": 3,
+              "explanation": "O saldo anterior é a base no modelo de amortização estudado."
+            },
+            {
+              "id": "bb2026-f06-q03",
+              "prompt": "A soma das amortizações ao quitar deve ser:",
+              "options": [
+                "Igual ao principal",
+                "Igual somente aos juros",
+                "Sempre maior que toda prestação",
+                "Sempre zero"
+              ],
+              "correctIndex": 0,
+              "explanation": "Amortização reduz principal; reconciliar sua soma comprova quitação."
+            },
+            {
+              "id": "bb2026-f06-q04",
+              "prompt": "SAC:R$900/3pagamentos ao fim do mês,2% ao mês fixos, sem encargos. Primeira prestação, em reais?",
+              "options": [
+                "300",
+                "318",
+                "312",
+                "306"
+              ],
+              "correctIndex": 1,
+              "explanation": "A300 e juros900×.02=18; prestação318."
+            },
+            {
+              "id": "bb2026-f06-q05",
+              "prompt": "No mesmo SAC:R$900/3pagamentos,2% por período fixos, sem encargos, juros do segundo período, em reais?",
+              "options": [
+                "18",
+                "6",
+                "12",
+                "24"
+              ],
+              "correctIndex": 2,
+              "explanation": "Após amortizar300, saldo600; juros600×.02=12."
+            },
+            {
+              "id": "bb2026-f06-q06",
+              "prompt": "SAC:R$900/3pagamentos,2% por período fixos, sem encargos. Última prestação, em reais?",
+              "options": [
+                "318",
+                "312",
+                "300",
+                "306"
+              ],
+              "correctIndex": 3,
+              "explanation": "Antes do último saldo300; juros6; amortização300+6=306."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1,
+                2
+              ],
+              "exampleBlockIndex": 3,
+              "questionIds": [
+                "bb2026-f06-q01",
+                "bb2026-f06-q02",
+                "bb2026-f06-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1,
+                2
+              ],
+              "exampleBlockIndex": 3,
+              "questionIds": [
+                "bb2026-f06-q04",
+                "bb2026-f06-q05",
+                "bb2026-f06-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-f07",
+          "researchId": "F07",
+          "title": "Price e comparação",
+          "level": "Fundamentos e aplicação",
+          "summary": "Calcular prestação fixa e reconciliar saldo por fluxo · Comparar SAC/Price com parâmetros e condições iguais",
+          "objectives": [
+            "Calcular prestação fixa e reconciliar saldo por fluxo",
+            "Comparar SAC/Price com parâmetros e condições iguais"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Prestação fixa combina partes variáveis",
+              "text": "No sistema francês/Price didático com taxa fixa, PMT=P·i/[1−(1+i)^−n], para i não zero. Para i=0, PMT=P/n. A fórmula considera pagamentos iguais ao final de períodos iguais, primeiro após um período; principal exclui entrada. Juros de cada pagamento são i vezes saldo anterior; amortização é PMT−juros. Para taxa positiva sem encargos/indexação, juros caem e amortização cresce enquanto prestação permanece fixa. Tabelas devem reconciliar valor presente das prestações com principal e saldo final0. SAC e Price só podem ser comparados sob mesmo principal/taxa/prazo/datas. Prestação inicial menor no Price não significa custo total menor. Contrato real pode conter correção, seguros e regras de arredondamento ausentes aqui."
+            },
+            {
+              "type": "formula",
+              "title": "Prestação fixa postecipada",
+              "expression": "PMT=P·i/[1−(1+i)^−n]",
+              "variables": [
+                {
+                  "name": "P",
+                  "meaning": "Principal, sem entrada",
+                  "unit": "reais"
+                },
+                {
+                  "name": "i",
+                  "meaning": "Taxa efetiva decimal por período",
+                  "unit": "por período"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Quantidade inteira positiva de prestações",
+                  "unit": "pagamentos"
+                }
+              ],
+              "conditions": [
+                "Taxa fixa, i>0 nos exemplos.",
+                "Pagamentos ao final, primeiro após um período.",
+                "Sem encargos/indexação.",
+                "Para i=0, usar P/n."
+              ]
+            },
+            {
+              "type": "table",
+              "title": "Price: P1000/n2/i10%",
+              "columns": [
+                "Pagamento",
+                "Juros",
+                "Amortização",
+                "Prestação",
+                "Saldo após"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "100,00",
+                  "476,19",
+                  "576,19",
+                  "523,81"
+                ],
+                [
+                  "2",
+                  "52,38",
+                  "523,81",
+                  "576,19",
+                  "0,00"
+                ]
+              ],
+              "caption": "Valores exibidos a centavos; cálculos intermediários usam precisão completa. Pequenas diferenças de soma por exibição podem exigir ajuste contratual."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Confira Price deR$1.000 em2pagamentos,10% por período, nas condições declaradas.",
+              "steps": [
+                "PMT=100/[1−(1,1)^−2]=576,190476... .",
+                "Juros1=100; saldo após=1000−476,190476...=523,809523...",
+                "Juros2=52,380952...; amortização2=523,809523... ."
+              ],
+              "answer": "Prestação≈R$576,19; juros totais≈R$152,38; saldo final0 com precisão completa.",
+              "check": "576,190476/1,1+576,190476/1,21=1000. Soma amortizações476,190476+523,809524=1000."
+            }
+          ],
+          "pitfalls": [
+            "Confundir prestação fixa com juros fixos em reais.",
+            "Comparar sistemas com prazo ou taxa diferentes sem ajustar."
+          ],
+          "recap": [
+            "Prestação fixa contém juros e amortização variáveis.",
+            "Preço temporal dos pagamentos reconcilia principal.",
+            "Comparação precisa dos mesmos parâmetros e fluxo completo."
+          ],
+          "retrieval": [
+            "Com taxa positiva, por que a amortização Price cresce?",
+            "Entrada integra principal financiado na fórmula?"
+          ],
+          "notes": "Price e comparação\nPrestação fixa contém juros e amortização variáveis.\nPreço temporal dos pagamentos reconcilia principal.\nComparação precisa dos mesmos parâmetros e fluxo completo.\nConfundir prestação fixa com juros fixos em reais.\nComparar sistemas com prazo ou taxa diferentes sem ajustar.",
+          "suggestions": [
+            "Reconstrua saldo Price a partir da prestação.",
+            "Confira valor presente dos pagamentos.",
+            "Compare SAC e Price nas mesmas condições."
+          ],
+          "sources": [
+            {
+              "title": "BCB — metodologia das prestações fixas",
+              "url": "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas"
+            },
+            {
+              "title": "BCB — glossário de cidadania financeira",
+              "url": "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-financeira-video-1",
+            "bb2026-financeira-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-f07-q01",
+              "prompt": "No Price didático com taxa fixa positiva, os juros em reais:",
+              "options": [
+                "São iguais em todos os pagamentos",
+                "Diminuem à medida que o saldo cai",
+                "Crescem obrigatoriamente",
+                "São sempre zero"
+              ],
+              "correctIndex": 1,
+              "explanation": "Prestação fixa não implica juros fixos; base é saldo devedor anterior."
+            },
+            {
+              "id": "bb2026-f07-q02",
+              "prompt": "Se i=0, prestação fixa de principalP emn pagamentos é:",
+              "options": [
+                "P×n",
+                "0 sempre",
+                "P/n",
+                "P/(1−1)"
+              ],
+              "correctIndex": 2,
+              "explanation": "Sem juros, divide-se principal por quantidade; fórmula com i no denominador deve ser tratada pelo caso limite."
+            },
+            {
+              "id": "bb2026-f07-q03",
+              "prompt": "A fórmula Price apresentada pressupõe primeiro pagamento:",
+              "options": [
+                "No instante0",
+                "Antes de receber principal",
+                "Em data irrelevante",
+                "Ao final do primeiro período"
+              ],
+              "correctIndex": 3,
+              "explanation": "É uma anuidade postecipada; pagamento antecipado requer outra conta."
+            },
+            {
+              "id": "bb2026-f07-q04",
+              "prompt": "Price:R$1.200 em2prestações ao fim do período,10% fixos por período, sem encargos. Prestação em reais a centavos?",
+              "options": [
+                "691,43",
+                "600,00",
+                "660,00",
+                "720,00"
+              ],
+              "correctIndex": 0,
+              "explanation": "1200×.1/[1−1,1^−2]=691,428571...; arredondar ao final dá691,43."
+            },
+            {
+              "id": "bb2026-f07-q05",
+              "prompt": "No mesmo Price deR$1.200/2períodos/10% fixos, sem encargos, juros totais em reais a centavos?",
+              "options": [
+                "180,00",
+                "182,86",
+                "120,00",
+                "1.382,86"
+              ],
+              "correctIndex": 1,
+              "explanation": "2×691,428571...−1200=182,857142...; total de prestações não é total de juros."
+            },
+            {
+              "id": "bb2026-f07-q06",
+              "prompt": "P=R$1.200,n=2,i=10% por período fixos; ambos ao final e sem encargos. Compare juros totais SAC e Price:",
+              "options": [
+                "Price menor",
+                "AmbosR$120",
+                "SAC: R$180; Price: cerca de R$182,86",
+                "SAC sempre é proibido"
+              ],
+              "correctIndex": 2,
+              "explanation": "SAC tem juros120+60=180; Price≈182,86. Comparação usa parâmetros idênticos, sem recomendação individual."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1,
+                2
+              ],
+              "exampleBlockIndex": 3,
+              "questionIds": [
+                "bb2026-f07-q01",
+                "bb2026-f07-q02",
+                "bb2026-f07-q03"
+              ],
+              "sourceUrls": [
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas",
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1,
+                2
+              ],
+              "exampleBlockIndex": 3,
+              "questionIds": [
+                "bb2026-f07-q04",
+                "bb2026-f07-q05",
+                "bb2026-f07-q06"
+              ],
+              "sourceUrls": [
+                "https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaFinanciamentoPrestacoesFixas.do?method=exibirMetodologiaFinanciamentoPrestacoesFixas",
+                "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/glossario_cidadania_financeira.pdf"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "informatica",
