@@ -23217,7 +23217,1354 @@
           "videoId": "IGmZHrihXN8"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-r01",
+          "researchId": "R01",
+          "title": "Entender a tarefa",
+          "level": "Fundamentos e aplicação",
+          "summary": "Delimitar tema, recorte e gênero antes de escrever · Distinguir referência histórica de orientação formativa",
+          "objectives": [
+            "Delimitar tema, recorte e gênero antes de escrever",
+            "Distinguir referência histórica de orientação formativa"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Referência histórica e prática atual",
+              "text": "A seção7.3 do edital2022/001 orienta este treino; não confirma exigências de seleção em2026. O documento histórico pediu prosa dissertativo-argumentativa, avaliou tema/gênero, coesão, organização coerente dos argumentos e norma escrita. Previu tinta preta em caneta transparente, vedação de identificação e nota zero em situações especificadas como fuga de tema/gênero ou uso de lápis; o corte histórico foi70 de100. Consulte o edital confirmado de cada seleção. Aqui a prática é formativa, sem nota oficial, previsão de tema ou correção automática de banca. Escreva em caderno ou documento próprio e traga trechos curtos ao Steve para discutir escolhas; o app não salva uma redação completa nesta entrega."
+            },
+            {
+              "type": "text",
+              "title": "Tema não é só palavra-chave",
+              "text": "Proposta reúne assunto, recorte e comando. “Tecnologia” é amplo; “barreiras ao acesso digital no atendimento” delimita problema. Texto dissertativo-argumentativo defende uma posição com razões articuladas, diferente de relato pessoal como finalidade central ou lista de frases. Narrativa breve pode ilustrar argumento sem dominar o gênero. Leia comando e motivador para identificar tensão, sem copiar passagens como se fossem autoria própria. Um texto correto gramaticalmente pode fugir do tema se responde outra pergunta. Não impor fórmulaENEM ou proposta de intervenção como requisito universal; siga a tarefa efetivamente solicitada."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Comando:discuta como ampliar acesso digital sem excluir quem precisa de apoio. Rascunho: “O celular moderno tem câmera melhor; comprei um ontem.” Por que revisar?",
+              "steps": [
+                "O foco do rascunho é aparelho/experiência de compra.",
+                "O comando pede acesso e apoio/inclusão.",
+                "Reoriente para posição: canais digitais devem combinar autonomia e suporte acessível."
+              ],
+              "answer": "Definir tese sobre acesso com suporte, dentro do recorte.",
+              "check": "A nova posição responde às duas partes do comando; citar câmera sem relação argumentativa continuaria lateral."
+            }
+          ],
+          "pitfalls": [
+            "Responder só ao assunto geral, ignorando recorte.",
+            "Tratar regra histórica como exigência confirmada de2026."
+          ],
+          "recap": [
+            "Leia assunto, recorte e comando.",
+            "Defenda posição em prosa articulada.",
+            "Condições de seleção dependem do edital confirmado."
+          ],
+          "retrieval": [
+            "Qual problema o comando exige discutir?",
+            "Uma narrativa ilustrativa transforma todo texto em narrativo?"
+          ],
+          "notes": "Entender a tarefa\nLeia assunto, recorte e comando.\nDefenda posição em prosa articulada.\nCondições de seleção dependem do edital confirmado.\nResponder só ao assunto geral, ignorando recorte.\nTratar regra histórica como exigência confirmada de2026.",
+          "suggestions": [
+            "Ajude a delimitar tema e comando desta proposta.",
+            "Verifique se minha tese responde ao recorte.",
+            "Explique diferença entre treino formativo e nota oficial."
+          ],
+          "sources": [
+            {
+              "title": "BB — edital histórico2022/001, seção7.3",
+              "url": "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-redacao-video-1",
+            "bb2026-redacao-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-r01-q01",
+              "prompt": "Antes de escrever, convém identificar:",
+              "options": [
+                "Só uma palavra chamativa",
+                "Apenas tamanho do papel",
+                "Assunto, recorte e comando",
+                "Somente título"
+              ],
+              "correctIndex": 2,
+              "explanation": "Essas dimensões delimitam a pergunta e a forma de respondê-la."
+            },
+            {
+              "id": "bb2026-r01-q02",
+              "prompt": "Texto dissertativo-argumentativo tem como finalidade central:",
+              "options": [
+                "Listar palavras",
+                "Narrar somente uma compra",
+                "Copiar motivador",
+                "Defender posição com razões articuladas"
+              ],
+              "correctIndex": 3,
+              "explanation": "Relatos podem ilustrar, mas não substituem a discussão e a argumentação."
+            },
+            {
+              "id": "bb2026-r01-q03",
+              "prompt": "Comando sobre acesso digital com apoio exige discutir:",
+              "options": [
+                "Autonomia e barreiras/apoio dentro do recorte",
+                "Somente câmera de celular",
+                "Apenas uma compra pessoal",
+                "Toda tecnologia sem relação"
+              ],
+              "correctIndex": 0,
+              "explanation": "A resposta deve atender ao problema delimitado, não só ao assunto amplo."
+            },
+            {
+              "id": "bb2026-r01-q04",
+              "prompt": "Regra do edital2022/001 vale automaticamente para2026?",
+              "options": [
+                "Sim, qualquer edição",
+                "Não; novo edital confirmado exige consulta própria",
+                "Sim, pelo nomeBanco doBrasil",
+                "Sim, por ser treino"
+              ],
+              "correctIndex": 1,
+              "explanation": "É referência histórica identificada, sem confirmação de exigência futura."
+            },
+            {
+              "id": "bb2026-r01-q05",
+              "prompt": "Treino comSteve oferece:",
+              "options": [
+                "Nota oficial de banca",
+                "Previsão segura do tema",
+                "Apoio formativo a escolhas e trechos, sem nota oficial",
+                "Garantia de aprovação"
+              ],
+              "correctIndex": 2,
+              "explanation": "Planejamento/revisão são formativos; não substituem avaliação oficial."
+            },
+            {
+              "id": "bb2026-r01-q06",
+              "prompt": "Texto gramaticalmente correto que discute outro problema pode:",
+              "options": [
+                "Ser adequado por ter boa ortografia",
+                "Cumprir qualquer tema",
+                "Dispensar comando",
+                "Fugir ao recorte solicitado"
+              ],
+              "correctIndex": 3,
+              "explanation": "Adequação temática e norma escrita são dimensões distintas da qualidade."
+            }
+          ],
+          "writingTasks": [
+            {
+              "id": "bb2026-r01-writing-1",
+              "title": "Acesso digital com apoio",
+              "prompt": "Produza texto em prosa dissertativo-argumentativa sobre como ampliar o acesso ao atendimento digital sem excluir pessoas que precisam de apoio. Defenda uma posição e desenvolva razões; não copie o motivador. Use caderno/documento próprio. Proposta autoral de treino, sem previsão de tema de prova.",
+              "motivatingText": "Numa situação fictícia, um serviço passou a oferecer agendamento por aplicativo. Parte do público ganhou autonomia; outra parte encontrou campos pouco claros e não sabia a quem pedir ajuda. A equipe discute como oferecer orientação sem transformar apoio em dependência permanente. Não há estatística real neste relato.",
+              "planning": [
+                "Delimite acesso digital e apoio, em vez de falar de toda tecnologia.",
+                "Formule posição que considere autonomia e barreiras.",
+                "Planeje dois argumentos com mecanismos e exemplos próprios.",
+                "Conclua a partir do que foi defendido, sem garantia universal."
+              ],
+              "selfReview": [
+                "O texto responde a acesso e apoio?",
+                "Há posição defendida, não só relato?",
+                "Argumentos explicam por que/como?",
+                "A redação tem linguagem própria e ligação entre partes?"
+              ]
+            }
+          ],
+          "coverage": [
+            {
+              "referenceItem": "7.3.3a",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q01",
+                "bb2026-r01-q02",
+                "bb2026-r01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3a",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q04",
+                "bb2026-r01-q05",
+                "bb2026-r01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3b",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q01",
+                "bb2026-r01-q02",
+                "bb2026-r01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3b",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q04",
+                "bb2026-r01-q05",
+                "bb2026-r01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q01",
+                "bb2026-r01-q02",
+                "bb2026-r01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q04",
+                "bb2026-r01-q05",
+                "bb2026-r01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q01",
+                "bb2026-r01-q02",
+                "bb2026-r01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q04",
+                "bb2026-r01-q05",
+                "bb2026-r01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q01",
+                "bb2026-r01-q02",
+                "bb2026-r01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r01-q04",
+                "bb2026-r01-q05",
+                "bb2026-r01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-r02",
+          "researchId": "R02",
+          "title": "Planejar a posição",
+          "level": "Fundamentos e aplicação",
+          "summary": "Construir tese discutível, delimitada e coerente · Planejar argumentos que sustentem a posição",
+          "objectives": [
+            "Construir tese discutível, delimitada e coerente",
+            "Planejar argumentos que sustentem a posição"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A tese orienta o que entra no texto",
+              "text": "Tese é posição sobre o problema, não só anúncio do assunto. “Educação financeira é importante” pode ser amplo demais; “a orientação financeira deve relacionar cálculo e condições reais para apoiar escolhas conscientes” define direção discutível. Planejamento seleciona razões diferentes e pertinentes, organiza sua sequência e prevê objeções relevantes. Introdução apresenta recorte/posição sem catálogo de todos os fatos; desenvolvimento explica e sustenta; conclusão deriva do caminho. Não existe número universal de parágrafos ou necessidade de citar autor famoso para argumentar. Cada parte precisa de função e relação com a tese."
+            },
+            {
+              "type": "list",
+              "title": "Plano utilizável",
+              "items": [
+                "Tema delimitado: que decisão/problema será discutido?",
+                "Tese: qual posição e com que alcance?",
+                "Argumento1: mecanismo/razão e exemplo pertinente.",
+                "Argumento2: dimensão diferente, evitando repetir a primeira.",
+                "Objeção: limite relevante a responder sem caricatura.",
+                "Conclusão: o que decorre das razões apresentadas?"
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Tema:orientação financeira em decisões de consumo. Compare duas teses. A:“O dinheiro existe.” B:“A orientação deve combinar entendimento dos custos e reflexão sobre prioridades.”",
+              "steps": [
+                "A constata fato amplo e não define posição sobre orientação.",
+                "B seleciona dois eixos pertinentes: custo e prioridade.",
+                "Planeje uma razão para cada eixo, sem prometer ausência de todo erro."
+              ],
+              "answer": "B fornece direção para argumentação.",
+              "check": "Se os parágrafos explicarem só preço e esquecerem prioridade, o plano ainda fica incompleto em relação à tese."
+            }
+          ],
+          "pitfalls": [
+            "Confundir tese com anúncio de tema.",
+            "Planejar dois argumentos que repetem a mesma ideia."
+          ],
+          "recap": [
+            "Tese define posição e alcance.",
+            "Argumentos precisam sustentar essa posição.",
+            "Estrutura serve à discussão, sem receita universal."
+          ],
+          "retrieval": [
+            "Como tornar uma frase ampla mais delimitada?",
+            "Que diferença entre argumento novo e repetição?"
+          ],
+          "notes": "Planejar a posição\nTese define posição e alcance.\nArgumentos precisam sustentar essa posição.\nEstrutura serve à discussão, sem receita universal.\nConfundir tese com anúncio de tema.\nPlanejar dois argumentos que repetem a mesma ideia.",
+          "suggestions": [
+            "Ajude a tornar minha tese delimitada e discutível.",
+            "Organize dois argumentos distintos para minha posição.",
+            "Mostre uma objeção pertinente ao plano."
+          ],
+          "sources": [
+            {
+              "title": "BB — edital histórico2022/001, seção7.3",
+              "url": "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-redacao-video-1",
+            "bb2026-redacao-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-r02-q01",
+              "prompt": "Uma tese deve ser:",
+              "options": [
+                "Posição delimitada sobre o problema",
+                "Apenas palavra-chave",
+                "Só lista de assuntos",
+                "Qualquer dado isolado"
+              ],
+              "correctIndex": 0,
+              "explanation": "A posição orienta seleção e organização das razões."
+            },
+            {
+              "id": "bb2026-r02-q02",
+              "prompt": "“O dinheiro existe”, para discutir educação financeira, é:",
+              "options": [
+                "Tese bem delimitada necessariamente",
+                "Constatação ampla sem direção suficiente",
+                "Conclusão completa sempre",
+                "Argumento causal comprovado"
+              ],
+              "correctIndex": 1,
+              "explanation": "A frase não responde ao papel da orientação nas decisões."
+            },
+            {
+              "id": "bb2026-r02-q03",
+              "prompt": "Planejar argumentos distintos ajuda a:",
+              "options": [
+                "Repetir cada frase",
+                "Excluir toda coerência",
+                "Desenvolver dimensões complementares da posição",
+                "Garantir nota oficial"
+              ],
+              "correctIndex": 2,
+              "explanation": "Razões diferentes aprofundam a tese, desde que pertinentes."
+            },
+            {
+              "id": "bb2026-r02-q04",
+              "prompt": "Há número universal obrigatório de parágrafos para todo texto dissertativo?",
+              "options": [
+                "Sim, sempre três",
+                "Sim, sempre cinco",
+                "Sim, segundo qualquer modelo",
+                "Não; tarefa e desenvolvimento orientam a organização"
+              ],
+              "correctIndex": 3,
+              "explanation": "Receita fixa não substitui instruções e necessidade argumentativa."
+            },
+            {
+              "id": "bb2026-r02-q05",
+              "prompt": "Um argumento sobre prioridade deve relacionar-se a:",
+              "options": [
+                "A tese e o problema de decisão de consumo",
+                "Qualquer assunto sem ponte",
+                "Só a ortografia do título",
+                "A experiência sem explicação"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pertinência depende da ligação explícita com posição e recorte."
+            },
+            {
+              "id": "bb2026-r02-q06",
+              "prompt": "A conclusão planejada deve:",
+              "options": [
+                "Introduzir tese contraditória sem explicar",
+                "Derivar do percurso desenvolvido",
+                "Repetir motivador integralmente",
+                "Apresentar estatística inventada"
+              ],
+              "correctIndex": 1,
+              "explanation": "Síntese/consequência precisa ser coerente com as razões já trabalhadas."
+            }
+          ],
+          "writingTasks": [
+            {
+              "id": "bb2026-r02-writing-1",
+              "title": "Educação financeira e consumo",
+              "prompt": "Escreva texto dissertativo-argumentativo sobre o papel da educação financeira nas decisões de consumo. Delimite uma tese que considere informações de custo e prioridades individuais, sem oferecer recomendação financeira pessoal. Planeje antes de redigir no caderno/documento próprio.",
+              "motivatingText": "Numa oficina fictícia, participantes aprenderam a calcular parcelas, mas relataram dificuldade para comparar custo total e avaliar se a compra era necessária. Uma pessoa preferiu adiar a decisão; outra escolheu alternativa compatível com uma necessidade imediata. O cálculo ajudou, mas não decidiu sozinho. Texto autoral, sem dados de pesquisa real.",
+              "planning": [
+                "Defina o que educação financeira pode apoiar e seus limites.",
+                "Escreva tese que responda ao papel da orientação.",
+                "Separe argumento sobre informação de argumento sobre prioridade/contexto.",
+                "Considere objeção: cálculo sozinho resolve toda escolha?"
+              ],
+              "selfReview": [
+                "Minha tese é posição, não simples constatação?",
+                "Cada argumento tem função diferente?",
+                "O texto respeita diversidade de contextos?",
+                "A conclusão não promete proteção total contra erro?"
+              ]
+            }
+          ],
+          "coverage": [
+            {
+              "referenceItem": "7.3.3a",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r02-q01",
+                "bb2026-r02-q02",
+                "bb2026-r02-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3a",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r02-q04",
+                "bb2026-r02-q05",
+                "bb2026-r02-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3b",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r02-q01",
+                "bb2026-r02-q02",
+                "bb2026-r02-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3b",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r02-q04",
+                "bb2026-r02-q05",
+                "bb2026-r02-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3d",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r02-q01",
+                "bb2026-r02-q02",
+                "bb2026-r02-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3d",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r02-q04",
+                "bb2026-r02-q05",
+                "bb2026-r02-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-r03",
+          "researchId": "R03",
+          "title": "Desenvolver argumentos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Explicar a ligação entre afirmação, razão e exemplo · Usar evidência e responder limites sem inventar fatos",
+          "objectives": [
+            "Explicar a ligação entre afirmação, razão e exemplo",
+            "Usar evidência e responder limites sem inventar fatos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Exemplo precisa trabalhar para a afirmação",
+              "text": "Um argumento apresenta uma ideia, explica mecanismo/razão e mostra como evidência ou exemplo a sustenta. Dizer “é bom porque é importante” apenas repete avaliação. Exemplo fictício pode ilustrar um mecanismo quando identificado; não prova frequência real. Dado exige origem, contexto e interpretação, sem inventar porcentagem ou autoria. Citação famosa sem ligação pode decorar em vez de argumentar. Objeção relevante reconhece limite e permite qualificar a tese; não reduza a posição contrária a algo absurdo. Causa exige relação explicada e condições, evitando “sempre”, “todos” e “garante” quando evidência não sustenta."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Rascunho:“A privacidade é importante porque é boa. Todos os usuários ficam seguros com senha.” Reescreva com mecanismo e limite.",
+              "steps": [
+                "A primeira frase é circular; explique o efeito do acesso restrito.",
+                "A segunda universaliza proteção por um único controle.",
+                "Nova versão: “Controlar acesso reduz exposição indevida; senhas fortes ajudam, mas precisam de outros controles e orientação.”"
+              ],
+              "answer": "Razão explicitada e alcance qualificado.",
+              "check": "A revisão indica como proteção funciona e não transforma redução de risco em garantia absoluta."
+            }
+          ],
+          "pitfalls": [
+            "Inventar dado para parecer convincente.",
+            "Usar exemplo hipotético como pesquisa comprovada."
+          ],
+          "recap": [
+            "Afirmação precisa de razão e ligação.",
+            "Exemplo ilustra; dado requer fonte e contexto.",
+            "Limites qualificam sem destruir uma tese bem formulada."
+          ],
+          "retrieval": [
+            "Por que “é bom porque é importante” é circular?",
+            "Como identificar um exemplo fictício de modo honesto?"
+          ],
+          "notes": "Desenvolver argumentos\nAfirmação precisa de razão e ligação.\nExemplo ilustra; dado requer fonte e contexto.\nLimites qualificam sem destruir uma tese bem formulada.\nInventar dado para parecer convincente.\nUsar exemplo hipotético como pesquisa comprovada.",
+          "suggestions": [
+            "Mostre a ponte entre meu exemplo e argumento.",
+            "Identifique generalização sem evidência no trecho.",
+            "Ajude a responder uma objeção sem caricatura."
+          ],
+          "sources": [
+            {
+              "title": "BB — edital histórico2022/001, seção7.3",
+              "url": "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-redacao-video-1",
+            "bb2026-redacao-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-r03-q01",
+              "prompt": "“É bom porque é importante” tende a ser:",
+              "options": [
+                "Evidência estatística",
+                "Contraexemplo",
+                "Repetição circular sem mecanismo suficiente",
+                "Fonte primária"
+              ],
+              "correctIndex": 2,
+              "explanation": "A avaliação é repetida, sem explicar relação que a sustente."
+            },
+            {
+              "id": "bb2026-r03-q02",
+              "prompt": "Exemplo fictício identificado pode:",
+              "options": [
+                "Provar frequência real",
+                "Substituir toda pesquisa",
+                "Garantir causalidade universal",
+                "Ilustrar mecanismo sem fingir dado real"
+              ],
+              "correctIndex": 3,
+              "explanation": "Situação hipotética ajuda a explicar, mas tem alcance próprio."
+            },
+            {
+              "id": "bb2026-r03-q03",
+              "prompt": "Dado estatístico usado no texto precisa de:",
+              "options": [
+                "Origem, contexto e ligação com o argumento",
+                "Apenas número alto",
+                "Autor inventado",
+                "Ausência de fonte"
+              ],
+              "correctIndex": 0,
+              "explanation": "Número isolado pode ser impreciso ou responder outra pergunta."
+            },
+            {
+              "id": "bb2026-r03-q04",
+              "prompt": "Uma objeção pertinente deve ser:",
+              "options": [
+                "Caricaturada para facilitar resposta",
+                "Examinada e respondida com razões/limites",
+                "Ignorada sempre",
+                "Transformada em ataque pessoal"
+              ],
+              "correctIndex": 1,
+              "explanation": "Reconhecer limite fortalece rigor sem exigir abandonar a posição."
+            },
+            {
+              "id": "bb2026-r03-q05",
+              "prompt": "“Senha garante segurança de todos”, sem mais evidência, é:",
+              "options": [
+                "Conclusão necessária",
+                "Descrição de risco zero comprovado",
+                "Generalização absoluta inadequada",
+                "Definição de privacidade"
+              ],
+              "correctIndex": 2,
+              "explanation": "Um controle reduz certos riscos, sem sustentar garantia universal."
+            },
+            {
+              "id": "bb2026-r03-q06",
+              "prompt": "Citação de autor famoso sem conexão com a tese:",
+              "options": [
+                "Garante argumentação",
+                "Prova toda conclusão",
+                "Dispensa explicação",
+                "Pode ser decorativa e pouco pertinente"
+              ],
+              "correctIndex": 3,
+              "explanation": "Autoridade isolada não fornece a ponte lógica do argumento."
+            }
+          ],
+          "writingTasks": [
+            {
+              "id": "bb2026-r03-writing-1",
+              "title": "Conveniência digital e privacidade",
+              "prompt": "Produza texto dissertativo-argumentativo sobre como conciliar conveniência digital e proteção da privacidade no atendimento. Desenvolva mecanismos e limites; use exemplos próprios identificados como hipotéticos quando forem inventados. Não crie estatísticas ou citações de autoridades.",
+              "motivatingText": "Em um cenário fictício, um serviço propôs preencher formulários automaticamente para poupar tempo. Usuários perguntaram quais dados seriam usados e quem poderia acessá-los. A equipe percebeu que conveniência e confiança dependiam tanto da facilidade quanto da clareza e dos controles. Texto motivador autoral, sem resultado estatístico real.",
+              "planning": [
+                "Formule tese sobre conciliação, evitando oposição absoluta.",
+                "Explique mecanismo de conveniência e um risco pertinente.",
+                "Desenvolva exemplo que mostre papel de informação/controle.",
+                "Responda limite: segurança não é risco zero."
+              ],
+              "selfReview": [
+                "Cada argumento explica por que/como?",
+                "Exemplos foram apresentados com origem honesta?",
+                "Há dado/citação inventado a retirar?",
+                "A conclusão conserva os limites da evidência?"
+              ]
+            }
+          ],
+          "coverage": [
+            {
+              "referenceItem": "7.3.3d",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-r03-q01",
+                "bb2026-r03-q02",
+                "bb2026-r03-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3d",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-r03-q04",
+                "bb2026-r03-q05",
+                "bb2026-r03-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-r04",
+          "researchId": "R04",
+          "title": "Fazer o texto avançar",
+          "level": "Fundamentos e aplicação",
+          "summary": "Construir progressão temática e referências claras · Escolher conectores conforme relação real entre ideias",
+          "objectives": [
+            "Construir progressão temática e referências claras",
+            "Escolher conectores conforme relação real entre ideias"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Coesão liga partes; coerência sustenta sentido",
+              "text": "Coesão usa referência, retomada, elipse, conectores e organização para ligar o texto. Coerência envolve compatibilidade e construção de sentido das ideias no contexto; muitos conectores não corrigem contradição. Progressão acrescenta informação, em vez de reformular a mesma afirmação em cada parágrafo. Pronome precisa de referente identificável; repetição estratégica de nome pode evitar ambiguidade. Portanto indica consequência/conclusão; porém, contraste; além disso, adição. Escolha pela relação efetiva, não por variedade ornamental. Parágrafo deve ter unidade e função no conjunto; transição mostra como a próxima razão acrescenta ou limita a anterior."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Trecho:“A equipe ouviu os alunos. Eles mudaram o formulário.” Quem mudou? Reescreva para deixar equipe como agente.",
+              "steps": [
+                "Eles pode sugerir alunos, o antecedente plural mais direto.",
+                "Se a equipe é agente, explicite retomada.",
+                "Revisão: “Depois de ouvir os alunos, a equipe reformulou o formulário.”"
+              ],
+              "answer": "Agente e sequência ficam claros.",
+              "check": "A revisão preserva ouvir antes de reformular e evita pronome ambíguo; não inventa motivo ou resultado não informado."
+            }
+          ],
+          "pitfalls": [
+            "Inserir portanto onde só há adição.",
+            "Trocar nomes por pronomes que tornam agente ambíguo."
+          ],
+          "recap": [
+            "Coesão liga; coerência organiza sentido.",
+            "Cada parte precisa acrescentar função/informação.",
+            "Conector deve corresponder à relação real."
+          ],
+          "retrieval": [
+            "Muitos conectores eliminam contradição?",
+            "Quando repetir um nome melhora clareza?"
+          ],
+          "notes": "Fazer o texto avançar\nCoesão liga; coerência organiza sentido.\nCada parte precisa acrescentar função/informação.\nConector deve corresponder à relação real.\nInserir portanto onde só há adição.\nTrocar nomes por pronomes que tornam agente ambíguo.",
+          "suggestions": [
+            "Identifique referência ambígua neste trecho curto.",
+            "Escolha conector pela relação entre frases.",
+            "Ajude a distinguir progressão e repetição."
+          ],
+          "sources": [
+            {
+              "title": "BB — edital histórico2022/001, seção7.3",
+              "url": "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-redacao-video-1",
+            "bb2026-redacao-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-r04-q01",
+              "prompt": "Coesão refere-se a:",
+              "options": [
+                "Ligação linguística entre partes do texto",
+                "Somente tamanho de parágrafo",
+                "Ausência de opinião",
+                "Nota oficial"
+              ],
+              "correctIndex": 0,
+              "explanation": "Retomadas e conectores são recursos, cuja qualidade depende do uso."
+            },
+            {
+              "id": "bb2026-r04-q02",
+              "prompt": "Portanto expressa tipicamente:",
+              "options": [
+                "Adição sem relação",
+                "Conclusão/consequência",
+                "Uma pergunta",
+                "Apenas contraste"
+              ],
+              "correctIndex": 1,
+              "explanation": "Deve ser usado quando a relação entre ideias permite a conclusão."
+            },
+            {
+              "id": "bb2026-r04-q03",
+              "prompt": "Muitos conectores tornam texto contraditório coerente?",
+              "options": [
+                "Sim, por quantidade",
+                "Sim, se difíceis",
+                "Não; sentido e compatibilidade precisam de revisão",
+                "Sim, sem contexto"
+              ],
+              "correctIndex": 2,
+              "explanation": "Ligação superficial não resolve contradições de conteúdo."
+            },
+            {
+              "id": "bb2026-r04-q04",
+              "prompt": "Para esclarecer que a equipe mudou o formulário após ouvir alunos, prefira:",
+              "options": [
+                "Eles mudaram, sem referente",
+                "Portanto eles, sem contexto",
+                "Ambos necessariamente mudaram",
+                "Depois de ouvir os alunos, a equipe reformulou o formulário"
+              ],
+              "correctIndex": 3,
+              "explanation": "Agente explícito e ordem temporal eliminam a ambiguidade pretendida."
+            },
+            {
+              "id": "bb2026-r04-q05",
+              "prompt": "Progressão temática significa:",
+              "options": [
+                "Acrescentar informação/função ao desenvolvimento",
+                "Repetir a tese em toda frase",
+                "Trocar apenas sinônimos",
+                "Inserir qualquer dado"
+              ],
+              "correctIndex": 0,
+              "explanation": "Novos elementos precisam ser pertinentes e relacionados ao percurso."
+            },
+            {
+              "id": "bb2026-r04-q06",
+              "prompt": "Repetir um nome pode ser útil quando:",
+              "options": [
+                "Nunca é aceitável",
+                "Evita referente pronominal ambíguo",
+                "Substitui argumento",
+                "Elimina toda revisão"
+              ],
+              "correctIndex": 1,
+              "explanation": "Repetição controlada pode favorecer clareza; variedade não é objetivo absoluto."
+            }
+          ],
+          "writingTasks": [
+            {
+              "id": "bb2026-r04-writing-1",
+              "title": "Tecnologia e escolhas sustentáveis",
+              "prompt": "Escreva texto dissertativo-argumentativo sobre critérios para avaliar se uma mudança tecnológica contribui para escolhas sustentáveis. Faça cada parágrafo avançar uma dimensão do problema e revise retomadas/conectores antes de concluir.",
+              "motivatingText": "Uma organização fictícia reduziu impressões ao digitalizar documentos, mas precisou renovar equipamentos e criar apoio para pessoas com dificuldade de acesso. A mudança trouxe benefícios e custos distintos. A equipe passou a avaliar consumo, inclusão e uso ao longo do tempo, em vez de contar somente folhas poupadas. Passagem autoral, sem estatísticas reais.",
+              "planning": [
+                "Delimite sustentabilidade e a mudança analisada.",
+                "Planeje argumento sobre consumo e outro sobre efeitos sociais/tempo.",
+                "Defina transição que mostre complemento ou limite.",
+                "Conclua com critérios derivados, sem alegação verde absoluta."
+              ],
+              "selfReview": [
+                "Cada parágrafo acrescenta algo à tese?",
+                "Referentes de pronomes estão claros?",
+                "Conectores expressam relação real?",
+                "Há contradição ou repetição vazia a corrigir?"
+              ]
+            }
+          ],
+          "coverage": [
+            {
+              "referenceItem": "7.3.3c",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-r04-q01",
+                "bb2026-r04-q02",
+                "bb2026-r04-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3c",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-r04-q04",
+                "bb2026-r04-q05",
+                "bb2026-r04-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-r05",
+          "researchId": "R05",
+          "title": "Revisar e praticar",
+          "level": "Fundamentos e aplicação",
+          "summary": "Revisar tema/argumento antes e junto da norma escrita · Reescrever trechos com comparação de efeitos",
+          "objectives": [
+            "Revisar tema/argumento antes e junto da norma escrita",
+            "Reescrever trechos com comparação de efeitos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Revisão tem camadas",
+              "text": "Primeiro confira se responde ao comando e se a tese é sustentada. Depois examine progressão, referências e conclusão; revise ainda vocabulário, ortografia, concordância, regência, colocação e pontuação no contexto. Não reduzir revisão a corretor automático: ele pode sugerir mudança que altera sentido ou não resolve ambiguidade. Priorize problemas que comprometem ideia, sem deixar norma de lado. Leia frase em partes, identifique sujeito/verbo e relação sintática antes de decidir vírgula. Nas propostas deste app, redija fora da plataforma e compare versões; Steve pode discutir trecho curto, com apoio formativo sem nota oficial. Critérios formais da seleção devem ser conferidos em edital confirmado."
+            },
+            {
+              "type": "text",
+              "title": "Referência histórica e prática atual",
+              "text": "A seção7.3 do edital2022/001 orienta este treino; não confirma exigências de seleção em2026. O documento histórico pediu prosa dissertativo-argumentativa, avaliou tema/gênero, coesão, organização coerente dos argumentos e norma escrita. Previu tinta preta em caneta transparente, vedação de identificação e nota zero em situações especificadas como fuga de tema/gênero ou uso de lápis; o corte histórico foi70 de100. Consulte o edital confirmado de cada seleção. Aqui a prática é formativa, sem nota oficial, previsão de tema ou correção automática de banca. Escreva em caderno ou documento próprio e traga trechos curtos ao Steve para discutir escolhas; o app não salva uma redação completa nesta entrega."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Revise: “Os serviços digital facilita o acesso, por isso todos resolve sozinho.”",
+              "steps": [
+                "Concordância nominal:serviços digitais.",
+                "Verbo plural:facilitam.",
+                "Generalização e concordância final: não afirmar todos sozinhos sem evidência.",
+                "Versão: “Serviços digitais podem facilitar o acesso, desde que haja orientação para quem precisa.”"
+              ],
+              "answer": "Correção gramatical e qualificação do alcance.",
+              "check": "A revisão muda uma garantia universal sem apoio para condição explicitada; deve ser compatível com o argumento do texto, não substituição cega."
+            }
+          ],
+          "pitfalls": [
+            "Aceitar toda sugestão automática sem conferir sentido.",
+            "Corrigir só ortografia de um texto que foge ao comando."
+          ],
+          "recap": [
+            "Revisão examina conteúdo, estrutura e norma.",
+            "Compare efeito das versões no sentido.",
+            "Treino e feedback não equivalem a nota oficial."
+          ],
+          "retrieval": [
+            "Qual sujeito controla facilitam no exemplo?",
+            "Por que revisão temática vem antes de decorar conectores?"
+          ],
+          "notes": "Revisar e praticar\nRevisão examina conteúdo, estrutura e norma.\nCompare efeito das versões no sentido.\nTreino e feedback não equivalem a nota oficial.\nAceitar toda sugestão automática sem conferir sentido.\nCorrigir só ortografia de um texto que foge ao comando.",
+          "suggestions": [
+            "Revise este trecho curto preservando minha intenção.",
+            "Aponte problema de tese ou progressão com exemplo.",
+            "Crie checklist de autoavaliação para minha versão."
+          ],
+          "sources": [
+            {
+              "title": "BB — edital histórico2022/001, seção7.3",
+              "url": "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-redacao-video-1",
+            "bb2026-redacao-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-r05-q01",
+              "prompt": "Uma revisão completa considera:",
+              "options": [
+                "Somente ortografia",
+                "Somente quantidade de frases",
+                "Tema, argumento, estrutura e norma escrita",
+                "Somente título"
+              ],
+              "correctIndex": 2,
+              "explanation": "Qualidade envolve camadas complementares, não um único corretor."
+            },
+            {
+              "id": "bb2026-r05-q02",
+              "prompt": "Corretor automático deve ser usado:",
+              "options": [
+                "Como decisão final infalível",
+                "Aceitando tudo",
+                "Para substituir entendimento",
+                "Com análise de sentido e contexto das sugestões"
+              ],
+              "correctIndex": 3,
+              "explanation": "Mudança formal pode alterar intenção ou não resolver o problema real."
+            },
+            {
+              "id": "bb2026-r05-q03",
+              "prompt": "Em “os serviços digitais facilitam”, o verbo está plural por:",
+              "options": [
+                "Concordar com o sujeito plural",
+                "Ser sempre obrigatório com qualquer nome",
+                "Representar futuro",
+                "Conter uma vírgula"
+              ],
+              "correctIndex": 0,
+              "explanation": "Serviços é núcleo do sujeito plural; digitais também concorda com ele."
+            },
+            {
+              "id": "bb2026-r05-q04",
+              "prompt": "Texto que foge ao tema mas tem boa ortografia pede:",
+              "options": [
+                "Só mais sinônimos",
+                "Revisão do recorte e argumento, além da norma",
+                "Nenhuma mudança",
+                "Somente mudar fonte"
+              ],
+              "correctIndex": 1,
+              "explanation": "Correção formal não garante adequação à tarefa."
+            },
+            {
+              "id": "bb2026-r05-q05",
+              "prompt": "Comparar versões ajuda a:",
+              "options": [
+                "Garantir aprovação",
+                "Eliminar toda autoria",
+                "Verificar efeito das mudanças no sentido/clareza",
+                "Inventar estatísticas"
+              ],
+              "correctIndex": 2,
+              "explanation": "Reescrita precisa preservar intenção e aperfeiçoar o que foi identificado."
+            },
+            {
+              "id": "bb2026-r05-q06",
+              "prompt": "Feedback doSteve nesta oficina é:",
+              "options": [
+                "Nota oficial deCesgranrio",
+                "Previsão certa do tema",
+                "Garantia de corte histórico",
+                "Orientação formativa, dentro do limite de mensagem"
+              ],
+              "correctIndex": 3,
+              "explanation": "A plataforma apoia planejamento/revisão de trechos; não substitui avaliação oficial."
+            }
+          ],
+          "writingTasks": [
+            {
+              "id": "bb2026-r05-writing-1",
+              "title": "Clareza no atendimento",
+              "prompt": "Produza texto dissertativo-argumentativo sobre o papel da linguagem clara na qualidade do atendimento. Depois reescreva um parágrafo para melhorar precisão e explique a mudança num rascunho separado. Não ofereça nota oficial à própria produção.",
+              "motivatingText": "Num atendimento fictício, uma resposta formal repetiu termos do contrato, mas a pessoa continuou sem compreender o próximo passo. Outra resposta explicou a condição em linguagem acessível e verificou o entendimento sem omitir limites. A equipe discute como conciliar precisão técnica e compreensão. Texto próprio da Estuda Aí.",
+              "planning": [
+                "Delimite clareza como compreensão com precisão.",
+                "Desenvolva uma razão sobre decisão e outra sobre resolução.",
+                "Inclua limite: simplificar não é omitir condição.",
+                "Reescreva um parágrafo e compare sentido/clareza."
+              ],
+              "selfReview": [
+                "O texto responde ao papel da linguagem clara?",
+                "Há mecanismos e exemplos pertinentes?",
+                "Concordância, regência e pontuação foram conferidas no contexto?",
+                "A versão revisada preserva precisão e melhora compreensão?"
+              ]
+            },
+            {
+              "id": "bb2026-r05-writing-2",
+              "title": "Estudo autônomo com apoio",
+              "prompt": "Escreva texto dissertativo-argumentativo sobre como combinar autonomia no estudo e apoio para superar dificuldades. Faça planejamento, primeira versão e revisão em caderno/documento próprio; registre dois pontos que melhoraram na reescrita.",
+              "motivatingText": "Num grupo fictício, estudantes organizavam horários de formas diferentes. Alguns repetiam videoaulas sem perceber onde erravam; outros passaram a resolver aplicações, comparar feedback e pedir ajuda sobre dúvidas específicas. O grupo discutiu quando orientação fortalece autonomia em vez de substituí-la. Passagem autoral, sem pesquisa ou previsão de prova.",
+              "planning": [
+                "Defina autonomia como capacidade de organizar/verificar aprendizado.",
+                "Explique papel de prática e feedback.",
+                "Discuta quando pedir ajuda é pertinente.",
+                "Conclua com o que decorre da posição e revise duas escolhas."
+              ],
+              "selfReview": [
+                "Autonomia e apoio foram relacionados, sem oposição simplista?",
+                "As razões explicam o mecanismo de aprendizagem?",
+                "Há referência ambígua, repetição ou generalização a corrigir?",
+                "As duas melhorias foram identificadas sem prometer nota/resultado?"
+              ]
+            }
+          ],
+          "coverage": [
+            {
+              "referenceItem": "7.3.3e",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q01",
+                "bb2026-r05-q02",
+                "bb2026-r05-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.3e",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q04",
+                "bb2026-r05-q05",
+                "bb2026-r05-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q01",
+                "bb2026-r05-q02",
+                "bb2026-r05-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q04",
+                "bb2026-r05-q05",
+                "bb2026-r05-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q01",
+                "bb2026-r05-q02",
+                "bb2026-r05-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q04",
+                "bb2026-r05-q05",
+                "bb2026-r05-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q01",
+                "bb2026-r05-q02",
+                "bb2026-r05-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7.3.6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-r05-q04",
+                "bb2026-r05-q05",
+                "bb2026-r05-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
