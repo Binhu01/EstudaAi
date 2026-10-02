@@ -6736,7 +6736,2413 @@
           "videoId": "yUpRa62vcSI"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-p01",
+          "researchId": "P01",
+          "title": "Leitura e evidência textual",
+          "level": "Fundamentos e aplicação",
+          "summary": "Separar informação explícita, inferência e extrapolação · Justificar uma leitura pelo trecho e seus vínculos",
+          "objectives": [
+            "Separar informação explícita, inferência e extrapolação",
+            "Justificar uma leitura pelo trecho e seus vínculos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Leia relações, não palavras isoladas",
+              "text": "Compreender exige identificar o que o texto afirma; interpretar envolve relações, propósito e inferências apoiadas em pistas. Inferir não é completar o trecho com qualquer experiência pessoal. Examine quem fala, sobre qual assunto, em que gênero e com quais conectores. “Alguns” não equivale a “todos”; “pode” não equivale a “deve”. Referentes ligam expressões a elementos anteriores e ajudam a acompanhar a progressão. Uma alternativa pode repetir vocabulário e ainda alterar causa, alcance ou tempo da afirmação."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "A biblioteca do bairro abriu duas noites por semana. O movimento cresceu, mas o número de empréstimos variou pouco. Na pesquisa realizada no local, vários visitantes disseram que usavam as mesas para estudar com seus próprios livros. A equipe decidiu manter o horário e avaliar, mais tarde, a demanda por novas mesas. O trecho distingue presença no espaço e empréstimo; não prova desinteresse pela leitura nem anuncia compra já concluída."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pode-se concluir da passagem que o aumento de visitantes veio necessariamente de novos empréstimos?",
+              "steps": [
+                "Localize a oposição marcada por “mas”.",
+                "Compare crescimento do movimento com pouca variação dos empréstimos.",
+                "Use o relato sobre mesas como pista de uso diferente."
+              ],
+              "answer": "Não. O trecho permite uso do espaço sem aumento proporcional de empréstimos.",
+              "check": "A conclusão respeita as duas medidas; atribuir causa única ou compra já realizada excederia a informação."
+            }
+          ],
+          "pitfalls": [
+            "Trocar possibilidade por certeza.",
+            "Usar um detalhe verdadeiro para apoiar uma conclusão que o texto não faz."
+          ],
+          "recap": [
+            "Marque o que está dito e o que é inferido.",
+            "Verifique alcance, tempo, causa e referência.",
+            "Uma inferência precisa de pistas compatíveis."
+          ],
+          "retrieval": [
+            "Que palavra limita o alcance de “alguns alunos”?",
+            "Como detectar extrapolação numa alternativa?"
+          ],
+          "notes": "Leitura e evidência textual\nMarque o que está dito e o que é inferido.\nVerifique alcance, tempo, causa e referência.\nUma inferência precisa de pistas compatíveis.\nTrocar possibilidade por certeza.\nUsar um detalhe verdadeiro para apoiar uma conclusão que o texto não faz.",
+          "suggestions": [
+            "Explique inferência e extrapolação com um trecho novo.",
+            "Peça minha evidência antes de corrigir a leitura.",
+            "Analise o valor de um conector no contexto."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p01-q01",
+              "prompt": "“Alguns alunos estudam à noite.” Qual reescrita preserva o alcance?",
+              "options": [
+                "Há alunos que estudam à noite",
+                "Todos estudam exclusivamente à noite",
+                "Ninguém estuda de dia",
+                "A escola só abre à noite"
+              ],
+              "correctIndex": 0,
+              "explanation": "“Alguns” afirma existência, sem universalizar nem excluir estudo em outro período."
+            },
+            {
+              "id": "bb2026-p01-q02",
+              "prompt": "“O movimento cresceu, mas os empréstimos variaram pouco.” O conector destaca:",
+              "options": [
+                "Causa obrigatória",
+                "Contraste entre as duas informações",
+                "Condição impossível",
+                "Conclusão de que ninguém lê"
+              ],
+              "correctIndex": 1,
+              "explanation": "“Mas” opõe as medidas; não afirma causalidade ou ausência de leitura."
+            },
+            {
+              "id": "bb2026-p01-q03",
+              "prompt": "“A equipe avaliará a compra depois da pesquisa.” O trecho permite afirmar:",
+              "options": [
+                "A compra já foi feita",
+                "A pesquisa foi cancelada",
+                "A avaliação da compra é futura",
+                "A compra é obrigatória"
+              ],
+              "correctIndex": 2,
+              "explanation": "O futuro e a etapa de avaliação não anunciam realização ou obrigação de comprar."
+            },
+            {
+              "id": "bb2026-p01-q04",
+              "prompt": "“Lara devolveu o livro a Joana. Esta guardou a obra.” Na leitura referencial usual, “Esta” retoma:",
+              "options": [
+                "A obra",
+                "O livro como pessoa",
+                "Lara necessariamente",
+                "Joana"
+              ],
+              "correctIndex": 3,
+              "explanation": "“Esta” retoma o referente feminino mais próximo, Joana, no encadeamento fornecido."
+            },
+            {
+              "id": "bb2026-p01-q05",
+              "prompt": "“A chuva impediu a feira; por isso, os organizadores remarcaram o encontro.” A remarcação aparece como:",
+              "options": [
+                "Consequência do impedimento",
+                "Causa anterior da chuva",
+                "Hipótese sem ligação",
+                "Negação de que choveu"
+              ],
+              "correctIndex": 0,
+              "explanation": "“Por isso” vincula remarcação à situação anterior como consequência."
+            },
+            {
+              "id": "bb2026-p01-q06",
+              "prompt": "“O horário novo pode facilitar o acesso.” Qual alternativa extrapola?",
+              "options": [
+                "Existe uma possibilidade de facilitar",
+                "O horário garante acesso a todas as pessoas",
+                "O efeito é apresentado como possível",
+                "A afirmação não torna o efeito obrigatório"
+              ],
+              "correctIndex": 1,
+              "explanation": "“Garante” e “todas” ampliam certeza e alcance além do modal “pode”."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p01-q01",
+                "bb2026-p01-q02",
+                "bb2026-p01-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p01-q04",
+                "bb2026-p01-q05",
+                "bb2026-p01-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p02",
+          "researchId": "P02",
+          "title": "Classes nominais",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar classes pelo uso e relação no trecho · Distinguir classe e função em enunciados próprios",
+          "objectives": [
+            "Identificar classes pelo uso e relação no trecho",
+            "Distinguir classe e função em enunciados próprios"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A palavra precisa do contexto",
+              "text": "Substantivo nomeia entidades, ações ou conceitos; adjetivo atribui propriedade ou relação a um nome; artigo determina o substantivo; pronome substitui ou acompanha referentes; numeral expressa quantidade ou ordem. A classificação depende do emprego: “jovem” pode nomear uma pessoa em “o jovem chegou” e qualificar em “a pesquisadora jovem chegou”. Não se deve classificar apenas pela ideia de objeto físico: “leitura” também é substantivo. Classe gramatical não é função sintática: um substantivo pode atuar como sujeito ou objeto conforme a oração."
+            },
+            {
+              "type": "list",
+              "title": "Teste as relações",
+              "items": [
+                "Em “aqueles dois cadernos novos”, “aqueles” aponta os referentes, “dois” quantifica, “cadernos” é núcleo nominal e “novos” o qualifica.",
+                "Pronome pessoal “ela” pode retomar uma pessoa já mencionada; possessivo “seu” exige atenção a possíveis referentes ambíguos.",
+                "Artigo pode substantivar um termo: “o amanhã” passa a nomear uma ideia.",
+                "Locução adjetiva pode qualificar um nome: “mesa de madeira”; nem todo grupo preposicionado deve ser classificado sem observar relação e contexto."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Compare “A jovem revisou o relatório” e “A revisora jovem chegou”. Como muda “jovem”?",
+              "steps": [
+                "Na primeira oração, “jovem” é o núcleo que nomeia a pessoa.",
+                "Na segunda, “revisora” é núcleo e “jovem” atribui característica."
+              ],
+              "answer": "Substantivo no primeiro uso; adjetivo no segundo.",
+              "check": "O mesmo vocábulo tem relações diferentes; a presença de contexto resolve a classificação."
+            }
+          ],
+          "pitfalls": [
+            "Confundir classe substantivo com função sujeito.",
+            "Classificar uma palavra sem ler sua relação na frase."
+          ],
+          "recap": [
+            "Classe depende do emprego.",
+            "Núcleo e determinantes organizam o grupo nominal.",
+            "Referência pronominal precisa ser verificável."
+          ],
+          "retrieval": [
+            "“A leitura terminou” contém substantivo abstrato?",
+            "Como o artigo pode alterar o emprego de um termo?"
+          ],
+          "notes": "Classes nominais\nClasse depende do emprego.\nNúcleo e determinantes organizam o grupo nominal.\nReferência pronominal precisa ser verificável.\nConfundir classe substantivo com função sujeito.\nClassificar uma palavra sem ler sua relação na frase.",
+          "suggestions": [
+            "Classifique palavras num trecho que eu enviar.",
+            "Compare substantivo e adjetivo em dois usos.",
+            "Explique classe e função sintática."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            },
+            {
+              "title": "ABL — VOLP, edição digital 2025–2026",
+              "url": "https://www.academia.org.br/nossa-lingua/vocabulario-ortografico"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p02-q01",
+              "prompt": "Em “os dois relatórios claros”, qual é o núcleo substantivo?",
+              "options": [
+                "Os",
+                "Relatórios",
+                "Dois",
+                "Claros"
+              ],
+              "correctIndex": 1,
+              "explanation": "“Relatórios” nomeia as entidades; os outros termos determinam, quantificam ou qualificam."
+            },
+            {
+              "id": "bb2026-p02-q02",
+              "prompt": "Em “o amanhã preocupa a equipe”, “amanhã” é empregado como:",
+              "options": [
+                "Artigo",
+                "Preposição",
+                "Substantivo",
+                "Conjunção"
+              ],
+              "correctIndex": 2,
+              "explanation": "O artigo introduz “amanhã” como uma ideia nomeada, núcleo do grupo."
+            },
+            {
+              "id": "bb2026-p02-q03",
+              "prompt": "Classe gramatical e função sintática são:",
+              "options": [
+                "Sempre o mesmo rótulo",
+                "Determinadas só pela grafia",
+                "Inexistentes para pronomes",
+                "Classificações de natureza distinta"
+              ],
+              "correctIndex": 3,
+              "explanation": "Classe caracteriza o emprego gramatical; função descreve a relação na oração."
+            },
+            {
+              "id": "bb2026-p02-q04",
+              "prompt": "Em “a pesquisadora jovem”, “jovem” funciona como palavra que:",
+              "options": [
+                "Qualifica o nome pesquisadora",
+                "Nomeia o núcleo principal do grupo",
+                "Liga duas orações por causa",
+                "Marca exclusivamente tempo verbal"
+              ],
+              "correctIndex": 0,
+              "explanation": "O termo atribui uma propriedade à pesquisadora e tem uso adjetivo."
+            },
+            {
+              "id": "bb2026-p02-q05",
+              "prompt": "Em “aqueles três livros”, “três” indica:",
+              "options": [
+                "Condição",
+                "Quantidade",
+                "Posse",
+                "Concessão"
+              ],
+              "correctIndex": 1,
+              "explanation": "O numeral cardinal quantifica os livros; “aqueles” é demonstrativo."
+            },
+            {
+              "id": "bb2026-p02-q06",
+              "prompt": "“Rita falou com Ana sobre seu projeto.” A expressão “seu projeto” pode exigir esclarecimento porque:",
+              "options": [
+                "Pronome nunca retoma nomes",
+                "Projeto não é substantivo",
+                "A posse pode se ligar a mais de uma pessoa no contexto",
+                "Todo possessivo indica primeira pessoa"
+              ],
+              "correctIndex": 2,
+              "explanation": "O possessivo pode gerar ambiguidade entre referentes; reescrever com o nome esclarece a posse."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p02-q01",
+                "bb2026-p02-q02",
+                "bb2026-p02-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www.academia.org.br/nossa-lingua/vocabulario-ortografico"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p02-q04",
+                "bb2026-p02-q05",
+                "bb2026-p02-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www.academia.org.br/nossa-lingua/vocabulario-ortografico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p03",
+          "researchId": "P03",
+          "title": "Verbo, circunstância e relações",
+          "level": "Fundamentos e aplicação",
+          "summary": "Reconhecer formas verbais e relações circunstanciais · Interpretar conectores e modais no contexto",
+          "objectives": [
+            "Reconhecer formas verbais e relações circunstanciais",
+            "Interpretar conectores e modais no contexto"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Tempo, modo e sentido",
+              "text": "Verbo organiza ação, estado ou processo e flexiona-se segundo tempo, modo, pessoa e número. Indicativo apresenta conteúdos como fatos no enquadramento do enunciado; subjuntivo pode expressar hipótese, desejo ou dependência de outra construção; imperativo participa de ordem, convite ou orientação. Esses rótulos não provam a verdade do que se diz. Advérbios e locuções adverbiais acrescentam circunstâncias e podem modificar verbo, adjetivo ou outro advérbio. “Muito atento” traz intensidade, não quantidade de pessoas."
+            },
+            {
+              "type": "list",
+              "title": "Palavras que ligam ideias",
+              "items": [
+                "Preposição liga termos: “de manhã”, “com cuidado”, “para a turma”, segundo relações do contexto.",
+                "Conjunção liga orações ou termos coordenados. “Porque” pode apresentar causa; “embora”, concessão; “se”, condição; “portanto”, conclusão.",
+                "Interjeição manifesta reação em seu contexto, não substitui análise da estrutura.",
+                "Modalizadores como “talvez” e “certamente” alteram o grau de compromisso expresso; não garantem o fato."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Em “Embora estivesse cansada, Mila revisou o texto cuidadosamente”, quais relações orientam a leitura?",
+              "steps": [
+                "“Embora” apresenta uma condição que poderia dificultar a revisão, mas não a impediu.",
+                "“Cuidadosamente” modifica a forma de revisar."
+              ],
+              "answer": "Concessão no primeiro trecho; modo no advérbio final.",
+              "check": "A revisão ocorreu apesar do cansaço. Não há afirmação de que o cansaço causou o cuidado."
+            }
+          ],
+          "pitfalls": [
+            "Usar tempo verbal como prova de verdade.",
+            "Trocar concessão por causa sem conferir o vínculo."
+          ],
+          "recap": [
+            "Verbo e circunstâncias precisam do enunciado.",
+            "Conectores estabelecem relações específicas.",
+            "Modalização altera o compromisso expresso."
+          ],
+          "retrieval": [
+            "“Talvez” e “certamente” têm o mesmo efeito?",
+            "Como distinguir condição de concessão?"
+          ],
+          "notes": "Verbo, circunstância e relações\nVerbo e circunstâncias precisam do enunciado.\nConectores estabelecem relações específicas.\nModalização altera o compromisso expresso.\nUsar tempo verbal como prova de verdade.\nTrocar concessão por causa sem conferir o vínculo.",
+          "suggestions": [
+            "Explique o efeito de um tempo verbal.",
+            "Compare causa, concessão e condição.",
+            "Identifique advérbios num trecho próprio."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p03-q01",
+              "prompt": "Em “a equipe trabalhou cuidadosamente”, o advérbio expressa:",
+              "options": [
+                "Tempo",
+                "Posse",
+                "Modo",
+                "Quantidade de equipes"
+              ],
+              "correctIndex": 2,
+              "explanation": "“Cuidadosamente” indica como o trabalho foi realizado."
+            },
+            {
+              "id": "bb2026-p03-q02",
+              "prompt": "Em “Se houver vagas, abriremos a oficina”, “se” estabelece:",
+              "options": [
+                "Conclusão",
+                "Causa já comprovada",
+                "Comparação",
+                "Condição"
+              ],
+              "correctIndex": 3,
+              "explanation": "A abertura depende da hipótese de haver vagas."
+            },
+            {
+              "id": "bb2026-p03-q03",
+              "prompt": "Em “Talvez o relatório chegue hoje”, “talvez” indica:",
+              "options": [
+                "Possibilidade, sem certeza expressa",
+                "Certeza absoluta",
+                "Obrigação legal",
+                "Passado concluído"
+              ],
+              "correctIndex": 0,
+              "explanation": "O modalizador reduz o grau de certeza; não elimina a possibilidade de chegada."
+            },
+            {
+              "id": "bb2026-p03-q04",
+              "prompt": "“Embora chovesse, o evento ocorreu.” A relação entre as orações é de:",
+              "options": [
+                "Causa necessária",
+                "Concessão",
+                "Conclusão",
+                "Alternância exclusiva"
+              ],
+              "correctIndex": 1,
+              "explanation": "A ocorrência se dá apesar do obstáculo apresentado pela chuva."
+            },
+            {
+              "id": "bb2026-p03-q05",
+              "prompt": "“O prazo terminou; portanto, encerraremos as inscrições.” O segundo trecho apresenta:",
+              "options": [
+                "Uma posse",
+                "Uma finalidade anterior",
+                "Uma conclusão relacionada ao primeiro",
+                "Uma negação de que o prazo terminou"
+              ],
+              "correctIndex": 2,
+              "explanation": "“Portanto” orienta a leitura conclusiva a partir da informação anterior."
+            },
+            {
+              "id": "bb2026-p03-q06",
+              "prompt": "Em “A aluna estava muito atenta”, “muito” modifica:",
+              "options": [
+                "Um substantivo no plural",
+                "Um artigo",
+                "Uma preposição",
+                "O adjetivo atenta por intensidade"
+              ],
+              "correctIndex": 3,
+              "explanation": "O termo intensifica a propriedade “atenta”; não quantifica alunas."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p03-q01",
+                "bb2026-p03-q02",
+                "bb2026-p03-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p03-q04",
+                "bb2026-p03-q05",
+                "bb2026-p03-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p04",
+          "researchId": "P04",
+          "title": "Ortografia e acentuação",
+          "level": "Fundamentos e aplicação",
+          "summary": "Aplicar padrões de grafia e acento com contexto · Conferir diferenças sem generalizar uma regra",
+          "objectives": [
+            "Aplicar padrões de grafia e acento com contexto",
+            "Conferir diferenças sem generalizar uma regra"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A sílaba tônica orienta o acento",
+              "text": "Oxítonas têm tonicidade na última sílaba; paroxítonas, na penúltima; proparoxítonas, na antepenúltima. Todas as proparoxítonas recebem acento. As outras classes obedecem a terminações e condições específicas: “café” é oxítona acentuada, “fácil” é paroxítona acentuada, “médico” é proparoxítona. Ditongos abertos em paroxítonas como “ideia” não recebem o antigo acento; “herói”, oxítona, conserva o acento. “Voo” não tem circunflexo. A regra de uma classe não deve ser aplicada a outra sem observar tonicidade."
+            },
+            {
+              "type": "list",
+              "title": "Grafia e distinções",
+              "items": [
+                "“Pôde” indica passado e “pode” presente; “pôr” é verbo e “por” preposição.",
+                "“Tem” e “vem” no singular contrastam com “têm” e “vêm” no plural; derivados exigem exame de sua grafia.",
+                "Em muitos prefixos, vogais iguais se separam por hífen: “anti-inflamatório”; diante de r/s após vogal, duplicam-se consoantes em casos como “antissocial”.",
+                "“Por que”, “porque”, “por quê” e “porquê” têm funções diferentes: pergunta/relação, explicação, posição final e substantivo conforme contexto.",
+                "Consulte VOLP e bases do Acordo Ortográfico para grafias específicas e exceções."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Reescreva: “Ontem ela pode vir, mas hoje não pode”. Qual forma marca corretamente o passado?",
+              "steps": [
+                "“Ontem” exige leitura pretérita na primeira ocorrência.",
+                "Use o acento diferencial na forma do passado; mantenha o presente na segunda."
+              ],
+              "answer": "“Ontem ela pôde vir, mas hoje não pode.”",
+              "check": "A diferença é temporal. Não se trata de acentuar toda ocorrência da palavra."
+            }
+          ],
+          "pitfalls": [
+            "Aplicar ao “herói” a regra de “ideia”.",
+            "Usar hífen em qualquer composição sem conferir prefixo e letras."
+          ],
+          "recap": [
+            "Tonicidade vem antes da regra de acento.",
+            "Acentos diferenciais dependem de forma e contexto.",
+            "VOLP ajuda a conferir grafia e exceções."
+          ],
+          "retrieval": [
+            "Qual classe de tonicidade tem “médico”?",
+            "Como “porquê” funciona como substantivo?"
+          ],
+          "notes": "Ortografia e acentuação\nTonicidade vem antes da regra de acento.\nAcentos diferenciais dependem de forma e contexto.\nVOLP ajuda a conferir grafia e exceções.\nAplicar ao “herói” a regra de “ideia”.\nUsar hífen em qualquer composição sem conferir prefixo e letras.",
+          "suggestions": [
+            "Explique a acentuação de uma palavra.",
+            "Compare pode/pôde e por/pôr.",
+            "Revise grafias pelo contexto e pelo VOLP."
+          ],
+          "sources": [
+            {
+              "title": "ABL — VOLP, edição digital 2025–2026",
+              "url": "https://www.academia.org.br/nossa-lingua/vocabulario-ortografico"
+            },
+            {
+              "title": "Acordo Ortográfico — Decreto 6.583",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6583.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p04-q01",
+              "prompt": "Qual grafia segue a norma brasileira atual?",
+              "options": [
+                "Idéia",
+                "Vôo",
+                "Anti social",
+                "Ideia"
+              ],
+              "correctIndex": 3,
+              "explanation": "O ditongo aberto em “ideia”, paroxítona, não recebe o antigo acento."
+            },
+            {
+              "id": "bb2026-p04-q02",
+              "prompt": "A palavra “médico” recebe acento porque é:",
+              "options": [
+                "Proparoxítona",
+                "Oxítona terminada em o",
+                "Monossílabo átono",
+                "Paroxítona sem sílaba tônica"
+              ],
+              "correctIndex": 0,
+              "explanation": "A tonicidade está na antepenúltima sílaba; proparoxítonas são acentuadas."
+            },
+            {
+              "id": "bb2026-p04-q03",
+              "prompt": "Qual contraste está correto?",
+              "options": [
+                "Pôr preposição; por verbo",
+                "Pôr verbo; por preposição",
+                "Pôde presente; pode passado",
+                "Têm singular; tem plural"
+              ],
+              "correctIndex": 1,
+              "explanation": "O circunflexo diferencia o verbo “pôr” da preposição “por”."
+            },
+            {
+              "id": "bb2026-p04-q04",
+              "prompt": "Use pretérito perfeito na primeira lacuna e presente do indicativo na segunda: “Ontem a coordenadora ___ participar; hoje ela ___ novamente.”",
+              "options": [
+                "pode / pôde",
+                "pôde / pôde",
+                "pôde / pode",
+                "pode / poder"
+              ],
+              "correctIndex": 2,
+              "explanation": "A primeira forma marca passado, a segunda presente, conforme os indicadores temporais."
+            },
+            {
+              "id": "bb2026-p04-q05",
+              "prompt": "Complete a pergunta indireta sobre o motivo: “Quero saber ___ você saiu cedo.”",
+              "options": [
+                "porque",
+                "porquê",
+                "por quê",
+                "por que"
+              ],
+              "correctIndex": 3,
+              "explanation": "A pergunta indireta emprega “por que”; não há posição final nem substantivação."
+            },
+            {
+              "id": "bb2026-p04-q06",
+              "prompt": "Qual par está grafado corretamente?",
+              "options": [
+                "anti-inflamatório / antissocial",
+                "antiinflamatório / anti-social",
+                "anti inflamatório / antisocial",
+                "anti-inflamatório / antisocial"
+              ],
+              "correctIndex": 0,
+              "explanation": "Vogais iguais separam o prefixo no primeiro caso; r/s após vogal recebe duplicação em antissocial."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p04-q01",
+                "bb2026-p04-q02",
+                "bb2026-p04-q03"
+              ],
+              "sourceUrls": [
+                "https://www.academia.org.br/nossa-lingua/vocabulario-ortografico",
+                "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6583.htm"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p04-q04",
+                "bb2026-p04-q05",
+                "bb2026-p04-q06"
+              ],
+              "sourceUrls": [
+                "https://www.academia.org.br/nossa-lingua/vocabulario-ortografico",
+                "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6583.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p05",
+          "researchId": "P05",
+          "title": "Estrutura da oração",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar núcleo do sujeito e relações do predicado · Analisar complementos sem escolher só a ordem das palavras",
+          "objectives": [
+            "Identificar núcleo do sujeito e relações do predicado",
+            "Analisar complementos sem escolher só a ordem das palavras"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Quem se relaciona com o verbo?",
+              "text": "Oração organiza-se em torno de verbo ou locução verbal. Sujeito é função sintática relacionada ao predicado; pode vir antes ou depois do verbo, estar elíptico ou não ocorrer em oração impessoal. Predicado reúne o que se declara na estrutura. Não confunda sujeito com agente: numa voz passiva, o sujeito pode receber a ação. Complementos completam relações de verbos ou nomes; adjuntos acrescentam determinações ou circunstâncias. Objeto direto não é introduzido por preposição exigida pelo verbo no padrão básico; indireto tem preposição requerida. Há construções particulares, por isso leia a regência e o contexto."
+            },
+            {
+              "type": "list",
+              "title": "Roteiro de análise",
+              "items": [
+                "Localize verbo, sentido e complementos necessários.",
+                "Identifique o grupo sujeito e seu núcleo, sem se guiar pelo termo mais próximo.",
+                "Separe predicativo, que atribui estado/característica, de um complemento que nomeia entidade envolvida na ação.",
+                "Adjunto adverbial situa tempo, lugar, modo ou outras circunstâncias.",
+                "Aposto explica ou especifica; vocativo chama o interlocutor e não é sujeito por definição."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Analise “Na sala, os dois monitores entregaram os cadernos aos alunos”.",
+              "steps": [
+                "Verbo: entregaram. Sujeito: os dois monitores; núcleo: monitores.",
+                "Objeto direto: os cadernos; objeto indireto: aos alunos.",
+                "“Na sala” situa lugar."
+              ],
+              "answer": "A ordem inicial do lugar não o torna sujeito.",
+              "check": "Concordância de “entregaram” com “monitores” e a regência “entregar algo a alguém” confirmam a análise."
+            }
+          ],
+          "pitfalls": [
+            "Chamar o primeiro termo da frase de sujeito sempre.",
+            "Confundir vocativo com quem realiza a ação."
+          ],
+          "recap": [
+            "Verbo, regência e núcleos orientam a análise.",
+            "Ordem e agente não bastam para definir sujeito.",
+            "Complementos e circunstâncias têm funções diferentes."
+          ],
+          "retrieval": [
+            "Um sujeito pode receber a ação?",
+            "Como reconhecer vocativo num chamado?"
+          ],
+          "notes": "Estrutura da oração\nVerbo, regência e núcleos orientam a análise.\nOrdem e agente não bastam para definir sujeito.\nComplementos e circunstâncias têm funções diferentes.\nChamar o primeiro termo da frase de sujeito sempre.\nConfundir vocativo com quem realiza a ação.",
+          "suggestions": [
+            "Analise sujeito e predicado num trecho.",
+            "Compare objetos e adjuntos.",
+            "Explique vocativo com uma frase inédita."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p05-q01",
+              "prompt": "Em “Chegaram os documentos”, o sujeito é:",
+              "options": [
+                "Os documentos",
+                "Chegaram",
+                "Sujeito obrigatoriamente inexistente",
+                "Uma pessoa oculta chamada Chegaram"
+              ],
+              "correctIndex": 0,
+              "explanation": "O grupo posposto concorda com o verbo; posição final não elimina sua função."
+            },
+            {
+              "id": "bb2026-p05-q02",
+              "prompt": "Em “O relatório foi revisado pela equipe”, “o relatório” é:",
+              "options": [
+                "Vocativo",
+                "Sujeito que recebe a ação",
+                "Agente da revisão",
+                "Objeto indireto"
+              ],
+              "correctIndex": 1,
+              "explanation": "Na voz passiva, sujeito e agente não coincidem: a equipe realiza a revisão."
+            },
+            {
+              "id": "bb2026-p05-q03",
+              "prompt": "Em “Lia enviou o aviso aos colegas”, objeto direto é:",
+              "options": [
+                "Lia",
+                "Aos colegas",
+                "O aviso",
+                "Enviou"
+              ],
+              "correctIndex": 2,
+              "explanation": "O aviso é a entidade enviada; aos colegas marca destinatário com preposição."
+            },
+            {
+              "id": "bb2026-p05-q04",
+              "prompt": "Em “Turma, revisem o texto”, “Turma” é:",
+              "options": [
+                "Objeto direto",
+                "Adjunto de tempo",
+                "Sujeito expresso necessariamente",
+                "Vocativo"
+              ],
+              "correctIndex": 3,
+              "explanation": "O termo chama o interlocutor e é separado por vírgula; não se define como sujeito da ordem."
+            },
+            {
+              "id": "bb2026-p05-q05",
+              "prompt": "Em “A equipe de revisores chegou”, núcleo do sujeito é:",
+              "options": [
+                "Equipe",
+                "Revisores",
+                "Chegou",
+                "De"
+              ],
+              "correctIndex": 0,
+              "explanation": "O núcleo singular é equipe; “de revisores” integra sua determinação."
+            },
+            {
+              "id": "bb2026-p05-q06",
+              "prompt": "Em “Mila estava tranquila”, “tranquila” atribui característica ao sujeito e é:",
+              "options": [
+                "Objeto indireto",
+                "Predicativo do sujeito",
+                "Vocativo",
+                "Conjunção"
+              ],
+              "correctIndex": 1,
+              "explanation": "Com verbo de ligação no contexto, o adjetivo apresenta o estado do sujeito."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p05-q01",
+                "bb2026-p05-q02",
+                "bb2026-p05-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p05-q04",
+                "bb2026-p05-q05",
+                "bb2026-p05-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p06",
+          "researchId": "P06",
+          "title": "Estrutura do período",
+          "level": "Fundamentos e aplicação",
+          "summary": "Comparar coordenação e subordinação · Interpretar relações e limites das orações",
+          "objectives": [
+            "Comparar coordenação e subordinação",
+            "Interpretar relações e limites das orações"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Mais de uma oração, mais de uma relação",
+              "text": "Período simples contém uma oração; composto contém mais de uma. Uma locução verbal não deve ser contada como duas orações apenas por ter duas formas de verbo. Na coordenação, orações não desempenham função sintática umas nas outras; isso não significa ausência de relação de sentido. Na subordinação, uma oração integra a estrutura de outra como termo ou circunstância. Subordinadas substantivas podem funcionar como complemento; adjetivas caracterizam um nome; adverbiais expressam relações como causa, condição, concessão, finalidade e tempo."
+            },
+            {
+              "type": "list",
+              "title": "Pontuação e função se combinam",
+              "items": [
+                "“Espero que a equipe chegue”: a oração completa o que se espera.",
+                "“Os alunos que revisaram passaram”: a relativa restringe o grupo mencionado; não afirma que todos revisaram.",
+                "“Os alunos, que revisaram, passaram”: a oração explicativa acrescenta informação ao grupo referido.",
+                "“Quando a aula terminou, saímos”: a subordinada estabelece tempo.",
+                "Formas reduzidas usam infinitivo, gerúndio ou particípio e exigem interpretar a relação no contexto."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Compare “A equipe estudou e revisou o texto” com “A equipe revisou o texto porque recebeu comentários”.",
+              "steps": [
+                "Na primeira, o conector soma duas ações em coordenação.",
+                "Na segunda, o motivo é expresso pela oração introduzida por “porque”."
+              ],
+              "answer": "Adição no primeiro período; relação causal com subordinação no segundo.",
+              "check": "A troca do conector alteraria a relação que orienta a interpretação."
+            }
+          ],
+          "pitfalls": [
+            "Contar cada verbo de uma locução como oração separada.",
+            "Confundir independência sintática com ausência de vínculo de sentido."
+          ],
+          "recap": [
+            "Conte núcleos oracionais com atenção às locuções.",
+            "Subordinação relaciona uma oração à estrutura de outra.",
+            "Restrição e explicação mudam o alcance do nome."
+          ],
+          "retrieval": [
+            "Qual a diferença entre “que revisaram” com e sem vírgulas?",
+            "Uma coordenada pode ter relação conclusiva?"
+          ],
+          "notes": "Estrutura do período\nConte núcleos oracionais com atenção às locuções.\nSubordinação relaciona uma oração à estrutura de outra.\nRestrição e explicação mudam o alcance do nome.\nContar cada verbo de uma locução como oração separada.\nConfundir independência sintática com ausência de vínculo de sentido.",
+          "suggestions": [
+            "Compare períodos simples e compostos.",
+            "Explique uma oração subordinada no contexto.",
+            "Analise o efeito de uma relativa restritiva."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p06-q01",
+              "prompt": "“A equipe vai revisar o texto.” Considerando a locução “vai revisar”, há:",
+              "options": [
+                "Duas orações obrigatoriamente",
+                "Uma oração",
+                "Nenhum verbo",
+                "Três períodos"
+              ],
+              "correctIndex": 1,
+              "explanation": "A locução funciona como núcleo verbal da oração; não se conta uma oração por cada forma."
+            },
+            {
+              "id": "bb2026-p06-q02",
+              "prompt": "Em “Espero que você retorne”, a oração iniciada por “que”:",
+              "options": [
+                "É vocativo",
+                "É uma lista de adjetivos",
+                "Completa o sentido de espero",
+                "Não se relaciona ao verbo"
+              ],
+              "correctIndex": 2,
+              "explanation": "Ela expressa o conteúdo esperado, com função de complemento no período."
+            },
+            {
+              "id": "bb2026-p06-q03",
+              "prompt": "Orações coordenadas podem ter relação de sentido?",
+              "options": [
+                "Nunca",
+                "Somente se não tiverem verbos",
+                "Só em perguntas",
+                "Sim, apesar da independência sintática"
+              ],
+              "correctIndex": 3,
+              "explanation": "Coordenação não elimina vínculos semânticos como adição, oposição e conclusão."
+            },
+            {
+              "id": "bb2026-p06-q04",
+              "prompt": "“Os alunos que revisaram passaram.” A relativa sem vírgulas:",
+              "options": [
+                "Restringe o grupo de alunos mencionado",
+                "Afirma obrigatoriamente que todos revisaram",
+                "Chama os alunos",
+                "Indica conclusão sem caracterizar o nome"
+              ],
+              "correctIndex": 0,
+              "explanation": "A oração seleciona os alunos que revisaram; não generaliza a propriedade a todos."
+            },
+            {
+              "id": "bb2026-p06-q05",
+              "prompt": "“Quando a biblioteca abriu, os visitantes entraram.” A relação é de:",
+              "options": [
+                "Concessão",
+                "Tempo",
+                "Comparação",
+                "Posse"
+              ],
+              "correctIndex": 1,
+              "explanation": "A subordinada situa temporalmente a entrada, sem declarar concessão ou comparação."
+            },
+            {
+              "id": "bb2026-p06-q06",
+              "prompt": "“Estudou bastante, mas ainda tinha dúvidas.” O período coordena ações/informações com:",
+              "options": [
+                "Condição",
+                "Finalidade",
+                "Oposição",
+                "Causa exclusiva"
+              ],
+              "correctIndex": 2,
+              "explanation": "“Mas” contrapõe as informações, sem transformar estudo em condição formal da dúvida."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p06-q01",
+                "bb2026-p06-q02",
+                "bb2026-p06-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p06-q04",
+                "bb2026-p06-q05",
+                "bb2026-p06-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p07",
+          "researchId": "P07",
+          "title": "Pontuação e sentido",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar sinais à estrutura sintática e informacional · Revisar pontuação preservando ou alterando alcance conscientemente",
+          "objectives": [
+            "Relacionar sinais à estrutura sintática e informacional",
+            "Revisar pontuação preservando ou alterando alcance conscientemente"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A pausa não é uma regra suficiente",
+              "text": "Pontuação organiza estrutura e sentido. Não separe sujeito e verbo ou verbo e complemento por vírgula sem razão sintática. Vocativo, aposto explicativo e intercalações recebem delimitação; uma intercalação precisa ser fechada. Adjuntos deslocados podem ser destacados segundo extensão e clareza, sem regra simplista de que toda circunstância curta exige vírgula. Dois-pontos introduzem explicação, enumeração ou fala conforme a estrutura. Ponto e vírgula pode separar segmentos extensos ou itens que já contêm vírgulas; não corrige sozinho relações mal construídas."
+            },
+            {
+              "type": "list",
+              "title": "Revisar o efeito",
+              "items": [
+                "Oração relativa com vírgulas tende a explicar o grupo referido; sem vírgulas pode restringi-lo.",
+                "Vírgulas em pares marcam informação intercalada: “A equipe, após a reunião, revisou a proposta”.",
+                "Travessões e parênteses podem delimitar informações com efeitos de destaque distintos.",
+                "Reticências sugerem suspensão/continuidade segundo o contexto, não tornam uma prova ou argumento completo.",
+                "Leia sintaxe, referência e intenção antes de inserir sinal por uma pausa de fala."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Revisar “Os novos participantes, receberam os materiais”. O que retirar e por quê?",
+              "steps": [
+                "Identifique sujeito: os novos participantes.",
+                "Identifique verbo: receberam, sem intercalação entre eles."
+              ],
+              "answer": "Retire a vírgula: “Os novos participantes receberam os materiais”.",
+              "check": "O sinal separava sujeito do verbo; não marcava vocativo ou comentário intercalado."
+            }
+          ],
+          "pitfalls": [
+            "Justificar toda vírgula por pausa respiratória.",
+            "Abrir intercalação sem fechá-la."
+          ],
+          "recap": [
+            "Estrutura sintática orienta a pontuação.",
+            "Sinais podem alterar restrição e explicação.",
+            "Intercalação deve ter limites claros."
+          ],
+          "retrieval": [
+            "Como distinguir vocativo de sujeito?",
+            "Por que uma relativa com vírgulas pode ampliar alcance?"
+          ],
+          "notes": "Pontuação e sentido\nEstrutura sintática orienta a pontuação.\nSinais podem alterar restrição e explicação.\nIntercalação deve ter limites claros.\nJustificar toda vírgula por pausa respiratória.\nAbrir intercalação sem fechá-la.",
+          "suggestions": [
+            "Revise pontuação de uma frase minha.",
+            "Compare relativa restritiva e explicativa.",
+            "Explique uma vírgula pela sintaxe."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            },
+            {
+              "title": "Senado — vírgula",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/virgula"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p07-q01",
+              "prompt": "Sem intercalação, qual relação não deve ser separada por vírgula?",
+              "options": [
+                "Vocativo e oração",
+                "Aposto explicativo e nome",
+                "Sujeito e verbo",
+                "Itens de uma enumeração"
+              ],
+              "correctIndex": 2,
+              "explanation": "A vírgula não deve romper sujeito e verbo sem construção que justifique a delimitação."
+            },
+            {
+              "id": "bb2026-p07-q02",
+              "prompt": "Uma informação intercalada entre sujeito e verbo deve:",
+              "options": [
+                "Eliminar o verbo",
+                "Receber só sinal de abertura sempre",
+                "Transformar sujeito em vocativo",
+                "Ter delimitação coerente de abertura e fechamento"
+              ],
+              "correctIndex": 3,
+              "explanation": "A delimitação em pares preserva a estrutura principal e mostra os limites da informação."
+            },
+            {
+              "id": "bb2026-p07-q03",
+              "prompt": "Dois-pontos podem introduzir, conforme a estrutura:",
+              "options": [
+                "Uma enumeração ou explicação",
+                "Obrigatoriamente sujeito antes do verbo",
+                "Somente perguntas diretas",
+                "Acento de crase"
+              ],
+              "correctIndex": 0,
+              "explanation": "O sinal pode anunciar conteúdo explicativo, enumerativo ou fala; seu uso depende do trecho."
+            },
+            {
+              "id": "bb2026-p07-q04",
+              "prompt": "Qual frase usa vírgula para marcar vocativo?",
+              "options": [
+                "Os monitores, chegaram cedo.",
+                "Monitores, tragam os cadernos.",
+                "A turma recebeu, os cadernos.",
+                "O aluno, atento chegou."
+              ],
+              "correctIndex": 1,
+              "explanation": "“Monitores” chama os interlocutores; as outras opções rompem ou delimitam inadequadamente a estrutura."
+            },
+            {
+              "id": "bb2026-p07-q05",
+              "prompt": "Em “As oficinas, que começaram cedo, terminaram ao meio-dia”, a relativa é:",
+              "options": [
+                "Uma pergunta direta",
+                "Vocativo",
+                "Explicativa, delimitada por vírgulas",
+                "Obrigatoriamente restritiva sem pausa"
+              ],
+              "correctIndex": 2,
+              "explanation": "As vírgulas introduzem comentário sobre o conjunto referido, em vez de selecionar oficinas entre outras."
+            },
+            {
+              "id": "bb2026-p07-q06",
+              "prompt": "Para corrigir “A coordenadora, entregou os avisos”, sem informação intercalada, deve-se:",
+              "options": [
+                "Adicionar vírgula após entregou",
+                "Substituir a vírgula por dois-pontos",
+                "Retirar o verbo",
+                "Retirar a vírgula entre sujeito e verbo"
+              ],
+              "correctIndex": 3,
+              "explanation": "O sujeito se liga diretamente ao verbo; a vírgula inserida não delimita outra função."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p07-q01",
+                "bb2026-p07-q02",
+                "bb2026-p07-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/virgula"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p07-q04",
+                "bb2026-p07-q05",
+                "bb2026-p07-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/virgula"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p08",
+          "researchId": "P08",
+          "title": "Concordância nominal",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar flexão ao nome e à função do termo · Aplicar concordância distinguindo adjetivo e advérbio",
+          "objectives": [
+            "Relacionar flexão ao nome e à função do termo",
+            "Aplicar concordância distinguindo adjetivo e advérbio"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O núcleo organiza as relações",
+              "text": "Artigo, numeral e adjetivo concordam com o nome nas construções pertinentes. Não flexione qualquer palavra próxima: advérbio modifica e não concorda em gênero ou número. “As duas propostas revisadas” tem núcleo plural feminino que orienta as flexões. “Meio” como advérbio equivale a “um pouco” e fica invariável em “as revisoras estavam meio cansadas”; como numeral/adjetivo indica metade e pode flexionar, como “meia folha”. “Bastante” pode quantificar nomes, flexionando em “bastantes exemplos”, ou intensificar adjetivo, invariável em “exemplos bastante claros”."
+            },
+            {
+              "type": "list",
+              "title": "Observe emprego e determinação",
+              "items": [
+                "“Os documentos anexos”: anexo é adjetivo e acompanha documentos. “Os documentos em anexo”: a locução é invariável.",
+                "“As alunas disseram: obrigadas”: o agradecimento adjetivo acompanha quem fala.",
+                "Em “É proibida a entrada”, o nome determinado pelo artigo orienta a concordância. Em “É proibido entrar”, a construção com infinitivo mantém a forma correspondente.",
+                "Casos com mais de um nome e adjetivo exigem observar posição e alcance; não tomar uma variante normativa aceitável como erro sem contexto."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Complete: “As páginas ___ estão ___ amassadas”. Use “anexo” qualificando páginas e “meio” como um pouco.",
+              "steps": [
+                "Páginas é plural feminino: anexas.",
+                "Meio intensifica amassadas e não indica metade: fica invariável."
+              ],
+              "answer": "“As páginas anexas estão meio amassadas.”",
+              "check": "Trocar “meio” por “um pouco” confirma a função adverbial; “anexas” continua qualificando páginas."
+            }
+          ],
+          "pitfalls": [
+            "Flexionar advérbio porque está perto de nome plural.",
+            "Aplicar a flexão de anexo à locução em anexo."
+          ],
+          "recap": [
+            "Identifique função e núcleo antes de flexionar.",
+            "Adjetivo concorda; advérbio é invariável nesses usos.",
+            "Determinação e alcance do termo importam."
+          ],
+          "retrieval": [
+            "Por que meio muda em meia folha, mas não em meio cansadas?",
+            "Como diferenciar bastante e bastantes?"
+          ],
+          "notes": "Concordância nominal\nIdentifique função e núcleo antes de flexionar.\nAdjetivo concorda; advérbio é invariável nesses usos.\nDeterminação e alcance do termo importam.\nFlexionar advérbio porque está perto de nome plural.\nAplicar a flexão de anexo à locução em anexo.",
+          "suggestions": [
+            "Compare adjetivo e advérbio em concordância.",
+            "Revise uma frase com anexo e em anexo.",
+            "Explique bastante e meio em contextos diferentes."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p08-q01",
+              "prompt": "Em “as propostas bastante claras”, “bastante” é:",
+              "options": [
+                "Advérbio de intensidade invariável nesse uso",
+                "Adjetivo que deve sempre ir ao plural",
+                "Substantivo núcleo",
+                "Artigo feminino"
+              ],
+              "correctIndex": 0,
+              "explanation": "O termo intensifica o adjetivo “claras”; não quantifica propostas diretamente."
+            },
+            {
+              "id": "bb2026-p08-q02",
+              "prompt": "A locução “em anexo”, em “os arquivos seguem em anexo”, deve:",
+              "options": [
+                "Virar em anexos obrigatoriamente",
+                "Permanecer invariável",
+                "Concordar com quem fala",
+                "Virar em anexa"
+              ],
+              "correctIndex": 1,
+              "explanation": "A locução não segue a flexão do adjetivo “anexo”."
+            },
+            {
+              "id": "bb2026-p08-q03",
+              "prompt": "Em “meia página”, “meia” expressa:",
+              "options": [
+                "Intensidade adverbial",
+                "Modo do verbo",
+                "Metade, acompanhando o nome feminino",
+                "Concessão"
+              ],
+              "correctIndex": 2,
+              "explanation": "O uso numeral acompanha página; é diferente de “meio cansada”."
+            },
+            {
+              "id": "bb2026-p08-q04",
+              "prompt": "Complete com anexo como adjetivo e meio como um pouco: “As tabelas ___ estão ___ borradas”.",
+              "options": [
+                "anexo / meias",
+                "anexas / meias",
+                "anexos / meio",
+                "anexas / meio"
+              ],
+              "correctIndex": 3,
+              "explanation": "O adjetivo concorda com tabelas; o advérbio de intensidade fica invariável."
+            },
+            {
+              "id": "bb2026-p08-q05",
+              "prompt": "Qual forma concorda com o nome determinado no enunciado?",
+              "options": [
+                "É proibida a entrada.",
+                "É proibido a entrada.",
+                "É proibidas a entrada.",
+                "É proibidos a entrada."
+              ],
+              "correctIndex": 0,
+              "explanation": "A entrada é feminino singular e orienta a concordância nessa construção."
+            },
+            {
+              "id": "bb2026-p08-q06",
+              "prompt": "Complete: “Há ___ exercícios, e eles são ___ úteis”.",
+              "options": [
+                "bastante / bastantes",
+                "bastantes / bastante",
+                "bastantes / bastantes",
+                "bastante / bastante"
+              ],
+              "correctIndex": 1,
+              "explanation": "Primeiro quantifica nomes plurais; depois intensifica adjetivo e fica invariável."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p08-q01",
+                "bb2026-p08-q02",
+                "bb2026-p08-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p08-q04",
+                "bb2026-p08-q05",
+                "bb2026-p08-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p09",
+          "researchId": "P09",
+          "title": "Concordância verbal básica",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar o sujeito para flexionar o verbo · Revisar ordem e núcleos sem concordância por proximidade",
+          "objectives": [
+            "Identificar o sujeito para flexionar o verbo",
+            "Revisar ordem e núcleos sem concordância por proximidade"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Número e pessoa vêm do sujeito",
+              "text": "A concordância verbal relaciona o verbo ao sujeito, e não obrigatoriamente ao nome mais próximo. Sujeito simples tem um núcleo; um grupo com muitos termos ainda pode ter um único núcleo. Em “A análise dos relatórios terminou”, o núcleo é análise, singular; relatórios integra uma expressão dependente. Sujeito posposto continua relevante: “Chegaram os avisos”. Sujeito composto anteposto costuma exigir plural no padrão examinado, como “Rita e Paulo revisaram”. Sujeito elíptico pode ser recuperado pelas flexões e pelo contexto, sem se confundir com inexistência de sujeito."
+            },
+            {
+              "type": "list",
+              "title": "Um roteiro para revisar",
+              "items": [
+                "Localize o verbo e a oração a que pertence.",
+                "Identifique o grupo sujeito e seu núcleo, retirando mentalmente determinantes e intercalações.",
+                "Confira pessoa e número: “nós estudamos”, “eles estudam”.",
+                "Pronome de tratamento como Vossa Senhoria pede concordância verbal na terceira pessoa.",
+                "Construções especiais de haver, fazer e se exigem análise própria, desenvolvida no módulo seguinte."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Revisar “A entrega dos novos cadernos foram concluída”.",
+              "steps": [
+                "Sujeito: a entrega dos novos cadernos; núcleo: entrega.",
+                "Use foi, singular, e mantenha concluída ligada a entrega."
+              ],
+              "answer": "“A entrega dos novos cadernos foi concluída.”",
+              "check": "A retirada de “dos novos cadernos” deixa “A entrega foi concluída”, confirmando o núcleo."
+            }
+          ],
+          "pitfalls": [
+            "Concordar com o substantivo mais próximo sem análise.",
+            "Considerar todo sujeito posposto inexistente."
+          ],
+          "recap": [
+            "Núcleo e pessoa do sujeito orientam o verbo.",
+            "Posição não determina singular ou plural.",
+            "Intercalações não mudam o núcleo por si."
+          ],
+          "retrieval": [
+            "Qual o núcleo em “A revisão dos capítulos”?",
+            "Por que Vossa Senhoria não pede verbo na segunda pessoa?"
+          ],
+          "notes": "Concordância verbal básica\nNúcleo e pessoa do sujeito orientam o verbo.\nPosição não determina singular ou plural.\nIntercalações não mudam o núcleo por si.\nConcordar com o substantivo mais próximo sem análise.\nConsiderar todo sujeito posposto inexistente.",
+          "suggestions": [
+            "Identifique o núcleo do sujeito numa frase.",
+            "Corrija concordância explicando a estrutura.",
+            "Compare sujeito elíptico e posposto."
+          ],
+          "sources": [
+            {
+              "title": "Senado — concordância verbal",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p09-q01",
+              "prompt": "Em “A revisão dos capítulos terminou”, o núcleo do sujeito é:",
+              "options": [
+                "Capítulos",
+                "Terminou",
+                "Revisão",
+                "Dos"
+              ],
+              "correctIndex": 2,
+              "explanation": "Revisão é o núcleo singular; capítulos compõe expressão dependente."
+            },
+            {
+              "id": "bb2026-p09-q02",
+              "prompt": "Quando o sujeito vem depois do verbo, deve-se:",
+              "options": [
+                "Usar singular sempre",
+                "Eliminar a concordância",
+                "Classificá-lo sempre como inexistente",
+                "Identificá-lo e aplicar a concordância pertinente"
+              ],
+              "correctIndex": 3,
+              "explanation": "A posição não elimina a relação entre sujeito e verbo."
+            },
+            {
+              "id": "bb2026-p09-q03",
+              "prompt": "O tratamento “Vossa Senhoria” exige verbo na:",
+              "options": [
+                "Terceira pessoa",
+                "Primeira pessoa necessariamente",
+                "Segunda pessoa obrigatoriamente",
+                "Forma infinitiva sempre"
+              ],
+              "correctIndex": 0,
+              "explanation": "A concordância dos pronomes de tratamento se faz na terceira pessoa."
+            },
+            {
+              "id": "bb2026-p09-q04",
+              "prompt": "Complete: “A análise das respostas ___ pronta”.",
+              "options": [
+                "estão",
+                "está",
+                "estamos",
+                "estais"
+              ],
+              "correctIndex": 1,
+              "explanation": "O núcleo análise é singular e pede está; respostas não é o núcleo do sujeito."
+            },
+            {
+              "id": "bb2026-p09-q05",
+              "prompt": "Qual frase tem concordância adequada no caso descrito?",
+              "options": [
+                "Chegou os relatórios.",
+                "Rita e Paulo revisou.",
+                "Chegaram os relatórios.",
+                "Nós revisa o texto."
+              ],
+              "correctIndex": 2,
+              "explanation": "O sujeito posposto os relatórios é plural e concorda com chegaram."
+            },
+            {
+              "id": "bb2026-p09-q06",
+              "prompt": "“Revisamos a proposta antes da reunião.” O sujeito pode ser identificado como:",
+              "options": [
+                "A proposta",
+                "Antes da reunião",
+                "O verbo como objeto",
+                "Nós, elíptico pela flexão"
+              ],
+              "correctIndex": 3,
+              "explanation": "A primeira pessoa plural permite recuperar nós; proposta é o objeto da revisão."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p09-q01",
+                "bb2026-p09-q02",
+                "bb2026-p09-q03"
+              ],
+              "sourceUrls": [
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p09-q04",
+                "bb2026-p09-q05",
+                "bb2026-p09-q06"
+              ],
+              "sourceUrls": [
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p10",
+          "researchId": "P10",
+          "title": "Concordância verbal especial",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir impessoalidade, passiva e indeterminação · Reconhecer casos com variantes normativas",
+          "objectives": [
+            "Distinguir impessoalidade, passiva e indeterminação",
+            "Reconhecer casos com variantes normativas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Não force um sujeito em oração impessoal",
+              "text": "Haver no sentido de existir e fazer indicando tempo decorrido são impessoais no padrão formal: “Havia vagas” e “Faz três meses”. Em locução, o auxiliar permanece singular nessa relação: “Pode haver vagas”. Já existir tem sujeito: “Existiam vagas”. O plural do nome depois de haver não o torna sujeito. O emprego de se depende da regência: “Vendem-se livros” pode ser voz passiva sintética, com livros como sujeito; “Precisa-se de revisores” tem sujeito indeterminado, e o verbo fica na terceira pessoa singular."
+            },
+            {
+              "type": "list",
+              "title": "Variantes precisam de contexto",
+              "items": [
+                "“A maioria dos alunos chegou” e “A maioria dos alunos chegaram” podem ser admitidas na concordância partitiva, conforme o núcleo ou o complemento plural.",
+                "Sujeito composto posposto pode admitir concordância com o núcleo próximo ou plural em contextos pertinentes; não generalizar a regra do anteposto.",
+                "O verbo de oração relativa deve ser analisado em sua própria estrutura e em relação ao antecedente.",
+                "Não marcar como erro uma opção aceita só porque outra formulação é preferida por um manual de estilo."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Compare “Havia três monitores”, “Existiam três monitores” e “Precisava-se de três monitores”.",
+              "steps": [
+                "Haver existencial é impessoal e fica singular.",
+                "Existir concorda com o sujeito três monitores.",
+                "Precisar de + se indeterminador fica singular."
+              ],
+              "answer": "As três formas apresentadas são adequadas nesses usos.",
+              "check": "Não basta ver o mesmo grupo plural: função e regência diferem entre as construções."
+            }
+          ],
+          "pitfalls": [
+            "Flexionar haver existencial por proximidade.",
+            "Tratar todos os usos de se como voz passiva."
+          ],
+          "recap": [
+            "Haver existencial e fazer temporal são impessoais.",
+            "Existir concorda com seu sujeito.",
+            "Regência e contexto orientam se e variantes."
+          ],
+          "retrieval": [
+            "Por que pode haver vagas fica no singular?",
+            "Qual a diferença entre vendem-se e precisa-se de?"
+          ],
+          "notes": "Concordância verbal especial\nHaver existencial e fazer temporal são impessoais.\nExistir concorda com seu sujeito.\nRegência e contexto orientam se e variantes.\nFlexionar haver existencial por proximidade.\nTratar todos os usos de se como voz passiva.",
+          "suggestions": [
+            "Compare haver e existir em frases novas.",
+            "Analise se apassivador e indeterminador.",
+            "Explique uma variante de concordância partitiva."
+          ],
+          "sources": [
+            {
+              "title": "Senado — concordância verbal",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p10-q01",
+              "prompt": "Haver no sentido de existir deve ser tratado, no padrão formal, como:",
+              "options": [
+                "Sujeito plural sempre",
+                "Verbo impessoal",
+                "Verbo que concorda com qualquer nome próximo",
+                "Pronome de tratamento"
+              ],
+              "correctIndex": 1,
+              "explanation": "Nesse sentido não há sujeito, e o verbo fica na terceira pessoa singular."
+            },
+            {
+              "id": "bb2026-p10-q02",
+              "prompt": "Na locução “Pode haver vagas”, o auxiliar está singular porque:",
+              "options": [
+                "Vagas é singular",
+                "Toda locução fica singular",
+                "Haver é impessoal nesse uso",
+                "Pode é um substantivo"
+              ],
+              "correctIndex": 2,
+              "explanation": "A impessoalidade alcança o auxiliar nessa locução; o plural vagas não funciona como sujeito."
+            },
+            {
+              "id": "bb2026-p10-q03",
+              "prompt": "Quanto a “A maioria dos alunos chegou/chegaram”, é adequado afirmar:",
+              "options": [
+                "Só singular é sempre possível",
+                "Só plural é sempre possível",
+                "Nenhuma forma é admitida",
+                "Há concordância partitiva com variantes possíveis"
+              ],
+              "correctIndex": 3,
+              "explanation": "Pode-se concordar com maioria ou com o complemento plural, conforme o contexto."
+            },
+            {
+              "id": "bb2026-p10-q04",
+              "prompt": "Complete no padrão formal: “___ quatro anos que a oficina começou”, com fazer temporal.",
+              "options": [
+                "Faz",
+                "Fazem",
+                "Fizeram",
+                "Faziam-se"
+              ],
+              "correctIndex": 0,
+              "explanation": "Fazer indicando tempo decorrido é impessoal e permanece singular."
+            },
+            {
+              "id": "bb2026-p10-q05",
+              "prompt": "Qual frase usa existir com concordância adequada?",
+              "options": [
+                "Existia muitas dúvidas.",
+                "Existiam muitas dúvidas.",
+                "Existem muita dúvida.",
+                "Existimos muitas dúvidas."
+              ],
+              "correctIndex": 1,
+              "explanation": "Muitas dúvidas é sujeito plural de existir e pede existiam no tempo indicado."
+            },
+            {
+              "id": "bb2026-p10-q06",
+              "prompt": "No padrão formal, qual par é adequado?",
+              "options": [
+                "Vende-se livros / Precisam-se de revisores",
+                "Vendem-se livros / Precisam-se de revisores",
+                "Vendem-se livros / Precisa-se de revisores",
+                "Vende-se livros / Precisa-se de revisores"
+              ],
+              "correctIndex": 2,
+              "explanation": "Na passiva, livros é sujeito plural; em precisar de + se, o sujeito é indeterminado e o verbo é singular."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p10-q01",
+                "bb2026-p10-q02",
+                "bb2026-p10-q03"
+              ],
+              "sourceUrls": [
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p10-q04",
+                "bb2026-p10-q05",
+                "bb2026-p10-q06"
+              ],
+              "sourceUrls": [
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/concordancia-verbal",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p11",
+          "researchId": "P11",
+          "title": "Regência nominal e verbal",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar sentido e complemento exigido · Revisar preposições sem confundir regência e concordância",
+          "objectives": [
+            "Relacionar sentido e complemento exigido",
+            "Revisar preposições sem confundir regência e concordância"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Quem exige o complemento?",
+              "text": "Regência descreve a relação de um verbo ou nome com seu complemento e as preposições pertinentes. Concordância trata de flexão: são perguntas diferentes. O sentido pode alterar regência: aspirar, no sentido de respirar, liga-se diretamente ao objeto; no sentido de desejar, pede a no padrão examinado. Assistir, no sentido de ver, rege a na construção tradicional formal. Obedecer pede a; simpatizar pede com. Nomes também estabelecem relações: acesso a, necessidade de e compatível com. Não corrigir sem identificar sentido, registro e construção."
+            },
+            {
+              "type": "list",
+              "title": "Estruturas que esclarecem",
+              "items": [
+                "“Entregou o aviso aos alunos”: entidade entregue como objeto direto, destinatário introduzido por a.",
+                "“Informou o prazo aos alunos” e “Informou os alunos sobre o prazo” são construções diferentes com organização dos complementos.",
+                "“Prefiro a leitura à televisão” usa preferir uma coisa a outra, preservando paralelismo.",
+                "Regência pode participar da crase quando a preposição a encontra artigo ou demonstrativo; não basta a palavra seguinte ser feminina."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Compare “A técnica aspirou o ar” e “A técnica aspirou ao cargo”.",
+              "steps": [
+                "No primeiro, aspirar significa respirar e recebe objeto direto.",
+                "No segundo, significa desejar e pede preposição a; a+o forma ao."
+              ],
+              "answer": "Os complementos diferem pelo sentido do verbo.",
+              "check": "A classificação não depende de gênero apenas; mudar o sentido muda a relação exigida."
+            }
+          ],
+          "pitfalls": [
+            "Chamar erro de preposição de erro de concordância.",
+            "Aplicar uma regência sem identificar o sentido do verbo."
+          ],
+          "recap": [
+            "Regência é relação de complemento, não flexão.",
+            "Sentido e nome/verbo regente importam.",
+            "Preposição exigida pode combinar-se com artigo."
+          ],
+          "retrieval": [
+            "Como mudar de aspirar o ar para aspirar ao cargo?",
+            "Por que feminino sozinho não prova crase?"
+          ],
+          "notes": "Regência nominal e verbal\nRegência é relação de complemento, não flexão.\nSentido e nome/verbo regente importam.\nPreposição exigida pode combinar-se com artigo.\nChamar erro de preposição de erro de concordância.\nAplicar uma regência sem identificar o sentido do verbo.",
+          "suggestions": [
+            "Explique a regência de um verbo no contexto.",
+            "Compare regência nominal e verbal.",
+            "Revise preposições numa frase minha."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            },
+            {
+              "title": "Senado — regência",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p11-q01",
+              "prompt": "Regência e concordância diferem porque:",
+              "options": [
+                "Uma só usa verbos estrangeiros",
+                "Ambas significam apenas flexão",
+                "Ambas são apenas pontuação",
+                "Regência trata de complemento; concordância, de flexão"
+              ],
+              "correctIndex": 3,
+              "explanation": "A análise separa a relação exigida pelo termo e os ajustes de pessoa, gênero ou número."
+            },
+            {
+              "id": "bb2026-p11-q02",
+              "prompt": "No padrão formal tradicional, assistir no sentido de ver pede:",
+              "options": [
+                "Preposição a",
+                "Preposição por obrigatoriamente",
+                "Preposição sem",
+                "Ausência obrigatória de complemento"
+              ],
+              "correctIndex": 0,
+              "explanation": "A construção examinada é assistir a um evento; outros sentidos exigem análise distinta."
+            },
+            {
+              "id": "bb2026-p11-q03",
+              "prompt": "Qual relação nominal está adequada?",
+              "options": [
+                "Compatível de",
+                "Compatível com",
+                "Necessidade com, obrigatoriamente",
+                "Acesso de, no sentido de acessar algo"
+              ],
+              "correctIndex": 1,
+              "explanation": "Compatível rege com nesse uso; os outros pares trocam relações usuais do sentido indicado."
+            },
+            {
+              "id": "bb2026-p11-q04",
+              "prompt": "Complete no sentido de desejar: “A candidata aspirou ___ cargo”.",
+              "options": [
+                "o",
+                "pelo, obrigatoriamente",
+                "ao",
+                "com o"
+              ],
+              "correctIndex": 2,
+              "explanation": "Aspirar a + o cargo forma ao no sentido de ambicionar."
+            },
+            {
+              "id": "bb2026-p11-q05",
+              "prompt": "Em “A equipe informou o prazo aos alunos”, o destinatário é expresso por:",
+              "options": [
+                "O prazo",
+                "A equipe",
+                "Informou",
+                "Aos alunos"
+              ],
+              "correctIndex": 3,
+              "explanation": "Informar algo a alguém organiza prazo como informação e alunos como destinatário."
+            },
+            {
+              "id": "bb2026-p11-q06",
+              "prompt": "Qual construção emprega preferir uma coisa a outra no padrão examinado?",
+              "options": [
+                "Prefiro a leitura à televisão.",
+                "Prefiro mais a leitura do que à televisão.",
+                "Prefiro a leitura com a televisão, no sentido de comparação.",
+                "Prefiro da leitura na televisão."
+              ],
+              "correctIndex": 0,
+              "explanation": "O par mantém objetos comparados e preposição a na segunda relação; a+ a televisão resulta em à."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p11-q01",
+                "bb2026-p11-q02",
+                "bb2026-p11-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia"
+              ]
+            },
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p11-q04",
+                "bb2026-p11-q05",
+                "bb2026-p11-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p12",
+          "researchId": "P12",
+          "title": "Crase",
+          "level": "Fundamentos e aplicação",
+          "summary": "Verificar preposição e artigo/demonstrativo · Aplicar acento grave com condições e variantes",
+          "objectives": [
+            "Verificar preposição e artigo/demonstrativo",
+            "Aplicar acento grave com condições e variantes"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Procure os dois componentes",
+              "text": "Crase é fusão indicada pelo acento grave, frequentemente entre preposição a e artigo a/as ou o início de aquele/aquela/aquilo. Primeiro localize a regência; depois verifique o termo seguinte. Em “referiu-se à proposta”, referir-se pede a e proposta admite artigo. A substituição por termo masculino equivalente, “referiu-se ao plano”, pode ajudar a conferir a combinação. Não é teste automático para qualquer expressão. Diante de infinitivo, não se usa artigo feminino: “a partir”, “a estudar”. Expressão com nome masculino explícito, como “a prazo”, não recebe acento por esse mecanismo."
+            },
+            {
+              "type": "list",
+              "title": "Contexto e possibilidades",
+              "items": [
+                "“O evento começa às nove horas” marca horário definido; “referiu-se àquela proposta” contrai a com aquela.",
+                "Nomes de lugar e nomes próprios devem ser examinados pelo artigo no contexto; um modificador pode mudar a construção.",
+                "Diante de possessivo feminino em condições pertinentes, artigo pode ser facultativo: “entregou a/à sua professora”. Não criar questão que chama uma das duas formas de erro obrigatório.",
+                "Locuções femininas têm usos consagrados do grave, como “à noite”; há casos explicados também pela clareza e convenção, não só pela troca masculina."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Complete “A revisora fez referência ___ proposta e começou ___ analisar o texto”.",
+              "steps": [
+                "Referência pede a; proposta tem artigo a: à proposta.",
+                "Analisar é infinitivo, sem artigo feminino: a analisar."
+              ],
+              "answer": "“... fez referência à proposta e começou a analisar o texto.”",
+              "check": "A presença do substantivo feminino explica a primeira fusão; o infinitivo impede repetir o mesmo mecanismo na segunda."
+            }
+          ],
+          "pitfalls": [
+            "Colocar grave antes de toda palavra feminina.",
+            "Desconsiderar casos facultativos e contexto de artigo."
+          ],
+          "recap": [
+            "Regência e artigo/demonstrativo devem ser conferidos.",
+            "Infinitivo não recebe crase nesse padrão.",
+            "Contexto e convenção delimitam casos especiais."
+          ],
+          "retrieval": [
+            "Por que a partir não recebe grave?",
+            "Como àquela pode ocorrer mesmo com demonstrativo?"
+          ],
+          "notes": "Crase\nRegência e artigo/demonstrativo devem ser conferidos.\nInfinitivo não recebe crase nesse padrão.\nContexto e convenção delimitam casos especiais.\nColocar grave antes de toda palavra feminina.\nDesconsiderar casos facultativos e contexto de artigo.",
+          "suggestions": [
+            "Verifique os componentes de uma crase.",
+            "Compare casos obrigatórios e facultativos.",
+            "Revise uma frase sem usar só o teste masculino."
+          ],
+          "sources": [
+            {
+              "title": "Senado — crase",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/crase"
+            },
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p12-q01",
+              "prompt": "Para o caso “referiu-se à proposta”, deve-se verificar:",
+              "options": [
+                "Só a palavra ser longa",
+                "Somente a pronúncia",
+                "Preposição exigida e artigo feminino",
+                "A existência de plural no verbo"
+              ],
+              "correctIndex": 2,
+              "explanation": "A fusão resulta de a exigido por referir-se e a que acompanha proposta."
+            },
+            {
+              "id": "bb2026-p12-q02",
+              "prompt": "Por que “a estudar” não recebe grave nesse uso?",
+              "options": [
+                "Porque estudar está no presente",
+                "Porque o sujeito é masculino",
+                "Porque todo a é artigo",
+                "Porque infinitivo não admite o artigo feminino necessário à fusão"
+              ],
+              "correctIndex": 3,
+              "explanation": "A construção traz preposição antes de verbo, sem artigo a."
+            },
+            {
+              "id": "bb2026-p12-q03",
+              "prompt": "Antes de possessivo feminino em contexto que admite artigo facultativo, o grave:",
+              "options": [
+                "Pode ser facultativo",
+                "É sempre proibido",
+                "É obrigatório em toda frase",
+                "Depende apenas do número de letras"
+              ],
+              "correctIndex": 0,
+              "explanation": "A variação do artigo pode permitir as duas formas; a regência precisa continuar sendo observada."
+            },
+            {
+              "id": "bb2026-p12-q04",
+              "prompt": "Complete: “A aula começa ___ nove horas”.",
+              "options": [
+                "a",
+                "às",
+                "as",
+                "à"
+              ],
+              "correctIndex": 1,
+              "explanation": "O horário definido no plural exige às nesse contexto; à não concorda com horas."
+            },
+            {
+              "id": "bb2026-p12-q05",
+              "prompt": "Na norma formal, qual forma completa “A professora referiu-se ___ atividade”, usando o demonstrativo aquela?",
+              "options": [
+                "a aquela",
+                "aquela",
+                "àquela",
+                "háquela"
+              ],
+              "correctIndex": 2,
+              "explanation": "Referir-se exige a; o encontro com aquela resulta em àquela."
+            },
+            {
+              "id": "bb2026-p12-q06",
+              "prompt": "Complete: “Fez referência ___ proposta e passou ___ revisar”.",
+              "options": [
+                "a / à",
+                "à / à",
+                "a / há",
+                "à / a"
+              ],
+              "correctIndex": 3,
+              "explanation": "Referência a + a proposta contrai; revisar é infinitivo e não admite o artigo feminino."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p12-q01",
+                "bb2026-p12-q02",
+                "bb2026-p12-q03"
+              ],
+              "sourceUrls": [
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/crase",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p12-q04",
+                "bb2026-p12-q05",
+                "bb2026-p12-q06"
+              ],
+              "sourceUrls": [
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/crase",
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-p13",
+          "researchId": "P13",
+          "title": "Colocação pronominal",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar próclise, ênclise e mesóclise · Aplicar a norma formal observando atração e variantes",
+          "objectives": [
+            "Identificar próclise, ênclise e mesóclise",
+            "Aplicar a norma formal observando atração e variantes"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Posição é uma relação na frase",
+              "text": "Próclise põe pronome átono antes do verbo; ênclise, depois; mesóclise, no interior de formas de futuro em construções formais apropriadas. No padrão formal de concurso, palavras negativas e certos relativos, interrogativos e subordinadores atraem pronome, sem pausa que rompa a relação: “Não me avisaram”, “Quando se reuniram”. Em início de oração independente, a ênclise é a solução tradicional: “Informaram-me a mudança”. Isso não equivale a dizer que usos coloquiais brasileiros não existem; a questão deve explicitar o registro examinado."
+            },
+            {
+              "type": "list",
+              "title": "Atração, futuro e infinitivo",
+              "items": [
+                "Com futuro sem elemento de atração, a mesóclise pode aparecer na escrita formal: “Entregar-lhe-ei o aviso”.",
+                "Uma palavra negativa antes do futuro favorece a próclise exigida no padrão: “Não lhe entregarei o aviso”.",
+                "Construções com infinitivo podem admitir variantes, como “para me ajudar” e “para ajudar-me”, no contexto indicado.",
+                "Locuções verbais e formas nominais exigem análise própria. Particípio não recebe pronome posposto como se fosse forma pessoal independente.",
+                "Identifique primeiro a referência e a função do pronome, evitando trocar posição e sentido do complemento."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Corrija, na norma formal: “Não avisaram-me do prazo”.",
+              "steps": [
+                "Localize “não” antes do verbo, sem pausa que separe sua relação.",
+                "Coloque me antes de avisaram."
+              ],
+              "answer": "“Não me avisaram do prazo.”",
+              "check": "A ênclise inadequada nesse contexto cede à atração da palavra negativa; não se aplica a mesma regra a todo início de frase."
+            }
+          ],
+          "pitfalls": [
+            "Proibir toda próclise por preferência estilística.",
+            "Aplicar mesóclise após palavra negativa que atrai pronome."
+          ],
+          "recap": [
+            "Contexto e registro determinam a análise.",
+            "Elementos de atração orientam a próclise.",
+            "Futuro e infinitivo podem ter construções próprias e variantes."
+          ],
+          "retrieval": [
+            "Como se posiciona o pronome após não no padrão formal?",
+            "Por que infinitivo precisa de análise específica?"
+          ],
+          "notes": "Colocação pronominal\nContexto e registro determinam a análise.\nElementos de atração orientam a próclise.\nFuturo e infinitivo podem ter construções próprias e variantes.\nProibir toda próclise por preferência estilística.\nAplicar mesóclise após palavra negativa que atrai pronome.",
+          "suggestions": [
+            "Revise colocação pronominal na norma formal.",
+            "Compare próclise, ênclise e mesóclise.",
+            "Explique uma variante válida no infinitivo."
+          ],
+          "sources": [
+            {
+              "title": "USP — ensino de gramática",
+              "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
+            },
+            {
+              "title": "Senado — colocação pronominal",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/colocacao-pronominal"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-portugues-video-1",
+            "bb2026-portugues-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-p13-q01",
+              "prompt": "Pronome antes do verbo caracteriza:",
+              "options": [
+                "Próclise",
+                "Ênclise",
+                "Mesóclise",
+                "Vocativo"
+              ],
+              "correctIndex": 0,
+              "explanation": "A posição anterior é próclise; os demais nomes descrevem outras relações."
+            },
+            {
+              "id": "bb2026-p13-q02",
+              "prompt": "No padrão formal, uma palavra negativa sem pausa antes do verbo geralmente:",
+              "options": [
+                "Proíbe qualquer pronome",
+                "Atrai o pronome para antes do verbo",
+                "Exige pronome após particípio",
+                "Elimina o verbo"
+              ],
+              "correctIndex": 1,
+              "explanation": "A negativa é fator de próclise nas condições indicadas."
+            },
+            {
+              "id": "bb2026-p13-q03",
+              "prompt": "No contexto “uma tarefa para me ajudar/para ajudar-me”, as formas do infinitivo:",
+              "options": [
+                "São ambas proibidas",
+                "Só a primeira é sempre aceita",
+                "Podem constituir variantes válidas",
+                "Exigem mesóclise obrigatória"
+              ],
+              "correctIndex": 2,
+              "explanation": "Essas construções admitem variação; uma preferência não torna a outra automaticamente incorreta."
+            },
+            {
+              "id": "bb2026-p13-q04",
+              "prompt": "Qual forma atende à norma formal no contexto negativo?",
+              "options": [
+                "Não avisaram-me.",
+                "Não avisar-me-ão, com atração mantida.",
+                "Não avisaram me, sem ligação.",
+                "Não me avisaram."
+              ],
+              "correctIndex": 3,
+              "explanation": "A negativa atrai me para antes da forma verbal nesse enunciado."
+            },
+            {
+              "id": "bb2026-p13-q05",
+              "prompt": "Em início de oração independente, qual forma segue a colocação tradicional formal?",
+              "options": [
+                "Informaram-me a mudança.",
+                "Me informaram a mudança.",
+                "Informaram me a mudança.",
+                "Informaram-me-ei a mudança."
+              ],
+              "correctIndex": 0,
+              "explanation": "A ênclise com hífen é a solução formal tradicional indicada; não se confunde com usos coloquiais."
+            },
+            {
+              "id": "bb2026-p13-q06",
+              "prompt": "Com futuro e palavra negativa antes, qual forma é adequada no padrão examinado?",
+              "options": [
+                "Não entregar-lhe-ei o aviso.",
+                "Não lhe entregarei o aviso.",
+                "Não entregarei-lhe o aviso.",
+                "Não entregarei lhe o aviso."
+              ],
+              "correctIndex": 1,
+              "explanation": "A atração por não pede próclise; a mesóclise não se aplica ao contexto negativo indicado."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p13-q01",
+                "bb2026-p13-q02",
+                "bb2026-p13-q03"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/colocacao-pronominal"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-p13-q04",
+                "bb2026-p13-q05",
+                "bb2026-p13-q06"
+              ],
+              "sourceUrls": [
+                "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/colocacao-pronominal"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "matematica",
