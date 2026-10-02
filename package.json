@@ -25,7 +25,8 @@
     "preview": "node tools/preview.mjs",
     "openapi": "npm run build && node tools/openapi.mjs",
     "test:visual": "node tools/verify-web.mjs",
-    "test:study": "node tools/verify-study.mjs"
+    "test:study": "node tools/verify-study.mjs",
+    "test:contests": "node tools/verify-contests.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"

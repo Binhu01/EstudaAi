@@ -87,7 +87,7 @@ try {
         await email.click();await email.focus();
         await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
         await email.pressSequentially('student@example.com',{delay:30});
-        await expect(page.getByText(/235 caracteres restantes/)).toBeVisible();
+        await expect(page.locator('flt-semantics').getByText(/235 caracteres restantes/).last()).toBeVisible();
         await password.click();await password.focus();
         await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
         await password.pressSequentially('test-password',{delay:30});

@@ -6,6 +6,8 @@ Plataforma de aprendizagem adaptativa com metas de estudo independentes, em proj
 
 **Experiência de estudo implementada.** O cliente Flutter oferece hero educacional com fotografia e shader, três assuntos, seis videoaulas incorporadas, desafios individuais de cinco questões em estilo 8 bits e Steve, tutor com IA pelo backend. Tema e movimento são configuráveis. Aulas e quiz abrem sem conta; o chat exige acesso verificado.
 
+**Concursos implementado em branch de trabalho:** Banco do Brasil 2026 como preparação com referência histórica, nove disciplinas, 126 módulos autorais, 756 questões comentadas, seis propostas de Redação e 18 aulas externas de apoio. Material, aulas, desafios e Steve conservam o módulo selecionado. Veja [Concursos](docs/CONCURSOS.md) para cobertura, fontes, funcionamento e limites de validação.
+
 A API NestJS integra cadastro/login/recuperação Firebase, perfil interno e Steve pela API Responses, com limites por usuário e cota diária persistida no PostgreSQL. A integração Prisma/PostgreSQL foi verificada em banco isolado real. Credenciais Firebase/OpenAI ainda precisam ser fornecidas ao ambiente para validar login e respostas reais; o produto não usa uma conta ou IA simulada.
 
 Docker/Compose e CI foram preparados, mas Docker não está disponível nesta máquina e o workflow não foi executado remotamente. Nenhum deploy ou publicação foi feito. Os diretórios de plataforma gerados pelo SDK não representam builds Android, iOS ou Windows homologados. Veja [Validação](docs/VALIDACAO.md) para comandos realmente executados e pendências.
@@ -62,6 +64,7 @@ O backend determina identidade e benefícios. A UI não concede Premium nem auto
 
 - [Instalação](docs/INSTALACAO.md): versões, comandos, configuração e execução local.
 - [Experiência de estudo](docs/EXPERIENCIA-ESTUDO.md): assuntos, quiz, aulas e funcionamento do Steve.
+- [Concursos](docs/CONCURSOS.md): preparação Banco do Brasil, conteúdo autoral, versões e fontes.
 - [Arquitetura](docs/ARQUITETURA.md) e [shader](docs/SHADER.md): fronteiras, isolamento e adaptação visual.
 - [Validação](docs/VALIDACAO.md): resultados comprovados e limitações por plataforma.
 - [Operação e deploy](docs/DEPLOY.md): migração explícita, containers, pendências e release.

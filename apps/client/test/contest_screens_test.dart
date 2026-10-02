@@ -27,8 +27,9 @@ void main() {
       findsOneWidget,
     );
     expect(find.textContaining('01/10/2026'), findsOneWidget);
-    for (final d in c.read(contestCatalogProvider).requireValue.disciplines)
+    for (final d in c.read(contestCatalogProvider).requireValue.disciplines) {
       expect(find.text(d.title), findsOneWidget);
+    }
     expect(c.read(learningProvider).area, LearningArea.contest);
     await tester.ensureVisible(find.text('Matemática Financeira'));
     await tester.tap(find.text('Matemática Financeira'));

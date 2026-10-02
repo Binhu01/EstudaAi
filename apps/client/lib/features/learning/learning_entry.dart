@@ -1,5 +1,4 @@
 import '../contests/contest_catalog.dart';
-import '../contests/contest_models.dart';
 import 'study_catalog.dart';
 
 enum LearningArea { freeStudy, contest }

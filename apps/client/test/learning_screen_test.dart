@@ -21,7 +21,9 @@ void main() {
         .requireValue
         .findDiscipline('ingles')!
         .lessons;
-    for (final l in lessons) expect(find.text(l.title), findsOneWidget);
+    for (final l in lessons) {
+      expect(find.text(l.title), findsOneWidget);
+    }
     expect(find.byType(LessonPlayer), findsNothing);
     await tester.ensureVisible(find.text(lessons.first.title));
     await tester.tap(find.text(lessons.first.title));

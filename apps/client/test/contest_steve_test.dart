@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:estuda_ai/app/app.dart';
@@ -117,8 +116,9 @@ void main() {
       late CancelToken cancel;
       final dio = Dio()
         ..httpClientAdapter = ScriptAdapter((r) async {
-          if (r.path.endsWith('/v1/me'))
+          if (r.path.endsWith('/v1/me')) {
             return jsonResponse({'id': 'internal', 'plan': 'FREE'});
+          }
           if (r.path.endsWith('/messages')) {
             cancel = r.cancelToken!;
             started.complete();
@@ -133,8 +133,9 @@ void main() {
       c.listen(old, (_, _) {});
       final sending = c.read(old.notifier).send('Minha dúvida');
       await started.future;
-      for (final id in journey.skip(1))
+      for (final id in journey.skip(1)) {
         c.read(learningProvider.notifier).selectTopic(id);
+      }
       expect(cancel.isCancelled, isTrue);
       pending.complete(
         jsonResponse(
@@ -174,8 +175,9 @@ void main() {
         .requireValue
         .find('bb2026-r05')!
         .module;
-    for (final suggestion in module.suggestions)
+    for (final suggestion in module.suggestions) {
       expect(find.text(suggestion), findsOneWidget);
+    }
     expect(
       find.text('Qual é a diferença entre cadeia e teia alimentar?'),
       findsNothing,

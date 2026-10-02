@@ -20,8 +20,9 @@ void main() {
       c.read(routerProvider).go('/concursos/bb2026/redacao/${m.id}/material');
       await tester.pumpAndSettle();
       expect(find.byType(ContestMaterialScreen), findsOneWidget);
-      for (final objective in m.objectives)
+      for (final objective in m.objectives) {
         expect(find.text(objective), findsOneWidget);
+      }
       for (final task in m.writingTasks) {
         expect(find.text(task.prompt), findsOneWidget);
         expect(find.text(task.motivatingText), findsOneWidget);

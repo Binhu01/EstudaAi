@@ -1,5 +1,19 @@
 # Evidências da experiência de estudo
 
+## Concursos — 02/10/2026
+
+Branch `codex/concursos-bb2026`, baseada em `b9154fc`, no EstudaAi separado da AlmaPet. Catálogo integral: 126 módulos, 756 questões, seis propostas de Redação e 18 vídeos distintos. Revisão editorial do autor, vínculos históricos e 24 oráculos numéricos conferidos; comparação com oito extrações privadas sem coincidências de 12 ou mais palavras. Não se apresenta essa comparação como certificação universal.
+
+Geração Dart executada; conteúdo dos modelos versionados permaneceu igual. Formatação: 96 arquivos, zero mudanças no check; análise sem problemas. **80 testes Flutter, 66 testes API e 17 testes de ferramentas passaram**, além do verificador integral com `errors:[]`. O OpenAPI foi gerado com 129 identidades, e as cópias API/Web preservam os bytes do canônico. Build Web release sem recursos CDN concluído. `FLUTTER_WINDOWS=false` apenas no processo, sem mudar configurações globais.
+
+Navegador Chromium em 1440×1000, 360×800 e 768×1024: **27 percursos de Concursos e 135 respostas**, nove percursos livres e 45 respostas; zero erros internos. Inclui todas as disciplinas, material→aulas→quiz→Steve→conta, cinco questões distintas/700 pontos, contexto, recuperação de relação inválida e alias livre recusado. Temas claro/escuro, movimento reduzido, pausa/persistência do shader e teclado foram verificados nos três tamanhos. Reflow a 200%, fórmula/tabela, passagens longas, feedback e ações têm testes Flutter; não se confunde essa evidência com zoom do navegador.
+
+Relatórios/capturas locais ignorados pelo Git: `artifacts/concursos-bb2026/verification`, `artifacts/web-verification.json` e `artifacts/study-verification.json`. Scripts `test:visual`, `test:study` e `test:contests` reproduzem a verificação com `PREVIEW_URL`. A prévia da branch usa `http://127.0.0.1:4174/#/concursos`. Iframes/link foram conferidos; não foi observada reprodução dos 18 vídeos novos. Erros de terceiros e indisponibilidade esperada da API local são separados dos erros internos.
+
+Firebase/OpenAI reais seguem sem configuração demonstrada. Testes de transporte controlado não equivalem a login ou respostas reais. SQL e quotas não mudaram; PostgreSQL real não foi repetido nesta entrega. Docker, CI remota, builds nativos e deploy não foram executados. Revisão independente final pendente na versão candidata.
+
+## Registro histórico — 01/10/2026
+
 Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.47.5/Dart 3.13.4. Trabalho isolado em `codex/experiencia-estudo`, baseado na fundação `967b6a6`, no EstudaAi separado da AlmaPet. Integração local por fast-forward em `codex/estuda-ai-foundation`; geração dos modelos, formatação, análise, 35 testes API, 58 testes Flutter e build Web foram repetidos no checkout integrado. Nenhum push ou publicação.
 
 | Verificação executada | Resultado |

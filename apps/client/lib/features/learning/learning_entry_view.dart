@@ -39,10 +39,11 @@ class LearningEntryView extends ConsumerWidget {
             ),
           ),
           data: (entry) {
-            if (entry == null || entry.area != area)
+            if (entry == null || entry.area != area) {
               return area == LearningArea.contest
                   ? const ContestRecovery()
                   : const TopicNotFound();
+            }
             return TopicScope(topicId: topicId, child: builder(entry));
           },
         );
@@ -83,13 +84,14 @@ class LearningEntrySelector extends ConsumerWidget {
           DropdownMenuItem(value: e.topic.id, child: Text(e.topic.title)),
       ],
       onChanged: (id) {
-        if (id != null)
+        if (id != null) {
           context.go(
             StudyRoutes.path(
               entries.firstWhere((e) => e.topic.id == id),
               action,
             ),
           );
+        }
       },
     );
   }

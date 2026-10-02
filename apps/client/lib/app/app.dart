@@ -15,7 +15,6 @@ import '../features/settings/settings_screen.dart';
 import '../features/settings/settings_controller.dart';
 import '../design_system/gallery.dart';
 import 'shell.dart';
-import '../features/learning/learning_catalog_providers.dart';
 import '../features/learning/learning_controller.dart';
 import '../features/learning/learning_entry.dart';
 import '../features/learning/learning_entry_view.dart';

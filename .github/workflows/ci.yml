@@ -46,6 +46,8 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run db:generate
       - run: npm test
+      - run: node --test tools/test/contest-content.test.mjs tools/test/contest-editorial.test.mjs tools/test/contest-originality.test.mjs
+      - run: node tools/verify-contest-content.mjs --all
       - run: npm run test:integration -w apps/api
       - run: npm run build
 
@@ -95,6 +97,7 @@ jobs:
           curl --retry 20 --retry-connrefused --retry-delay 1 --fail http://127.0.0.1:4173/ -o /dev/null
           npm run test:visual
           npm run test:study
+          npm run test:contests
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: always()
         with:

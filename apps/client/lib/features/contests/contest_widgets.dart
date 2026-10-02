@@ -64,7 +64,7 @@ class StudySourceLinks extends ConsumerWidget {
             final opened = await ref.read(externalLinkProvider)(
               Uri.parse(source.url),
             );
-            if (!opened && context.mounted)
+            if (!opened && context.mounted) {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
                   content: Text(
@@ -72,6 +72,7 @@ class StudySourceLinks extends ConsumerWidget {
                   ),
                 ),
               );
+            }
           },
         ),
     ],

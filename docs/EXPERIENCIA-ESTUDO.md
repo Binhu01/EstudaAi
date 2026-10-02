@@ -1,5 +1,7 @@
 # Experiência de estudo
 
+A área [Concursos](CONCURSOS.md) amplia esta experiência com a preparação Banco do Brasil, mantendo seleção, material, aulas, desafio e Steve por módulo. Cada área lembra seu assunto; Conta e Preferências preservam a seleção. Os destinos livres descritos abaixo continuam disponíveis.
+
 ## Percurso
 
 Escolha Porcentagem, Interpretação de texto ou Ecologia na Home. Aprender, Desafios e Steve reutilizam esse assunto. Um endereço com assunto desconhecido mostra recuperação, sem alterar o contexto. O hero usa fotografia local creditada em [Mídia](MIDIA.md), texto animado curto e detalhe shader com controle de movimento.

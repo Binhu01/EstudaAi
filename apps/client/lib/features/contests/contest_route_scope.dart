@@ -34,8 +34,9 @@ class ContestRouteScope extends ConsumerWidget {
               (topicId != null &&
                   (disciplineId == null ||
                       location == null ||
-                      location.discipline.id != disciplineId)))
+                      location.discipline.id != disciplineId))) {
             return const ContestRecovery();
+          }
           return topicId == null
               ? LearningAreaScope(area: LearningArea.contest, child: child)
               : child;
