@@ -69,25 +69,26 @@
               "items": [
                 "Moeda, crédito e valores mobiliários: CMN, BCB e CVM, com atribuições distintas.",
                 "Seguros, capitalização e previdência aberta: CNSP e Susep.",
-                "Previdência complementar fechada: CNPC e Previc; atende grupos definidos pelos planos.",
+                "Previdência complementar fechada: CNPC e Previc; o regime da entidade fechada (EFPC) delimita os participantes. Previdência aberta (EAPC) pode ter planos individuais ou coletivos, inclusive para empregados de uma contratante.",
                 "Banco comercial capta depósitos à vista; corretora intermedeia operações de investimento. Uma cooperativa de crédito tem estrutura associativa própria."
               ]
             },
             {
               "type": "example",
               "title": "Aplicação resolvida",
-              "problem": "Uma empresa oferece plano de previdência apenas aos empregados; outra vende previdência aberta ao público. Qual supervisor corresponde a cada ramo?",
+              "problem": "O plano da empresa Aurora é administrado por uma entidade fechada de previdência complementar (EFPC). A empresa Brisa contrata para seus empregados um plano coletivo de uma entidade aberta (EAPC). Qual supervisor corresponde a cada entidade?",
               "steps": [
-                "Classifique o acesso ao plano: grupo fechado ou oferta aberta.",
-                "Associe previdência fechada à Previc e aberta à Susep."
+                "Identifique a natureza da administradora: EFPC em Aurora, EAPC em Brisa.",
+                "Associe EFPC à Previc e EAPC à Susep. O acesso por empregados, sozinho, não define o segmento."
               ],
-              "answer": "Previc no primeiro caso; Susep no segundo.",
-              "check": "Trocar os supervisores ignoraria a diferença entre os públicos e os regimes dos planos."
+              "answer": "Previc no caso Aurora; Susep no caso Brisa.",
+              "check": "A contratação coletiva também existe no segmento aberto; o vínculo de trabalho dos participantes não basta para inferir que a entidade seja fechada."
             }
           ],
           "pitfalls": [
             "Confundir CMN com um banco que atende clientes.",
-            "Atribuir toda fiscalização financeira a um único órgão."
+            "Atribuir toda fiscalização financeira a um único órgão.",
+            "Classificar previdência como fechada apenas porque a contratação reúne empregados."
           ],
           "recap": [
             "Localize atividade e ramo antes de escolher a entidade.",
@@ -98,7 +99,7 @@
             "Como distinguir CNSP de Susep?",
             "Por que uma corretora não define política monetária?"
           ],
-          "notes": "Estrutura e participantes do SFN\nDistinguir direção normativa, supervisão e operação\nIdentificar o ramo competente em um caso\nO SFN conecta quem dispõe de recursos a quem precisa deles e organiza serviços como pagamentos, investimentos e proteção. Para entender uma instituição, pergunte que atividade ela realiza e em qual ramo atua. O CMN estabelece diretrizes para o segmento monetário e financeiro. BCB e CVM supervisionam seus campos e também editam regras dentro de suas competências. Assim, “supervisor” não significa ausência de poder regulamentar. Bancos, corretoras e outras entidades operam serviços; um banco não fixa a meta nacional de inflação.\nUma empresa oferece plano de previdência apenas aos empregados; outra vende previdência aberta ao público. Qual supervisor corresponde a cada ramo? Classifique o acesso ao plano: grupo fechado ou oferta aberta. Associe previdência fechada à Previc e aberta à Susep. Previc no primeiro caso; Susep no segundo. Conferência: Trocar os supervisores ignoraria a diferença entre os públicos e os regimes dos planos.\nLocalize atividade e ramo antes de escolher a entidade.\nNormativos traçam diretrizes; supervisores também podem regulamentar.\nOperadores prestam os serviços aos usuários.\nConfundir CMN com um banco que atende clientes.\nAtribuir toda fiscalização financeira a um único órgão.",
+          "notes": "Estrutura e participantes do SFN\nDistinguir direção normativa, supervisão e operação\nIdentificar o ramo competente em um caso\nO SFN conecta quem dispõe de recursos a quem precisa deles e organiza serviços como pagamentos, investimentos e proteção. Para entender uma instituição, pergunte que atividade ela realiza e em qual ramo atua. O CMN estabelece diretrizes para o segmento monetário e financeiro. BCB e CVM supervisionam seus campos e também editam regras dentro de suas competências. Assim, “supervisor” não significa ausência de poder regulamentar. Bancos, corretoras e outras entidades operam serviços; um banco não fixa a meta nacional de inflação.\nIdentifique a natureza da administradora: EFPC em Aurora, EAPC em Brisa.\nAssocie EFPC à Previc e EAPC à Susep. O acesso por empregados, sozinho, não define o segmento.\nLocalize atividade e ramo antes de escolher a entidade.\nNormativos traçam diretrizes; supervisores também podem regulamentar.\nOperadores prestam os serviços aos usuários.\nConfundir CMN com um banco que atende clientes.\nAtribuir toda fiscalização financeira a um único órgão.\nClassificar previdência como fechada apenas porque a contratação reúne empregados.\nMoeda, crédito e valores mobiliários: CMN, BCB e CVM, com atribuições distintas.\nSeguros, capitalização e previdência aberta: CNSP e Susep.\nPrevidência complementar fechada: CNPC e Previc; o regime da entidade fechada (EFPC) delimita os participantes. Previdência aberta (EAPC) pode ter planos individuais ou coletivos, inclusive para empregados de uma contratante.\nBanco comercial capta depósitos à vista; corretora intermedeia operações de investimento. Uma cooperativa de crédito tem estrutura associativa própria.\nO plano da empresa Aurora é administrado por uma entidade fechada de previdência complementar (EFPC). A empresa Brisa contrata para seus empregados um plano coletivo de uma entidade aberta (EAPC). Qual supervisor corresponde a cada entidade?\nA contratação coletiva também existe no segmento aberto; o vínculo de trabalho dos participantes não basta para inferir que a entidade seja fechada.",
           "suggestions": [
             "Compare CMN, BCB e CVM com um exemplo.",
             "Crie um caso de previdência aberta e fechada.",
@@ -112,6 +113,10 @@
             {
               "title": "CVM — organização do SFN",
               "url": "https://www.gov.br/investidor/pt-br/investir/como-investir/conheca-o-mercado-de-capitais/sistema-financeiro-nacional/o-sistema-financeiro-nacional"
+            },
+            {
+              "title": "LC 109 — previdência aberta e fechada, arts. 26 e 31",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp109.htm"
             }
           ],
           "updatedAt": "2026-10-02",
@@ -170,15 +175,15 @@
             },
             {
               "id": "bb2026-b01-q05",
-              "prompt": "Um fundo de pensão restrito aos empregados de uma empresa pertence ao ramo de:",
+              "prompt": "Uma empresa contratou plano coletivo de uma entidade aberta (EAPC) para seus empregados. Quem supervisiona essa entidade?",
               "options": [
-                "Previdência complementar fechada",
-                "Capitalização aberta",
-                "Câmbio manual",
-                "Seguro obrigatório"
+                "Susep",
+                "Previc, pois todo plano para empregados é fechado",
+                "CVM, pois o contrato é coletivo",
+                "O empregador substitui o supervisor"
               ],
               "correctIndex": 0,
-              "explanation": "O grupo de participantes é delimitado pelo plano; esse é o recorte da previdência fechada."
+              "explanation": "A natureza aberta da entidade determina a supervisão da Susep. Uma contratação coletiva para empregados não transforma a EAPC em entidade fechada."
             },
             {
               "id": "bb2026-b01-q06",
@@ -210,7 +215,8 @@
               ],
               "sourceUrls": [
                 "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
-                "https://www.gov.br/investidor/pt-br/investir/como-investir/conheca-o-mercado-de-capitais/sistema-financeiro-nacional/o-sistema-financeiro-nacional"
+                "https://www.gov.br/investidor/pt-br/investir/como-investir/conheca-o-mercado-de-capitais/sistema-financeiro-nacional/o-sistema-financeiro-nacional",
+                "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp109.htm"
               ]
             },
             {
@@ -228,7 +234,8 @@
               ],
               "sourceUrls": [
                 "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
-                "https://www.gov.br/investidor/pt-br/investir/como-investir/conheca-o-mercado-de-capitais/sistema-financeiro-nacional/o-sistema-financeiro-nacional"
+                "https://www.gov.br/investidor/pt-br/investir/como-investir/conheca-o-mercado-de-capitais/sistema-financeiro-nacional/o-sistema-financeiro-nacional",
+                "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp109.htm"
               ]
             }
           ]
@@ -981,10 +988,12 @@
           "researchId": "B06",
           "title": "Cartões e crédito",
           "level": "Fundamentos e aplicação",
-          "summary": "Distinguir modalidades de crédito e seu custo · Comparar propostas sem confundir parcela com custo total",
+          "summary": "Distinguir modalidades de crédito e seu custo · Comparar propostas sem confundir parcela com custo total · Classificar crédito rural pela finalidade e pelo ciclo produtivo · Distinguir crédito direto ao consumidor de empréstimo sem destinação vinculada",
           "objectives": [
             "Distinguir modalidades de crédito e seu custo",
-            "Comparar propostas sem confundir parcela com custo total"
+            "Comparar propostas sem confundir parcela com custo total",
+            "Classificar crédito rural pela finalidade e pelo ciclo produtivo",
+            "Distinguir crédito direto ao consumidor de empréstimo sem destinação vinculada"
           ],
           "prerequisites": [],
           "blocks": [
@@ -1008,6 +1017,38 @@
               ],
               "answer": "Não: falta comparar o custo efetivo e as condições completas.",
               "check": "Sem valores dos encargos, não há cálculo que prove qual oferta tem menor custo."
+            },
+            {
+              "type": "text",
+              "title": "Crédito rural: o destino muda a modalidade",
+              "text": "Crédito rural financia atividades agropecuárias conforme regras do Sistema Nacional de Crédito Rural e do Manual de Crédito Rural (MCR). Custeio atende despesas do ciclo de produção, como sementes e fertilizantes; investimento apoia bens e serviços de uso duradouro, como um sistema de irrigação. Comercialização permite organizar a venda da produção; industrialização apoia o processamento agropecuário nas condições do MCR. Não basta residir no campo: beneficiário, atividade e destinação devem se enquadrar. CMN disciplina e BCB coordena e fiscaliza. O reembolso deve considerar os períodos de receita e a capacidade de pagamento; taxa, limite e elegibilidade variam por linha e vigência."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: ciclo e equipamento",
+              "problem": "Lia precisa de recursos para sementes da próxima safra; Caio pretende instalar irrigação que será usada em várias safras. Como classificar o crédito rural de cada caso?",
+              "steps": [
+                "Sementes são consumidas no ciclo atual: finalidade de custeio.",
+                "A irrigação presta serviço em vários ciclos: finalidade de investimento."
+              ],
+              "answer": "No crédito rural, Lia busca custeio e Caio investimento, sujeitos ao enquadramento na linha.",
+              "check": "O prazo de uso distingue as finalidades; o exemplo não fixa taxa nem assegura aprovação."
+            },
+            {
+              "type": "text",
+              "title": "Crédito direto ao consumidor: compra identificada",
+              "text": "Crédito direto ao consumidor (CDC), no contexto das modalidades de crédito, financia a aquisição de um bem de consumo, como um eletrodoméstico ou veículo. A compra é a destinação identificada da operação; isso o distingue do empréstimo pessoal sem vinculação a uma compra determinada. A instituição avalia renda e condições da operação. Parcelamento não implica custo zero: compare CET, total dos fluxos, prazo e garantias. A sigla CDC também designa o Código de Defesa do Consumidor em contexto jurídico; são conceitos diferentes."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: duas destinações",
+              "problem": "No comércio, Nara solicita crédito direto ao consumidor para adquirir uma geladeira identificada na proposta. Rui pede empréstimo pessoal sem destinação vinculada. Qual critério separa os casos?",
+              "steps": [
+                "No CDC de Nara, a aquisição do bem é a finalidade do crédito.",
+                "No empréstimo de Rui, não há a compra especificada como destinação."
+              ],
+              "answer": "Crédito direto ao consumidor vincula a operação à aquisição; o empréstimo descrito não tem esse vínculo.",
+              "check": "A existência de parcelas não separa as modalidades: ambas podem ter pagamentos parcelados."
             }
           ],
           "pitfalls": [
@@ -1017,13 +1058,17 @@
           "recap": [
             "Débito e crédito têm fluxos diferentes.",
             "CET é mais amplo que taxa nominal.",
-            "Parcela e total pago não são a mesma medida."
+            "Parcela e total pago não são a mesma medida.",
+            "Crédito rural: finalidade e ciclo distinguem custeio, investimento, comercialização e industrialização.",
+            "Crédito direto ao consumidor vincula financiamento à aquisição de bem de consumo."
           ],
           "retrieval": [
             "Por que duas taxas nominais não bastam?",
-            "Qual a diferença entre empréstimo e financiamento?"
+            "Qual a diferença entre empréstimo e financiamento?",
+            "Como classificar sementes da safra e uma irrigação de uso duradouro?",
+            "Por que CDC de crédito não significa necessariamente empréstimo de livre destinação?"
           ],
-          "notes": "Cartões e crédito\nDistinguir modalidades de crédito e seu custo\nComparar propostas sem confundir parcela com custo total\nNo débito, o pagamento usa recursos disponíveis na conta nas condições do serviço. No crédito, despesas formam uma obrigação a pagar, normalmente reunida em fatura. Limite disponível não é renda nem dinheiro gratuito. Pagar integralmente a fatura no vencimento difere de financiar saldo; rotativo e parcelamento podem gerar encargos conforme regras e contrato. Empréstimo libera recursos ao tomador; financiamento costuma estar vinculado à aquisição de um bem ou finalidade definida. Consignação vincula pagamentos a desconto em folha ou benefício nas condições legais, sem tornar a dívida inexistente.\nA comparação considera o Custo Efetivo Total, que incorpora os fluxos e encargos previstos na metodologia, incluindo taxas, tarifas, tributos, seguros e outras despesas aplicáveis. Taxa nominal menor não implica CET menor. Observe também prazo, garantias e capacidade de pagamento. Uma parcela pequena pode resultar de prazo maior e custo total elevado. Casos didáticos não substituem análise de contrato, não fixam condições comerciais atuais e não orientam contratação individual.\nOferta A informa taxa nominal menor, mas inclui tarifa e seguro; B tem taxa nominal maior e não inclui esses encargos. Pode-se escolher a mais barata só pela taxa nominal? Liste todos os pagamentos de cada proposta. Compare CET e fluxos usando o mesmo valor e condições de prazo. Não: falta comparar o custo efetivo e as condições completas. Conferência: Sem valores dos encargos, não há cálculo que prove qual oferta tem menor custo.\nDébito e crédito têm fluxos diferentes.\nCET é mais amplo que taxa nominal.\nParcela e total pago não são a mesma medida.\nTratar limite do cartão como renda adicional.\nIgnorar tarifas ou prazo na comparação.",
+          "notes": "Cartões e crédito\nDistinguir modalidades de crédito e seu custo\nComparar propostas sem confundir parcela com custo total\nClassificar crédito rural pela finalidade e pelo ciclo produtivo\nDistinguir crédito direto ao consumidor de empréstimo sem destinação vinculada\nNo débito, o pagamento usa recursos disponíveis na conta nas condições do serviço. No crédito, despesas formam uma obrigação a pagar, normalmente reunida em fatura. Limite disponível não é renda nem dinheiro gratuito. Pagar integralmente a fatura no vencimento difere de financiar saldo; rotativo e parcelamento podem gerar encargos conforme regras e contrato. Empréstimo libera recursos ao tomador; financiamento costuma estar vinculado à aquisição de um bem ou finalidade definida. Consignação vincula pagamentos a desconto em folha ou benefício nas condições legais, sem tornar a dívida inexistente.\nA comparação considera o Custo Efetivo Total, que incorpora os fluxos e encargos previstos na metodologia, incluindo taxas, tarifas, tributos, seguros e outras despesas aplicáveis. Taxa nominal menor não implica CET menor. Observe também prazo, garantias e capacidade de pagamento. Uma parcela pequena pode resultar de prazo maior e custo total elevado. Casos didáticos não substituem análise de contrato, não fixam condições comerciais atuais e não orientam contratação individual.\nCrédito rural financia atividades agropecuárias conforme regras do Sistema Nacional de Crédito Rural e do Manual de Crédito Rural (MCR). Custeio atende despesas do ciclo de produção, como sementes e fertilizantes; investimento apoia bens e serviços de uso duradouro, como um sistema de irrigação. Comercialização permite organizar a venda da produção; industrialização apoia o processamento agropecuário nas condições do MCR. Não basta residir no campo: beneficiário, atividade e destinação devem se enquadrar. CMN disciplina e BCB coordena e fiscaliza. O reembolso deve considerar os períodos de receita e a capacidade de pagamento; taxa, limite e elegibilidade variam por linha e vigência.\nCrédito direto ao consumidor (CDC), no contexto das modalidades de crédito, financia a aquisição de um bem de consumo, como um eletrodoméstico ou veículo. A compra é a destinação identificada da operação; isso o distingue do empréstimo pessoal sem vinculação a uma compra determinada. A instituição avalia renda e condições da operação. Parcelamento não implica custo zero: compare CET, total dos fluxos, prazo e garantias. A sigla CDC também designa o Código de Defesa do Consumidor em contexto jurídico; são conceitos diferentes.\nListe todos os pagamentos de cada proposta.\nCompare CET e fluxos usando o mesmo valor e condições de prazo.\nSementes são consumidas no ciclo atual: finalidade de custeio.\nA irrigação presta serviço em vários ciclos: finalidade de investimento.\nNo CDC de Nara, a aquisição do bem é a finalidade do crédito.\nNo empréstimo de Rui, não há a compra especificada como destinação.\nDébito e crédito têm fluxos diferentes.\nCET é mais amplo que taxa nominal.\nParcela e total pago não são a mesma medida.\nCrédito rural: finalidade e ciclo distinguem custeio, investimento, comercialização e industrialização.\nCrédito direto ao consumidor vincula financiamento à aquisição de bem de consumo.\nTratar limite do cartão como renda adicional.\nIgnorar tarifas ou prazo na comparação.",
           "suggestions": [
             "Compare CET e taxa nominal num caso fictício.",
             "Explique débito, crédito e fatura.",
@@ -1037,6 +1082,14 @@
             {
               "title": "BCB — cidadania financeira",
               "url": "https://www.bcb.gov.br/cidadaniafinanceira"
+            },
+            {
+              "title": "BCB — crédito rural e modalidades",
+              "url": "https://www.bcb.gov.br/meubc/faqs/s/credito-rural"
+            },
+            {
+              "title": "BCB — empréstimo, financiamento e CDC",
+              "url": "https://www.bcb.gov.br/detalhenoticia/223/noticia"
             }
           ],
           "updatedAt": "2026-10-02",
@@ -1071,15 +1124,15 @@
             },
             {
               "id": "bb2026-b06-q03",
-              "prompt": "O financiamento diferencia-se do empréstimo pela associação usual a:",
+              "prompt": "Nara financia uma geladeira identificada na proposta por crédito direto ao consumidor (CDC). O que caracteriza essa operação?",
               "options": [
-                "Bem ou finalidade determinada",
-                "Ausência de juros sempre",
-                "Falta de vencimento",
-                "Obrigação de ser em moeda estrangeira"
+                "Destinação à aquisição do bem de consumo",
+                "Ausência obrigatória de juros",
+                "Confusão com a lei chamada CDC",
+                "Livre utilização sem vínculo com a compra"
               ],
               "correctIndex": 0,
-              "explanation": "Financiamento costuma ter finalidade vinculada. Nenhuma dessas modalidades implica gratuidade automática."
+              "explanation": "O crédito direto ao consumidor financia a compra identificada. A sigla da modalidade não se confunde com o Código de Defesa do Consumidor e não implica gratuidade."
             },
             {
               "id": "bb2026-b06-q04",
@@ -1095,27 +1148,27 @@
             },
             {
               "id": "bb2026-b06-q05",
-              "prompt": "Rafa usa o limite inteiro porque acredita que ele é renda. O erro é:",
+              "prompt": "No crédito rural, financiar sementes e fertilizantes consumidos na próxima safra corresponde a:",
               "options": [
-                "Crédito sempre dispensa pagamento",
-                "Todo limite é um investimento",
-                "Confundir capacidade contratual de compra com recursos próprios",
-                "Cartão nunca gera fatura"
+                "Investimento de uso plurianual",
+                "Comercialização da colheita pronta",
+                "Custeio do ciclo produtivo",
+                "Industrialização dos produtos colhidos"
               ],
               "correctIndex": 2,
-              "explanation": "Compras a crédito criam obrigações futuras; o limite não aumenta a renda do titular."
+              "explanation": "Crédito rural de custeio cobre insumos e despesas da produção no ciclo. Investimento sustenta bens ou serviços úteis por vários períodos."
             },
             {
               "id": "bb2026-b06-q06",
-              "prompt": "Duas ofertas só informam taxa nominal, com tarifas desconhecidas. A conclusão adequada é:",
+              "prompt": "Uma irrigação será usada por várias safras. Qual classificação é adequada para o crédito rural destinado à instalação?",
               "options": [
-                "A menor taxa é necessariamente menor CET",
-                "A maior taxa é sempre melhor",
-                "As duas são necessariamente idênticas",
-                "Ainda faltam dados para comparar o custo efetivo"
+                "Custeio apenas porque o beneficiário é produtor",
+                "Comercialização porque haverá colheita",
+                "Industrialização de qualquer alimento",
+                "Investimento, sujeito ao enquadramento no MCR"
               ],
               "correctIndex": 3,
-              "explanation": "Tarifas e outros fluxos podem alterar a comparação; não se presume o CET a partir de um dado isolado."
+              "explanation": "No crédito rural, a finalidade duradoura caracteriza investimento. O enquadramento exige requisitos do MCR; o exemplo não concede elegibilidade automática."
             }
           ],
           "writingTasks": [],
@@ -1125,35 +1178,71 @@
               "objectiveIndex": 0,
               "blockIndexes": [
                 0,
-                1
+                5
               ],
               "exampleBlockIndex": 2,
               "questionIds": [
-                "bb2026-b06-q01",
                 "bb2026-b06-q02",
                 "bb2026-b06-q03"
               ],
               "sourceUrls": [
                 "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4881&tipo=Resolu%C3%A7%C3%A3o+CMN",
-                "https://www.bcb.gov.br/cidadaniafinanceira"
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.bcb.gov.br/meubc/faqs/s/credito-rural",
+                "https://www.bcb.gov.br/detalhenoticia/223/noticia"
               ]
             },
             {
               "referenceItem": "5",
               "objectiveIndex": 1,
               "blockIndexes": [
-                0,
                 1
               ],
               "exampleBlockIndex": 2,
               "questionIds": [
-                "bb2026-b06-q04",
+                "bb2026-b06-q01",
+                "bb2026-b06-q04"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4881&tipo=Resolu%C3%A7%C3%A3o+CMN",
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.bcb.gov.br/meubc/faqs/s/credito-rural",
+                "https://www.bcb.gov.br/detalhenoticia/223/noticia"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 2,
+              "blockIndexes": [
+                3
+              ],
+              "exampleBlockIndex": 4,
+              "questionIds": [
                 "bb2026-b06-q05",
                 "bb2026-b06-q06"
               ],
               "sourceUrls": [
                 "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4881&tipo=Resolu%C3%A7%C3%A3o+CMN",
-                "https://www.bcb.gov.br/cidadaniafinanceira"
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.bcb.gov.br/meubc/faqs/s/credito-rural",
+                "https://www.bcb.gov.br/detalhenoticia/223/noticia"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 3,
+              "blockIndexes": [
+                5
+              ],
+              "exampleBlockIndex": 6,
+              "questionIds": [
+                "bb2026-b06-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4881&tipo=Resolu%C3%A7%C3%A3o+CMN",
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.bcb.gov.br/meubc/faqs/s/credito-rural",
+                "https://www.bcb.gov.br/detalhenoticia/223/noticia"
               ]
             }
           ]
@@ -2191,10 +2280,11 @@
           "researchId": "B12",
           "title": "Operações interbancárias, tesouraria e varejo",
           "level": "Fundamentos e aplicação",
-          "summary": "Separar gestão de liquidez e serviços ao cliente · Identificar fluxos e riscos entre instituições",
+          "summary": "Separar gestão de liquidez e serviços ao cliente · Identificar fluxos e riscos entre instituições · Planejar recuperação de crédito com renegociação viável e cobrança respeitosa",
           "objectives": [
             "Separar gestão de liquidez e serviços ao cliente",
-            "Identificar fluxos e riscos entre instituições"
+            "Identificar fluxos e riscos entre instituições",
+            "Planejar recuperação de crédito com renegociação viável e cobrança respeitosa"
           ],
           "prerequisites": [],
           "blocks": [
@@ -2223,6 +2313,22 @@
               ],
               "answer": "Gestão de liquidez por operação interbancária.",
               "check": "O prazo resolve o desencontro descrito; o caso não prova nem elimina risco de solvência."
+            },
+            {
+              "type": "text",
+              "title": "Recuperação de crédito: receber com viabilidade",
+              "text": "Recuperação de crédito procura recuperar valores de operações inadimplidas. Comece por verificar contrato, saldo, vencimentos e causa do atraso; depois avalie capacidade de pagamento e opções de renegociação. Alterar prazo ou conceder desconto exige condições claras e autorização pertinente: uma prestação menor pode prolongar a dívida e não comprova menor custo. Acompanhar o acordo ajuda a distinguir promessa de recebimento efetivo. Garantias e medidas judiciais têm requisitos próprios. Na cobrança ao consumidor, o CDC veda constrangimento, ameaça e exposição ao ridículo; atraso não autoriza revelar a dívida a terceiros. Recuperação não é concessão automática de novo crédito nem baixa contábil que extingue necessariamente a obrigação."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: acordo que pode ser cumprido",
+              "problem": "Na recuperação de crédito de uma dívida fictícia, a cobrança oferece seis parcelas de R$ 200. A análise documentada indica disponibilidade mensal de R$ 150. Qual providência atende ao objetivo de recuperar valores?",
+              "steps": [
+                "Compare R$ 200 com R$ 150: a oferta ultrapassa a capacidade descrita em R$ 50 por mês.",
+                "Revise as condições autorizadas e o total a pagar; negocie sem ameaça e registre o acordo."
+              ],
+              "answer": "Buscar uma proposta viável e acompanhar pagamentos, em vez de tomar uma promessa incompatível com a renda como recuperação realizada.",
+              "check": "Seis parcelas de R$ 200 somam R$ 1.200, mas esse total não demonstra que serão pagas; o caso não informa encargos para recomendar outro contrato."
             }
           ],
           "pitfalls": [
@@ -2232,13 +2338,15 @@
           "recap": [
             "Interbancário identifica contrapartes institucionais.",
             "Tesouraria coordena recursos e exposições.",
-            "Taxa de referência não é custo final de qualquer crédito."
+            "Taxa de referência não é custo final de qualquer crédito.",
+            "Recuperação compara condições, capacidade de pagamento e recebimento efetivo, respeitando limites da cobrança."
           ],
           "retrieval": [
             "Por que taxa DI não é a taxa de todo empréstimo?",
-            "Qual a distinção entre banco comercial e de investimento?"
+            "Qual a distinção entre banco comercial e de investimento?",
+            "Por que promessa de pagamento não prova recuperação do valor?"
           ],
-          "notes": "Operações interbancárias, tesouraria e varejo\nSeparar gestão de liquidez e serviços ao cliente\nIdentificar fluxos e riscos entre instituições\nOperações interbancárias transferem recursos entre instituições financeiras; ajudam a administrar posições de liquidez e financiamento. Depósitos interfinanceiros e negócios com títulos não devem ser confundidos com depósitos de varejo. A taxa DI decorre de operações interfinanceiras consideradas em sua metodologia; Selic está ligada a operações com títulos públicos federais no sistema correspondente. Proximidade entre taxas não torna suas definições idênticas. Uma taxa de referência também não é o preço final de todo empréstimo: custos, risco, capital e condições do contrato interferem.\nUm banco prevê saída de pagamentos hoje e entrada de recursos amanhã. Outro banco tem saldo disponível e empresta por um dia. Qual função a operação atende? Identifique duas instituições como contrapartes. Compare os momentos da saída e entrada, sem supor déficit patrimonial. Gestão de liquidez por operação interbancária. Conferência: O prazo resolve o desencontro descrito; o caso não prova nem elimina risco de solvência.\nInterbancário identifica contrapartes institucionais.\nTesouraria coordena recursos e exposições.\nTaxa de referência não é custo final de qualquer crédito.\nUsar DI e Selic como definições intercambiáveis.\nAfirmar que tesouraria é apenas um caixa físico.",
+          "notes": "Operações interbancárias, tesouraria e varejo\nSeparar gestão de liquidez e serviços ao cliente\nIdentificar fluxos e riscos entre instituições\nPlanejar recuperação de crédito com renegociação viável e cobrança respeitosa\nOperações interbancárias transferem recursos entre instituições financeiras; ajudam a administrar posições de liquidez e financiamento. Depósitos interfinanceiros e negócios com títulos não devem ser confundidos com depósitos de varejo. A taxa DI decorre de operações interfinanceiras consideradas em sua metodologia; Selic está ligada a operações com títulos públicos federais no sistema correspondente. Proximidade entre taxas não torna suas definições idênticas. Uma taxa de referência também não é o preço final de todo empréstimo: custos, risco, capital e condições do contrato interferem.\nRecuperação de crédito procura recuperar valores de operações inadimplidas. Comece por verificar contrato, saldo, vencimentos e causa do atraso; depois avalie capacidade de pagamento e opções de renegociação. Alterar prazo ou conceder desconto exige condições claras e autorização pertinente: uma prestação menor pode prolongar a dívida e não comprova menor custo. Acompanhar o acordo ajuda a distinguir promessa de recebimento efetivo. Garantias e medidas judiciais têm requisitos próprios. Na cobrança ao consumidor, o CDC veda constrangimento, ameaça e exposição ao ridículo; atraso não autoriza revelar a dívida a terceiros. Recuperação não é concessão automática de novo crédito nem baixa contábil que extingue necessariamente a obrigação.\nIdentifique duas instituições como contrapartes.\nCompare os momentos da saída e entrada, sem supor déficit patrimonial.\nCompare R$ 200 com R$ 150: a oferta ultrapassa a capacidade descrita em R$ 50 por mês.\nRevise as condições autorizadas e o total a pagar; negocie sem ameaça e registre o acordo.\nInterbancário identifica contrapartes institucionais.\nTesouraria coordena recursos e exposições.\nTaxa de referência não é custo final de qualquer crédito.\nRecuperação compara condições, capacidade de pagamento e recebimento efetivo, respeitando limites da cobrança.\nUsar DI e Selic como definições intercambiáveis.\nAfirmar que tesouraria é apenas um caixa físico.",
           "suggestions": [
             "Explique DI e Selic sem confundir definições.",
             "Crie um caso de gestão de liquidez de um banco.",
@@ -2252,6 +2360,10 @@
             {
               "title": "BCB — Sistema Selic",
               "url": "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic"
+            },
+            {
+              "title": "CDC — limites da cobrança, art. 42",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
             }
           ],
           "updatedAt": "2026-10-02",
@@ -2310,27 +2422,27 @@
             },
             {
               "id": "bb2026-b12-q05",
-              "prompt": "Um banco usa a Selic como referência, mas cobra custo diferente num empréstimo. Isso é necessariamente erro?",
+              "prompt": "Na recuperação de crédito, uma oferta prevê R$ 200 mensais, mas a capacidade documentada é de R$ 150. A conduta adequada é:",
               "options": [
-                "Sim, todas as taxas devem ser iguais",
-                "Não; risco, custos e condições afetam o contrato",
-                "Sim, porque referência é teto universal",
-                "Não, porque empréstimos não têm taxa"
+                "Aceitar a promessa como recebimento realizado",
+                "Reavaliar condições autorizadas e negociar uma proposta viável",
+                "Divulgar a dívida aos vizinhos",
+                "Concluir que a obrigação já se extinguiu"
               ],
               "correctIndex": 1,
-              "explanation": "A referência não substitui a formação do custo da operação individual."
+              "explanation": "Recuperação de crédito exige avaliar viabilidade e acompanhar recebimentos; a diferença de R$ 50 impede tratar a oferta como compatível com a capacidade descrita."
             },
             {
               "id": "bb2026-b12-q06",
-              "prompt": "Qual descrição identifica a característica típica de um banco comercial?",
+              "prompt": "Qual prática viola o limite da cobrança ao consumidor em uma ação de recuperação de crédito?",
               "options": [
-                "Supervisionar fundos de pensão",
-                "Fixar a meta nacional de inflação",
-                "Captar depósitos à vista e conceder crédito",
-                "Emitir normas da Susep"
+                "Conferir saldo e contrato",
+                "Registrar acordo autorizado",
+                "Expor o devedor ao ridículo e ameaçá-lo",
+                "Apresentar condições transparentes"
               ],
               "correctIndex": 2,
-              "explanation": "Captação de depósitos à vista e crédito são atividades características; supervisão e meta não são funções do banco comercial."
+              "explanation": "Recuperação de crédito não autoriza cobrança abusiva. O art. 42 do CDC protege o consumidor contra exposição ao ridículo, constrangimento e ameaça."
             }
           ],
           "writingTasks": [],
@@ -2339,72 +2451,52 @@
               "referenceItem": "12",
               "objectiveIndex": 0,
               "blockIndexes": [
-                0,
-                1
+                0
               ],
               "exampleBlockIndex": 2,
               "questionIds": [
                 "bb2026-b12-q01",
-                "bb2026-b12-q02",
-                "bb2026-b12-q03"
+                "bb2026-b12-q03",
+                "bb2026-b12-q04"
               ],
               "sourceUrls": [
                 "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
-                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic"
-              ]
-            },
-            {
-              "referenceItem": "12",
-              "objectiveIndex": 1,
-              "blockIndexes": [
-                0,
-                1
-              ],
-              "exampleBlockIndex": 2,
-              "questionIds": [
-                "bb2026-b12-q04",
-                "bb2026-b12-q05",
-                "bb2026-b12-q06"
-              ],
-              "sourceUrls": [
-                "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
-                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic"
-              ]
-            },
-            {
-              "referenceItem": "13",
-              "objectiveIndex": 0,
-              "blockIndexes": [
-                0,
-                1
-              ],
-              "exampleBlockIndex": 2,
-              "questionIds": [
-                "bb2026-b12-q01",
-                "bb2026-b12-q02",
-                "bb2026-b12-q03"
-              ],
-              "sourceUrls": [
-                "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
-                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic"
+                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
               ]
             },
             {
               "referenceItem": "13",
               "objectiveIndex": 1,
               "blockIndexes": [
-                0,
                 1
               ],
               "exampleBlockIndex": 2,
               "questionIds": [
-                "bb2026-b12-q04",
+                "bb2026-b12-q02",
+                "bb2026-b12-q04"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
+                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 2,
+              "blockIndexes": [
+                3
+              ],
+              "exampleBlockIndex": 4,
+              "questionIds": [
                 "bb2026-b12-q05",
                 "bb2026-b12-q06"
               ],
               "sourceUrls": [
                 "https://www.bcb.gov.br/estabilidadefinanceira/sfn",
-                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic"
+                "https://www.bcb.gov.br/estabilidadefinanceira/sistemaselic",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
               ]
             }
           ]
@@ -2596,10 +2688,12 @@
           "researchId": "B14",
           "title": "Garantias",
           "level": "Fundamentos e aplicação",
-          "summary": "Comparar garantias pessoais e reais · Analisar proteção do credor sem eliminar condições e riscos",
+          "summary": "Comparar garantias pessoais e reais · Analisar proteção do credor sem eliminar condições e riscos · Aplicar penhor mercantil a bens de atividade comercial · Identificar partes e limites da fiança bancária",
           "objectives": [
             "Comparar garantias pessoais e reais",
-            "Analisar proteção do credor sem eliminar condições e riscos"
+            "Analisar proteção do credor sem eliminar condições e riscos",
+            "Aplicar penhor mercantil a bens de atividade comercial",
+            "Identificar partes e limites da fiança bancária"
           ],
           "prerequisites": [],
           "blocks": [
@@ -2629,6 +2723,38 @@
               ],
               "answer": "Real na primeira, pessoal na segunda; nenhuma elimina todo risco do crédito.",
               "check": "A classificação observa o objeto da proteção. Não permite concluir que execução ou recuperação são automáticas."
+            },
+            {
+              "type": "text",
+              "title": "Penhor mercantil: bens ligados à atividade",
+              "text": "Penhor mercantil é uma garantia real sobre bens móveis ligados à atividade comercial, como mercadorias e produtos industrializados, conforme o enquadramento legal. No penhor industrial e mercantil, o instrumento é registrado no Registro de Imóveis da circunscrição em que os bens estão; estes podem continuar em poder do devedor, que deve guardá-los e conservá-los. Logo, não generalize a entrega física do penhor comum para todas as modalidades. A vinculação não transforma o credor em proprietário livre para vender sem cumprir o procedimento aplicável."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: estoque vinculado",
+              "problem": "Uma distribuidora vincula produtos industrializados de seu estoque em penhor mercantil regularmente constituído. Eles continuam sob sua guarda. Isso transforma a garantia em pessoal?",
+              "steps": [
+                "Penhor mercantil vincula bens e é garantia real.",
+                "A permanência dos bens com o devedor não altera essa classificação."
+              ],
+              "answer": "É penhor mercantil, garantia real; a distribuidora deve conservar os bens.",
+              "check": "O critério é a vinculação patrimonial prevista no regime, e não exigir entrega física em toda espécie de penhor."
+            },
+            {
+              "type": "text",
+              "title": "Fiança bancária: o banco como fiador",
+              "text": "Fiança bancária ocorre quando uma instituição financeira assume, como fiadora, a garantia de uma obrigação de seu cliente perante um terceiro beneficiário. A carta de fiança identifica obrigação, alcance, valor, prazo e condições de acionamento. É garantia pessoal: o fato de o fiador ser um banco não a torna hipoteca ou penhor. Pode haver remuneração do banco e contragarantias do cliente; não equivale a depositar o valor inteiro na conta do beneficiário. Pagamento e eventual regresso dependem do instrumento e da lei; não se presume garantia ilimitada ou execução sem requisitos."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: três participantes",
+              "problem": "A empresa Horizonte deve cumprir um contrato com a escola Farol. Um banco emite fiança bancária limitada à obrigação descrita. Quem é afiançado, fiador e beneficiário?",
+              "steps": [
+                "Horizonte é a cliente afiançada; o banco é fiador.",
+                "Farol recebe a proteção como beneficiária nos limites da carta."
+              ],
+              "answer": "Na fiança bancária: Horizonte, banco e Farol, respectivamente; garantia pessoal.",
+              "check": "A escola não recebeu necessariamente um depósito; o compromisso do banco depende do alcance e das condições da fiança."
             }
           ],
           "pitfalls": [
@@ -2638,13 +2764,16 @@
           "recap": [
             "Garantia pessoal liga pessoa; real liga bem ou direito.",
             "Aval, fiança, hipoteca e alienação fiduciária têm regras próprias.",
-            "Garantia exige validade, limites e condições de execução."
+            "Garantia exige validade, limites e condições de execução.",
+            "Penhor mercantil vincula bens comerciais; permanência com o devedor não retira o caráter real.",
+            "Fiança bancária é pessoal, com banco fiador, cliente afiançado e terceiro beneficiário."
           ],
           "retrieval": [
             "Por que garantia não dispensa análise do tomador?",
-            "Como distinguir hipoteca de alienação fiduciária?"
+            "Como distinguir hipoteca de alienação fiduciária?",
+            "Por que uma carta de fiança não equivale a depósito integral ao beneficiário?"
           ],
-          "notes": "Garantias\nComparar garantias pessoais e reais\nAnalisar proteção do credor sem eliminar condições e riscos\nGarantia pessoal acrescenta obrigação de uma pessoa ao compromisso; garantia real vincula um bem ou direito nas condições legais. Aval é garantia relacionada a título de crédito; fiança é garantia contratual pela qual o fiador responde conforme o instrumento e a lei. Seus regimes não são intercambiáveis. Hipoteca vincula bem imóvel sem exigir transferência da posse ao credor. Penhor incide tipicamente sobre bens móveis e direitos, com modalidades previstas em lei. Alienação fiduciária envolve propriedade fiduciária em garantia e regras próprias; não é uma venda comum para consumo.\nDuas propostas vinculam um imóvel e a obrigação de um fiador, respectivamente. Como classificá-las e qual conclusão evitar? O imóvel identifica uma garantia real. A obrigação do fiador identifica garantia pessoal. Real na primeira, pessoal na segunda; nenhuma elimina todo risco do crédito. Conferência: A classificação observa o objeto da proteção. Não permite concluir que execução ou recuperação são automáticas.\nGarantia pessoal liga pessoa; real liga bem ou direito.\nAval, fiança, hipoteca e alienação fiduciária têm regras próprias.\nGarantia exige validade, limites e condições de execução.\nUsar aval e fiança como nomes do mesmo regime.\nChamar crédito garantido de crédito sem risco.",
+          "notes": "Garantias\nComparar garantias pessoais e reais\nAnalisar proteção do credor sem eliminar condições e riscos\nAplicar penhor mercantil a bens de atividade comercial\nIdentificar partes e limites da fiança bancária\nGarantia pessoal acrescenta obrigação de uma pessoa ao compromisso; garantia real vincula um bem ou direito nas condições legais. Aval é garantia relacionada a título de crédito; fiança é garantia contratual pela qual o fiador responde conforme o instrumento e a lei. Seus regimes não são intercambiáveis. Hipoteca vincula bem imóvel sem exigir transferência da posse ao credor. Penhor incide tipicamente sobre bens móveis e direitos, com modalidades previstas em lei. Alienação fiduciária envolve propriedade fiduciária em garantia e regras próprias; não é uma venda comum para consumo.\nPenhor mercantil é uma garantia real sobre bens móveis ligados à atividade comercial, como mercadorias e produtos industrializados, conforme o enquadramento legal. No penhor industrial e mercantil, o instrumento é registrado no Registro de Imóveis da circunscrição em que os bens estão; estes podem continuar em poder do devedor, que deve guardá-los e conservá-los. Logo, não generalize a entrega física do penhor comum para todas as modalidades. A vinculação não transforma o credor em proprietário livre para vender sem cumprir o procedimento aplicável.\nFiança bancária ocorre quando uma instituição financeira assume, como fiadora, a garantia de uma obrigação de seu cliente perante um terceiro beneficiário. A carta de fiança identifica obrigação, alcance, valor, prazo e condições de acionamento. É garantia pessoal: o fato de o fiador ser um banco não a torna hipoteca ou penhor. Pode haver remuneração do banco e contragarantias do cliente; não equivale a depositar o valor inteiro na conta do beneficiário. Pagamento e eventual regresso dependem do instrumento e da lei; não se presume garantia ilimitada ou execução sem requisitos.\nO imóvel identifica uma garantia real.\nA obrigação do fiador identifica garantia pessoal.\nPenhor mercantil vincula bens e é garantia real.\nA permanência dos bens com o devedor não altera essa classificação.\nHorizonte é a cliente afiançada; o banco é fiador.\nFarol recebe a proteção como beneficiária nos limites da carta.\nGarantia pessoal liga pessoa; real liga bem ou direito.\nAval, fiança, hipoteca e alienação fiduciária têm regras próprias.\nGarantia exige validade, limites e condições de execução.\nPenhor mercantil vincula bens comerciais; permanência com o devedor não retira o caráter real.\nFiança bancária é pessoal, com banco fiador, cliente afiançado e terceiro beneficiário.\nUsar aval e fiança como nomes do mesmo regime.\nChamar crédito garantido de crédito sem risco.",
           "suggestions": [
             "Compare aval e fiança conceitualmente.",
             "Classifique garantias pessoais e reais.",
@@ -2716,27 +2845,27 @@
             },
             {
               "id": "bb2026-b14-q05",
-              "prompt": "Um contrato acrescenta obrigação de fiador; outro vincula bem imóvel. A ordem das classificações é:",
+              "prompt": "Produtos industrializados permanecem com o devedor sob penhor mercantil constituído nos requisitos legais. A conclusão correta é:",
               "options": [
-                "Real e pessoal",
-                "Pessoal e real",
-                "Monetária e cambial",
-                "Fiscal e orçamentária"
+                "Sem entrega física, nunca existe garantia real",
+                "O penhor mercantil continua sendo garantia real",
+                "O banco torna-se comprador definitivo do estoque",
+                "A obrigação é automaticamente extinta"
               ],
               "correctIndex": 1,
-              "explanation": "Fiador caracteriza garantia pessoal; vinculação de bem identifica proteção real."
+              "explanation": "Penhor mercantil vincula bens: é garantia real. Nesse regime, os bens podem ficar com o devedor, que deve guardá-los e conservá-los."
             },
             {
               "id": "bb2026-b14-q06",
-              "prompt": "Um bem dado em garantia perde valor. Isso pode afetar a proteção econômica?",
+              "prompt": "Uma fiança bancária protege a escola Farol contra descumprimento contratual da cliente Horizonte. Qual descrição é correta?",
               "options": [
-                "Não, garantias congelam preços",
-                "Não, patrimônio sempre cresce",
-                "Sim, cobertura e recuperação podem ser afetadas",
-                "Sim, e toda dívida fica automaticamente extinta"
+                "Farol é fiadora e o banco é afiançado",
+                "A fiança sempre substitui o contrato por depósito integral",
+                "Banco é fiador, Horizonte é afiançada e Farol é beneficiária",
+                "Toda garantia prestada por banco é real e ilimitada"
               ],
               "correctIndex": 2,
-              "explanation": "O valor disponível para recuperação pode diminuir. A perda não implica extinção automática da obrigação."
+              "explanation": "Na fiança bancária, o banco assume garantia pessoal da obrigação da cliente, perante o beneficiário e nos limites do instrumento."
             }
           ],
           "writingTasks": [],
@@ -2745,8 +2874,7 @@
               "referenceItem": "15",
               "objectiveIndex": 0,
               "blockIndexes": [
-                0,
-                1
+                0
               ],
               "exampleBlockIndex": 2,
               "questionIds": [
@@ -2763,13 +2891,40 @@
               "referenceItem": "15",
               "objectiveIndex": 1,
               "blockIndexes": [
-                0,
                 1
               ],
               "exampleBlockIndex": 2,
               "questionIds": [
-                "bb2026-b14-q04",
-                "bb2026-b14-q05",
+                "bb2026-b14-q04"
+              ],
+              "sourceUrls": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14711.htm"
+              ]
+            },
+            {
+              "referenceItem": "15",
+              "objectiveIndex": 2,
+              "blockIndexes": [
+                3
+              ],
+              "exampleBlockIndex": 4,
+              "questionIds": [
+                "bb2026-b14-q05"
+              ],
+              "sourceUrls": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14711.htm"
+              ]
+            },
+            {
+              "referenceItem": "15",
+              "objectiveIndex": 3,
+              "blockIndexes": [
+                5
+              ],
+              "exampleBlockIndex": 6,
+              "questionIds": [
                 "bb2026-b14-q06"
               ],
               "sourceUrls": [
@@ -16162,10 +16317,14 @@
           "researchId": "V12",
           "title": "Marketing digital",
           "level": "Fundamentos e aplicação",
-          "summary": "Relacionar canal, mensagem e etapa de decisão · Calcular indicadores com denominador e limites",
+          "summary": "Relacionar canal, mensagem e etapa de decisão · Calcular indicadores com denominador e limites · Planejar geração de leads e qualificação com finalidade definida · Aplicar copywriting com benefício, prova e chamada para ação · Avaliar gatilhos mentais sem promessas falsas ou pressão indevida · Organizar inbound marketing por atração e relacionamento",
           "objectives": [
             "Relacionar canal, mensagem e etapa de decisão",
-            "Calcular indicadores com denominador e limites"
+            "Calcular indicadores com denominador e limites",
+            "Planejar geração de leads e qualificação com finalidade definida",
+            "Aplicar copywriting com benefício, prova e chamada para ação",
+            "Avaliar gatilhos mentais sem promessas falsas ou pressão indevida",
+            "Organizar inbound marketing por atração e relacionamento"
           ],
           "prerequisites": [],
           "blocks": [
@@ -16184,6 +16343,70 @@
               ],
               "answer": "8% de visitas converteram em pedido completo.",
               "check": "Não se chamam 16 pedidos de 16%; número de vendas finais pode ser diferente e exige outro indicador."
+            },
+            {
+              "type": "text",
+              "title": "Geração de leads e qualificação",
+              "text": "Leads são contatos que demonstraram interesse e podem ter seus dados usados para uma finalidade comercial pertinente. Geração de leads transforma interesse em contato, por exemplo com formulário para receber um guia solicitado. Qualificar é avaliar aderência e estágio de decisão com critérios explícitos; preencher um formulário não torna alguém comprador. A nutrição oferece conteúdo relevante ao longo do relacionamento, respeitando preferências e base legal. Uma lista comprada sem origem e finalidade verificáveis não se torna boa estratégia só por ter muitos nomes."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: interesse e contratação",
+              "problem": "Uma página oferece um guia sobre orçamento. Mila solicita o guia e deixa um canal de contato para esse atendimento. Isso representa geração de leads ou prova de compra?",
+              "steps": [
+                "A solicitação registra interesse e contato: é geração de leads.",
+                "Ainda faltam qualificação, decisão e contratação para afirmar venda."
+              ],
+              "answer": "Mila pode ser um lead; não há prova de compra.",
+              "check": "A finalidade do contato continua limitada pelas condições de coleta e tratamento."
+            },
+            {
+              "type": "text",
+              "title": "Copywriting orientado a uma ação",
+              "text": "Copywriting é escrita persuasiva destinada a uma ação definida. Comece pela necessidade do público, explique um benefício verificável e sustente a afirmação com informação ou prova pertinente. Uma chamada para ação (CTA) diz o próximo passo, como comparar custos ou solicitar uma simulação. A estrutura AIDA organiza atenção, interesse, desejo e ação; ela não assegura conversão. Em serviços financeiros, persuasão não dispensa condições, riscos e custos claros: anunciar aprovação garantida sem fundamento ou ocultar encargos é inadequado."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: mensagem que informa",
+              "problem": "Uma campanha troca “aprovação garantida, clique já” por “Compare prazo e custo total; solicite uma simulação sujeita à análise”. Que diferença de copywriting aparece?",
+              "steps": [
+                "A nova mensagem propõe benefício e CTA identificáveis.",
+                "Informa a condição da análise em vez de prometer um resultado sem fundamento."
+              ],
+              "answer": "O copywriting passa a orientar uma ação informada, preservando a condição do serviço.",
+              "check": "Melhor texto não elimina a necessidade de medir resposta nem autoriza ocultar custos."
+            },
+            {
+              "type": "text",
+              "title": "Gatilhos mentais: avaliar a evidência",
+              "text": "Gatilhos mentais são recursos persuasivos associados a atalhos de decisão. Prova social apresenta experiências de outras pessoas; autoridade se apoia em competência pertinente; reciprocidade pode decorrer de ajuda recebida; escassez e urgência salientam disponibilidade e tempo. Esses recursos não funcionam como comandos automáticos. Depoimento inventado, credencial irrelevante ou prazo artificial podem induzir erro. Um número real de vagas só sustenta escassez quando é verdadeiro e aplicável à oferta; ele não prova adequação para cada cliente. Transparência e liberdade de decisão continuam necessárias."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: limite real",
+              "problem": "Uma oficina gratuita tem 20 lugares reais e informa quantos restam. Outra campanha reinicia diariamente um relógio de “última chance”. Como avaliar esses gatilhos mentais?",
+              "steps": [
+                "No primeiro caso, a escassez se apoia numa capacidade verificável.",
+                "No segundo, o prazo reiniciado enfraquece a veracidade da urgência anunciada."
+              ],
+              "answer": "Gatilhos mentais precisam de evidência; limite real não justifica urgência fabricada.",
+              "check": "Mesmo escassez verdadeira não obriga o aluno a contratar outro serviço."
+            },
+            {
+              "type": "text",
+              "title": "Inbound marketing: atrair e acompanhar",
+              "text": "Inbound marketing procura atrair pessoas por conteúdo útil e experiências relacionadas às suas necessidades, desenvolvendo relacionamento até uma decisão pertinente. Um artigo encontrado por busca pode levar a um guia, depois a conteúdos solicitados e a uma conversa de orientação. SEO ajuda a descoberta; geração de leads e qualificação conectam etapas, sem confundir visita com venda. A abordagem requer objetivos, continuidade e medidas por etapa; apenas publicar um anúncio isolado não caracteriza todo esse processo. Comunicação posterior deve respeitar as condições do contato."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação: encadear as etapas",
+              "problem": "Um projeto publica artigo sobre organização de despesas, oferece um guia solicitado e acompanha os leads com conteúdo pertinente antes de conversar sobre uma solução. O que identifica inbound marketing?",
+              "steps": [
+                "O conteúdo atrai pela necessidade do público.",
+                "A continuidade do relacionamento conecta interesse, qualificação e decisão."
+              ],
+              "answer": "Inbound marketing combina atração útil e acompanhamento; não há venda automática.",
+              "check": "Cada etapa precisa de ação e medida próprias, preservando a finalidade dos dados."
             }
           ],
           "pitfalls": [
@@ -16193,13 +16416,17 @@
           "recap": [
             "Canal e conteúdo atendem objetivo definido.",
             "Exibição, clique e conversão não são iguais.",
-            "Indicador e uso de dados precisam de condições."
+            "Indicador e uso de dados precisam de condições.",
+            "Leads exigem qualificação; copywriting orienta uma ação informada.",
+            "Gatilhos mentais dependem de veracidade; inbound encadeia conteúdo e relacionamento."
           ],
           "retrieval": [
             "Uma mesma pessoa pode gerar várias impressões?",
-            "Qual medida verificaria abandono de formulário?"
+            "Qual medida verificaria abandono de formulário?",
+            "Como separar contato interessado de contratação?",
+            "Qual prova sustenta uma mensagem de escassez?"
           ],
-          "notes": "Marketing digital\nRelacionar canal, mensagem e etapa de decisão\nCalcular indicadores com denominador e limites\nMarketing digital usa meios como conteúdo, pesquisa, e-mail e redes sociais para atender objetivos e públicos. SEO trabalha descoberta orgânica; mídia paga compra exposição segundo regras da plataforma; ambos exigem conteúdo pertinente e condições transparentes. Alcance conta pessoas/contas expostas segundo método; impressões contam exibições; clique não é contratação. Conversão precisa de ação definida e denominador, como cadastros por visitas válidas. Teste A/B compara versões com distribuição e medida adequadas, sem trocar simultaneamente muitos fatores e atribuir efeito certo. Dados pessoais, cookies e mensagens pedem finalidade/base/controles pertinentes; consentimento não é base única nem autorização ilimitada.\nUma página teve 200 visitas válidas e16 pedidos completos. Qual conversão para essa ação? Defina ação:pedido completo. Taxa 16/200×100. 8% de visitas converteram em pedido completo. Conferência: Não se chamam 16 pedidos de 16%; número de vendas finais pode ser diferente e exige outro indicador.\nCanal e conteúdo atendem objetivo definido.\nExibição, clique e conversão não são iguais.\nIndicador e uso de dados precisam de condições.\nComparar taxas com denominadores diferentes sem esclarecer.\nTratar clique ou pedido como venda realizada.",
+          "notes": "Marketing digital\nRelacionar canal, mensagem e etapa de decisão\nCalcular indicadores com denominador e limites\nPlanejar geração de leads e qualificação com finalidade definida\nAplicar copywriting com benefício, prova e chamada para ação\nAvaliar gatilhos mentais sem promessas falsas ou pressão indevida\nOrganizar inbound marketing por atração e relacionamento\nMarketing digital usa meios como conteúdo, pesquisa, e-mail e redes sociais para atender objetivos e públicos. SEO trabalha descoberta orgânica; mídia paga compra exposição segundo regras da plataforma; ambos exigem conteúdo pertinente e condições transparentes. Alcance conta pessoas/contas expostas segundo método; impressões contam exibições; clique não é contratação. Conversão precisa de ação definida e denominador, como cadastros por visitas válidas. Teste A/B compara versões com distribuição e medida adequadas, sem trocar simultaneamente muitos fatores e atribuir efeito certo. Dados pessoais, cookies e mensagens pedem finalidade/base/controles pertinentes; consentimento não é base única nem autorização ilimitada.\nLeads são contatos que demonstraram interesse e podem ter seus dados usados para uma finalidade comercial pertinente. Geração de leads transforma interesse em contato, por exemplo com formulário para receber um guia solicitado. Qualificar é avaliar aderência e estágio de decisão com critérios explícitos; preencher um formulário não torna alguém comprador. A nutrição oferece conteúdo relevante ao longo do relacionamento, respeitando preferências e base legal. Uma lista comprada sem origem e finalidade verificáveis não se torna boa estratégia só por ter muitos nomes.\nCopywriting é escrita persuasiva destinada a uma ação definida. Comece pela necessidade do público, explique um benefício verificável e sustente a afirmação com informação ou prova pertinente. Uma chamada para ação (CTA) diz o próximo passo, como comparar custos ou solicitar uma simulação. A estrutura AIDA organiza atenção, interesse, desejo e ação; ela não assegura conversão. Em serviços financeiros, persuasão não dispensa condições, riscos e custos claros: anunciar aprovação garantida sem fundamento ou ocultar encargos é inadequado.\nGatilhos mentais são recursos persuasivos associados a atalhos de decisão. Prova social apresenta experiências de outras pessoas; autoridade se apoia em competência pertinente; reciprocidade pode decorrer de ajuda recebida; escassez e urgência salientam disponibilidade e tempo. Esses recursos não funcionam como comandos automáticos. Depoimento inventado, credencial irrelevante ou prazo artificial podem induzir erro. Um número real de vagas só sustenta escassez quando é verdadeiro e aplicável à oferta; ele não prova adequação para cada cliente. Transparência e liberdade de decisão continuam necessárias.\nInbound marketing procura atrair pessoas por conteúdo útil e experiências relacionadas às suas necessidades, desenvolvendo relacionamento até uma decisão pertinente. Um artigo encontrado por busca pode levar a um guia, depois a conteúdos solicitados e a uma conversa de orientação. SEO ajuda a descoberta; geração de leads e qualificação conectam etapas, sem confundir visita com venda. A abordagem requer objetivos, continuidade e medidas por etapa; apenas publicar um anúncio isolado não caracteriza todo esse processo. Comunicação posterior deve respeitar as condições do contato.\nConversão = ações definidas / visitas válidas × 100; compare denominadores equivalentes.\nCanal e conteúdo atendem objetivo definido.\nExibição, clique e conversão não são iguais.\nIndicador e uso de dados precisam de condições.\nLeads exigem qualificação; copywriting orienta uma ação informada.\nGatilhos mentais dependem de veracidade; inbound encadeia conteúdo e relacionamento.",
           "suggestions": [
             "Calcule conversão com ação e denominador explícitos.",
             "Compare alcance, impressões e cliques.",
@@ -16213,6 +16440,22 @@
             {
               "title": "LGPD compilada",
               "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            },
+            {
+              "title": "HubSpot — geração de leads",
+              "url": "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide"
+            },
+            {
+              "title": "HubSpot — escrita persuasiva",
+              "url": "https://blog.hubspot.com/sales/sales-copy"
+            },
+            {
+              "title": "Cialdini — princípios de persuasão",
+              "url": "https://www.influenceatwork.com/7-principles-of-persuasion/"
+            },
+            {
+              "title": "HubSpot — inbound marketing",
+              "url": "https://blog.hubspot.com/marketing/inbound-marketing-tips"
             }
           ],
           "updatedAt": "2026-10-02",
@@ -16223,15 +16466,15 @@
           "questions": [
             {
               "id": "bb2026-v12-q01",
-              "prompt": "Impressões e alcance são:",
+              "prompt": "Um interessado solicita um guia e fornece contato nas condições informadas. Na geração de leads, isso significa:",
               "options": [
-                "Sempre idênticos",
-                "Vendas e lucros",
-                "Exibições e pessoas/contas alcançadas conforme método",
-                "Apenas cadastros"
+                "Venda concluída e garantida",
+                "Autorização irrestrita para qualquer mensagem",
+                "Contato interessado que ainda precisa de qualificação",
+                "Obrigação de contratar um produto"
               ],
               "correctIndex": 2,
-              "explanation": "Uma conta pode receber várias exibições; definição da plataforma precisa ser considerada."
+              "explanation": "Geração de leads registra interesse e possibilidade de contato pertinente. Qualificação e contratação são etapas distintas, com limites para o uso de dados."
             },
             {
               "id": "bb2026-v12-q02",
@@ -16247,39 +16490,39 @@
             },
             {
               "id": "bb2026-v12-q03",
-              "prompt": "SEO se relaciona principalmente a:",
+              "prompt": "Qual alternativa aplica copywriting com uma chamada para ação e condição transparente?",
               "options": [
-                "Descoberta orgânica em mecanismos de busca",
-                "Compra obrigatória de cada clique",
-                "Garantia de primeira posição",
-                "Contratação automática"
+                "Compare custos e solicite simulação sujeita à análise",
+                "Aprovação garantida sem qualquer análise",
+                "Assine agora; os custos só serão informados depois",
+                "Todos ganharão dinheiro, sem risco"
               ],
               "correctIndex": 0,
-              "explanation": "Otimização orgânica não garante posição nem converte toda visita."
+              "explanation": "Copywriting deve ligar benefício verificável a uma ação clara; a simulação preserva a condição de análise. Promessas infundadas e custos ocultos prejudicam a decisão."
             },
             {
               "id": "bb2026-v12-q04",
-              "prompt": "Um teste A/B deve:",
+              "prompt": "Sobre gatilhos mentais, uma campanha anuncia escassez de 20 lugares reais. Qual avaliação é adequada?",
               "options": [
-                "Mudar tudo e afirmar causa",
-                "Definir hipótese, distribuição e medida comparável",
-                "Excluir resultado negativo",
-                "Dispensar denominador"
+                "Escassez garante que todos precisam da oferta",
+                "O limite verificável pode sustentar a mensagem, sem provar adequação individual",
+                "É preciso inventar depoimentos para reforçar a mensagem",
+                "Todo relógio reiniciado é prova de urgência real"
               ],
               "correctIndex": 1,
-              "explanation": "Desenho de teste ajuda a avaliar efeito sem conclusão arbitrária."
+              "explanation": "Gatilhos mentais devem apoiar-se em informações verdadeiras. Escassez real informa disponibilidade; não demonstra benefício universal nem justifica prova social falsa."
             },
             {
               "id": "bb2026-v12-q05",
-              "prompt": "Pedido completo equivale necessariamente a venda realizada?",
+              "prompt": "Qual sequência ilustra inbound marketing?",
               "options": [
-                "Sim, em todo funil",
-                "Sim, se houve clique",
-                "Não; são ações distintas conforme processo",
-                "Sim, mesmo sem aceitação"
+                "Comprar lista sem verificar origem e disparar mensagens ilimitadas",
+                "Publicar uma promessa falsa e contar cliques como vendas",
+                "Atrair com artigo útil, oferecer guia solicitado e acompanhar o interesse com conteúdo pertinente",
+                "Ocultar condições até depois da contratação"
               ],
               "correctIndex": 2,
-              "explanation": "O processo pode exigir análise/aceite; indicadores devem preservar a ação real."
+              "explanation": "Inbound marketing combina atração útil e continuidade do relacionamento. Leads, qualificação e decisão são etapas; SEO pode apoiar a descoberta do artigo, sem garantir venda."
             },
             {
               "id": "bb2026-v12-q06",
@@ -16300,17 +16543,26 @@
               "referenceItem": "9",
               "objectiveIndex": 0,
               "blockIndexes": [
-                0
+                0,
+                2,
+                4,
+                6,
+                8
               ],
-              "exampleBlockIndex": 1,
+              "exampleBlockIndex": 9,
               "questionIds": [
                 "bb2026-v12-q01",
-                "bb2026-v12-q02",
-                "bb2026-v12-q03"
+                "bb2026-v12-q03",
+                "bb2026-v12-q04",
+                "bb2026-v12-q05"
               ],
               "sourceUrls": [
                 "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
-                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide",
+                "https://blog.hubspot.com/sales/sales-copy",
+                "https://www.influenceatwork.com/7-principles-of-persuasion/",
+                "https://blog.hubspot.com/marketing/inbound-marketing-tips"
               ]
             },
             {
@@ -16321,13 +16573,92 @@
               ],
               "exampleBlockIndex": 1,
               "questionIds": [
-                "bb2026-v12-q04",
-                "bb2026-v12-q05",
+                "bb2026-v12-q02",
                 "bb2026-v12-q06"
               ],
               "sourceUrls": [
                 "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
-                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide",
+                "https://blog.hubspot.com/sales/sales-copy",
+                "https://www.influenceatwork.com/7-principles-of-persuasion/",
+                "https://blog.hubspot.com/marketing/inbound-marketing-tips"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 2,
+              "blockIndexes": [
+                2
+              ],
+              "exampleBlockIndex": 3,
+              "questionIds": [
+                "bb2026-v12-q01"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide",
+                "https://blog.hubspot.com/sales/sales-copy",
+                "https://www.influenceatwork.com/7-principles-of-persuasion/",
+                "https://blog.hubspot.com/marketing/inbound-marketing-tips"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 3,
+              "blockIndexes": [
+                4
+              ],
+              "exampleBlockIndex": 5,
+              "questionIds": [
+                "bb2026-v12-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide",
+                "https://blog.hubspot.com/sales/sales-copy",
+                "https://www.influenceatwork.com/7-principles-of-persuasion/",
+                "https://blog.hubspot.com/marketing/inbound-marketing-tips"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 4,
+              "blockIndexes": [
+                6
+              ],
+              "exampleBlockIndex": 7,
+              "questionIds": [
+                "bb2026-v12-q04"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide",
+                "https://blog.hubspot.com/sales/sales-copy",
+                "https://www.influenceatwork.com/7-principles-of-persuasion/",
+                "https://blog.hubspot.com/marketing/inbound-marketing-tips"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 5,
+              "blockIndexes": [
+                8
+              ],
+              "exampleBlockIndex": 9,
+              "questionIds": [
+                "bb2026-v12-q05"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://blog.hubspot.com/marketing/beginner-inbound-lead-generation-guide",
+                "https://blog.hubspot.com/sales/sales-copy",
+                "https://www.influenceatwork.com/7-principles-of-persuasion/",
+                "https://blog.hubspot.com/marketing/inbound-marketing-tips"
               ]
             }
           ]

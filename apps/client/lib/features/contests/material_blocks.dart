@@ -14,7 +14,9 @@ class MaterialBlocks extends StatelessWidget {
         MaterialSection(
           title: block.title,
           children: switch (block) {
-            TextBlock() => [SelectableText(block.text)],
+            TextBlock() => [
+              SelectableText(block.text, semanticsLabel: block.text),
+            ],
             ListBlock() => [StudyBullets(block.items)],
             ExampleBlock() => [
               Text(block.problem),
@@ -34,6 +36,7 @@ class MaterialBlocks extends StatelessWidget {
             FormulaBlock() => [
               SelectableText(
                 block.expression,
+                semanticsLabel: block.expression,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 12),

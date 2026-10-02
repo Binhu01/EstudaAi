@@ -26,6 +26,21 @@ async function enable(page) {
   await page.locator('flt-semantics-placeholder, flt-semantics').first().waitFor({state:'attached'});
   if (await placeholder.count()) await placeholder.dispatchEvent('click');
 }
+async function revealPainted(page, locator) {
+  // Flutter paints to canvas; DOM scrollIntoView alone can move only semantics.
+  const surface = await page.locator('flutter-view').boundingBox();
+  expect(surface).toBeTruthy();
+  const viewport = page.viewportSize();
+  await page.mouse.move(surface.x + surface.width / 2, surface.y + surface.height / 2);
+  for (let attempt=0;attempt<30;attempt++) {
+    const box = await locator.boundingBox();
+    expect(box).toBeTruthy();
+    if(box.y>=80 && box.y+box.height<viewport.height-150) return box;
+    await page.mouse.wheel(0,box.y<80?-180:180);
+    await page.waitForTimeout(120);
+  }
+  throw new Error(`Painted content did not enter the reading area: ${await locator.textContent()}`);
+}
 function external(address) {
   try { return /(^|\.)(youtube\.com|googlevideo\.com|ytimg\.com|google\.com|gstatic\.com|doubleclick\.net)$/.test(new URL(address).hostname); }
   catch { return false; }
@@ -45,18 +60,33 @@ try {
     await page.screenshot({path:`${output}/${viewport.width}-curso.png`});
     for (const discipline of catalog.disciplines) {
       await click(page,discipline.title,false); await route(page,`/concursos/bb2026/${discipline.id}`);
-      const module = discipline.modules[discipline.id==='financeira'?6:discipline.id==='informatica'?12:discipline.id==='redacao'?4:0];
+      const module = discipline.modules[discipline.id==='financeira'?6:discipline.id==='informatica'?4:discipline.id==='redacao'?4:0];
       const prefix=`/concursos/bb2026/${discipline.id}/${module.id}`;
       await click(page,module.title,false); await route(page,`${prefix}/material`);
       await expect(page.getByText('Material autoral · Estuda Aí',{exact:true})).toBeVisible();
       for (const objective of module.objectives) expect(await page.getByText(objective,{exact:true}).count()).toBeGreaterThan(0);
       if(['financeira','informatica','redacao'].includes(discipline.id)) await page.screenshot({path:`${output}/${viewport.width}-${discipline.id}-material.png`});
+      if(['financeira','informatica'].includes(discipline.id)) expect(module.blocks.some(block=>block.type==='table'),`${module.id} must exercise a real table`).toBe(true);
+      const materialChecks=[];
       for (const type of ['formula','table']) {
         const block = module.blocks.find(block => block.type === type);
         if (block && ['financeira','informatica'].includes(discipline.id)) {
-          await page.getByText(block.title,{exact:true}).scrollIntoViewIfNeeded();
-          await page.waitForTimeout(300); // Let the canvas paint the semantic scroll.
+          const target=page.getByText(type==='formula'?block.expression:block.columns[0],{exact:true});
+          const box=await revealPainted(page,target);
           await page.screenshot({path:`${output}/${viewport.width}-${discipline.id}-${type}.png`});
+          if(type==='table') {
+            const before=await page.getByText(block.columns.at(-1),{exact:true}).boundingBox();
+            if(viewport.width===360) {
+              // A physical horizontal gesture also exercises the painted table.
+              await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+              await page.mouse.wheel(block.columns.length*240,0);await page.waitForTimeout(200);
+              const after=await page.getByText(block.columns.at(-1),{exact:true}).boundingBox();
+              expect(after.x).toBeLessThan(before.x);
+              expect(after.x+after.width).toBeLessThanOrEqual(viewport.width);
+              await page.screenshot({path:`${output}/${viewport.width}-${discipline.id}-table-scrolled.png`});
+            }
+          }
+          materialChecks.push({type,paintedBounds:box,horizontal: type==='table'&&viewport.width===360});
         }
       }
       await click(page,'Aulas de apoio'); await route(page,`${prefix}/aulas`);
@@ -87,7 +117,7 @@ try {
       await click(page,'Material'); await route(page,`${prefix}/material`);
       await click(page,'Voltar à disciplina'); await route(page,`/concursos/bb2026/${discipline.id}`);
       await click(page,'Voltar ao concurso');await route(page,'/concursos/bb2026');
-      modules.push({discipline:discipline.id,module:module.id,questionIds:ids,score:700,material:true,lazyIframe:true,steveLogin:true,accountContext:true});
+      modules.push({discipline:discipline.id,module:module.id,questionIds:ids,score:700,material:true,materialChecks,lazyIframe:true,steveLogin:true,accountContext:true});
       console.log(`Verified ${viewport.width}: ${discipline.id}`);
     }
     await page.goto(`${url}/#/concursos/bb2026/matematica/bb2026-b01/material`);await enable(page);

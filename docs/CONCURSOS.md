@@ -31,4 +31,4 @@ O catálogo canônico é `apps/client/assets/contests/bb2026/catalog.json`, sche
 
 Verificação reproduzível na raiz: `npm test`, `npm run openapi`, os três testes em `tools/test/contest-*.test.mjs` e `node tools/verify-contest-content.mjs --all`. No cliente: geração, formatação, `flutter analyze`, `flutter test` e build Web release. Com a prévia ativa: `npm run test:visual`, `npm run test:study`, `npm run test:contests`; use `PREVIEW_URL` para outra porta. Fontes privadas não são exigidas na CI.
 
-Resultados e limites em [Validação](VALIDACAO.md). A revisão independente da branch ainda está pendente nesta versão candidata.
+Resultados e limites em [Validação](VALIDACAO.md). A [revisão independente](CONCURSOS-REVISAO.md) examinou o conjunto e uma amostra do material; o autor corrigiu os três achados importantes e a acessibilidade dos textos selecionáveis com regressões. Um ajuste menor de espaçamento foi adiado.
