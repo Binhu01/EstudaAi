@@ -14166,7 +14166,3599 @@
           "videoId": "vlxfzyUCwco"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-v01",
+          "researchId": "V01",
+          "title": "Mercado e competição",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir diagnóstico interno de pressão externa · Relacionar estratégia, capacidade e necessidade do mercado",
+          "objectives": [
+            "Distinguir diagnóstico interno de pressão externa",
+            "Relacionar estratégia, capacidade e necessidade do mercado"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Escolha estratégica exige diagnóstico",
+              "text": "Estratégia define onde atuar e como criar valor de modo coerente com recursos. Concorrente direto oferece solução semelhante ao mesmo público; substituto atende à necessidade por outra solução. Poder de clientes e fornecedores, entrada de competidores, substitutos e rivalidade ajudam a examinar pressão competitiva. SWOT organiza forças/fraquezas internas e oportunidades/ameaças externas; não decide sozinha uma ação. Custo baixo não é sinônimo de preço baixo, e diferenciação não se resume a publicidade. Objetivo precisa de indicador e prazo; eficiência usa melhor os recursos, eficácia atinge a finalidade. Copiar uma campanha sem capacidade de atendimento pode aumentar demanda e piorar experiência."
+            },
+            {
+              "type": "list",
+              "title": "Do diagnóstico à escolha",
+              "items": [
+                "Defina público e problema atendido.",
+                "Registre recursos internos e pressões externas com evidência.",
+                "Compare alternativas, custos e riscos.",
+                "Escolha ação coerente e acompanhe resultado, não só volume de anúncios."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma unidade tem equipe bem treinada, mas filas longas por retrabalho. Um concorrente lançou atendimento noturno. Classifique os achados.",
+              "steps": [
+                "Treinamento é força interna.",
+                "Retrabalho é fraqueza interna.",
+                "Oferta concorrente é pressão/ameaça externa conforme o público."
+              ],
+              "answer": "Diagnóstico combina capacidade interna e ambiente externo.",
+              "check": "Lançar campanha noturna sem resolver capacidade não decorre automaticamente da SWOT; faltam custos e necessidades do público."
+            }
+          ],
+          "pitfalls": [
+            "Chamar concorrente de fraqueza interna.",
+            "Confundir mais vendas com estratégia sustentável automaticamente."
+          ],
+          "recap": [
+            "Interno e externo são dimensões diferentes.",
+            "Substitutos disputam a necessidade.",
+            "Estratégia precisa ser executável e mensurável."
+          ],
+          "retrieval": [
+            "Qual diferença entre custo baixo e preço baixo?",
+            "Por que SWOT não escolhe uma ação sozinha?"
+          ],
+          "notes": "Mercado e competição\nInterno e externo são dimensões diferentes.\nSubstitutos disputam a necessidade.\nEstratégia precisa ser executável e mensurável.\nChamar concorrente de fraqueza interna.\nConfundir mais vendas com estratégia sustentável automaticamente.",
+          "suggestions": [
+            "Classifique um caso em SWOT.",
+            "Compare concorrente direto e substituto.",
+            "Relacione objetivo, indicador e ação."
+          ],
+          "sources": [
+            {
+              "title": "HBS/Porter — cinco forças",
+              "url": "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx"
+            },
+            {
+              "title": "OpenStax — planejamento de marketing",
+              "url": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v01-q01",
+              "prompt": "Equipe própria bem treinada, na SWOT, é:",
+              "options": [
+                "Oportunidade externa",
+                "Ameaça externa",
+                "Força interna",
+                "Fraqueza externa"
+              ],
+              "correctIndex": 2,
+              "explanation": "É um recurso interno favorável ao objetivo."
+            },
+            {
+              "id": "bb2026-v01-q02",
+              "prompt": "Novo concorrente atraindo o mesmo público é, no diagnóstico SWOT:",
+              "options": [
+                "Força interna",
+                "Fraqueza interna",
+                "Recurso próprio",
+                "Possível ameaça externa"
+              ],
+              "correctIndex": 3,
+              "explanation": "O achado pertence ao ambiente, e seu efeito precisa ser analisado."
+            },
+            {
+              "id": "bb2026-v01-q03",
+              "prompt": "Um substituto compete principalmente por:",
+              "options": [
+                "Atender à mesma necessidade por outra solução",
+                "Usar obrigatoriamente a mesma marca",
+                "Ter a mesma estrutura jurídica",
+                "Copiar todos os preços"
+              ],
+              "correctIndex": 0,
+              "explanation": "A solução pode ser diferente e ainda disputar a finalidade buscada pelo cliente."
+            },
+            {
+              "id": "bb2026-v01-q04",
+              "prompt": "Ação mais coerente diante de filas por retrabalho é:",
+              "options": [
+                "Aumentar anúncios sem avaliar capacidade",
+                "Investigar e corrigir causas antes de ampliar demanda",
+                "Prometer espera zero sem teste",
+                "Ignorar filas por serem operacionais"
+              ],
+              "correctIndex": 1,
+              "explanation": "A capacidade de entrega sustenta a proposta; publicidade isolada pode piorar filas."
+            },
+            {
+              "id": "bb2026-v01-q05",
+              "prompt": "Eficiência e eficácia correspondem, respectivamente, a:",
+              "options": [
+                "Atingir finalidade e usar recursos",
+                "Aumentar receita e reduzir todos os preços",
+                "Usar bem recursos e atingir finalidade",
+                "Ter marca conhecida e copiar concorrente"
+              ],
+              "correctIndex": 2,
+              "explanation": "É possível usar poucos recursos sem atingir o objetivo, ou atingi-lo com desperdício."
+            },
+            {
+              "id": "bb2026-v01-q06",
+              "prompt": "O diagnóstico estratégico deve produzir:",
+              "options": [
+                "Ação única obrigatória sem análise",
+                "Cópia literal da oferta rival",
+                "Promessa independente de recursos",
+                "Alternativas avaliadas com capacidade, público e riscos"
+              ],
+              "correctIndex": 3,
+              "explanation": "Ferramentas organizam decisão; não eliminam a análise da viabilidade."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-v01-q01",
+                "bb2026-v01-q02",
+                "bb2026-v01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-v01-q04",
+                "bb2026-v01-q05",
+                "bb2026-v01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v02",
+          "researchId": "V02",
+          "title": "Identidade, imagem e posição",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir identidade pretendida de percepção do público · Traduzir posicionamento em entrega verificável",
+          "objectives": [
+            "Distinguir identidade pretendida de percepção do público",
+            "Traduzir posicionamento em entrega verificável"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O que se promete precisa aparecer no serviço",
+              "text": "Identidade expressa valores e características que a organização assume; imagem é percepção de públicos, podendo variar entre grupos. Reputação se forma ao longo de experiências e informações, não apenas por um slogan. Posicionamento define como a oferta pretende ser reconhecida pelo público em relação às alternativas. Proposta clara identifica para quem, qual benefício e por que acreditar; diferenças relevantes precisam ser percebidas e sustentadas. Alterar nome ou cor não corrige falhas recorrentes. Missão comunica finalidade; visão, situação desejada; valores, critérios de conduta. Esses conceitos orientam escolhas, mas sua declaração não prova execução."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma marca promete “explicação clara”, mas clientes relatam contratos incompreensíveis. O que deve ser feito?",
+              "steps": [
+                "Compare promessa de identidade com percepção e registros.",
+                "Localize termos e etapas que geram dúvidas.",
+                "Revise linguagem/teste compreensão e acompanhe reclamações."
+              ],
+              "answer": "Alinhar a entrega à promessa, com evidência de compreensão.",
+              "check": "Trocar o slogan mantendo contratos confusos não resolve o descompasso observado."
+            }
+          ],
+          "pitfalls": [
+            "Tratar imagem como algo totalmente controlado pelo anúncio.",
+            "Confundir valor declarado com conduta já comprovada."
+          ],
+          "recap": [
+            "Identidade é assumida; imagem é percebida.",
+            "Posicionamento envolve público e alternativas.",
+            "Reputação depende de entrega ao longo do tempo."
+          ],
+          "retrieval": [
+            "Um novo logotipo garante nova reputação?",
+            "Como verificar promessa de clareza?"
+          ],
+          "notes": "Identidade, imagem e posição\nIdentidade é assumida; imagem é percebida.\nPosicionamento envolve público e alternativas.\nReputação depende de entrega ao longo do tempo.\nTratar imagem como algo totalmente controlado pelo anúncio.\nConfundir valor declarado com conduta já comprovada.",
+          "suggestions": [
+            "Distinga identidade e imagem num caso.",
+            "Escreva proposta de valor com evidência.",
+            "Relacione promessa de marca e atendimento."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — marca e posição",
+              "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning"
+            },
+            {
+              "title": "OpenStax — planejamento de marketing",
+              "url": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v02-q01",
+              "prompt": "Percepção dos clientes sobre a organização é sua:",
+              "options": [
+                "Imagem",
+                "Missão necessariamente",
+                "Identidade pretendida apenas",
+                "Estrutura societária"
+              ],
+              "correctIndex": 0,
+              "explanation": "Imagem é percepção do público, que pode divergir da identidade assumida."
+            },
+            {
+              "id": "bb2026-v02-q02",
+              "prompt": "Uma promessa de clareza deve ser avaliada por:",
+              "options": [
+                "Tamanho do logotipo",
+                "Compreensão real e dúvidas do público",
+                "Quantidade de cores",
+                "Cópia do slogan rival"
+              ],
+              "correctIndex": 1,
+              "explanation": "A evidência pertinente é se as pessoas entendem a oferta e o contrato."
+            },
+            {
+              "id": "bb2026-v02-q03",
+              "prompt": "Posicionamento relaciona a oferta a:",
+              "options": [
+                "Qualquer público sem distinção",
+                "Somente lucro do mês",
+                "Público escolhido e alternativas relevantes",
+                "Apenas aparência visual"
+              ],
+              "correctIndex": 2,
+              "explanation": "Uma posição depende de benefício significativo para o público e comparação com alternativas."
+            },
+            {
+              "id": "bb2026-v02-q04",
+              "prompt": "Valores publicados demonstram automaticamente conduta ética?",
+              "options": [
+                "Sim, sem observar ações",
+                "Sim, se forem curtos",
+                "Sim, se a marca é conhecida",
+                "Não; execução precisa ser observada"
+              ],
+              "correctIndex": 3,
+              "explanation": "Declaração orienta a conduta, mas não é prova de cumprimento."
+            },
+            {
+              "id": "bb2026-v02-q05",
+              "prompt": "Diante de contratos confusos, trocar apenas a campanha:",
+              "options": [
+                "Pode manter o descompasso entre promessa e entrega",
+                "Garante compreensão imediata",
+                "Elimina toda reclamação",
+                "Prova clareza contratual"
+              ],
+              "correctIndex": 0,
+              "explanation": "O problema observado está na entrega; comunicação estética isolada não o corrige."
+            },
+            {
+              "id": "bb2026-v02-q06",
+              "prompt": "Reputação é melhor entendida como:",
+              "options": [
+                "Uma cor escolhida",
+                "Avaliação formada ao longo de experiências e informações",
+                "Apenas missão escrita",
+                "Preço menor numa única compra"
+              ],
+              "correctIndex": 1,
+              "explanation": "É construída e revista no tempo por públicos; não se reduz a um elemento isolado."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v02-q01",
+                "bb2026-v02-q02",
+                "bb2026-v02-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v02-q04",
+                "bb2026-v02-q05",
+                "bb2026-v02-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v03",
+          "researchId": "V03",
+          "title": "Segmentação",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir segmentar, selecionar público e posicionar · Usar critérios pertinentes sem estereótipos ou uso indevido de dados",
+          "objectives": [
+            "Distinguir segmentar, selecionar público e posicionar",
+            "Usar critérios pertinentes sem estereótipos ou uso indevido de dados"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Agrupar necessidades para servir melhor",
+              "text": "Segmentação divide um mercado heterogêneo em grupos com características ou necessidades pertinentes. Bases geográficas, demográficas, psicográficas e comportamentais examinam dimensões diferentes; comportamento de uso não é idade. Depois de segmentar, seleciona-se público-alvo considerando capacidade e potencial; posicionamento define proposta para esse público. Segmento útil precisa ser identificável, acessível e passível de atendimento, sem supor que todos do grupo sejam iguais. Persona é representação de pesquisa, não prova individual. Dados pessoais exigem finalidade, necessidade e base legal; personalização não autoriza discriminação ilícita nem coleta ilimitada."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pesquisa identifica pessoas que usam aplicativo diariamente e outras que precisam de apoio inicial. Que segmentação e ação fazem sentido?",
+              "steps": [
+                "Critério observado é comportamento/necessidade de uso.",
+                "Ofereça fluxo rápido e orientação inicial acessível.",
+                "Valide individualmente preferência e necessidade."
+              ],
+              "answer": "Segmentar por uso e adaptar apoio, sem deduzir habilidade só pela idade.",
+              "check": "Pessoa jovem pode precisar de ajuda e pessoa idosa pode dominar o aplicativo; o critério deve vir da evidência."
+            }
+          ],
+          "pitfalls": [
+            "Tratar faixa etária como habilidade certa.",
+            "Coletar qualquer dado por ser útil à venda."
+          ],
+          "recap": [
+            "Segmentar, selecionar alvo e posicionar são etapas distintas.",
+            "Critério deve corresponder ao problema.",
+            "Grupo não substitui conhecimento individual."
+          ],
+          "retrieval": [
+            "Frequência de uso é base demográfica ou comportamental?",
+            "Por que persona não é diagnóstico de todo cliente?"
+          ],
+          "notes": "Segmentação\nSegmentar, selecionar alvo e posicionar são etapas distintas.\nCritério deve corresponder ao problema.\nGrupo não substitui conhecimento individual.\nTratar faixa etária como habilidade certa.\nColetar qualquer dado por ser útil à venda.",
+          "suggestions": [
+            "Classifique uma base de segmentação.",
+            "Proponha atendimento para necessidades diferentes.",
+            "Avalie se um dado é necessário à finalidade."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — segmentação",
+              "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets"
+            },
+            {
+              "title": "LGPD compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v03-q01",
+              "prompt": "Frequência de uso de um canal é critério:",
+              "options": [
+                "Geográfico",
+                "Demográfico",
+                "Comportamental",
+                "Societário"
+              ],
+              "correctIndex": 2,
+              "explanation": "Descreve comportamento observado, diferente de localização ou idade."
+            },
+            {
+              "id": "bb2026-v03-q02",
+              "prompt": "Selecionar público-alvo após segmentar envolve:",
+              "options": [
+                "Atender todos de maneira idêntica",
+                "Presumir capacidade por idade",
+                "Coletar todo dado disponível",
+                "Avaliar grupos e capacidade de atendê-los"
+              ],
+              "correctIndex": 3,
+              "explanation": "O alvo deve ser coerente com recursos e proposta, não somente tamanho do grupo."
+            },
+            {
+              "id": "bb2026-v03-q03",
+              "prompt": "Uma persona serve como:",
+              "options": [
+                "Representação de pesquisa a validar no contato real",
+                "Identidade comprovada de cada cliente",
+                "Autorização para discriminar",
+                "Garantia de conversão"
+              ],
+              "correctIndex": 0,
+              "explanation": "É síntese orientadora; indivíduos mantêm necessidades próprias."
+            },
+            {
+              "id": "bb2026-v03-q04",
+              "prompt": "No caso de uso diário versus apoio inicial, é mais adequado:",
+              "options": [
+                "Separar apenas pela idade presumida",
+                "Adaptar apoio ao comportamento e à necessidade verificados",
+                "Excluir quem precisa de ajuda",
+                "Impor canal único"
+              ],
+              "correctIndex": 1,
+              "explanation": "A segmentação deriva de uso e apoio observados, sem estereótipo."
+            },
+            {
+              "id": "bb2026-v03-q05",
+              "prompt": "Personalização com dados exige:",
+              "options": [
+                "Coleta irrestrita",
+                "Consentimento como única base em todo caso",
+                "Finalidade, necessidade e base legal pertinente",
+                "Guardar sempre indefinidamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "LGPD prevê várias bases; personalizar não dispensa adequação e necessidade."
+            },
+            {
+              "id": "bb2026-v03-q06",
+              "prompt": "Segmento acessível significa:",
+              "options": [
+                "Obrigatoriamente o maior",
+                "Sempre o mais rico",
+                "Sempre sem necessidades especiais",
+                "Possível de alcançar e atender pelos meios disponíveis"
+              ],
+              "correctIndex": 3,
+              "explanation": "Acessibilidade do segmento, no conceito mercadológico, relaciona alcance; atendimento também deve observar inclusão."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v03-q01",
+                "bb2026-v03-q02",
+                "bb2026-v03-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v03-q04",
+                "bb2026-v03-q05",
+                "bb2026-v03-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v04",
+          "researchId": "V04",
+          "title": "Valor percebido",
+          "level": "Fundamentos e aplicação",
+          "summary": "Comparar benefícios e sacrifícios no contexto do cliente · Justificar proposta sem confundir preço, custo e valor",
+          "objectives": [
+            "Comparar benefícios e sacrifícios no contexto do cliente",
+            "Justificar proposta sem confundir preço, custo e valor"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Valor não é o número da etiqueta",
+              "text": "Valor percebido resulta da avaliação de benefícios e sacrifícios para uma finalidade. Sacrifícios incluem preço, tempo, esforço, risco e complexidade; benefício pode ser conveniência, compreensão ou segurança pertinente. Não existe uma soma monetária universal de todas essas dimensões. Oferta barata pode ser inadequada se exige esforço impraticável; preço alto não prova qualidade. Custo da empresa, preço cobrado e valor percebido pelo cliente são conceitos distintos. Perguntar necessidade e comparar opções revela critérios; esconder restrições aumenta a chance de uma decisão mal informada. Proposta de valor deve indicar benefício real e condições para alcançá-lo."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma pessoa precisa resolver tarefa simples com pouca frequência. Opção A custa R$12/mês; B custa R$3 por uso, sem outros encargos no caso. Ela prevê dois usos por mês. Como apresentar?",
+              "steps": [
+                "Custo previsto de B:2×3=6; A:12.",
+                "Compare também conveniência e condições descritas.",
+                "Informe que outra frequência pode alterar a comparação."
+              ],
+              "answer": "B custa R$6 no cenário, mas a adequação depende dos demais critérios.",
+              "check": "Com cinco usos, B custaria15, acima de12; o caso não autoriza dizer B sempre superior."
+            }
+          ],
+          "pitfalls": [
+            "Dizer que menor preço sempre significa maior valor.",
+            "Omitir frequência e restrições da comparação."
+          ],
+          "recap": [
+            "Benefícios e sacrifícios dependem do objetivo.",
+            "Preço, custo e valor são distintos.",
+            "Comparação precisa de cenário e condições."
+          ],
+          "retrieval": [
+            "Tempo pode ser um sacrifício relevante?",
+            "Quando a comparação de planos muda?"
+          ],
+          "notes": "Valor percebido\nBenefícios e sacrifícios dependem do objetivo.\nPreço, custo e valor são distintos.\nComparação precisa de cenário e condições.\nDizer que menor preço sempre significa maior valor.\nOmitir frequência e restrições da comparação.",
+          "suggestions": [
+            "Compare propostas com frequência explícita.",
+            "Distinga preço e valor percebido.",
+            "Liste benefícios e sacrifícios de um caso."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — criação de valor",
+              "url": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process"
+            },
+            {
+              "title": "OpenStax — planejamento de marketing",
+              "url": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v04-q01",
+              "prompt": "Valor percebido considera:",
+              "options": [
+                "Somente o preço",
+                "Benefícios e sacrifícios relevantes",
+                "Somente o custo da empresa",
+                "Somente o logotipo"
+              ],
+              "correctIndex": 1,
+              "explanation": "É avaliação do cliente para sua finalidade; dimensões podem ser não monetárias."
+            },
+            {
+              "id": "bb2026-v04-q02",
+              "prompt": "Um sacrifício além do preço pode ser:",
+              "options": [
+                "Qualquer lucro da empresa",
+                "A identidade visual obrigatoriamente",
+                "Tempo necessário para usar o serviço",
+                "Um benefício gratuito necessariamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "Esforço e tempo entram na comparação conforme o contexto."
+            },
+            {
+              "id": "bb2026-v04-q03",
+              "prompt": "Preço menor prova maior valor em todo caso?",
+              "options": [
+                "Sim, por definição",
+                "Sim, mesmo inadequado",
+                "Sim, ignorando restrições",
+                "Não; adequação e demais sacrifícios importam"
+              ],
+              "correctIndex": 3,
+              "explanation": "Uma oferta barata pode não resolver a necessidade ou exigir esforço excessivo."
+            },
+            {
+              "id": "bb2026-v04-q04",
+              "prompt": "Plano A custa R$12/mês; B custa R$3 por uso, sem outros encargos. Para dois usos mensais, quanto custa B?",
+              "options": [
+                "R$6",
+                "R$12",
+                "R$3",
+                "R$15"
+              ],
+              "correctIndex": 0,
+              "explanation": "2×3=6 nas condições informadas, sem inventar encargos."
+            },
+            {
+              "id": "bb2026-v04-q05",
+              "prompt": "Com cinco usos, B custaria15 contra12 de A. Isso mostra que:",
+              "options": [
+                "B sempre é melhor",
+                "Frequência pode mudar a comparação",
+                "Preço é irrelevante",
+                "A sempre é gratuita"
+              ],
+              "correctIndex": 1,
+              "explanation": "Os custos do cenário mudam; ainda é preciso avaliar outros critérios de adequação."
+            },
+            {
+              "id": "bb2026-v04-q06",
+              "prompt": "Uma proposta transparente deve:",
+              "options": [
+                "Omitir limites para simplificar",
+                "Prometer valor igual para todos",
+                "Explicar benefício e condições da oferta",
+                "Confundir custo interno e tarifa"
+              ],
+              "correctIndex": 2,
+              "explanation": "Condições permitem avaliar se o benefício atende ao objetivo real."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v04-q01",
+                "bb2026-v04-q02",
+                "bb2026-v04-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v04-q04",
+                "bb2026-v04-q05",
+                "bb2026-v04-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v05",
+          "researchId": "V05",
+          "title": "Experiência e jornada",
+          "level": "Fundamentos e aplicação",
+          "summary": "Mapear etapas e pontos de contato da experiência · Identificar fricção e medir efeito da melhoria",
+          "objectives": [
+            "Mapear etapas e pontos de contato da experiência",
+            "Identificar fricção e medir efeito da melhoria"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A experiência atravessa etapas",
+              "text": "Jornada descreve o percurso para um objetivo, como conhecer oferta, comparar, contratar, usar e buscar suporte. Ponto de contato é uma interação concreta; canal é o meio. Experiência inclui percepções e esforços ao longo do percurso, não apenas o instante de venda. Mapear ações, dúvidas, emoções e passagens entre canais ajuda a localizar fricções. Registro de uma etapa não prova que as seguintes funcionam. Momentos de dificuldade podem orientar prioridades; melhoria deve preservar segurança e privacidade. Medir conclusão, erros e esforço com grupos pertinentes evita celebrar mais cliques quando menos pessoas resolvem o problema."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Usuário inicia pelo app, repete dados na agência e volta ao suporte sem protocolo. Onde está a fricção?",
+              "steps": [
+                "Há perda de contexto na transição entre canais.",
+                "A repetição e ausência de registro elevam esforço.",
+                "Proponha continuidade autorizada e acompanhe resolução."
+              ],
+              "answer": "Melhorar a passagem entre canais, com registro e acesso adequado.",
+              "check": "Aumentar cliques no app sem reduzir repetição não demonstra melhora da jornada."
+            }
+          ],
+          "pitfalls": [
+            "Medir experiência só no momento de contratação.",
+            "Eliminar autenticação para reduzir qualquer fricção."
+          ],
+          "recap": [
+            "Jornada é percurso; contato é interação.",
+            "Continuidade reduz repetição quando autorizada.",
+            "Indicador deve acompanhar resolução e esforço."
+          ],
+          "retrieval": [
+            "Mais cliques podem significar pior experiência?",
+            "Como medir transição app/agência?"
+          ],
+          "notes": "Experiência e jornada\nJornada é percurso; contato é interação.\nContinuidade reduz repetição quando autorizada.\nIndicador deve acompanhar resolução e esforço.\nMedir experiência só no momento de contratação.\nEliminar autenticação para reduzir qualquer fricção.",
+          "suggestions": [
+            "Mapeie uma jornada com três pontos de contato.",
+            "Identifique fricção sem remover segurança.",
+            "Escolha indicador de resolução para uma melhoria."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — decisão de compra",
+              "url": "https://openstax.org/books/principles-marketing/pages/3-3-the-consumer-purchasing-decision-process"
+            },
+            {
+              "title": "OpenStax — planejamento de marketing",
+              "url": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+            },
+            {
+              "title": "LGPD compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v05-q01",
+              "prompt": "Jornada é:",
+              "options": [
+                "Somente a campanha",
+                "Somente o contrato",
+                "Percurso do cliente para um objetivo",
+                "Apenas uma ligação"
+              ],
+              "correctIndex": 2,
+              "explanation": "Reúne etapas e contatos antes/durante/depois conforme o objetivo analisado."
+            },
+            {
+              "id": "bb2026-v05-q02",
+              "prompt": "Repetir dados em canais por perda de contexto revela:",
+              "options": [
+                "Garantia de qualidade",
+                "Aumento certo de valor",
+                "Segmentação demográfica",
+                "Fricção de transição"
+              ],
+              "correctIndex": 3,
+              "explanation": "A passagem exige esforço redundante e pode impedir continuidade."
+            },
+            {
+              "id": "bb2026-v05-q03",
+              "prompt": "Indicador mais pertinente para avaliar resolução é:",
+              "options": [
+                "Proporção de demandas efetivamente concluídas",
+                "Número de cores do app",
+                "Cliques sem relação com objetivo",
+                "Tamanho do slogan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Concluir a demanda mede efeito no objetivo; cliques isolados não bastam."
+            },
+            {
+              "id": "bb2026-v05-q04",
+              "prompt": "Reduzir fricção de forma adequada significa:",
+              "options": [
+                "Eliminar toda autenticação",
+                "Simplificar mantendo controles pertinentes",
+                "Compartilhar qualquer dado entre terceiros",
+                "Ocultar etapas obrigatórias"
+              ],
+              "correctIndex": 1,
+              "explanation": "Usabilidade e segurança precisam coexistir; acesso deve ser adequado e autorizado."
+            },
+            {
+              "id": "bb2026-v05-q05",
+              "prompt": "Ponto de contato e canal são:",
+              "options": [
+                "Sempre sinônimos exatos",
+                "Indicadores financeiros",
+                "Interação concreta e meio usado, respectivamente",
+                "Ambos somente agência física"
+              ],
+              "correctIndex": 2,
+              "explanation": "Uma mesma ligação é contato num canal telefônico; o canal comporta vários contatos."
+            },
+            {
+              "id": "bb2026-v05-q06",
+              "prompt": "Maior volume de acessos com mais abandonos permite afirmar:",
+              "options": [
+                "Melhora certa da experiência",
+                "Problema resolvido",
+                "Satisfação universal",
+                "Acesso sozinho não prova melhoria"
+              ],
+              "correctIndex": 3,
+              "explanation": "É preciso analisar conclusão, abandono e esforço, preservando o significado de cada indicador."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v05-q01",
+                "bb2026-v05-q02",
+                "bb2026-v05-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/3-3-the-consumer-purchasing-decision-process",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v05-q04",
+                "bb2026-v05-q05",
+                "bb2026-v05-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/3-3-the-consumer-purchasing-decision-process",
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v06",
+          "researchId": "V06",
+          "title": "Aprendizagem e sustentabilidade",
+          "level": "Fundamentos e aplicação",
+          "summary": "Transformar feedback em aprendizado verificável · Relacionar decisões a efeitos sociais, ambientais e econômicos",
+          "objectives": [
+            "Transformar feedback em aprendizado verificável",
+            "Relacionar decisões a efeitos sociais, ambientais e econômicos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Aprender muda a prática com evidência",
+              "text": "Uma organização aprende quando registra experiências, analisa padrões, testa mudanças e incorpora o que funciona. Treinamento isolado não comprova mudança de comportamento. Feedback de clientes, erros e reclamações pode orientar revisão, sem expor dados pessoais desnecessários. Sustentabilidade considera efeitos no tempo e dimensões ambientais, sociais e econômicas; não se limita a reduzir papel. Uma ação pode deslocar custos ou excluir pessoas, exigindo avaliação de consequências. Comunicação deve apoiar-se em critérios e resultados verificáveis; chamar algo de verde sem evidência cria risco de greenwashing. Equipes precisam de espaço para relatar problemas e revisar rotinas, não incentivo a escondê-los."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Digitalizar um formulário reduziu papel, mas elevou dificuldade de acesso de parte do público. Como avaliar?",
+              "steps": [
+                "Identifique redução material e a barreira de acesso.",
+                "Teste formulário acessível e apoio por canais pertinentes.",
+                "Acompanhe consumo e conclusão por diferentes grupos."
+              ],
+              "answer": "Avaliar efeitos ambientais e sociais e ajustar inclusão.",
+              "check": "Redução de papel sozinha não comprova sustentabilidade integral se o objetivo público ficou inacessível."
+            }
+          ],
+          "pitfalls": [
+            "Tomar horas de treinamento como prova de aprendizado aplicado.",
+            "Prometer sustentabilidade por uma única medida sem dados."
+          ],
+          "recap": [
+            "Aprendizado exige mudança e avaliação.",
+            "Sustentabilidade envolve efeitos e horizonte temporal.",
+            "Alegações precisam de evidência."
+          ],
+          "retrieval": [
+            "Como distinguir curso concluído de prática melhorada?",
+            "Qual efeito social de um canal exclusivamente digital?"
+          ],
+          "notes": "Aprendizagem e sustentabilidade\nAprendizado exige mudança e avaliação.\nSustentabilidade envolve efeitos e horizonte temporal.\nAlegações precisam de evidência.\nTomar horas de treinamento como prova de aprendizado aplicado.\nPrometer sustentabilidade por uma única medida sem dados.",
+          "suggestions": [
+            "Proponha teste de uma melhoria aprendida.",
+            "Avalie efeitos de digitalização além do papel.",
+            "Identifique alegação ambiental sem evidência."
+          ],
+          "sources": [
+            {
+              "title": "Senge e colaboradores — Learning for Sustainability",
+              "url": "https://solonline.org/wp-content/uploads/2016/12/Learning-for-Sustainabilty-e-book.pdf"
+            },
+            {
+              "title": "ASQ — ciclo de melhoria",
+              "url": "https://asq.org/quality-resources/pdca-cycle"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v06-q01",
+              "prompt": "Aprendizado organizacional é evidenciado melhor por:",
+              "options": [
+                "Mudança aplicada e avaliada",
+                "Só número de cursos",
+                "Só certificado impresso",
+                "Ocultação de erros"
+              ],
+              "correctIndex": 0,
+              "explanation": "Aprender deve transformar práticas e produzir evidência, além de exposição a treinamento."
+            },
+            {
+              "id": "bb2026-v06-q02",
+              "prompt": "Reduzir papel com canal inacessível exige:",
+              "options": [
+                "Celebrar sem avaliar",
+                "Examinar barreira social e adaptar acesso",
+                "Excluir quem tem dificuldade",
+                "Afirmar sustentabilidade total"
+              ],
+              "correctIndex": 1,
+              "explanation": "É necessário avaliar consequências e acessibilidade juntamente com consumo material."
+            },
+            {
+              "id": "bb2026-v06-q03",
+              "prompt": "Greenwashing envolve:",
+              "options": [
+                "Toda medida ambiental",
+                "Todo canal digital",
+                "Alegação ambiental enganosa ou sem suporte pertinente",
+                "Qualquer treinamento"
+              ],
+              "correctIndex": 2,
+              "explanation": "A crítica está na comunicação/alegação, não na existência de iniciativa ambiental em si."
+            },
+            {
+              "id": "bb2026-v06-q04",
+              "prompt": "Reclamações úteis para aprender devem ser:",
+              "options": [
+                "Apagadas sempre",
+                "Publicadas com todos os dados pessoais",
+                "Ignoradas para não reduzir vendas",
+                "Analisadas em padrões com proteção dos dados"
+              ],
+              "correctIndex": 3,
+              "explanation": "Aprender com evidência não dispensa confidencialidade e necessidade no tratamento."
+            },
+            {
+              "id": "bb2026-v06-q05",
+              "prompt": "Dimensão econômica sustentável significa:",
+              "options": [
+                "Considerar viabilidade no tempo junto aos demais efeitos",
+                "Lucro imediato a qualquer custo",
+                "Ausência de custos",
+                "Somente cortar pessoal"
+              ],
+              "correctIndex": 0,
+              "explanation": "Viabilidade temporal integra a análise; não elimina responsabilidades sociais e ambientais."
+            },
+            {
+              "id": "bb2026-v06-q06",
+              "prompt": "Uma mudança testada deve ser incorporada quando:",
+              "options": [
+                "Recebeu nome atraente",
+                "Resultados pertinentes sustentam sua adoção",
+                "É igual à propaganda rival",
+                "Dispensa qualquer acompanhamento"
+              ],
+              "correctIndex": 1,
+              "explanation": "A avaliação informa decisão e pode exigir ajustes; nome não é evidência."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v06-q01",
+                "bb2026-v06-q02",
+                "bb2026-v06-q03"
+              ],
+              "sourceUrls": [
+                "https://solonline.org/wp-content/uploads/2016/12/Learning-for-Sustainabilty-e-book.pdf",
+                "https://asq.org/quality-resources/pdca-cycle"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v06-q04",
+                "bb2026-v06-q05",
+                "bb2026-v06-q06"
+              ],
+              "sourceUrls": [
+                "https://solonline.org/wp-content/uploads/2016/12/Learning-for-Sustainabilty-e-book.pdf",
+                "https://asq.org/quality-resources/pdca-cycle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v07",
+          "researchId": "V07",
+          "title": "Particularidades dos serviços",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar características do serviço à gestão da entrega · Planejar capacidade e evidências sem promessas absolutas",
+          "objectives": [
+            "Relacionar características do serviço à gestão da entrega",
+            "Planejar capacidade e evidências sem promessas absolutas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Serviço envolve processo e interação",
+              "text": "Intangibilidade dificulta examinar o serviço inteiro antes de utilizá-lo; explicações e evidências ajudam a reduzir incerteza. Variabilidade significa que execução pode mudar com pessoas, canais e condições, exigindo padrões e acompanhamento. Inseparabilidade descreve muitos serviços cuja produção e consumo se relacionam no contato, com participação do cliente; nem todo serviço digital é simultâneo em cada etapa. Perecibilidade da capacidade significa que um horário de atendimento não usado não é estocado como objeto para amanhã. Qualidade pode melhorar com processo, formação e tecnologia; padronização não elimina toda variação nem justifica ignorar necessidades particulares."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Um posto tem horários vazios pela manhã e fila à tarde. O que a perecibilidade ajuda a compreender?",
+              "steps": [
+                "Capacidade ociosa da manhã não pode ser guardada como atendimento já produzido.",
+                "Mapeie demanda e ajuste equipe/agendamento.",
+                "Acompanhe espera e conclusão, evitando deslocar barreira ao cliente."
+              ],
+              "answer": "Gerir capacidade e distribuição da demanda.",
+              "check": "Guardar “horas sobrando” em arquivo não cria atendimento simultâneo à tarde; ajustar recursos enfrenta o problema real."
+            }
+          ],
+          "pitfalls": [
+            "Dizer que serviços nunca podem ter etapas assíncronas.",
+            "Confundir capacidade não estocável com impossibilidade de registrar informação."
+          ],
+          "recap": [
+            "Intangibilidade pede evidências claras.",
+            "Variabilidade pede processo e adaptação.",
+            "Capacidade ociosa não vira estoque de atendimento."
+          ],
+          "retrieval": [
+            "Como contrato e demonstração ajudam antes do uso?",
+            "Uma mensagem assíncrona elimina todas as características de serviço?"
+          ],
+          "notes": "Particularidades dos serviços\nIntangibilidade pede evidências claras.\nVariabilidade pede processo e adaptação.\nCapacidade ociosa não vira estoque de atendimento.\nDizer que serviços nunca podem ter etapas assíncronas.\nConfundir capacidade não estocável com impossibilidade de registrar informação.",
+          "suggestions": [
+            "Relacione uma característica de serviço a uma decisão.",
+            "Planeje capacidade num caso de fila.",
+            "Compare padronização e adaptação ao cliente."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — serviços",
+              "url": "https://openstax.org/books/principles-marketing/pages/11-1-classification-of-services"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v07-q01",
+              "prompt": "Dificuldade de inspecionar serviço completo antes do uso liga-se à:",
+              "options": [
+                "Perecibilidade",
+                "Intangibilidade",
+                "Concordância",
+                "Segmentação geográfica"
+              ],
+              "correctIndex": 1,
+              "explanation": "Serviço não é integralmente examinável como um objeto; evidências auxiliam avaliação."
+            },
+            {
+              "id": "bb2026-v07-q02",
+              "prompt": "Diferenças de execução entre atendimentos referem-se à:",
+              "options": [
+                "Identidade",
+                "Estocagem",
+                "Variabilidade",
+                "Liquidez financeira"
+              ],
+              "correctIndex": 2,
+              "explanation": "Processo, formação e monitoramento ajudam a reduzir variações prejudiciais."
+            },
+            {
+              "id": "bb2026-v07-q03",
+              "prompt": "Horário ocioso que não vira estoque de atendimento exemplifica:",
+              "options": [
+                "Tangibilidade",
+                "Preço baixo",
+                "Imagem",
+                "Perecibilidade da capacidade"
+              ],
+              "correctIndex": 3,
+              "explanation": "Capacidade daquele período não utilizada não é transportada como serviço produzido."
+            },
+            {
+              "id": "bb2026-v07-q04",
+              "prompt": "Medida pertinente para incerteza antes do uso é:",
+              "options": [
+                "Explicar condições e apresentar evidências verificáveis",
+                "Prometer ausência de todo risco",
+                "Ocultar processo",
+                "Garantir perfeição universal"
+              ],
+              "correctIndex": 0,
+              "explanation": "Informação clara ajuda a avaliar expectativa sem criar garantia absoluta."
+            },
+            {
+              "id": "bb2026-v07-q05",
+              "prompt": "Padronização adequada procura:",
+              "options": [
+                "Eliminar qualquer necessidade individual",
+                "Dar consistência e permitir adaptações pertinentes",
+                "Trocar qualidade por rigidez absoluta",
+                "Impedir monitoramento"
+              ],
+              "correctIndex": 1,
+              "explanation": "Padrões sustentam entrega; adaptações podem ser necessárias à acessibilidade e adequação."
+            },
+            {
+              "id": "bb2026-v07-q06",
+              "prompt": "Sobre simultaneidade produção/consumo, é correto:",
+              "options": [
+                "Todo serviço exige presença física",
+                "Serviço digital nunca envolve interação",
+                "Há serviços/etapas assíncronos; características pedem contexto",
+                "Todo serviço é objeto estocável"
+              ],
+              "correctIndex": 2,
+              "explanation": "Não se deve transformar uma característica comum em universal para todas as etapas e tecnologias."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v07-q01",
+                "bb2026-v07-q02",
+                "bb2026-v07-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/11-1-classification-of-services"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v07-q04",
+                "bb2026-v07-q05",
+                "bb2026-v07-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/11-1-classification-of-services"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v08",
+          "researchId": "V08",
+          "title": "Qualidade em serviços",
+          "level": "Fundamentos e aplicação",
+          "summary": "Comparar expectativa, entrega e diferentes indicadores · Calcular NPS sem confundir recomendação com toda satisfação",
+          "objectives": [
+            "Comparar expectativa, entrega e diferentes indicadores",
+            "Calcular NPS sem confundir recomendação com toda satisfação"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Qualidade precisa de critério e evidência",
+              "text": "O modelo de lacunas examina descompassos entre necessidades/expectativas, entendimento da organização, padrões, execução e comunicação. Confiabilidade, resposta, confiança transmitida pela competência, empatia e elementos tangíveis ajudam a analisar serviço, sem substituir exigências legais. Satisfação pode variar conforme expectativa e contexto; uma reclamação não resume todo público, mas pode mostrar falha grave. Use indicadores complementares: resolução, espera, erros, esforço e avaliação. NPS, método associado a Bain/Reichheld, mede disposição declarada para recomendar: notas9–10 promotores,7–8 passivos,0–6 detratores. É percentual de promotores menos detratores, com todos os respondentes válidos no denominador. Vai de−100 a+100; não mede sozinho qualidade ou fidelidade real."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "De20 respostas válidas ao NPS,12 são promotores,5 passivos e3 detratores. Calcule.",
+              "steps": [
+                "Promotores:12/20=60%. Detratores:3/20=15%.",
+                "NPS=60−15."
+              ],
+              "answer": "45 pontos de NPS.",
+              "check": "Passivos seguem no total20; excluir5 alteraria indevidamente o denominador. É diferença de percentuais, não nota média."
+            }
+          ],
+          "pitfalls": [
+            "Excluir passivos do denominador.",
+            "Usar NPS como prova de toda satisfação ou retorno financeiro."
+          ],
+          "recap": [
+            "Expectativa, padrão e execução podem divergir.",
+            "Indicadores têm escopos diferentes.",
+            "NPS subtrai percentuais com todos os válidos no total."
+          ],
+          "retrieval": [
+            "Nota8 conta como promotor?",
+            "Por que medir resolução junto com recomendação?"
+          ],
+          "notes": "Qualidade em serviços\nExpectativa, padrão e execução podem divergir.\nIndicadores têm escopos diferentes.\nNPS subtrai percentuais com todos os válidos no total.\nExcluir passivos do denominador.\nUsar NPS como prova de toda satisfação ou retorno financeiro.",
+          "suggestions": [
+            "Calcule NPS com passivos no denominador.",
+            "Localize uma lacuna de qualidade num caso.",
+            "Escolha indicadores complementares de atendimento."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — lacunas de qualidade",
+              "url": "https://openstax.org/books/principles-marketing/pages/11-3-the-gap-model-of-service-quality"
+            },
+            {
+              "title": "Bain — cálculo do NPS",
+              "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v08-q01",
+              "prompt": "Nota8 na metodologia NPS classifica respondente como:",
+              "options": [
+                "Passivo",
+                "Promotor",
+                "Detrator",
+                "Resposta inválida automaticamente"
+              ],
+              "correctIndex": 0,
+              "explanation": "Notas7–8 são passivos, mas entram no denominador de respostas válidas."
+            },
+            {
+              "id": "bb2026-v08-q02",
+              "prompt": "No NPS,20 respostas válidas:12 promotores,5 passivos,3 detratores. Qual resultado?",
+              "options": [
+                "60",
+                "45",
+                "9",
+                "75"
+              ],
+              "correctIndex": 1,
+              "explanation": "60%−15%=45 pontos, usando todos os20 respondentes válidos."
+            },
+            {
+              "id": "bb2026-v08-q03",
+              "prompt": "O denominador do NPS inclui:",
+              "options": [
+                "Somente promotores",
+                "Somente detratores",
+                "Todos os respondentes válidos, inclusive passivos",
+                "Somente quem contratou novamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "A classificação de passivo não retira a resposta válida do total."
+            },
+            {
+              "id": "bb2026-v08-q04",
+              "prompt": "NPS alto demonstra necessariamente:",
+              "options": [
+                "Ausência de falhas",
+                "Lucro garantido",
+                "Resolução de toda demanda",
+                "Disposição declarada de recomendação nessa medição"
+              ],
+              "correctIndex": 3,
+              "explanation": "O indicador tem alcance específico e limites amostrais; não prova os outros resultados."
+            },
+            {
+              "id": "bb2026-v08-q05",
+              "prompt": "Promessa de atendimento imediato com fila longa revela descompasso entre:",
+              "options": [
+                "Comunicação e entrega",
+                "Somente cor e tipografia",
+                "Apenas juros e inflação",
+                "Sempre segmentação etária"
+              ],
+              "correctIndex": 0,
+              "explanation": "A promessa não coincide com o serviço observado."
+            },
+            {
+              "id": "bb2026-v08-q06",
+              "prompt": "Para avaliar solução de problemas, complemente NPS com:",
+              "options": [
+                "Quantidade de slogans",
+                "Taxa de resolução e reincidência",
+                "Tamanho da agência apenas",
+                "Notas sem contexto e sem amostra"
+              ],
+              "correctIndex": 1,
+              "explanation": "Resolução e retorno do mesmo problema aproximam a avaliação do objetivo do atendimento."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v08-q01",
+                "bb2026-v08-q02",
+                "bb2026-v08-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/11-3-the-gap-model-of-service-quality",
+                "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v08-q04",
+                "bb2026-v08-q05",
+                "bb2026-v08-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/11-3-the-gap-model-of-service-quality",
+                "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v09",
+          "researchId": "V09",
+          "title": "Melhoria dos processos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Mapear processo e localizar retrabalho ou gargalo · Testar melhoria e comparar resultados pertinentes",
+          "objectives": [
+            "Mapear processo e localizar retrabalho ou gargalo",
+            "Testar melhoria e comparar resultados pertinentes"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Processo transforma entradas em resultados",
+              "text": "Um processo tem objetivo, entradas, atividades, responsáveis, controles e saídas. Gargalo limita fluxo; retrabalho repete atividade por erro ou insuficiência. Fluxograma descreve etapas/decisões e passagens de responsabilidade, não prova causa por desenho. PDCA organiza planejar, executar teste, conferir resultados e agir com ajustes/padronização; a ASQ apresenta esse método. PDSA, defendido pelo Deming Institute, destaca Study e aprendizagem, não deve ser atribuído como nome idêntico sem distinção. Defina linha de base e medida antes do teste; comparar períodos diferentes sem considerar demanda pode induzir conclusão errada. Controle de qualidade não justifica retirar proteção ou informação necessária."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma equipe quer reduzir formulários devolvidos por campo incompleto. Proponha teste.",
+              "steps": [
+                "Linha de base:30 devoluções em100 formulários,30%.",
+                "Teste instrução mais clara num grupo comparável.",
+                "Observe devoluções, conclusão e tempo antes de decidir."
+              ],
+              "answer": "Testar orientação e comparar taxas com contexto.",
+              "check": "Se houver12 devoluções em60 formulários, taxa20%, não12%; mudança sugere melhora, mas exige condições/amostra para atribuir causa."
+            }
+          ],
+          "pitfalls": [
+            "Comparar só contagens quando os volumes diferem.",
+            "Padronizar uma solução antes de conferir efeito."
+          ],
+          "recap": [
+            "Mapeamento identifica etapas e transições.",
+            "PDCA inclui verificação e ação.",
+            "Teste exige linha de base e medida pertinente."
+          ],
+          "retrieval": [
+            "12 erros em60 casos são quantos por cento?",
+            "Fluxograma sozinho prova causa?"
+          ],
+          "notes": "Melhoria dos processos\nMapeamento identifica etapas e transições.\nPDCA inclui verificação e ação.\nTeste exige linha de base e medida pertinente.\nComparar só contagens quando os volumes diferem.\nPadronizar uma solução antes de conferir efeito.",
+          "suggestions": [
+            "Monte um teste de melhoria com linha de base.",
+            "Compare taxas com denominadores diferentes.",
+            "Explique diferença entre gargalo e retrabalho."
+          ],
+          "sources": [
+            {
+              "title": "ASQ — PDCA",
+              "url": "https://asq.org/quality-resources/pdca-cycle"
+            },
+            {
+              "title": "Deming Institute — PDSA",
+              "url": "https://deming.org/explore/pdsa/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v09-q01",
+              "prompt": "Repetir cadastro por erro anterior é exemplo de:",
+              "options": [
+                "Capacidade ociosa",
+                "Retrabalho",
+                "Posicionamento",
+                "Imagem de marca"
+              ],
+              "correctIndex": 1,
+              "explanation": "A atividade é refeita por falha; não representa uma nova demanda independente."
+            },
+            {
+              "id": "bb2026-v09-q02",
+              "prompt": "Na sequência PDCA, conferir resultados corresponde a:",
+              "options": [
+                "Plan",
+                "Do",
+                "Check",
+                "Act"
+              ],
+              "correctIndex": 2,
+              "explanation": "Check compara resultados ao esperado; Act decide incorporar/ajustar com base no aprendizado."
+            },
+            {
+              "id": "bb2026-v09-q03",
+              "prompt": "12 devoluções em60 formulários representam:",
+              "options": [
+                "12%",
+                "60%",
+                "5%",
+                "20%"
+              ],
+              "correctIndex": 3,
+              "explanation": "12/60×100=20%; contagem não é taxa por si só."
+            },
+            {
+              "id": "bb2026-v09-q04",
+              "prompt": "Antes de testar orientação nova, convém definir:",
+              "options": [
+                "Linha de base e medidas de resultado",
+                "Só o nome da campanha",
+                "Garantia prévia de sucesso",
+                "Eliminação de toda verificação"
+              ],
+              "correctIndex": 0,
+              "explanation": "Critério anterior ao teste permite avaliar efeito de modo consistente."
+            },
+            {
+              "id": "bb2026-v09-q05",
+              "prompt": "Um gargalo é uma etapa que:",
+              "options": [
+                "Tem maior número de cores",
+                "Limita capacidade/fluxo do processo",
+                "Sempre deve ser eliminada sem análise",
+                "Nunca envolve controle"
+              ],
+              "correctIndex": 1,
+              "explanation": "A etapa restritiva pode ser necessária; ajuste exige análise da capacidade e das consequências."
+            },
+            {
+              "id": "bb2026-v09-q06",
+              "prompt": "Comparar30 erros em100 casos com12 em60 exige:",
+              "options": [
+                "Só comparar30 e12",
+                "Assumir causa automaticamente",
+                "Calcular taxas e considerar condições dos grupos",
+                "Ignorar volume"
+              ],
+              "correctIndex": 2,
+              "explanation": "30% e20% são medidas comparáveis, mas causalidade ainda depende do desenho e contexto."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v09-q01",
+                "bb2026-v09-q02",
+                "bb2026-v09-q03"
+              ],
+              "sourceUrls": [
+                "https://asq.org/quality-resources/pdca-cycle",
+                "https://deming.org/explore/pdsa/"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v09-q04",
+                "bb2026-v09-q05",
+                "bb2026-v09-q06"
+              ],
+              "sourceUrls": [
+                "https://asq.org/quality-resources/pdca-cycle",
+                "https://deming.org/explore/pdsa/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v10",
+          "researchId": "V10",
+          "title": "Ferramentas da qualidade",
+          "level": "Fundamentos e aplicação",
+          "summary": "Selecionar ferramenta conforme pergunta e dados · Distinguir prioridade descritiva de hipótese causal",
+          "objectives": [
+            "Selecionar ferramenta conforme pergunta e dados",
+            "Distinguir prioridade descritiva de hipótese causal"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Cada ferramenta responde uma pergunta",
+              "text": "Folha de verificação coleta ocorrências com critério consistente. Pareto ordena categorias por uma medida, como quantidade ou custo, ajudando a priorizar; concentração80/20 não é obrigação nem lei exata dos dados. Ishikawa organiza causas possíveis em ramos; categorias como6Ms podem ser adaptadas ao serviço. Histograma mostra distribuição de valores; dispersão mostra relação entre duas variáveis, sem provar causa. Fluxograma descreve processo e gráfico de controle acompanha variação no tempo com limites calculados, diferentes de metas. Escolher a ferramenta começa pela pergunta, qualidade da coleta e definição da unidade."
+            },
+            {
+              "type": "table",
+              "title": "Ocorrências de exemplo",
+              "columns": [
+                "Categoria",
+                "Quantidade"
+              ],
+              "rows": [
+                [
+                  "Cadastro",
+                  "18"
+                ],
+                [
+                  "Prazo",
+                  "9"
+                ],
+                [
+                  "Orientação",
+                  "3"
+                ]
+              ],
+              "caption": "Contagem total30; número de ocorrências não representa automaticamente custo ou gravidade."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Use os dados da tabela para prioridade por frequência.",
+              "steps": [
+                "Ordenação18,9,3 já é decrescente.",
+                "Cadastro representa18/30=60%.",
+                "Cadastro+Prazo representam27/30=90%."
+              ],
+              "answer": "Cadastro é primeiro por frequência; dois grupos acumulam90%.",
+              "check": "Não surgiu80/20 exato e frequência não comprova causa nem maior gravidade."
+            }
+          ],
+          "pitfalls": [
+            "Tratar espinha de peixe como prova causal.",
+            "Chamar qualquer concentração de regra80/20 demonstrada."
+          ],
+          "recap": [
+            "Ferramenta depende da pergunta.",
+            "Pareto prioriza pela métrica declarada.",
+            "Hipótese de causa exige investigação/teste."
+          ],
+          "retrieval": [
+            "Qual ferramenta descreve etapas?",
+            "Correlação em dispersão prova causa?"
+          ],
+          "notes": "Ferramentas da qualidade\nFerramenta depende da pergunta.\nPareto prioriza pela métrica declarada.\nHipótese de causa exige investigação/teste.\nTratar espinha de peixe como prova causal.\nChamar qualquer concentração de regra80/20 demonstrada.",
+          "suggestions": [
+            "Monte Pareto com métrica explícita.",
+            "Organize hipóteses de causa num Ishikawa.",
+            "Escolha ferramenta para uma pergunta de qualidade."
+          ],
+          "sources": [
+            {
+              "title": "ASQ — Pareto",
+              "url": "https://asq.org/quality-resources/pareto"
+            },
+            {
+              "title": "ASQ — Ishikawa",
+              "url": "https://asq.org/quality-resources/fishbone"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v10-q01",
+              "prompt": "Para ordenar categorias por quantidade de falhas, use:",
+              "options": [
+                "Histograma de idade",
+                "Pareto com frequência definida",
+                "Somente organograma",
+                "Matriz de posse"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pareto ordena categorias pela medida escolhida; idade não responde a essa pergunta."
+            },
+            {
+              "id": "bb2026-v10-q02",
+              "prompt": "Ishikawa registra:",
+              "options": [
+                "Causas já comprovadas sempre",
+                "Lucro obrigatório",
+                "Possíveis causas organizadas para investigar",
+                "Percentual fixo80/20"
+              ],
+              "correctIndex": 2,
+              "explanation": "O diagrama ajuda a formular investigação; sua presença não valida causalidade."
+            },
+            {
+              "id": "bb2026-v10-q03",
+              "prompt": "Na tabela18/9/3, as duas maiores categorias somam:",
+              "options": [
+                "80%",
+                "60%",
+                "30%",
+                "90%"
+              ],
+              "correctIndex": 3,
+              "explanation": "(18+9)/30=27/30=90%."
+            },
+            {
+              "id": "bb2026-v10-q04",
+              "prompt": "Se prioridade for custo das falhas, o Pareto deve:",
+              "options": [
+                "Usar custo por categoria, não assumir frequência equivalente",
+                "Ignorar a métrica",
+                "Manter frequência como prova de custo",
+                "Somar apenas nomes"
+              ],
+              "correctIndex": 0,
+              "explanation": "Categorias frequentes podem ter menor custo; a unidade precisa seguir a pergunta."
+            },
+            {
+              "id": "bb2026-v10-q05",
+              "prompt": "Uma dispersão mostra associação entre espera e reclamação. Isso:",
+              "options": [
+                "Prova qualquer causa",
+                "Sugere relação a investigar, sem prova causal isolada",
+                "Elimina variável externa",
+                "Demonstra regra legal"
+              ],
+              "correctIndex": 1,
+              "explanation": "Associação pode sofrer influência de outros fatores e desenho de coleta."
+            },
+            {
+              "id": "bb2026-v10-q06",
+              "prompt": "Limites de controle e metas são:",
+              "options": [
+                "Sempre iguais",
+                "Ambos escolhidos só por slogan",
+                "Conceitos distintos: variação do processo e objetivo",
+                "Sempre dispensáveis"
+              ],
+              "correctIndex": 2,
+              "explanation": "Limites são obtidos do comportamento do processo; meta expressa resultado desejado."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-v10-q01",
+                "bb2026-v10-q02",
+                "bb2026-v10-q03"
+              ],
+              "sourceUrls": [
+                "https://asq.org/quality-resources/pareto",
+                "https://asq.org/quality-resources/fishbone"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-v10-q04",
+                "bb2026-v10-q05",
+                "bb2026-v10-q06"
+              ],
+              "sourceUrls": [
+                "https://asq.org/quality-resources/pareto",
+                "https://asq.org/quality-resources/fishbone"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v11",
+          "researchId": "V11",
+          "title": "Processo de venda",
+          "level": "Fundamentos e aplicação",
+          "summary": "Diagnosticar necessidade e apresentar proposta adequada · Tratar objeção, decisão e pós-venda sem coerção",
+          "objectives": [
+            "Diagnosticar necessidade e apresentar proposta adequada",
+            "Tratar objeção, decisão e pós-venda sem coerção"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Venda responsável começa antes da proposta",
+              "text": "Preparação identifica oferta, regras e público; aproximação estabelece diálogo; diagnóstico usa perguntas abertas e confirmação da necessidade. Proposta relaciona benefício às condições reais, incluindo custos e limites. Objeção pode ser dúvida, restrição ou falta de adequação; ouvir e esclarecer é diferente de pressionar. Fechamento confirma entendimento e decisão livre, com registro pertinente. Pós-venda acompanha uso e solução de problemas. Venda adicional deve atender uma necessidade, não virar condição abusiva para obter outro produto. Métrica de conversão precisa caminhar com adequação, cancelamentos e reclamações."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Cliente diz “não posso assumir pagamento mensal”. O vendedor oferece contrato anual sem esclarecer cobranças. Como corrigir?",
+              "steps": [
+                "Pergunte se a restrição é orçamento, frequência de uso ou obrigação recorrente.",
+                "Compare alternativas pertinentes e custo total.",
+                "Permita recusa e confirme entendimento antes de contratar."
+              ],
+              "answer": "Tratar a restrição e adequação, sem disfarçar cobrança.",
+              "check": "Trocar nome mensal por anual sem mudar obrigação e clareza não resolve a objeção informada."
+            }
+          ],
+          "pitfalls": [
+            "Responder objeção antes de entender sua natureza.",
+            "Tomar silêncio ou dúvida como aceite."
+          ],
+          "recap": [
+            "Diagnóstico orienta proposta.",
+            "Objeção exige escuta e esclarecimento.",
+            "Decisão e pós-venda integram o processo."
+          ],
+          "retrieval": [
+            "Qual pergunta aberta esclarece frequência de uso?",
+            "Por que conversão isolada pode ocultar problema?"
+          ],
+          "notes": "Processo de venda\nDiagnóstico orienta proposta.\nObjeção exige escuta e esclarecimento.\nDecisão e pós-venda integram o processo.\nResponder objeção antes de entender sua natureza.\nTomar silêncio ou dúvida como aceite.",
+          "suggestions": [
+            "Monte diagnóstico com perguntas abertas.",
+            "Trate uma objeção de custo com transparência.",
+            "Planeje pós-venda sem pressão comercial."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — marketing",
+              "url": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+            },
+            {
+              "title": "CMN4.949 — relacionamento com clientes",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v11-q01",
+              "prompt": "Pergunta mais útil para diagnosticar necessidade é:",
+              "options": [
+                "Você vai contratar agora, certo?",
+                "Qual problema você precisa resolver e com que frequência?",
+                "Posso ignorar seu orçamento?",
+                "Você aceita sem ler?"
+              ],
+              "correctIndex": 1,
+              "explanation": "É aberta e conecta finalidade/frequência à adequação da proposta."
+            },
+            {
+              "id": "bb2026-v11-q02",
+              "prompt": "Uma objeção de custo deve ser tratada por:",
+              "options": [
+                "Insistência até ceder",
+                "Omissão da cobrança",
+                "Esclarecer restrição e comparar alternativas adequadas",
+                "Prometer custo zero sem condição"
+              ],
+              "correctIndex": 2,
+              "explanation": "Escuta e comparação responsável preservam a escolha informada."
+            },
+            {
+              "id": "bb2026-v11-q03",
+              "prompt": "Fechamento adequado exige:",
+              "options": [
+                "Pressa e silêncio como aceite",
+                "Nome do cliente apenas",
+                "Apenas meta do vendedor",
+                "Entendimento e decisão livre com registro pertinente"
+              ],
+              "correctIndex": 3,
+              "explanation": "Não se presume aceitação a partir de ausência de objeção."
+            },
+            {
+              "id": "bb2026-v11-q04",
+              "prompt": "Venda adicional é pertinente quando:",
+              "options": [
+                "Atende necessidade e respeita escolha/condições",
+                "É imposta para qualquer outro serviço",
+                "Sempre ignora o orçamento",
+                "Dispensa informação"
+              ],
+              "correctIndex": 0,
+              "explanation": "Complementaridade não autoriza venda casada ou oferta inadequada."
+            },
+            {
+              "id": "bb2026-v11-q05",
+              "prompt": "Pós-venda busca:",
+              "options": [
+                "Só nova compra imediata",
+                "Acompanhar uso e resolver problemas",
+                "Eliminar canais de suporte",
+                "Reverter toda recusa"
+              ],
+              "correctIndex": 1,
+              "explanation": "Sustenta a entrega e a relação após a contratação."
+            },
+            {
+              "id": "bb2026-v11-q06",
+              "prompt": "Conversão alta com muitos cancelamentos pede:",
+              "options": [
+                "Apenas celebrar",
+                "Ignorar desistências",
+                "Examinar adequação e entendimento na venda",
+                "Aumentar pressão"
+              ],
+              "correctIndex": 2,
+              "explanation": "Resultado posterior pode revelar venda mal explicada ou oferta inadequada."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v11-q01",
+                "bb2026-v11-q02",
+                "bb2026-v11-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v11-q04",
+                "bb2026-v11-q05",
+                "bb2026-v11-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v12",
+          "researchId": "V12",
+          "title": "Marketing digital",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar canal, mensagem e etapa de decisão · Calcular indicadores com denominador e limites",
+          "objectives": [
+            "Relacionar canal, mensagem e etapa de decisão",
+            "Calcular indicadores com denominador e limites"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Alcançar não significa resolver ou contratar",
+              "text": "Marketing digital usa meios como conteúdo, pesquisa, e-mail e redes sociais para atender objetivos e públicos. SEO trabalha descoberta orgânica; mídia paga compra exposição segundo regras da plataforma; ambos exigem conteúdo pertinente e condições transparentes. Alcance conta pessoas/contas expostas segundo método; impressões contam exibições; clique não é contratação. Conversão precisa de ação definida e denominador, como cadastros por visitas válidas. Teste A/B compara versões com distribuição e medida adequadas, sem trocar simultaneamente muitos fatores e atribuir efeito certo. Dados pessoais, cookies e mensagens pedem finalidade/base/controles pertinentes; consentimento não é base única nem autorização ilimitada."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma página teve200 visitas válidas e16 pedidos completos. Qual conversão para essa ação?",
+              "steps": [
+                "Defina ação:pedido completo.",
+                "Taxa16/200×100."
+              ],
+              "answer": "8% de visitas converteram em pedido completo.",
+              "check": "Não se chamam16 pedidos de16%; número de vendas finais pode ser diferente e exige outro indicador."
+            }
+          ],
+          "pitfalls": [
+            "Comparar taxas com denominadores diferentes sem esclarecer.",
+            "Tratar clique ou pedido como venda realizada."
+          ],
+          "recap": [
+            "Canal e conteúdo atendem objetivo definido.",
+            "Exibição, clique e conversão não são iguais.",
+            "Indicador e uso de dados precisam de condições."
+          ],
+          "retrieval": [
+            "Uma mesma pessoa pode gerar várias impressões?",
+            "Qual medida verificaria abandono de formulário?"
+          ],
+          "notes": "Marketing digital\nCanal e conteúdo atendem objetivo definido.\nExibição, clique e conversão não são iguais.\nIndicador e uso de dados precisam de condições.\nComparar taxas com denominadores diferentes sem esclarecer.\nTratar clique ou pedido como venda realizada.",
+          "suggestions": [
+            "Calcule conversão com ação e denominador explícitos.",
+            "Compare alcance, impressões e cliques.",
+            "Planeje teste A/B com hipótese verificável."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — marketing",
+              "url": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process"
+            },
+            {
+              "title": "LGPD compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v12-q01",
+              "prompt": "Impressões e alcance são:",
+              "options": [
+                "Sempre idênticos",
+                "Vendas e lucros",
+                "Exibições e pessoas/contas alcançadas conforme método",
+                "Apenas cadastros"
+              ],
+              "correctIndex": 2,
+              "explanation": "Uma conta pode receber várias exibições; definição da plataforma precisa ser considerada."
+            },
+            {
+              "id": "bb2026-v12-q02",
+              "prompt": "200 visitas e16 pedidos completos dão conversão de:",
+              "options": [
+                "16%",
+                "12,5%",
+                "200%",
+                "8%"
+              ],
+              "correctIndex": 3,
+              "explanation": "16/200×100=8%, para a ação pedido completo."
+            },
+            {
+              "id": "bb2026-v12-q03",
+              "prompt": "SEO se relaciona principalmente a:",
+              "options": [
+                "Descoberta orgânica em mecanismos de busca",
+                "Compra obrigatória de cada clique",
+                "Garantia de primeira posição",
+                "Contratação automática"
+              ],
+              "correctIndex": 0,
+              "explanation": "Otimização orgânica não garante posição nem converte toda visita."
+            },
+            {
+              "id": "bb2026-v12-q04",
+              "prompt": "Um teste A/B deve:",
+              "options": [
+                "Mudar tudo e afirmar causa",
+                "Definir hipótese, distribuição e medida comparável",
+                "Excluir resultado negativo",
+                "Dispensar denominador"
+              ],
+              "correctIndex": 1,
+              "explanation": "Desenho de teste ajuda a avaliar efeito sem conclusão arbitrária."
+            },
+            {
+              "id": "bb2026-v12-q05",
+              "prompt": "Pedido completo equivale necessariamente a venda realizada?",
+              "options": [
+                "Sim, em todo funil",
+                "Sim, se houve clique",
+                "Não; são ações distintas conforme processo",
+                "Sim, mesmo sem aceitação"
+              ],
+              "correctIndex": 2,
+              "explanation": "O processo pode exigir análise/aceite; indicadores devem preservar a ação real."
+            },
+            {
+              "id": "bb2026-v12-q06",
+              "prompt": "Dados de campanha podem ser usados:",
+              "options": [
+                "Para qualquer finalidade futura",
+                "Sem limite se públicos",
+                "Só com consentimento em todo caso",
+                "Com finalidade, necessidade e base legal pertinente"
+              ],
+              "correctIndex": 3,
+              "explanation": "A atividade comercial não afasta LGPD; há várias bases com requisitos próprios."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v12-q01",
+                "bb2026-v12-q02",
+                "bb2026-v12-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v12-q04",
+                "bb2026-v12-q05",
+                "bb2026-v12-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v13",
+          "researchId": "V13",
+          "title": "Conduta profissional",
+          "level": "Fundamentos e aplicação",
+          "summary": "Reconhecer conflito de interesses e pressão indevida · Agir com integridade e proteção de informações",
+          "objectives": [
+            "Reconhecer conflito de interesses e pressão indevida",
+            "Agir com integridade e proteção de informações"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Conduta aparece nas decisões",
+              "text": "Ética profissional combina respeito, honestidade, responsabilidade e cumprimento de regras aplicáveis. Conflito de interesses ocorre quando interesse próprio ou vínculo pode comprometer julgamento; identificar/comunicar e tratar conforme política protege a decisão. Confidencialidade limita acesso e compartilhamento ao necessário e autorizado. Meta comercial não permite omitir condições, falsificar registro ou pressionar pessoa vulnerável. Presentes e vantagens exigem política e contexto; não declarar limite universal sem fonte. Erro deve ser registrado/corrigido pelos canais adequados, com informação pertinente ao cliente. Código de ética orienta, mas comportamento e controles sustentam a prática."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Atendente indica fornecedor de parente sem informar vínculo e promete benefício inexistente para bater meta. Que problemas aparecem?",
+              "steps": [
+                "Vínculo cria possível conflito de interesses a tratar.",
+                "Promessa sem suporte compromete veracidade.",
+                "Meta não justifica omissão nem engano."
+              ],
+              "answer": "Comunicar/tratar conflito, corrigir informação e seguir os controles.",
+              "check": "Uma venda concluída não transforma a oferta enganosa em conduta válida."
+            }
+          ],
+          "pitfalls": [
+            "Usar meta como autorização para omitir condições.",
+            "Confundir acesso técnico com autorização de uso de dados."
+          ],
+          "recap": [
+            "Integridade exige decisão e registro honestos.",
+            "Conflitos precisam ser tratados.",
+            "Informação acessível não é uso ilimitado."
+          ],
+          "retrieval": [
+            "Como agir diante de promessa indevida já feita?",
+            "Por que vínculo pessoal pode afetar escolha de fornecedor?"
+          ],
+          "notes": "Conduta profissional\nIntegridade exige decisão e registro honestos.\nConflitos precisam ser tratados.\nInformação acessível não é uso ilimitado.\nUsar meta como autorização para omitir condições.\nConfundir acesso técnico com autorização de uso de dados.",
+          "suggestions": [
+            "Identifique conflito de interesses num caso.",
+            "Proponha correção de informação comercial incorreta.",
+            "Avalie uso autorizado de informação no atendimento."
+          ],
+          "sources": [
+            {
+              "title": "CMN4.949 — relacionamento com clientes",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            },
+            {
+              "title": "BB — ética",
+              "url": "https://ri.bb.com.br/o-banco-do-brasil/etica/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v13-q01",
+              "prompt": "Meta de vendas autoriza ocultar custo relevante?",
+              "options": [
+                "Sim, se o cliente não perguntar",
+                "Não; informação e adequação continuam exigidas",
+                "Sim, se a meta for alta",
+                "Sim, para qualquer oferta digital"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pressão por resultado não elimina deveres de informação e conduta."
+            },
+            {
+              "id": "bb2026-v13-q02",
+              "prompt": "Vínculo com fornecedor que pode afetar julgamento é:",
+              "options": [
+                "Garantia de qualidade",
+                "Ausência de risco",
+                "Possível conflito de interesses",
+                "Exigência de contratação"
+              ],
+              "correctIndex": 2,
+              "explanation": "O vínculo deve ser identificado e tratado conforme controles aplicáveis."
+            },
+            {
+              "id": "bb2026-v13-q03",
+              "prompt": "Acesso técnico a cadastro permite:",
+              "options": [
+                "Qualquer uso pessoal",
+                "Publicação livre",
+                "Envio a qualquer parceiro",
+                "Uso necessário e autorizado para finalidade pertinente"
+              ],
+              "correctIndex": 3,
+              "explanation": "Poder acessar não equivale a poder usar indiscriminadamente."
+            },
+            {
+              "id": "bb2026-v13-q04",
+              "prompt": "Ao perceber promessa comercial falsa, é adequado:",
+              "options": [
+                "Corrigir informação e registrar/tratar o problema",
+                "Esconder para preservar conversão",
+                "Culpar o cliente sem apurar",
+                "Repetir para padronizar"
+              ],
+              "correctIndex": 0,
+              "explanation": "Integridade envolve correção e responsabilização pelos canais pertinentes."
+            },
+            {
+              "id": "bb2026-v13-q05",
+              "prompt": "Política de presentes e vantagens deve ser:",
+              "options": [
+                "Inventada pelo atendente",
+                "Consultada no contexto aplicável",
+                "Sempre ignorada em vendas",
+                "Substituída por regra universal sem fonte"
+              ],
+              "correctIndex": 1,
+              "explanation": "Limites e procedimentos dependem de política/norma e do caso."
+            },
+            {
+              "id": "bb2026-v13-q06",
+              "prompt": "Ter código de ética demonstra sozinho cumprimento?",
+              "options": [
+                "Sim, sem controles",
+                "Sim, se conhecido",
+                "Não; ações e controles precisam sustentá-lo",
+                "Sim, se a venda ocorreu"
+              ],
+              "correctIndex": 2,
+              "explanation": "Documento orienta, mas a execução observável é necessária."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v13-q01",
+                "bb2026-v13-q02",
+                "bb2026-v13-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://ri.bb.com.br/o-banco-do-brasil/etica/"
+              ]
+            },
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v13-q04",
+                "bb2026-v13-q05",
+                "bb2026-v13-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://ri.bb.com.br/o-banco-do-brasil/etica/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v14",
+          "researchId": "V14",
+          "title": "Atendimento de qualidade",
+          "level": "Fundamentos e aplicação",
+          "summary": "Escutar, confirmar e encaminhar a demanda · Comunicar solução e limites de forma compreensível",
+          "objectives": [
+            "Escutar, confirmar e encaminhar a demanda",
+            "Comunicar solução e limites de forma compreensível"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Atender é conduzir a resolução",
+              "text": "Escuta ativa inclui atenção, perguntas pertinentes e confirmação do entendimento. Empatia reconhece dificuldade sem pressupor condição ou prometer o que não controla. Linguagem clara explica termos, custos e próximos passos; pedir que a pessoa descreva o que entendeu pode revelar dúvida sem constrangimento. Atendimento assertivo é respeitoso e objetivo, diferente de agressividade. Se não houver solução imediata, informe encaminhamento, registro e acompanhamento compatíveis com regras; não invente prazo ou transfira repetidamente sem contexto. Identificação e autenticação devem ser proporcionais e seguras. Cliente irritado requer contenção respeitosa e apuração, não concessão de acesso indevido."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pessoa relata cobrança desconhecida e exige estorno imediato. O atendente ainda não apurou a operação. Como responder?",
+              "steps": [
+                "Reconheça a preocupação e confirme qual cobrança.",
+                "Faça identificação adequada e registre a demanda.",
+                "Explique apuração/canais/próximos passos sem prometer estorno certo."
+              ],
+              "answer": "Encaminhar investigação com informação clara e acompanhamento.",
+              "check": "Empatia não substitui apuração; promessa absoluta de estorno poderia criar nova informação incorreta."
+            }
+          ],
+          "pitfalls": [
+            "Prometer resultado sem poder assegurá-lo.",
+            "Fazer o cliente repetir a história sem registro pertinente."
+          ],
+          "recap": [
+            "Escuta e confirmação evitam desencontro.",
+            "Assertividade combina clareza e respeito.",
+            "Encaminhamento precisa de informação e continuidade."
+          ],
+          "retrieval": [
+            "Como confirmar entendimento sem culpar o cliente?",
+            "O que comunicar quando a solução depende de apuração?"
+          ],
+          "notes": "Atendimento de qualidade\nEscuta e confirmação evitam desencontro.\nAssertividade combina clareza e respeito.\nEncaminhamento precisa de informação e continuidade.\nPrometer resultado sem poder assegurá-lo.\nFazer o cliente repetir a história sem registro pertinente.",
+          "suggestions": [
+            "Reescreva resposta de atendimento em linguagem clara.",
+            "Simule confirmação de uma demanda.",
+            "Explique limite sem prometer solução indevida."
+          ],
+          "sources": [
+            {
+              "title": "CMN4.949 — relacionamento",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v14-q01",
+              "prompt": "Escuta ativa inclui:",
+              "options": [
+                "Interromper para oferecer outro produto",
+                "Confirmar entendimento com perguntas pertinentes",
+                "Presumir causa sem ouvir",
+                "Prometer qualquer resultado"
+              ],
+              "correctIndex": 1,
+              "explanation": "A confirmação reduz erro de diagnóstico e mostra atenção à demanda real."
+            },
+            {
+              "id": "bb2026-v14-q02",
+              "prompt": "Sem apuração de cobrança, a resposta adequada é:",
+              "options": [
+                "Garantir estorno imediato sempre",
+                "Negar sem investigar",
+                "Registrar/apurar e explicar próximos passos",
+                "Expor cadastro para provar rapidez"
+              ],
+              "correctIndex": 2,
+              "explanation": "Acolhimento deve caminhar com apuração e informação correta."
+            },
+            {
+              "id": "bb2026-v14-q03",
+              "prompt": "Comunicação assertiva é:",
+              "options": [
+                "Agressiva",
+                "Sempre vaga",
+                "Obrigatoriamente sem explicação",
+                "Clara, objetiva e respeitosa"
+              ],
+              "correctIndex": 3,
+              "explanation": "Assertividade não exige confronto ou omissão."
+            },
+            {
+              "id": "bb2026-v14-q04",
+              "prompt": "Verificar compreensão pode ser feito por:",
+              "options": [
+                "Pedir que a pessoa explique com suas palavras o próximo passo",
+                "Perguntar somente “entendeu?” e encerrar",
+                "Culpar dificuldade de leitura",
+                "Trocar de assunto"
+              ],
+              "correctIndex": 0,
+              "explanation": "A reformulação evidencia dúvidas e permite ajustar linguagem sem constrangimento."
+            },
+            {
+              "id": "bb2026-v14-q05",
+              "prompt": "Empatia autoriza fornecer dados sem autenticação?",
+              "options": [
+                "Sim, se houver pressa",
+                "Não; controles pertinentes continuam necessários",
+                "Sim, se a pessoa estiver irritada",
+                "Sim, em qualquer telefone"
+              ],
+              "correctIndex": 1,
+              "explanation": "A preocupação deve ser acolhida sem comprometer proteção e autorização."
+            },
+            {
+              "id": "bb2026-v14-q06",
+              "prompt": "Quando encaminhar a outro setor, é importante:",
+              "options": [
+                "Eliminar registro",
+                "Prometer prazo inventado",
+                "Informar motivo, registro e forma de acompanhar",
+                "Reiniciar sempre sem contexto"
+              ],
+              "correctIndex": 2,
+              "explanation": "Continuidade e orientação reduzem repetição e abandono da demanda."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v14-q01",
+                "bb2026-v14-q02",
+                "bb2026-v14-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v14-q04",
+                "bb2026-v14-q05",
+                "bb2026-v14-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v15",
+          "researchId": "V15",
+          "title": "Venda por canais remotos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir conveniência remota de adequação e segurança · Apresentar condições e confirmar contratação sem ambiguidades",
+          "objectives": [
+            "Distinguir conveniência remota de adequação e segurança",
+            "Apresentar condições e confirmar contratação sem ambiguidades"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Distância não elimina dever de informar",
+              "text": "Telefone, mensagens e plataformas permitem contato remoto, com alcance e conveniência diferentes. Identifique a instituição e o propósito do contato; use canais autorizados e respeite regras/base legal de tratamento e preferências pertinentes. Mensagem comercial precisa de condições claras, sem simular urgência enganosa. Não solicite senha, código de autenticação ou instalação de acesso remoto como atalho de venda. Link legítimo e identidade devem ser verificados por canal conhecido, não só pelo nome exibido. Confirmação de contratação precisa de manifestação válida e informação acessível; clicar para ler não é automaticamente aceitar. Direito de arrependimento do CDC depende das hipóteses do art.49, incluindo contratação fora do estabelecimento; não é regra geral para qualquer compra presencial."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Oferta por mensagem diz “confirme em cinco minutos” e pede código de acesso para liberar desconto. Que decisão orienta proteção?",
+              "steps": [
+                "Não compartilhar código nem usar urgência como prova.",
+                "Verificar a oferta em canal oficial conhecido.",
+                "Avaliar custo e condições antes de manifestação válida."
+              ],
+              "answer": "Interromper o fluxo inseguro e verificar por canal independente.",
+              "check": "Nome e logotipo podem ser copiados; código de autenticação não é dado necessário para prometer desconto comercial."
+            }
+          ],
+          "pitfalls": [
+            "Confundir leitura de oferta com aceite.",
+            "Tratar urgência e logo como autenticação do remetente."
+          ],
+          "recap": [
+            "Canal remoto mantém informação e adequação.",
+            "Códigos não são instrumentos de venda.",
+            "Aceite e direitos dependem da situação e da regra."
+          ],
+          "retrieval": [
+            "Por que confirmar a oferta em canal independente?",
+            "Art.49 garante arrependimento para toda compra presencial?"
+          ],
+          "notes": "Venda por canais remotos\nCanal remoto mantém informação e adequação.\nCódigos não são instrumentos de venda.\nAceite e direitos dependem da situação e da regra.\nConfundir leitura de oferta com aceite.\nTratar urgência e logo como autenticação do remetente.",
+          "suggestions": [
+            "Analise segurança de uma oferta por mensagem.",
+            "Explique condição e aceite num canal remoto.",
+            "Distinga prazo legal condicionado de regra universal."
+          ],
+          "sources": [
+            {
+              "title": "CMN4.949 — relacionamento",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            },
+            {
+              "title": "LGPD compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            },
+            {
+              "title": "CERT.br — fraudes",
+              "url": "https://cartilha.cert.br/fasciculos/golpes-evite-fraudes/fasciculo-golpes-evite-fraudes.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v15-q01",
+              "prompt": "Pedir código de autenticação para liberar desconto é:",
+              "options": [
+                "Procedimento comercial sempre necessário",
+                "Garantia de legitimidade",
+                "Sinal de fluxo inseguro a interromper e verificar",
+                "Substituto de contrato"
+              ],
+              "correctIndex": 2,
+              "explanation": "Código pode autorizar acesso/operação; não deve ser compartilhado por exigência comercial."
+            },
+            {
+              "id": "bb2026-v15-q02",
+              "prompt": "Para conferir mensagem suspeita, prefira:",
+              "options": [
+                "Link da própria mensagem sem verificar",
+                "Nome exibido como única prova",
+                "Pressa do remetente",
+                "Canal oficial conhecido por acesso independente"
+              ],
+              "correctIndex": 3,
+              "explanation": "A verificação independente reduz dependência do conteúdo que pode ser fraudulento."
+            },
+            {
+              "id": "bb2026-v15-q03",
+              "prompt": "Clicar para ler uma proposta equivale necessariamente a:",
+              "options": [
+                "Nenhuma contratação automática sem manifestação válida pertinente",
+                "Aceite integral sempre",
+                "Renúncia a informação",
+                "Concordância com qualquer débito"
+              ],
+              "correctIndex": 0,
+              "explanation": "O significado do ato deve estar claro e a contratação observar manifestação e requisitos aplicáveis."
+            },
+            {
+              "id": "bb2026-v15-q04",
+              "prompt": "No CDC, arrependimento do art.49 é:",
+              "options": [
+                "Regra de toda compra presencial",
+                "Direito condicionado às hipóteses previstas, como contratação fora do estabelecimento",
+                "Benefício só se o fornecedor quiser",
+                "Prazo inventado pelo anúncio"
+              ],
+              "correctIndex": 1,
+              "explanation": "O dispositivo prevê situação específica e prazo de sete dias; não autoriza universalizar para todo contrato."
+            },
+            {
+              "id": "bb2026-v15-q05",
+              "prompt": "Oferta remota deve explicar:",
+              "options": [
+                "Só o desconto em destaque",
+                "Só o nome da campanha",
+                "Custos, condições e limites pertinentes",
+                "Somente a meta do vendedor"
+              ],
+              "correctIndex": 2,
+              "explanation": "Distância não afasta informação clara e adequação."
+            },
+            {
+              "id": "bb2026-v15-q06",
+              "prompt": "Um logotipo conhecido no remetente prova legitimidade?",
+              "options": [
+                "Sim, sempre",
+                "Sim, se colorido",
+                "Sim, com texto urgente",
+                "Não; aparência pode ser copiada"
+              ],
+              "correctIndex": 3,
+              "explanation": "Identidade exige verificação pertinente, além de elementos visuais."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "12",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v15-q01",
+                "bb2026-v15-q02",
+                "bb2026-v15-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://cartilha.cert.br/fasciculos/golpes-evite-fraudes/fasciculo-golpes-evite-fraudes.pdf"
+              ]
+            },
+            {
+              "referenceItem": "12",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v15-q04",
+                "bb2026-v15-q05",
+                "bb2026-v15-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+                "https://cartilha.cert.br/fasciculos/golpes-evite-fraudes/fasciculo-golpes-evite-fraudes.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v16",
+          "researchId": "V16",
+          "title": "Consumidor e negociação",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar decisão de compra a interesses e restrições · Negociar com alternativas e critérios sem pressão indevida",
+          "objectives": [
+            "Relacionar decisão de compra a interesses e restrições",
+            "Negociar com alternativas e critérios sem pressão indevida"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Interesse é diferente da posição declarada",
+              "text": "Decisão de compra pode envolver reconhecimento de necessidade, busca, comparação, escolha e avaliação posterior, com influências sociais e pessoais; o percurso nem sempre é linear. Negociação identifica interesses sob posições: “quero menor mensalidade” pode refletir orçamento ou uso raro. Separar pessoa/problema favorece diálogo. Explore opções de ganho mútuo e critérios objetivos como custo total e características comparáveis. BATNA é melhor alternativa disponível se não houver acordo; não é a meta nem um blefe. Ponto de reserva limita o acordo aceitável. Zona possível de acordo depende de termos compatíveis, não é garantida. Negociar inclui respeitar recusa, informação e adequação; não vencer pela vulnerabilidade."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pessoa quer eliminar cobrança recorrente porque usa pouco o serviço. Vendedor só pode ofertar plano mensal ou por uso. Como explorar acordo?",
+              "steps": [
+                "Confirme frequência e necessidade, sem fixar-se no pedido inicial.",
+                "Compare custo total dos dois modelos em cenários.",
+                "Se nenhum atender, respeite alternativa sem contratação."
+              ],
+              "answer": "Buscar opção adequada ou reconhecer ausência de acordo.",
+              "check": "Desconto mensal pode ainda manter obrigação inadequada; BATNA do cliente pode ser não contratar ou outra solução legítima."
+            }
+          ],
+          "pitfalls": [
+            "Confundir BATNA com resultado desejado dentro do acordo.",
+            "Dizer que toda negociação tem zona de acordo."
+          ],
+          "recap": [
+            "Posição diz pedido; interesse explica motivo.",
+            "Alternativa sem acordo sustenta decisão.",
+            "Critérios e recusa respeitada preservam negociação responsável."
+          ],
+          "retrieval": [
+            "Qual diferença entre meta e BATNA?",
+            "É possível negociar bem e não fechar acordo?"
+          ],
+          "notes": "Consumidor e negociação\nPosição diz pedido; interesse explica motivo.\nAlternativa sem acordo sustenta decisão.\nCritérios e recusa respeitada preservam negociação responsável.\nConfundir BATNA com resultado desejado dentro do acordo.\nDizer que toda negociação tem zona de acordo.",
+          "suggestions": [
+            "Encontre interesse por trás de uma posição.",
+            "Compare proposta e alternativa sem acordo.",
+            "Monte critérios objetivos para negociar uma oferta."
+          ],
+          "sources": [
+            {
+              "title": "Harvard PON — negociação por princípios",
+              "url": "https://www.pon.harvard.edu/daily/negotiation-skills-daily/principled-negotiation-focus-interests-create-value/"
+            },
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v16-q01",
+              "prompt": "BATNA significa:",
+              "options": [
+                "Melhor alternativa se não houver acordo",
+                "Meta ideal dentro do acordo",
+                "Última proposta do vendedor",
+                "Desconto obrigatório"
+              ],
+              "correctIndex": 0,
+              "explanation": "É a alternativa fora da negociação caso ela não produza acordo."
+            },
+            {
+              "id": "bb2026-v16-q02",
+              "prompt": "“Quero menor mensalidade” é posição; um interesse possível é:",
+              "options": [
+                "Cor do logotipo apenas",
+                "Compatibilidade com orçamento ou frequência de uso",
+                "Obrigação de aceitar qualquer oferta",
+                "Prova de má-fé"
+              ],
+              "correctIndex": 1,
+              "explanation": "Perguntas esclarecem o motivo real, sem presumir qual desses interesses existe."
+            },
+            {
+              "id": "bb2026-v16-q03",
+              "prompt": "Critério objetivo numa comparação de ofertas pode ser:",
+              "options": [
+                "Pressão do vendedor",
+                "Medo de perder a meta",
+                "Custo total para mesma necessidade e condições",
+                "Preferência pessoal ocultada"
+              ],
+              "correctIndex": 2,
+              "explanation": "Comparabilidade e evidência favorecem decisão, sem garantir acordo."
+            },
+            {
+              "id": "bb2026-v16-q04",
+              "prompt": "Se nenhuma opção atende à restrição informada, é adequado:",
+              "options": [
+                "Impor contratação",
+                "Ocultar cobrança",
+                "Dizer que recusa é impossível",
+                "Reconhecer ausência de acordo e respeitar escolha"
+              ],
+              "correctIndex": 3,
+              "explanation": "Fechar a qualquer custo pode violar adequação e liberdade de decisão."
+            },
+            {
+              "id": "bb2026-v16-q05",
+              "prompt": "Zona possível de acordo existe quando:",
+              "options": [
+                "Há termos mutuamente aceitáveis",
+                "Sempre há duas pessoas",
+                "O vendedor insiste",
+                "Há publicidade"
+              ],
+              "correctIndex": 0,
+              "explanation": "A existência depende dos limites e condições das partes, não apenas do contato."
+            },
+            {
+              "id": "bb2026-v16-q06",
+              "prompt": "Separar pessoas do problema favorece:",
+              "options": [
+                "Ignorar sentimentos",
+                "Tratar divergência sem ataque pessoal",
+                "Aceitar qualquer proposta",
+                "Eliminar todos os interesses"
+              ],
+              "correctIndex": 1,
+              "explanation": "Preserva respeito enquanto se analisam necessidades e critérios."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v16-q01",
+                "bb2026-v16-q02",
+                "bb2026-v16-q03"
+              ],
+              "sourceUrls": [
+                "https://www.pon.harvard.edu/daily/negotiation-skills-daily/principled-negotiation-focus-interests-create-value/",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v16-q04",
+                "bb2026-v16-q05",
+                "bb2026-v16-q06"
+              ],
+              "sourceUrls": [
+                "https://www.pon.harvard.edu/daily/negotiation-skills-daily/principled-negotiation-focus-interests-create-value/",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v17",
+          "researchId": "V17",
+          "title": "Relacionamento regulado",
+          "level": "Fundamentos e aplicação",
+          "summary": "Aplicar princípios de transparência, diligência e adequação · Relacionar etapas da oferta a necessidades e vulnerabilidades",
+          "objectives": [
+            "Aplicar princípios de transparência, diligência e adequação",
+            "Relacionar etapas da oferta a necessidades e vulnerabilidades"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O dever acompanha o relacionamento",
+              "text": "No âmbito das instituições alcançadas, a CMN4.949 disciplina relacionamento com clientes/usuários, com ética, responsabilidade, transparência e diligência. A versão e o enquadramento institucional importam, inclusive alterações posteriores como a CMN5.117/2024. A oferta precisa ser adequada às necessidades, interesses e objetivos, considerando vulnerabilidades. Informação deve permitir decisão livre e consciente, incluindo custos, responsabilidades e riscos pertinentes. Antes, durante e depois da contratação há processos e controles; canal digital não retira a responsabilidade. Norma auxiliar de marketing não cria obrigação bancária por si só. Sigilo, proteção de dados, prevenção de ilícitos e direitos do consumidor convivem com atendimento, sem serem dispensados por meta comercial."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma pessoa relata orçamento instável e não entende compromisso recorrente. Atendente propõe maior obrigação apenas por meta. Qual análise se impõe?",
+              "steps": [
+                "Reconheça necessidade/restrição e dúvida efetiva.",
+                "Explique custos/riscos e avalie adequação, com alternativa pertinente.",
+                "Não trate capacidade de clicar como entendimento."
+              ],
+              "answer": "Rever a oferta e apoiar decisão informada, podendo não contratar.",
+              "check": "Assinatura formal não apaga insuficiência de informação ou inadequação observada."
+            }
+          ],
+          "pitfalls": [
+            "Aplicar norma fora do escopo sem conferir instituição.",
+            "Presumir adequação somente porque houve aceite."
+          ],
+          "recap": [
+            "Escopo e versão normativa precisam ser identificados.",
+            "Necessidades e vulnerabilidades informam adequação.",
+            "Responsabilidade continua pelos canais e etapas."
+          ],
+          "retrieval": [
+            "Como uma dúvida relevante afeta a oferta?",
+            "Método de marketing equivale a norma do CMN?"
+          ],
+          "notes": "Relacionamento regulado\nEscopo e versão normativa precisam ser identificados.\nNecessidades e vulnerabilidades informam adequação.\nResponsabilidade continua pelos canais e etapas.\nAplicar norma fora do escopo sem conferir instituição.\nPresumir adequação somente porque houve aceite.",
+          "suggestions": [
+            "Avalie adequação de oferta com restrição explícita.",
+            "Explique transparência e diligência num caso.",
+            "Distinga obrigação normativa de técnica comercial."
+          ],
+          "sources": [
+            {
+              "title": "CMN4.949 — relacionamento",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            },
+            {
+              "title": "LGPD compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v17-q01",
+              "prompt": "A avaliação de adequação considera:",
+              "options": [
+                "Somente meta do vendedor",
+                "Necessidades, interesses e objetivos com vulnerabilidades pertinentes",
+                "Somente capacidade de clicar",
+                "Somente marca"
+              ],
+              "correctIndex": 1,
+              "explanation": "O relacionamento regulado exige análise do cliente e da oferta, no escopo aplicável."
+            },
+            {
+              "id": "bb2026-v17-q02",
+              "prompt": "Informação transparente deve apoiar:",
+              "options": [
+                "Aceite sem leitura",
+                "Pressão comercial",
+                "Decisão livre e consciente",
+                "Omissão de restrições"
+              ],
+              "correctIndex": 2,
+              "explanation": "Custos, responsabilidades e riscos pertinentes sustentam compreensão e decisão."
+            },
+            {
+              "id": "bb2026-v17-q03",
+              "prompt": "Uso de canal digital faz a instituição:",
+              "options": [
+                "Perder toda responsabilidade",
+                "Dispensar clareza",
+                "Ignorar necessidades",
+                "Manter deveres pertinentes ao relacionamento"
+              ],
+              "correctIndex": 3,
+              "explanation": "Canal não elimina adequação, transparência e controles."
+            },
+            {
+              "id": "bb2026-v17-q04",
+              "prompt": "Antes de aplicar uma resolução, confira:",
+              "options": [
+                "Versão e escopo institucional",
+                "Só o número do artigo isolado",
+                "Apenas um resumo antigo",
+                "Popularidade da regra"
+              ],
+              "correctIndex": 0,
+              "explanation": "Alterações e enquadramento podem modificar o alcance."
+            },
+            {
+              "id": "bb2026-v17-q05",
+              "prompt": "Aceite formal prova sozinho oferta adequada?",
+              "options": [
+                "Sim, sempre",
+                "Não; processo e condições precisam ser examinados",
+                "Sim, se online",
+                "Sim, se houve lucro"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dúvidas/vulnerabilidades observadas e informação insuficiente não desaparecem com um clique."
+            },
+            {
+              "id": "bb2026-v17-q06",
+              "prompt": "Técnica de qualidade de uma associação profissional é:",
+              "options": [
+                "Lei bancária automática",
+                "Norma do CMN necessariamente",
+                "Referência metodológica, com caráter distinto da obrigação legal",
+                "Dispensa de cumprimento do CDC"
+              ],
+              "correctIndex": 2,
+              "explanation": "Metodologia pode auxiliar gestão sem criar por si obrigação normativa brasileira."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v17-q01",
+                "bb2026-v17-q02",
+                "bb2026-v17-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v17-q04",
+                "bb2026-v17-q05",
+                "bb2026-v17-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v18",
+          "researchId": "V18",
+          "title": "Ouvidoria",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir atendimento primário de instância de ouvidoria · Usar registro e análise de reclamações para correção",
+          "objectives": [
+            "Distinguir atendimento primário de instância de ouvidoria",
+            "Usar registro e análise de reclamações para correção"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Uma instância para demandas não resolvidas",
+              "text": "No escopo da CMN4.860 e alterações, ouvidoria atua como instância de atendimento a demandas não solucionadas nos canais primários, com atribuições e estrutura próprias. Não é canal de venda nem substituto de toda primeira solicitação. Deve receber/analisar/tratar a demanda, fornecer resposta pertinente e manter registros/controles exigidos, além de contribuir com melhorias a partir de problemas identificados. Independência funcional e prevenção de conflitos protegem sua atuação. A CMN5.182/2024 atualizou regras; a IN BCB550 dispensou remessa das avaliações ao BCB, preservando a guarda conforme norma. Não confundir dispensa de envio com autorização para apagar dados exigidos. Prazos e abrangência devem ser consultados na versão aplicável, sem promessas inventadas."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma reclamação registrada no canal primário não foi resolvida. A pessoa procura ouvidoria com protocolo. Como encaminhar?",
+              "steps": [
+                "Identifique demanda e histórico disponível.",
+                "Analise no escopo de ouvidoria e preserve registro pertinente.",
+                "Responda e use padrões para propor melhoria."
+              ],
+              "answer": "Tratar a demanda não resolvida, sem reduzir o contato a uma nova venda.",
+              "check": "Apagar avaliações porque não são mais remetidas ao BCB confundiria envio e guarda."
+            }
+          ],
+          "pitfalls": [
+            "Tratar ouvidoria como canal comercial comum.",
+            "Confundir dispensa de remessa com dispensa de guarda."
+          ],
+          "recap": [
+            "Ouvidoria trata demandas não solucionadas nos canais primários.",
+            "Registro, análise e resposta dão rastreabilidade.",
+            "Atualização normativa pode alterar envio sem eliminar guarda."
+          ],
+          "retrieval": [
+            "Qual papel tem protocolo no encaminhamento?",
+            "Por que ouvidoria precisa evitar conflitos de interesses?"
+          ],
+          "notes": "Ouvidoria\nOuvidoria trata demandas não solucionadas nos canais primários.\nRegistro, análise e resposta dão rastreabilidade.\nAtualização normativa pode alterar envio sem eliminar guarda.\nTratar ouvidoria como canal comercial comum.\nConfundir dispensa de remessa com dispensa de guarda.",
+          "suggestions": [
+            "Distinga atendimento inicial e ouvidoria.",
+            "Explique envio e guarda de avaliação.",
+            "Transforme padrão de reclamações em proposta de melhoria."
+          ],
+          "sources": [
+            {
+              "title": "CMN4.860 — ouvidoria",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4860&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "CMN5.182 — atualização",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=5182&tipo=RESOLU%C3%87%C3%83O+CMN"
+            },
+            {
+              "title": "IN BCB550 — avaliações",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=550&tipo=Instru%C3%A7%C3%A3o+Normativa+BCB"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v18-q01",
+              "prompt": "Ouvidoria atua, no recorte estudado, principalmente sobre:",
+              "options": [
+                "Demandas não resolvidas nos canais primários",
+                "Oferta de qualquer produto",
+                "Publicidade",
+                "Cadastro comercial sem problema"
+              ],
+              "correctIndex": 0,
+              "explanation": "É instância de tratamento de demandas não solucionadas, conforme escopo normativo."
+            },
+            {
+              "id": "bb2026-v18-q02",
+              "prompt": "Protocolo e histórico ajudam a:",
+              "options": [
+                "Garantir qualquer resultado solicitado",
+                "Dar rastreabilidade e evitar repetição sem contexto",
+                "Substituir toda apuração",
+                "Eliminar resposta"
+              ],
+              "correctIndex": 1,
+              "explanation": "Informações pertinentes permitem reconstruir atendimento e analisar a demanda."
+            },
+            {
+              "id": "bb2026-v18-q03",
+              "prompt": "Dispensa de remeter avaliações ao BCB significa:",
+              "options": [
+                "Apagar tudo",
+                "Nunca avaliar",
+                "Manter guarda exigida, embora dispensado o envio",
+                "Ausência de qualquer controle"
+              ],
+              "correctIndex": 2,
+              "explanation": "A IN550 distingue remessa e armazenamento; não se deduz dispensa geral de registros."
+            },
+            {
+              "id": "bb2026-v18-q04",
+              "prompt": "Independência funcional procura:",
+              "options": [
+                "Aumentar meta de venda",
+                "Impedir toda comunicação interna",
+                "Ocultar reclamação",
+                "Reduzir conflitos que comprometam tratamento"
+              ],
+              "correctIndex": 3,
+              "explanation": "A atuação deve preservar análise e resposta adequadas, com controles de conflito."
+            },
+            {
+              "id": "bb2026-v18-q05",
+              "prompt": "Padrões recorrentes de reclamação devem:",
+              "options": [
+                "Orientar propostas de correção dos processos",
+                "Ser ignorados se individuais",
+                "Virar campanha sem análise",
+                "Substituir automaticamente normas"
+              ],
+              "correctIndex": 0,
+              "explanation": "Ouvidoria pode contribuir com melhorias a partir de falhas identificadas."
+            },
+            {
+              "id": "bb2026-v18-q06",
+              "prompt": "Antes de prometer prazo de resposta, deve-se:",
+              "options": [
+                "Inventar prazo curto",
+                "Conferir regra aplicável e comunicar corretamente",
+                "Usar só memória de versão antiga",
+                "Garantir sempre resposta imediata"
+              ],
+              "correctIndex": 1,
+              "explanation": "Versão/escopo e situação concreta informam prazo, sem garantia arbitrária."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "15",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v18-q01",
+                "bb2026-v18-q02",
+                "bb2026-v18-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4860&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=5182&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=550&tipo=Instru%C3%A7%C3%A3o+Normativa+BCB"
+              ]
+            },
+            {
+              "referenceItem": "15",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v18-q04",
+                "bb2026-v18-q05",
+                "bb2026-v18-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4860&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=5182&tipo=RESOLU%C3%87%C3%83O+CMN",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=550&tipo=Instru%C3%A7%C3%A3o+Normativa+BCB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v19",
+          "researchId": "V19",
+          "title": "Inclusão e acessibilidade",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar barreiras físicas, digitais, comunicacionais e atitudinais · Oferecer apoio preservando autonomia e segurança",
+          "objectives": [
+            "Identificar barreiras físicas, digitais, comunicacionais e atitudinais",
+            "Oferecer apoio preservando autonomia e segurança"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A barreira pode estar no serviço",
+              "text": "A LBI considera interação entre impedimentos e barreiras que limitam participação. Acessibilidade envolve ambiente, informação, comunicação e tecnologias, não só rampa. Autonomia exige dirigir-se à própria pessoa e perguntar apoio/preferência; deficiência não implica incapacidade civil geral. Texto legível, navegação por teclado, identificação clara de campos, alternativas a conteúdo somente visual/sonoro e atendimento acessível reduzem barreiras digitais. Apoio não autoriza divulgar dado sensível ou pedir senha. Atendimento prioritário e outras obrigações seguem regras aplicáveis; não invente prerrogativa ilimitada. Projetar para necessidades diversas pode evitar solução segregada, mas adaptações individuais podem ser necessárias."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pessoa usa leitor de tela; o formulário anuncia campos sem nome e exige identificar uma imagem sem alternativa. Que mudanças ajudam?",
+              "steps": [
+                "Associar rótulos compreensíveis aos campos.",
+                "Oferecer verificação acessível com segurança pertinente.",
+                "Testar com tecnologia assistiva e respeitar autonomia."
+              ],
+              "answer": "Remover barreiras de informação/interação, preservando controles.",
+              "check": "Pedir que a pessoa entregue senha ao atendente não é solução acessível nem segura."
+            }
+          ],
+          "pitfalls": [
+            "Dirigir-se só ao acompanhante sem necessidade.",
+            "Tratar acessibilidade como dispensa de segurança."
+          ],
+          "recap": [
+            "Barreiras vão além do espaço físico.",
+            "Autonomia não desaparece por deficiência.",
+            "Apoio e controles devem ser acessíveis."
+          ],
+          "retrieval": [
+            "Uma imagem sem alternativa pode bloquear qual interação?",
+            "Como oferecer ajuda sem presumir incapacidade?"
+          ],
+          "notes": "Inclusão e acessibilidade\nBarreiras vão além do espaço físico.\nAutonomia não desaparece por deficiência.\nApoio e controles devem ser acessíveis.\nDirigir-se só ao acompanhante sem necessidade.\nTratar acessibilidade como dispensa de segurança.",
+          "suggestions": [
+            "Identifique barreira digital num formulário.",
+            "Reescreva atendimento preservando autonomia.",
+            "Proponha alternativa acessível para uma etapa."
+          ],
+          "sources": [
+            {
+              "title": "LBI compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+            },
+            {
+              "title": "W3C — acessibilidade",
+              "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v19-q01",
+              "prompt": "Campo sem rótulo para leitor de tela é barreira:",
+              "options": [
+                "Somente econômica",
+                "De informação/interação digital",
+                "De taxa de juros",
+                "De estoque"
+              ],
+              "correctIndex": 1,
+              "explanation": "A pessoa não identifica finalidade do campo com tecnologia assistiva."
+            },
+            {
+              "id": "bb2026-v19-q02",
+              "prompt": "Deficiência implica incapacidade civil geral?",
+              "options": [
+                "Sim, automaticamente",
+                "Sim, se usa tecnologia assistiva",
+                "Não, segundo a LBI",
+                "Sim, se tem acompanhante"
+              ],
+              "correctIndex": 2,
+              "explanation": "A LBI preserva capacidade e autonomia; situações jurídicas específicas precisam de análise própria."
+            },
+            {
+              "id": "bb2026-v19-q03",
+              "prompt": "Ao oferecer ajuda, é adequado:",
+              "options": [
+                "Falar só com acompanhante sempre",
+                "Assumir preferência sem perguntar",
+                "Pedir senha pessoal",
+                "Perguntar à própria pessoa qual apoio prefere"
+              ],
+              "correctIndex": 3,
+              "explanation": "Apoio deve respeitar a vontade e autonomia, sem presumir incapacidade."
+            },
+            {
+              "id": "bb2026-v19-q04",
+              "prompt": "Verificação visual sem alternativa deve ser:",
+              "options": [
+                "Adaptada para acesso com controle de segurança pertinente",
+                "Mantida por ser digital",
+                "Substituída por compartilhamento de senha",
+                "Eliminada sem avaliar risco"
+              ],
+              "correctIndex": 0,
+              "explanation": "A etapa pode ter alternativa acessível mantendo proteção proporcional."
+            },
+            {
+              "id": "bb2026-v19-q05",
+              "prompt": "Acessibilidade abrange:",
+              "options": [
+                "Somente rampas",
+                "Ambiente, comunicação, informação e tecnologias",
+                "Somente tamanho de fonte",
+                "Somente prioridade na fila"
+              ],
+              "correctIndex": 1,
+              "explanation": "Barreiras físicas, digitais, comunicacionais e atitudinais precisam ser examinadas."
+            },
+            {
+              "id": "bb2026-v19-q06",
+              "prompt": "Um atendimento que ignora a pessoa e decide por ela pode criar:",
+              "options": [
+                "Garantia de inclusão",
+                "Obrigação de consentir",
+                "Barreira atitudinal e perda de autonomia",
+                "Segurança automática"
+              ],
+              "correctIndex": 2,
+              "explanation": "Postura desrespeitosa também limita participação; inclusão exige mais que infraestrutura."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "16",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v19-q01",
+                "bb2026-v19-q02",
+                "bb2026-v19-q03"
+              ],
+              "sourceUrls": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+                "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+              ]
+            },
+            {
+              "referenceItem": "16",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v19-q04",
+                "bb2026-v19-q05",
+                "bb2026-v19-q06"
+              ],
+              "sourceUrls": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+                "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-v20",
+          "researchId": "V20",
+          "title": "Defesa do consumidor",
+          "level": "Fundamentos e aplicação",
+          "summary": "Reconhecer informação, escolha e proteção contra abuso · Aplicar direitos com hipóteses legais, sem universalizações",
+          "objectives": [
+            "Reconhecer informação, escolha e proteção contra abuso",
+            "Aplicar direitos com hipóteses legais, sem universalizações"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Direito exige contexto da relação",
+              "text": "O CDC protege informação adequada, liberdade de escolha e equilíbrio, entre outros direitos. Oferta suficientemente precisa pode vincular o fornecedor; publicidade enganosa pode decorrer de informação falsa ou omissão essencial. Venda casada condiciona indevidamente um produto/serviço a outro. Crédito responsável exige informação e avaliação conforme regras, evitando assédio/pressão, sobretudo diante de vulnerabilidades. Inversão do ônus da prova não é automática em toda demanda: depende das condições legais e decisão pertinente. Art.49 prevê arrependimento em sete dias nas hipóteses indicadas, como contratação fora do estabelecimento; não é regra universal de troca de produto sem defeito comprado presencialmente. Cobrança não pode expor ao ridículo ou ameaçar. Dados/cadastros e proteção contra práticas abusivas têm requisitos próprios; registre caso e consulte dispositivo aplicável."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Fornecedor anuncia plano porR$20 sem informar encargo obrigatório que aumenta o total. Cliente descobre só depois do aceite. Qual problema analisar?",
+              "steps": [
+                "O encargo obrigatório altera a informação essencial sobre custo.",
+                "Compare anúncio e condições comunicadas antes da contratação.",
+                "Registre/apure e encaminhe correção conforme direitos aplicáveis."
+              ],
+              "answer": "Possível oferta/publicidade enganosa por omissão essencial.",
+              "check": "Aceite não torna legítima omissão; é preciso examinar fatos e regra, sem prometer automaticamente resultado judicial."
+            }
+          ],
+          "pitfalls": [
+            "Universalizar arrependimento para toda compra presencial.",
+            "Afirmar inversão do ônus automática em qualquer caso."
+          ],
+          "recap": [
+            "Oferta e informação condicionam a decisão.",
+            "Venda casada e pressão abusiva têm limites legais.",
+            "Direitos específicos exigem suas hipóteses."
+          ],
+          "retrieval": [
+            "Omissão pode ser publicidade enganosa?",
+            "Qual diferença entre compra presencial sem defeito e hipótese do art.49?"
+          ],
+          "notes": "Defesa do consumidor\nOferta e informação condicionam a decisão.\nVenda casada e pressão abusiva têm limites legais.\nDireitos específicos exigem suas hipóteses.\nUniversalizar arrependimento para toda compra presencial.\nAfirmar inversão do ônus automática em qualquer caso.",
+          "suggestions": [
+            "Analise omissão de custo numa oferta.",
+            "Identifique venda casada num caso.",
+            "Explique um direito do CDC com suas condições."
+          ],
+          "sources": [
+            {
+              "title": "CDC compilado",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            },
+            {
+              "title": "CMN4.949 — relacionamento",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-vendas-video-1",
+            "bb2026-vendas-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-v20-q01",
+              "prompt": "Omitir encargo obrigatório essencial pode caracterizar:",
+              "options": [
+                "Somente mudança estética",
+                "Segmentação legítima sempre",
+                "Publicidade enganosa por omissão",
+                "Dispensa de informação"
+              ],
+              "correctIndex": 2,
+              "explanation": "A ausência de dado essencial pode induzir decisão sobre custo incompatível com a realidade."
+            },
+            {
+              "id": "bb2026-v20-q02",
+              "prompt": "Exigir produtoB para obterA, sem justificativa legítima pertinente, pode ser:",
+              "options": [
+                "Pós-venda",
+                "Pesquisa de satisfação",
+                "Autonomia de escolha",
+                "Venda casada abusiva"
+              ],
+              "correctIndex": 3,
+              "explanation": "Condicionar indevidamente aquisição fere liberdade de escolha."
+            },
+            {
+              "id": "bb2026-v20-q03",
+              "prompt": "Inversão do ônus da prova no CDC é:",
+              "options": [
+                "Condicionada aos requisitos legais e decisão pertinente",
+                "Automática em todo conflito",
+                "Proibida sempre",
+                "Definida pelo vendedor"
+              ],
+              "correctIndex": 0,
+              "explanation": "Não se universaliza a medida; o dispositivo tem pressupostos."
+            },
+            {
+              "id": "bb2026-v20-q04",
+              "prompt": "Cobrança de dívida pode:",
+              "options": [
+                "Expor ao ridículo para pressionar",
+                "Ser feita respeitando limites, sem ameaça ou constrangimento abusivo",
+                "Usar qualquer coação",
+                "Eliminar todos os direitos"
+              ],
+              "correctIndex": 1,
+              "explanation": "Cobrar não autoriza práticas vedadas pelo CDC."
+            },
+            {
+              "id": "bb2026-v20-q05",
+              "prompt": "Arrependimento de sete dias do art.49 aplica-se:",
+              "options": [
+                "A toda troca presencial sem defeito automaticamente",
+                "A qualquer contrato sem contexto",
+                "Às hipóteses legais, como contratação fora do estabelecimento",
+                "Somente se a loja decidir conceder"
+              ],
+              "correctIndex": 2,
+              "explanation": "O direito previsto tem situação de aplicação e não é benefício discricionário quando a hipótese se configura."
+            },
+            {
+              "id": "bb2026-v20-q06",
+              "prompt": "Assinatura após informação insuficiente significa:",
+              "options": [
+                "Que toda omissão foi validada",
+                "Que não há mais direitos",
+                "Que custos podem ser ocultos",
+                "Que a adequação da informação ainda precisa ser examinada"
+              ],
+              "correctIndex": 3,
+              "explanation": "Aceite não afasta automaticamente direitos nem sana omissão essencial."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "17",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v20-q01",
+                "bb2026-v20-q02",
+                "bb2026-v20-q03"
+              ],
+              "sourceUrls": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+              ]
+            },
+            {
+              "referenceItem": "17",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-v20-q04",
+                "bb2026-v20-q05",
+                "bb2026-v20-q06"
+              ],
+              "sourceUrls": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4949&tipo=RESOLU%C3%87%C3%83O+CMN"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "financeira",
