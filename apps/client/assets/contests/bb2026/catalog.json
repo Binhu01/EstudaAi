@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": 1,
+  "course": {
+    "id": "bb2026",
+    "title": "Banco do Brasil 2026",
+    "track": "Escriturário — Agente Comercial",
+    "status": "preparation",
+    "referenceDate": "2026-10-01",
+    "statusSources": [{"title":"Banco do Brasil — comunicado sobre concurso (03/06/2026)","url":"https://imprensa.bb.com.br/bb-esclarece-que-nao-ha-previsao-de-novo-concurso-2/"},{"title":"Banco do Brasil — canais oficiais","url":"https://www.bb.com.br/"}],
+    "syllabusSource": {"title":"Edital histórico 2022/001 — Agente Comercial, Anexo III e seção 7.3","url":"https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf"}
+  },
+  "disciplines": [
+    {"id":"bancarios","title":"Conhecimentos Bancários","summary":"Entenda instituições, mercados, produtos e responsabilidades no sistema financeiro.","lessons":[
+      {"id":"bb2026-bancarios-video-1","title":"Aula 01: Estrutura do Sistema Financeiro Nacional - CONCURSO BANCO DO BRASIL 2024","channel":"Direção Concursos","description":"Apoio externo sobre a estrutura do SFN. O ano no título indica o contexto da aula; consulte as fontes atuais do material para normas e competências.","level":"Fundamentos","videoId":"cmBJ9dadVzY"},
+      {"id":"bb2026-bancarios-video-2","title":"Concurso Banco do Brasil: Conhecimentos Bancários - Sistema Financeiro Nacional","channel":"Qconcursos","description":"Revisão externa da organização do SFN. Complementa os módulos de instituições e mercados; não cobre toda a disciplina.","level":"Revisão","videoId":"BYwwW5N6gEs"}],"modules":[]},
+    {"id":"atualidades","title":"Atualidades do Mercado Financeiro","summary":"Compare canais digitais, Open Finance, meios de pagamento e novos participantes.","lessons":[
+      {"id":"bb2026-atualidades-video-1","title":"LiveBC #38 - Open Finance","channel":"Banco Central do Brasil","description":"Explicação institucional sobre o ecossistema de compartilhamento. Compare regras e consentimento com a referência datada do material.","level":"Fundamentos","videoId":"I2ZkC-qlKBs"},
+      {"id":"bb2026-atualidades-video-2","title":"LiveBC #39 - 4 anos de Pix: Impactos na Economia, Pix Automático e o que Vem Pela Frente","channel":"Banco Central do Brasil","description":"Transmissão histórica do BCB. Estatísticas e projetos refletem a época da gravação; não representam cronograma atual nem previsão de edital.","level":"Aprofundamento","videoId":"L7lhz2E4zHc"}],"modules":[]},
+    {"id":"portugues","title":"Língua Portuguesa","summary":"Leia com evidências e compreenda as escolhas gramaticais que organizam o texto.","lessons":[
+      {"id":"bb2026-portugues-video-1","title":"INTERPRETAÇÃO E COMPREENSÃO DE TEXTOS - com EXERCÍCIOS - Profa. Pamba","channel":"Professora Pamba","description":"Estratégias de leitura e interpretação. Use os textos inéditos da Estuda Aí para praticar evidência e inferência.","level":"Fundamentos","videoId":"W3XrpIRTgzA"},
+      {"id":"bb2026-portugues-video-2","title":"Crase - Aula 01 ♫ Concerto da Crase ♫ [Prof Noslen]","channel":"Professor Noslen","description":"Apoio externo sobre crase, para revisar após estudar regência e presença de artigo no material.","level":"Revisão","videoId":"yUpRa62vcSI"}],"modules":[]},
+    {"id":"matematica","title":"Matemática","summary":"Resolva problemas de números, lógica, funções, álgebra e sequências.","lessons":[
+      {"id":"bb2026-matematica-video-1","title":"PORCENTAGEM | COMO CALCULAR PORCENTAGEM | \\Prof. Gis/ #01","channel":"Gis com Giz","description":"Reforce a identificação da base percentual. Apoio ao módulo de porcentagens; outras famílias de cálculo estão no material.","level":"Fundamentos","videoId":"OjOyNmTt7Mw"},
+      {"id":"bb2026-matematica-video-2","title":"REGRA DE TRÊS |  AULÃO DE REGRA DE TRÊS SIMPLES","channel":"Gis com Giz","description":"Problemas de proporcionalidade direta e inversa. Verifique as hipóteses antes de montar uma proporção.","level":"Aplicação","videoId":"XIijanuUZuU"}],"modules":[]},
+    {"id":"ingles","title":"Língua Inglesa","summary":"Use vocabulário, gramática e contexto para compreender textos em inglês.","lessons":[
+      {"id":"bb2026-ingles-video-1","title":"Aula 1: Interpretação de Textos em Inglês - CONCURSO BANCO DO BRASIL 2025","channel":"Direção Concursos","description":"Prática externa de interpretação. O ano do título é contexto do produtor; não confirma concurso ou programa de 2026.","level":"Fundamentos","videoId":"am_ee1mXY7k"},
+      {"id":"bb2026-ingles-video-2","title":"Aula de Inglês #32: Falsos cognatos e expressões do inglês | Aumente seu vocabulário no idioma","channel":"Fluency Academy","description":"Apoio ao vocabulário em contexto. Compare traduções com o sentido do trecho, evitando associações apenas pela grafia.","level":"Revisão","videoId":"GN13zwBEWAA"}],"modules":[]},
+    {"id":"vendas","title":"Vendas e Negociação","summary":"Relacione estratégia, valor, atendimento, negociação e proteção do consumidor.","lessons":[
+      {"id":"bb2026-vendas-video-1","title":"Aula de Vendas e negociação para o Banco do Brasil - AlfaCon","channel":"AlfaCon","description":"Apoio externo à disciplina. Regras de relacionamento e proteção devem ser conferidas nas fontes atuais dos módulos.","level":"Fundamentos","videoId":"gUA83kQV12c"},
+      {"id":"bb2026-vendas-video-2","title":"Aula 01: Noções de Estratégia Empresarial (Vendas e Negociação) - Concurso Banco do Brasil 2026","channel":"Retorno Interno - Com Renan Duarte","description":"Aula sobre estratégia empresarial. O título do produtor não confirma edital de 2026; exemplos e questões do material são próprios da Estuda Aí.","level":"Aplicação","videoId":"vlxfzyUCwco"}],"modules":[]},
+    {"id":"financeira","title":"Matemática Financeira","summary":"Compare valores no tempo, taxas, juros e sistemas de amortização.","lessons":[
+      {"id":"bb2026-financeira-video-1","title":"JUROS SIMPLES Prof. Gis/ MATEMÁTICA FINANCEIRA","channel":"Gis com Giz","description":"Apoio ao regime simples. Alinhe a unidade da taxa com a duração antes de calcular juros.","level":"Fundamentos","videoId":"aZcETuhXxPw"},
+      {"id":"bb2026-financeira-video-2","title":"JUROS COMPOSTOS | MATEMÁTICA FINANCEIRA","channel":"Gis com Giz","description":"Apoio à capitalização composta. Use a linha do tempo e as condições dos casos próprios para comparar fluxos.","level":"Aplicação","videoId":"X652ApXFTJA"}],"modules":[]},
+    {"id":"informatica","title":"Informática","summary":"Estude sistemas, aplicativos, redes, segurança e uso responsável de dados.","lessons":[
+      {"id":"bb2026-informatica-video-1","title":"Concurso Correios - Aula de Informática: Correio Eletrônico","channel":"Qconcursos","description":"Apoio externo sobre correio eletrônico, gravado para outra preparação. Conceitos de protocolos são comparados com referências técnicas no material.","level":"Fundamentos","videoId":"O6QokiF6s4M"},
+      {"id":"bb2026-informatica-video-2","title":"Segurança da Informação - aula de Informática para Concursos - AO VIVO - AlfaCon","channel":"AlfaCon","description":"Aula histórica de segurança. Consulte práticas atuais do CERT.br; nomes e interfaces de programas podem variar por versão.","level":"Revisão","videoId":"PxgYsfzLaoo"}],"modules":[]},
+    {"id":"redacao","title":"Redação","summary":"Planeje, argumente e revise textos em cinco oficinas com propostas originais.","lessons":[
+      {"id":"bb2026-redacao-video-1","title":"Tipos de Introdução para Redações Dissertativas - Argumentativas - [Prof Noslen]","channel":"Professor Noslen","description":"Apoio à abertura de um texto argumentativo. Escolha uma introdução que delimite o problema e conduza à tese.","level":"Fundamentos","videoId":"m01EJtAnW3Q"},
+      {"id":"bb2026-redacao-video-2","title":"Como ARGUMENTAR BEM na sua redação do ENEM? #NoENEMComNoslen | Professor Noslen","channel":"Professor Noslen","description":"Apoio sobre argumentação em contexto do ENEM. Não transferir automaticamente critérios dessa prova, como proposta de intervenção, para a referência histórica do BB.","level":"Aplicação","videoId":"IGmZHrihXN8"}],"modules":[]}
+  ]
+}
