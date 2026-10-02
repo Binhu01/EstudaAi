@@ -1,10 +1,10 @@
 # Mapa curricular proposto — Banco do Brasil 2026
 
-Pesquisa preparatória em 01/10/2026. A estrutura modular foi aprovada na conversa e integra a [especificação para revisão](superpowers/specs/2026-10-01-concursos-bb2026-design.md). Organização pedagógica própria; este mapa ainda não representa material publicado no app.
+Pesquisa preparatória em 01/10/2026. A estrutura modular foi aprovada na conversa e integra a [especificação aprovada](superpowers/specs/2026-10-01-concursos-bb2026-design.md). Organização pedagógica própria; este mapa ainda não representa material publicado no app.
 
 A numeração de referência abaixo aponta para os itens do Anexo III de Agente Comercial do [edital histórico 2022/001](https://www.bb.com.br/docs/portal/dipes/Edital-de-Abertura-de-Selecao-Externa-2022-01.pdf). Redação usa critérios da seção 7.3. A referência histórica não define um futuro edital de 2026.
 
-O mapa reúne 126 unidades: 121 de conteúdo objetivo e cinco oficinas de escrita. Essa organização está registrada na especificação, que aguarda aprovação escrita. As unidades amplas precisam de subdivisões internas, exemplos e prática suficientes; presença de um título não comprova cobertura. Todos os assuntos previstos precisam de conteúdo real antes de serem anunciados como disponíveis.
+O mapa reúne 126 unidades: 121 de conteúdo objetivo e cinco oficinas de escrita. Essa organização está registrada na especificação aprovada e detalhada nos planos de implementação para revisão. As unidades amplas precisam de subdivisões internas, exemplos e prática suficientes; presença de um título não comprova cobertura. Todos os assuntos previstos precisam de conteúdo real antes de serem anunciados como disponíveis.
 
 ## Conhecimentos Bancários — 22 unidades
 

@@ -1,6 +1,6 @@
 # Análise das referências — Concursos / Banco do Brasil 2026
 
-Registro de pesquisa de 01/10/2026. A estrutura modular foi aprovada na conversa e a [especificação escrita](superpowers/specs/2026-10-01-concursos-bb2026-design.md) aguarda revisão do usuário; este documento não comprova implementação ou publicação de conteúdo.
+Registro de pesquisa de 01/10/2026. A estrutura modular e a [especificação escrita](superpowers/specs/2026-10-01-concursos-bb2026-design.md) foram aprovadas pelo usuário; os planos de implementação aguardam revisão. Este documento não comprova implementação ou publicação de conteúdo.
 
 ## Intenção confirmada
 
@@ -47,4 +47,4 @@ Foram identificadas, entre outras, simplificações na estrutura do SFN e na LGP
 - [LGPD compilada](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm), [Lei 15.352/2026](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm) e [CDC compilado](https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm).
 - [British Council — perguntas e negativas](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/questions-negatives) e [possessivos](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/possessives-pronouns).
 
-O [mapa detalhado de cobertura](CONCURSOS-MAPA-CURRICULAR.md) e os contratos estão registrados na especificação para revisão. Este registro de pesquisa não altera o aplicativo.
+O [mapa detalhado de cobertura](CONCURSOS-MAPA-CURRICULAR.md) e os contratos estão registrados na especificação aprovada; os planos detalham as etapas para revisão. Este registro de pesquisa não altera o aplicativo.

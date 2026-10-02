@@ -1,6 +1,6 @@
 # Concursos — Banco do Brasil 2026
 
-Data: 01/10/2026. Desenho modular aprovado pelo usuário nesta conversa. Esta especificação aguarda revisão e aprovação; não representa funcionalidade implementada.
+Data: 01/10/2026. Desenho modular e especificação aprovados pelo usuário nesta conversa; a continuação autorizada após apresentação do documento permite preparar o plano. Não representa funcionalidade implementada.
 
 ## 1. Intenção e resultado esperado
 
