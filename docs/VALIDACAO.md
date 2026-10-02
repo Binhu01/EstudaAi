@@ -1,5 +1,27 @@
 # Evidências da experiência de estudo
 
+## CI do Pull Request #1 — 02/10/2026
+
+A primeira execução remota, no commit `79d112e`, comprovou geração, testes e build da API, o verificador integral do catálogo e a integração com PostgreSQL 17.11. O job Flutter comprovou geração, lockfile, formatação, análise, testes, build Web e verificação visual nos três tamanhos.
+
+O percurso de Estudo livre falhou ao localizar a mensagem de indisponibilidade do login: o Flutter disponibilizou o mesmo texto no conteúdo e no anúncio para leitores de tela. O seletor global encontrou dois elementos. A correção limita essa verificação à árvore semântica do aplicativo, exige uma única mensagem e preserva o anúncio acessível. O percurso de Concursos não chegou a executar nessa primeira tentativa.
+
+As verificações da nova execução e do commit atual podem ser consultadas no [Pull Request #1](https://github.com/Binhu01/EstudaAi/pull/1). Os registros locais abaixo descrevem o fechamento anterior ao envio ao GitHub; seus limites de CI e PostgreSQL não substituem esta evidência remota posterior. Login/IA reais, builds nativos e deploy continuam sem validação ao vivo.
+
+## Concursos — 02/10/2026
+
+Branch `codex/concursos-bb2026`, baseada em `b9154fc`, no EstudaAi separado da AlmaPet. Catálogo integral: 126 módulos, 756 questões, seis propostas de Redação e 18 vídeos distintos. Revisão editorial do autor, vínculos históricos e 24 oráculos numéricos conferidos; comparação com oito extrações privadas sem coincidências de 12 ou mais palavras. Não se apresenta essa comparação como certificação universal.
+
+Geração Dart executada; conteúdo dos modelos versionados permaneceu igual. Formatação: 96 arquivos, zero mudanças no check; análise sem problemas. **81 testes Flutter, 66 testes API e 22 testes de ferramentas passaram**, além do verificador integral com `errors:[]`. O OpenAPI foi gerado com 129 identidades, e as cópias API/Web preservam os bytes do canônico. Build Web release sem recursos CDN concluído. `FLUTTER_WINDOWS=false` apenas no processo, sem mudar configurações globais.
+
+Navegador Chromium em 1440×1000, 360×800 e 768×1024: **27 percursos de Concursos e 135 respostas**, nove percursos livres e 45 respostas; zero erros internos. Inclui todas as disciplinas, material→aulas→quiz→Steve→conta, cinco questões distintas/700 pontos, contexto, recuperação de relação inválida e alias livre recusado. Temas claro/escuro, movimento reduzido, pausa/persistência do shader e teclado foram verificados nos três tamanhos. Reflow a 200%, fórmula/tabela, passagens longas, feedback e ações têm testes Flutter; não se confunde essa evidência com zoom do navegador.
+
+Relatórios/capturas locais ignorados pelo Git: `artifacts/concursos-bb2026/verification`, `artifacts/web-verification.json` e `artifacts/study-verification.json`. Scripts `test:visual`, `test:study` e `test:contests` reproduzem a verificação com `PREVIEW_URL`. A prévia da branch usa `http://127.0.0.1:4174/#/concursos`. Fórmula F07 e tabela I05 foram inspecionadas nas capturas dos três tamanhos; em 360 px também foi conferida a última coluna após rolagem horizontal. A ausência do rótulo acessível dos textos selecionáveis foi reproduzida e corrigida. A comparação final percorreu 96.763 tokens autorais e oito extrações privadas, sem sequências iguais de 12 ou mais palavras. Iframes/link foram conferidos; não foi observada reprodução dos 18 vídeos novos. Erros de terceiros e indisponibilidade esperada da API local são separados dos erros internos.
+
+Firebase/OpenAI reais seguem sem configuração demonstrada. Testes de transporte controlado não equivalem a login ou respostas reais. SQL e quotas não mudaram; PostgreSQL real não foi repetido nesta entrega. Docker, CI remota, builds nativos e deploy não foram executados. A [revisão independente](CONCURSOS-REVISAO.md) incluiu 27 módulos/162 questões e 55 testes dirigidos; o autor corrigiu os três achados importantes em uma passagem, com regressões RED→GREEN, e adiou um ajuste menor de espaçamento. Não houve segunda revisão nem auditoria factual independente integral.
+
+## Registro histórico — 01/10/2026
+
 Verificação local em 01/10/2026, Windows, Node 24.19.0/npm 11.17.0, Flutter 3.47.5/Dart 3.13.4. Trabalho isolado em `codex/experiencia-estudo`, baseado na fundação `967b6a6`, no EstudaAi separado da AlmaPet. Integração local por fast-forward em `codex/estuda-ai-foundation`; geração dos modelos, formatação, análise, 35 testes API, 58 testes Flutter e build Web foram repetidos no checkout integrado. Nenhum push ou publicação.
 
 | Verificação executada | Resultado |

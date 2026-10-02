@@ -3,7 +3,7 @@ import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../learning/learning_controller.dart';
+import '../learning/learning_catalog_providers.dart';
 import 'quiz_engine.dart';
 import 'best_score_repository.dart';
 
@@ -31,13 +31,13 @@ class QuizController extends Notifier<QuizViewState> {
   int _generation = 0;
   @override
   QuizViewState build() {
-    final catalog = ref.read(catalogProvider).requireValue;
-    final topic = catalog.find(topicId);
-    if (topic == null) {
+    final entry = ref.read(learningEntryProvider(topicId)).requireValue;
+    if (entry == null) {
       throw ArgumentError.value(topicId);
     }
-    _version = catalog.catalogVersion;
-    _engine = QuizEngine(questions: topic.questions, random: Random())..start();
+    _version = entry.contentVersion;
+    _engine = QuizEngine(questions: entry.topic.questions, random: Random())
+      ..start();
     return QuizViewState(
       round: _engine.state,
       best: ref.read(bestScoreProvider).read(topicId, _version),

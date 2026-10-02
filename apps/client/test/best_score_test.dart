@@ -4,6 +4,17 @@ import 'package:estuda_ai/features/quiz/best_score_repository.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  test('free_score_survives_contest_version', () async {
+    SharedPreferences.setMockInitialValues({'quiz.best.v1.porcentagem': 500});
+    final repository = BestScoreRepository(
+      await SharedPreferences.getInstance(),
+    );
+    await repository.saveIfHigher('bb2026-b01', 1, 700);
+    await repository.saveIfHigher('bb2026-b01', 2, 300);
+    expect(repository.read('porcentagem', 1), 500);
+    expect(repository.read('bb2026-b01', 1), 700);
+    expect(repository.read('bb2026-b01', 2), 300);
+  });
   test(
     'concurrent writes preserve the maximum and isolate topic/version',
     () async {

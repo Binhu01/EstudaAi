@@ -5,37 +5,39 @@ import '../../core/api_failure.dart';
 import '../../core/api_origin.dart';
 import '../auth/session_controller.dart';
 import '../learning/learning_controller.dart';
+import '../learning/learning_catalog_providers.dart';
 import '../learning/study_catalog.dart';
 import 'steve_models.dart';
 
-final steveApiProvider = Provider<SteveApi>(
-  (ref) => SteveApi(
+final steveApiProvider = Provider<SteveApi>((ref) {
+  ref.watch(learningEntryProvider(ref.watch(learningProvider).topicId));
+  return SteveApi(
     baseUrl: ref.watch(apiOriginProvider),
     dio: ref.watch(dioProvider),
-    catalog: ref.watch(catalogProvider).requireValue,
+    findTopic: (id) => ref.read(learningEntryProvider(id)).asData?.value?.topic,
     token: ref.read(sessionProvider.notifier).accessToken,
-  ),
-);
+  );
+});
 
 class SteveApi {
   SteveApi({
     required Uri baseUrl,
     required this.token,
-    required this.catalog,
+    required this.findTopic,
     Dio? dio,
   }) : baseUrl = validateApiOrigin(baseUrl),
        dio = dio ?? Dio();
   final Uri baseUrl;
   final Dio dio;
   final Future<String?> Function() token;
-  final LearningCatalog catalog;
+  final StudyTopic? Function(String) findTopic;
   Future<SteveReply> send({
     required String topicId,
     required String message,
     required List<ChatMessage> history,
     required CancelToken cancelToken,
   }) async {
-    final topic = catalog.find(topicId);
+    final topic = findTopic(topicId);
     if (topic == null || message.trim().isEmpty || message.length > 2000) {
       throw const ApiFailure('INVALID_INPUT');
     }

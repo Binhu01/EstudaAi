@@ -4,94 +4,32 @@ import 'package:go_router/go_router.dart';
 
 import '../../design_system/tokens.dart';
 import 'study_catalog.dart';
-import 'learning_controller.dart';
-import 'topic_scope.dart';
-import 'topic_not_found.dart';
 import 'lesson_player.dart';
 import 'external_links.dart';
-
-class StudyTopicView extends ConsumerWidget {
-  const StudyTopicView({
-    super.key,
-    required this.topicId,
-    required this.builder,
-  });
-  final String topicId;
-  final Widget Function(LearningCatalog, StudyTopic) builder;
-  @override
-  Widget build(BuildContext context, WidgetRef ref) => ref
-      .watch(catalogProvider)
-      .when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (_, stack) => Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('Não foi possível carregar os assuntos.'),
-              TextButton(
-                onPressed: () => ref.invalidate(catalogProvider),
-                child: const Text('Tentar novamente'),
-              ),
-            ],
-          ),
-        ),
-        data: (catalog) {
-          final topic = catalog.find(topicId);
-          if (topic == null) return const TopicNotFound();
-          return TopicScope(topicId: topicId, child: builder(catalog, topic));
-        },
-      );
-}
-
-class TopicSelector extends StatelessWidget {
-  const TopicSelector({
-    super.key,
-    required this.catalog,
-    required this.topicId,
-    required this.routePrefix,
-  });
-  final LearningCatalog catalog;
-  final String topicId, routePrefix;
-  @override
-  Widget build(BuildContext context) => ConstrainedBox(
-    constraints: const BoxConstraints(maxWidth: 500),
-    child: DropdownButtonFormField<String>(
-      initialValue: topicId,
-      isExpanded: true,
-      itemHeight: null,
-      decoration: const InputDecoration(
-        labelText: 'Assunto',
-        border: OutlineInputBorder(),
-      ),
-      items: [
-        for (final t in catalog.topics)
-          DropdownMenuItem(
-            value: t.id,
-            child: Text(t.title, overflow: TextOverflow.ellipsis),
-          ),
-      ],
-      onChanged: (id) {
-        if (id != null) context.go('$routePrefix/$id');
-      },
-    ),
-  );
-}
+import 'learning_entry.dart';
+import 'learning_entry_view.dart';
+import 'study_routes.dart';
+import '../contests/contest_module_actions.dart';
 
 class LearningScreen extends StatelessWidget {
-  const LearningScreen({super.key, required this.topicId});
+  const LearningScreen({
+    super.key,
+    required this.topicId,
+    this.area = LearningArea.freeStudy,
+  });
   final String topicId;
+  final LearningArea area;
   @override
-  Widget build(BuildContext context) => StudyTopicView(
+  Widget build(BuildContext context) => LearningEntryView(
     topicId: topicId,
-    builder: (catalog, topic) =>
-        _Lessons(key: ValueKey(topic.id), catalog: catalog, topic: topic),
+    area: area,
+    builder: (entry) => _Lessons(key: ValueKey(entry.topic.id), entry: entry),
   );
 }
 
 class _Lessons extends ConsumerStatefulWidget {
-  const _Lessons({super.key, required this.catalog, required this.topic});
-  final LearningCatalog catalog;
-  final StudyTopic topic;
+  const _Lessons({super.key, required this.entry});
+  final LearningEntry entry;
   @override
   ConsumerState<_Lessons> createState() => _LessonsState();
 }
@@ -100,7 +38,9 @@ class _LessonsState extends ConsumerState<_Lessons> {
   StudyLesson? _selected;
   @override
   Widget build(BuildContext context) {
-    final topic = widget.topic, colors = AppColors.of(context);
+    final entry = widget.entry,
+        topic = entry.topic,
+        colors = AppColors.of(context);
     return SingleChildScrollView(
       child: Center(
         child: ConstrainedBox(
@@ -115,13 +55,27 @@ class _LessonsState extends ConsumerState<_Lessons> {
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 8),
-                const Text('Estudo livre · uma descoberta de cada vez'),
-                const SizedBox(height: 24),
-                TopicSelector(
-                  catalog: widget.catalog,
-                  topicId: topic.id,
-                  routePrefix: '/aprender',
+                Text(
+                  entry.area == LearningArea.contest
+                      ? '${entry.courseTitle} · ${topic.subject} · apoio externo à disciplina'
+                      : 'Estudo livre · uma descoberta de cada vez',
                 ),
+                const SizedBox(height: 24),
+                LearningEntrySelector(
+                  entry: entry,
+                  action: StudyAction.lessons,
+                ),
+                if (entry.area == LearningArea.contest) ...[
+                  const SizedBox(height: 20),
+                  ContestModuleActions(
+                    entry: entry,
+                    selected: StudyAction.lessons,
+                  ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    'As aulas são complementares e externas. O material autoral reúne a explicação e a prática específicas deste módulo.',
+                  ),
+                ],
                 const SizedBox(height: 32),
                 Text(
                   topic.title,
@@ -216,7 +170,8 @@ class _LessonsState extends ConsumerState<_Lessons> {
                   ),
                 const SizedBox(height: 24),
                 FilledButton.icon(
-                  onPressed: () => context.go('/steve/${topic.id}'),
+                  onPressed: () =>
+                      context.go(StudyRoutes.path(entry, StudyAction.steve)),
                   icon: const Icon(Icons.chat_bubble_outline),
                   label: const Text('Perguntar ao Steve'),
                 ),

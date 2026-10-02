@@ -15,15 +15,15 @@ O mapa reúne 126 unidades: 121 de conteúdo objetivo e cinco oficinas de escrit
 | B03 | Moeda, inflação e juros | 3 |
 | B04 | Instrumentos de política monetária | 3 |
 | B05 | Orçamento e dívida pública | 4 |
-| B06 | Cartões e crédito | 5 |
+| B06 | Cartões, crédito direto ao consumidor, crédito rural e custo | 5 |
 | B07 | Poupança e investimentos | 5 |
 | B08 | Seguros, previdência, consórcio e capitalização | 5 |
 | B09 | Mercado de capitais | 6 |
 | B10 | Operações e regimes cambiais | 7–8 |
 | B11 | Câmbio e relações econômicas | 9–11 |
-| B12 | Operações interbancárias, tesouraria e varejo | 12–13 |
+| B12 | Operações interbancárias, tesouraria, varejo e recuperação de crédito | 12–13 |
 | B13 | Taxas e curva de juros | 14 |
-| B14 | Garantias | 15 |
+| B14 | Aval, fiança, penhor mercantil, alienação fiduciária, hipoteca e fiança bancária | 15 |
 | B15 | Prevenção à lavagem de dinheiro | 16 |
 | B16 | Autorregulação e sigilo | 17–18 |
 | B17 | LGPD: conceitos, princípios e direitos | 19 |
@@ -119,7 +119,7 @@ O mapa reúne 126 unidades: 121 de conteúdo objetivo e cinco oficinas de escrit
 | V09 | Melhoria dos processos | 7 |
 | V10 | Ferramentas da qualidade | 7 |
 | V11 | Processo de venda | 8 |
-| V12 | Marketing digital | 9 |
+| V12 | Leads, copywriting, gatilhos mentais, inbound e indicadores digitais | 9 |
 | V13 | Conduta profissional | 10 |
 | V14 | Atendimento de qualidade | 11 |
 | V15 | Venda por canais remotos | 12 |
@@ -194,4 +194,4 @@ Português/Inglês precisam de textos próprios. Fórmulas devem ser acessíveis
 - Financeira: compatibilidade entre taxa e prazo; distinção entre conversão proporcional e equivalência composta; linha do tempo e pagamentos; modelos de SAC/Price sem reutilizar os números das apostilas.
 - Informática: e-mail assíncrono e independente de webmail; IMAP como Internet Message Access Protocol; alcance real do CCO; sincronização diferente de backup; distribuições/suítes e versões sem equivalências automáticas.
 
-As fontes oficiais e a análise dos oito PDFs estão no [registro de pesquisa](CONCURSOS-REFERENCIAS.md). O catálogo, as rotas, os componentes e os exercícios ainda não foram alterados.
+As fontes oficiais e a análise dos oito PDFs estão no [registro de pesquisa](CONCURSOS-REFERENCIAS.md). O catálogo autoral e os exercícios passaram pela revisão editorial integral em 02/10/2026; a [matriz de cobertura](CONCURSOS-COBERTURA.md) registra os vínculos. A integração das rotas e componentes continua no plano principal.

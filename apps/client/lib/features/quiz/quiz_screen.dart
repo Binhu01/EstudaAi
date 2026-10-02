@@ -3,19 +3,28 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../design_system/tokens.dart';
 import '../../design_system/components/pixel_avatar.dart';
-import '../learning/learning_screen.dart';
+import '../learning/learning_entry.dart';
+import '../learning/learning_entry_view.dart';
+import '../learning/study_routes.dart';
+import '../contests/contest_module_actions.dart';
 import 'quiz_engine.dart';
 import 'quiz_controller.dart';
 import 'answer_tile.dart';
 import 'quiz_result.dart';
 
 class QuizScreen extends StatelessWidget {
-  const QuizScreen({super.key, required this.topicId});
+  const QuizScreen({
+    super.key,
+    required this.topicId,
+    this.area = LearningArea.freeStudy,
+  });
   final String topicId;
+  final LearningArea area;
   @override
-  Widget build(BuildContext context) => StudyTopicView(
+  Widget build(BuildContext context) => LearningEntryView(
     topicId: topicId,
-    builder: (catalog, topic) => SingleChildScrollView(
+    area: area,
+    builder: (entry) => SingleChildScrollView(
       child: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 1100),
@@ -33,18 +42,25 @@ class QuizScreen extends StatelessWidget {
                   'Cinco perguntas. Seu ritmo. Um novo nível de conhecimento.',
                 ),
                 const SizedBox(height: 24),
-                TopicSelector(
-                  catalog: catalog,
-                  topicId: topicId,
-                  routePrefix: '/desafios',
-                ),
+                LearningEntrySelector(entry: entry, action: StudyAction.quiz),
+                if (entry.area == LearningArea.contest) ...[
+                  const SizedBox(height: 20),
+                  ContestModuleActions(
+                    entry: entry,
+                    selected: StudyAction.quiz,
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    'Desafio formativo · ${entry.courseTitle} · ${entry.topic.subject}',
+                  ),
+                ],
                 const SizedBox(height: 24),
                 Text(
-                  topic.title,
+                  entry.topic.title,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 24),
-                _Round(key: ValueKey(topicId), topicId: topicId),
+                _Round(key: ValueKey(topicId), entry: entry),
               ],
             ),
           ),
@@ -55,10 +71,11 @@ class QuizScreen extends StatelessWidget {
 }
 
 class _Round extends ConsumerWidget {
-  const _Round({super.key, required this.topicId});
-  final String topicId;
+  const _Round({super.key, required this.entry});
+  final LearningEntry entry;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final topicId = entry.topic.id;
     final view = ref.watch(quizProvider(topicId));
     final controller = ref.read(quizProvider(topicId).notifier);
     final round = view.round, colors = AppColors.of(context);
@@ -89,11 +106,7 @@ class _Round extends ConsumerWidget {
       );
     }
     if (round.phase == QuizPhase.completed) {
-      return QuizResult(
-        topicId: topicId,
-        result: view,
-        onRepeat: controller.start,
-      );
+      return QuizResult(entry: entry, result: view, onRepeat: controller.start);
     }
     final q = round.question, locked = round.phase == QuizPhase.feedback;
     return Column(

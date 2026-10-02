@@ -11,6 +11,7 @@ COPY apps/api/package.json ./apps/api/package.json
 RUN npm ci --ignore-scripts
 COPY apps/api ./apps/api
 COPY apps/client/assets/study/catalog.json ./apps/client/assets/study/catalog.json
+COPY apps/client/assets/contests/bb2026/catalog.json ./apps/client/assets/contests/bb2026/catalog.json
 COPY tools/package-catalog.mjs ./tools/package-catalog.mjs
 # URL somente para geração. Este passo não se conecta ao banco.
 RUN DATABASE_URL=postgresql://build:build@localhost:5432/build npm run db:generate

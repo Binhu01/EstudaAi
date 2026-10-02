@@ -6,20 +6,26 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:estuda_ai/core/api_origin.dart';
 import 'package:estuda_ai/features/auth/session_controller.dart';
 import 'package:estuda_ai/features/learning/learning_controller.dart';
+import 'package:estuda_ai/features/learning/learning_catalog_providers.dart';
+import 'package:estuda_ai/features/contests/contest_catalog.dart';
 import 'package:estuda_ai/features/steve/steve_controller.dart';
 import 'package:estuda_ai/features/steve/steve_models.dart';
 
 import 'auth_api_test.dart' show ScriptAdapter, jsonResponse, authResponse;
 import 'steve_api_test.dart' show testCatalog, steveResponse;
 
-Future<ProviderContainer> loggedIn(Dio dio) async {
+Future<ProviderContainer> loggedIn(Dio dio, {ContestCatalog? contests}) async {
   final c = ProviderContainer(
     overrides: [
       dioProvider.overrideWithValue(dio),
       catalogProvider.overrideWith((ref) async => testCatalog()),
+      if (contests != null)
+        contestCatalogProvider.overrideWith((ref) async => contests),
+      steveClockProvider.overrideWithValue(() => DateTime.utc(2026, 10, 1, 12)),
     ],
   );
   await c.read(catalogProvider.future);
+  if (contests != null) await c.read(contestCatalogProvider.future);
   await c.read(sessionProvider.notifier).login('a@example.com', 'password');
   return c;
 }

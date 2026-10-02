@@ -3,6 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../features/learning/learning_controller.dart';
+import '../features/learning/learning_catalog_providers.dart';
+import '../features/learning/learning_entry.dart';
+import '../features/learning/study_routes.dart';
 
 import '../design_system/tokens.dart';
 
@@ -13,7 +16,15 @@ class AppShell extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selected = location.startsWith('/preferencias')
-        ? 4
+        ? 5
+        : location.startsWith('/concursos')
+        ? (location.endsWith('/steve')
+              ? 3
+              : location.endsWith('/desafio')
+              ? 2
+              : location.endsWith('/aulas') || location.endsWith('/material')
+              ? 1
+              : 4)
         : location.startsWith('/steve')
         ? 3
         : location.startsWith('/desafios')
@@ -21,15 +32,36 @@ class AppShell extends ConsumerWidget {
         : location.startsWith('/aprender')
         ? 1
         : 0;
-    void navigate(int index) => context.go(
-      [
-        '/',
-        '/aprender/${ref.read(learningProvider).topicId}',
-        '/desafios/${ref.read(learningProvider).topicId}',
-        '/steve/${ref.read(learningProvider).topicId}',
-        '/preferencias',
-      ][index],
-    );
+    final selection = ref.watch(learningProvider);
+    final entry = ref
+        .watch(learningEntryProvider(selection.topicId))
+        .asData
+        ?.value;
+    void navigate(int index) {
+      if (index == 0) {
+        context.go('/');
+        return;
+      }
+      if (index == 4) {
+        context.go('/concursos');
+        return;
+      }
+      if (index == 5) {
+        context.go('/preferencias');
+        return;
+      }
+      if (entry == null) {
+        context.go(selection.area == LearningArea.contest ? '/concursos' : '/');
+        return;
+      }
+      context.go(
+        StudyRoutes.path(
+          entry,
+          [StudyAction.lessons, StudyAction.quiz, StudyAction.steve][index - 1],
+        ),
+      );
+    }
+
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth >= 1024) {
@@ -77,10 +109,17 @@ class AppShell extends ConsumerWidget {
                             ),
                             const SizedBox(height: AppSpacing.sm),
                             NavigationItem(
-                              label: 'Preferências',
-                              icon: AppIcons.settings,
+                              label: 'Concursos',
+                              icon: Icons.account_balance_outlined,
                               selected: selected == 4,
                               onPressed: () => navigate(4),
+                            ),
+                            const SizedBox(height: AppSpacing.sm),
+                            NavigationItem(
+                              label: 'Preferências',
+                              icon: AppIcons.settings,
+                              selected: selected == 5,
+                              onPressed: () => navigate(5),
                             ),
                             const Spacer(),
                             NavigationItem(
@@ -146,6 +185,10 @@ class AppShell extends ConsumerWidget {
                         label: Text('Steve'),
                       ),
                       NavigationRailDestination(
+                        icon: Icon(Icons.account_balance_outlined),
+                        label: Text('Concursos'),
+                      ),
+                      NavigationRailDestination(
                         icon: Icon(AppIcons.settings),
                         label: Text('Preferências'),
                       ),
@@ -162,6 +205,11 @@ class AppShell extends ConsumerWidget {
             title: const Brand(),
             actions: [
               IconButton(
+                tooltip: 'Preferências',
+                onPressed: () => context.go('/preferencias'),
+                icon: const Icon(AppIcons.settings),
+              ),
+              IconButton(
                 tooltip: 'Conta',
                 onPressed: () => context.go('/conta'),
                 icon: const Icon(Icons.account_circle_outlined),
@@ -170,7 +218,8 @@ class AppShell extends ConsumerWidget {
           ),
           body: child,
           bottomNavigationBar: NavigationBar(
-            selectedIndex: selected,
+            selectedIndex: selected >= 5 ? 0 : selected,
+            height: MediaQuery.textScalerOf(context).scale(80).clamp(80, 140),
             onDestinationSelected: navigate,
             destinations: const [
               NavigationDestination(icon: Icon(AppIcons.home), label: 'Início'),
@@ -187,8 +236,8 @@ class AppShell extends ConsumerWidget {
                 label: 'Steve',
               ),
               NavigationDestination(
-                icon: Icon(AppIcons.settings),
-                label: 'Preferências',
+                icon: Icon(Icons.account_balance_outlined),
+                label: 'Concursos',
               ),
             ],
           ),
