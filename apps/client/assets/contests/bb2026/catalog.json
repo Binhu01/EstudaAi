@@ -19315,7 +19315,3885 @@
           "videoId": "PxgYsfzLaoo"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-i01",
+          "researchId": "I01",
+          "title": "Windows",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir sistema operacional, aplicativo e gerenciamento · Interpretar arquivos, permissões e recursos no recorte histórico",
+          "objectives": [
+            "Distinguir sistema operacional, aplicativo e gerenciamento",
+            "Interpretar arquivos, permissões e recursos no recorte histórico"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Sistema coordena recursos e execução",
+              "text": "O sistema operacional gerencia processos, memória, dispositivos, arquivos e acesso. Aplicativo realiza tarefa como editar texto; driver permite comunicação com hardware específico. No Windows10 do recorte histórico, Explorador de Arquivos organiza caminhos/pastas; Gerenciador de Tarefas mostra processos/recursos. Extensão sugere formato, mas renomeá-la não converte conteúdo nem prova segurança. Copiar cria outra instância; mover transfere localização nas condições da operação. Conta administrativa amplia poderes, não imuniza contra erro. Permissões dependem de sistema de arquivos e configuração; lixeira não garante recuperação de toda exclusão. O suporte regular do Windows10 terminou em14/10/2025; modalidades ESU/LTSC têm regras próprias. Aqui é estudo histórico, não recomendação de instalação."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Windows10 PT-BR: um arquivo .txt é renomeado para .pdf. Isso cria um PDF válido?",
+              "steps": [
+                "Renomear altera o nome/extensão.",
+                "O conteúdo interno continua texto.",
+                "Conversão exige aplicativo que gere o formato."
+              ],
+              "answer": "Não; extensão nova não converte estrutura.",
+              "check": "Abrir com leitor de PDF pode falhar porque faltam os dados do formato; nome não demonstra conteúdo."
+            }
+          ],
+          "pitfalls": [
+            "Confundir renomeação e conversão.",
+            "Tratar lixeira como backup garantido."
+          ],
+          "recap": [
+            "Sistema gerencia; aplicativo executa tarefa.",
+            "Extensão não altera conteúdo.",
+            "Versão histórica e suporte atual têm contextos diferentes."
+          ],
+          "retrieval": [
+            "Qual função de driver?",
+            "Copiar é a mesma operação que mover?"
+          ],
+          "notes": "Windows\nSistema gerencia; aplicativo executa tarefa.\nExtensão não altera conteúdo.\nVersão histórica e suporte atual têm contextos diferentes.\nConfundir renomeação e conversão.\nTratar lixeira como backup garantido.",
+          "suggestions": [
+            "Distinga sistema, driver e aplicativo.",
+            "Explique nome, extensão e formato.",
+            "Compare lixeira e backup."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — fim do suporte Windows10",
+              "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025"
+            },
+            {
+              "title": "Microsoft — guias históricos Office2013",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i01-q01",
+              "prompt": "Gerenciar memória e processos é função típica do:",
+              "options": [
+                "Editor de texto",
+                "Slide mestre",
+                "Sistema operacional",
+                "Arquivo CSV"
+              ],
+              "correctIndex": 2,
+              "explanation": "O sistema coordena recursos; aplicativos dependem desse ambiente."
+            },
+            {
+              "id": "bb2026-i01-q02",
+              "prompt": "Renomear .txt para .pdf faz:",
+              "options": [
+                "Conversão garantida",
+                "Criptografia",
+                "Backup automático",
+                "Mudança de nome, sem conversão do conteúdo"
+              ],
+              "correctIndex": 3,
+              "explanation": "Formato depende da estrutura interna, não somente do sufixo."
+            },
+            {
+              "id": "bb2026-i01-q03",
+              "prompt": "Driver serve principalmente para:",
+              "options": [
+                "Comunicação do sistema com dispositivo",
+                "Criar sumário",
+                "Calcular juros",
+                "Compactar todo arquivo"
+              ],
+              "correctIndex": 0,
+              "explanation": "É software de suporte ao dispositivo; não se confunde com aplicativo de escritório."
+            },
+            {
+              "id": "bb2026-i01-q04",
+              "prompt": "No Windows10 histórico, o Explorador de Arquivos é usado para:",
+              "options": [
+                "Avaliar risco de crédito",
+                "Navegar e organizar arquivos/pastas",
+                "EnviarSMTP por definição",
+                "Editar fórmula de célula"
+              ],
+              "correctIndex": 1,
+              "explanation": "Essa ferramenta lida com caminhos, pastas e operações sobre arquivos."
+            },
+            {
+              "id": "bb2026-i01-q05",
+              "prompt": "Conta administrativa garante imunidade a malware?",
+              "options": [
+                "Sim, por ser poderosa",
+                "Sim, sem atualizações",
+                "Não; poderes ampliados não eliminam risco",
+                "Sim, com qualquer senha"
+              ],
+              "correctIndex": 2,
+              "explanation": "Privilégios podem ampliar impacto de erro/ataque; proteção exige controles."
+            },
+            {
+              "id": "bb2026-i01-q06",
+              "prompt": "Windows10 e seu suporte devem ser apresentados como:",
+              "options": [
+                "Versão atual garantida sem prazo",
+                "Sistema imune",
+                "Aplicativo de planilha",
+                "Recorte histórico, com suporte regular encerrado e exceções específicas"
+              ],
+              "correctIndex": 3,
+              "explanation": "A data de fim regular e modalidades especiais precisam de contexto, sem recomendar versão legada."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i01-q01",
+                "bb2026-i01-q02",
+                "bb2026-i01-q03"
+              ],
+              "sourceUrls": [
+                "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025",
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i01-q04",
+                "bb2026-i01-q05",
+                "bb2026-i01-q06"
+              ],
+              "sourceUrls": [
+                "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025",
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i02",
+          "researchId": "I02",
+          "title": "Linux",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir núcleo, distribuição e ambiente gráfico · Interpretar caminhos e permissões com versão identificada",
+          "objectives": [
+            "Distinguir núcleo, distribuição e ambiente gráfico",
+            "Interpretar caminhos e permissões com versão identificada"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Linux não é uma interface única",
+              "text": "Linux é núcleo; distribuição combina núcleo e componentes como ferramentas, gerenciador de pacotes e aplicativos. Ambiente gráfico é outra camada, com escolhas distintas. No histórico openSUSE Leap42.1, padrão era Plasma5.4.2; o recorte KDE4 do edital não deve ser apresentado como esse padrão. Caminhos Unix usam / e normalmente distinguem maiúsculas/minúsculas conforme sistema de arquivos. /home contém diretórios de usuários em configuração usual. Permissões r/w/x variam entre proprietário, grupo e outros; para diretório, x permite atravessar/acessar conforme demais condições, não “executar pasta”. Root tem privilégios elevados. Software livre envolve liberdades/licença, não significa todo programa gratuito, seguro ou sem autoria."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "No GNU/Linux com permissões tradicionais, arquivo tem rw-r----- e usuário é do grupo, mas não proprietário. O que o grupo recebe?",
+              "steps": [
+                "Divida em proprietário rw-, grupo r--, outros---.",
+                "Grupo tem leitura, sem escrita ou execução."
+              ],
+              "answer": "Leitura, sob demais condições de acesso.",
+              "check": "Não se usa o trio do proprietário para todos; permissões do caminho/ACL/configuração também podem afetar acesso real."
+            }
+          ],
+          "pitfalls": [
+            "Confundir distribuição com ambiente gráfico.",
+            "Tratar Linux como imune ou assumir comandos idênticos em toda interface."
+          ],
+          "recap": [
+            "Núcleo, distribuição e desktop são camadas distintas.",
+            "Permissões dependem de classe e contexto.",
+            "Leap42.1/Plasma5 e KDE4 são recortes históricos distintos."
+          ],
+          "retrieval": [
+            "Qual trio corresponde ao grupo em rwxr-x---?",
+            "Software livre significa necessariamente preço zero?"
+          ],
+          "notes": "Linux\nNúcleo, distribuição e desktop são camadas distintas.\nPermissões dependem de classe e contexto.\nLeap42.1/Plasma5 e KDE4 são recortes históricos distintos.\nConfundir distribuição com ambiente gráfico.\nTratar Linux como imune ou assumir comandos idênticos em toda interface.",
+          "suggestions": [
+            "Compare núcleo, distribuição e desktop.",
+            "Interprete permissões r/w/x num exemplo.",
+            "Explique caminhos sem presumir interface única."
+          ],
+          "sources": [
+            {
+              "title": "openSUSE — lançamento Leap42.1",
+              "url": "https://news.opensuse.org/2015/11/04/opensuse-leap-42-1-becomes-first-hybrid-distribution/"
+            },
+            {
+              "title": "openSUSE42.1 — documentação arquivada",
+              "url": "https://doc.opensuse.org/documentation/leap/archive/42.1/startup/html/book.opensuse.startup/index.html"
+            },
+            {
+              "title": "KDE4.14 — histórico",
+              "url": "https://kde.org/announcements/4/4.14.0/"
+            },
+            {
+              "title": "GNU — software livre",
+              "url": "https://www.gnu.org/philosophy/free-sw.html"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i02-q01",
+              "prompt": "Uma distribuição Linux combina:",
+              "options": [
+                "Núcleo e componentes organizados para uso",
+                "Somente papel de parede",
+                "Somente navegador",
+                "Somente extensão de arquivo"
+              ],
+              "correctIndex": 0,
+              "explanation": "Distribuições integram kernel e ferramentas/aplicativos, com escolhas próprias."
+            },
+            {
+              "id": "bb2026-i02-q02",
+              "prompt": "Plasma e KDE4 no recorte estudado são:",
+              "options": [
+                "Nomes de capitalização",
+                "Ambientes/gerações de interface, distintos do núcleo",
+                "ProtocolosSMTP",
+                "Arquivos de planilha"
+              ],
+              "correctIndex": 1,
+              "explanation": "Desktop não equivale a kernel ou distribuição inteira."
+            },
+            {
+              "id": "bb2026-i02-q03",
+              "prompt": "Em rw-r-----, o trio do grupo é:",
+              "options": [
+                "rw-",
+                "---",
+                "r--",
+                "rwx"
+              ],
+              "correctIndex": 2,
+              "explanation": "Os trios são proprietário/grupo/outros; o segundo contém leitura apenas."
+            },
+            {
+              "id": "bb2026-i02-q04",
+              "prompt": "Software livre significa:",
+              "options": [
+                "Sempre preço zero",
+                "Sem licença",
+                "Sem direitos autorais",
+                "Liberdades definidas pela licença, não gratuidade necessária"
+              ],
+              "correctIndex": 3,
+              "explanation": "Liberdade de uso/estudo/modificação/distribuição e preço são conceitos distintos."
+            },
+            {
+              "id": "bb2026-i02-q05",
+              "prompt": "Caminho /home/ana/dados.txt usa:",
+              "options": [
+                "Separador / no padrão Unix",
+                "SeparadorSMTP",
+                "Fórmula Excel",
+                "Slide mestre"
+              ],
+              "correctIndex": 0,
+              "explanation": "O caminho expressa hierarquia; comportamento de caixa depende do sistema de arquivos."
+            },
+            {
+              "id": "bb2026-i02-q06",
+              "prompt": "Qual afirmação sobre Leap42.1 está correta?",
+              "options": [
+                "KDE4 era seu desktop padrão declarado",
+                "Plasma5.4.2 era padrão; KDE4 é outro recorte histórico",
+                "Windows era o núcleo",
+                "É versão atual indicada para instalar"
+              ],
+              "correctIndex": 1,
+              "explanation": "Anúncio oficial registra Plasma5.4.2; versões legadas são contexto de estudo."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i02-q01",
+                "bb2026-i02-q02",
+                "bb2026-i02-q03"
+              ],
+              "sourceUrls": [
+                "https://news.opensuse.org/2015/11/04/opensuse-leap-42-1-becomes-first-hybrid-distribution/",
+                "https://doc.opensuse.org/documentation/leap/archive/42.1/startup/html/book.opensuse.startup/index.html",
+                "https://kde.org/announcements/4/4.14.0/",
+                "https://www.gnu.org/philosophy/free-sw.html"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i02-q04",
+                "bb2026-i02-q05",
+                "bb2026-i02-q06"
+              ],
+              "sourceUrls": [
+                "https://news.opensuse.org/2015/11/04/opensuse-leap-42-1-becomes-first-hybrid-distribution/",
+                "https://doc.opensuse.org/documentation/leap/archive/42.1/startup/html/book.opensuse.startup/index.html",
+                "https://kde.org/announcements/4/4.14.0/",
+                "https://www.gnu.org/philosophy/free-sw.html"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i03",
+          "researchId": "I03",
+          "title": "Documentos de texto",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir estrutura por estilos de formatação visual isolada · Relacionar sumário, índice e alterações do documento",
+          "objectives": [
+            "Distinguir estrutura por estilos de formatação visual isolada",
+            "Relacionar sumário, índice e alterações do documento"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Estrutura dá função à aparência",
+              "text": "No Word2013 PT-BR do recorte histórico, estilos como Título1 organizam hierarquia e permitem sumário automático. Aumentar fonte manualmente não define nível de título. Sumário apresenta seções/títulos; índice remissivo reúne termos com entradas marcadas, tradicionalmente campos XE. Quebra de página inicia página; quebra de seção permite configurações de seção como cabeçalho/orientação conforme opções. Cabeçalho não é nota de rodapé. Controle de alterações registra propostas de edição, sujeitas a aceitar/rejeitar; comentário não altera texto automaticamente. Exportar PDF fixa apresentação, mas não garante acessibilidade ou impede todo uso indevido. Office2013 teve suporte encerrado em11/04/2023; instruções são estudo histórico."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Word2013 PT-BR: título foi apenas colocado em fonte18/negrito e não aparece no sumário automático. Como corrigir a estrutura?",
+              "steps": [
+                "Aplique estilo de título do nível pertinente, como Título1.",
+                "Atualize o sumário automático conforme configuração.",
+                "Confira hierarquia e página."
+              ],
+              "answer": "Usar estilo de título e atualizar sumário.",
+              "check": "A aparência sozinha não cria o nível estrutural esperado; índice remissivo é mecanismo diferente."
+            }
+          ],
+          "pitfalls": [
+            "Confundir sumário e índice remissivo.",
+            "Achar que comentário altera conteúdo automaticamente."
+          ],
+          "recap": [
+            "Estilo representa estrutura além da aparência.",
+            "Sumário usa títulos; índice usa entradas.",
+            "Alterações e comentários têm funções distintas."
+          ],
+          "retrieval": [
+            "Por que só negrito não cria Título1?",
+            "Que diferença entre quebra de página e seção?"
+          ],
+          "notes": "Documentos de texto\nEstilo representa estrutura além da aparência.\nSumário usa títulos; índice usa entradas.\nAlterações e comentários têm funções distintas.\nConfundir sumário e índice remissivo.\nAchar que comentário altera conteúdo automaticamente.",
+          "suggestions": [
+            "Organize títulos para sumário automático.",
+            "Compare sumário e índice remissivo.",
+            "Explique aceitar/rejeitar alteração e comentário."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — guias históricos Office2013",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+            },
+            {
+              "title": "Microsoft — estilos",
+              "url": "https://support.microsoft.com/pt-br/word/customize-or-create-new-styles"
+            },
+            {
+              "title": "Microsoft — sumário",
+              "url": "https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents"
+            },
+            {
+              "title": "Microsoft — índice",
+              "url": "https://support.microsoft.com/pt-br/word/create-and-update-an-index"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i03-q01",
+              "prompt": "No Word2013 PT-BR, sumário automático se apoia em:",
+              "options": [
+                "Somente texto grande",
+                "Estilos/níveis de título configurados",
+                "Toda palavra em itálico",
+                "Somente comentários"
+              ],
+              "correctIndex": 1,
+              "explanation": "Estrutura de títulos alimenta o sumário segundo configuração."
+            },
+            {
+              "id": "bb2026-i03-q02",
+              "prompt": "Índice remissivo difere do sumário por reunir:",
+              "options": [
+                "Somente páginas em branco",
+                "Sempre nomes de slides",
+                "Termos com entradas marcadas",
+                "Somente imagens"
+              ],
+              "correctIndex": 2,
+              "explanation": "Índice usa marcação de termos; sumário segue seções/títulos."
+            },
+            {
+              "id": "bb2026-i03-q03",
+              "prompt": "Comentário no Word altera o texto automaticamente?",
+              "options": [
+                "Sim, sempre",
+                "Sim, quando extenso",
+                "Sim, se houver negrito",
+                "Não; é anotação para análise"
+              ],
+              "correctIndex": 3,
+              "explanation": "Comentário pode sugerir mudança, mas o texto precisa de edição ou tratamento pertinente."
+            },
+            {
+              "id": "bb2026-i03-q04",
+              "prompt": "Título visual em negrito que não entra no sumário pede:",
+              "options": [
+                "Estilo de título e atualização do sumário",
+                "Só mais tamanho de fonte",
+                "Renomear .docx para .pdf",
+                "Excluir todos os parágrafos"
+              ],
+              "correctIndex": 0,
+              "explanation": "A correção estrutural difere de formatação manual."
+            },
+            {
+              "id": "bb2026-i03-q05",
+              "prompt": "Controle de alterações permite:",
+              "options": [
+                "Aceitar todas as sugestões sem revisão obrigatoriamente",
+                "Registrar edições para aceitar/rejeitar",
+                "Eliminar autoria de qualquer arquivo",
+                "Criar senha de sistema"
+              ],
+              "correctIndex": 1,
+              "explanation": "É ferramenta de revisão; as alterações são tratadas pelo fluxo de aceitação/rejeição."
+            },
+            {
+              "id": "bb2026-i03-q06",
+              "prompt": "Quebra de seção pode permitir:",
+              "options": [
+                "Somente trocar uma palavra",
+                "Sempre alterar todo arquivo igual",
+                "Configurações específicas da seção, conforme opções",
+                "Enviar mensagemSMTP"
+              ],
+              "correctIndex": 2,
+              "explanation": "Seções dão escopo a layout/cabeçalhos; não são simples quebra de linha."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i03-q01",
+                "bb2026-i03-q02",
+                "bb2026-i03-q03"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/",
+                "https://support.microsoft.com/pt-br/word/customize-or-create-new-styles",
+                "https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
+                "https://support.microsoft.com/pt-br/word/create-and-update-an-index"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i03-q04",
+                "bb2026-i03-q05",
+                "bb2026-i03-q06"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/",
+                "https://support.microsoft.com/pt-br/word/customize-or-create-new-styles",
+                "https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
+                "https://support.microsoft.com/pt-br/word/create-and-update-an-index"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i04",
+          "researchId": "I04",
+          "title": "Fórmulas em planilhas",
+          "level": "Fundamentos e aplicação",
+          "summary": "Calcular expressões e distinguir referências relativas/absolutas · Aplicar funções do Excel2013 PT-BR com sintaxe explícita",
+          "objectives": [
+            "Calcular expressões e distinguir referências relativas/absolutas",
+            "Aplicar funções do Excel2013 PT-BR com sintaxe explícita"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Célula, referência e função",
+              "text": "No Excel2013 PT-BR, fórmula começa com= e usa referências, operadores e funções. A1 é relativa; $A$1 fixa coluna e linha; $A1 fixa coluna; A$1 fixa linha. Ao copiar, referências relativas deslocam-se com a posição; absolutas permanecem. Neste recorte, usamos nomes PT-BR e ponto e vírgula como separador de argumentos na configuração indicada. SOMA soma valores; MÉDIA calcula média aritmética de números; SE escolhe resultado por teste. SOMASE e SOMASES têm ordem de argumentos diferente. PROCV pesquisa na primeira coluna da matriz; FALSO solicita correspondência exata. Omitir último argumento permite aproximação com requisitos de ordenação. PROCX não é recurso do Excel2013."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Excel2013 PT-BR/separador ;: B1 contém=A1*$D$1. Copie para B2.",
+              "steps": [
+                "Destino desloca uma linha para baixo.",
+                "A1 relativa torna-se A2.",
+                "$D$1 permanece fixa."
+              ],
+              "answer": "=A2*$D$1.",
+              "check": "O fator fixo continua na mesma célula; usarD2 mudaria a finalidade da referência absoluta."
+            }
+          ],
+          "pitfalls": [
+            "Trocar ordem dos argumentos de SOMASE/SOMASES.",
+            "Usar PROCV aproximado sem verificar ordenação."
+          ],
+          "recap": [
+            "Cópia desloca referências relativas.",
+            "Cifrões fixam linha/coluna.",
+            "Nome, versão e separadores precisam de contexto."
+          ],
+          "retrieval": [
+            "O que muda ao copiar $A1 uma linha abaixo?",
+            "PROCV com FALSO faz que tipo de busca?"
+          ],
+          "notes": "Fórmulas em planilhas\nCópia desloca referências relativas.\nCifrões fixam linha/coluna.\nNome, versão e separadores precisam de contexto.\nTrocar ordem dos argumentos de SOMASE/SOMASES.\nUsar PROCV aproximado sem verificar ordenação.",
+          "suggestions": [
+            "Explique referência relativa, absoluta e mista.",
+            "Resolva fórmula com dados de células explícitos.",
+            "Compare PROCV exato e aproximado."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — guias históricos Office2013",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+            },
+            {
+              "title": "Microsoft — PROCV",
+              "url": "https://support.microsoft.com/pt-br/excel/functions/vlookup-function"
+            },
+            {
+              "title": "Microsoft — SOMASE",
+              "url": "https://support.microsoft.com/pt-br/excel/functions/sumif-function"
+            },
+            {
+              "title": "Microsoft — SOMASES",
+              "url": "https://support.microsoft.com/pt-br/excel/functions/sumifs-function"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i04-q01",
+              "prompt": "Excel2013 PT-BR: $A$1 é referência:",
+              "options": [
+                "Relativa completa",
+                "Somente linha fixa",
+                "Absoluta em coluna e linha",
+                "Sem célula"
+              ],
+              "correctIndex": 2,
+              "explanation": "Os dois cifrões fixam as duas dimensões ao copiar."
+            },
+            {
+              "id": "bb2026-i04-q02",
+              "prompt": "Excel2013 PT-BR: copiar=B1+$D$1 uma linha abaixo produz:",
+              "options": [
+                "=B1+$D$2",
+                "=B2+D2",
+                "=B1+D1",
+                "=B2+$D$1"
+              ],
+              "correctIndex": 3,
+              "explanation": "B1 relativa muda paraB2; D1 absoluta fica."
+            },
+            {
+              "id": "bb2026-i04-q03",
+              "prompt": "Excel2013 PT-BR: A1=4,A2=6. =SOMA(A1:A2) resulta:",
+              "options": [
+                "10",
+                "24",
+                "5",
+                "46"
+              ],
+              "correctIndex": 0,
+              "explanation": "Soma numérica4+6=10; não concatena nem calcula média."
+            },
+            {
+              "id": "bb2026-i04-q04",
+              "prompt": "Excel2013 PT-BR, separador ;: A1=8. =SE(A1>=7;\"Aprovado\";\"Revisar\") retorna:",
+              "options": [
+                "Revisar",
+                "Aprovado",
+                "7",
+                "Erro obrigatório"
+              ],
+              "correctIndex": 1,
+              "explanation": "8≥7 é verdadeiro; a função retorna o primeiro resultado."
+            },
+            {
+              "id": "bb2026-i04-q05",
+              "prompt": "Excel2013 PT-BR: último argumentoFALSO no PROCV solicita:",
+              "options": [
+                "Ordem decrescente",
+                "Sempre maior valor",
+                "Correspondência exata",
+                "Busca em todas as colunas iniciais simultaneamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "PROCV procura chave na primeira coluna da matriz e retorna campo indicado; FALSO exige correspondência exata."
+            },
+            {
+              "id": "bb2026-i04-q06",
+              "prompt": "Qual recurso não deve ser atribuído ao Excel2013?",
+              "options": [
+                "SOMA",
+                "SE",
+                "Referência absoluta",
+                "PROCX"
+              ],
+              "correctIndex": 3,
+              "explanation": "PROCX é de versões posteriores; não se confunde com PROCV histórico."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i04-q01",
+                "bb2026-i04-q02",
+                "bb2026-i04-q03"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/",
+                "https://support.microsoft.com/pt-br/excel/functions/vlookup-function",
+                "https://support.microsoft.com/pt-br/excel/functions/sumif-function",
+                "https://support.microsoft.com/pt-br/excel/functions/sumifs-function"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i04-q04",
+                "bb2026-i04-q05",
+                "bb2026-i04-q06"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/",
+                "https://support.microsoft.com/pt-br/excel/functions/vlookup-function",
+                "https://support.microsoft.com/pt-br/excel/functions/sumif-function",
+                "https://support.microsoft.com/pt-br/excel/functions/sumifs-function"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i05",
+          "researchId": "I05",
+          "title": "Dados e gráficos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Organizar tabela e preservar relação entre registros · Escolher agregação e visual coerentes com a pergunta",
+          "objectives": [
+            "Organizar tabela e preservar relação entre registros",
+            "Escolher agregação e visual coerentes com a pergunta"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Dados precisam de estrutura e pergunta",
+              "text": "Em planilha, uma linha pode representar um registro e colunas, variáveis; cabeçalhos e tipos consistentes facilitam filtros/agrupamentos. Ordenar apenas uma coluna de uma tabela sem manter linhas pode trocar associações. Filtro oculta registros fora do critério, não os exclui automaticamente. Tabela dinâmica agrega campos segundo medidas e agrupamentos; não prova causa. Gráfico de barras compara categorias; linha pode mostrar evolução temporal ordenada; dispersão relaciona duas variáveis numéricas. Pizza exige composição de um total compatível e poucas categorias, sem percentuais inventados. CSV armazena dados textuais delimitados e não preserva todos os recursos/formatação/fórmulas de uma pasta Excel. Exercícios usam Excel2013 PT-BR histórico."
+            },
+            {
+              "type": "table",
+              "title": "Dados originais",
+              "columns": [
+                "Categoria",
+                "Quantidade"
+              ],
+              "rows": [
+                [
+                  "A",
+                  "4"
+                ],
+                [
+                  "B",
+                  "7"
+                ],
+                [
+                  "A",
+                  "3"
+                ]
+              ],
+              "caption": "Três registros; uma mesma categoria pode aparecer mais de uma vez."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Agrupe a tabela por categoria e some quantidades.",
+              "steps": [
+                "A possui4+3=7.",
+                "B possui7.",
+                "Total7+7=14."
+              ],
+              "answer": "A7/B7; total14.",
+              "check": "Soma das linhas4+7+3=14 coincide com a agregação; agrupar não cria quantidade nova."
+            }
+          ],
+          "pitfalls": [
+            "Ordenar uma coluna isolada e quebrar relação dos registros.",
+            "Confundir filtro com exclusão."
+          ],
+          "recap": [
+            "Estrutura mantém significado dos registros.",
+            "Agregação precisa de medida e grupos.",
+            "Gráfico deve responder à pergunta."
+          ],
+          "retrieval": [
+            "Filtro apaga sempre os registros ocultos?",
+            "Que gráfico ajuda a comparar duas categorias?"
+          ],
+          "notes": "Dados e gráficos\nEstrutura mantém significado dos registros.\nAgregação precisa de medida e grupos.\nGráfico deve responder à pergunta.\nOrdenar uma coluna isolada e quebrar relação dos registros.\nConfundir filtro com exclusão.",
+          "suggestions": [
+            "Escolha gráfico para uma pergunta explícita.",
+            "Agrupe tabela e confira total.",
+            "Compare filtro, ordenação e exclusão."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — guias históricos Office2013",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i05-q01",
+              "prompt": "Excel2013 PT-BR: filtro de registros normalmente:",
+              "options": [
+                "Oculta os que não atendem ao critério",
+                "Exclui todos definitivamente",
+                "Converte cada linha emPDF",
+                "Prova causalidade"
+              ],
+              "correctIndex": 0,
+              "explanation": "Filtro restringe visualização; exclusão é operação diferente."
+            },
+            {
+              "id": "bb2026-i05-q02",
+              "prompt": "Ordenar uma coluna isolada sem preservar tabela pode:",
+              "options": [
+                "Garantir integridade",
+                "Desassociar dados do mesmo registro",
+                "Criar backup",
+                "Atualizar todas as relações corretamente"
+              ],
+              "correctIndex": 1,
+              "explanation": "Nomes e quantidades podem passar a corresponder a pessoas/itens errados."
+            },
+            {
+              "id": "bb2026-i05-q03",
+              "prompt": "Tabela com A4,B7,A3, somada por categoria, dá:",
+              "options": [
+                "A4/B7",
+                "A3/B7",
+                "A7/B7",
+                "A14/B0"
+              ],
+              "correctIndex": 2,
+              "explanation": "Duas linhas deA somam7; B já possui7."
+            },
+            {
+              "id": "bb2026-i05-q04",
+              "prompt": "Para comparar quantidades entre categorias, escolha inicial pertinente é:",
+              "options": [
+                "Linha sem ordem temporal",
+                "Mapa sem localização",
+                "Somente fotografia",
+                "Barras com escala e rótulos claros"
+              ],
+              "correctIndex": 3,
+              "explanation": "Barras favorecem comparação de categorias; escala e unidade precisam ser claras."
+            },
+            {
+              "id": "bb2026-i05-q05",
+              "prompt": "CSV preserva todos os recursos de pastaExcel?",
+              "options": [
+                "Não; é texto delimitado com limitações de recursos",
+                "Sim, inclusive todos os macros",
+                "Sim, qualquer gráfico interativo",
+                "Sim, toda formatação e fórmula"
+              ],
+              "correctIndex": 0,
+              "explanation": "Formato não representa integralmente estrutura e funcionalidades dexlsx/xlsm."
+            },
+            {
+              "id": "bb2026-i05-q06",
+              "prompt": "Dispersão entre duas variáveis revela:",
+              "options": [
+                "Causa certa",
+                "Associação a investigar, sem causalidade automática",
+                "Sempre percentual do total",
+                "Somente nomes de arquivo"
+              ],
+              "correctIndex": 1,
+              "explanation": "Relação visual não controla fatores externos nem prova direção causal."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-i05-q01",
+                "bb2026-i05-q02",
+                "bb2026-i05-q03"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-i05-q04",
+                "bb2026-i05-q05",
+                "bb2026-i05-q06"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i06",
+          "researchId": "I06",
+          "title": "Apresentações",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar mestre, layout e slide individual · Distinguir transição, animação e estrutura acessível",
+          "objectives": [
+            "Relacionar mestre, layout e slide individual",
+            "Distinguir transição, animação e estrutura acessível"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Consistência e clareza da apresentação",
+              "text": "No PowerPoint2013 PT-BR histórico, slide mestre define elementos/estilos compartilhados e layouts associados organizam espaços reservados. Um slide usa layout, mas pode conter objetos/editos locais. Mudar layout no mestre pode exigir reaplicar para atualizar slides existentes. Transição é efeito entre slides; animação atua sobre objetos no slide. Excesso de movimento ou conteúdo só visual pode dificultar compreensão. Hierarquia clara, texto legível, contraste e descrição de mídia ajudam o público. Anotações apoiam apresentador e não equivalem ao texto projetado em toda modalidade. Arquivo.pptx é apresentação; .ppsx abre usualmente como apresentação de slides, mas o formato não torna conteúdo imutável."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "PowerPoint2013 PT-BR: precisa mudar o padrão dos títulos de vários slides que usam um mesmo layout. Qual abordagem favorece consistência?",
+              "steps": [
+                "Identifique mestre e layout usados.",
+                "Ajuste estilo compartilhado no local pertinente.",
+                "Reaplique/verifique slides e exceções locais quando necessário."
+              ],
+              "answer": "Usar mestre/layout e conferir slides existentes.",
+              "check": "Editar manualmente cada título pode criar variações; não se promete que toda alteração sobrescreve qualquer exceção local."
+            }
+          ],
+          "pitfalls": [
+            "Confundir transição com animação de objeto.",
+            "Supor que mestre apaga automaticamente toda formatação local."
+          ],
+          "recap": [
+            "Mestre e layouts dão consistência.",
+            "Transição é entre slides; animação, em objetos.",
+            "Clareza inclui acesso à informação e controle de movimento."
+          ],
+          "retrieval": [
+            "Uma mudança de layout pode exigir reaplicação?",
+            "Anotações são sempre texto projetado?"
+          ],
+          "notes": "Apresentações\nMestre e layouts dão consistência.\nTransição é entre slides; animação, em objetos.\nClareza inclui acesso à informação e controle de movimento.\nConfundir transição com animação de objeto.\nSupor que mestre apaga automaticamente toda formatação local.",
+          "suggestions": [
+            "Compare mestre, layout e slide.",
+            "Distinga animação e transição.",
+            "Revise legibilidade de uma apresentação."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — guias históricos Office2013",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/"
+            },
+            {
+              "title": "Microsoft — slide mestre",
+              "url": "https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master"
+            },
+            {
+              "title": "Microsoft — reaplicar layout",
+              "url": "https://support.microsoft.com/pt-br/powerpoint/edit-and-re-apply-a-slide-layout"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i06-q01",
+              "prompt": "PowerPoint2013 PT-BR: efeito entre slides é:",
+              "options": [
+                "Animação de objeto",
+                "Transição",
+                "Comentário",
+                "Filtro"
+              ],
+              "correctIndex": 1,
+              "explanation": "Transição atua na passagem; animação controla objetos dentro do slide."
+            },
+            {
+              "id": "bb2026-i06-q02",
+              "prompt": "O slide mestre ajuda a controlar:",
+              "options": [
+                "Só nomes de arquivo",
+                "Somente duração de áudio",
+                "Padrões compartilhados e layouts",
+                "Permissões do sistema"
+              ],
+              "correctIndex": 2,
+              "explanation": "Dá estrutura/estilo comum, com possíveis exceções locais."
+            },
+            {
+              "id": "bb2026-i06-q03",
+              "prompt": "Mudança em layout associado pode exigir:",
+              "options": [
+                "Excluir toda apresentação",
+                "Converter paraCSV",
+                "Apagar anotações",
+                "Reaplicar layout e conferir slides existentes"
+              ],
+              "correctIndex": 3,
+              "explanation": "Nem toda alteração substitui automaticamente formatação/organização local."
+            },
+            {
+              "id": "bb2026-i06-q04",
+              "prompt": "Animação aplica-se tipicamente a:",
+              "options": [
+                "Objetos no slide",
+                "Somente passagem entre slides",
+                "Nome da pasta",
+                "EndereçoSMTP"
+              ],
+              "correctIndex": 0,
+              "explanation": "Texto/imagem e outros objetos podem receber efeitos; não se confunde com transição."
+            },
+            {
+              "id": "bb2026-i06-q05",
+              "prompt": "Mídia só visual sem descrição pode:",
+              "options": [
+                "Garantir compreensão de todos",
+                "Criar barreira para parte do público",
+                "Substituir toda explicação",
+                "Impedir qualquer erro técnico"
+              ],
+              "correctIndex": 1,
+              "explanation": "Descrição e alternativas dão acesso ao significado."
+            },
+            {
+              "id": "bb2026-i06-q06",
+              "prompt": "Abrir .ppsx como apresentação significa que ela é imutável?",
+              "options": [
+                "Sim, sempre",
+                "Sim, sem exceção",
+                "Não; modo usual de abertura não prova imutabilidade",
+                "Sim, por ser vídeo"
+              ],
+              "correctIndex": 2,
+              "explanation": "Formato/modo de abrir não garantem proteção absoluta contra edição."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i06-q01",
+                "bb2026-i06-q02",
+                "bb2026-i06-q03"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/",
+                "https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
+                "https://support.microsoft.com/pt-br/powerpoint/edit-and-re-apply-a-slide-layout"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i06-q04",
+                "bb2026-i06-q05",
+                "bb2026-i06-q06"
+              ],
+              "sourceUrls": [
+                "https://www.microsoft.com/en-us/copilot/blog/2013/02/04/download-our-free-office-2013-quick-start-guides/",
+                "https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
+                "https://support.microsoft.com/pt-br/powerpoint/edit-and-re-apply-a-slide-layout"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i07",
+          "researchId": "I07",
+          "title": "Segurança da informação",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir confidencialidade, integridade e disponibilidade · Relacionar riscos a controles e autenticação",
+          "objectives": [
+            "Distinguir confidencialidade, integridade e disponibilidade",
+            "Relacionar riscos a controles e autenticação"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Proteção envolve objetivos distintos",
+              "text": "Confidencialidade restringe informação a quem pode acessá-la; integridade protege contra alteração indevida; disponibilidade sustenta acesso quando necessário. Risco relaciona ameaças, vulnerabilidades, impacto e probabilidade sob um método, sem garantia de risco zero. Autenticação verifica identidade apresentada; autorização define ações permitidas. Fatores diferentes, como algo que sabe e algo que possui, podem compor autenticação multifator; duas senhas do mesmo tipo não são dois fatores independentes. Criptografia pode proteger sigilo; hash permite verificar alteração com referência confiável, mas não é cifra reversível. Assinatura digital pode apoiar integridade/origem, sem tornar o documento sigiloso automaticamente. Controles técnicos, humanos e organizacionais se complementam."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Um relatório foi publicado sem permissão, mas seu conteúdo não mudou e o sistema segue acessível. Qual objetivo foi violado diretamente?",
+              "steps": [
+                "Exposição indevida afeta quem pode conhecer a informação.",
+                "Não há alteração relatada nem indisponibilidade."
+              ],
+              "answer": "Confidencialidade.",
+              "check": "Integridade e disponibilidade também importam, mas não são a violação descrita no caso."
+            }
+          ],
+          "pitfalls": [
+            "Confundir login com autorização para toda ação.",
+            "Chamar hash de criptografia reversível."
+          ],
+          "recap": [
+            "Sigilo, integridade e acesso têm objetivos distintos.",
+            "Autenticação e autorização são etapas diferentes.",
+            "Camadas reduzem risco sem promessa absoluta."
+          ],
+          "retrieval": [
+            "Duas senhas são necessariamente dois fatores?",
+            "Assinatura digital garante sigilo por si só?"
+          ],
+          "notes": "Segurança da informação\nSigilo, integridade e acesso têm objetivos distintos.\nAutenticação e autorização são etapas diferentes.\nCamadas reduzem risco sem promessa absoluta.\nConfundir login com autorização para toda ação.\nChamar hash de criptografia reversível.",
+          "suggestions": [
+            "Classifique uma violação em CID.",
+            "Compare autenticação e autorização.",
+            "Distinga hash, cifra e assinatura digital."
+          ],
+          "sources": [
+            {
+              "title": "CERT.br — cartilha de segurança",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            },
+            {
+              "title": "CERT.br — autenticação",
+              "url": "https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i07-q01",
+              "prompt": "Expor cadastro sem autorização afeta diretamente:",
+              "options": [
+                "Disponibilidade apenas",
+                "Confidencialidade",
+                "Taxa de conversão",
+                "Slide mestre"
+              ],
+              "correctIndex": 1,
+              "explanation": "O caso descreve acesso/divulgação indevida, não alteração ou parada."
+            },
+            {
+              "id": "bb2026-i07-q02",
+              "prompt": "Alterar saldo indevidamente afeta diretamente:",
+              "options": [
+                "Somente imagem",
+                "Somente capacidade de estoque",
+                "Integridade",
+                "Perecibilidade"
+              ],
+              "correctIndex": 2,
+              "explanation": "Conteúdo foi modificado sem autorização, comprometendo sua correção."
+            },
+            {
+              "id": "bb2026-i07-q03",
+              "prompt": "Autorização define:",
+              "options": [
+                "Só quem apresenta identidade",
+                "Nome do navegador",
+                "Sempre a senha",
+                "Quais ações o usuário pode realizar"
+              ],
+              "correctIndex": 3,
+              "explanation": "Autenticar identidade não concede toda permissão."
+            },
+            {
+              "id": "bb2026-i07-q04",
+              "prompt": "Dois fatores devem ser:",
+              "options": [
+                "De categorias distintas pertinentes, como senha e posse de dispositivo",
+                "Duas cópias da mesma senha",
+                "Somente perguntas iguais",
+                "Somente duas palavras secretas"
+              ],
+              "correctIndex": 0,
+              "explanation": "Diversidade dos fatores reduz dependência de um único tipo de comprovação."
+            },
+            {
+              "id": "bb2026-i07-q05",
+              "prompt": "Hash usado para conferir integridade precisa de:",
+              "options": [
+                "Função que sempre descriptografe",
+                "Referência confiável para comparação",
+                "Senha do destinatário sempre",
+                "Planilha de preços"
+              ],
+              "correctIndex": 1,
+              "explanation": "Se atacante altera também a referência, comparação sem confiança perde utilidade."
+            },
+            {
+              "id": "bb2026-i07-q06",
+              "prompt": "Assinatura digital assegura sigilo automaticamente?",
+              "options": [
+                "Sim, toda assinatura cifra todo documento",
+                "Sim, se o arquivo éPDF",
+                "Não; integridade/origem e sigilo são propriedades distintas",
+                "Sim, dispensa controle de acesso"
+              ],
+              "correctIndex": 2,
+              "explanation": "Documento assinado pode estar legível; confidencialidade exige controles próprios."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i07-q01",
+                "bb2026-i07-q02",
+                "bb2026-i07-q03"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao.pdf"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i07-q04",
+                "bb2026-i07-q05",
+                "bb2026-i07-q06"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i08",
+          "researchId": "I08",
+          "title": "Proteção da estação",
+          "level": "Fundamentos e aplicação",
+          "summary": "Combinar atualização, mínimo privilégio e proteção contra golpes · Planejar backup com recuperação efetivamente testada",
+          "objectives": [
+            "Combinar atualização, mínimo privilégio e proteção contra golpes",
+            "Planejar backup com recuperação efetivamente testada"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Camadas enfrentam riscos diferentes",
+              "text": "Atualizações corrigem vulnerabilidades; antimalware detecta/bloqueia ameaças conforme capacidade, sem imunidade. Firewall filtra tráfego por regras, não avalia sozinho toda fraude. Use menor privilégio pertinente e obtenha programas de origem confiável. Phishing usa engenharia social para induzir entrega de credenciais ou ação perigosa; urgência e remetente conhecido podem ser simulados. Ransomware pode cifrar arquivos e atingir cópias acessíveis. Backup requer cópias adequadas ao objetivo, separação/proteção e teste de restauração; sincronização pode propagar exclusão/alteração. Criptografar disco protege dados em certos cenários de perda, mas não corrige sessão já comprometida. Em incidente, siga procedimento de contenção/registro, sem apagar evidências arbitrariamente."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Arquivo foi excluído e a exclusão sincronizou para a nuvem. Havia cópia independente testada de ontem. Qual caminho favorece recuperação?",
+              "steps": [
+                "Verifique escopo/período da cópia.",
+                "Restaure por procedimento seguro e confira integridade.",
+                "Analise o que mudou após a cópia, sem presumir dados de hoje."
+              ],
+              "answer": "Recuperar da cópia independente, dentro de seu alcance.",
+              "check": "Sincronização não reteve necessariamente versão; backup de ontem não garante alterações posteriores."
+            }
+          ],
+          "pitfalls": [
+            "Chamar antimalware de proteção absoluta.",
+            "Manter única cópia com mesma exposição do original."
+          ],
+          "recap": [
+            "Atualização, privilégio e proteção se complementam.",
+            "Golpe explora pessoa e contexto.",
+            "Backup precisa de independência e teste."
+          ],
+          "retrieval": [
+            "Firewall substitui treinamento contra phishing?",
+            "Por que testar restauração antes de um incidente?"
+          ],
+          "notes": "Proteção da estação\nAtualização, privilégio e proteção se complementam.\nGolpe explora pessoa e contexto.\nBackup precisa de independência e teste.\nChamar antimalware de proteção absoluta.\nManter única cópia com mesma exposição do original.",
+          "suggestions": [
+            "Compare sincronização e backup num incidente.",
+            "Identifique sinais de engenharia social.",
+            "Monte camadas de proteção para uma estação."
+          ],
+          "sources": [
+            {
+              "title": "CERT.br — cartilha",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            },
+            {
+              "title": "CERT.br — backup",
+              "url": "https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf"
+            },
+            {
+              "title": "CERT.br — fraudes",
+              "url": "https://cartilha.cert.br/fasciculos/golpes-evite-fraudes/fasciculo-golpes-evite-fraudes.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i08-q01",
+              "prompt": "Atualizações de segurança procuram:",
+              "options": [
+                "Corrigir vulnerabilidades conhecidas",
+                "Garantir risco zero",
+                "Substituir todo backup",
+                "Eliminar autenticação"
+              ],
+              "correctIndex": 0,
+              "explanation": "Correção reduz exposição; não é promessa de ausência de ameaças."
+            },
+            {
+              "id": "bb2026-i08-q02",
+              "prompt": "Firewall atua principalmente sobre:",
+              "options": [
+                "Estilo de texto",
+                "Tráfego conforme regras",
+                "Toda veracidade de anúncio",
+                "Média de notas"
+              ],
+              "correctIndex": 1,
+              "explanation": "Filtragem não substitui proteção contra engenharia social ou outros controles."
+            },
+            {
+              "id": "bb2026-i08-q03",
+              "prompt": "Backup de ontem garante arquivo criado hoje?",
+              "options": [
+                "Sim, sempre",
+                "Sim, por estar na nuvem",
+                "Não; alcance temporal da cópia importa",
+                "Sim, com qualquer senha"
+              ],
+              "correctIndex": 2,
+              "explanation": "Cópia anterior não contém necessariamente criação/alteração posterior."
+            },
+            {
+              "id": "bb2026-i08-q04",
+              "prompt": "Cópia sempre sincronizada com original pode:",
+              "options": [
+                "Garantir histórico ilimitado",
+                "Ser imune a exclusão",
+                "Substituir teste de restauração",
+                "Propagar exclusão ou alteração"
+              ],
+              "correctIndex": 3,
+              "explanation": "A propagação é característica de sincronização, exigindo proteção/recuperação próprias."
+            },
+            {
+              "id": "bb2026-i08-q05",
+              "prompt": "Mensagem urgente pedindo senha deve levar a:",
+              "options": [
+                "Verificação em canal conhecido e recusa de compartilhar credencial",
+                "Entrega imediata",
+                "Desativar toda proteção",
+                "Responder com código de autenticação"
+              ],
+              "correctIndex": 0,
+              "explanation": "Urgência não autentica remetente; credenciais não devem ser fornecidas ao fluxo suspeito."
+            },
+            {
+              "id": "bb2026-i08-q06",
+              "prompt": "Teste de restauração verifica:",
+              "options": [
+                "Só existência de um ícone",
+                "Se a cópia permite recuperação utilizável conforme objetivo",
+                "Cor da pasta",
+                "Imunidade universal"
+              ],
+              "correctIndex": 1,
+              "explanation": "Backup pode existir e estar incompleto/corrompido/inacessível; teste avalia recuperabilidade."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i08-q01",
+                "bb2026-i08-q02",
+                "bb2026-i08-q03"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf",
+                "https://cartilha.cert.br/fasciculos/golpes-evite-fraudes/fasciculo-golpes-evite-fraudes.pdf"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i08-q04",
+                "bb2026-i08-q05",
+                "bb2026-i08-q06"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf",
+                "https://cartilha.cert.br/fasciculos/golpes-evite-fraudes/fasciculo-golpes-evite-fraudes.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i09",
+          "researchId": "I09",
+          "title": "Arquivos e programas",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir memória, armazenamento, arquivo e execução · Interpretar formatos, instalação e compactação",
+          "objectives": [
+            "Distinguir memória, armazenamento, arquivo e execução",
+            "Interpretar formatos, instalação e compactação"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Persistência e execução são propriedades diferentes",
+              "text": "RAM é memória de trabalho normalmente volátil; SSD/HDD são armazenamento persistente, com tecnologias distintas. SSD usa memória flash e não discos giratórios; persistência não significa cópia indestrutível. Arquivo reúne dados com formato e localização; pasta organiza nomes/caminhos. Executável contém instruções para ambiente compatível; instalar pode adicionar componentes/configuração, diferente de copiar qualquer documento. Compactação sem perdas permite reconstruir dados originais; arquivo ZIP pode reunir/comprimir itens, sem garantir proteção contra malware. Formato proprietário/aberto e licença de uso são dimensões diferentes. Macros automatizam tarefas e podem ter risco; .xlsm admite macros no Excel, enquanto .xlsx não é o formato habilitado para VBA."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pessoa salvou trabalho apenas na memória de um aplicativo sem gravar arquivo e perdeu energia. O que analisar?",
+              "steps": [
+                "Dados não gravados podem estar em RAM volátil.",
+                "Recuperação automática depende do aplicativo/configuração.",
+                "Arquivo salvo previamente no armazenamento tem outra condição."
+              ],
+              "answer": "Não presumir persistência de alterações não salvas.",
+              "check": "SSD não torna conteúdo mantido só na RAM automaticamente gravado; autosave não foi declarado no caso."
+            }
+          ],
+          "pitfalls": [
+            "Confundir RAM com armazenamento permanente.",
+            "Achar que ZIP ou extensão conhecida prova segurança."
+          ],
+          "recap": [
+            "RAM e armazenamento têm papéis distintos.",
+            "Formato e licença não são a mesma dimensão.",
+            "Compactação e instalação não garantem segurança."
+          ],
+          "retrieval": [
+            "SSD tem discos giratórios?",
+            "Por que extensão.xlsx não indica suporte a macroVBA?"
+          ],
+          "notes": "Arquivos e programas\nRAM e armazenamento têm papéis distintos.\nFormato e licença não são a mesma dimensão.\nCompactação e instalação não garantem segurança.\nConfundir RAM com armazenamento permanente.\nAchar que ZIP ou extensão conhecida prova segurança.",
+          "suggestions": [
+            "Compare RAM, SSD e HDD.",
+            "Distinga arquivo, programa e instalação.",
+            "Explique compactação sem perdas e seus limites."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — gerenciamento de arquivos",
+              "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-management"
+            },
+            {
+              "title": "CERT.br — cartilha",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i09-q01",
+              "prompt": "RAM é usada tipicamente como:",
+              "options": [
+                "Armazenamento permanente garantido",
+                "Memória de trabalho volátil",
+                "Protocolo de e-mail",
+                "Formato de vídeo"
+              ],
+              "correctIndex": 1,
+              "explanation": "Conteúdo de trabalho não deve ser confundido com arquivo gravado em armazenamento."
+            },
+            {
+              "id": "bb2026-i09-q02",
+              "prompt": "SSD diferencia-se deHDD por:",
+              "options": [
+                "Ser sempre imune a falha",
+                "Não guardar arquivos",
+                "Usar flash sem discos giratórios",
+                "Ser apenas RAM"
+              ],
+              "correctIndex": 2,
+              "explanation": "Tecnologias são distintas; ambas podem falhar e exigem cópias conforme objetivo."
+            },
+            {
+              "id": "bb2026-i09-q03",
+              "prompt": "ZIP conhecido garante arquivo sem malware?",
+              "options": [
+                "Sim, se pequeno",
+                "Sim, se enviado por colega",
+                "Sim, por ser comprimido",
+                "Não; compactação não autentica nem torna seguro"
+              ],
+              "correctIndex": 3,
+              "explanation": "Origem/conteúdo e controles precisam ser avaliados."
+            },
+            {
+              "id": "bb2026-i09-q04",
+              "prompt": "Compactação sem perdas permite:",
+              "options": [
+                "Reconstrução exata dos dados originais",
+                "Descartar detalhe obrigatoriamente",
+                "Converter qualquer programa para outro sistema",
+                "Garantir anonimato"
+              ],
+              "correctIndex": 0,
+              "explanation": "Compressão reversível preserva informação; não equivale a criptografia."
+            },
+            {
+              "id": "bb2026-i09-q05",
+              "prompt": "Excel2013: formato habilitado para macrosVBA é:",
+              "options": [
+                ".xlsx",
+                ".xlsm",
+                ".csv",
+                ".txt"
+              ],
+              "correctIndex": 1,
+              "explanation": "A pasta com macros usa formato habilitado; xlsx/csv/txt não preservam macroVBA como xlsm."
+            },
+            {
+              "id": "bb2026-i09-q06",
+              "prompt": "Copiar documento equivale a instalar programa?",
+              "options": [
+                "Sim, sempre",
+                "Sim, qualquer extensão",
+                "Não; operações e finalidades são distintas",
+                "Sim, se estiver numa pasta"
+              ],
+              "correctIndex": 2,
+              "explanation": "Instalação pode configurar componentes; copiar um dado não executa essa função automaticamente."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i09-q01",
+                "bb2026-i09-q02",
+                "bb2026-i09-q03"
+              ],
+              "sourceUrls": [
+                "https://learn.microsoft.com/en-us/windows/win32/fileio/file-management",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i09-q04",
+                "bb2026-i09-q05",
+                "bb2026-i09-q06"
+              ],
+              "sourceUrls": [
+                "https://learn.microsoft.com/en-us/windows/win32/fileio/file-management",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i10",
+          "researchId": "I10",
+          "title": "Redes",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir alcance, topologia e papel dos dispositivos · Interpretar conectividade sem confundir rede local e internet",
+          "objectives": [
+            "Distinguir alcance, topologia e papel dos dispositivos",
+            "Interpretar conectividade sem confundir rede local e internet"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Rede conecta equipamentos por regras",
+              "text": "LAN descreve rede local; WAN conecta espaços mais amplos. Internet é interconexão de redes, não sinônimo de qualquerLAN. Intranet atende uso interno com tecnologias de rede/web; acesso externo controlado pode apoiar extranet, sem tornar dados públicos. Switch comutador atua tipicamente conectando quadros numaLAN; roteador encaminha pacotes entre redes; ponto de acesso liga clientes sem fio à rede conforme configuração. Modem adapta sinais ao meio/serviço; um equipamento pode integrar várias funções. Cliente-servidor organiza solicitação e prestação de serviços; peer-to-peer permite participantes compartilharem papéis. Wi-Fi é conexão sem fio local e pode funcionar sem acesso à internet. Topologia física/lógica não deve ser confundida com alcance."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Notebook imprime numa impressora daLAN, mas não alcança site externo. Isso prova que toda rede está parada?",
+              "steps": [
+                "Comunicação local com impressora funcionou.",
+                "Acesso externo pode depender de rota, serviço ouDNS.",
+                "Diagnostique componente e escopo sem generalizar."
+              ],
+              "answer": "Não; conectividade local e acesso externo são condições diferentes.",
+              "check": "Impressão local não prova internet disponível e falha no site não apaga evidência deLAN funcional."
+            }
+          ],
+          "pitfalls": [
+            "Chamar Wi-Fi de internet automaticamente.",
+            "Atribuir uma única função a todo aparelho integrado."
+          ],
+          "recap": [
+            "Alcance e topologia são conceitos distintos.",
+            "Switch, roteador e acesso sem fio têm papéis.",
+            "Rede local pode operar sem internet."
+          ],
+          "retrieval": [
+            "Qual papel básico do roteador?",
+            "Wi-Fi sem provedor pode conectar equipamentos locais?"
+          ],
+          "notes": "Redes\nAlcance e topologia são conceitos distintos.\nSwitch, roteador e acesso sem fio têm papéis.\nRede local pode operar sem internet.\nChamar Wi-Fi de internet automaticamente.\nAtribuir uma única função a todo aparelho integrado.",
+          "suggestions": [
+            "Distinga LAN, WAN e internet.",
+            "Explique papel de dispositivos num cenário.",
+            "Diagnostique falha local versus externa."
+          ],
+          "sources": [
+            {
+              "title": "RFC1122 — requisitos de hosts",
+              "url": "https://www.rfc-editor.org/info/rfc1122/"
+            },
+            {
+              "title": "openSUSE — redes",
+              "url": "https://doc.opensuse.org/documentation/leap/archive/42.1/startup/html/book.opensuse.startup/index.html"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i10-q01",
+              "prompt": "Wi-Fi significa necessariamente internet disponível?",
+              "options": [
+                "Sim, sempre",
+                "Sim, se há sinal forte",
+                "Não; pode haver conexão local sem internet",
+                "Sim, mesmo sem rota externa"
+              ],
+              "correctIndex": 2,
+              "explanation": "Sinal e associação sem fio não comprovam serviço externo."
+            },
+            {
+              "id": "bb2026-i10-q02",
+              "prompt": "Roteador encaminha tipicamente:",
+              "options": [
+                "Estilos de Word",
+                "Células de Excel",
+                "Somente nomes de pastas",
+                "Pacotes entre redes"
+              ],
+              "correctIndex": 3,
+              "explanation": "O roteamento liga redes; equipamento integrado pode também atuar em outras funções."
+            },
+            {
+              "id": "bb2026-i10-q03",
+              "prompt": "LAN se refere a:",
+              "options": [
+                "Rede de alcance local",
+                "Todo tráfego mundial",
+                "Apenas página web",
+                "Qualquer assinatura digital"
+              ],
+              "correctIndex": 0,
+              "explanation": "Alcance local não define sozinho topologia nem acesso externo."
+            },
+            {
+              "id": "bb2026-i10-q04",
+              "prompt": "Switch deLAN atua tipicamente em:",
+              "options": [
+                "Conversão de documento paraPDF",
+                "Comutação de quadros entre portas da rede local",
+                "Cálculo deNPS",
+                "Leitura de texto"
+              ],
+              "correctIndex": 1,
+              "explanation": "Seu papel básico difere do encaminhamento entre redes do roteador."
+            },
+            {
+              "id": "bb2026-i10-q05",
+              "prompt": "Impressão local funcionando e site externo falhando indica:",
+              "options": [
+                "TodaLAN necessariamente parada",
+                "Internet certamente normal",
+                "Escopos distintos a diagnosticar",
+                "Ausência de qualquer conectividade"
+              ],
+              "correctIndex": 2,
+              "explanation": "Há evidência de conexão local, mas acesso externo depende de outros componentes."
+            },
+            {
+              "id": "bb2026-i10-q06",
+              "prompt": "Cliente-servidor descreve:",
+              "options": [
+                "Somente tamanho geográfico",
+                "Somente formato de cabo",
+                "Somente conexão sem fio",
+                "Organização de solicitação e prestação de serviços"
+              ],
+              "correctIndex": 3,
+              "explanation": "Papéis de serviço não equivalem a alcance ou topologia física."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i10-q01",
+                "bb2026-i10-q02",
+                "bb2026-i10-q03"
+              ],
+              "sourceUrls": [
+                "https://www.rfc-editor.org/info/rfc1122/",
+                "https://doc.opensuse.org/documentation/leap/archive/42.1/startup/html/book.opensuse.startup/index.html"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i10-q04",
+                "bb2026-i10-q05",
+                "bb2026-i10-q06"
+              ],
+              "sourceUrls": [
+                "https://www.rfc-editor.org/info/rfc1122/",
+                "https://doc.opensuse.org/documentation/leap/archive/42.1/startup/html/book.opensuse.startup/index.html"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i11",
+          "researchId": "I11",
+          "title": "Endereços e protocolos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar IP, nomes, URLs e portas a funções distintas · Distinguir aplicação, transporte e proteção de conexão",
+          "objectives": [
+            "Relacionar IP, nomes, URLs e portas a funções distintas",
+            "Distinguir aplicação, transporte e proteção de conexão"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Nome e endereço não são a mesma informação",
+              "text": "IP identifica endereçamento na rede sob versão/configuração; IPv4 usa32bits eIPv6 usa128. DNS associa nomes a registros, inclusive endereços e dados de correio, não só uma tradução única paraIP. URL identifica recurso com esquema, autoridade/caminho e partes opcionais; https é esquema, host é outro componente. Porta ajuda a identificar serviço/extremidade de transporte; número conhecido não autentica serviço. TCP oferece fluxo confiável/ordenado; UDP oferece datagramas sem essa garantia incorporada. HTTP é protocolo de aplicação; HTTP/3 usaQUIC, por isso não é correto dizerHTTP sempreTCP. HTTPS usaTLS para proteção da conexão, mas não prova honestidade do site nem ausência de golpe. DNS clássico pode usarUDP eTCP na porta53."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Na URL https://estudo.exemplo.org/aulas?id=2, identifique esquema, host e caminho.",
+              "steps": [
+                "Esquema:https.",
+                "Host:estudo.exemplo.org.",
+                "Caminho:/aulas; id=2 é consulta."
+              ],
+              "answer": "Componentes têm funções distintas.",
+              "check": "O trecho depois de? não integra o nome dohost; terHTTPS não comprova que esse exemplo é instituição real."
+            }
+          ],
+          "pitfalls": [
+            "Confundir host com caminho ou consulta.",
+            "TratarHTTPS como selo de honestidade."
+          ],
+          "recap": [
+            "IP, DNS, URL e porta têm funções diferentes.",
+            "Protocolo de aplicação não determina sempre mesmo transporte.",
+            "Proteção da conexão não valida toda oferta."
+          ],
+          "retrieval": [
+            "DNS só retorna umIP em todo caso?",
+            "Qual parte daURL começa após? no exemplo?"
+          ],
+          "notes": "Endereços e protocolos\nIP, DNS, URL e porta têm funções diferentes.\nProtocolo de aplicação não determina sempre mesmo transporte.\nProteção da conexão não valida toda oferta.\nConfundir host com caminho ou consulta.\nTratarHTTPS como selo de honestidade.",
+          "suggestions": [
+            "Separe componentes de uma URL.",
+            "Compare TCP, UDP e aplicação.",
+            "Explique alcance e limite do HTTPS."
+          ],
+          "sources": [
+            {
+              "title": "RFC1035 — DNS",
+              "url": "https://www.rfc-editor.org/info/rfc1035/"
+            },
+            {
+              "title": "RFC9110 — HTTP",
+              "url": "https://www.rfc-editor.org/info/rfc9110/"
+            },
+            {
+              "title": "RFC9114 — HTTP/3",
+              "url": "https://www.rfc-editor.org/info/rfc9114/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i11-q01",
+              "prompt": "DNS pode fornecer:",
+              "options": [
+                "Somente uma foto",
+                "Registros de nomes, incluindo endereços e correio",
+                "Sempre um únicoIP sem exceção",
+                "Só senhas"
+              ],
+              "correctIndex": 1,
+              "explanation": "Há vários tipos de registros; resolver nome não se limita a uma associação única."
+            },
+            {
+              "id": "bb2026-i11-q02",
+              "prompt": "https numaURL é:",
+              "options": [
+                "Sempre o nome do servidor",
+                "Uma senha",
+                "O esquema",
+                "O caminho"
+              ],
+              "correctIndex": 2,
+              "explanation": "Esquema indica forma de acesso; host vem na autoridade."
+            },
+            {
+              "id": "bb2026-i11-q03",
+              "prompt": "HTTP usa sempreTCP?",
+              "options": [
+                "Sim, qualquer versão",
+                "Sim, sem exceção",
+                "Sim, porque é aplicação",
+                "Não; HTTP/3 usaQUIC"
+              ],
+              "correctIndex": 3,
+              "explanation": "AplicaçãoHTTP tem mapeamentos distintos; não se universaliza transporte."
+            },
+            {
+              "id": "bb2026-i11-q04",
+              "prompt": "HTTPS comprova:",
+              "options": [
+                "Proteção da conexão conformeTLS, sem provar honestidade do site",
+                "Toda oferta verdadeira",
+                "Ausência de malware",
+                "Autoria governamental"
+              ],
+              "correctIndex": 0,
+              "explanation": "Conexão cifrada pode existir num site fraudulento."
+            },
+            {
+              "id": "bb2026-i11-q05",
+              "prompt": "DNS clássico na porta53 usa:",
+              "options": [
+                "SomenteTCP",
+                "UDP eTCP conforme operação",
+                "SomenteSMTP",
+                "SomenteIMAP"
+              ],
+              "correctIndex": 1,
+              "explanation": "O protocolo contempla ambos;UDP não é regra exclusiva."
+            },
+            {
+              "id": "bb2026-i11-q06",
+              "prompt": "https://estudo.exemplo.org/aulas?id=2 tem comohost:",
+              "options": [
+                "https",
+                "/aulas",
+                "estudo.exemplo.org",
+                "id=2"
+              ],
+              "correctIndex": 2,
+              "explanation": "Host está na autoridade; caminho e consulta têm posições separadas."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i11-q01",
+                "bb2026-i11-q02",
+                "bb2026-i11-q03"
+              ],
+              "sourceUrls": [
+                "https://www.rfc-editor.org/info/rfc1035/",
+                "https://www.rfc-editor.org/info/rfc9110/",
+                "https://www.rfc-editor.org/info/rfc9114/"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i11-q04",
+                "bb2026-i11-q05",
+                "bb2026-i11-q06"
+              ],
+              "sourceUrls": [
+                "https://www.rfc-editor.org/info/rfc1035/",
+                "https://www.rfc-editor.org/info/rfc9110/",
+                "https://www.rfc-editor.org/info/rfc9114/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i12",
+          "researchId": "I12",
+          "title": "Navegadores e pesquisa",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir navegador, buscador e recursos de sessão · Avaliar busca e fonte sem confundir posição e confiabilidade",
+          "objectives": [
+            "Distinguir navegador, buscador e recursos de sessão",
+            "Avaliar busca e fonte sem confundir posição e confiabilidade"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A ferramenta não decide a veracidade",
+              "text": "Navegador acessa recursos web; buscador é serviço para encontrar páginas, acessado por navegador ou outras interfaces. Barra pode aceitarURL e busca conforme configuração. Histórico guarda visitas locais; favoritos registram referências; cache retém recursos para reutilização; cookies guardam dados de estado conforme domínio/regras, podendo ser usados em sessão e rastreamento. Navegação privada limita parte do registro local, mas não torna atividade invisível a sites, rede/provedor ou conta autenticada. Atualizar página não equivale sempre a apagar cache. Pesquisa exige palavras-chave e avaliação de autoria, data, contexto e fonte primária; anúncio/posição alta não prova precisão. Operadores de busca variam por serviço e podem mudar; não atribua resultado universal."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Primeiro resultado de busca é anúncio com logo parecido ao oficial. Como verificar?",
+              "steps": [
+                "Identifique anúncio e endereço real.",
+                "Compare com canal oficial por acesso independente.",
+                "Confira autoria/data/conteúdo antes de usar informação."
+              ],
+              "answer": "Posição e aparência não bastam como evidência.",
+              "check": "Abrir em aba privada não autentica o site nem esconde login de quem recebe a conexão."
+            }
+          ],
+          "pitfalls": [
+            "ConfundirGoogle/serviço de busca com todo navegador.",
+            "Prometer anonimato total na navegação privada."
+          ],
+          "recap": [
+            "Navegador e buscador têm funções distintas.",
+            "Cache, cookies e histórico não são sinônimos.",
+            "Fonte precisa ser avaliada além do ranking."
+          ],
+          "retrieval": [
+            "Favorito armazena necessariamente cópia completa da página?",
+            "Conta logada pode identificar usuário em janela privada?"
+          ],
+          "notes": "Navegadores e pesquisa\nNavegador e buscador têm funções distintas.\nCache, cookies e histórico não são sinônimos.\nFonte precisa ser avaliada além do ranking.\nConfundirGoogle/serviço de busca com todo navegador.\nPrometer anonimato total na navegação privada.",
+          "suggestions": [
+            "Compare navegador e mecanismo de busca.",
+            "Avalie uma fonte encontrada online.",
+            "Explique limites de navegação privada."
+          ],
+          "sources": [
+            {
+              "title": "Mozilla — navegar na web",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+            },
+            {
+              "title": "CERT.br — cartilha",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i12-q01",
+              "prompt": "Navegador e buscador são:",
+              "options": [
+                "Sempre o mesmo programa",
+                "Sempre protocolos de correio",
+                "Aplicativo de acesso e serviço de pesquisa, respectivamente",
+                "Ambos apenas nomes de arquivo"
+              ],
+              "correctIndex": 2,
+              "explanation": "Navegador permite acessar buscador e outros recursos; funções não se confundem."
+            },
+            {
+              "id": "bb2026-i12-q02",
+              "prompt": "Janela privada garante anonimato total?",
+              "options": [
+                "Sim, sempre",
+                "Sim, mesmo com conta logada",
+                "Sim, perante o provedor",
+                "Não; limita certos registros locais, com outros rastros possíveis"
+              ],
+              "correctIndex": 3,
+              "explanation": "Sites/rede/contas podem continuar identificando atividade."
+            },
+            {
+              "id": "bb2026-i12-q03",
+              "prompt": "Cache é usado principalmente para:",
+              "options": [
+                "Reutilizar recursos armazenados e reduzir novo carregamento",
+                "Guardar somente senhas",
+                "Criar autoridade oficial",
+                "Garantir conteúdo eterno"
+              ],
+              "correctIndex": 0,
+              "explanation": "Recursos podem ser reutilizados; cache não prova autoria nem disponibilidade futura."
+            },
+            {
+              "id": "bb2026-i12-q04",
+              "prompt": "Primeiro resultado patrocinado comprova melhor fonte?",
+              "options": [
+                "Sim, por posição",
+                "Não; verifique autoria, endereço, data e evidência",
+                "Sim, se hálogotipo",
+                "Sim, em aba privada"
+              ],
+              "correctIndex": 1,
+              "explanation": "Ranking/publicidade não substituem avaliação de confiabilidade."
+            },
+            {
+              "id": "bb2026-i12-q05",
+              "prompt": "Cookie e histórico são:",
+              "options": [
+                "A mesma lista de visitas",
+                "Sempre malware",
+                "Mecanismos diferentes de estado e registro de visitas",
+                "Ambos backups completos"
+              ],
+              "correctIndex": 2,
+              "explanation": "Cookies não são a lista de páginas visitadas; históricos e estados têm funções próprias."
+            },
+            {
+              "id": "bb2026-i12-q06",
+              "prompt": "Favorito normalmente registra:",
+              "options": [
+                "Toda cópia do servidor",
+                "Garantia de verdade",
+                "Senha de qualquer site",
+                "Referência para acessar recurso depois"
+              ],
+              "correctIndex": 3,
+              "explanation": "O recurso ainda pode mudar ou ficar indisponível; favorito não é arquivo integral necessariamente."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i12-q01",
+                "bb2026-i12-q02",
+                "bb2026-i12-q03"
+              ],
+              "sourceUrls": [
+                "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i12-q04",
+                "bb2026-i12-q05",
+                "bb2026-i12-q06"
+              ],
+              "sourceUrls": [
+                "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i13",
+          "researchId": "I13",
+          "title": "Correio eletrônico",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir SMTP, acessoIMAP/POP e webmail · Usar destinatários e anexos sem promessas de privacidade total",
+          "objectives": [
+            "Distinguir SMTP, acessoIMAP/POP e webmail",
+            "Usar destinatários e anexos sem promessas de privacidade total"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Envio, acesso e interface são camadas diferentes",
+              "text": "SMTP transporta/envia mensagens; submissão pelo cliente é distinta de retransmissão entre servidores. IMAP significa Internet Message Access Protocol e permite gerenciar mensagens/pastas no servidor; POP3 permite recuperar mensagens, com exclusão dependente de comandos/configuração, não automática em todo download. Webmail é interface no navegador, não um protocolo que substitui todoSMTP/IMAP internamente. E-mail é assíncrono: envio não exige destinatário conectado naquele instante. Para/Cc mostram destinatários segundo mensagem; Cco/Bcc evita expor a lista desses destinatários aos demais na entrega usual, sem impedir cópia, encaminhamento ou divulgação pelo próprio receptor. Nome/remetente pode ser falsificado; anexo requer origem e proteção. Portas usuais: retransmissãoSMTP25, submissão587;TLS implícito465/IMAP993/POP995 conformeRFC e configuração."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Enviar aviso a várias pessoas sem divulgar a lista a elas: qual campo favorece isso e qual limite permanece?",
+              "steps": [
+                "UseCco/Bcc conforme cliente e política.",
+                "Confira conteúdo/endereços e requisitos de proteção.",
+                "Destinatários ainda podem encaminhar ou revelar que receberam."
+              ],
+              "answer": "Cco reduz exposição da lista, mas não garante sigilo absoluto da mensagem.",
+              "check": "Criptografia, autorização e conduta têm controles distintos; Cco sozinho não evita divulgação posterior."
+            }
+          ],
+          "pitfalls": [
+            "Dizer quePOP sempre apaga tudo ao baixar.",
+            "ConfundirCco com garantia de mensagem impossível de encaminhar."
+          ],
+          "recap": [
+            "SMTP envia;IMAP/POP dão acesso em modelos distintos.",
+            "Webmail é interface; e-mail é assíncrono.",
+            "Cco limita exposição da lista, com limites."
+          ],
+          "retrieval": [
+            "Destinatário precisa estar online no envio?",
+            "Qual diferença entre submissão587 e retransmissão25?"
+          ],
+          "notes": "Correio eletrônico\nSMTP envia;IMAP/POP dão acesso em modelos distintos.\nWebmail é interface; e-mail é assíncrono.\nCco limita exposição da lista, com limites.\nDizer quePOP sempre apaga tudo ao baixar.\nConfundirCco com garantia de mensagem impossível de encaminhar.",
+          "suggestions": [
+            "CompareSMTP,IMAP ePOP3.",
+            "ExpliqueCco e seus limites.",
+            "Avalie remetente e anexo suspeitos."
+          ],
+          "sources": [
+            {
+              "title": "RFC5321 — SMTP",
+              "url": "https://www.rfc-editor.org/info/rfc5321/"
+            },
+            {
+              "title": "RFC1939 — POP3",
+              "url": "https://www.rfc-editor.org/info/rfc1939/"
+            },
+            {
+              "title": "RFC9051 — IMAP4rev2",
+              "url": "https://www.rfc-editor.org/info/rfc9051/"
+            },
+            {
+              "title": "RFC6409 — submissão de mensagem",
+              "url": "https://www.rfc-editor.org/info/rfc6409/"
+            },
+            {
+              "title": "RFC8314 — TLS para acesso e submissão",
+              "url": "https://www.rfc-editor.org/info/rfc8314/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i13-q01",
+              "prompt": "SMTP é associado principalmente a:",
+              "options": [
+                "Envio/transporte de mensagens",
+                "Apenas leitura de planilha",
+                "Somente pesquisa web",
+                "Identidade do navegador"
+              ],
+              "correctIndex": 0,
+              "explanation": "A função é transporte/submissão conforme papel; acesso a caixas usa outros protocolos/interfaces."
+            },
+            {
+              "id": "bb2026-i13-q02",
+              "prompt": "IMAP significa:",
+              "options": [
+                "Internet Mail Active Process",
+                "Internet Message Access Protocol",
+                "Internal Memory Access Program",
+                "Instant Mail Authentication Port"
+              ],
+              "correctIndex": 1,
+              "explanation": "É protocolo de acesso e gerenciamento de mensagens, conformeRFC."
+            },
+            {
+              "id": "bb2026-i13-q03",
+              "prompt": "Baixar porPOP3 implica apagar sempre do servidor?",
+              "options": [
+                "Sim, sem configuração",
+                "Sim, por ser assíncrono",
+                "Não; exclusão depende de comandos/configuração",
+                "Sim, se houve anexo"
+              ],
+              "correctIndex": 2,
+              "explanation": "DELE/UPDATE e escolha do cliente determinam exclusão; recuperar não a implica universalmente."
+            },
+            {
+              "id": "bb2026-i13-q04",
+              "prompt": "Cco/Bcc garante mensagem impossível de encaminhar?",
+              "options": [
+                "Sim, em todo cliente",
+                "Sim, se há muitos destinatários",
+                "Sim, por cifrar todo texto",
+                "Não; oculta lista na entrega usual, com limites"
+              ],
+              "correctIndex": 3,
+              "explanation": "O receptor pode divulgar/encaminhar; Cco não é mecanismo de sigilo absoluto."
+            },
+            {
+              "id": "bb2026-i13-q05",
+              "prompt": "E-mail é assíncrono porque:",
+              "options": [
+                "Destinatário não precisa estar conectado no instante do envio",
+                "Nunca usa servidor",
+                "Só funciona em reunião ao vivo",
+                "Todo envio é imediato garantido"
+              ],
+              "correctIndex": 0,
+              "explanation": "Mensagens podem ser armazenadas/recebidas posteriormente, sem simultaneidade obrigatória."
+            },
+            {
+              "id": "bb2026-i13-q06",
+              "prompt": "Webmail é:",
+              "options": [
+                "Protocolo que eliminaSMTP em todo sistema",
+                "Interface de e-mail acessada pelo navegador",
+                "Sinônimo dePOP",
+                "Campo para cópia oculta"
+              ],
+              "correctIndex": 1,
+              "explanation": "Interface não se confunde com protocolos usados no serviço."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i13-q01",
+                "bb2026-i13-q02",
+                "bb2026-i13-q03"
+              ],
+              "sourceUrls": [
+                "https://www.rfc-editor.org/info/rfc5321/",
+                "https://www.rfc-editor.org/info/rfc1939/",
+                "https://www.rfc-editor.org/info/rfc9051/",
+                "https://www.rfc-editor.org/info/rfc6409/",
+                "https://www.rfc-editor.org/info/rfc8314/"
+              ]
+            },
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i13-q04",
+                "bb2026-i13-q05",
+                "bb2026-i13-q06"
+              ],
+              "sourceUrls": [
+                "https://www.rfc-editor.org/info/rfc5321/",
+                "https://www.rfc-editor.org/info/rfc1939/",
+                "https://www.rfc-editor.org/info/rfc9051/",
+                "https://www.rfc-editor.org/info/rfc6409/",
+                "https://www.rfc-editor.org/info/rfc8314/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i14",
+          "researchId": "I14",
+          "title": "Grupos, fóruns e wikis",
+          "level": "Fundamentos e aplicação",
+          "summary": "Selecionar ferramenta por interação e finalidade · Colaborar com registro, moderação e respeito à autoria",
+          "objectives": [
+            "Selecionar ferramenta por interação e finalidade",
+            "Colaborar com registro, moderação e respeito à autoria"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Colaborar não é só reunir pessoas",
+              "text": "Lista/grupo distribui mensagens segundo inscrição e permissões. Fórum organiza tópicos e respostas, permitindo interação assíncrona; chat favorece trocas rápidas, sem exigir que todo histórico seja temporário. Wiki permite edição colaborativa de páginas e histórico conforme plataforma/políticas, mas não garante veracidade. Moderação organiza participação/regras; não elimina necessidade de autoria e evidência. Escolha ferramenta por objetivo: discutir versões, consolidar explicação ou avisar. Registre fontes e contribuições; acesso aberto não torna obra sem autoria. Compartilhar conteúdo ou dados requer permissões e condições, mesmo dentro de grupo. DocumentaçãoMoodle citada é atual, distinta doOffice2013 histórico."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Equipe precisa discutir uma regra e depois manter uma explicação consolidada com versões. Como combinar ferramentas?",
+              "steps": [
+                "Fórum pode registrar argumentos por tópico, em horários diferentes.",
+                "Wiki pode manter síntese com edição/histórico conforme configuração.",
+                "Registre evidências e responsáveis pela revisão."
+              ],
+              "answer": "Discussão em fórum e consolidação emwiki, com controles.",
+              "check": "Quantidade de editores não prova exatidão; histórico ajuda rastrear mudanças, não valida toda afirmação."
+            }
+          ],
+          "pitfalls": [
+            "Tratarwiki como fonte infalível.",
+            "Copiar texto só porque está acessível ao grupo."
+          ],
+          "recap": [
+            "Fórum discute tópicos;wiki consolida páginas.",
+            "Histórico e moderação dão rastreabilidade.",
+            "Colaboração exige evidência, autoria e permissão."
+          ],
+          "retrieval": [
+            "Fórum exige todos simultaneamente online?",
+            "Histórico de edição comprova verdade do conteúdo?"
+          ],
+          "notes": "Grupos, fóruns e wikis\nFórum discute tópicos;wiki consolida páginas.\nHistórico e moderação dão rastreabilidade.\nColaboração exige evidência, autoria e permissão.\nTratarwiki como fonte infalível.\nCopiar texto só porque está acessível ao grupo.",
+          "suggestions": [
+            "Escolha ferramenta para discussão e síntese.",
+            "Explique controle de versões numawiki.",
+            "Avalie autoria e evidência em colaboração."
+          ],
+          "sources": [
+            {
+              "title": "Moodle — atividades",
+              "url": "https://docs.moodle.org/en/Activities"
+            },
+            {
+              "title": "Moodle — fórum",
+              "url": "https://docs.moodle.org/en/Forum_activity"
+            },
+            {
+              "title": "CERT.br — cartilha",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i14-q01",
+              "prompt": "Fórum favorece:",
+              "options": [
+                "Somente conversa obrigatoriamente simultânea",
+                "Discussão por tópicos com respostas assíncronas",
+                "Só edição de áudio",
+                "Somente cálculo de juros"
+              ],
+              "correctIndex": 1,
+              "explanation": "Participantes podem responder em horários diferentes, com organização por tópico."
+            },
+            {
+              "id": "bb2026-i14-q02",
+              "prompt": "Wiki é adequada principalmente para:",
+              "options": [
+                "Garantir verdade sem revisão",
+                "Enviar senha",
+                "Editar e consolidar páginas colaborativas conforme controles",
+                "Impedir histórico sempre"
+              ],
+              "correctIndex": 2,
+              "explanation": "Consolidação e versionamento dependem da plataforma/configuração."
+            },
+            {
+              "id": "bb2026-i14-q03",
+              "prompt": "Histórico de edição:",
+              "options": [
+                "Prova toda afirmação correta",
+                "Elimina autoria",
+                "Autoriza copiar qualquer obra",
+                "Ajuda rastrear mudanças, sem garantir veracidade"
+              ],
+              "correctIndex": 3,
+              "explanation": "Rastreabilidade e validade factual são critérios diferentes."
+            },
+            {
+              "id": "bb2026-i14-q04",
+              "prompt": "Para discutir e depois consolidar, uma combinação pertinente é:",
+              "options": [
+                "Fórum ewiki com revisão",
+                "Só enviar anexos sem controle",
+                "Somente publicidade",
+                "Apagar contribuições"
+              ],
+              "correctIndex": 0,
+              "explanation": "Ferramentas atendem finalidades complementares, com responsabilidades."
+            },
+            {
+              "id": "bb2026-i14-q05",
+              "prompt": "Conteúdo acessível num grupo pode ser copiado livremente em todo caso?",
+              "options": [
+                "Sim, por estar online",
+                "Não; autoria, licença e permissão importam",
+                "Sim, se tem poucos membros",
+                "Sim, se éwiki"
+              ],
+              "correctIndex": 1,
+              "explanation": "Acesso não equivale a licença universal nem dispensa proteção de dados."
+            },
+            {
+              "id": "bb2026-i14-q06",
+              "prompt": "Moderação busca:",
+              "options": [
+                "Criar fatos automaticamente",
+                "Eliminar toda divergência legítima",
+                "Organizar participação e aplicar regras do espaço",
+                "Substituir evidência por volume de mensagens"
+              ],
+              "correctIndex": 2,
+              "explanation": "A qualidade da discussão também depende de respeito e sustentação das afirmações."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i14-q01",
+                "bb2026-i14-q02",
+                "bb2026-i14-q03"
+              ],
+              "sourceUrls": [
+                "https://docs.moodle.org/en/Activities",
+                "https://docs.moodle.org/en/Forum_activity",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i14-q04",
+                "bb2026-i14-q05",
+                "bb2026-i14-q06"
+              ],
+              "sourceUrls": [
+                "https://docs.moodle.org/en/Activities",
+                "https://docs.moodle.org/en/Forum_activity",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i15",
+          "researchId": "I15",
+          "title": "Redes sociais",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir publicação, compartilhamento e controle de audiência · Avaliar exposição, autoria e golpes nas interações",
+          "objectives": [
+            "Distinguir publicação, compartilhamento e controle de audiência",
+            "Avaliar exposição, autoria e golpes nas interações"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Publicação circula além da tela inicial",
+              "text": "Redes sociais permitem perfis, conexões, publicação e interação segundo regras/configuração da plataforma. Alcance e recomendação por algoritmo não comprovam veracidade; conteúdo patrocinado precisa ser identificado conforme condições aplicáveis. Audiência limitada reduz exposição inicial, mas pessoas podem copiar/registrar/compartilhar fora do contexto. Metadados, localização e histórico podem revelar informações não pretendidas. Perfil com nome conhecido pode ser falso ou comprometido; confirme pedidos sensíveis em canal independente. Curtir/compartilhar não transforma obra em domínio público. Em contexto profissional, preserve dados de clientes, regras da instituição e direitos autorais; opinião pessoal pode circular sem contexto original."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Pessoa publica foto de tela para comemorar atendimento; números de cadastro aparecem ao fundo. Qual revisão necessária?",
+              "steps": [
+                "Identifique dados pessoais e finalidade da divulgação.",
+                "Não publique informação sem autorização/base adequada.",
+                "Prepare versão que não exponha dados e siga política."
+              ],
+              "answer": "Proteger dados e revisar o conteúdo antes da publicação.",
+              "check": "Grupo fechado não garante que a foto não seja copiada; retirar apenas nome pode ainda deixar identificadores."
+            }
+          ],
+          "pitfalls": [
+            "Tomar perfil familiar como prova de identidade.",
+            "Supor que grupo fechado impede toda circulação."
+          ],
+          "recap": [
+            "Audiência inicial não controla toda cópia posterior.",
+            "Algoritmo e popularidade não validam fatos.",
+            "Publicação profissional exige proteção e autoria."
+          ],
+          "retrieval": [
+            "Foto sem nome pode ainda identificar alguém?",
+            "Qual confirmação para pedido sensível de um perfil?"
+          ],
+          "notes": "Redes sociais\nAudiência inicial não controla toda cópia posterior.\nAlgoritmo e popularidade não validam fatos.\nPublicação profissional exige proteção e autoria.\nTomar perfil familiar como prova de identidade.\nSupor que grupo fechado impede toda circulação.",
+          "suggestions": [
+            "Analise exposição de dados numa postagem.",
+            "Avalie perfil e pedido suspeitos.",
+            "Compare alcance e confiabilidade de conteúdo."
+          ],
+          "sources": [
+            {
+              "title": "CERT.br — segurança",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            },
+            {
+              "title": "LGPD compilada",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i15-q01",
+              "prompt": "Grupo fechado garante que conteúdo nunca sairá dele?",
+              "options": [
+                "Não; membros podem copiar/divulgar",
+                "Sim, em toda plataforma",
+                "Sim, com muitos membros",
+                "Sim, se houverlogotipo"
+              ],
+              "correctIndex": 0,
+              "explanation": "Configuração de audiência não elimina ações de destinatários."
+            },
+            {
+              "id": "bb2026-i15-q02",
+              "prompt": "Foto de cadastro sem nome, mas com identificadores, exige:",
+              "options": [
+                "Publicação automática",
+                "Avaliação de identificação e proteção dos dados",
+                "Apenas mudar cor",
+                "Só aumentar alcance"
+              ],
+              "correctIndex": 1,
+              "explanation": "Outros dados podem permitir identificar a pessoa; ausência de nome não basta."
+            },
+            {
+              "id": "bb2026-i15-q03",
+              "prompt": "Pedido sensível de perfil conhecido deve ser:",
+              "options": [
+                "Atendido só pela foto",
+                "Ignorado sem contexto sempre",
+                "Confirmado por canal independente pertinente",
+                "Respondido com senha"
+              ],
+              "correctIndex": 2,
+              "explanation": "Conta pode ser falsa/comprometida; aparência não autentica pedido."
+            },
+            {
+              "id": "bb2026-i15-q04",
+              "prompt": "Alta popularidade de postagem comprova:",
+              "options": [
+                "Verdade factual",
+                "Autoria legítima",
+                "Ausência de publicidade",
+                "Circulação/interação, sem prova automática de veracidade"
+              ],
+              "correctIndex": 3,
+              "explanation": "Engajamento e validade da informação são dimensões distintas."
+            },
+            {
+              "id": "bb2026-i15-q05",
+              "prompt": "Compartilhar uma obra significa que ela:",
+              "options": [
+                "Continua sujeita a autoria/licença aplicável",
+                "Perde toda autoria",
+                "Vira domínio público imediatamente",
+                "Pode ser revendida sem condição"
+              ],
+              "correctIndex": 0,
+              "explanation": "Acesso e circulação não substituem licença/permissão."
+            },
+            {
+              "id": "bb2026-i15-q06",
+              "prompt": "Recomendação por algoritmo é:",
+              "options": [
+                "Certificação científica",
+                "Seleção conforme regras do sistema, a avaliar criticamente",
+                "Garantia de origem oficial",
+                "Prova de consenso universal"
+              ],
+              "correctIndex": 1,
+              "explanation": "Os critérios podem priorizar engajamento; a informação ainda exige verificação."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i15-q01",
+                "bb2026-i15-q02",
+                "bb2026-i15-q03"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i15-q04",
+                "bb2026-i15-q05",
+                "bb2026-i15-q06"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i16",
+          "researchId": "I16",
+          "title": "Apoio à decisão e BI",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar dados, indicadores e decisões · Distinguir integração, operação transacional e análise",
+          "objectives": [
+            "Relacionar dados, indicadores e decisões",
+            "Distinguir integração, operação transacional e análise"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "BI organiza evidência, não decide sozinho",
+              "text": "Business Intelligence combina coleta, integração, tratamento e análise de dados para apoiar decisões. Dashboard apresenta indicadores com definições/atualização, mas não é todo o processo. ETL extrai, transforma e carrega; ELT altera ordem, carregando antes da transformação no ambiente de destino. Data warehouse reúne dados para análise histórica segundo modelo; data mart atende recorte, sem regra universal de tamanho. OLTP privilegia operações transacionais, como registrar pagamento; OLAP favorece consultas analíticas/agregações multidimensionais. Dimensões como período/região e medidas como quantidade/valor precisam de granularidade compatível. Indicador inconsistente ou desatualizado pode orientar decisão ruim, mesmo num gráfico atraente."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Gestor compara vendas por região; um painel mistura pedidos e contratos concluídos sob rótulo “vendas”. O que corrigir?",
+              "steps": [
+                "Defina exatamente o evento contado.",
+                "Separe estágios e data de referência.",
+                "Valide integração e comparabilidade antes da decisão."
+              ],
+              "answer": "Corrigir definição e qualidade do indicador.",
+              "check": "A cor do gráfico não resolve mistura de conceitos; mesmo total correto pode responder a pergunta errada."
+            }
+          ],
+          "pitfalls": [
+            "ReduzirBI a umdashboard.",
+            "Confundir transação individual e consulta agregada."
+          ],
+          "recap": [
+            "BI inclui processo e governança dos dados.",
+            "ETL eELT diferem na ordem da transformação.",
+            "OLTP opera;OLAP analisa conforme finalidade."
+          ],
+          "retrieval": [
+            "Pedido e contrato concluído podem ser uma medida única sem definição?",
+            "Qual diferença de granularidade entre dia e mês?"
+          ],
+          "notes": "Apoio à decisão e BI\nBI inclui processo e governança dos dados.\nETL eELT diferem na ordem da transformação.\nOLTP opera;OLAP analisa conforme finalidade.\nReduzirBI a umdashboard.\nConfundir transação individual e consulta agregada.",
+          "suggestions": [
+            "Defina indicador com evento, data e unidade.",
+            "CompareOLTP eOLAP num cenário.",
+            "ExpliqueETL eELT sem confundir ordem."
+          ],
+          "sources": [
+            {
+              "title": "IBM — BI",
+              "url": "https://www.ibm.com/think/topics/business-intelligence"
+            },
+            {
+              "title": "IBM — ETL",
+              "url": "https://www.ibm.com/think/topics/etl"
+            },
+            {
+              "title": "IBM — OLAP",
+              "url": "https://www.ibm.com/think/topics/olap"
+            },
+            {
+              "title": "IBM — OLTP",
+              "url": "https://www.ibm.com/think/topics/oltp"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i16-q01",
+              "prompt": "Registrar pagamento individual é finalidade típica de:",
+              "options": [
+                "OLAP exclusivamente",
+                "OLTP",
+                "Slide mestre",
+                "NPS"
+              ],
+              "correctIndex": 1,
+              "explanation": "Processamento transacional atende operações correntes; análise histórica é outra finalidade."
+            },
+            {
+              "id": "bb2026-i16-q02",
+              "prompt": "NoETL, transformar ocorre:",
+              "options": [
+                "Depois de carregar por definição",
+                "Antes de extrair",
+                "Entre extrair e carregar",
+                "Somente depois de decisão"
+              ],
+              "correctIndex": 2,
+              "explanation": "Extract→Transform→Load dá a ordem;ELT altera os últimos passos."
+            },
+            {
+              "id": "bb2026-i16-q03",
+              "prompt": "Dashboard garante decisão correta?",
+              "options": [
+                "Sim, se colorido",
+                "Sim, se online",
+                "Sim, sem definição de dados",
+                "Não; qualidade, contexto e interpretação importam"
+              ],
+              "correctIndex": 3,
+              "explanation": "Visualização pode usar indicador inadequado ou incompleto."
+            },
+            {
+              "id": "bb2026-i16-q04",
+              "prompt": "Em vendas por região/mês, região e mês são:",
+              "options": [
+                "Dimensões de análise",
+                "Sempre medidas monetárias",
+                "Protocolos",
+                "Senhas"
+              ],
+              "correctIndex": 0,
+              "explanation": "Organizam recortes; quantidade/valor pode ser medida agregada."
+            },
+            {
+              "id": "bb2026-i16-q05",
+              "prompt": "Misturar pedidos e contratos concluídos no mesmo rótulo pede:",
+              "options": [
+                "Só aumentar gráfico",
+                "Definir eventos e separar indicadores pertinentes",
+                "Ignorar diferenças",
+                "Trocar ferramenta sem revisar dados"
+              ],
+              "correctIndex": 1,
+              "explanation": "Sem definição coerente, o total não representa um estágio de negócio claro."
+            },
+            {
+              "id": "bb2026-i16-q06",
+              "prompt": "OLAP está associado principalmente a:",
+              "options": [
+                "Somente envioSMTP",
+                "Apenas gravação de teclado",
+                "Análise e agregações multidimensionais",
+                "Somente antivírus"
+              ],
+              "correctIndex": 2,
+              "explanation": "Finalidade analítica difere da operação transacional, sem equivalência com ter ou não internet."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i16-q01",
+                "bb2026-i16-q02",
+                "bb2026-i16-q03"
+              ],
+              "sourceUrls": [
+                "https://www.ibm.com/think/topics/business-intelligence",
+                "https://www.ibm.com/think/topics/etl",
+                "https://www.ibm.com/think/topics/olap",
+                "https://www.ibm.com/think/topics/oltp"
+              ]
+            },
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i16-q04",
+                "bb2026-i16-q05",
+                "bb2026-i16-q06"
+              ],
+              "sourceUrls": [
+                "https://www.ibm.com/think/topics/business-intelligence",
+                "https://www.ibm.com/think/topics/etl",
+                "https://www.ibm.com/think/topics/olap",
+                "https://www.ibm.com/think/topics/oltp"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i17",
+          "researchId": "I17",
+          "title": "Análise de dados",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir população, amostra e estatísticas descritivas · Interpretar relação e variação sem causalidade indevida",
+          "objectives": [
+            "Distinguir população, amostra e estatísticas descritivas",
+            "Interpretar relação e variação sem causalidade indevida"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Pergunta e coleta vêm antes da conclusão",
+              "text": "População é conjunto de interesse; amostra é parte observada. Seleção enviesada não é corrigida só por aumentar quantidade. Dados numéricos/discretos/contínuos e categorias pedem tratamento adequado. Média usa todos os valores e sofre efeito de extremos; mediana divide valores ordenados; moda é valor/categoria mais frequente, podendo não ser única. Limpar duplicatas/faltantes exige critério, sem apagar inconvenientes para melhorar resultado. Correlação dePearson mede relação linear; r=0 não exclui toda relação não linear. Associação não prova causa e previsão não garante resultado individual. Relato deve explicitar denominadores, unidade, período e limites da amostra."
+            },
+            {
+              "type": "table",
+              "title": "Tempos de exemplo",
+              "columns": [
+                "Registro",
+                "Minutos"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ],
+                [
+                  "3",
+                  "3"
+                ],
+                [
+                  "4",
+                  "4"
+                ],
+                [
+                  "5",
+                  "18"
+                ]
+              ],
+              "caption": "Dados originais para praticar média/mediana; não são estatística real de atendimento."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Calcule média e mediana dos tempos2,3,3,4,18.",
+              "steps": [
+                "Soma30; média30/5=6.",
+                "Lista já ordenada; terceiro valor é3."
+              ],
+              "answer": "Média6min; mediana3min.",
+              "check": "18puxa a média acima do centro; moda também3, mas responde frequência, não posição."
+            }
+          ],
+          "pitfalls": [
+            "Chamar associação de causa comprovada.",
+            "Eliminar valor extremo sem investigar sua origem."
+          ],
+          "recap": [
+            "Amostra precisa representar finalidade e limites.",
+            "Média, mediana e moda respondem perguntas diferentes.",
+            "Correlação linear não cobre toda relação."
+          ],
+          "retrieval": [
+            "Por que pesquisa só entre usuários satisfeitos é enviesada?",
+            "r=0 prova ausência de qualquer relação?"
+          ],
+          "notes": "Análise de dados\nAmostra precisa representar finalidade e limites.\nMédia, mediana e moda respondem perguntas diferentes.\nCorrelação linear não cobre toda relação.\nChamar associação de causa comprovada.\nEliminar valor extremo sem investigar sua origem.",
+          "suggestions": [
+            "Calcule média e mediana num conjunto pequeno.",
+            "Identifique viés de seleção numa pesquisa.",
+            "Distinga correlação e causalidade."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — amostragem",
+              "url": "https://openstax.org/books/introductory-statistics-2e/pages/1-2-data-sampling-and-variation-in-data-and-sampling"
+            },
+            {
+              "title": "OpenStax — correlação",
+              "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/13-1-the-correlation-coefficient-r"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i17-q01",
+              "prompt": "Uma amostra é:",
+              "options": [
+                "Todo universo necessariamente",
+                "Sempre um censo",
+                "Parte observada da população de interesse",
+                "Toda planilha vazia"
+              ],
+              "correctIndex": 2,
+              "explanation": "Amostra difere do levantamento de toda população."
+            },
+            {
+              "id": "bb2026-i17-q02",
+              "prompt": "Média de2,3,3,4,18 é:",
+              "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "correctIndex": 3,
+              "explanation": "Soma30 dividida por5 resulta6."
+            },
+            {
+              "id": "bb2026-i17-q03",
+              "prompt": "Mediana de2,3,3,4,18 é:",
+              "options": [
+                "3",
+                "6",
+                "18",
+                "2"
+              ],
+              "correctIndex": 0,
+              "explanation": "Com cinco valores ordenados, o terceiro é o centro."
+            },
+            {
+              "id": "bb2026-i17-q04",
+              "prompt": "Aumentar uma amostra selecionada só entre satisfeitos:",
+              "options": [
+                "Elimina qualquer viés",
+                "Não corrige automaticamente o viés de seleção",
+                "Garante representatividade",
+                "Prova causalidade"
+              ],
+              "correctIndex": 1,
+              "explanation": "Quantidade não substitui estratégia de seleção pertinente."
+            },
+            {
+              "id": "bb2026-i17-q05",
+              "prompt": "Pearsonr=0 indica:",
+              "options": [
+                "Ausência de qualquer relação possível",
+                "Causalidade negativa certa",
+                "Ausência de correlação linear, sem excluir relação não linear",
+                "Dados iguais obrigatoriamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "O coeficiente trata linearidade; padrões curvos podem existir."
+            },
+            {
+              "id": "bb2026-i17-q06",
+              "prompt": "Valor extremo deve ser:",
+              "options": [
+                "Apagado sempre",
+                "Mantido como erro certo",
+                "Usado sem investigar",
+                "Analisado quanto a origem e pertinência antes de decidir tratamento"
+              ],
+              "correctIndex": 3,
+              "explanation": "Pode ser erro ou ocorrência válida; critério precisa ser documentado."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-i17-q01",
+                "bb2026-i17-q02",
+                "bb2026-i17-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/introductory-statistics-2e/pages/1-2-data-sampling-and-variation-in-data-and-sampling",
+                "https://openstax.org/books/introductory-business-statistics-2e/pages/13-1-the-correlation-coefficient-r"
+              ]
+            },
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-i17-q04",
+                "bb2026-i17-q05",
+                "bb2026-i17-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/introductory-statistics-2e/pages/1-2-data-sampling-and-variation-in-data-and-sampling",
+                "https://openstax.org/books/introductory-business-statistics-2e/pages/13-1-the-correlation-coefficient-r"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i18",
+          "researchId": "I18",
+          "title": "Educação a distância",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir interação síncrona/assíncrona e recursos de aprendizagem · Organizar estudo com prática, feedback e acessibilidade",
+          "objectives": [
+            "Distinguir interação síncrona/assíncrona e recursos de aprendizagem",
+            "Organizar estudo com prática, feedback e acessibilidade"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Distância pede organização e interação",
+              "text": "Ambiente virtual de aprendizagem reúne recursos, atividades, comunicação e acompanhamento conforme configuração. Síncrono exige participação ao mesmo tempo, como sessão ao vivo; assíncrono admite tempos diferentes, como fórum e leitura. Vídeo disponível não comprova aprendizagem; objetivos, prática, recuperação e feedback ajudam a verificar compreensão. EmMoodle atual, fórum e questionário têm funções distintas; tentativas, prazos e feedback dependem do curso. Acessibilidade de mídia, orientação clara e condições de conectividade favorecem participação. Acompanhamento de acessos não revela automaticamente domínio. Planeje blocos de estudo, resolva questões sem olhar resposta, revise erros e use interação para esclarecer dúvida."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Aluno assistiu à aula mas não consegue explicar o conceito. Que sequência favorece verificar aprendizado?",
+              "steps": [
+                "Tente recuperar a explicação sem consultar.",
+                "Resolva aplicação e compare raciocínio ao feedback.",
+                "Revise ponto específico e formule dúvida."
+              ],
+              "answer": "Prática e feedback orientam revisão do conceito.",
+              "check": "Tempo de reprodução sozinho não demonstra compreensão; repetir todo vídeo pode ser menos direcionado que revisar o erro identificado."
+            }
+          ],
+          "pitfalls": [
+            "Confundir presença/acesso com domínio.",
+            "Supor configuração igual dequiz em todoAVA."
+          ],
+          "recap": [
+            "Síncrono e assíncrono diferem no tempo de participação.",
+            "Prática e feedback ajudam a verificar entendimento.",
+            "AVA precisa de organização e acesso adequado."
+          ],
+          "retrieval": [
+            "Fórum é necessariamente simultâneo?",
+            "Qual evidência mostra compreensão além do acesso?"
+          ],
+          "notes": "Educação a distância\nSíncrono e assíncrono diferem no tempo de participação.\nPrática e feedback ajudam a verificar entendimento.\nAVA precisa de organização e acesso adequado.\nConfundir presença/acesso com domínio.\nSupor configuração igual dequiz em todoAVA.",
+          "suggestions": [
+            "Monte rotina de estudo com recuperação e prática.",
+            "Compare atividade síncrona e assíncrona.",
+            "Formule dúvida a partir de um erro observado."
+          ],
+          "sources": [
+            {
+              "title": "Moodle — atividades",
+              "url": "https://docs.moodle.org/en/Activities"
+            },
+            {
+              "title": "Moodle — questionário",
+              "url": "https://docs.moodle.org/en/Quiz_activity"
+            },
+            {
+              "title": "Moodle — fórum",
+              "url": "https://docs.moodle.org/en/Forum_activity"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i18-q01",
+              "prompt": "Fórum de estudo favorece interação:",
+              "options": [
+                "Assíncrona",
+                "Somente presencial",
+                "Sempre sem registro",
+                "Obrigatoriamente ao vivo"
+              ],
+              "correctIndex": 0,
+              "explanation": "Participantes podem responder em horários diferentes segundo regras da atividade."
+            },
+            {
+              "id": "bb2026-i18-q02",
+              "prompt": "Tempo de vídeo assistido prova domínio?",
+              "options": [
+                "Sim, se completo",
+                "Não; desempenho e explicação precisam ser verificados",
+                "Sim, sem prática",
+                "Sim, se rápido"
+              ],
+              "correctIndex": 1,
+              "explanation": "Exposição ao conteúdo não é evidência suficiente de compreensão."
+            },
+            {
+              "id": "bb2026-i18-q03",
+              "prompt": "Questionário noAVA pode ter tentativas/feedback:",
+              "options": [
+                "Sempre ilimitados",
+                "Sempre idênticos em qualquer curso",
+                "Dependentes da configuração da atividade",
+                "Nunca configuráveis"
+              ],
+              "correctIndex": 2,
+              "explanation": "Moodle permite diferentes opções; não se universaliza uma regra de uso."
+            },
+            {
+              "id": "bb2026-i18-q04",
+              "prompt": "Sessão ao vivo com participação simultânea é:",
+              "options": [
+                "Assíncrona por definição",
+                "Backup",
+                "Umawiki",
+                "Síncrona"
+              ],
+              "correctIndex": 3,
+              "explanation": "Participação no mesmo intervalo caracteriza interação síncrona."
+            },
+            {
+              "id": "bb2026-i18-q05",
+              "prompt": "Após erro numa aplicação, convém:",
+              "options": [
+                "Analisar feedback e revisar o ponto identificado",
+                "Só contar minutos",
+                "Ignorar comentário",
+                "Repetir resposta sem entender"
+              ],
+              "correctIndex": 0,
+              "explanation": "O raciocínio e sua correção orientam revisão mais pertinente."
+            },
+            {
+              "id": "bb2026-i18-q06",
+              "prompt": "Acessibilidade emEAD inclui:",
+              "options": [
+                "Somente taxa de acesso",
+                "Alternativas de mídia e navegação compreensível",
+                "Só aumento de duração",
+                "Obrigação de usar um canal visual único"
+              ],
+              "correctIndex": 1,
+              "explanation": "Condições de participação e informação vão além de conteúdo estar disponível."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "12",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i18-q01",
+                "bb2026-i18-q02",
+                "bb2026-i18-q03"
+              ],
+              "sourceUrls": [
+                "https://docs.moodle.org/en/Activities",
+                "https://docs.moodle.org/en/Quiz_activity",
+                "https://docs.moodle.org/en/Forum_activity"
+              ]
+            },
+            {
+              "referenceItem": "12",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i18-q04",
+                "bb2026-i18-q05",
+                "bb2026-i18-q06"
+              ],
+              "sourceUrls": [
+                "https://docs.moodle.org/en/Activities",
+                "https://docs.moodle.org/en/Quiz_activity",
+                "https://docs.moodle.org/en/Forum_activity"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i19",
+          "researchId": "I19",
+          "title": "Multimídia",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir raster, vetor, codec e contêiner · Relacionar compressão, compatibilidade e acesso à informação",
+          "objectives": [
+            "Distinguir raster, vetor, codec e contêiner",
+            "Relacionar compressão, compatibilidade e acesso à informação"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Formato organiza a informação de modos diferentes",
+              "text": "Imagem raster usa pixels; aumentar tamanho além da resolução pode evidenciar perda de detalhe. Vetor descreve formas matemáticas, favorecendo escala de certos elementos;SVG também pode incorporar raster e texto, portanto não é garantia de tudo vetorial. PNG comprime raster sem perdas; compressão não significa obrigatoriamente perda. Em áudio/vídeo, codec codifica/decodifica conteúdo; contêiner organiza trilhas/metadados. MP4 não determina sozinho um codec nem garante reprodução em qualquer aplicativo. Compressão com perdas descarta informação segundo método; recompressões podem aumentar degradação. Resolução, taxa de quadros e bitrate influem em dados/qualidade, mas número isolado não prova melhor resultado. Legenda/transcrição e alternativas acessíveis ajudam a transmitir significado."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Arquivo.mp4 não abre num aparelho, embora outros.mp4 abram. Isso é impossível?",
+              "steps": [
+                "MP4 é contêiner, não codec único.",
+                "Confiracodec/trilhas e suporte do aplicativo/dispositivo.",
+                "Outras condições, como corrupção, também podem explicar falha."
+              ],
+              "answer": "Não; compatibilidade depende da combinação e integridade.",
+              "check": "Mesma extensão não assegura mesmoscodec e parâmetros; renomear não converte."
+            }
+          ],
+          "pitfalls": [
+            "ChamarMP4 de umcodec único.",
+            "Afirmar que todo formato comprimido perde informação."
+          ],
+          "recap": [
+            "Raster e vetor descrevem imagens diferentemente.",
+            "Contêiner ecodec têm papéis distintos.",
+            "Compressão pode ser com ou sem perdas."
+          ],
+          "retrieval": [
+            "PNG é raster ou vetor?",
+            "UmSVG pode conter imagemraster?"
+          ],
+          "notes": "Multimídia\nRaster e vetor descrevem imagens diferentemente.\nContêiner ecodec têm papéis distintos.\nCompressão pode ser com ou sem perdas.\nChamarMP4 de umcodec único.\nAfirmar que todo formato comprimido perde informação.",
+          "suggestions": [
+            "Compare contêiner ecodec num vídeo.",
+            "Explique compressão com/sem perdas.",
+            "Avalie resolução e acessibilidade de mídia."
+          ],
+          "sources": [
+            {
+              "title": "W3C —SVG",
+              "url": "https://www.w3.org/TR/SVG11/intro.html"
+            },
+            {
+              "title": "W3C —PNG",
+              "url": "https://www.w3.org/TR/png-3/"
+            },
+            {
+              "title": "Mozilla — contêineres",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers"
+            },
+            {
+              "title": "Mozilla —codec de vídeo",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i19-q01",
+              "prompt": "PNG armazena tipicamente:",
+              "options": [
+                "Somente vetor",
+                "Raster com compressão sem perdas",
+                "Somente áudio",
+                "Somente texto executável"
+              ],
+              "correctIndex": 1,
+              "explanation": "PNG é formato raster e sua compressão não descarta os dados codificados."
+            },
+            {
+              "id": "bb2026-i19-q02",
+              "prompt": "MP4 é:",
+              "options": [
+                "Umcodec único obrigatório",
+                "Uma senha",
+                "Contêiner de mídia",
+                "Sistema operacional"
+              ],
+              "correctIndex": 2,
+              "explanation": "Pode conter trilhas com diferentescodec; compatibilidade exige analisar a combinação."
+            },
+            {
+              "id": "bb2026-i19-q03",
+              "prompt": "Compressão significa sempre perda?",
+              "options": [
+                "Sim, qualquer método",
+                "Sim, se diminui tamanho",
+                "Sim, noPNG",
+                "Não; há métodos sem perdas"
+              ],
+              "correctIndex": 3,
+              "explanation": "Sem perdas permite reconstrução exata; com perdas descarta informação."
+            },
+            {
+              "id": "bb2026-i19-q04",
+              "prompt": "SVG pode conterraster?",
+              "options": [
+                "Sim, além de formas e texto",
+                "Não, por definição nunca",
+                "Só áudio",
+                "Somente executável"
+              ],
+              "correctIndex": 0,
+              "explanation": "O formato vetorial pode incorporar imagens; conteúdo inteiro não é necessariamente vetorial."
+            },
+            {
+              "id": "bb2026-i19-q05",
+              "prompt": "Mesmo.mp4 abrindo num app e outro falhando pode decorrer de:",
+              "options": [
+                "Prova de impossibilidade técnica",
+                "Codec/parâmetros não suportados ou arquivo danificado",
+                "Extensão garantir igualdade",
+                "Somente cor da interface"
+              ],
+              "correctIndex": 1,
+              "explanation": "Contêiner igual não determina todos os dados internos."
+            },
+            {
+              "id": "bb2026-i19-q06",
+              "prompt": "Legendas e transcrições ajudam a:",
+              "options": [
+                "Aumentar sigilo automaticamente",
+                "Garantircodec universal",
+                "Dar acesso ao significado por outros meios",
+                "Eliminar necessidade de contexto"
+              ],
+              "correctIndex": 2,
+              "explanation": "São alternativas de informação; não mudam automaticamente segurança ou compatibilidade."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i19-q01",
+                "bb2026-i19-q02",
+                "bb2026-i19-q03"
+              ],
+              "sourceUrls": [
+                "https://www.w3.org/TR/SVG11/intro.html",
+                "https://www.w3.org/TR/png-3/",
+                "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers",
+                "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs"
+              ]
+            },
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i19-q04",
+                "bb2026-i19-q05",
+                "bb2026-i19-q06"
+              ],
+              "sourceUrls": [
+                "https://www.w3.org/TR/SVG11/intro.html",
+                "https://www.w3.org/TR/png-3/",
+                "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers",
+                "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i20",
+          "researchId": "I20",
+          "title": "Comunicação e trabalho remoto",
+          "level": "Fundamentos e aplicação",
+          "summary": "Selecionar canal segundo urgência, interação e registro · Preservar segurança, autoria e acesso em colaboração remota",
+          "objectives": [
+            "Selecionar canal segundo urgência, interação e registro",
+            "Preservar segurança, autoria e acesso em colaboração remota"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Canal precisa combinar com a tarefa",
+              "text": "Reunião ao vivo permite diálogo simultâneo; mensagem/documento assíncrono permite resposta em outro tempo e registro estruturado. Escolha depende de urgência, complexidade e disponibilidade, sem supor que reunião sempre é melhor. EmTeams atual, ingresso/chat antes/depois dependem de políticas, organizador e modalidade; não universalize acesso. Compartilhar tela pode expor janelas, notificações e dados; confira escopo antes de iniciar. Gravação requer regras/permissões/informação aplicáveis e não substitui ata de decisões. Colaboração em documento precisa de responsáveis, versões e permissões. Rede doméstica não dispensa proteção, atualizações e política da instituição;VPN protege um túnel conforme configuração, sem tornar todo comportamento seguro."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Equipe precisa revisar texto até amanhã em horários diferentes, mantendo decisões e versões. Qual desenho favorece?",
+              "steps": [
+                "Documento compartilhado com edição/revisão autorizadas.",
+                "Comentários com responsável e prazo.",
+                "Mensagem assíncrona de orientação; reunião só se divergência exigir."
+              ],
+              "answer": "Colaboração assíncrona estruturada com registro.",
+              "check": "Chamada permanente não garante revisão; link aberto com edição para qualquer pessoa pode criar risco desnecessário."
+            }
+          ],
+          "pitfalls": [
+            "Compartilhar tela inteira sem avaliar exposição.",
+            "TratarVPN como imunidade a golpe."
+          ],
+          "recap": [
+            "Canal depende da tarefa e disponibilidade.",
+            "Tela e gravação exigem controle de exposição.",
+            "Versões e permissões dão continuidade ao trabalho."
+          ],
+          "retrieval": [
+            "Toda pessoa pode acessar chatTeams após qualquer reunião?",
+            "Qual risco de notificação aparecer ao compartilhar tela?"
+          ],
+          "notes": "Comunicação e trabalho remoto\nCanal depende da tarefa e disponibilidade.\nTela e gravação exigem controle de exposição.\nVersões e permissões dão continuidade ao trabalho.\nCompartilhar tela inteira sem avaliar exposição.\nTratarVPN como imunidade a golpe.",
+          "suggestions": [
+            "Escolha canal para uma tarefa remota.",
+            "Revise permissões antes de colaborar.",
+            "Explique limite deVPN e compartilhamento de tela."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft — reuniõesTeams",
+              "url": "https://support.microsoft.com/en-us/teams/meetings/join-a-meeting-in-microsoft-teams"
+            },
+            {
+              "title": "Microsoft —chat de reunião",
+              "url": "https://support.microsoft.com/en-us/teams/meetings/chat-in-microsoft-teams-meetings"
+            },
+            {
+              "title": "CERT.br — segurança",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i20-q01",
+              "prompt": "Revisão em horários distintos com registro favorece:",
+              "options": [
+                "Somente reunião permanente",
+                "Somente telefonema sem nota",
+                "Documento e comunicação assíncrona estruturados",
+                "Link público sem controle"
+              ],
+              "correctIndex": 2,
+              "explanation": "A finalidade exige versões/decisões, podendo reservar reunião para dúvida complexa."
+            },
+            {
+              "id": "bb2026-i20-q02",
+              "prompt": "Antes de compartilhar tela, deve-se:",
+              "options": [
+                "Mostrar toda janela para provar transparência",
+                "Desativar todas as permissões",
+                "Ignorar notificações",
+                "Conferir escopo e dados que podem aparecer"
+              ],
+              "correctIndex": 3,
+              "explanation": "Exposição indevida pode ocorrer por janela, aba ou notificação."
+            },
+            {
+              "id": "bb2026-i20-q03",
+              "prompt": "Chat após reuniãoTeams está sempre disponível a todos?",
+              "options": [
+                "Não; depende de ingresso e políticas/modalidade",
+                "Sim, sem exceção",
+                "Sim, mesmo sem acesso autorizado",
+                "Sim, em qualquer versão antiga"
+              ],
+              "correctIndex": 0,
+              "explanation": "A documentação atual apresenta condições; não se inventa regra universal."
+            },
+            {
+              "id": "bb2026-i20-q04",
+              "prompt": "VPN garante ausência de phishing?",
+              "options": [
+                "Sim, em qualquer site",
+                "Não; túnel e proteção contra fraude são controles distintos",
+                "Sim, comWi-Fi",
+                "Sim, dispensa credencial segura"
+              ],
+              "correctIndex": 1,
+              "explanation": "Conexão protegida não valida mensagem ou decisão do usuário."
+            },
+            {
+              "id": "bb2026-i20-q05",
+              "prompt": "Gravação de reunião deve considerar:",
+              "options": [
+                "Só o tamanho do arquivo",
+                "Somente estética",
+                "Regras, permissões e informação pertinentes",
+                "Acesso irrestrito por padrão"
+              ],
+              "correctIndex": 2,
+              "explanation": "Dados e contexto de participantes exigem tratamento adequado."
+            },
+            {
+              "id": "bb2026-i20-q06",
+              "prompt": "Para continuidade de colaboração, é importante:",
+              "options": [
+                "Apagar histórico sempre",
+                "Permitir edição pública sem objetivo",
+                "Ignorar responsável",
+                "Definir responsáveis, versões e permissões"
+              ],
+              "correctIndex": 3,
+              "explanation": "Registro e controles reduzem conflito/perda de contexto."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i20-q01",
+                "bb2026-i20-q02",
+                "bb2026-i20-q03"
+              ],
+              "sourceUrls": [
+                "https://support.microsoft.com/en-us/teams/meetings/join-a-meeting-in-microsoft-teams",
+                "https://support.microsoft.com/en-us/teams/meetings/chat-in-microsoft-teams-meetings",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i20-q04",
+                "bb2026-i20-q05",
+                "bb2026-i20-q06"
+              ],
+              "sourceUrls": [
+                "https://support.microsoft.com/en-us/teams/meetings/join-a-meeting-in-microsoft-teams",
+                "https://support.microsoft.com/en-us/teams/meetings/chat-in-microsoft-teams-meetings",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-i21",
+          "researchId": "I21",
+          "title": "Arquivos na nuvem",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir sincronização, compartilhamento e recuperação · Configurar acesso e avaliar limites do serviço",
+          "objectives": [
+            "Distinguir sincronização, compartilhamento e recuperação",
+            "Configurar acesso e avaliar limites do serviço"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Estar na nuvem não define toda proteção",
+              "text": "Armazenamento remoto mantém arquivos em serviço acessado por rede; disponibilidade depende de conexão, serviço e condições da conta. Sincronização propaga inclusões/alterações/exclusões conforme configuração; não garante uma cópia histórica independente. Compartilhar concede acesso por usuário/link com permissões: visualizar difere de editar, e link aberto pode ampliar exposição. Histórico de versões e lixeira ajudam recuperar sob políticas/limites, sem promessa ilimitada. EmOneDrive atual, recursos e restauração ampla dependem de conta/assinatura; não atribuí-los aoOffice2013 nem afirmar que qualquer exclusão é reversível. Arquivo sob demanda pode aparecer no explorador sem estar inteiro baixado; acesso offline exige disponibilidade local. Backup precisa de objetivo/cópias/proteção/teste próprios, mesmo que fornecedor chame certos recursos debackup."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Documento sincronizado foi excluído num dispositivo e desapareceu nos demais. Como proceder?",
+              "steps": [
+                "Verifique lixeira/histórico e condições de recuperação do serviço.",
+                "Procure cópia independente pertinente.",
+                "Restaure e confira versão, sem prometer recuperação absoluta."
+              ],
+              "answer": "Investigar recursos de recuperação ebackup, reconhecendo propagação.",
+              "check": "A sincronização fez o comportamento esperado; presença anterior na nuvem não prova retenção ilimitada."
+            }
+          ],
+          "pitfalls": [
+            "Compartilhar com edição quando só leitura é necessária.",
+            "Supor que ícone de arquivo indica cópia offline completa."
+          ],
+          "recap": [
+            "Sincronização propaga;backup protege conforme projeto.",
+            "Visualizar e editar são permissões diferentes.",
+            "Recuperação eoffline têm condições."
+          ],
+          "retrieval": [
+            "Exclusão local pode propagar à nuvem?",
+            "Como permitir leitura sem conceder edição?"
+          ],
+          "notes": "Arquivos na nuvem\nSincronização propaga;backup protege conforme projeto.\nVisualizar e editar são permissões diferentes.\nRecuperação eoffline têm condições.\nCompartilhar com edição quando só leitura é necessária.\nSupor que ícone de arquivo indica cópia offline completa.",
+          "suggestions": [
+            "Compare sincronização, versionamento ebackup.",
+            "Escolha permissão mínima para compartilhar.",
+            "Explique arquivo sob demanda e acessooffline."
+          ],
+          "sources": [
+            {
+              "title": "Microsoft —sincronizaçãoOneDrive",
+              "url": "https://support.microsoft.com/en-us/onedrive/sync-your-computer-s-files-and-folders-with-onedrive"
+            },
+            {
+              "title": "Microsoft —compartilhamento",
+              "url": "https://support.microsoft.com/en-us/onedrive/share-files-and-folders-in-microsoft-onedrive"
+            },
+            {
+              "title": "Microsoft —versões",
+              "url": "https://support.microsoft.com/en-us/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive"
+            },
+            {
+              "title": "Microsoft —restauração",
+              "url": "https://support.microsoft.com/en-us/onedrive/restore-your-onedrive"
+            },
+            {
+              "title": "CERT.br —backup",
+              "url": "https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-informatica-video-1",
+            "bb2026-informatica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-i21-q01",
+              "prompt": "Sincronização pode propagar:",
+              "options": [
+                "Inclusão, alteração e exclusão conforme configuração",
+                "Somente arquivos novos",
+                "Somentebackup independente",
+                "Garantia de histórico eterno"
+              ],
+              "correctIndex": 0,
+              "explanation": "A manutenção do mesmo estado pode replicar perdas/alterações."
+            },
+            {
+              "id": "bb2026-i21-q02",
+              "prompt": "Para pessoa apenas ler documento, permissão pertinente é:",
+              "options": [
+                "Edição pública",
+                "Visualização conforme controle de acesso",
+                "Administração da conta",
+                "Compartilhar senha"
+              ],
+              "correctIndex": 1,
+              "explanation": "Conceder só o necessário reduz poder de alteração e exposição."
+            },
+            {
+              "id": "bb2026-i21-q03",
+              "prompt": "Histórico de versões oferece:",
+              "options": [
+                "Recuperação ilimitada em toda conta",
+                "Imunidade a falhas",
+                "Possibilidade de recuperação sob regras e limites",
+                "Cópia necessariamente independente de todo incidente"
+              ],
+              "correctIndex": 2,
+              "explanation": "Recursos dependem de retenção, permissões e serviço/conta."
+            },
+            {
+              "id": "bb2026-i21-q04",
+              "prompt": "Arquivo sob demanda visível significa necessariamente acessooffline?",
+              "options": [
+                "Sim, sempre",
+                "Sim, semdownload",
+                "Sim, só pelo ícone",
+                "Não; conteúdo pode exigir obtenção pela rede"
+              ],
+              "correctIndex": 3,
+              "explanation": "É preciso verificar disponibilidade local, não só referência no explorador."
+            },
+            {
+              "id": "bb2026-i21-q05",
+              "prompt": "Compartilhar senha da conta para colaborar é:",
+              "options": [
+                "Inadequado; prefira acesso próprio com permissão pertinente",
+                "Necessário em todo serviço",
+                "Forma única de leitura",
+                "Garantia de menor privilégio"
+              ],
+              "correctIndex": 0,
+              "explanation": "Identidades próprias e permissões ajudam a limitar/rastrear acesso."
+            },
+            {
+              "id": "bb2026-i21-q06",
+              "prompt": "Nuvem substitui todo planejamento debackup?",
+              "options": [
+                "Sim, em qualquer situação",
+                "Não; objetivo, independência, proteção e restauração precisam ser avaliados",
+                "Sim, se hálogo conhecido",
+                "Sim, com sincronização ativa"
+              ],
+              "correctIndex": 1,
+              "explanation": "Serviço remoto pode compor proteção, mas não garante sozinho recuperação adequada."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i21-q01",
+                "bb2026-i21-q02",
+                "bb2026-i21-q03"
+              ],
+              "sourceUrls": [
+                "https://support.microsoft.com/en-us/onedrive/sync-your-computer-s-files-and-folders-with-onedrive",
+                "https://support.microsoft.com/en-us/onedrive/share-files-and-folders-in-microsoft-onedrive",
+                "https://support.microsoft.com/en-us/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
+                "https://support.microsoft.com/en-us/onedrive/restore-your-onedrive",
+                "https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf"
+              ]
+            },
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0
+              ],
+              "exampleBlockIndex": 1,
+              "questionIds": [
+                "bb2026-i21-q04",
+                "bb2026-i21-q05",
+                "bb2026-i21-q06"
+              ],
+              "sourceUrls": [
+                "https://support.microsoft.com/en-us/onedrive/sync-your-computer-s-files-and-folders-with-onedrive",
+                "https://support.microsoft.com/en-us/onedrive/share-files-and-folders-in-microsoft-onedrive",
+                "https://support.microsoft.com/en-us/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
+                "https://support.microsoft.com/en-us/onedrive/restore-your-onedrive",
+                "https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "redacao",
