@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createApp } from '../src/app';
-import { loadStudyCatalog } from '../src/catalog/study-catalog';
+import { loadStudyDirectory } from '../src/catalog/study-directory';
+import { buildSteveInstructions } from '../src/steve/steve.prompt';
 import { SteveService } from '../src/steve/steve.service';
 import { SteveQuota } from '../src/steve/quota.repository';
 import { SteveProvider } from '../src/steve/steve.provider';
@@ -13,7 +14,7 @@ function fixture(provider?:SteveProvider) {
     async reserve(userId) { reserved++; return {id:'reservation',userId,dayUTC:'2026-10-01',remaining:10-reserved,resetAt:'2026-10-02T00:00:00.000Z'}; },
     async releaseUnsent() { released++; return true; },
   };
-  const service = new SteveService(loadStudyCatalog(),quota,provider,()=>new Date('2026-10-01T12:00:00Z'));
+  const service = new SteveService(loadStudyDirectory(),quota,provider,()=>new Date('2026-10-01T12:00:00Z'));
   return {service,quota,get reserved(){return reserved;},get released(){return released;}};
 }
 test('Steve uses trusted topic notes and enforces a per-user minute budget', async () => {
@@ -123,4 +124,40 @@ test('daily limit returns a safe renewal time distinct from a short wait', async
     assert.ok(body.message.includes('diário')); assert.equal(body.resetAt,'2099-01-01T00:00:00.000Z');
     assert.ok(response.headers.get('retry-after'));
   } finally {await app.close();}
+});
+
+test('contest_context_uses_trusted_notes', () => {
+  const directory = loadStudyDirectory();
+  for (const id of ['bb2026-b01','bb2026-r05']) {
+    const entry = directory.find(id)!;
+    const prompt = buildSteveInstructions(entry);
+    for (const text of ['Concursos','Banco do Brasil 2026','Agente Comercial','2022/001','2026-10-01',entry.topic.title,entry.topic.subject,entry.topic.notes,entry.topic.sources[0]!.url]) assert.ok(prompt.includes(text), text);
+    assert.ok(!prompt.includes('private-uid'));
+    assert.ok(!prompt.includes(entry.topic.questions[0]!.prompt));
+    for (const task of entry.contestLocation!.module.writingTasks) assert.ok(!prompt.includes(task.prompt));
+    assert.ok(!prompt.includes('correctIndex'));
+  }
+});
+test('unknown_topic_before_quota_and_one_quota_across_areas', async () => {
+  let calls=0;
+  const f=fixture({async generate(){calls++;return {status:'completed',text:'Ajuda formativa'};}});
+  await assert.rejects(f.service.reply('u',{...input,topicId:'bb2026-unknown'},new AbortController().signal,'id'),(e:any)=>e.getStatus()===400);
+  assert.equal(f.reserved,0);assert.equal(calls,0);
+  const a=await f.service.reply('u',input,new AbortController().signal,'id');
+  const b=await f.service.reply('u',{...input,topicId:'bb2026-b01'},new AbortController().signal,'id');
+  assert.equal(a.quota.remaining,9);assert.equal(b.quota.remaining,8);
+  assert.equal(b.topicId,'bb2026-b01');
+  assert.deepEqual(b.sources,loadStudyDirectory().find('bb2026-b01')!.topic.sources);
+  assert.equal(f.reserved,2);assert.equal(calls,2);
+});
+test('contest_HTTP_accepts_known_identity_and_rejects_unknown_before_quota', async () => {
+  const f=fixture({async generate(){return {status:'completed',text:'Ajuda'};}});
+  const app=await createApp({identity:{async verify(){return {externalId:'u'};}},users:{async resolve(){return {id:'u'};}},ready:async()=>true,origins:[],steve:f.service});
+  await app.listen(0,'127.0.0.1');
+  try {
+    const url=await app.getUrl();
+    const send=(topicId:string)=>fetch(url+'/v1/steve/messages',{method:'POST',headers:{Authorization:'Bearer token','Content-Type':'application/json'},body:JSON.stringify({...input,topicId})});
+    assert.equal((await send('bb2026-unknown')).status,400); assert.equal(f.reserved,0);
+    assert.equal((await send('bb2026-r05')).status,200); assert.equal(f.reserved,1);
+  } finally { await app.close(); }
 });

@@ -114,7 +114,14 @@ export async function createApp(dependencies: AppDependencies) {
   return app;
 }
 
-export function createOpenApi(app: INestApplication) {
-  return SwaggerModule.createDocument(app, new DocumentBuilder()
+export function createOpenApi(app: INestApplication, topicIds: readonly string[]) {
+  const document = SwaggerModule.createDocument(app, new DocumentBuilder()
     .setTitle('Estuda Aí API').setVersion('0.1.0').addBearerAuth().build());
+  for (const name of ['SteveInputDto', 'SteveReplyDto']) {
+    const schema = document.components?.schemas?.[name];
+    if (schema && 'properties' in schema && schema.properties?.topicId) {
+      schema.properties.topicId = {type:'string', enum:[...topicIds]};
+    }
+  }
+  return document;
 }

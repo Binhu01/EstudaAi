@@ -1,5 +1,6 @@
 import { BadRequestException, HttpException, ServiceUnavailableException } from '@nestjs/common';
-import { StudyCatalog, StudySource } from '../catalog/study-catalog';
+import { StudySource } from '../catalog/study-catalog';
+import { StudyDirectory } from '../catalog/study-directory';
 import { QuotaReservation, SteveQuota } from './quota.repository';
 import { ChatMessage, ProviderReply, SteveProvider } from './steve.provider';
 import { buildSteveInstructions } from './steve.prompt';
@@ -8,10 +9,10 @@ export interface SteveReply extends ProviderReply {topicId:string;sources:readon
 export class SteveService {
   private readonly inFlight = new Set<string>();
   private readonly minute = new Map<string,number[]>();
-  constructor(private readonly catalog:StudyCatalog,private readonly quota:SteveQuota,private readonly provider?:SteveProvider,private readonly clock:()=>Date=()=>new Date()) {}
+  constructor(private readonly directory:StudyDirectory,private readonly quota:SteveQuota,private readonly provider?:SteveProvider,private readonly clock:()=>Date=()=>new Date()) {}
   async reply(userId:string,input:SteveInput,signal:AbortSignal,requestId:string):Promise<SteveReply> {
-    const topic = this.catalog.find(input.topicId);
-    if (!topic || typeof input.message!=='string' || !input.message.trim() || input.message.length>2000 ||
+    const entry = this.directory.find(input.topicId);
+    if (!entry || typeof input.message!=='string' || !input.message.trim() || input.message.length>2000 ||
         !Array.isArray(input.history) || input.history.length>8 || input.history.some(m=>!m || !['user','assistant'].includes(m.role) || typeof m.text!=='string' || !m.text.trim() || m.text.length>2000) ||
         input.history.reduce((sum,m)=>sum+m.text.length,0)>12000) throw new BadRequestException();
     if (!this.provider || this.provider.configured===false || signal.aborted) throw new ServiceUnavailableException();
@@ -27,9 +28,9 @@ export class SteveService {
       reservation=await this.quota.reserve(userId,now);
       if (signal.aborted) throw new ServiceUnavailableException();
       sent=true;
-      const result=await this.provider.generate({instructions:buildSteveInstructions(topic),message:input.message.trim(),history:input.history.map(m=>({role:m.role,text:m.text.trim()}))},signal);
+      const result=await this.provider.generate({instructions:buildSteveInstructions(entry),message:input.message.trim(),history:input.history.map(m=>({role:m.role,text:m.text.trim()}))},signal);
       if (signal.aborted) throw new ServiceUnavailableException();
-      return {...result,topicId:topic.id,sources:topic.sources,quota:{remaining:reservation.remaining,resetAt:reservation.resetAt},requestId};
+      return {...result,topicId:entry.topic.id,sources:entry.topic.sources,quota:{remaining:reservation.remaining,resetAt:reservation.resetAt},requestId};
     } catch (error) {
       if (error instanceof HttpException) throw error;
       throw new ServiceUnavailableException();

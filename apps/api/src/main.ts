@@ -5,7 +5,7 @@ import { readConfig } from './config';
 import { PrismaDatabase } from './database/prisma';
 import { FirebaseIdentityVerifier } from './auth/firebase.identity';
 import { FirebaseRestAuth } from './auth/firebase-rest.auth';
-import { loadStudyCatalog } from './catalog/study-catalog';
+import { loadStudyDirectory } from './catalog/study-directory';
 import { QuotaRepository } from './steve/quota.repository';
 import { SteveService } from './steve/steve.service';
 import { OpenAiSteveProvider } from './steve/openai.provider';
@@ -20,7 +20,7 @@ async function bootstrap() {
   const app = await createApp({
     identity, users: database,
     auth: new FirebaseRestAuth(config.firebaseWebApiKey, identity),
-    steve: new SteveService(loadStudyCatalog(),quota,provider),
+    steve: new SteveService(loadStudyDirectory(),quota,provider),
     steveDailyLimit: config.steveDailyLimit,
     ready: () => database.ready(), origins: config.origins,
     log: (event) => process.stdout.write(JSON.stringify(event) + '\n'),

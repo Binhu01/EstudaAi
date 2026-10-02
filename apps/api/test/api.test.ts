@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createApp, createOpenApi } from '../src/app';
+import { loadStudyDirectory } from '../src/catalog/study-directory';
 import { AppDependencies } from '../src/contracts';
 
 async function fixture(overrides: Partial<AppDependencies> = {}) {
@@ -94,7 +95,13 @@ test('the verified user shares a quota across private endpoints', async () => {
 test('OpenAPI documents public readiness and safe private error contracts', async () => {
   const f = await fixture();
   try {
-    const document = createOpenApi(f.app);
+    const document = createOpenApi(f.app, loadStudyDirectory().topicIds);
+    for (const name of ['SteveInputDto', 'SteveReplyDto']) {
+      const schema = document.components?.schemas?.[name] as any;
+      assert.equal(schema.properties.topicId.enum.length, 129);
+      assert.ok(schema.properties.topicId.enum.includes('bb2026-b01'));
+      assert.ok(schema.properties.topicId.enum.includes('bb2026-r05'));
+    }
     assert.ok(document.paths['/health/ready']?.get?.responses['503']);
     assert.equal(document.paths['/health/live']?.get?.security, undefined);
     for (const path of ['/v1/me', '/v1/me/entitlements']) {
