@@ -12708,7 +12708,1441 @@
           "videoId": "GN13zwBEWAA"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-e01",
+          "researchId": "E01",
+          "title": "Vocabulário em contexto",
+          "level": "Fundamentos e aplicação",
+          "summary": "Inferir sentido lexical por pistas e função · Evitar cognatos enganosos e verificar substituições",
+          "objectives": [
+            "Inferir sentido lexical por pistas e função",
+            "Evitar cognatos enganosos e verificar substituições"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O contexto seleciona o sentido",
+              "text": "Uma palavra pode ter vários sentidos; identifique quem faz o quê, com que objeto e finalidade. Charge pode ser cobrar, acusar ou carga; bank pode ser banco financeiro ou margem de rio. Prefixos e sufixos ajudam, mas não provam toda tradução. Actual costuma significar real/efetivo; current, atual; actually frequentemente equivale a na verdade. False friends exigem conferência no contexto. Em leitura, substitua a hipótese na frase e no parágrafo; sem coerência, reveja. Não é preciso traduzir cada palavra para identificar uma informação, mas ignorar negação ou quantificador pode inverter a mensagem."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "The notice lists the monthly charge for the account. It also shows the actual cost of each optional service. Customers can compare these amounts before choosing a plan. No plan is described as free of all fees."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "No texto, charge é “acusação” ou “tarifa”?",
+              "steps": [
+                "O objeto é uma conta e a frequência é mensal.",
+                "O parágrafo fala de custos e valores comparáveis.",
+                "Substituir por tarifa mantém a coerência financeira."
+              ],
+              "answer": "Tarifa/cobrança mensal.",
+              "check": "“Acusação mensal da conta” não combina com comparação de custos; não se decidiu pela aparência isolada da palavra."
+            }
+          ],
+          "pitfalls": [
+            "Traduzir actual como atual em todo caso.",
+            "Deduzir gratuidade total da ausência de uma tarifa específica."
+          ],
+          "recap": [
+            "Sentido depende da estrutura e do contexto.",
+            "Cognato aparente é hipótese.",
+            "Negação e quantificadores mudam o alcance."
+          ],
+          "retrieval": [
+            "Que pista exclui acusação no trecho?",
+            "Como traduzir current price e actual price?"
+          ],
+          "notes": "Vocabulário em contexto\nSentido depende da estrutura e do contexto.\nCognato aparente é hipótese.\nNegação e quantificadores mudam o alcance.\nTraduzir actual como atual em todo caso.\nDeduzir gratuidade total da ausência de uma tarifa específica.",
+          "suggestions": [
+            "Explique um falso cognato no contexto.",
+            "Mostre pistas para entender charge.",
+            "Teste uma tradução sem mudar a negação."
+          ],
+          "sources": [
+            {
+              "title": "British Council — vocabulário por nível",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2-vocabulary"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e01-q01",
+              "prompt": "No trecho original, monthly charge refere-se a:",
+              "options": [
+                "Acusação judicial",
+                "Carga elétrica",
+                "Tarifa mensal",
+                "Margem de rio"
+              ],
+              "correctIndex": 2,
+              "explanation": "Account, cost e amounts sustentam o sentido de cobrança financeira."
+            },
+            {
+              "id": "bb2026-e01-q02",
+              "prompt": "Actual cost, no texto, significa:",
+              "options": [
+                "Custo antigo",
+                "Custo imaginado",
+                "Custo atualizado obrigatoriamente",
+                "Custo real/efetivo"
+              ],
+              "correctIndex": 3,
+              "explanation": "Actual descreve custo efetivo; atual em inglês costuma ser current."
+            },
+            {
+              "id": "bb2026-e01-q03",
+              "prompt": "Customers can compare these amounts indica que eles podem:",
+              "options": [
+                "Comparar os valores",
+                "Exigir plano gratuito sempre",
+                "Ignorar todos os custos",
+                "Escolher só serviços obrigatórios"
+              ],
+              "correctIndex": 0,
+              "explanation": "Compare e amounts exprimem possibilidade de comparação, sem promessa de gratuidade."
+            },
+            {
+              "id": "bb2026-e01-q04",
+              "prompt": "Optional services são serviços:",
+              "options": [
+                "Sempre obrigatórios",
+                "Opcionais",
+                "Sempre indisponíveis",
+                "Proibidos"
+              ],
+              "correctIndex": 1,
+              "explanation": "Optional indica escolha; o trecho não determina que sejam gratuitos."
+            },
+            {
+              "id": "bb2026-e01-q05",
+              "prompt": "Em The path runs along the bank of the river, bank significa:",
+              "options": [
+                "Agência financeira",
+                "Tarifa",
+                "Margem do rio",
+                "Depósito bancário"
+              ],
+              "correctIndex": 2,
+              "explanation": "River e path direcionam o sentido geográfico, diferente do contexto de conta."
+            },
+            {
+              "id": "bb2026-e01-q06",
+              "prompt": "A frase final do texto permite concluir que:",
+              "options": [
+                "Todos os planos são sem qualquer tarifa",
+                "Há um plano gratuito garantido",
+                "A comparação elimina tarifas",
+                "Não se afirma gratuidade integral de nenhum plano"
+              ],
+              "correctIndex": 3,
+              "explanation": "No plan is described as free of all fees nega essa descrição; não informa que todo serviço é cobrado."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e01-q01",
+                "bb2026-e01-q02",
+                "bb2026-e01-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2-vocabulary"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e01-q04",
+                "bb2026-e01-q05",
+                "bb2026-e01-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2-vocabulary"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e02",
+          "researchId": "E02",
+          "title": "Estrutura e auxiliares",
+          "level": "Fundamentos e aplicação",
+          "summary": "Reconhecer sujeito, verbo principal e auxiliar · Formar pergunta e negação preservando a base verbal",
+          "objectives": [
+            "Reconhecer sujeito, verbo principal e auxiliar",
+            "Formar pergunta e negação preservando a base verbal"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Auxiliar carrega parte da gramática",
+              "text": "A ordem declarativa usual é sujeito+verbo+complementos, embora haja variações. Do/does/did formam perguntas e negativas no simple present/past de verbos comuns: Does she work? e She did not work. O principal fica na forma base; não usar does works nem did worked. Be como verbo principal inverte diretamente em Is she ready?, sem do. Be também forma progressivo/passiva; have forma perfect, mas pode ser lexical em possuir. Perguntas de sujeito como Who called? não exigem did para essa função neutra; perguntas de objeto como Who did she call? usam auxiliar. Identifique a função antes de aplicar uma regra."
+            },
+            {
+              "type": "list",
+              "title": "Compare formas",
+              "items": [
+                "She works → Does she work? → She does not work.",
+                "They worked → Did they work? → They did not work.",
+                "She is ready → Is she ready? → She is not ready.",
+                "They do the checks: do pode ser verbo principal com objeto."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Transforme “Rita checks the form” em pergunta neutra no simple present.",
+              "steps": [
+                "Sujeito Rita é terceira pessoa singular.",
+                "Use does antes do sujeito.",
+                "Principal volta à base check."
+              ],
+              "answer": "Does Rita check the form?",
+              "check": "A marca de terceira pessoa está em does; duplicá-la em checks após does é inadequado."
+            }
+          ],
+          "pitfalls": [
+            "Duplicar flexão no auxiliar e no principal.",
+            "Usar do automaticamente com be."
+          ],
+          "recap": [
+            "Auxiliar e principal têm funções diferentes.",
+            "Does/did pedem forma base do principal.",
+            "Be inverte diretamente em perguntas simples."
+          ],
+          "retrieval": [
+            "Qual diferença de do em Do they do the checks?",
+            "Por que Who called? difere de Who did you call?"
+          ],
+          "notes": "Estrutura e auxiliares\nAuxiliar e principal têm funções diferentes.\nDoes/did pedem forma base do principal.\nBe inverte diretamente em perguntas simples.\nDuplicar flexão no auxiliar e no principal.\nUsar do automaticamente com be.",
+          "suggestions": [
+            "Transforme uma afirmação em pergunta e negativa.",
+            "Identifique auxiliares numa frase.",
+            "Compare pergunta de sujeito e de objeto."
+          ],
+          "sources": [
+            {
+              "title": "British Council — verb phrases",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/verb-phrases"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e02-q01",
+              "prompt": "A pergunta correspondente a She works here é:",
+              "options": [
+                "Does she work here?",
+                "Does she works here?",
+                "Do she works here?",
+                "Did she worked here?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Does carrega a marca de terceira pessoa; work fica na base."
+            },
+            {
+              "id": "bb2026-e02-q02",
+              "prompt": "Em They did not send it, o verbo principal está na forma:",
+              "options": [
+                "Passado sent",
+                "Base send",
+                "Gerúndio sending",
+                "Particípio sent obrigatório"
+              ],
+              "correctIndex": 1,
+              "explanation": "Did expressa passado; o principal após did not usa base."
+            },
+            {
+              "id": "bb2026-e02-q03",
+              "prompt": "Qual pergunta neutra está adequada para She is ready?",
+              "options": [
+                "Does she is ready?",
+                "Do she ready?",
+                "Is she ready?",
+                "Did she is ready?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Be inverte com o sujeito, dispensando do nessa construção."
+            },
+            {
+              "id": "bb2026-e02-q04",
+              "prompt": "Em They do the checks every morning, do funciona como:",
+              "options": [
+                "Artigo",
+                "Pronome",
+                "Preposição",
+                "Verbo principal"
+              ],
+              "correctIndex": 3,
+              "explanation": "Tem objeto the checks e descreve a ação realizar, sem outro principal."
+            },
+            {
+              "id": "bb2026-e02-q05",
+              "prompt": "Who called the office? pergunta por:",
+              "options": [
+                "Quem realizou a chamada",
+                "A pessoa chamada obrigatoriamente",
+                "O horário necessariamente",
+                "A tarifa"
+              ],
+              "correctIndex": 0,
+              "explanation": "Who é o sujeito de called; pergunta de objeto teria outra estrutura."
+            },
+            {
+              "id": "bb2026-e02-q06",
+              "prompt": "A negativa de He reads reports, no simple present, é:",
+              "options": [
+                "He does not reads reports",
+                "He does not read reports",
+                "He not reading reports",
+                "He did not reads reports"
+              ],
+              "correctIndex": 1,
+              "explanation": "Does not + read forma negativa mantendo tempo presente e pessoa no auxiliar."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e02-q01",
+                "bb2026-e02-q02",
+                "bb2026-e02-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/verb-phrases"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e02-q04",
+                "bb2026-e02-q05",
+                "bb2026-e02-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/verb-phrases"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e03",
+          "researchId": "E03",
+          "title": "Tempo e aspecto",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar tempo verbal e enquadramento da ação · Interpretar passado delimitado, progresso e ligação ao presente",
+          "objectives": [
+            "Relacionar tempo verbal e enquadramento da ação",
+            "Interpretar passado delimitado, progresso e ligação ao presente"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Tempo e aspecto não são sinônimos",
+              "text": "Simple present costuma expressar hábitos/estados; present continuous be+ing enquadra atividade em andamento ou situação temporária no contexto. Simple past apresenta evento em tempo passado delimitado; past continuous destaca andamento num ponto do passado. Present perfect have/has+particípio relaciona passado ao presente, como experiência sem data fechada ou resultado atual; não significa sempre ação ainda em curso. Since marca ponto inicial; for, duração. Will pode expressar previsão ou decisão; going to pode indicar intenção ou evidência, com sobreposição conforme contexto. Advérbios são pistas, mas a forma completa e o contexto decidem."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "On Monday, Lia sent the draft. Today she is revising the final paragraph. She has already checked the numbers, so they are ready for review. She usually reads the whole report before sharing it."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Compare sent on Monday e has already checked no trecho.",
+              "steps": [
+                "Sent com on Monday situa um evento passado delimitado.",
+                "Has checked é present perfect.",
+                "So they are ready relaciona a checagem ao estado presente."
+              ],
+              "answer": "Passado delimitado e resultado ligado ao presente.",
+              "check": "O texto não diz que Lia continua checando números; a ação pode estar concluída e ter efeito atual."
+            }
+          ],
+          "pitfalls": [
+            "Afirmar que present perfect sempre indica ação não concluída.",
+            "Traduzir toda forma ing sem analisar be e contexto."
+          ],
+          "recap": [
+            "Forma e contexto identificam tempo/aspecto.",
+            "Perfect pode mostrar resultado atual de ação concluída.",
+            "Since dá início; for dá duração."
+          ],
+          "retrieval": [
+            "Has finished precisa indicar ação ainda acontecendo?",
+            "Qual diferença entre for two days e since Monday?"
+          ],
+          "notes": "Tempo e aspecto\nForma e contexto identificam tempo/aspecto.\nPerfect pode mostrar resultado atual de ação concluída.\nSince dá início; for dá duração.\nAfirmar que present perfect sempre indica ação não concluída.\nTraduzir toda forma ing sem analisar be e contexto.",
+          "suggestions": [
+            "Compare simple past e present perfect num trecho.",
+            "Identifique ação em andamento e hábito.",
+            "Explique since e for com um exemplo."
+          ],
+          "sources": [
+            {
+              "title": "British Council — present perfect",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect"
+            },
+            {
+              "title": "British Council — present continuous",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-continuous"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e03-q01",
+              "prompt": "No texto, sent the draft on Monday apresenta:",
+              "options": [
+                "Hábito diário",
+                "Ação em progresso hoje",
+                "Evento passado delimitado",
+                "Proibição futura"
+              ],
+              "correctIndex": 2,
+              "explanation": "Sent e on Monday situam o envio no passado com marcador temporal."
+            },
+            {
+              "id": "bb2026-e03-q02",
+              "prompt": "Is revising no trecho destaca:",
+              "options": [
+                "Apenas hábito permanente",
+                "Ação já impossível",
+                "Voz passiva",
+                "Atividade em andamento no contexto de hoje"
+              ],
+              "correctIndex": 3,
+              "explanation": "Be+ing e today descrevem revisão atual; não é is revised."
+            },
+            {
+              "id": "bb2026-e03-q03",
+              "prompt": "Has already checked, com so they are ready, destaca:",
+              "options": [
+                "Resultado relevante no presente",
+                "Ação obrigatoriamente ainda incompleta",
+                "Só futuro",
+                "Data passada especificada por yesterday"
+              ],
+              "correctIndex": 0,
+              "explanation": "A conferência concluída explica a disponibilidade atual dos números."
+            },
+            {
+              "id": "bb2026-e03-q04",
+              "prompt": "Usually reads descreve:",
+              "options": [
+                "Ação passiva",
+                "Hábito",
+                "Uma ação única necessariamente",
+                "Uma ordem"
+              ],
+              "correctIndex": 1,
+              "explanation": "Usually e simple present marcam frequência habitual."
+            },
+            {
+              "id": "bb2026-e03-q05",
+              "prompt": "Qual expressão informa duração, sem indicar ponto inicial?",
+              "options": [
+                "Since Monday",
+                "Since 2020",
+                "For two weeks",
+                "Since noon"
+              ],
+              "correctIndex": 2,
+              "explanation": "For two weeks mede duração; since acompanha início."
+            },
+            {
+              "id": "bb2026-e03-q06",
+              "prompt": "Qual forma usa have/has e particípio?",
+              "options": [
+                "Simple present lexical",
+                "Past continuous",
+                "Infinitivo simples",
+                "Present perfect"
+              ],
+              "correctIndex": 3,
+              "explanation": "Has checked é exemplo dessa formação; significado depende do contexto."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e03-q01",
+                "bb2026-e03-q02",
+                "bb2026-e03-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-continuous"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e03-q04",
+                "bb2026-e03-q05",
+                "bb2026-e03-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-continuous"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e04",
+          "researchId": "E04",
+          "title": "Modalidade e voz",
+          "level": "Fundamentos e aplicação",
+          "summary": "Interpretar possibilidade, obrigação e conselho no contexto · Reconhecer passiva sem trocar agente e paciente",
+          "objectives": [
+            "Interpretar possibilidade, obrigação e conselho no contexto",
+            "Reconhecer passiva sem trocar agente e paciente"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Modal altera a força da afirmação",
+              "text": "Can pode expressar capacidade/permissão/possibilidade; may e might frequentemente indicam possibilidade, mas não uma percentagem fixa universal. Must pode ser obrigação ou inferência forte; should pode ser conselho/expectativa. Depois de modal, usa-se forma base: can help. Must not indica proibição; do not have to indica ausência de obrigação, permitindo a ação. Voz passiva focaliza o paciente: be+particípio, com agente opcional introduzido por by. The request was checked by Ana mantém Ana como agente e request como paciente. Nem toda construção be é passiva: is ready tem adjetivo."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "Applicants must confirm their contact details. They do not have to print the receipt. The receipt can be saved on a device, but access codes must not be shared."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Explique do not have to print e must not be shared.",
+              "steps": [
+                "A primeira retira obrigação de imprimir; não proíbe impressão.",
+                "A segunda proíbe compartilhar códigos.",
+                "Be shared é passiva após o modal, sem agente declarado."
+              ],
+              "answer": "Impressão facultativa; compartilhamento proibido.",
+              "check": "Trocar as expressões inverteria a força normativa; can be saved permite salvar, sem garantir segurança do dispositivo."
+            }
+          ],
+          "pitfalls": [
+            "Confundir ausência de obrigação com proibição.",
+            "Inventar probabilidade numérica para might."
+          ],
+          "recap": [
+            "Modalidade depende do contexto.",
+            "Must not proíbe; do not have to dispensa.",
+            "Passiva é be+particípio com paciente em destaque."
+          ],
+          "retrieval": [
+            "Quem age em The form was checked by Ana?",
+            "Should sempre é obrigação absoluta?"
+          ],
+          "notes": "Modalidade e voz\nModalidade depende do contexto.\nMust not proíbe; do not have to dispensa.\nPassiva é be+particípio com paciente em destaque.\nConfundir ausência de obrigação com proibição.\nInventar probabilidade numérica para might.",
+          "suggestions": [
+            "Compare proibição e ausência de obrigação.",
+            "Passe uma frase ativa para passiva sem trocar os papéis.",
+            "Explique um modal pelo contexto."
+          ],
+          "sources": [
+            {
+              "title": "British Council — modal verbs",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/modal-verbs"
+            },
+            {
+              "title": "British Council — passives",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e04-q01",
+              "prompt": "Do not have to print significa:",
+              "options": [
+                "É proibido imprimir",
+                "Não há obrigação de imprimir",
+                "É obrigatório imprimir",
+                "É impossível imprimir"
+              ],
+              "correctIndex": 1,
+              "explanation": "Ausência de obrigação não impede uma impressão voluntária."
+            },
+            {
+              "id": "bb2026-e04-q02",
+              "prompt": "Must not be shared indica:",
+              "options": [
+                "Conselho leve para compartilhar",
+                "Permissão irrestrita",
+                "Proibição de compartilhar",
+                "Ausência de obrigação apenas"
+              ],
+              "correctIndex": 2,
+              "explanation": "Must not expressa proibição no contexto de códigos."
+            },
+            {
+              "id": "bb2026-e04-q03",
+              "prompt": "Qual forma após modal está adequada?",
+              "options": [
+                "Can helps",
+                "Can helped",
+                "Can helping",
+                "Can help"
+              ],
+              "correctIndex": 3,
+              "explanation": "Modal é seguido da base do verbo principal."
+            },
+            {
+              "id": "bb2026-e04-q04",
+              "prompt": "Em The form was checked by Ana, quem fez a checagem?",
+              "options": [
+                "Ana",
+                "The form",
+                "Was",
+                "Nenhum agente indicado"
+              ],
+              "correctIndex": 0,
+              "explanation": "By Ana explicita o agente; form é o paciente em sujeito gramatical."
+            },
+            {
+              "id": "bb2026-e04-q05",
+              "prompt": "Can be saved é construção:",
+              "options": [
+                "Ativa no simple past",
+                "Passiva com modal",
+                "Sem verbo principal",
+                "Obrigação absoluta"
+              ],
+              "correctIndex": 1,
+              "explanation": "Can+be+saved combina possibilidade com voz passiva."
+            },
+            {
+              "id": "bb2026-e04-q06",
+              "prompt": "They might arrive later permite afirmar, sem mais contexto:",
+              "options": [
+                "Chegada certa com horário exato",
+                "Proibição de chegar",
+                "Possibilidade de chegar mais tarde",
+                "Probabilidade fixa de75%"
+              ],
+              "correctIndex": 2,
+              "explanation": "Might qualifica possibilidade; não especifica uma probabilidade numérica universal."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e04-q01",
+                "bb2026-e04-q02",
+                "bb2026-e04-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/modal-verbs",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e04-q04",
+                "bb2026-e04-q05",
+                "bb2026-e04-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/modal-verbs",
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e05",
+          "researchId": "E05",
+          "title": "Referência e posse",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir pronomes pessoais, possessivos e determinantes · Localizar referente com concordância e coerência",
+          "objectives": [
+            "Distinguir pronomes pessoais, possessivos e determinantes",
+            "Localizar referente com concordância e coerência"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Retome o referente certo",
+              "text": "Subject pronouns como she/they funcionam como sujeito; object pronouns como her/them, como complemento no uso estudado. My/your/her/their determinam um nome: my file. Mine/yours/hers/theirs substituem o grupo nominal: the file is mine. Her pode ser pronome objeto ou determinante, conforme posição. Its expressa posse; it’s contrai it is/it has. Reflexivos como herself podem retomar o próprio agente ou dar ênfase. This/that/these/those variam número e uso de proximidade/discurso. Relative clauses com who/which/that conectam um antecedente à descrição; não decida referente só pela palavra mais próxima se a coerência impedir."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "Nina sent Omar two files. He reviewed them before the meeting. Her notes were inside the first file; his were in a separate document. Both agreed to keep their copies."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "No trecho, quem é he e o que significa them?",
+              "steps": [
+                "Nina e Omar são pessoas; He retoma Omar na referência construída.",
+                "Them é plural e corresponde aos dois arquivos revisados.",
+                "His substitui his notes, não exige repetir notes."
+              ],
+              "answer": "He:Omar; them:two files.",
+              "check": "Retomar Nina por he contrariaria o padrão de referência usado no próprio texto; revisão de two files preserva número e ação."
+            }
+          ],
+          "pitfalls": [
+            "Usar mine imediatamente antes de substantivo como my.",
+            "Confundir its e it’s."
+          ],
+          "recap": [
+            "My acompanha nome; mine o substitui.",
+            "Função e contexto decidem her.",
+            "Referência exige concordância e sentido."
+          ],
+          "retrieval": [
+            "Como dizer “este arquivo é meu” usando mine?",
+            "Qual diferença entre their copies e theirs?"
+          ],
+          "notes": "Referência e posse\nMy acompanha nome; mine o substitui.\nFunção e contexto decidem her.\nReferência exige concordância e sentido.\nUsar mine imediatamente antes de substantivo como my.\nConfundir its e it’s.",
+          "suggestions": [
+            "Encontre referentes num parágrafo.",
+            "Compare my e mine com frases próprias.",
+            "Distinga its de it’s no contexto."
+          ],
+          "sources": [
+            {
+              "title": "British Council — personal pronouns and possessives",
+              "url": "https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/personal-pronouns-possessives"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e05-q01",
+              "prompt": "No trecho, He retoma:",
+              "options": [
+                "Omar",
+                "Nina",
+                "Meeting",
+                "Copies"
+              ],
+              "correctIndex": 0,
+              "explanation": "Omar é a pessoa identificada pelo pronome masculino no encadeamento construído."
+            },
+            {
+              "id": "bb2026-e05-q02",
+              "prompt": "Them em reviewed them refere-se a:",
+              "options": [
+                "As pessoas obrigatoriamente",
+                "Os dois arquivos",
+                "A reunião",
+                "Apenas as notas de Nina"
+              ],
+              "correctIndex": 1,
+              "explanation": "Two files oferece antecedente plural e objeto coerente para review."
+            },
+            {
+              "id": "bb2026-e05-q03",
+              "prompt": "Qual frase expressa posse de forma adequada?",
+              "options": [
+                "This is mine file",
+                "This file is my",
+                "This file is mine",
+                "This is me file"
+              ],
+              "correctIndex": 2,
+              "explanation": "Mine substitui my file; my é determinante antes de nome."
+            },
+            {
+              "id": "bb2026-e05-q04",
+              "prompt": "Em Her notes were inside, her funciona como:",
+              "options": [
+                "Verbo",
+                "Preposição",
+                "Pronome relativo",
+                "Determinante possessivo"
+              ],
+              "correctIndex": 3,
+              "explanation": "Acompanha notes e identifica a possuidora; não é objeto de um verbo aqui."
+            },
+            {
+              "id": "bb2026-e05-q05",
+              "prompt": "It’s ready equivale, nesse contexto, a:",
+              "options": [
+                "It is ready",
+                "Its ready como posse",
+                "It were ready",
+                "It do ready"
+              ],
+              "correctIndex": 0,
+              "explanation": "Ready é adjetivo; it’s contrai it is nesta frase."
+            },
+            {
+              "id": "bb2026-e05-q06",
+              "prompt": "His em his were in a separate document substitui:",
+              "options": [
+                "Omar inteiro",
+                "His notes",
+                "The meeting",
+                "Nina e Omar juntos"
+              ],
+              "correctIndex": 1,
+              "explanation": "O paralelismo com her notes e o verbo plural recuperam notes de Omar."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e05-q01",
+                "bb2026-e05-q02",
+                "bb2026-e05-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/personal-pronouns-possessives"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e05-q04",
+                "bb2026-e05-q05",
+                "bb2026-e05-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/personal-pronouns-possessives"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e06",
+          "researchId": "E06",
+          "title": "Preposições e conectores",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar conectivos à lógica do texto · Interpretar referência temporal e espacial sem tradução mecânica",
+          "objectives": [
+            "Relacionar conectivos à lógica do texto",
+            "Interpretar referência temporal e espacial sem tradução mecânica"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Conector organiza relações",
+              "text": "Because introduz causa; so frequentemente apresenta consequência. Although introduz concessão com oração; despite/in spite of normalmente vêm com nome ou ing, ou the fact that+oração. However conecta contraste discursivo com pontuação pertinente; não é substituto gramatical automático de although. Unless significa if not no uso condicional usual; until marca limite temporal. In/on/at têm padrões de tempo/espaço e usos idiomáticos: in July, on Monday, at noon. Before e after ordenam eventos. Não traduza preposição isolada para decidir relação; observe o grupo completo e a estrutura que segue."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "Although the form was short, several users asked for help. The team added an example because one field was unclear. After testing the change, it published a clearer guide. The help desk opens at noon on Mondays."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Identifique causa e concessão no trecho.",
+              "steps": [
+                "Although contrapõe formulário curto e necessidade de ajuda.",
+                "Because explica por que se acrescentou exemplo.",
+                "After ordena teste antes da publicação."
+              ],
+              "answer": "Concessão:short/help; causa:field unclear/example.",
+              "check": "Inverter because/so ou before/after mudaria a relação; o texto não diz que a publicação precedeu o teste."
+            }
+          ],
+          "pitfalls": [
+            "Usar despite+oração finita sem ajuste de estrutura.",
+            "Confundir until com condição unless."
+          ],
+          "recap": [
+            "Concessão, causa e consequência têm papéis distintos.",
+            "Estrutura depois do conector importa.",
+            "Grupo preposicional dá tempo/espaço no contexto."
+          ],
+          "retrieval": [
+            "Qual evento precede publicação no texto?",
+            "Como trocar although it rained por despite mantendo sentido?"
+          ],
+          "notes": "Preposições e conectores\nConcessão, causa e consequência têm papéis distintos.\nEstrutura depois do conector importa.\nGrupo preposicional dá tempo/espaço no contexto.\nUsar despite+oração finita sem ajuste de estrutura.\nConfundir until com condição unless.",
+          "suggestions": [
+            "Explique uma concessão num trecho.",
+            "Reescreva because como consequência usando so.",
+            "Compare unless e until num exemplo."
+          ],
+          "sources": [
+            {
+              "title": "British Council — contrasting ideas",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e06-q01",
+              "prompt": "Although no trecho apresenta:",
+              "options": [
+                "Consequência necessária",
+                "Tempo exato",
+                "Concessão/contraste com expectativa",
+                "Obrigação"
+              ],
+              "correctIndex": 2,
+              "explanation": "Mesmo curto, o formulário gerou pedidos de ajuda; isso contraria uma expectativa possível."
+            },
+            {
+              "id": "bb2026-e06-q02",
+              "prompt": "Because one field was unclear informa:",
+              "options": [
+                "O resultado da publicação",
+                "O horário",
+                "A localização",
+                "A razão para adicionar exemplo"
+              ],
+              "correctIndex": 3,
+              "explanation": "Because liga uma causa à ação mencionada."
+            },
+            {
+              "id": "bb2026-e06-q03",
+              "prompt": "After testing the change indica que:",
+              "options": [
+                "O teste veio antes da publicação",
+                "A publicação veio antes do teste",
+                "Os dois eventos são impossíveis",
+                "Não existe ordem temporal"
+              ],
+              "correctIndex": 0,
+              "explanation": "After situa publicar posteriormente ao teste."
+            },
+            {
+              "id": "bb2026-e06-q04",
+              "prompt": "Qual grupo temporal está adequado ao padrão do texto?",
+              "options": [
+                "On noon at Mondays",
+                "At noon on Mondays",
+                "In noon in Mondays",
+                "At Mondays on noon"
+              ],
+              "correctIndex": 1,
+              "explanation": "At para horário e on para dia da semana são os padrões utilizados."
+            },
+            {
+              "id": "bb2026-e06-q05",
+              "prompt": "Qual construção mantém concessão com estrutura adequada?",
+              "options": [
+                "Despite it was late, we waited",
+                "Although the delay, we waited",
+                "Despite the delay, we waited",
+                "However the delay we waited"
+              ],
+              "correctIndex": 2,
+              "explanation": "Despite admite grupo nominal the delay; although pede oração nessa substituição."
+            },
+            {
+              "id": "bb2026-e06-q06",
+              "prompt": "Unless you confirm, the request will remain pending expressa:",
+              "options": [
+                "Confirmação já aconteceu",
+                "Pedido nunca pode sair de pending",
+                "Limite até meio-dia",
+                "Se você não confirmar, ficará pendente"
+              ],
+              "correctIndex": 3,
+              "explanation": "Unless introduz condição negativa no contexto; não dá um horário limite como until."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e06-q01",
+                "bb2026-e06-q02",
+                "bb2026-e06-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e06-q04",
+                "bb2026-e06-q05",
+                "bb2026-e06-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e07",
+          "researchId": "E07",
+          "title": "Informação e ideia central",
+          "level": "Fundamentos e aplicação",
+          "summary": "Localizar fatos mantendo escopo e quantificadores · Construir síntese sustentada por todo o trecho",
+          "objectives": [
+            "Localizar fatos mantendo escopo e quantificadores",
+            "Construir síntese sustentada por todo o trecho"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Localizar e sintetizar são tarefas diferentes",
+              "text": "Scanning busca um detalhe como data/condição; skimming busca organização e assunto. Ambos precisam da leitura contextual para confirmar. A ideia central abrange o que o texto desenvolve, sem generalizar um exemplo para todo o universo. Some não equivale a all; most não equivale a every; can não equivale a must. Um título sugere foco, mas não substitui a evidência. Compare cada alternativa ao texto, procurando alteração de agente, tempo, causa, intensidade ou exceção. Não escolha a resposta apenas por repetir palavras do trecho."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "A community library tested evening study sessions for four weeks. Some visitors valued the quiet rooms; others needed guidance with digital forms. Staff therefore kept the rooms open and added a short help session. The report describes this local trial and does not claim that every library should copy it."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Qual síntese preserva escopo e decisão?",
+              "steps": [
+                "O teste é local, de quatro semanas.",
+                "Há necessidades diferentes: quiet rooms e digital forms.",
+                "A equipe mantém salas e adiciona ajuda; não decreta modelo universal."
+              ],
+              "answer": "Uma biblioteca ajustou um teste local para atender necessidades distintas.",
+              "check": "A síntese cobre início, evidências e resposta sem transformar some em all nem trial em regra universal."
+            }
+          ],
+          "pitfalls": [
+            "Tomar repetição de uma palavra como prova da alternativa.",
+            "Generalizar teste local para todas as bibliotecas."
+          ],
+          "recap": [
+            "Detalhe exige localização; síntese exige conjunto.",
+            "Quantificadores delimitam alcance.",
+            "Alternativa correta preserva agente, tempo e intensidade."
+          ],
+          "retrieval": [
+            "Qual expressão impede generalização universal?",
+            "O que mudou após os pedidos por ajuda?"
+          ],
+          "notes": "Informação e ideia central\nDetalhe exige localização; síntese exige conjunto.\nQuantificadores delimitam alcance.\nAlternativa correta preserva agente, tempo e intensidade.\nTomar repetição de uma palavra como prova da alternativa.\nGeneralizar teste local para todas as bibliotecas.",
+          "suggestions": [
+            "Localize informação e mostre a frase que a sustenta.",
+            "Resuma um parágrafo sem ampliar o escopo.",
+            "Explique diferença entre some e all numa alternativa."
+          ],
+          "sources": [
+            {
+              "title": "British Council — reading B1",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/skills/reading/b1-reading"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e07-q01",
+              "prompt": "O teste durou:",
+              "options": [
+                "Quatro semanas",
+                "Quatro anos",
+                "Uma noite",
+                "Tempo não mencionado"
+              ],
+              "correctIndex": 0,
+              "explanation": "For four weeks fornece duração explícita."
+            },
+            {
+              "id": "bb2026-e07-q02",
+              "prompt": "Some visitors valued the quiet rooms significa:",
+              "options": [
+                "Todos exigiram silêncio exclusivamente",
+                "Alguns valorizaram as salas silenciosas",
+                "Nenhum usou as salas",
+                "A maioria foi quantificada em80%"
+              ],
+              "correctIndex": 1,
+              "explanation": "Some indica parte dos visitantes sem percentagem definida."
+            },
+            {
+              "id": "bb2026-e07-q03",
+              "prompt": "A equipe decidiu:",
+              "options": [
+                "Fechar as salas",
+                "Eliminar orientação",
+                "Manter salas e adicionar ajuda breve",
+                "Obrigar todas as bibliotecas a mudar"
+              ],
+              "correctIndex": 2,
+              "explanation": "Kept the rooms open and added a short help session descreve as duas medidas."
+            },
+            {
+              "id": "bb2026-e07-q04",
+              "prompt": "Qual ideia central preserva o texto?",
+              "options": [
+                "Modelo obrigatório para qualquer biblioteca",
+                "Falha total do atendimento digital",
+                "Todos preferem estudar à noite",
+                "Ajuste de um teste local a necessidades diversas"
+              ],
+              "correctIndex": 3,
+              "explanation": "A síntese reúne teste, demandas e adaptação, respeitando limite local."
+            },
+            {
+              "id": "bb2026-e07-q05",
+              "prompt": "Que detalhe refuta “o relatório manda toda biblioteca copiar o teste”?",
+              "options": [
+                "Does not claim that every library should copy it",
+                "Evening study sessions",
+                "Quiet rooms isoladamente",
+                "Digital forms isoladamente"
+              ],
+              "correctIndex": 0,
+              "explanation": "A negativa final rejeita explicitamente a alegação universal."
+            },
+            {
+              "id": "bb2026-e07-q06",
+              "prompt": "Para buscar apenas a duração, a estratégia inicial pertinente é:",
+              "options": [
+                "Traduzir palavras em ordem inversa",
+                "Scanning seguido de confirmação contextual",
+                "Ignorar todos os números",
+                "Usar título como prova suficiente"
+              ],
+              "correctIndex": 1,
+              "explanation": "Busca localizada encontra for four weeks; contexto confirma a que duração se refere."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e07-q01",
+                "bb2026-e07-q02",
+                "bb2026-e07-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/skills/reading/b1-reading"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e07-q04",
+                "bb2026-e07-q05",
+                "bb2026-e07-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/skills/reading/b1-reading"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-e08",
+          "researchId": "E08",
+          "title": "Inferência, estrutura e propósito",
+          "level": "Fundamentos e aplicação",
+          "summary": "Inferir com evidência sem transformar possibilidade em fato · Relacionar organização textual e finalidade comunicativa",
+          "objectives": [
+            "Inferir com evidência sem transformar possibilidade em fato",
+            "Relacionar organização textual e finalidade comunicativa"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Inferir exige ponte entre evidências",
+              "text": "Informação explícita aparece no trecho; inferência liga pistas para concluir algo sustentado, sem acrescentar fato externo. A finalidade pode ser informar, orientar, argumentar ou persuadir, dependendo das escolhas do texto. Estrutura problema→resposta ou comparação ajuda a interpretá-la. Tom crítico exige evidências linguísticas, não sua opinião sobre o assunto. Uma recomendação cautelosa pode favorecer um recurso sem prometer sucesso. Frase inicial/final e título são pistas estruturais, nunca garantias automáticas da ideia central. Distinguir conclusão plausível de conclusão necessária é parte da leitura."
+            },
+            {
+              "type": "text",
+              "title": "Passagem original",
+              "text": "A new study app sends reminders, but reminders alone cannot explain a difficult concept. Learners still need examples, practice and feedback. Schools considering the app should test it with students and check whether it solves a real learning problem before buying a long subscription."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "O autor rejeita qualquer aplicativo de estudo?",
+              "steps": [
+                "Reconhece um recurso:reminders.",
+                "Limita sua suficiência:alone cannot explain.",
+                "Recomenda testar antes de compra prolongada."
+              ],
+              "answer": "Não; propõe adoção criteriosa baseada em uma necessidade real.",
+              "check": "Rejeição total contradiz a recomendação de teste; promessa de melhora certa também não aparece."
+            }
+          ],
+          "pitfalls": [
+            "Chamar uma hipótese externa de inferência do texto.",
+            "Trocar avaliação cautelosa por rejeição absoluta."
+          ],
+          "recap": [
+            "Inferência precisa de pistas verificáveis.",
+            "Propósito decorre da organização e escolhas.",
+            "Ressalvas limitam promessas e generalizações."
+          ],
+          "retrieval": [
+            "Que palavra limita o papel dos lembretes?",
+            "O texto garante que o aplicativo resolve problemas?"
+          ],
+          "notes": "Inferência, estrutura e propósito\nInferência precisa de pistas verificáveis.\nPropósito decorre da organização e escolhas.\nRessalvas limitam promessas e generalizações.\nChamar uma hipótese externa de inferência do texto.\nTrocar avaliação cautelosa por rejeição absoluta.",
+          "suggestions": [
+            "Mostre evidências de uma inferência.",
+            "Identifique propósito e organização de um trecho.",
+            "Compare tom cauteloso com rejeição absoluta."
+          ],
+          "sources": [
+            {
+              "title": "British Council — reading B2",
+              "url": "https://learnenglish.britishcouncil.org/free-resources/skills/reading/b2-reading"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-ingles-video-1",
+            "bb2026-ingles-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-e08-q01",
+              "prompt": "A função principal do trecho é:",
+              "options": [
+                "Vender assinatura sem teste",
+                "Narrar férias",
+                "Orientar avaliação criteriosa de um aplicativo",
+                "Descrever mecanismo técnico do servidor"
+              ],
+              "correctIndex": 2,
+              "explanation": "Limita um recurso e recomenda teste com alunos antes de compra longa."
+            },
+            {
+              "id": "bb2026-e08-q02",
+              "prompt": "O papel de but na primeira frase é:",
+              "options": [
+                "Excluir qualquer recurso do app",
+                "Adicionar horário exato",
+                "Garantir melhora",
+                "Contrastar recurso oferecido e limite dele"
+              ],
+              "correctIndex": 3,
+              "explanation": "Reminders existem, mas sozinhos não explicam um conceito difícil."
+            },
+            {
+              "id": "bb2026-e08-q03",
+              "prompt": "Qual inferência é sustentada?",
+              "options": [
+                "Enviar lembretes não basta para atender toda necessidade de aprendizagem",
+                "Todo app piora aprendizagem",
+                "Toda escola já comprou assinatura",
+                "Feedback é desnecessário"
+              ],
+              "correctIndex": 0,
+              "explanation": "O limite dos lembretes e as necessidades de exemplos/prática/feedback sustentam a inferência restrita."
+            },
+            {
+              "id": "bb2026-e08-q04",
+              "prompt": "Before buying a long subscription recomenda:",
+              "options": [
+                "Comprar primeiro e testar depois",
+                "Testar e verificar necessidade antes da compra longa",
+                "Nunca testar com alunos",
+                "Desconsiderar o problema pedagógico"
+              ],
+              "correctIndex": 1,
+              "explanation": "A ordem proposta é avaliação antes do compromisso prolongado."
+            },
+            {
+              "id": "bb2026-e08-q05",
+              "prompt": "O tom é melhor descrito como:",
+              "options": [
+                "Garantia comercial absoluta",
+                "Rejeição de toda tecnologia",
+                "Cauteloso e orientado por evidência",
+                "Relato de certeza estatística"
+              ],
+              "correctIndex": 2,
+              "explanation": "O texto reconhece recurso, aponta limite e propõe verificação sem garantir resultado."
+            },
+            {
+              "id": "bb2026-e08-q06",
+              "prompt": "Qual afirmação extrapola as evidências?",
+              "options": [
+                "Lembretes sozinhos têm limites",
+                "Alunos precisam de prática",
+                "Adoção deve considerar problema real",
+                "O app certamente melhora notas de todos"
+              ],
+              "correctIndex": 3,
+              "explanation": "Não há dados de notas nem garantia universal; certainly e all ampliam indevidamente o alcance."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e08-q01",
+                "bb2026-e08-q02",
+                "bb2026-e08-q03"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/skills/reading/b2-reading"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-e08-q04",
+                "bb2026-e08-q05",
+                "bb2026-e08-q06"
+              ],
+              "sourceUrls": [
+                "https://learnenglish.britishcouncil.org/free-resources/skills/reading/b2-reading"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "vendas",
