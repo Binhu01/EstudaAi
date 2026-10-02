@@ -1405,7 +1405,7 @@
             },
             {
               "title": "BCB — consórcios",
-              "url": "https://www.bcb.gov.br/estabilidadefinanceira/consorcio"
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/administradoraconsorcio"
             }
           ],
           "updatedAt": "2026-10-01",
@@ -1504,7 +1504,7 @@
               ],
               "sourceUrls": [
                 "https://www.gov.br/susep/pt-br",
-                "https://www.bcb.gov.br/estabilidadefinanceira/consorcio"
+                "https://www.bcb.gov.br/estabilidadefinanceira/administradoraconsorcio"
               ]
             },
             {
@@ -1522,7 +1522,7 @@
               ],
               "sourceUrls": [
                 "https://www.gov.br/susep/pt-br",
-                "https://www.bcb.gov.br/estabilidadefinanceira/consorcio"
+                "https://www.bcb.gov.br/estabilidadefinanceira/administradoraconsorcio"
               ]
             }
           ]
@@ -8644,8 +8644,8 @@
               "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
             },
             {
-              "title": "Senado — regência",
-              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia"
+              "title": "Senado — regência nominal",
+              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia-nominal"
             }
           ],
           "updatedAt": "2026-10-01",
@@ -8744,7 +8744,7 @@
               ],
               "sourceUrls": [
                 "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
-                "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia"
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia-nominal"
               ]
             },
             {
@@ -8762,7 +8762,7 @@
               ],
               "sourceUrls": [
                 "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
-                "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia"
+                "https://www12.senado.leg.br/manualdecomunicacao/estilos/regencia-nominal"
               ]
             }
           ]
@@ -9019,8 +9019,8 @@
               "url": "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf"
             },
             {
-              "title": "Senado — colocação pronominal",
-              "url": "https://www12.senado.leg.br/manualdecomunicacao/estilos/colocacao-pronominal"
+              "title": "FUNAG — colocação pronominal",
+              "url": "https://funag.gov.br/manual/index.php?title=Coloca%C3%A7%C3%A3o_pronominal"
             }
           ],
           "updatedAt": "2026-10-01",
@@ -9119,7 +9119,7 @@
               ],
               "sourceUrls": [
                 "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
-                "https://www12.senado.leg.br/manualdecomunicacao/estilos/colocacao-pronominal"
+                "https://funag.gov.br/manual/index.php?title=Coloca%C3%A7%C3%A3o_pronominal"
               ]
             },
             {
@@ -9137,7 +9137,7 @@
               ],
               "sourceUrls": [
                 "https://sce.fflch.usp.br/sites/sce.fflch.usp.br/files/Ensino_Gramatica%20ebook-compactado.pdf",
-                "https://www12.senado.leg.br/manualdecomunicacao/estilos/colocacao-pronominal"
+                "https://funag.gov.br/manual/index.php?title=Coloca%C3%A7%C3%A3o_pronominal"
               ]
             }
           ]
@@ -9166,7 +9166,3525 @@
           "videoId": "XIijanuUZuU"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-m01",
+          "researchId": "M01",
+          "title": "Números e operações",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar conjuntos numéricos e regras operatórias · Resolver expressão e conferir o resultado por outra forma",
+          "objectives": [
+            "Relacionar conjuntos numéricos e regras operatórias",
+            "Resolver expressão e conferir o resultado por outra forma"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O conjunto e a operação importam",
+              "text": "Naturais descrevem contagens; inteiros incluem negativos; racionais podem ser escritos como razão de inteiros com denominador não zero. Reais incluem racionais e irracionais, como raiz de 2. Representação decimal finita ou periódica corresponde a racional. Compare valores na reta: entre negativos, o de maior módulo é menor. Em expressões, resolva parênteses e potências, depois multiplicação/divisão e adição/subtração; operações de mesma prioridade seguem a associação indicada ou a leitura usual da esquerda para a direita. Sinal de número não deve ser confundido com operação de subtrair."
+            },
+            {
+              "type": "list",
+              "title": "Operações e divisibilidade",
+              "items": [
+                "Somar frações exige denominador comum; multiplicar combina numeradores e denominadores. Dividir por fração não nula multiplica pelo inverso.",
+                "Produto de sinais iguais é positivo; sinais diferentes, negativo.",
+                "Potência com expoente inteiro conta fatores quando positivo; expoente negativo exige base não nula e inversão.",
+                "Fatorar em primos ajuda a obter MDC e MMC. O MDC usa fatores comuns com menores expoentes; MMC reúne fatores com maiores expoentes.",
+                "Raiz quadrada real exige radicando não negativo; a raiz principal é não negativa."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Calcule 5/6−1/4 e confira como decimal.",
+              "steps": [
+                "O denominador comum é 12: 10/12−3/12.",
+                "Resultado: 7/12.",
+                "5/6≈0,8333 e 1/4=0,25; diferença≈0,5833."
+              ],
+              "answer": "7/12.",
+              "check": "7/12≈0,5833, compatível com a conferência decimal; as aproximações não mudam a resposta exata."
+            }
+          ],
+          "pitfalls": [
+            "Somar denominadores como regra de soma de frações.",
+            "Resolver adição antes da multiplicação sem parênteses."
+          ],
+          "recap": [
+            "Identifique conjunto, sinais e prioridade.",
+            "Frações requerem operações compatíveis com denominadores.",
+            "Fatoração permite conferir divisibilidade."
+          ],
+          "retrieval": [
+            "Por que denominador zero é excluído?",
+            "Como comparar −7 e −3 na reta?"
+          ],
+          "notes": "Números e operações\nIdentifique conjunto, sinais e prioridade.\nFrações requerem operações compatíveis com denominadores.\nFatoração permite conferir divisibilidade.\nSomar denominadores como regra de soma de frações.\nResolver adição antes da multiplicação sem parênteses.",
+          "suggestions": [
+            "Resolva uma expressão mostrando prioridades.",
+            "Compare fração exata e aproximação decimal.",
+            "Explique MDC e MMC por fatores primos."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — reais e operações",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m01-q01",
+              "prompt": "Qual é um número racional?",
+              "options": [
+                "√2",
+                "π",
+                "3/5",
+                "Raiz quadrada real de −1"
+              ],
+              "correctIndex": 2,
+              "explanation": "3/5 é razão de inteiros com denominador não zero. As outras alternativas não são racionais reais nesse contexto."
+            },
+            {
+              "id": "bb2026-m01-q02",
+              "prompt": "Ao comparar −7 e −3, vale:",
+              "options": [
+                "−7 é maior",
+                "São iguais",
+                "Não se pode comparar inteiros",
+                "−7 é menor"
+              ],
+              "correctIndex": 3,
+              "explanation": "Na reta, −7 está à esquerda de −3; módulo maior não significa valor maior entre negativos."
+            },
+            {
+              "id": "bb2026-m01-q03",
+              "prompt": "Somar 1/2 e 1/3 exige:",
+              "options": [
+                "Denominador comum e soma dos numeradores ajustados",
+                "Somar só os denominadores",
+                "Multiplicar só os numeradores",
+                "Dividir por zero"
+              ],
+              "correctIndex": 0,
+              "explanation": "As partes precisam ter unidade comum: 3/6+2/6 = 5/6."
+            },
+            {
+              "id": "bb2026-m01-q04",
+              "prompt": "O valor de −8 + 3 × 4 é:",
+              "options": [
+                "−20",
+                "4",
+                "−4",
+                "20"
+              ],
+              "correctIndex": 1,
+              "explanation": "Primeiro 3×4 = 12; depois −8+12 = 4."
+            },
+            {
+              "id": "bb2026-m01-q05",
+              "prompt": "O resultado exato de 3/4−1/6 é:",
+              "options": [
+                "2/2",
+                "1/2",
+                "7/12",
+                "2/10"
+              ],
+              "correctIndex": 2,
+              "explanation": "9/12−2/12 = 7/12, usando denominador comum."
+            },
+            {
+              "id": "bb2026-m01-q06",
+              "prompt": "Qual é o MDC de 18 e 30?",
+              "options": [
+                "3",
+                "9",
+                "15",
+                "6"
+              ],
+              "correctIndex": 3,
+              "explanation": "18=2×3² e 30=2×3×5. Fatores comuns nos menores expoentes dão 2×3=6."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m01-q01",
+                "bb2026-m01-q02",
+                "bb2026-m01-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m01-q04",
+                "bb2026-m01-q05",
+                "bb2026-m01-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m02",
+          "researchId": "M02",
+          "title": "Contagem",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir escolhas, ordem e repetição · Contar possibilidades sem duplicar resultados",
+          "objectives": [
+            "Distinguir escolhas, ordem e repetição",
+            "Contar possibilidades sem duplicar resultados"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Defina o que torna dois resultados diferentes",
+              "text": "O princípio multiplicativo conta etapas de uma escolha quando sabemos quantas opções existem em cada uma. A soma serve para alternativas disjuntas; sobreposição exige correção. Permutação ordena todos os objetos; arranjo escolhe e ordena parte deles; combinação escolhe um conjunto sem considerar ordem. Antes da fórmula, declare universo, tamanho, repetição e se AB difere de BA. Senhas podem admitir zero na primeira posição, enquanto números de dois algarismos normalmente não; o enunciado precisa esclarecer. Permutações com objetos repetidos descontam repetições indistinguíveis. Probabilidade não é a mesma coisa que contagem, embora use números de casos sob hipóteses."
+            },
+            {
+              "type": "formula",
+              "title": "Combinação sem repetição",
+              "expression": "C(n,k) = n! / [k! (n−k)!]",
+              "variables": [
+                {
+                  "name": "n",
+                  "meaning": "Quantidade de objetos distintos disponíveis",
+                  "unit": "objetos"
+                },
+                {
+                  "name": "k",
+                  "meaning": "Quantidade escolhida sem ordem",
+                  "unit": "objetos"
+                }
+              ],
+              "conditions": [
+                "0 ≤ k ≤ n, ambos inteiros.",
+                "Objetos distintos; ordem não diferencia grupos.",
+                "0! = 1."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Quatro pessoas formam uma dupla sem cargos diferentes. Quantas duplas existem?",
+              "steps": [
+                "Conte pares ordenados: 4×3 = 12.",
+                "Cada dupla aparece duas vezes, como AB e BA.",
+                "Divida 12 por 2."
+              ],
+              "answer": "6 duplas.",
+              "check": "Enumere os pares de pessoas 1–4: 12,13,14,23,24,34; são seis conjuntos."
+            }
+          ],
+          "pitfalls": [
+            "Usar combinação quando os cargos tornam a ordem relevante.",
+            "Ignorar se repetição ou zero inicial são permitidos."
+          ],
+          "recap": [
+            "Ordem e repetição definem o caso.",
+            "Multiplique etapas e corrija duplicações pertinentes.",
+            "Enumeração pequena é uma conferência útil."
+          ],
+          "retrieval": [
+            "Escolher presidente e vice é igual a escolher dupla?",
+            "Por que uma senha pode ter regra diferente de um número?"
+          ],
+          "notes": "Contagem\nOrdem e repetição definem o caso.\nMultiplique etapas e corrija duplicações pertinentes.\nEnumeração pequena é uma conferência útil.\nUsar combinação quando os cargos tornam a ordem relevante.\nIgnorar se repetição ou zero inicial são permitidos.",
+          "suggestions": [
+            "Identifique ordem e repetição num problema.",
+            "Confira uma contagem por enumeração.",
+            "Compare arranjo e combinação."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — contagem",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles"
+            },
+            {
+              "title": "IMPA/OBMEP — contagem",
+              "url": "https://portaldaobmep.impa.br/index.php/modulo/ver?modulo=15&tipo=7"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m02-q01",
+              "prompt": "Escolher dois representantes sem cargos, entre pessoas distintas, é um caso em que:",
+              "options": [
+                "Ordem não diferencia o grupo",
+                "Ordem sempre cria outro grupo",
+                "Repetição da mesma pessoa é obrigatória",
+                "É necessário ordenar todas as pessoas"
+              ],
+              "correctIndex": 0,
+              "explanation": "Sem cargos ou ordem, AB e BA representam o mesmo conjunto."
+            },
+            {
+              "id": "bb2026-m02-q02",
+              "prompt": "Escolher presidente e vice entre pessoas diferentes torna a ordem:",
+              "options": [
+                "Irrelevante",
+                "Relevante, pois os cargos são distintos",
+                "Proibida",
+                "Igual a repetição"
+              ],
+              "correctIndex": 1,
+              "explanation": "Trocar os nomes entre os cargos altera o resultado da escolha."
+            },
+            {
+              "id": "bb2026-m02-q03",
+              "prompt": "Para uma senha de duas posições, é essencial declarar:",
+              "options": [
+                "Só a cor da tela",
+                "Apenas se há nomes",
+                "Símbolos disponíveis e permissão de repetição",
+                "A inflação do ano"
+              ],
+              "correctIndex": 2,
+              "explanation": "Universo e repetição determinam opções por posição; outras restrições também devem ser explicitadas."
+            },
+            {
+              "id": "bb2026-m02-q04",
+              "prompt": "Entre cinco pessoas, quantas duplas sem ordem e sem repetição podem ser formadas?",
+              "options": [
+                "20",
+                "5",
+                "25",
+                "10"
+              ],
+              "correctIndex": 3,
+              "explanation": "5×4 conta ordenadas; dividir por 2 elimina AB/BA: 10."
+            },
+            {
+              "id": "bb2026-m02-q05",
+              "prompt": "Com A, B e C, quantas sequências de duas letras sem repetir podem ser feitas?",
+              "options": [
+                "6",
+                "3",
+                "9",
+                "2"
+              ],
+              "correctIndex": 0,
+              "explanation": "São AB,AC,BA,BC,CA,CB: 3×2 = 6."
+            },
+            {
+              "id": "bb2026-m02-q06",
+              "prompt": "Senha de duas posições usa 0,1,2; admite repetição e zero inicial. Quantas senhas?",
+              "options": [
+                "6",
+                "9",
+                "8",
+                "3"
+              ],
+              "correctIndex": 1,
+              "explanation": "Há três escolhas independentes por posição: 3×3=9; 00 também é permitido."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m02-q01",
+                "bb2026-m02-q02",
+                "bb2026-m02-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles",
+                "https://portaldaobmep.impa.br/index.php/modulo/ver?modulo=15&tipo=7"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m02-q04",
+                "bb2026-m02-q05",
+                "bb2026-m02-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles",
+                "https://portaldaobmep.impa.br/index.php/modulo/ver?modulo=15&tipo=7"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m03",
+          "researchId": "M03",
+          "title": "Medidas e unidades",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir grandeza, unidade e fator de conversão · Converter preservando dimensão e significado",
+          "objectives": [
+            "Distinguir grandeza, unidade e fator de conversão",
+            "Converter preservando dimensão e significado"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Unidade é parte da resposta",
+              "text": "Comprimento, área e volume têm dimensões diferentes. Se 1 metro equivale a 100 centímetros, 1 metro quadrado equivale a 100² centímetros quadrados, e 1 metro cúbico a 100³ centímetros cúbicos. Não usar o fator linear para área ou volume. Litro mede volume: 1 litro é 1.000 mililitros e 1 decímetro cúbico. Tempo requer atenção: uma hora tem 60 minutos, e 1,5 hora não significa 1 hora e 5 minutos. Massa, capacidade e volume relacionam-se apenas com informações pertinentes; converter volume em massa exige densidade."
+            },
+            {
+              "type": "list",
+              "title": "Método dimensional",
+              "items": [
+                "Escreva valor e unidade antes de operar.",
+                "Multiplique pelo fator como razão equivalente a 1; cancele as unidades de origem.",
+                "Confira se a dimensão final é a pedida.",
+                "Áreas e volumes elevam o fator conforme a dimensão.",
+                "Resultado mais numeroso numa unidade menor é esperado, mas estimativa não substitui o fator correto."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Converta 0,8 m² em cm².",
+              "steps": [
+                "Use 1 m=100 cm, então 1 m²=10.000 cm².",
+                "Multiplique 0,8×10.000."
+              ],
+              "answer": "8.000 cm².",
+              "check": "Dividir 8.000 por 10.000 devolve 0,8 m²; o fator 100 sozinho daria dimensão incorreta."
+            }
+          ],
+          "pitfalls": [
+            "Converter área pelo fator de comprimento.",
+            "Ler hora decimal como minutos decimais na mesma base."
+          ],
+          "recap": [
+            "Grandeza e unidade precisam ser identificadas.",
+            "Área usa fator ao quadrado; volume, ao cubo.",
+            "Unidades ajudam a conferir a conta."
+          ],
+          "retrieval": [
+            "Quanto vale 0,5 hora em minutos?",
+            "É possível converter litros em quilogramas sem densidade?"
+          ],
+          "notes": "Medidas e unidades\nGrandeza e unidade precisam ser identificadas.\nÁrea usa fator ao quadrado; volume, ao cubo.\nUnidades ajudam a conferir a conta.\nConverter área pelo fator de comprimento.\nLer hora decimal como minutos decimais na mesma base.",
+          "suggestions": [
+            "Converta uma medida mostrando unidades.",
+            "Compare fatores lineares, de área e de volume.",
+            "Explique hora decimal com um exemplo."
+          ],
+          "sources": [
+            {
+              "title": "BIPM — Sistema Internacional de Unidades",
+              "url": "https://www.bipm.org/en/publications/si-brochure"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m03-q01",
+              "prompt": "Converter m² para cm² exige fator:",
+              "options": [
+                "100",
+                "1",
+                "10.000",
+                "10"
+              ],
+              "correctIndex": 2,
+              "explanation": "O fator linear 100 deve ser elevado ao quadrado: 100² = 10.000."
+            },
+            {
+              "id": "bb2026-m03-q02",
+              "prompt": "Para transformar volume em massa, geralmente falta conhecer:",
+              "options": [
+                "Só o número de páginas",
+                "O nome do recipiente",
+                "A cor do líquido",
+                "A densidade"
+              ],
+              "correctIndex": 3,
+              "explanation": "Massa relaciona-se ao volume pela densidade do material; não há conversão universal sem esse dado."
+            },
+            {
+              "id": "bb2026-m03-q03",
+              "prompt": "Uma hora tem:",
+              "options": [
+                "60 minutos",
+                "100 minutos",
+                "10 minutos",
+                "1.000 minutos"
+              ],
+              "correctIndex": 0,
+              "explanation": "Tempo em horas/minutos não usa base decimal de 100."
+            },
+            {
+              "id": "bb2026-m03-q04",
+              "prompt": "1,75 hora corresponde a quantos minutos?",
+              "options": [
+                "175",
+                "105",
+                "75",
+                "115"
+              ],
+              "correctIndex": 1,
+              "explanation": "1,75×60 = 105; a parte 0,75 hora vale 45 minutos."
+            },
+            {
+              "id": "bb2026-m03-q05",
+              "prompt": "3 m² equivalem a quantos cm²?",
+              "options": [
+                "300",
+                "3.000",
+                "30.000",
+                "300.000"
+              ],
+              "correctIndex": 2,
+              "explanation": "3×100² = 30.000 cm²."
+            },
+            {
+              "id": "bb2026-m03-q06",
+              "prompt": "2,4 litros equivalem a quantos mililitros?",
+              "options": [
+                "240",
+                "24",
+                "24.000",
+                "2.400"
+              ],
+              "correctIndex": 3,
+              "explanation": "Cada litro corresponde a 1.000 mililitros: 2,4×1.000 = 2.400."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m03-q01",
+                "bb2026-m03-q02",
+                "bb2026-m03-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bipm.org/en/publications/si-brochure"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m03-q04",
+                "bb2026-m03-q05",
+                "bb2026-m03-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bipm.org/en/publications/si-brochure"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m04",
+          "researchId": "M04",
+          "title": "Razões, proporções e divisão",
+          "level": "Fundamentos e aplicação",
+          "summary": "Interpretar razão e proporcionalidade com bases explícitas · Distribuir um total e conferir a soma das parcelas",
+          "objectives": [
+            "Interpretar razão e proporcionalidade com bases explícitas",
+            "Distribuir um total e conferir a soma das parcelas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Razão compara duas grandezas",
+              "text": "Uma razão é um quociente com denominador não zero; sua interpretação depende da ordem e das unidades. Razão de 8 para 12 é 8/12, que se simplifica a 2/3; inverter muda o significado. Proporção iguala razões comparáveis e permite multiplicação cruzada sob denominadores não nulos. Grandezas diretamente proporcionais mantêm quociente constante; inversamente proporcionais mantêm produto constante. Dividir um total diretamente em pesos dá parcelas na razão desses pesos. Na divisão inversa, use seus inversos, com valores não nulos e hipóteses apropriadas."
+            },
+            {
+              "type": "formula",
+              "title": "Divisão diretamente proporcional",
+              "expression": "parte_i = total × peso_i / soma(pesos)",
+              "variables": [
+                {
+                  "name": "total",
+                  "meaning": "Valor a distribuir",
+                  "unit": "mesma unidade das parcelas"
+                },
+                {
+                  "name": "peso_i",
+                  "meaning": "Peso positivo da parcela i",
+                  "unit": "unidade comum entre pesos"
+                }
+              ],
+              "conditions": [
+                "Pesos positivos e soma diferente de zero.",
+                "Todas as parcelas integram o total informado."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Distribua R$90 em partes diretamente proporcionais a 2 e 3.",
+              "steps": [
+                "Soma dos pesos: 5.",
+                "Primeira: 90×2/5 = 36. Segunda: 90×3/5 = 54."
+              ],
+              "answer": "R$36 e R$54.",
+              "check": "36+54=90 e 36/54=2/3; total e razão foram preservados."
+            }
+          ],
+          "pitfalls": [
+            "Inverter uma razão sem mudar a interpretação.",
+            "Usar pesos diretos numa divisão pedida como inversa."
+          ],
+          "recap": [
+            "Escreva ordem, unidade e base da razão.",
+            "Direta mantém quociente; inversa, produto.",
+            "Conferir soma e razão verifica a distribuição."
+          ],
+          "retrieval": [
+            "Por que soma das parcelas deve devolver o total?",
+            "Quais pesos equivalem a inversos de 2 e 3?"
+          ],
+          "notes": "Razões, proporções e divisão\nEscreva ordem, unidade e base da razão.\nDireta mantém quociente; inversa, produto.\nConferir soma e razão verifica a distribuição.\nInverter uma razão sem mudar a interpretação.\nUsar pesos diretos numa divisão pedida como inversa.",
+          "suggestions": [
+            "Explique uma razão com unidades.",
+            "Resolva divisão direta conferindo o total.",
+            "Compare distribuição direta e inversa."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — modelos lineares",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/2-3-models-and-applications"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m04-q01",
+              "prompt": "Grandezas diretamente proporcionais mantêm constante:",
+              "options": [
+                "O quociente pertinente",
+                "Qualquer soma",
+                "Qualquer diferença",
+                "A ordem de seus nomes"
+              ],
+              "correctIndex": 0,
+              "explanation": "No modelo y=kx, y/x=k para x não nulo."
+            },
+            {
+              "id": "bb2026-m04-q02",
+              "prompt": "Numa divisão inversamente proporcional a 2 e 3, pesos equivalentes são:",
+              "options": [
+                "2 e 3",
+                "3 e 2",
+                "4 e 9",
+                "2 e 2"
+              ],
+              "correctIndex": 1,
+              "explanation": "Inversos 1/2 e 1/3 multiplicados por 6 dão 3 e 2."
+            },
+            {
+              "id": "bb2026-m04-q03",
+              "prompt": "O denominador de uma razão usada como quociente deve ser:",
+              "options": [
+                "Sempre 1",
+                "Sempre maior que o numerador",
+                "Diferente de zero",
+                "Sempre negativo"
+              ],
+              "correctIndex": 2,
+              "explanation": "Divisão por zero não define um quociente real nesse contexto."
+            },
+            {
+              "id": "bb2026-m04-q04",
+              "prompt": "72 é dividido diretamente em pesos 1:2:3. A parcela do peso 3 é:",
+              "options": [
+                "12",
+                "24",
+                "48",
+                "36"
+              ],
+              "correctIndex": 3,
+              "explanation": "Soma 6; 72×3/6 = 36."
+            },
+            {
+              "id": "bb2026-m04-q05",
+              "prompt": "A razão de 8 para 12, simplificada, é:",
+              "options": [
+                "2/3",
+                "3/2",
+                "1/4",
+                "4/3"
+              ],
+              "correctIndex": 0,
+              "explanation": "Dividir numerador e denominador por 4 produz 2/3 sem inverter a ordem."
+            },
+            {
+              "id": "bb2026-m04-q06",
+              "prompt": "120 é dividido inversamente a 2 e 3. A parcela associada a 2 é:",
+              "options": [
+                "48",
+                "72",
+                "60",
+                "80"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pesos inversos equivalem a 3:2; a primeira parte é 120×3/5 = 72."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m04-q01",
+                "bb2026-m04-q02",
+                "bb2026-m04-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/2-3-models-and-applications"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m04-q04",
+                "bb2026-m04-q05",
+                "bb2026-m04-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/2-3-models-and-applications"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m05",
+          "researchId": "M05",
+          "title": "Regra de três",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar modelo direto ou inverso antes da proporção · Conservar produção ou trabalho em problemas compostos",
+          "objectives": [
+            "Identificar modelo direto ou inverso antes da proporção",
+            "Conservar produção ou trabalho em problemas compostos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A conta depende da hipótese",
+              "text": "Regra de três organiza relações proporcionais; não prova que a relação existe. Verifique produtividade constante, máquinas equivalentes, mesmo trabalho e condições mantidas. Com mesma duração, produção pode ser diretamente proporcional ao número de máquinas iguais. Para o mesmo trabalho e produtividade, tempo pode ser inversamente proporcional ao número de trabalhadores. Aumentar equipe real pode criar limites e coordenação; casos didáticos precisam declarar o modelo. Em problema composto, relacione a incógnita a cada grandeza mantendo as demais condições para decidir direção."
+            },
+            {
+              "type": "list",
+              "title": "Roteiro com unidade de trabalho",
+              "items": [
+                "Liste dados e o que fica constante.",
+                "Identifique produção por máquina-hora ou trabalho total em trabalhador-dia quando o modelo permitir.",
+                "Calcule a taxa unitária ou o produto constante.",
+                "Reconstrua a quantidade pedida por multiplicação/divisão com unidades.",
+                "Confira se mais capacidade reduz tempo ou aumenta produção, conforme a pergunta."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Duas impressoras idênticas produzem 160 folhas em 4 horas. No mesmo ritmo, três impressoras em 5 horas produzem quantas?",
+              "steps": [
+                "Taxa: 160/(2×4)=20 folhas por impressora-hora.",
+                "Nova capacidade: 3×5=15 impressora-horas.",
+                "Produção: 20×15."
+              ],
+              "answer": "300 folhas.",
+              "check": "160/8 e 300/15 dão a mesma taxa 20; o modelo conserva produtividade."
+            }
+          ],
+          "pitfalls": [
+            "Montar proporção direta para tempo de trabalho fixo.",
+            "Aplicar linearidade sem condições informadas."
+          ],
+          "recap": [
+            "Proporcionalidade precisa de hipóteses.",
+            "Taxa unitária e trabalho total ajudam na conta.",
+            "Problema composto exige analisar cada grandeza."
+          ],
+          "retrieval": [
+            "Mais trabalhadores sempre dobra resultado numa situação real?",
+            "Quando usar máquina-hora?"
+          ],
+          "notes": "Regra de três\nProporcionalidade precisa de hipóteses.\nTaxa unitária e trabalho total ajudam na conta.\nProblema composto exige analisar cada grandeza.\nMontar proporção direta para tempo de trabalho fixo.\nAplicar linearidade sem condições informadas.",
+          "suggestions": [
+            "Identifique relação direta ou inversa num caso.",
+            "Resolva regra de três pela taxa unitária.",
+            "Confira hipóteses de um problema composto."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — modelagem",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/2-3-models-and-applications"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m05-q01",
+              "prompt": "Regra de três pode ser usada automaticamente em qualquer relação numérica?",
+              "options": [
+                "Sim, números bastam",
+                "Sim, se houver quatro valores",
+                "Sim, mesmo com produtividade variável desconhecida",
+                "Não; é preciso justificar proporcionalidade"
+              ],
+              "correctIndex": 3,
+              "explanation": "A técnica aplica um modelo; sem hipótese pertinente a proporção pode ser inadequada."
+            },
+            {
+              "id": "bb2026-m05-q02",
+              "prompt": "Para trabalho fixo com produtividade constante, aumentar trabalhadores tende a:",
+              "options": [
+                "Reduzir tempo de forma inversamente proporcional no modelo",
+                "Aumentar tempo na mesma proporção",
+                "Manter sempre tempo fixo",
+                "Eliminar todo prazo"
+              ],
+              "correctIndex": 0,
+              "explanation": "Trabalho total é número de trabalhadores vezes tempo sob o modelo indicado."
+            },
+            {
+              "id": "bb2026-m05-q03",
+              "prompt": "Uma taxa por máquina-hora compara produção a:",
+              "options": [
+                "Número de clientes somente",
+                "Produto de máquinas e horas de uso",
+                "Somente preço final",
+                "Soma arbitrária de máquinas e dias"
+              ],
+              "correctIndex": 1,
+              "explanation": "O denominador mede capacidade temporal total de máquinas equivalentes."
+            },
+            {
+              "id": "bb2026-m05-q04",
+              "prompt": "Três máquinas idênticas produzem 180 peças num turno. Cinco, no mesmo ritmo e duração, produzem:",
+              "options": [
+                "108",
+                "180",
+                "300",
+                "900"
+              ],
+              "correctIndex": 2,
+              "explanation": "Uma produz 60; cinco produzem 5×60=300 no modelo direto."
+            },
+            {
+              "id": "bb2026-m05-q05",
+              "prompt": "Quatro pessoas fazem um trabalho em 12 dias. Seis pessoas igualmente produtivas, nas mesmas condições, levam:",
+              "options": [
+                "18",
+                "12",
+                "6",
+                "8"
+              ],
+              "correctIndex": 3,
+              "explanation": "Trabalho total: 4×12=48 pessoa-dias; 48/6=8 dias."
+            },
+            {
+              "id": "bb2026-m05-q06",
+              "prompt": "Duas máquinas fazem 120 itens em 3 horas. Cinco iguais em 4 horas, no mesmo ritmo, fazem:",
+              "options": [
+                "400",
+                "200",
+                "300",
+                "240"
+              ],
+              "correctIndex": 0,
+              "explanation": "Taxa 120/(2×3)=20 por máquina-hora; 20×5×4=400."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m05-q01",
+                "bb2026-m05-q02",
+                "bb2026-m05-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/2-3-models-and-applications"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m05-q04",
+                "bb2026-m05-q05",
+                "bb2026-m05-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/2-3-models-and-applications"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m06",
+          "researchId": "M06",
+          "title": "Porcentagens e variações",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar base de percentual e variação · Compor fatores e distinguir pontos percentuais",
+          "objectives": [
+            "Identificar base de percentual e variação",
+            "Compor fatores e distinguir pontos percentuais"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A base responde “de quê?”",
+              "text": "Percentual p% representa p/100 de uma base. Para aumento use fator 1+p/100; desconto usa 1−p/100. Em mudanças sucessivas, cada taxa usa o valor do momento, então multiplique fatores. Aumentar e depois reduzir o mesmo percentual normalmente não retorna ao início. Variação relativa compara diferença ao valor inicial; inverter a comparação muda o denominador. Diferença entre taxas em pontos percentuais não é variação percentual relativa: de 20% para 25% são 5 pontos percentuais e aumento relativo de 25% da taxa inicial."
+            },
+            {
+              "type": "formula",
+              "title": "Variação percentual",
+              "expression": "variação = 100 × (final−inicial) / inicial",
+              "variables": [
+                {
+                  "name": "inicial",
+                  "meaning": "Valor de referência da comparação",
+                  "unit": "unidade comum dos valores"
+                },
+                {
+                  "name": "final",
+                  "meaning": "Valor após mudança",
+                  "unit": "mesma unidade do inicial"
+                }
+              ],
+              "conditions": [
+                "Inicial diferente de zero.",
+                "Esclarecer o significado de comparação com valores negativos; casos aqui usam base positiva."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Preço R$150 sobe 20% e depois cai 20%. Qual valor final?",
+              "steps": [
+                "Após aumento: 150×1,20=180.",
+                "Depois desconto sobre 180: 180×0,80=144."
+              ],
+              "answer": "R$144, redução líquida de 4% sobre R$150.",
+              "check": "144/150=0,96. Somar +20%−20% ignora a mudança da base."
+            }
+          ],
+          "pitfalls": [
+            "Somar taxas sucessivas com bases diferentes.",
+            "Confundir pontos percentuais e variação relativa."
+          ],
+          "recap": [
+            "Percentual exige base explícita.",
+            "Mudanças sucessivas multiplicam fatores.",
+            "Pontos percentuais medem diferença entre taxas."
+          ],
+          "retrieval": [
+            "Desconto após aumento usa qual base?",
+            "De 10% a 12% são quantos pontos percentuais?"
+          ],
+          "notes": "Porcentagens e variações\nPercentual exige base explícita.\nMudanças sucessivas multiplicam fatores.\nPontos percentuais medem diferença entre taxas.\nSomar taxas sucessivas com bases diferentes.\nConfundir pontos percentuais e variação relativa.",
+          "suggestions": [
+            "Identifique a base num problema percentual.",
+            "Compare pontos percentuais e crescimento relativo.",
+            "Resolva duas variações sucessivas."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — equações e aplicações",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/2-2-linear-equations-in-one-variable"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m06-q01",
+              "prompt": "15% de um valor equivale a multiplicá-lo por:",
+              "options": [
+                "15",
+                "0,15",
+                "1,15 sempre",
+                "0,85 sempre"
+              ],
+              "correctIndex": 1,
+              "explanation": "0,15 é a parte percentual; 1,15 seria aumento e 0,85 desconto."
+            },
+            {
+              "id": "bb2026-m06-q02",
+              "prompt": "Uma taxa sobe de 20% para 25%. A diferença é:",
+              "options": [
+                "25 pontos percentuais",
+                "20 pontos percentuais",
+                "5 pontos percentuais",
+                "5% de variação relativa necessariamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "A diferença das taxas é 25−20=5 pontos percentuais; variação relativa tem outra base."
+            },
+            {
+              "id": "bb2026-m06-q03",
+              "prompt": "Para compor aumento de 10% e redução de 10%, usam-se fatores:",
+              "options": [
+                "0,10 e −0,10 somados",
+                "10 e 10",
+                "1 e 0",
+                "1,10 e 0,90 multiplicados"
+              ],
+              "correctIndex": 3,
+              "explanation": "Cada alteração incide no valor do momento; fatores sucessivos se multiplicam."
+            },
+            {
+              "id": "bb2026-m06-q04",
+              "prompt": "Preço 80 com desconto de 15% fica:",
+              "options": [
+                "68",
+                "65",
+                "92",
+                "12"
+              ],
+              "correctIndex": 0,
+              "explanation": "15% de 80 é 12; 80−12=68."
+            },
+            {
+              "id": "bb2026-m06-q05",
+              "prompt": "Valor 100 aumenta 10% e depois diminui 10%. O resultado final é:",
+              "options": [
+                "100",
+                "99",
+                "90",
+                "110"
+              ],
+              "correctIndex": 1,
+              "explanation": "100×1,10×0,90 = 99; o desconto usa base 110."
+            },
+            {
+              "id": "bb2026-m06-q06",
+              "prompt": "Um valor passa de 60 para 75. A variação percentual sobre o inicial é:",
+              "options": [
+                "20%",
+                "15%",
+                "25%",
+                "125%"
+              ],
+              "correctIndex": 2,
+              "explanation": "Diferença 15; 15/60=0,25, ou 25%."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m06-q01",
+                "bb2026-m06-q02",
+                "bb2026-m06-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/2-2-linear-equations-in-one-variable"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m06-q04",
+                "bb2026-m06-q05",
+                "bb2026-m06-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/2-2-linear-equations-in-one-variable"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m07",
+          "researchId": "M07",
+          "title": "Proposições e conectivos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar proposições e valores lógicos · Avaliar conectivos a partir de uma atribuição",
+          "objectives": [
+            "Identificar proposições e valores lógicos",
+            "Avaliar conectivos a partir de uma atribuição"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Valor lógico e composição",
+              "text": "Na lógica clássica proposicional, uma proposição declarativa recebe verdadeiro ou falso. Pergunta e ordem não afirmam algo verdadeiro ou falso; frases abertas como x>3 dependem de uma atribuição ou quantificação. Negação inverte o valor; conjunção P∧Q exige ambos verdadeiros; disjunção inclusiva P∨Q exige ao menos um. “Ou exclusivo” exige exatamente um e deve ser indicado. A condicional P→Q só é falsa quando P é verdadeiro e Q falso. Bicondicional P↔Q é verdadeira quando os valores coincidem. A tabela descreve relações lógicas; não transforma coincidência em causalidade."
+            },
+            {
+              "type": "table",
+              "title": "Condicional",
+              "columns": [
+                "P",
+                "Q",
+                "P→Q"
+              ],
+              "rows": [
+                [
+                  "V",
+                  "V",
+                  "V"
+                ],
+                [
+                  "V",
+                  "F",
+                  "F"
+                ],
+                [
+                  "F",
+                  "V",
+                  "V"
+                ],
+                [
+                  "F",
+                  "F",
+                  "V"
+                ]
+              ],
+              "caption": "A única linha falsa combina antecedente verdadeiro e consequente falso."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "P é falso e Q é verdadeiro. Avalie (P∨Q)∧¬P.",
+              "steps": [
+                "P∨Q é verdadeiro: há ao menos um verdadeiro.",
+                "¬P é verdadeiro.",
+                "V∧V resulta verdadeiro."
+              ],
+              "answer": "Verdadeiro.",
+              "check": "Substituir diretamente produz (F∨V)∧V=V; Q sozinho não dispensaria a conjunção final."
+            }
+          ],
+          "pitfalls": [
+            "Ler disjunção inclusiva como exclusiva sem indicação.",
+            "Tratar condicional como prova de causa."
+          ],
+          "recap": [
+            "Negação inverte; conjunção exige ambos.",
+            "Disjunção inclusiva aceita ambos verdadeiros.",
+            "Condicional falha em V→F."
+          ],
+          "retrieval": [
+            "Uma ordem tem valor lógico nesse recorte?",
+            "Quando o bicondicional é falso?"
+          ],
+          "notes": "Proposições e conectivos\nNegação inverte; conjunção exige ambos.\nDisjunção inclusiva aceita ambos verdadeiros.\nCondicional falha em V→F.\nLer disjunção inclusiva como exclusiva sem indicação.\nTratar condicional como prova de causa.",
+          "suggestions": [
+            "Monte uma tabela-verdade de dois conectivos.",
+            "Explique a linha falsa da condicional.",
+            "Distinga ou inclusivo e exclusivo."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — lógica",
+              "url": "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m07-q01",
+              "prompt": "Qual frase é proposição declarativa com valor lógico?",
+              "options": [
+                "Abra a janela!",
+                "Qual é a data?",
+                "O número 8 é par.",
+                "x é maior que 3, sem valor de x"
+              ],
+              "correctIndex": 2,
+              "explanation": "A afirmação sobre 8 é verdadeira; as demais são ordem, pergunta e sentença aberta."
+            },
+            {
+              "id": "bb2026-m07-q02",
+              "prompt": "P∧Q é verdadeiro quando:",
+              "options": [
+                "Somente P é verdadeiro",
+                "Somente Q é verdadeiro",
+                "Ambos são falsos",
+                "Ambos são verdadeiros"
+              ],
+              "correctIndex": 3,
+              "explanation": "Conjunção exige as duas proposições verdadeiras."
+            },
+            {
+              "id": "bb2026-m07-q03",
+              "prompt": "No ou inclusivo, P∨Q com P e Q verdadeiros é:",
+              "options": [
+                "Verdadeiro",
+                "Falso",
+                "Sem definição",
+                "Uma pergunta"
+              ],
+              "correctIndex": 0,
+              "explanation": "Basta ao menos um verdadeiro; dois também satisfazem a disjunção inclusiva."
+            },
+            {
+              "id": "bb2026-m07-q04",
+              "prompt": "Se P é falso, ¬P é:",
+              "options": [
+                "Falso",
+                "Verdadeiro",
+                "Igual a Q sempre",
+                "Uma causa física"
+              ],
+              "correctIndex": 1,
+              "explanation": "Negação troca o valor da proposição."
+            },
+            {
+              "id": "bb2026-m07-q05",
+              "prompt": "P↔Q é verdadeiro se P e Q:",
+              "options": [
+                "Têm necessariamente relação causal",
+                "São sempre verdadeiros",
+                "Têm o mesmo valor lógico",
+                "São palavras iguais"
+              ],
+              "correctIndex": 2,
+              "explanation": "V/V e F/F tornam o bicondicional verdadeiro; igualdade de redação não é necessária."
+            },
+            {
+              "id": "bb2026-m07-q06",
+              "prompt": "Com P verdadeiro e Q falso, P→Q é:",
+              "options": [
+                "Verdadeira",
+                "Indeterminada",
+                "Exclusiva",
+                "Falsa"
+              ],
+              "correctIndex": 3,
+              "explanation": "Antecedente verdadeiro com consequente falso é a única linha falsa da condicional."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m07-q01",
+                "bb2026-m07-q02",
+                "bb2026-m07-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m07-q04",
+                "bb2026-m07-q05",
+                "bb2026-m07-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m08",
+          "researchId": "M08",
+          "title": "Equivalências e argumentos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Usar negações e equivalências preservando todas as linhas · Distinguir argumento válido de inversões inválidas",
+          "objectives": [
+            "Usar negações e equivalências preservando todas as linhas",
+            "Distinguir argumento válido de inversões inválidas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Equivalência não é semelhança verbal",
+              "text": "Duas fórmulas equivalentes têm o mesmo valor em toda atribuição. P→Q equivale a ¬P∨Q e à contrapositiva ¬Q→¬P. A recíproca Q→P e a inversa ¬P→¬Q não são em geral equivalentes à original. Pelas leis de De Morgan, ¬(P∧Q)=¬P∨¬Q e ¬(P∨Q)=¬P∧¬Q. Negar “todos” produz “existe ao menos um que não”; negar “existe” produz “nenhum”, no universo definido. Argumento válido preserva conclusão quando todas as premissas são verdadeiras. Modus ponens usa P→Q e P; modus tollens usa P→Q e ¬Q. Afirmar Q não permite concluir P sem outra premissa."
+            },
+            {
+              "type": "list",
+              "title": "Conferência do argumento",
+              "items": [
+                "Declare proposições e universo antes de simbolizar.",
+                "Busque uma linha com premissas verdadeiras e conclusão falsa: ela refuta validade.",
+                "Não confunda verdade de uma frase com validade da forma.",
+                "Tautologia é verdadeira em todas as linhas; contradição em nenhuma."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Se um arquivo está autenticado, o selo aparece. O selo não apareceu. O que decorre das premissas?",
+              "steps": [
+                "P: autenticado; Q: selo aparece.",
+                "Premissas P→Q e ¬Q.",
+                "Se P fosse verdadeiro, Q teria de ser verdadeiro; contradiz ¬Q."
+              ],
+              "answer": "O arquivo não está autenticado, segundo essas premissas.",
+              "check": "É modus tollens; afirmar que o selo apareceu não permitiria a conclusão inversa."
+            }
+          ],
+          "pitfalls": [
+            "Afirmar o consequente como se fosse modus ponens.",
+            "Negar “todos” dizendo que nenhum satisfaz."
+          ],
+          "recap": [
+            "Contrapositiva preserva a condicional.",
+            "De Morgan troca conectivo e nega parcelas.",
+            "Uma contralinha refuta a validade."
+          ],
+          "retrieval": [
+            "Qual a negação de “todos enviaram”?",
+            "A recíproca de uma condicional é sempre equivalente?"
+          ],
+          "notes": "Equivalências e argumentos\nContrapositiva preserva a condicional.\nDe Morgan troca conectivo e nega parcelas.\nUma contralinha refuta a validade.\nAfirmar o consequente como se fosse modus ponens.\nNegar “todos” dizendo que nenhum satisfaz.",
+          "suggestions": [
+            "Confira uma equivalência por quatro linhas.",
+            "Identifique falácia de afirmar o consequente.",
+            "Negue uma frase quantificada com universo definido."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — lógica",
+              "url": "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers"
+            },
+            {
+              "title": "OpenStax — argumentos",
+              "url": "https://openstax.org/books/contemporary-mathematics/pages/2-5-valid-arguments"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m08-q01",
+              "prompt": "A negação de “todos os alunos deste grupo enviaram” é:",
+              "options": [
+                "Nenhum enviou",
+                "Todos não enviaram necessariamente",
+                "Existe aluno deste grupo que não enviou",
+                "Todos enviaram duas vezes"
+              ],
+              "correctIndex": 2,
+              "explanation": "Basta um contraexemplo para negar a universal; não se afirma que todos falharam."
+            },
+            {
+              "id": "bb2026-m08-q02",
+              "prompt": "¬(P∨Q) equivale a:",
+              "options": [
+                "¬P∨Q",
+                "P∧Q",
+                "¬P∨¬Q",
+                "¬P∧¬Q"
+              ],
+              "correctIndex": 3,
+              "explanation": "De Morgan troca a disjunção por conjunção e nega cada componente."
+            },
+            {
+              "id": "bb2026-m08-q03",
+              "prompt": "P→Q e P autorizam Q por:",
+              "options": [
+                "Modus ponens",
+                "Afirmação do consequente",
+                "Negação do antecedente",
+                "Recíproca automática"
+              ],
+              "correctIndex": 0,
+              "explanation": "Aplicar uma implicação ao antecedente verdadeiro é modus ponens."
+            },
+            {
+              "id": "bb2026-m08-q04",
+              "prompt": "P→Q e Q, sem mais premissas, permitem concluir P?",
+              "options": [
+                "Sim, sempre",
+                "Não; isso afirma o consequente",
+                "Sim, pois toda condicional é bicondicional",
+                "Sim, mesmo com P falso"
+              ],
+              "correctIndex": 1,
+              "explanation": "P falso e Q verdadeiro satisfazem ambas as premissas, mas refutam a conclusão P."
+            },
+            {
+              "id": "bb2026-m08-q05",
+              "prompt": "Uma fórmula verdadeira em todas as atribuições é:",
+              "options": [
+                "Contradição",
+                "Sentença aberta necessariamente",
+                "Tautologia",
+                "Recíproca necessariamente"
+              ],
+              "correctIndex": 2,
+              "explanation": "Tautologia independe dos valores atribuídos a seus componentes."
+            },
+            {
+              "id": "bb2026-m08-q06",
+              "prompt": "Qual fórmula é equivalente a P→Q para toda atribuição?",
+              "options": [
+                "Q → P",
+                "¬P → ¬Q",
+                "¬Q → ¬P",
+                "P ∧ Q"
+              ],
+              "correctIndex": 2,
+              "explanation": "A contrapositiva é equivalente. Recíproca e inversa falham, por exemplo, em P falso/Q verdadeiro."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m08-q01",
+                "bb2026-m08-q02",
+                "bb2026-m08-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers",
+                "https://openstax.org/books/contemporary-mathematics/pages/2-5-valid-arguments"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m08-q04",
+                "bb2026-m08-q05",
+                "bb2026-m08-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers",
+                "https://openstax.org/books/contemporary-mathematics/pages/2-5-valid-arguments"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m09",
+          "researchId": "M09",
+          "title": "Conjuntos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Interpretar pertinência, inclusão e operações · Contar união sem duplicar interseção",
+          "objectives": [
+            "Interpretar pertinência, inclusão e operações",
+            "Contar união sem duplicar interseção"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Elemento e subconjunto são relações distintas",
+              "text": "x∈A diz que x é elemento; A⊆B diz que todo elemento de A também está em B. União reúne elementos de pelo menos um conjunto; interseção exige os dois; diferença A∖B retém o que está em A e não em B. Complemento depende do universo U explicitado. O conjunto vazio não tem elementos e é subconjunto de todo conjunto. Nas contagens finitas, somar tamanhos de A e B conta a interseção duas vezes; subtraí-la uma vez corrige a união. Diagramas ajudam a dividir regiões disjuntas, mas áreas desenhadas não indicam cardinalidade."
+            },
+            {
+              "type": "formula",
+              "title": "União de dois conjuntos finitos",
+              "expression": "|A∪B| = |A| + |B| − |A∩B|",
+              "variables": [
+                {
+                  "name": "|A|",
+                  "meaning": "Quantidade de elementos de A",
+                  "unit": "elementos"
+                },
+                {
+                  "name": "|B|",
+                  "meaning": "Quantidade de elementos de B",
+                  "unit": "elementos"
+                },
+                {
+                  "name": "|A∩B|",
+                  "meaning": "Quantidade comum aos dois",
+                  "unit": "elementos"
+                }
+              ],
+              "conditions": [
+                "Conjuntos finitos.",
+                "As contagens descrevem o mesmo universo e critério."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Num grupo de 30, 14 usam ferramenta A, 11 usam B e 4 usam ambas. Quantos não usam nenhuma?",
+              "steps": [
+                "União: 14+11−4=21.",
+                "Nenhuma: 30−21=9."
+              ],
+              "answer": "9 pessoas.",
+              "check": "Regiões: só A=10, só B=7, ambas=4, nenhuma=9; soma 30."
+            }
+          ],
+          "pitfalls": [
+            "Somar A e B sem descontar quem está nos dois.",
+            "Usar complemento sem indicar universo."
+          ],
+          "recap": [
+            "Pertinência fala de elemento; inclusão, de conjunto.",
+            "União usa ao menos um; interseção, ambos.",
+            "Dividir regiões disjuntas confere a contagem."
+          ],
+          "retrieval": [
+            "A∖B é sempre igual a B∖A?",
+            "Por que a interseção é subtraída na união?"
+          ],
+          "notes": "Conjuntos\nPertinência fala de elemento; inclusão, de conjunto.\nUnião usa ao menos um; interseção, ambos.\nDividir regiões disjuntas confere a contagem.\nSomar A e B sem descontar quem está nos dois.\nUsar complemento sem indicar universo.",
+          "suggestions": [
+            "Monte regiões de um problema de conjuntos.",
+            "Distinga inclusão de pertinência.",
+            "Conte união e complemento com universo explícito."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — conjuntos",
+              "url": "https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m09-q01",
+              "prompt": "x∈A significa que:",
+              "options": [
+                "A está contido em x",
+                "x é elemento de A",
+                "A é vazio",
+                "x é complemento de A"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pertinência liga elemento ao conjunto; inclusão é outra relação."
+            },
+            {
+              "id": "bb2026-m09-q02",
+              "prompt": "A∩B contém elementos que:",
+              "options": [
+                "Estão somente fora de A",
+                "Estão somente fora de B",
+                "Pertencem a ambos",
+                "Pertencem obrigatoriamente a nenhum"
+              ],
+              "correctIndex": 2,
+              "explanation": "Interseção exige simultaneamente as duas pertinências."
+            },
+            {
+              "id": "bb2026-m09-q03",
+              "prompt": "Para definir complemento de A é necessário informar:",
+              "options": [
+                "Cor do diagrama",
+                "Tamanho do papel",
+                "A ordem dos nomes",
+                "O universo considerado"
+              ],
+              "correctIndex": 3,
+              "explanation": "Complemento é U∖A; mudar U pode mudar o resultado."
+            },
+            {
+              "id": "bb2026-m09-q04",
+              "prompt": "18 estudam A, 12 estudam B e 5 ambos. Quantos estudam ao menos um?",
+              "options": [
+                "25",
+                "30",
+                "35",
+                "7"
+              ],
+              "correctIndex": 0,
+              "explanation": "18+12−5=25, descontando a dupla contagem da interseção."
+            },
+            {
+              "id": "bb2026-m09-q05",
+              "prompt": "No grupo de 40 com 18 em A, 12 em B e 5 em ambos, quantos estão fora dos dois?",
+              "options": [
+                "10",
+                "15",
+                "25",
+                "5"
+              ],
+              "correctIndex": 1,
+              "explanation": "União 25; fora dos dois 40−25=15."
+            },
+            {
+              "id": "bb2026-m09-q06",
+              "prompt": "Se A={1,2,3} e B={3,4}, A∖B é:",
+              "options": [
+                "{3}",
+                "{1,2,3,4}",
+                "{1,2}",
+                "{4}"
+              ],
+              "correctIndex": 2,
+              "explanation": "Retire de A o elemento 3, que também pertence a B; restam 1 e 2."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m09-q01",
+                "bb2026-m09-q02",
+                "bb2026-m09-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m09-q04",
+                "bb2026-m09-q05",
+                "bb2026-m09-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m10",
+          "researchId": "M10",
+          "title": "Relações e funções",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir domínio, imagem e regra de função · Calcular valores e restrições sem perder o domínio",
+          "objectives": [
+            "Distinguir domínio, imagem e regra de função",
+            "Calcular valores e restrições sem perder o domínio"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Cada entrada admissível tem uma saída",
+              "text": "Uma relação de A em B é conjunto de pares; uma função associa cada elemento do domínio A a exatamente um de B. Duas entradas podem produzir a mesma saída. Contradomínio é o conjunto de chegada declarado; imagem contém apenas valores atingidos. A regra algébrica não dispensa domínio: denominadores precisam ser não zero, raízes pares reais pedem radicando não negativo e logaritmos reais pedem argumento positivo. Composição f∘g aplica g primeiro e exige que sua saída esteja no domínio de f. A inversa como função exige bijeção entre domínio e contradomínio; restrição do domínio pode tornar uma regra invertível."
+            },
+            {
+              "type": "list",
+              "title": "Leitura de pares e gráficos",
+              "items": [
+                "Não pode faltar saída para uma entrada do domínio.",
+                "Não podem existir duas saídas distintas para a mesma entrada.",
+                "Em gráfico de função real de uma variável, uma reta vertical não encontra dois pontos com o mesmo x.",
+                "Alterar domínio ou contradomínio pode alterar propriedades da função."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "f(x)=1/(x−3), com valores reais. Calcule f(5) e o domínio máximo.",
+              "steps": [
+                "Denominador não pode zerar: x≠3.",
+                "Substitua 5: 1/(5−3)=1/2."
+              ],
+              "answer": "f(5)=1/2; domínio R∖{3}.",
+              "check": "(5−3)×1/2=1; x=3 continua proibido mesmo após manipulações."
+            }
+          ],
+          "pitfalls": [
+            "Confundir imagem com contradomínio.",
+            "Cancelar fatores e esquecer valores originalmente excluídos."
+          ],
+          "recap": [
+            "Função tem uma saída por entrada do domínio.",
+            "Domínio restringe a regra.",
+            "Composição respeita ordem e admissibilidade."
+          ],
+          "retrieval": [
+            "Duas entradas iguais podem ter saídas diferentes numa função?",
+            "Qual função é aplicada primeiro em f∘g?"
+          ],
+          "notes": "Relações e funções\nFunção tem uma saída por entrada do domínio.\nDomínio restringe a regra.\nComposição respeita ordem e admissibilidade.\nConfundir imagem com contradomínio.\nCancelar fatores e esquecer valores originalmente excluídos.",
+          "suggestions": [
+            "Verifique se uma relação é função.",
+            "Encontre domínio antes de substituir valores.",
+            "Compare imagem e contradomínio num exemplo."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — funções e domínio",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/3-1-functions-and-function-notation"
+            },
+            {
+              "title": "OpenStax — domínio e imagem",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/3-2-domain-and-range"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m10-q01",
+              "prompt": "Uma função associa a cada entrada do domínio:",
+              "options": [
+                "Qualquer número de saídas distintas",
+                "Nenhuma saída",
+                "Exatamente uma saída",
+                "Sempre duas saídas"
+              ],
+              "correctIndex": 2,
+              "explanation": "Existência e unicidade da saída valem para todas as entradas do domínio."
+            },
+            {
+              "id": "bb2026-m10-q02",
+              "prompt": "Imagem e contradomínio são:",
+              "options": [
+                "Sempre conjuntos vazios",
+                "Sempre iguais",
+                "O mesmo termo em qualquer contexto",
+                "Conceitos diferentes; imagem pode ser parte do contradomínio"
+              ],
+              "correctIndex": 3,
+              "explanation": "Contradomínio é chegada declarada; imagem é o que a função efetivamente atinge."
+            },
+            {
+              "id": "bb2026-m10-q03",
+              "prompt": "Em f∘g, aplica-se primeiro:",
+              "options": [
+                "g",
+                "f",
+                "As duas sem ordem",
+                "A inversa de f sempre"
+              ],
+              "correctIndex": 0,
+              "explanation": "(f∘g)(x)=f(g(x)), respeitando os domínios."
+            },
+            {
+              "id": "bb2026-m10-q04",
+              "prompt": "Se f(x)=2x−3, f(4) é:",
+              "options": [
+                "11",
+                "5",
+                "−5",
+                "8"
+              ],
+              "correctIndex": 1,
+              "explanation": "2×4−3=8−3=5."
+            },
+            {
+              "id": "bb2026-m10-q05",
+              "prompt": "Em f(x)=1/(x−2), qual valor deve ser excluído do domínio real?",
+              "options": [
+                "0",
+                "1",
+                "2",
+                "−2"
+              ],
+              "correctIndex": 2,
+              "explanation": "x=2 zera o denominador, tornando a expressão indefinida."
+            },
+            {
+              "id": "bb2026-m10-q06",
+              "prompt": "A relação {(1,4),(2,4)} com domínio {1,2} é função?",
+              "options": [
+                "Não, pois saídas devem ser distintas",
+                "Não, pois entradas são distintas",
+                "Só se o domínio fosse vazio",
+                "Sim; cada entrada tem uma saída"
+              ],
+              "correctIndex": 3,
+              "explanation": "Não é exigido que entradas diferentes tenham imagens diferentes; essa condição caracterizaria injetividade."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m10-q01",
+                "bb2026-m10-q02",
+                "bb2026-m10-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/3-1-functions-and-function-notation",
+                "https://openstax.org/books/college-algebra-2e/pages/3-2-domain-and-range"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m10-q04",
+                "bb2026-m10-q05",
+                "bb2026-m10-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/3-1-functions-and-function-notation",
+                "https://openstax.org/books/college-algebra-2e/pages/3-2-domain-and-range"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m11",
+          "researchId": "M11",
+          "title": "Funções polinomiais",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar coeficientes, raízes e comportamento · Resolver aplicações lineares e quadráticas com domínio adequado",
+          "objectives": [
+            "Relacionar coeficientes, raízes e comportamento",
+            "Resolver aplicações lineares e quadráticas com domínio adequado"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Grau e forma dão pistas",
+              "text": "Polinômio tem potências inteiras não negativas e coeficientes; o grau é o maior expoente com coeficiente não zero. Função afim f(x)=ax+b tem taxa de variação a e intercepto b; com a≠0 seu zero é −b/a. Quadrática f(x)=ax²+bx+c exige a≠0 e forma parábola: a>0 abre para cima, a<0 para baixo. Discriminante b²−4ac decide quantidade de raízes reais. Vértice tem x=−b/(2a), e y é a função nesse x; mínimo ou máximo depende do sinal de a. Uma equação pode ter raízes inadmissíveis numa aplicação com domínio limitado."
+            },
+            {
+              "type": "formula",
+              "title": "Raízes de uma quadrática",
+              "expression": "x = [−b ± √(b²−4ac)] / (2a)",
+              "variables": [
+                {
+                  "name": "a",
+                  "meaning": "Coeficiente quadrático não zero",
+                  "unit": "depende das grandezas do modelo"
+                },
+                {
+                  "name": "b",
+                  "meaning": "Coeficiente linear",
+                  "unit": "depende do modelo"
+                },
+                {
+                  "name": "c",
+                  "meaning": "Termo constante",
+                  "unit": "unidade de f"
+                }
+              ],
+              "conditions": [
+                "a≠0.",
+                "Raízes reais exigem discriminante não negativo."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Para f(x)=x²−6x+8, encontre raízes e mínimo no domínio real.",
+              "steps": [
+                "Fatorem: (x−2)(x−4), raízes 2 e 4.",
+                "Vértice x=3; f(3)=9−18+8=−1."
+              ],
+              "answer": "Raízes 2 e 4; mínimo −1 em x=3.",
+              "check": "f(x)=(x−3)²−1: o quadrado não negativo confirma o mínimo e f(2)=f(4)=0."
+            }
+          ],
+          "pitfalls": [
+            "Aplicar fórmula quadrática com a=0.",
+            "Confundir raiz x com valor mínimo y."
+          ],
+          "recap": [
+            "Afim tem variação constante.",
+            "Discriminante trata raízes reais.",
+            "Vértice e domínio decidem extremos admissíveis."
+          ],
+          "retrieval": [
+            "Parábola com a negativo tem mínimo ou máximo real?",
+            "Uma raiz negativa serve em problema de quantidade?"
+          ],
+          "notes": "Funções polinomiais\nAfim tem variação constante.\nDiscriminante trata raízes reais.\nVértice e domínio decidem extremos admissíveis.\nAplicar fórmula quadrática com a=0.\nConfundir raiz x com valor mínimo y.",
+          "suggestions": [
+            "Confira raízes substituindo no polinômio.",
+            "Encontre vértice e interprete x e y.",
+            "Explique o efeito do coeficiente linear numa função afim."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — funções lineares",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/4-1-linear-functions"
+            },
+            {
+              "title": "OpenStax — quadráticas",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/5-1-quadratic-functions"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m11-q01",
+              "prompt": "Na função afim f(x)=3x+2, a taxa de variação por unidade de x é:",
+              "options": [
+                "2",
+                "3",
+                "5",
+                "0"
+              ],
+              "correctIndex": 1,
+              "explanation": "Coeficiente de x é 3; o termo 2 é intercepto."
+            },
+            {
+              "id": "bb2026-m11-q02",
+              "prompt": "Uma função quadrática exige:",
+              "options": [
+                "b=0 sempre",
+                "c=0 sempre",
+                "a≠0 no termo ax²",
+                "Todas as raízes positivas"
+              ],
+              "correctIndex": 2,
+              "explanation": "Se a=0, não há termo de segundo grau."
+            },
+            {
+              "id": "bb2026-m11-q03",
+              "prompt": "Discriminante negativo numa quadrática de coeficientes reais indica:",
+              "options": [
+                "Duas raízes reais distintas",
+                "Uma raiz real dupla",
+                "Quatro raízes reais",
+                "Nenhuma raiz real"
+              ],
+              "correctIndex": 3,
+              "explanation": "A raiz quadrada do discriminante negativo não é real."
+            },
+            {
+              "id": "bb2026-m11-q04",
+              "prompt": "O zero de f(x)=2x−8 é:",
+              "options": [
+                "4",
+                "−4",
+                "8",
+                "2"
+              ],
+              "correctIndex": 0,
+              "explanation": "2x−8=0 implica x=4; substituição confirma."
+            },
+            {
+              "id": "bb2026-m11-q05",
+              "prompt": "As raízes reais de x²−5x+6 são:",
+              "options": [
+                "1 e 6",
+                "2 e 3",
+                "−2 e −3",
+                "0 e 5"
+              ],
+              "correctIndex": 1,
+              "explanation": "(x−2)(x−3)=0; ambas substituições zeram o polinômio."
+            },
+            {
+              "id": "bb2026-m11-q06",
+              "prompt": "O x do vértice de f(x)=x²−5x+6 é:",
+              "options": [
+                "5",
+                "−2,5",
+                "2,5",
+                "6"
+              ],
+              "correctIndex": 2,
+              "explanation": "−b/(2a)=5/2=2,5. É coordenada x, não o mínimo y=−0,25."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m11-q01",
+                "bb2026-m11-q02",
+                "bb2026-m11-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/4-1-linear-functions",
+                "https://openstax.org/books/college-algebra-2e/pages/5-1-quadratic-functions"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m11-q04",
+                "bb2026-m11-q05",
+                "bb2026-m11-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/4-1-linear-functions",
+                "https://openstax.org/books/college-algebra-2e/pages/5-1-quadratic-functions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m12",
+          "researchId": "M12",
+          "title": "Exponenciais",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir variação aditiva de multiplicativa · Resolver potências e modelos com base admissível",
+          "objectives": [
+            "Distinguir variação aditiva de multiplicativa",
+            "Resolver potências e modelos com base admissível"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A variável aparece no expoente",
+              "text": "Função exponencial f(x)=a·b^x, com a não zero e b>0/b≠1, representa fator multiplicativo constante a cada incremento unitário de x. Para a positivo, b>1 dá crescimento; 0<b<1 dá decaimento. Não confundir multiplicar por um fator com somar um valor fixo. Expoente zero produz 1 para base não zero; negativo indica inverso. Potências de mesma base positiva não unitária permitem igualar expoentes; bases distintas podem exigir logaritmo. Modelos discretos usam tempo inteiro e unidade explicitada; o modelo não garante crescimento ilimitado na realidade."
+            },
+            {
+              "type": "formula",
+              "title": "Evolução por fator constante",
+              "expression": "valor_n = valor_0 × fator^n",
+              "variables": [
+                {
+                  "name": "valor_0",
+                  "meaning": "Valor no instante inicial",
+                  "unit": "unidade da quantidade"
+                },
+                {
+                  "name": "fator",
+                  "meaning": "Multiplicador por período",
+                  "unit": "adimensional"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Quantidade de períodos",
+                  "unit": "períodos"
+                }
+              ],
+              "conditions": [
+                "Fator positivo constante.",
+                "Período da observação compatível com n.",
+                "Para exponencial não constante, fator≠1."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma cultura didática começa com 5 unidades e triplica por etapa. Quantas após duas etapas?",
+              "steps": [
+                "Etapa zero:5.",
+                "Primeira:5×3=15. Segunda:15×3=45."
+              ],
+              "answer": "45 unidades.",
+              "check": "5×3²=45; duas etapas exigem dois fatores, não três."
+            }
+          ],
+          "pitfalls": [
+            "Tratar etapa zero como primeira multiplicação.",
+            "Confundir duplicação com acréscimo fixo."
+          ],
+          "recap": [
+            "Exponentes contam fatores por período.",
+            "Base entre zero e um reduz quantidades positivas.",
+            "Unidade temporal e instante inicial precisam ser claros."
+          ],
+          "retrieval": [
+            "Qual diferença entre dobrar e somar dois?",
+            "Por que b=1 não descreve exponencial não constante?"
+          ],
+          "notes": "Exponenciais\nExponentes contam fatores por período.\nBase entre zero e um reduz quantidades positivas.\nUnidade temporal e instante inicial precisam ser claros.\nTratar etapa zero como primeira multiplicação.\nConfundir duplicação com acréscimo fixo.",
+          "suggestions": [
+            "Monte a sequência de um modelo exponencial.",
+            "Resolva uma igualdade de potências.",
+            "Compare crescimento linear e exponencial."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — funções exponenciais",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m12-q01",
+              "prompt": "Para a>0, f(x)=a·b^x decresce quando:",
+              "options": [
+                "b>1",
+                "b=1",
+                "0<b<1",
+                "b=0 com qualquer x real"
+              ],
+              "correctIndex": 2,
+              "explanation": "Cada avanço multiplica por fator positivo menor que 1."
+            },
+            {
+              "id": "bb2026-m12-q02",
+              "prompt": "Com base não zero, b^0 vale:",
+              "options": [
+                "0",
+                "b",
+                "−1",
+                "1"
+              ],
+              "correctIndex": 3,
+              "explanation": "Expoente zero tem valor 1; essa identidade não autoriza usar base zero indiscriminadamente."
+            },
+            {
+              "id": "bb2026-m12-q03",
+              "prompt": "Dobrar uma quantidade por período significa:",
+              "options": [
+                "Multiplicar por 2 a cada período",
+                "Somar 2 sempre",
+                "Dividir por 2 sempre",
+                "Manter constante"
+              ],
+              "correctIndex": 0,
+              "explanation": "Acréscimo absoluto varia com a base; o fator é constante."
+            },
+            {
+              "id": "bb2026-m12-q04",
+              "prompt": "Quantidade inicial 3 dobra em cada etapa. Após três etapas é:",
+              "options": [
+                "9",
+                "24",
+                "12",
+                "18"
+              ],
+              "correctIndex": 1,
+              "explanation": "3×2³=24; sequência 3,6,12,24."
+            },
+            {
+              "id": "bb2026-m12-q05",
+              "prompt": "Se 2^x=32, o valor de x é:",
+              "options": [
+                "4",
+                "6",
+                "5",
+                "3"
+              ],
+              "correctIndex": 2,
+              "explanation": "32=2⁵; como base2 é positiva e diferente de1, expoentes coincidem."
+            },
+            {
+              "id": "bb2026-m12-q06",
+              "prompt": "Em f(x)=4·(1/2)^x, f(2) vale:",
+              "options": [
+                "8",
+                "2",
+                "16",
+                "1"
+              ],
+              "correctIndex": 3,
+              "explanation": "4×(1/2)²=4/4=1."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m12-q01",
+                "bb2026-m12-q02",
+                "bb2026-m12-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m12-q04",
+                "bb2026-m12-q05",
+                "bb2026-m12-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m13",
+          "researchId": "M13",
+          "title": "Logaritmos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Interpretar logaritmo como expoente e impor domínio · Usar propriedades e conferir por exponenciação",
+          "objectives": [
+            "Interpretar logaritmo como expoente e impor domínio",
+            "Usar propriedades e conferir por exponenciação"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Pergunte qual expoente produz o argumento",
+              "text": "log_b(x)=y significa b^y=x. Nos reais, b>0, b≠1 e x>0. O resultado pode ser negativo: isso ocorre quando a potência correspondente é um inverso. Propriedades, com argumentos positivos, transformam produto em soma e quociente em diferença; log_b(x^k)=k·log_b(x) para x>0 no uso real aqui adotado. Logaritmo de soma não se separa em soma de logaritmos. Mudança de base usa log_c(x)/log_c(b), com base c admissível. Ao resolver equação, valores encontrados precisam satisfazer o domínio original; transformações não resgatam argumento zero ou negativo."
+            },
+            {
+              "type": "formula",
+              "title": "Equivalência fundamental",
+              "expression": "log_b(x)=y ⇔ b^y=x",
+              "variables": [
+                {
+                  "name": "b",
+                  "meaning": "Base do logaritmo",
+                  "unit": "adimensional"
+                },
+                {
+                  "name": "x",
+                  "meaning": "Argumento positivo",
+                  "unit": "adimensional"
+                },
+                {
+                  "name": "y",
+                  "meaning": "Expoente resultante",
+                  "unit": "adimensional"
+                }
+              ],
+              "conditions": [
+                "b>0 e b≠1.",
+                "x>0."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Resolva log_2(x−1)=3 nos reais.",
+              "steps": [
+                "Domínio: x−1>0, então x>1.",
+                "Forma exponencial: x−1=2³=8.",
+                "Logo x=9."
+              ],
+              "answer": "x=9.",
+              "check": "9>1 e log_2(9−1)=log_2(8)=3; domínio e igualdade estão satisfeitos."
+            }
+          ],
+          "pitfalls": [
+            "Separar logaritmo de soma em dois logaritmos.",
+            "Aceitar argumento não positivo."
+          ],
+          "recap": [
+            "Logaritmo pergunta por um expoente.",
+            "Base e argumento têm restrições.",
+            "Confira a solução exponenciando e no domínio."
+          ],
+          "retrieval": [
+            "log_10(1) vale quanto e por quê?",
+            "Por que log_2(−4) não é real?"
+          ],
+          "notes": "Logaritmos\nLogaritmo pergunta por um expoente.\nBase e argumento têm restrições.\nConfira a solução exponenciando e no domínio.\nSeparar logaritmo de soma em dois logaritmos.\nAceitar argumento não positivo.",
+          "suggestions": [
+            "Converta logaritmo em potência.",
+            "Confira domínio numa equação logarítmica.",
+            "Compare propriedade de produto com falsa propriedade de soma."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — logaritmos",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-3-logarithmic-functions"
+            },
+            {
+              "title": "OpenStax — propriedades logarítmicas",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/6-5-logarithmic-properties"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m13-q01",
+              "prompt": "Na definição real log_b(x), o argumento deve ser:",
+              "options": [
+                "Qualquer real",
+                "Positivo",
+                "Sempre maior que 1",
+                "Sempre inteiro"
+              ],
+              "correctIndex": 1,
+              "explanation": "O argumento deve ser positivo; pode estar entre zero e um."
+            },
+            {
+              "id": "bb2026-m13-q02",
+              "prompt": "Para argumentos positivos, log_b(uv) é:",
+              "options": [
+                "log_b(u)×log_b(v)",
+                "log_b(u+v)",
+                "log_b(u)+log_b(v)",
+                "Sempre zero"
+              ],
+              "correctIndex": 2,
+              "explanation": "Produto de potências soma expoentes, originando a propriedade."
+            },
+            {
+              "id": "bb2026-m13-q03",
+              "prompt": "Qual identidade é geralmente incorreta?",
+              "options": [
+                "log_b(1)=0",
+                "log_b(b)=1",
+                "log_b(u/v)=log_b(u)−log_b(v)",
+                "log_b(u+v)=log_b(u)+log_b(v)"
+              ],
+              "correctIndex": 3,
+              "explanation": "A propriedade de produto não se aplica à soma; com base10/u=v=1, lados log10(2) e0 diferem."
+            },
+            {
+              "id": "bb2026-m13-q04",
+              "prompt": "log_2(32) vale:",
+              "options": [
+                "5",
+                "4",
+                "16",
+                "−5"
+              ],
+              "correctIndex": 0,
+              "explanation": "2⁵=32, conferindo a definição."
+            },
+            {
+              "id": "bb2026-m13-q05",
+              "prompt": "log_10(0,01) vale:",
+              "options": [
+                "2",
+                "−2",
+                "−1",
+                "0"
+              ],
+              "correctIndex": 1,
+              "explanation": "10⁻²=1/100=0,01; o argumento continua positivo."
+            },
+            {
+              "id": "bb2026-m13-q06",
+              "prompt": "Se log_3(x)=2, x é:",
+              "options": [
+                "6",
+                "3",
+                "9",
+                "2"
+              ],
+              "correctIndex": 2,
+              "explanation": "x=3²=9, admissível por ser positivo."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m13-q01",
+                "bb2026-m13-q02",
+                "bb2026-m13-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-3-logarithmic-functions",
+                "https://openstax.org/books/college-algebra-2e/pages/6-5-logarithmic-properties"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m13-q04",
+                "bb2026-m13-q05",
+                "bb2026-m13-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/6-3-logarithmic-functions",
+                "https://openstax.org/books/college-algebra-2e/pages/6-5-logarithmic-properties"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m14",
+          "researchId": "M14",
+          "title": "Matrizes",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar dimensões e operações admissíveis · Calcular entradas por soma e produto linha-coluna",
+          "objectives": [
+            "Identificar dimensões e operações admissíveis",
+            "Calcular entradas por soma e produto linha-coluna"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Linhas primeiro, colunas depois",
+              "text": "Matriz m×n tem m linhas e n colunas; a_ij está na linha i e coluna j. Soma e subtração exigem dimensões iguais, operando entrada a entrada. Multiplicação por escalar altera todas as entradas. No produto A_(m×n)B_(n×p), as dimensões internas coincidem, o resultado é m×p, e cada entrada é soma de produtos de uma linha de A por uma coluna de B. Produto de matrizes não é em geral comutativo. Transposta troca linhas e colunas. Identidade quadrada preserva a matriz no lado dimensionalmente compatível; matriz zero não é identidade."
+            },
+            {
+              "type": "table",
+              "title": "Exemplo de matriz 2×2",
+              "columns": [
+                "coluna1",
+                "coluna2"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "3",
+                  "4"
+                ]
+              ],
+              "caption": "A entrada da linha2/coluna1 é3; o formato não é determinado pelo maior número."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Calcule AB para A=[[1,0],[2,1]] e B=[[3,1],[0,2]].",
+              "steps": [
+                "Dimensões2×2 e2×2 permitem produto.",
+                "Primeira linha:[1×3+0×0,1×1+0×2]=[3,1].",
+                "Segunda:[2×3+1×0,2×1+1×2]=[6,4]."
+              ],
+              "answer": "AB=[[3,1],[6,4]].",
+              "check": "BA=[[5,1],[4,2]], mostrando que inverter a ordem muda o produto."
+            }
+          ],
+          "pitfalls": [
+            "Multiplicar apenas entradas na mesma posição.",
+            "Supor AB=BA sem verificar."
+          ],
+          "recap": [
+            "Dimensão é linhas×colunas.",
+            "Soma exige formatos iguais.",
+            "Produto usa linha por coluna e dimensões internas iguais."
+          ],
+          "retrieval": [
+            "Qual dimensão de A transposta se A é2×3?",
+            "A3×2 pode multiplicar B2×4 em que ordem?"
+          ],
+          "notes": "Matrizes\nDimensão é linhas×colunas.\nSoma exige formatos iguais.\nProduto usa linha por coluna e dimensões internas iguais.\nMultiplicar apenas entradas na mesma posição.\nSupor AB=BA sem verificar.",
+          "suggestions": [
+            "Confira dimensões antes de multiplicar.",
+            "Calcule uma entrada por linha e coluna.",
+            "Mostre um caso em que AB difere de BA."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — matrizes",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m14-q01",
+              "prompt": "Uma matriz2×3 possui:",
+              "options": [
+                "3 linhas e2 colunas",
+                "2 elementos no total",
+                "2 linhas e3 colunas",
+                "2 linhas e2 colunas"
+              ],
+              "correctIndex": 2,
+              "explanation": "A notação m×n indica linhas primeiro."
+            },
+            {
+              "id": "bb2026-m14-q02",
+              "prompt": "Somar matrizes exige:",
+              "options": [
+                "Mesmo determinante",
+                "Entradas todas positivas",
+                "Serem identidades",
+                "Dimensões iguais"
+              ],
+              "correctIndex": 3,
+              "explanation": "A operação entrada a entrada pede posições correspondentes no mesmo formato."
+            },
+            {
+              "id": "bb2026-m14-q03",
+              "prompt": "No produto AB, uma entrada resulta de:",
+              "options": [
+                "Soma de produtos de linha de A por coluna de B",
+                "Somente somar diagonais",
+                "Somente multiplicar entradas correspondentes",
+                "Somar as dimensões"
+              ],
+              "correctIndex": 0,
+              "explanation": "Esse produto escalar define cada posição do resultado."
+            },
+            {
+              "id": "bb2026-m14-q04",
+              "prompt": "A=[[1,2],[3,4]], B=[[2,0],[1,3]]. A entrada (1,2) de AB é:",
+              "options": [
+                "3",
+                "6",
+                "8",
+                "2"
+              ],
+              "correctIndex": 1,
+              "explanation": "Linha[1,2] por coluna[0,3]:1×0+2×3=6."
+            },
+            {
+              "id": "bb2026-m14-q05",
+              "prompt": "A transposta de uma matriz2×3 tem dimensão:",
+              "options": [
+                "2 × 3",
+                "3 × 3",
+                "3 × 2",
+                "2 × 2"
+              ],
+              "correctIndex": 2,
+              "explanation": "Trocar linhas e colunas troca o formato para3×2."
+            },
+            {
+              "id": "bb2026-m14-q06",
+              "prompt": "A2×3 multiplicada por B3×4 produz matriz:",
+              "options": [
+                "3 × 3",
+                "4 × 2",
+                "2 × 7",
+                "2 × 4"
+              ],
+              "correctIndex": 3,
+              "explanation": "Dimensões internas3 coincidem; externas2 e4 dão o resultado."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m14-q01",
+                "bb2026-m14-q02",
+                "bb2026-m14-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m14-q04",
+                "bb2026-m14-q05",
+                "bb2026-m14-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m15",
+          "researchId": "M15",
+          "title": "Determinantes",
+          "level": "Fundamentos e aplicação",
+          "summary": "Calcular determinante e usar propriedades com condições · Interpretar determinante não zero em matriz quadrada",
+          "objectives": [
+            "Calcular determinante e usar propriedades com condições",
+            "Interpretar determinante não zero em matriz quadrada"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Um número associado a uma matriz quadrada",
+              "text": "Determinante aplica-se a matrizes quadradas. Para [[a,b],[c,d]], det=ad−bc; ordem e sinal importam. No caso3×3, pode-se usar expansão por cofatores: cada termo combina entrada e determinante menor com sinal (−1)^(i+j). Trocar duas linhas troca o sinal; multiplicar uma linha por k multiplica o determinante por k; somar múltiplo de outra linha a uma linha preserva o determinante. Linhas iguais ou proporcionais tornam o determinante zero. Matriz quadrada tem inversa exatamente quando seu determinante não é zero. Valor zero não significa que todas as entradas sejam zero nem que um sistema associado necessariamente não tenha solução."
+            },
+            {
+              "type": "formula",
+              "title": "Determinante de ordem2",
+              "expression": "det([[a,b],[c,d]]) = ad−bc",
+              "variables": [
+                {
+                  "name": "a,b,c,d",
+                  "meaning": "Entradas nas posições indicadas",
+                  "unit": "conforme a matriz"
+                }
+              ],
+              "conditions": [
+                "Matriz quadrada de duas linhas e duas colunas.",
+                "Preservar posição e ordem das multiplicações."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Calcule det([[2,1],[5,4]]).",
+              "steps": [
+                "Diagonal principal:2×4=8.",
+                "Outra diagonal:1×5=5.",
+                "Subtraia8−5."
+              ],
+              "answer": "3.",
+              "check": "Trocar as linhas dá [[5,4],[2,1]], com5−8=−3; sinal trocou como esperado."
+            }
+          ],
+          "pitfalls": [
+            "Somar produtos em vez de subtrair no caso2×2.",
+            "Associar determinante zero sempre a sistema impossível."
+          ],
+          "recap": [
+            "Determinante exige matriz quadrada.",
+            "Operações de linhas têm efeitos distintos.",
+            "Não zero caracteriza inversibilidade quadrada."
+          ],
+          "retrieval": [
+            "Trocar duas linhas preserva o sinal?",
+            "Linhas proporcionais implicam o quê?"
+          ],
+          "notes": "Determinantes\nDeterminante exige matriz quadrada.\nOperações de linhas têm efeitos distintos.\nNão zero caracteriza inversibilidade quadrada.\nSomar produtos em vez de subtrair no caso2×2.\nAssociar determinante zero sempre a sistema impossível.",
+          "suggestions": [
+            "Calcule determinante2×2 e confira o sinal.",
+            "Use uma propriedade de linhas num exemplo.",
+            "Distinga singularidade da classificação de um sistema."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — determinantes",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m15-q01",
+              "prompt": "Determinante é definido, neste estudo, para:",
+              "options": [
+                "Toda matriz retangular",
+                "Matrizes quadradas",
+                "Só vetores de uma linha",
+                "Só matrizes zero"
+              ],
+              "correctIndex": 1,
+              "explanation": "É associado a ordem n×n; formato retangular não tem o determinante usual."
+            },
+            {
+              "id": "bb2026-m15-q02",
+              "prompt": "Trocar duas linhas faz o determinante:",
+              "options": [
+                "Dobrar sempre",
+                "Ficar invariável sempre",
+                "Trocar de sinal",
+                "Virar1 sempre"
+              ],
+              "correctIndex": 2,
+              "explanation": "Uma permutação simples de duas linhas muda o sinal."
+            },
+            {
+              "id": "bb2026-m15-q03",
+              "prompt": "Matriz quadrada com determinante não zero:",
+              "options": [
+                "É necessariamente identidade",
+                "Tem todas as entradas positivas",
+                "Tem linhas iguais",
+                "É invertível"
+              ],
+              "correctIndex": 3,
+              "explanation": "A condição det≠0 equivale à existência da inversa quadrada."
+            },
+            {
+              "id": "bb2026-m15-q04",
+              "prompt": "det([[4,1],[2,3]]) é:",
+              "options": [
+                "10",
+                "14",
+                "5",
+                "−10"
+              ],
+              "correctIndex": 0,
+              "explanation": "4×3−1×2=12−2=10."
+            },
+            {
+              "id": "bb2026-m15-q05",
+              "prompt": "Somar múltiplo de outra linha a uma linha, sem outras operações, faz o determinante:",
+              "options": [
+                "Zerar sempre",
+                "Permanecer igual",
+                "Dobrar sempre",
+                "Trocar de sinal sempre"
+              ],
+              "correctIndex": 1,
+              "explanation": "Essa operação elementar preserva o determinante, diferentemente de troca ou escala de uma linha."
+            },
+            {
+              "id": "bb2026-m15-q06",
+              "prompt": "Qual o determinante de [[2,5],[2,5]]?",
+              "options": [
+                "10",
+                "25",
+                "0",
+                "−15"
+              ],
+              "correctIndex": 2,
+              "explanation": "2×5−5×2=0; linhas iguais tornam a matriz singular."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m15-q01",
+                "bb2026-m15-q02",
+                "bb2026-m15-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule"
+              ]
+            },
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m15-q04",
+                "bb2026-m15-q05",
+                "bb2026-m15-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m16",
+          "researchId": "M16",
+          "title": "Sistemas lineares",
+          "level": "Fundamentos e aplicação",
+          "summary": "Resolver por eliminação ou substituição · Classificar sistemas verificando todas as equações",
+          "objectives": [
+            "Resolver por eliminação ou substituição",
+            "Classificar sistemas verificando todas as equações"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A solução precisa satisfazer simultaneamente",
+              "text": "Sistema linear reúne equações de primeiro grau nas incógnitas, sem produtos entre elas. Substituição isola uma variável e a introduz nas demais; eliminação soma múltiplos de equações para retirar uma incógnita. Operações equivalentes preservam o conjunto solução. Um sistema pode ter solução única, nenhuma ou infinitas; contar equações não basta. Equação reduzida0=5 revela incompatibilidade;0=0 é redundante, mas ainda é preciso analisar as restantes. Cramer vale para sistema quadrado com determinante dos coeficientes não zero; denominador zero exige outra análise. Sempre substitua a solução nas equações originais."
+            },
+            {
+              "type": "list",
+              "title": "Escalonamento com cuidado",
+              "items": [
+                "Trocar equações não muda soluções.",
+                "Multiplicar equação inteira por constante não zero preserva equivalência.",
+                "Somar múltiplo de outra equação elimina termos.",
+                "Registre contradição ou variável livre, sem dividir por zero."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Resolva x+y=7 e2x−y=2.",
+              "steps": [
+                "Some as equações:3x=9, x=3.",
+                "Use x+y=7: y=4."
+              ],
+              "answer": "(x,y)=(3,4).",
+              "check": "3+4=7 e2×3−4=2: ambas equações originais são satisfeitas."
+            }
+          ],
+          "pitfalls": [
+            "Verificar somente uma equação.",
+            "Concluir sistema impossível apenas porque determinante é zero."
+          ],
+          "recap": [
+            "Solução satisfaz todas as equações.",
+            "Eliminação usa operações equivalentes.",
+            "Contradição e redundância têm significados diferentes."
+          ],
+          "retrieval": [
+            "0=0 prova que todo sistema é indeterminado?",
+            "Por que multiplicador de uma equação deve ser não zero?"
+          ],
+          "notes": "Sistemas lineares\nSolução satisfaz todas as equações.\nEliminação usa operações equivalentes.\nContradição e redundância têm significados diferentes.\nVerificar somente uma equação.\nConcluir sistema impossível apenas porque determinante é zero.",
+          "suggestions": [
+            "Resolva um sistema e substitua nas equações originais.",
+            "Classifique sistema com equações proporcionais.",
+            "Identifique contradição no escalonamento."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — sistemas em duas variáveis",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/7-1-systems-of-linear-equations-two-variables"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m16-q01",
+              "prompt": "Uma solução de sistema deve satisfazer:",
+              "options": [
+                "Só a primeira equação",
+                "Só a última",
+                "Todas as equações simultaneamente",
+                "Apenas a equação mais curta"
+              ],
+              "correctIndex": 2,
+              "explanation": "O conjunto solução é a interseção das condições impostas."
+            },
+            {
+              "id": "bb2026-m16-q02",
+              "prompt": "Obter0=5 no escalonamento equivalente indica:",
+              "options": [
+                "Solução única",
+                "Infinitas soluções",
+                "Uma variável igual a5",
+                "Sistema sem solução"
+              ],
+              "correctIndex": 3,
+              "explanation": "A igualdade impossível revela incompatibilidade das premissas."
+            },
+            {
+              "id": "bb2026-m16-q03",
+              "prompt": "Cramer com divisão pelo determinante exige:",
+              "options": [
+                "Sistema quadrado e determinante dos coeficientes não zero",
+                "Só entradas positivas",
+                "Qualquer sistema retangular",
+                "Determinante igual a zero"
+              ],
+              "correctIndex": 0,
+              "explanation": "A forma de Cramer requer determinante não nulo; caso zero precisa de análise diferente."
+            },
+            {
+              "id": "bb2026-m16-q04",
+              "prompt": "No sistema x+y=9 e x−y=1, x vale:",
+              "options": [
+                "4",
+                "5",
+                "9",
+                "1"
+              ],
+              "correctIndex": 1,
+              "explanation": "Somar dá2x=10; x=5 e y=4, verificando ambas."
+            },
+            {
+              "id": "bb2026-m16-q05",
+              "prompt": "O sistema x+y=2 e2x+2y=5 tem:",
+              "options": [
+                "Solução única",
+                "Infinitas soluções",
+                "Sem solução",
+                "Solução (2,0)"
+              ],
+              "correctIndex": 2,
+              "explanation": "Dobrar a primeira daria2x+2y=4, incompatível com5."
+            },
+            {
+              "id": "bb2026-m16-q06",
+              "prompt": "Em x+y=4 e2x+2y=8, com x,y reais, há:",
+              "options": [
+                "Sem solução",
+                "Solução única",
+                "Só solução (4,0)",
+                "Infinitas soluções"
+              ],
+              "correctIndex": 3,
+              "explanation": "A segunda é redundante; qualquer (t,4−t) real satisfaz as duas."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m16-q01",
+                "bb2026-m16-q02",
+                "bb2026-m16-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/7-1-systems-of-linear-equations-two-variables"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m16-q04",
+                "bb2026-m16-q05",
+                "bb2026-m16-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/7-1-systems-of-linear-equations-two-variables"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m17",
+          "researchId": "M17",
+          "title": "Sequências e progressões aritméticas",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir fórmula explícita de recorrência · Calcular termos e soma de PA com índice consistente",
+          "objectives": [
+            "Distinguir fórmula explícita de recorrência",
+            "Calcular termos e soma de PA com índice consistente"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "A posição faz parte da regra",
+              "text": "Sequência associa uma posição inteira a um termo. Alguns poucos termos não determinam uma regra única sem hipótese. Fórmula explícita calcula a_n a partir de n; recorrência depende de termos anteriores e precisa de condição inicial. PA possui diferença constante d entre termos consecutivos: a_n=a_1+(n−1)d, para n≥1. A soma dos n primeiros é n(a_1+a_n)/2. Razão d pode ser positiva, negativa ou zero. Uma recorrência com acréscimo variável não é necessariamente PA; calcule cada transição em vez de aplicar fórmula indevidamente."
+            },
+            {
+              "type": "formula",
+              "title": "Termo e soma da PA",
+              "expression": "a_n=a_1+(n−1)d; S_n=n(a_1+a_n)/2",
+              "variables": [
+                {
+                  "name": "a_1",
+                  "meaning": "Primeiro termo, índice1",
+                  "unit": "unidade dos termos"
+                },
+                {
+                  "name": "d",
+                  "meaning": "Diferença constante",
+                  "unit": "unidade dos termos"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Quantidade/posição inteira positiva",
+                  "unit": "termos"
+                }
+              ],
+              "conditions": [
+                "n≥1 inteiro.",
+                "Diferença entre termos consecutivos constante."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "PA começa em4 e tem diferença5. Encontre o quinto termo e a soma dos cinco.",
+              "steps": [
+                "a_5=4+4×5=24.",
+                "S_5=5(4+24)/2=70."
+              ],
+              "answer": "Quinto termo24; soma70.",
+              "check": "Lista4,9,14,19,24 soma70 e todas as diferenças são5."
+            }
+          ],
+          "pitfalls": [
+            "Usar n diferenças do primeiro ao n-ésimo termo.",
+            "Inferir regra única de poucos termos sem hipótese."
+          ],
+          "recap": [
+            "Índice inicial precisa ser informado.",
+            "PA tem diferença constante.",
+            "Recorrência exige termo inicial e cada transição."
+          ],
+          "retrieval": [
+            "De a_1 até a_6 há quantas diferenças?",
+            "Razão zero é possível numa PA?"
+          ],
+          "notes": "Sequências e progressões aritméticas\nÍndice inicial precisa ser informado.\nPA tem diferença constante.\nRecorrência exige termo inicial e cada transição.\nUsar n diferenças do primeiro ao n-ésimo termo.\nInferir regra única de poucos termos sem hipótese.",
+          "suggestions": [
+            "Calcule termos de uma recorrência.",
+            "Confira a soma de PA por enumeração.",
+            "Distinga sequência geral de PA."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — sequências",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/9-1-sequences-and-their-notations"
+            },
+            {
+              "title": "OpenStax — PA",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m17-q01",
+              "prompt": "Uma PA tem entre termos consecutivos:",
+              "options": [
+                "Produto constante",
+                "Diferença constante",
+                "Quociente sempre2",
+                "Termos obrigatoriamente positivos"
+              ],
+              "correctIndex": 1,
+              "explanation": "O acréscimo d fixo caracteriza a progressão aritmética."
+            },
+            {
+              "id": "bb2026-m17-q02",
+              "prompt": "Uma recorrência exige, além da relação entre termos:",
+              "options": [
+                "Somente um título",
+                "Sempre termo final",
+                "Condição inicial suficiente",
+                "Uma base logarítmica"
+              ],
+              "correctIndex": 2,
+              "explanation": "Sem início, a relação pode descrever várias sequências."
+            },
+            {
+              "id": "bb2026-m17-q03",
+              "prompt": "Do primeiro ao sexto termo de uma PA há:",
+              "options": [
+                "6 diferenças",
+                "7 diferenças",
+                "4 diferenças",
+                "5 diferenças"
+              ],
+              "correctIndex": 3,
+              "explanation": "a_6=a_1+5d; são cinco transições."
+            },
+            {
+              "id": "bb2026-m17-q04",
+              "prompt": "PA com a_1=7 e d=3 tem a_6 igual a:",
+              "options": [
+                "22",
+                "25",
+                "18",
+                "21"
+              ],
+              "correctIndex": 0,
+              "explanation": "7+(6−1)×3=22; lista7,10,13,16,19,22."
+            },
+            {
+              "id": "bb2026-m17-q05",
+              "prompt": "A soma dos10 primeiros termos da PA2,4,6,... é:",
+              "options": [
+                "100",
+                "110",
+                "90",
+                "120"
+              ],
+              "correctIndex": 1,
+              "explanation": "Último20;10(2+20)/2=110."
+            },
+            {
+              "id": "bb2026-m17-q06",
+              "prompt": "a_1=1 e a_(n+1)=a_n+2n para n≥1. a_4 é:",
+              "options": [
+                "7",
+                "9",
+                "13",
+                "15"
+              ],
+              "correctIndex": 2,
+              "explanation": "a_2=3,a_3=7,a_4=13; os acréscimos2,4,6 não são constantes."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m17-q01",
+                "bb2026-m17-q02",
+                "bb2026-m17-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-1-sequences-and-their-notations",
+                "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences"
+              ]
+            },
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m17-q04",
+                "bb2026-m17-q05",
+                "bb2026-m17-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-1-sequences-and-their-notations",
+                "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences"
+              ]
+            },
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m17-q01",
+                "bb2026-m17-q02",
+                "bb2026-m17-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-1-sequences-and-their-notations",
+                "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences"
+              ]
+            },
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m17-q04",
+                "bb2026-m17-q05",
+                "bb2026-m17-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-1-sequences-and-their-notations",
+                "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-m18",
+          "researchId": "M18",
+          "title": "Progressões geométricas",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar fator multiplicativo e calcular termos · Somar PG finita e distinguir convergência infinita",
+          "objectives": [
+            "Identificar fator multiplicativo e calcular termos",
+            "Somar PG finita e distinguir convergência infinita"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Um fator fixo por transição",
+              "text": "PG satisfaz a_(n+1)=q·a_n. Com a_1 não zero, o quociente de termos consecutivos não nulos identifica q; a regra de multiplicação também admite q=0. Termo geral a_n=a_1q^(n−1), n≥1. Soma finita com q≠1 é a_1(1−q^n)/(1−q); para q=1 é n·a_1. Série geométrica infinita com primeiro termo não zero converge se |q|<1 e soma a_1/(1−q). Razão negativa alterna sinais; não basta q<1 para convergir, pois q=−2 tem módulo2. Sequência de termos e série de somas são objetos diferentes."
+            },
+            {
+              "type": "formula",
+              "title": "Soma finita e infinita",
+              "expression": "S_n=a_1(1−q^n)/(1−q); S_∞=a_1/(1−q)",
+              "variables": [
+                {
+                  "name": "a_1",
+                  "meaning": "Primeiro termo",
+                  "unit": "unidade dos termos"
+                },
+                {
+                  "name": "q",
+                  "meaning": "Razão multiplicativa",
+                  "unit": "adimensional"
+                },
+                {
+                  "name": "n",
+                  "meaning": "Quantidade positiva inteira de termos",
+                  "unit": "termos"
+                }
+              ],
+              "conditions": [
+                "Fórmula finita requer q≠1.",
+                "Infinita requer |q|<1; primeiro termo aqui não zero.",
+                "Para q=1, a soma finita é n·a_1."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Some os quatro primeiros termos de uma PG com a_1=3 e q=2.",
+              "steps": [
+                "Termos3,6,12,24.",
+                "Some3+6+12+24=45.",
+                "Pela fórmula:3(1−2⁴)/(1−2)=45."
+              ],
+              "answer": "45.",
+              "check": "Multiplicar a soma por2 e subtrair a original deixa48−3=45, confirmando o cancelamento."
+            }
+          ],
+          "pitfalls": [
+            "Confundir razão com diferença.",
+            "Aplicar soma infinita a q=−2 por ele ser menor que1."
+          ],
+          "recap": [
+            "PG tem fator multiplicativo constante.",
+            "Índice n usa n−1 transições.",
+            "Convergência infinita exige módulo da razão menor que1."
+          ],
+          "retrieval": [
+            "Qual tratamento da soma finita com q=1?",
+            "Por que alternância de sinais não garante convergência?"
+          ],
+          "notes": "Progressões geométricas\nPG tem fator multiplicativo constante.\nÍndice n usa n−1 transições.\nConvergência infinita exige módulo da razão menor que1.\nConfundir razão com diferença.\nAplicar soma infinita a q=−2 por ele ser menor que1.",
+          "suggestions": [
+            "Confira termo de PG por multiplicações sucessivas.",
+            "Some PG finita e compare com a fórmula.",
+            "Verifique a condição de convergência de uma série."
+          ],
+          "sources": [
+            {
+              "title": "OpenStax — PG",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences"
+            },
+            {
+              "title": "OpenStax — séries",
+              "url": "https://openstax.org/books/college-algebra-2e/pages/9-4-series-and-their-notations"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-matematica-video-1",
+            "bb2026-matematica-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-m18-q01",
+              "prompt": "Numa PG, cada termo é obtido do anterior por:",
+              "options": [
+                "Soma de valor fixo obrigatoriamente",
+                "Quadrado sempre",
+                "Multiplicação por fator fixo",
+                "Subtração de1 sempre"
+              ],
+              "correctIndex": 2,
+              "explanation": "A razão geométrica é multiplicativa; diferença constante caracteriza PA."
+            },
+            {
+              "id": "bb2026-m18-q02",
+              "prompt": "Para q=1, a soma de n termos iguais a a_1 é:",
+              "options": [
+                "a_1/(1−q)",
+                "0 sempre",
+                "a_1+n",
+                "n·a_1"
+              ],
+              "correctIndex": 3,
+              "explanation": "A fórmula com denominador1−q não serve; somar n cópias dá n·a_1."
+            },
+            {
+              "id": "bb2026-m18-q03",
+              "prompt": "Série geométrica infinita com a_1≠0 converge quando:",
+              "options": [
+                "|q|<1",
+                "q<1 sem outra condição",
+                "q>1",
+                "|q|≥1"
+              ],
+              "correctIndex": 0,
+              "explanation": "O módulo controla decaimento; q=−2 mostra por que q<1 sozinho não basta."
+            },
+            {
+              "id": "bb2026-m18-q04",
+              "prompt": "PG começa em3 e tem q=2. O quinto termo é:",
+              "options": [
+                "96",
+                "48",
+                "24",
+                "15"
+              ],
+              "correctIndex": 1,
+              "explanation": "3×2⁴=48; são quatro transições desde o primeiro."
+            },
+            {
+              "id": "bb2026-m18-q05",
+              "prompt": "PG começa em2 e tem q=3. Soma dos quatro primeiros termos:",
+              "options": [
+                "54",
+                "78",
+                "80",
+                "162"
+              ],
+              "correctIndex": 2,
+              "explanation": "2+6+18+54=80."
+            },
+            {
+              "id": "bb2026-m18-q06",
+              "prompt": "A soma infinita1+1/2+1/4+... vale:",
+              "options": [
+                "1",
+                "1,5",
+                "3",
+                "2"
+              ],
+              "correctIndex": 3,
+              "explanation": "|q|=1/2<1 e1/(1−1/2)=2; somas parciais aproximam esse limite."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m18-q01",
+                "bb2026-m18-q02",
+                "bb2026-m18-q03"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences",
+                "https://openstax.org/books/college-algebra-2e/pages/9-4-series-and-their-notations"
+              ]
+            },
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-m18-q04",
+                "bb2026-m18-q05",
+                "bb2026-m18-q06"
+              ],
+              "sourceUrls": [
+                "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences",
+                "https://openstax.org/books/college-algebra-2e/pages/9-4-series-and-their-notations"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ingles",
