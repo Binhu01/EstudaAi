@@ -16,9 +16,8 @@ export class LearningEntry {
   ) { Object.freeze(this); }
   static fromFree(topic: StudyTopic, contentVersion: number): LearningEntry {
     return new LearningEntry(topic, 'freeStudy', contentVersion, Object.freeze([
-      `Explique ${topic.title} com um exemplo.`,
-      'Como posso resolver uma questão deste assunto?',
-      'Como uso as aulas e os desafios da plataforma?',
+      ({porcentagem:'Como calcular um desconto de 20%?', 'interpretacao-texto':'Como encontrar a ideia principal de um texto?',ecologia:'Qual é a diferença entre cadeia e teia alimentar?'} as Record<string,string>)[topic.id] ?? `Explique ${topic.title} com um exemplo.`,
+      'Como usar as aulas e os desafios?',
     ]));
   }
   static fromContest(catalog: ContestCatalog, location: ContestLocation): LearningEntry {

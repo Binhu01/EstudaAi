@@ -82,6 +82,16 @@ final routerProvider = Provider<GoRouter>((ref) {
             builder: (context, state) => const AccountScreen(),
           ),
           GoRoute(
+            path: '/concursos/:courseId/:disciplineId/:topicId/steve',
+            builder: (context, state) => _contestScope(
+              state,
+              SteveScreen(
+                topicId: state.pathParameters['topicId']!,
+                area: LearningArea.contest,
+              ),
+            ),
+          ),
+          GoRoute(
             path: '/steve/:topicId',
             builder: (context, state) =>
                 SteveScreen(topicId: state.pathParameters['topicId']!),

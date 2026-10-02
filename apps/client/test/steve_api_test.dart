@@ -41,7 +41,7 @@ void main() {
     final api = SteveApi(
       baseUrl: Uri.parse('https://study.example'),
       token: () async => 'id-token',
-      catalog: testCatalog(),
+      findTopic: testCatalog().find,
       dio: dio,
     );
     final reply = await api.send(
@@ -145,7 +145,7 @@ void main() {
       SteveApi api(Future<String?> Function() token) => SteveApi(
         baseUrl: Uri.parse('https://study.example'),
         token: token,
-        catalog: testCatalog(),
+        findTopic: testCatalog().find,
         dio: dio,
       );
       await expectLater(

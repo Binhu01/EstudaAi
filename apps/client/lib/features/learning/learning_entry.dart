@@ -28,9 +28,14 @@ class LearningEntry {
         area: LearningArea.freeStudy,
         contentVersion: contentVersion,
         suggestions: List.unmodifiable([
-          'Explique ${topic.title} com um exemplo.',
-          'Como posso resolver uma questão deste assunto?',
-          'Como uso as aulas e os desafios da plataforma?',
+          switch (topic.id) {
+            'porcentagem' => 'Como calcular um desconto de 20%?',
+            'interpretacao-texto' =>
+              'Como encontrar a ideia principal de um texto?',
+            'ecologia' => 'Qual é a diferença entre cadeia e teia alimentar?',
+            _ => 'Explique ${topic.title} com um exemplo.',
+          },
+          'Como usar as aulas e os desafios?',
         ]),
       );
   factory LearningEntry.fromContest(

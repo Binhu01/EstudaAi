@@ -6,18 +6,27 @@ import '../../core/api_failure.dart';
 import '../../design_system/components/pixel_avatar.dart';
 import '../auth/session_controller.dart';
 import '../learning/learning_controller.dart';
-import '../learning/learning_screen.dart';
-import '../learning/study_catalog.dart';
+import '../learning/learning_entry.dart';
+import '../learning/learning_entry_view.dart';
+import '../learning/study_routes.dart';
+import '../contests/contest_module_actions.dart';
 import 'steve_controller.dart';
 import 'steve_message.dart';
 
 class SteveScreen extends ConsumerWidget {
-  const SteveScreen({super.key, required this.topicId});
+  const SteveScreen({
+    super.key,
+    required this.topicId,
+    this.area = LearningArea.freeStudy,
+  });
   final String topicId;
+  final LearningArea area;
   @override
-  Widget build(BuildContext context, WidgetRef ref) => StudyTopicView(
+  Widget build(BuildContext context, WidgetRef ref) => LearningEntryView(
     topicId: topicId,
-    builder: (catalog, topic) {
+    area: area,
+    builder: (entry) {
+      final topic = entry.topic;
       final session = ref.watch(sessionProvider),
           learning = ref.watch(learningProvider);
       final chatContext = session.isAuthenticated
@@ -30,8 +39,7 @@ class SteveScreen extends ConsumerWidget {
           : null;
       return _Chat(
         key: ValueKey(chatContext ?? (topic.id, session.generation)),
-        catalog: catalog,
-        topic: topic,
+        entry: entry,
         chatContext: chatContext,
       );
     },
@@ -39,14 +47,8 @@ class SteveScreen extends ConsumerWidget {
 }
 
 class _Chat extends ConsumerStatefulWidget {
-  const _Chat({
-    super.key,
-    required this.catalog,
-    required this.topic,
-    this.chatContext,
-  });
-  final LearningCatalog catalog;
-  final StudyTopic topic;
+  const _Chat({super.key, required this.entry, this.chatContext});
+  final LearningEntry entry;
   final SteveContext? chatContext;
   @override
   ConsumerState<_Chat> createState() => _ChatState();
@@ -77,15 +79,7 @@ class _ChatState extends ConsumerState<_Chat> {
   Widget build(BuildContext context) {
     final key = widget.chatContext;
     final state = key == null ? null : ref.watch(steveProvider(key));
-    final suggestions = [
-      switch (widget.topic.id) {
-        'porcentagem' => 'Como calcular um desconto de 20%?',
-        'interpretacao-texto' =>
-          'Como encontrar a ideia principal de um texto?',
-        _ => 'Qual é a diferença entre cadeia e teia alimentar?',
-      },
-      'Como usar as aulas e os desafios?',
-    ];
+    final entry = widget.entry, suggestions = entry.suggestions;
     return SingleChildScrollView(
       child: Center(
         child: ConstrainedBox(
@@ -102,13 +96,29 @@ class _ChatState extends ConsumerState<_Chat> {
                 const SizedBox(height: 16),
                 Text('Steve', style: Theme.of(context).textTheme.headlineLarge),
                 const SizedBox(height: 8),
-                const Text('Seu companheiro de estudo · Estudo livre'),
-                const SizedBox(height: 24),
-                TopicSelector(
-                  catalog: widget.catalog,
-                  topicId: widget.topic.id,
-                  routePrefix: '/steve',
+                Text(
+                  entry.area == LearningArea.contest
+                      ? 'Seu companheiro de estudo · Concursos · ${entry.courseTitle}'
+                      : 'Seu companheiro de estudo · Estudo livre',
                 ),
+                const SizedBox(height: 24),
+                LearningEntrySelector(entry: entry, action: StudyAction.steve),
+                if (entry.area == LearningArea.contest) ...[
+                  const SizedBox(height: 20),
+                  ContestModuleActions(
+                    entry: entry,
+                    selected: StudyAction.steve,
+                  ),
+                  const SizedBox(height: 12),
+                  Text('${entry.topic.subject} · ${entry.topic.title}'),
+                  if (entry.disciplineId == 'redacao')
+                    const Padding(
+                      padding: EdgeInsets.only(top: 12),
+                      child: Text(
+                        'Apoio formativo à escrita, sem nota oficial.',
+                      ),
+                    ),
+                ],
                 const SizedBox(height: 24),
                 if (key == null) ...[
                   const Text('Entre na sua conta para conversar com o Steve.'),
@@ -119,7 +129,9 @@ class _ChatState extends ConsumerState<_Chat> {
                   ),
                   const SizedBox(height: 16),
                   TextButton(
-                    onPressed: () => context.go('/aprender/${widget.topic.id}'),
+                    onPressed: () => context.go(
+                      StudyRoutes.path(entry, StudyAction.lessons),
+                    ),
                     child: const Text('Ver videoaulas deste assunto'),
                   ),
                 ] else ...[

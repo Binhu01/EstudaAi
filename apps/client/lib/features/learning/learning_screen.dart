@@ -4,82 +4,12 @@ import 'package:go_router/go_router.dart';
 
 import '../../design_system/tokens.dart';
 import 'study_catalog.dart';
-import 'learning_controller.dart';
-import 'topic_scope.dart';
-import 'topic_not_found.dart';
 import 'lesson_player.dart';
 import 'external_links.dart';
 import 'learning_entry.dart';
 import 'learning_entry_view.dart';
 import 'study_routes.dart';
 import '../contests/contest_module_actions.dart';
-
-class StudyTopicView extends ConsumerWidget {
-  const StudyTopicView({
-    super.key,
-    required this.topicId,
-    required this.builder,
-  });
-  final String topicId;
-  final Widget Function(LearningCatalog, StudyTopic) builder;
-  @override
-  Widget build(BuildContext context, WidgetRef ref) => ref
-      .watch(catalogProvider)
-      .when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (_, stack) => Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('Não foi possível carregar os assuntos.'),
-              TextButton(
-                onPressed: () => ref.invalidate(catalogProvider),
-                child: const Text('Tentar novamente'),
-              ),
-            ],
-          ),
-        ),
-        data: (catalog) {
-          final topic = catalog.find(topicId);
-          if (topic == null) return const TopicNotFound();
-          return TopicScope(topicId: topicId, child: builder(catalog, topic));
-        },
-      );
-}
-
-class TopicSelector extends StatelessWidget {
-  const TopicSelector({
-    super.key,
-    required this.catalog,
-    required this.topicId,
-    required this.routePrefix,
-  });
-  final LearningCatalog catalog;
-  final String topicId, routePrefix;
-  @override
-  Widget build(BuildContext context) => ConstrainedBox(
-    constraints: const BoxConstraints(maxWidth: 500),
-    child: DropdownButtonFormField<String>(
-      initialValue: topicId,
-      isExpanded: true,
-      itemHeight: null,
-      decoration: const InputDecoration(
-        labelText: 'Assunto',
-        border: OutlineInputBorder(),
-      ),
-      items: [
-        for (final t in catalog.topics)
-          DropdownMenuItem(
-            value: t.id,
-            child: Text(t.title, overflow: TextOverflow.ellipsis),
-          ),
-      ],
-      onChanged: (id) {
-        if (id != null) context.go('$routePrefix/$id');
-      },
-    ),
-  );
-}
 
 class LearningScreen extends StatelessWidget {
   const LearningScreen({
