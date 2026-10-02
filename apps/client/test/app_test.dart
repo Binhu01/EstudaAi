@@ -71,7 +71,11 @@ void main() {
         const Locale('pt', 'BR'),
       );
       expect(find.text('Escolher meu assunto'), findsOneWidget);
-      await tester.tap(find.text('Preferências').first);
+      await tester.tap(
+        size.width < 600
+            ? find.byTooltip('Preferências')
+            : find.text('Preferências').first,
+      );
       await tester.pumpAndSettle();
       expect(find.text('Aparência'), findsOneWidget);
       await tester.tap(find.text('Escuro'));
@@ -95,7 +99,7 @@ void main() {
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
     expect(tester.takeException(), isNull);
-    await tester.tap(find.text('Preferências').first);
+    await tester.tap(find.byTooltip('Preferências'));
     await tester.pumpAndSettle();
     expect(find.text('Animação de fundo'), findsOneWidget);
     expect(tester.takeException(), isNull);

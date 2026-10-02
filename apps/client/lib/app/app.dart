@@ -15,6 +15,15 @@ import '../features/settings/settings_screen.dart';
 import '../features/settings/settings_controller.dart';
 import '../design_system/gallery.dart';
 import 'shell.dart';
+import '../features/learning/learning_catalog_providers.dart';
+import '../features/learning/learning_controller.dart';
+import '../features/learning/learning_entry.dart';
+import '../features/learning/learning_entry_view.dart';
+import '../features/contests/contests_screen.dart';
+import '../features/contests/contest_course_screen.dart';
+import '../features/contests/contest_discipline_screen.dart';
+import '../features/contests/contest_material_screen.dart';
+import '../features/contests/contest_route_scope.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   final router = GoRouter(
@@ -23,7 +32,41 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state, child) =>
             AppShell(location: state.uri.path, child: child),
         routes: [
-          GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
+          GoRoute(path: '/', builder: (context, state) => const _FreeHome()),
+          GoRoute(
+            path: '/concursos',
+            builder: (context, state) => const ContestsScreen(),
+          ),
+          GoRoute(
+            path: '/concursos/:courseId',
+            builder: (context, state) => ContestCourseScreen(
+              courseId: state.pathParameters['courseId']!,
+            ),
+          ),
+          GoRoute(
+            path: '/concursos/:courseId/:disciplineId',
+            builder: (context, state) => ContestDisciplineScreen(
+              courseId: state.pathParameters['courseId']!,
+              disciplineId: state.pathParameters['disciplineId']!,
+            ),
+          ),
+          GoRoute(
+            path: '/concursos/:courseId/:disciplineId/:topicId/material',
+            builder: (context, state) => _contestScope(
+              state,
+              ContestMaterialScreen(topicId: state.pathParameters['topicId']!),
+            ),
+          ),
+          GoRoute(
+            path: '/concursos/:courseId/:disciplineId/:topicId/aulas',
+            builder: (context, state) => _contestScope(
+              state,
+              LearningScreen(
+                topicId: state.pathParameters['topicId']!,
+                area: LearningArea.contest,
+              ),
+            ),
+          ),
           GoRoute(
             path: '/conta',
             builder: (context, state) => const AccountScreen(),
@@ -59,6 +102,29 @@ final routerProvider = Provider<GoRouter>((ref) {
   ref.onDispose(router.dispose);
   return router;
 });
+
+Widget _contestScope(GoRouterState state, Widget child) => ContestRouteScope(
+  courseId: state.pathParameters['courseId']!,
+  disciplineId: state.pathParameters['disciplineId']!,
+  topicId: state.pathParameters['topicId']!,
+  child: child,
+);
+
+class _FreeHome extends ConsumerWidget {
+  const _FreeHome();
+  @override
+  Widget build(BuildContext context, WidgetRef ref) => ref
+      .watch(catalogProvider)
+      .when(
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error: (_, stack) =>
+            CatalogRecovery(onRetry: () => ref.invalidate(catalogProvider)),
+        data: (_) => const LearningAreaScope(
+          area: LearningArea.freeStudy,
+          child: HomeScreen(),
+        ),
+      );
+}
 
 class EstudaAiApp extends ConsumerWidget {
   const EstudaAiApp({super.key});
