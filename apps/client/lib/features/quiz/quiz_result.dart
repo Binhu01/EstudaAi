@@ -6,15 +6,17 @@ import '../../design_system/components/pixel_avatar.dart';
 import '../../design_system/tokens.dart';
 import '../settings/settings_controller.dart';
 import 'quiz_controller.dart';
+import '../learning/learning_entry.dart';
+import '../learning/study_routes.dart';
 
 class QuizResult extends ConsumerWidget {
   const QuizResult({
     super.key,
-    required this.topicId,
+    required this.entry,
     required this.result,
     required this.onRepeat,
   });
-  final String topicId;
+  final LearningEntry entry;
   final QuizViewState result;
   final VoidCallback onRepeat;
   @override
@@ -67,9 +69,22 @@ class QuizResult extends ConsumerWidget {
             child: const Text('Repetir desafio'),
           ),
           OutlinedButton(
-            onPressed: () => context.go('/aprender/$topicId'),
+            onPressed: () =>
+                context.go(StudyRoutes.path(entry, StudyAction.lessons)),
             child: const Text('Assistir aula'),
           ),
+          if (entry.area == LearningArea.contest) ...[
+            OutlinedButton(
+              onPressed: () =>
+                  context.go(StudyRoutes.path(entry, StudyAction.material)),
+              child: const Text('Revisar material'),
+            ),
+            OutlinedButton(
+              onPressed: () =>
+                  context.go(StudyRoutes.path(entry, StudyAction.steve)),
+              child: const Text('Perguntar ao Steve'),
+            ),
+          ],
         ],
       ),
     ],
