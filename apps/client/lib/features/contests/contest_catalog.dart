@@ -55,8 +55,9 @@ String _date(dynamic v) {
   final d = DateTime.tryParse(s);
   if (!RegExp(r'^\d{4}-\d{2}-\d{2}$').hasMatch(s) ||
       d == null ||
-      d.toIso8601String().substring(0, 10) != s)
+      d.toIso8601String().substring(0, 10) != s) {
     _fail('data inválida');
+  }
   return s;
 }
 
@@ -92,8 +93,9 @@ MaterialBlock _block(dynamic v) {
     case 'table':
       final columns = _list(b['columns'], _text),
           rows = _list(b['rows'], (v) => _list(v, _text));
-      if (rows.any((r) => r.length != columns.length))
+      if (rows.any((r) => r.length != columns.length)) {
         _fail('tabela irregular');
+      }
       return TableBlock(title, columns, rows, _text(b['caption']));
     default:
       return _fail('tipo de bloco desconhecido');
@@ -126,8 +128,9 @@ CoverageRow _coverage(dynamic v) {
 
 ContestCourse _course(dynamic v) {
   final c = _object(v);
-  if (c['id'] != 'bb2026' || c['status'] != 'preparation')
+  if (c['id'] != 'bb2026' || c['status'] != 'preparation') {
     _fail('curso/status inválido');
+  }
   return ContestCourse(
     c['id'],
     _text(c['title']),
@@ -162,8 +165,9 @@ ContestDiscipline _discipline(dynamic v) {
   if (layout == null) _fail('disciplina desconhecida');
   final lessons = _list(d['lessons'], StudyLesson.parse);
   if (lessons.length != 2 ||
-      lessons.any((l) => !l.id.startsWith('bb2026-$disciplineId-')))
+      lessons.any((l) => !l.id.startsWith('bb2026-$disciplineId-'))) {
     _fail('aulas inválidas');
+  }
   _unique(lessons.map((l) => l.id));
   _unique(lessons.map((l) => l.videoId));
   final refs = _references(disciplineId), prefix = layout.$1, count = layout.$2;
@@ -172,8 +176,9 @@ ContestDiscipline _discipline(dynamic v) {
         moduleId = _id(m['id']),
         researchId = _text(m['researchId']);
     if (!RegExp('^bb2026-$prefix\\d{2}\$').hasMatch(moduleId) ||
-        researchId != moduleId.substring(7).toUpperCase())
+        researchId != moduleId.substring(7).toUpperCase()) {
       _fail('módulo fora da disciplina');
+    }
     final objectives = _list(m['objectives'], _text),
         blocks = _list(m['blocks'], _block),
         questions = _list(m['questions'], StudyQuestion.parse),
@@ -186,8 +191,9 @@ ContestDiscipline _discipline(dynamic v) {
     if (questions.length != 6 ||
         suggestions.length != 3 ||
         notes.length > 4000 ||
-        !blocks.any((b) => b is ExampleBlock))
+        !blocks.any((b) => b is ExampleBlock)) {
       _fail('módulo incompleto');
+    }
     _unique(questions.map((q) => q.id));
     _unique(lessonIds);
     _unique(sources.map((s) => s.url));
@@ -197,13 +203,15 @@ ContestDiscipline _discipline(dynamic v) {
               q.$2.id != '$moduleId-q${(q.$1 + 1).toString().padLeft(2, '0')}',
         ) ||
         lessonIds.length > 2 ||
-        lessonIds.any((l) => !lessons.any((x) => x.id == l)))
+        lessonIds.any((l) => !lessons.any((x) => x.id == l))) {
       _fail('vínculo de questão/aula inválido');
+    }
     final number = int.parse(moduleId.substring(moduleId.length - 2)),
         expectedWriting = disciplineId == 'redacao' ? (number == 5 ? 2 : 1) : 0;
     if (writingTasks.length != expectedWriting ||
-        writingTasks.any((w) => !w.id.startsWith('$moduleId-')))
+        writingTasks.any((w) => !w.id.startsWith('$moduleId-'))) {
       _fail('tarefas de escrita inválidas');
+    }
     for (final c in rows) {
       _unique(c.blockIndexes);
       _unique(c.questionIds);
@@ -216,14 +224,16 @@ ContestDiscipline _discipline(dynamic v) {
           c.exampleBlockIndex >= blocks.length ||
           blocks[c.exampleBlockIndex] is! ExampleBlock ||
           c.questionIds.any((q) => !questions.any((x) => x.id == q)) ||
-          c.sourceUrls.any((u) => !sources.any((s) => s.url == u)))
+          c.sourceUrls.any((u) => !sources.any((s) => s.url == u))) {
         _fail('cobertura com vínculo inválido');
+      }
     }
     if (objectives.indexed.any(
           (o) => !rows.any((c) => c.objectiveIndex == o.$1),
         ) ||
-        questions.any((q) => !rows.any((c) => c.questionIds.contains(q.id))))
+        questions.any((q) => !rows.any((c) => c.questionIds.contains(q.id)))) {
       _fail('objetivo/prática sem cobertura');
+    }
     return ContestModule(
       id: moduleId,
       researchId: researchId,
@@ -250,13 +260,15 @@ ContestDiscipline _discipline(dynamic v) {
       modules.indexed.any(
         (m) =>
             m.$2.id != 'bb2026-$prefix${(m.$1 + 1).toString().padLeft(2, '0')}',
-      ))
+      )) {
     _fail('sequência de módulos incompleta');
+  }
   if (refs.any(
     (item) =>
         !modules.any((m) => m.coverage.any((c) => c.referenceItem == item)),
-  ))
+  )) {
     _fail('item histórico ausente');
+  }
   return ContestDiscipline(
     disciplineId,
     _text(d['title']),
