@@ -4,3 +4,4 @@ import assert from 'node:assert/strict';
 import {verifyContestContent,verifyContestMetadata} from '../verify-contest-content.mjs';
 export function loadEditorialRoot(){return JSON.parse(readFileSync(new URL('../../apps/client/assets/contests/bb2026/catalog.json',import.meta.url),'utf8'));}
 test('metadata_and_videos_ready',()=>{const report=verifyContestMetadata(loadEditorialRoot());assert.equal(report.lessons,18);assert.deepEqual(report.errors,[]);});
+test('bancarios_ready',()=>{const report=verifyContestContent(loadEditorialRoot(),{disciplineId:'bancarios'});assert.deepEqual(report.errors,[]);assert.equal(report.modules,22);assert.equal(report.questions,132);assert.equal(report.writingTasks,0);});
