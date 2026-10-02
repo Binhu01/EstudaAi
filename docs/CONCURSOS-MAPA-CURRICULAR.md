@@ -194,4 +194,4 @@ Português/Inglês precisam de textos próprios. Fórmulas devem ser acessíveis
 - Financeira: compatibilidade entre taxa e prazo; distinção entre conversão proporcional e equivalência composta; linha do tempo e pagamentos; modelos de SAC/Price sem reutilizar os números das apostilas.
 - Informática: e-mail assíncrono e independente de webmail; IMAP como Internet Message Access Protocol; alcance real do CCO; sincronização diferente de backup; distribuições/suítes e versões sem equivalências automáticas.
 
-As fontes oficiais e a análise dos oito PDFs estão no [registro de pesquisa](CONCURSOS-REFERENCIAS.md). O catálogo, as rotas, os componentes e os exercícios ainda não foram alterados.
+As fontes oficiais e a análise dos oito PDFs estão no [registro de pesquisa](CONCURSOS-REFERENCIAS.md). O catálogo autoral e os exercícios passaram pela revisão editorial integral em 02/10/2026; a [matriz de cobertura](CONCURSOS-COBERTURA.md) registra os vínculos. A integração das rotas e componentes continua no plano principal.

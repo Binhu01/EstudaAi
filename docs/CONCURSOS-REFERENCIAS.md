@@ -1,6 +1,6 @@
 # Análise das referências — Concursos / Banco do Brasil 2026
 
-Registro de pesquisa de 01/10/2026. A estrutura modular, a [especificação escrita](superpowers/specs/2026-10-01-concursos-bb2026-design.md) e os dois planos de implementação foram aprovados pelo usuário. A autoria e implementação estão em andamento.
+Registro de pesquisa de 01/10/2026. A estrutura modular, a [especificação escrita](superpowers/specs/2026-10-01-concursos-bb2026-design.md) e os dois planos de implementação foram aprovados pelo usuário. A autoria dos 126 módulos foi revisada em 02/10/2026; a implementação da experiência no app está em andamento. A [matriz de cobertura](CONCURSOS-COBERTURA.md) descreve o alcance e as limitações das verificações editoriais.
 
 ## Intenção confirmada
 
