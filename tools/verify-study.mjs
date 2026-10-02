@@ -92,7 +92,10 @@ try {
         await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
         await password.pressSequentially('test-password',{delay:30});
         await clickText(page,'Entrar na conta');
-        await expect(page.getByText('O serviço está indisponível no momento. Tente novamente mais tarde.',{exact:true})).toBeVisible();
+        // Live-region announcements repeat the message outside the app semantics.
+        const failure=page.locator('flt-semantics').getByText('O serviço está indisponível no momento. Tente novamente mais tarde.',{exact:true});
+        await expect(failure).toHaveCount(1);
+        await expect(failure).toBeVisible();
         await page.screenshot({path:`${output}/${viewport.width}-account-unavailable.png`});
       }
       await navigation(page,'Steve').click();await route(page,`/steve/${topic.id}`);

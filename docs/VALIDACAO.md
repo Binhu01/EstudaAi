@@ -1,5 +1,13 @@
 # Evidências da experiência de estudo
 
+## CI do Pull Request #1 — 02/10/2026
+
+A primeira execução remota, no commit `79d112e`, comprovou geração, testes e build da API, o verificador integral do catálogo e a integração com PostgreSQL 17.11. O job Flutter comprovou geração, lockfile, formatação, análise, testes, build Web e verificação visual nos três tamanhos.
+
+O percurso de Estudo livre falhou ao localizar a mensagem de indisponibilidade do login: o Flutter disponibilizou o mesmo texto no conteúdo e no anúncio para leitores de tela. O seletor global encontrou dois elementos. A correção limita essa verificação à árvore semântica do aplicativo, exige uma única mensagem e preserva o anúncio acessível. O percurso de Concursos não chegou a executar nessa primeira tentativa.
+
+As verificações da nova execução e do commit atual podem ser consultadas no [Pull Request #1](https://github.com/Binhu01/EstudaAi/pull/1). Os registros locais abaixo descrevem o fechamento anterior ao envio ao GitHub; seus limites de CI e PostgreSQL não substituem esta evidência remota posterior. Login/IA reais, builds nativos e deploy continuam sem validação ao vivo.
+
 ## Concursos — 02/10/2026
 
 Branch `codex/concursos-bb2026`, baseada em `b9154fc`, no EstudaAi separado da AlmaPet. Catálogo integral: 126 módulos, 756 questões, seis propostas de Redação e 18 vídeos distintos. Revisão editorial do autor, vínculos históricos e 24 oráculos numéricos conferidos; comparação com oito extrações privadas sem coincidências de 12 ou mais palavras. Não se apresenta essa comparação como certificação universal.
