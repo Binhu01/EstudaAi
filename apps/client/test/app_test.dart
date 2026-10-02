@@ -9,6 +9,8 @@ import 'package:estuda_ai/app/app.dart';
 import 'package:estuda_ai/features/settings/settings_controller.dart';
 import 'package:estuda_ai/features/learning/study_catalog.dart';
 import 'package:estuda_ai/features/learning/learning_controller.dart';
+import 'package:estuda_ai/features/learning/learning_catalog_providers.dart';
+import 'package:estuda_ai/features/contests/contest_catalog.dart';
 import 'package:estuda_ai/features/learning/external_links.dart';
 import 'package:estuda_ai/features/steve/steve_controller.dart';
 
@@ -27,11 +29,13 @@ Future<void> openApp(
   SharedPreferences.setMockInitialValues({'animate': false});
   final prefs = await SharedPreferences.getInstance();
   final catalog = await tester.runAsync(() => loadCatalog(rootBundle));
+  final contests = await tester.runAsync(() => loadContestCatalog(rootBundle));
   await tester.pumpWidget(
     ProviderScope(
       overrides: [
         preferencesProvider.overrideWithValue(prefs),
         catalogProvider.overrideWith((ref) async => catalog!),
+        contestCatalogProvider.overrideWith((ref) async => contests!),
         if (openLink != null) externalLinkProvider.overrideWithValue(openLink),
         if (dio != null) dioProvider.overrideWithValue(dio),
         if (steveClock != null)
