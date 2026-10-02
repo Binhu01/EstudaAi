@@ -17,6 +17,7 @@ Future<ProviderContainer> loggedIn(Dio dio) async {
     overrides: [
       dioProvider.overrideWithValue(dio),
       catalogProvider.overrideWith((ref) async => testCatalog()),
+      steveClockProvider.overrideWithValue(() => DateTime.utc(2026, 10, 1, 12)),
     ],
   );
   await c.read(catalogProvider.future);

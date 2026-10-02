@@ -117,6 +117,7 @@ void main() {
         tester,
         scale: 2,
         dio: dio,
+        steveClock: () => DateTime.utc(2026, 10, 1, 12),
         openLink: (url) async {
           opened.add(url);
           return true;

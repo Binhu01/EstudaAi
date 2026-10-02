@@ -42,7 +42,7 @@ Comandos por disciplina, na raiz: `node --test --test-name-pattern=<nome> tools/
 
 Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacunas do mapa; escrever do zero explicações/passagens, exemplos e questões; resolver cada questão sem consultar o gabarito; revisar alternativas e comentário; verificar matrizes e dados; registrar cobertura/fontes. Escrever pelo menos um exemplo completo por módulo, com `check` efetivo. Distribuir reconhecimento, aplicação e interpretação nas seis questões, evitando trocar apenas números ou substantivos. Atualizar as três sugestões do Steve para o assunto real.
 
-## C0 — Referências de vídeo e metadados
+## Task 1: C0 — Referências de vídeo e metadados
 
 **Files:** criar canônico, `docs/CONCURSOS-COBERTURA.md`, `tools/test/contest-editorial.test.mjs`; atualizar `docs/CONCURSOS-REFERENCIAS.md` com links complementares sem copiar conteúdo.
 
@@ -54,7 +54,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar o teste: exit0. Registrar em artifacts o que foi realmente observado sobre player/link e substituir apoio indisponível.
 - [ ] Commit dos arquivos C0: `content: curar aulas e referencias de concursos`.
 
-## C1 — Conhecimentos Bancários
+## Task 2: C1 — Conhecimentos Bancários
 
 **Files:** canônico, cobertura e teste editorial. **Interfaces:** consome envelope C0/T1; produz `bancarios`, B01–B22/`bb2026-b01`…`b22`, 22 módulos, 132 questões e zero tarefas de escrita.
 
@@ -65,7 +65,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline bancarios`: exit0/N22/Q132/W0.
 - [ ] Commit dos arquivos C1: `content: escrever conhecimentos bancarios autorais`.
 
-## C2 — Atualidades do Mercado Financeiro
+## Task 3: C2 — Atualidades do Mercado Financeiro
 
 **Files:** canônico, cobertura, teste. **Interfaces:** consome C0/T1; produz `atualidades`, A01–A12, 12 módulos, 72 questões/W0.
 
@@ -76,7 +76,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline atualidades`: exit0/N12/Q72/W0.
 - [ ] Commit dos arquivos C2: `content: escrever atualidades financeiras autorais`.
 
-## C3 — Língua Portuguesa
+## Task 4: C3 — Língua Portuguesa
 
 **Files:** canônico, cobertura, teste. **Interfaces:** consome C0/T1; produz `portugues`, P01–P13, 13 módulos, 78 questões/W0.
 
@@ -87,7 +87,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline portugues`: exit0/N13/Q78/W0.
 - [ ] Commit dos arquivos C3: `content: escrever portugues autoral para concursos`.
 
-## C4 — Matemática
+## Task 5: C4 — Matemática
 
 **Files:** canônico, cobertura, teste; criar `apps/api/test/contest-calculations.test.ts` com oráculos independentes identificados por questionId.
 
@@ -100,7 +100,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste editorial/`--discipline matematica` e `npm run build` seguido de `node --test apps/api/dist/test/contest-calculations.test.js`: exit0/N18/Q108/W0, oráculos conferidos.
 - [ ] Commit dos arquivos C4: `content: escrever matematica e conferir gabaritos`.
 
-## C5 — Língua Inglesa
+## Task 6: C5 — Língua Inglesa
 
 **Files:** canônico, cobertura, teste. **Interfaces:** consome C0/T1; produz `ingles`, E01–E08, oito módulos, 48 questões/W0.
 
@@ -111,7 +111,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline ingles`: exit0/N8/Q48/W0.
 - [ ] Commit dos arquivos C5: `content: escrever ingles autoral para concursos`.
 
-## C6 — Vendas e Negociação
+## Task 7: C6 — Vendas e Negociação
 
 **Files:** canônico, cobertura, teste. **Interfaces:** consome C0/T1; produz `vendas`, V01–V20, 20 módulos, 120 questões/W0.
 
@@ -122,7 +122,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline vendas`: exit0/N20/Q120/W0.
 - [ ] Commit dos arquivos C6: `content: escrever vendas e negociacao autorais`.
 
-## C7 — Matemática Financeira
+## Task 8: C7 — Matemática Financeira
 
 **Files:** canônico, cobertura, teste; ampliar `apps/api/test/contest-calculations.test.ts`.
 
@@ -135,7 +135,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste/`--discipline financeira` e testes numéricos C4: exit0/N7/Q42/W0, saldo/capital reconciliados.
 - [ ] Commit dos arquivos C7: `content: escrever matematica financeira com calculos conferidos`.
 
-## C8 — Informática
+## Task 9: C8 — Informática
 
 **Files:** canônico, cobertura, teste. **Interfaces:** consome C0/T1; produz `informatica`, I01–I21, 21 módulos, 126 questões/W0.
 
@@ -146,7 +146,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline informatica`: exit0/N21/Q126/W0.
 - [ ] Commit dos arquivos C8: `content: escrever informatica autoral e contextualizada`.
 
-## C9 — Oficinas de Redação
+## Task 10: C9 — Oficinas de Redação
 
 **Files:** canônico, cobertura, teste. **Interfaces:** consome C0/T1; produz `redacao`, R01–R05, cinco oficinas, 30 questões formativas e seis WritingTasks (1/1/1/1/2).
 
@@ -157,7 +157,7 @@ Rotina editorial em cada tarefa: consultar as fontes indicadas e conferir lacuna
 - [ ] Rodar teste e `--discipline redacao`: exit0/N5/Q30/W6.
 - [ ] Commit dos arquivos C9: `content: escrever oficinas e propostas originais de redacao`.
 
-## C10 — Cobertura, originalidade e aprovação editorial integral
+## Task 11: C10 — Cobertura, originalidade e aprovação editorial integral
 
 **Files:** completar `docs/CONCURSOS-COBERTURA.md`, canônico e teste editorial; criar `tools/check-contest-originality.mjs`, `tools/test/contest-originality.test.mjs`; relatórios privados em `artifacts/concursos-bb2026/editorial`.
 
