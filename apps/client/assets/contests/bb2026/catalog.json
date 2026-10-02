@@ -4336,7 +4336,2383 @@
           "videoId": "L7lhz2E4zHc"
         }
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "bb2026-a01",
+          "researchId": "A01",
+          "title": "Bancos e transformação digital",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir digitalização de transformação do serviço · Relacionar experiência, concorrência e proteção",
+          "objectives": [
+            "Distinguir digitalização de transformação do serviço",
+            "Relacionar experiência, concorrência e proteção"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O processo muda junto com o canal",
+              "text": "Digitalizar um formulário substitui o suporte físico por um arquivo ou tela. Transformar um serviço pode exigir redesenhar jornadas, integrar dados e canais e mudar decisões internas. Banco digital descreve um modelo de oferta e interação, não uma categoria que dispensa regulação ou faz todo produto ser gratuito. Banco tradicional também pode oferecer experiência digital. Concorrência de plataformas, fintechs e outros participantes pressiona velocidade e conveniência, mas resultados dependem de organização, qualidade, confiança e custos. Não inferir licença ou segurança apenas do nome de uma marca."
+            },
+            {
+              "type": "list",
+              "title": "Uma experiência precisa de escolhas",
+              "items": [
+                "Design thinking investiga necessidades, formula problemas, prototipa e testa hipóteses; não prova aceitação sem observar usuários.",
+                "Personalização pode facilitar a jornada, mas exige finalidade e uso adequado dos dados.",
+                "Integração permite continuar atendimento entre app e agência sem repetir tudo, respeitando acessos.",
+                "Inclusão considera conectividade, acessibilidade e alternativas; retirar todo canal humano pode excluir parte do público.",
+                "A transformação também precisa de continuidade, proteção contra fraude e resposta a falhas."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma instituição coloca o formulário antigo num app, mas o cliente ainda entrega documentos duas vezes. Houve integração da jornada?",
+              "steps": [
+                "Mapeie onde o cliente repete tarefas.",
+                "Compare a digitalização do formulário com a coordenação entre etapas."
+              ],
+              "answer": "Há digitalização de uma etapa, mas a repetição indica integração incompleta.",
+              "check": "A tela sozinha não elimina a ruptura entre cadastro e atendimento."
+            }
+          ],
+          "pitfalls": [
+            "Usar “digital” como prova de licença ou custo zero.",
+            "Confundir protótipo com solução validada."
+          ],
+          "recap": [
+            "Canal digital e transformação de processo são distintos.",
+            "Experiência envolve continuidade, inclusão e confiança.",
+            "Teste hipóteses com necessidades reais."
+          ],
+          "retrieval": [
+            "Como reconhecer ruptura entre canais?",
+            "Por que uma marca digital também precisa de controles?"
+          ],
+          "notes": "Bancos e transformação digital\nCanal digital e transformação de processo são distintos.\nExperiência envolve continuidade, inclusão e confiança.\nTeste hipóteses com necessidades reais.\nUsar “digital” como prova de licença ou custo zero.\nConfundir protótipo com solução validada.",
+          "suggestions": [
+            "Compare digitalização e transformação com um caso.",
+            "Desenhe uma jornada acessível de cadastro.",
+            "Explique como testar uma hipótese de serviço."
+          ],
+          "sources": [
+            {
+              "title": "BCB — cidadania financeira",
+              "url": "https://www.bcb.gov.br/cidadaniafinanceira"
+            },
+            {
+              "title": "CERT.br — segurança digital",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a01-q01",
+              "prompt": "Trocar papel por formulário eletrônico, sem mudar o processo, caracteriza principalmente:",
+              "options": [
+                "Digitalização de uma etapa",
+                "Autorização bancária automática",
+                "Eliminação de todo custo",
+                "Fim da necessidade de segurança"
+              ],
+              "correctIndex": 0,
+              "explanation": "O suporte mudou. Transformação mais ampla exige examinar processo, integração e resultado."
+            },
+            {
+              "id": "bb2026-a01-q02",
+              "prompt": "O rótulo “banco digital” prova que todos os produtos são gratuitos?",
+              "options": [
+                "Sim, por definição",
+                "Não; condições e contratos precisam ser conferidos",
+                "Sim, se houver app",
+                "Não, porque canal digital impede qualquer serviço"
+              ],
+              "correctIndex": 1,
+              "explanation": "Modelo de canal não determina sozinho tarifas e condições comerciais."
+            },
+            {
+              "id": "bb2026-a01-q03",
+              "prompt": "Um protótipo em design thinking serve para:",
+              "options": [
+                "Provar sucesso sem teste",
+                "Substituir qualquer norma",
+                "Testar hipóteses sobre necessidades e soluções",
+                "Garantir que todos os usuários concordem"
+              ],
+              "correctIndex": 2,
+              "explanation": "Protótipo apoia aprendizagem e validação; é necessário observar seu uso e resultados."
+            },
+            {
+              "id": "bb2026-a01-q04",
+              "prompt": "Cliente preenche no app e repete todos os dados na agência. A principal oportunidade é:",
+              "options": [
+                "Mudar só a cor da tela",
+                "Excluir todo atendimento humano",
+                "Imprimir mais formulários",
+                "Integrar a jornada e reduzir retrabalho com controles"
+              ],
+              "correctIndex": 3,
+              "explanation": "A repetição mostra ruptura entre etapas; integração deve manter proteção e qualidade dos dados."
+            },
+            {
+              "id": "bb2026-a01-q05",
+              "prompt": "Um serviço deixa de atender pessoas sem smartphone. Que aspecto merece revisão?",
+              "options": [
+                "Inclusão e alternativas de acesso",
+                "Só o nome do aplicativo",
+                "Garantia de dividendos",
+                "Exclusivamente câmbio"
+              ],
+              "correctIndex": 0,
+              "explanation": "Acesso digital depende de recursos e habilidades; alternativas e acessibilidade integram a experiência."
+            },
+            {
+              "id": "bb2026-a01-q06",
+              "prompt": "Uma instituição lança app rápido, mas sem recuperação de falhas. A velocidade basta para qualidade?",
+              "options": [
+                "Sim, rapidez elimina todo risco",
+                "Não; continuidade, segurança e suporte também importam",
+                "Sim, se houver propaganda",
+                "Não, porque rapidez sempre é ruim"
+              ],
+              "correctIndex": 1,
+              "explanation": "Qualidade exige resultados seguros e recuperação, além de conveniência e velocidade."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a01-q01",
+                "bb2026-a01-q02",
+                "bb2026-a01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "1",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a01-q04",
+                "bb2026-a01-q05",
+                "bb2026-a01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a01-q01",
+                "bb2026-a01-q02",
+                "bb2026-a01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "5",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a01-q04",
+                "bb2026-a01-q05",
+                "bb2026-a01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "15",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a01-q01",
+                "bb2026-a01-q02",
+                "bb2026-a01-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "15",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a01-q04",
+                "bb2026-a01-q05",
+                "bb2026-a01-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a02",
+          "researchId": "A02",
+          "title": "Internet e Mobile Banking",
+          "level": "Fundamentos e aplicação",
+          "summary": "Comparar acesso por navegador e aplicativo · Verificar autenticação e pedidos suspeitos",
+          "objectives": [
+            "Comparar acesso por navegador e aplicativo",
+            "Verificar autenticação e pedidos suspeitos"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O dispositivo não define toda a operação",
+              "text": "Internet Banking oferece serviços pela internet, frequentemente em navegador; Mobile Banking privilegia o acesso móvel, em aplicativo ou solução adaptada. Um celular pode abrir um site bancário, e um app pode compartilhar serviços com o canal web. As funcionalidades dependem da instituição e da versão, não de uma regra universal de que um canal faz só consultas e o outro só pagamentos. Autenticação confirma identidade; autorização limita o que a sessão pode realizar. Canal oficial, endereço, origem do app e confirmação de dados ajudam a reduzir risco."
+            },
+            {
+              "type": "list",
+              "title": "Decisões de proteção",
+              "items": [
+                "Use canais oficiais para obter aplicativo e confirmar contato. Resultado patrocinado ou link recebido não prova autenticidade.",
+                "Não forneça senha ou código a suposto atendente; código de verificação pode autorizar acesso ou transação.",
+                "Autenticação adicional complementa controles, sem eliminar engenharia social.",
+                "Atualize sistema/aplicativo e evite dispositivos compartilhados para operações sensíveis quando houver alternativa adequada.",
+                "Confirme destinatário, valor e finalidade antes de autorizar; urgência artificial é sinal para pausar e conferir."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma mensagem manda instalar um app por link e informar código para “bloquear fraude”. Como agir?",
+              "steps": [
+                "Não use o link ou compartilhe o código.",
+                "Procure o canal oficial por caminho independente e verifique a situação."
+              ],
+              "answer": "Interromper o pedido suspeito e confirmar diretamente com a instituição.",
+              "check": "O conteúdo urgente não demonstra origem. Um código pode liberar a ação que a mensagem diz impedir."
+            }
+          ],
+          "pitfalls": [
+            "Afirmar que toda conexão cifrada prova legitimidade do site.",
+            "Tratar código de autenticação como informação sem valor."
+          ],
+          "recap": [
+            "Navegador e app são formas de acesso com funções variáveis.",
+            "Autenticar e autorizar são decisões distintas.",
+            "Canal independente ajuda a conferir contato suspeito."
+          ],
+          "retrieval": [
+            "Um celular pode usar Internet Banking?",
+            "Por que cadeado do navegador não comprova honestidade?"
+          ],
+          "notes": "Internet e Mobile Banking\nNavegador e app são formas de acesso com funções variáveis.\nAutenticar e autorizar são decisões distintas.\nCanal independente ajuda a conferir contato suspeito.\nAfirmar que toda conexão cifrada prova legitimidade do site.\nTratar código de autenticação como informação sem valor.",
+          "suggestions": [
+            "Compare Internet Banking e Mobile Banking.",
+            "Analise uma mensagem suspeita fictícia.",
+            "Explique autenticação e autorização."
+          ],
+          "sources": [
+            {
+              "title": "CERT.br — segurança digital",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            },
+            {
+              "title": "BCB — cidadania financeira",
+              "url": "https://www.bcb.gov.br/cidadaniafinanceira"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a02-q01",
+              "prompt": "Um celular acessa o site oficial pelo navegador. Isso:",
+              "options": [
+                "É necessariamente impossível",
+                "Pode ser acesso a Internet Banking em dispositivo móvel",
+                "É sempre um saque em espécie",
+                "Dispensa autenticação"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dispositivo e forma de acesso não são categorias mutuamente exclusivas."
+            },
+            {
+              "id": "bb2026-a02-q02",
+              "prompt": "Autorização num serviço digital trata de:",
+              "options": [
+                "Apenas velocidade da internet",
+                "Cor de uma tela",
+                "Quais ações e recursos podem ser usados",
+                "Preço de ações"
+              ],
+              "correctIndex": 2,
+              "explanation": "Autenticação verifica identidade; autorização define permissões."
+            },
+            {
+              "id": "bb2026-a02-q03",
+              "prompt": "O cadeado/TLS no navegador garante:",
+              "options": [
+                "Honestidade do vendedor",
+                "Identidade de qualquer mensagem recebida",
+                "Ausência de fraude no mundo",
+                "Proteção da conexão nos termos do protocolo, sem provar legitimidade de toda oferta"
+              ],
+              "correctIndex": 3,
+              "explanation": "Um site fraudulento também pode usar conexão cifrada; origem e contexto precisam ser verificados."
+            },
+            {
+              "id": "bb2026-a02-q04",
+              "prompt": "Um contato pede código para “cancelar golpe”. A conduta adequada é:",
+              "options": [
+                "Não compartilhar e verificar por canal oficial independente",
+                "Enviar para agilizar",
+                "Postar o código num fórum",
+                "Usar o link para confirmar com o próprio contato"
+              ],
+              "correctIndex": 0,
+              "explanation": "Código pode autorizar acesso ou operação. Verificação independente evita confiar na origem não confirmada."
+            },
+            {
+              "id": "bb2026-a02-q05",
+              "prompt": "Uma transferência mostra destinatário desconhecido. Antes de confirmar, é adequado:",
+              "options": [
+                "Ignorar porque o canal é digital",
+                "Conferir dados e finalidade, interrompendo se divergirem",
+                "Mudar a senha depois e confirmar agora",
+                "Supor que toda chave prova o destinatário desejado"
+              ],
+              "correctIndex": 1,
+              "explanation": "A confirmação exige conferir quem receberá e por quê; tecnologia não corrige intenção equivocada."
+            },
+            {
+              "id": "bb2026-a02-q06",
+              "prompt": "Um app tem autenticação adicional. O usuário pode fornecer senha a qualquer suposto técnico?",
+              "options": [
+                "Sim, pois segundo fator basta",
+                "Sim, se o contato for urgente",
+                "Não; controles adicionais não autorizam compartilhamento de credenciais",
+                "Não, porque apps nunca precisam autenticar"
+              ],
+              "correctIndex": 2,
+              "explanation": "Engenharia social pode contornar proteções; credenciais e códigos devem permanecer protegidos."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a02-q01",
+                "bb2026-a02-q02",
+                "bb2026-a02-q03"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://www.bcb.gov.br/cidadaniafinanceira"
+              ]
+            },
+            {
+              "referenceItem": "2",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a02-q04",
+                "bb2026-a02-q05",
+                "bb2026-a02-q06"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://www.bcb.gov.br/cidadaniafinanceira"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a02-q01",
+                "bb2026-a02-q02",
+                "bb2026-a02-q03"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://www.bcb.gov.br/cidadaniafinanceira"
+              ]
+            },
+            {
+              "referenceItem": "3",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a02-q04",
+                "bb2026-a02-q05",
+                "bb2026-a02-q06"
+              ],
+              "sourceUrls": [
+                "https://cartilha.cert.br/fasciculos/",
+                "https://www.bcb.gov.br/cidadaniafinanceira"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a03",
+          "researchId": "A03",
+          "title": "Open Finance",
+          "level": "Fundamentos e aplicação",
+          "summary": "Explicar compartilhamento padronizado e consentimento · Avaliar autorização e revogação sem compartilhar credenciais",
+          "objectives": [
+            "Explicar compartilhamento padronizado e consentimento",
+            "Avaliar autorização e revogação sem compartilhar credenciais"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Compartilhar dados para uma finalidade",
+              "text": "Open Finance amplia o ecossistema inicialmente associado a Open Banking: participantes compartilham dados e serviços por padrões e regras, no escopo definido. Dados pessoais e transacionais compartilhados por consentimento exigem autorização informada, com finalidade, participantes e abrangência. APIs permitem comunicação entre sistemas; não são uma autorização genérica para qualquer empresa acessar tudo. O processo não exige entregar senha bancária à instituição receptora num chat ou formulário informal. O cliente confirma a autorização nos canais e etapas previstos."
+            },
+            {
+              "type": "list",
+              "title": "Controle e limites",
+              "items": [
+                "Confira quais dados, finalidade e instituições estão envolvidos antes de autorizar.",
+                "Revogação interrompe o compartilhamento futuro na autorização cancelada; tratamento de dados já recebidos ainda depende de base, finalidade e regras de conservação.",
+                "Consentimento não garante aprovação de crédito, melhor preço ou retorno.",
+                "Open Finance não significa que todos os dados se tornam públicos.",
+                "Não confundir compartilhar dados com realizar transferência de dinheiro: serviços e autorizações precisam ser identificados."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Bia autoriza compartilhar histórico para comparar propostas. Uma mensagem pede sua senha e diz que o compartilhamento é irreversível. A alegação está correta?",
+              "steps": [
+                "Separe o fluxo padronizado de um pedido informal de credencial.",
+                "Consulte a gestão de autorizações e a possibilidade de cancelamento no canal oficial."
+              ],
+              "answer": "Não: não se entrega senha no pedido informal e o consentimento pode ser revogado conforme o processo.",
+              "check": "Revogar não implica apagar automaticamente tudo já tratado nem garantir uma proposta; esses efeitos precisam de análise própria."
+            }
+          ],
+          "pitfalls": [
+            "Confundir consentimento com publicação irrestrita.",
+            "Prometer aprovação de crédito só por aderir ao ecossistema."
+          ],
+          "recap": [
+            "Padrões e APIs organizam o compartilhamento.",
+            "Autorização deve ser informada e controlável.",
+            "Revogação futura e conservação passada são questões distintas."
+          ],
+          "retrieval": [
+            "Por que API não equivale a consentimento?",
+            "O que conferir na tela de autorização?"
+          ],
+          "notes": "Open Finance\nPadrões e APIs organizam o compartilhamento.\nAutorização deve ser informada e controlável.\nRevogação futura e conservação passada são questões distintas.\nConfundir consentimento com publicação irrestrita.\nPrometer aprovação de crédito só por aderir ao ecossistema.",
+          "suggestions": [
+            "Explique Open Finance num fluxo de dados.",
+            "Compare revogação e conservação de dados.",
+            "Ajude a avaliar uma autorização fictícia."
+          ],
+          "sources": [
+            {
+              "title": "BCB — Open Finance",
+              "url": "https://www.bcb.gov.br/meubc/faqs/s/open-finance"
+            },
+            {
+              "title": "BCB — cancelamento de autorização",
+              "url": "https://www.bcb.gov.br/meubc/faqs/p/como-cancelar-uma-autorizacao-no-open-finance"
+            },
+            {
+              "title": "Resolução Conjunta 4 — Open Finance",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4&tipo=Resolu%C3%A7%C3%A3o+Conjunta"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a03-q01",
+              "prompt": "Uma API no Open Finance é principalmente:",
+              "options": [
+                "Uma senha compartilhada livremente",
+                "Uma cédula digital",
+                "Interface padronizada de comunicação entre sistemas",
+                "Garantia de retorno financeiro"
+              ],
+              "correctIndex": 2,
+              "explanation": "A interface viabiliza troca sob regras; não substitui autorização nem garante resultado comercial."
+            },
+            {
+              "id": "bb2026-a03-q02",
+              "prompt": "Compartilhamento de dados pessoais por consentimento deve ter:",
+              "options": [
+                "Acesso público permanente",
+                "Senha enviada por mensagem",
+                "Aprovação automática de crédito",
+                "Finalidade, escopo e participantes identificados"
+              ],
+              "correctIndex": 3,
+              "explanation": "A autorização precisa ser informada; consentimento não é permissão ilimitada."
+            },
+            {
+              "id": "bb2026-a03-q03",
+              "prompt": "Open Finance significa que todos os dados bancários viram públicos?",
+              "options": [
+                "Não; acesso e compartilhamento seguem escopo e regras",
+                "Sim, necessariamente",
+                "Sim, para qualquer empresa",
+                "Não, porque nenhum dado pode ser compartilhado"
+              ],
+              "correctIndex": 0,
+              "explanation": "O ecossistema prevê compartilhamentos regulados, não publicação geral."
+            },
+            {
+              "id": "bb2026-a03-q04",
+              "prompt": "Uma receptora pede senha bancária num chat informal. O aluno deve:",
+              "options": [
+                "Enviar para completar autorização",
+                "Interromper e verificar o processo por canais oficiais",
+                "Compartilhar também códigos",
+                "Considerar prova de padrão regulado"
+              ],
+              "correctIndex": 1,
+              "explanation": "O pedido de credenciais fora do fluxo é incompatível com a verificação segura descrita."
+            },
+            {
+              "id": "bb2026-a03-q05",
+              "prompt": "Cancelar uma autorização implica necessariamente eliminar todos os registros já recebidos?",
+              "options": [
+                "Sim, inclusive registros exigidos por lei",
+                "Sim, em qualquer regime",
+                "Não; compartilhamento futuro e tratamento/conservação anteriores têm condições próprias",
+                "Não, porque autorização nunca pode ser cancelada"
+              ],
+              "correctIndex": 2,
+              "explanation": "A revogação controla o compartilhamento da autorização; retenção e demais tratamentos precisam de avaliação legal."
+            },
+            {
+              "id": "bb2026-a03-q06",
+              "prompt": "Um cliente autoriza dados para avaliar crédito. A instituição deve aprovar automaticamente?",
+              "options": [
+                "Sim, autorização substitui análise",
+                "Sim, se usar API",
+                "Sim, para não usar o histórico",
+                "Não; compartilhamento não garante aprovação ou condições"
+              ],
+              "correctIndex": 3,
+              "explanation": "O dado pode apoiar avaliação; resultado depende dos critérios e da operação."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a03-q01",
+                "bb2026-a03-q02",
+                "bb2026-a03-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/meubc/faqs/s/open-finance",
+                "https://www.bcb.gov.br/meubc/faqs/p/como-cancelar-uma-autorizacao-no-open-finance",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4&tipo=Resolu%C3%A7%C3%A3o+Conjunta"
+              ]
+            },
+            {
+              "referenceItem": "4",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a03-q04",
+                "bb2026-a03-q05",
+                "bb2026-a03-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/meubc/faqs/s/open-finance",
+                "https://www.bcb.gov.br/meubc/faqs/p/como-cancelar-uma-autorizacao-no-open-finance",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4&tipo=Resolu%C3%A7%C3%A3o+Conjunta"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a04",
+          "researchId": "A04",
+          "title": "Fintechs, startups e bigtechs",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir descrições de negócio e autorizações · Avaliar modelo, parceria e exposição do usuário",
+          "objectives": [
+            "Distinguir descrições de negócio e autorizações",
+            "Avaliar modelo, parceria e exposição do usuário"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O nome não é a licença",
+              "text": "Fintech associa tecnologia a serviços financeiros; startup caracteriza uma organização que explora modelo inovador e busca escala num ambiente de incerteza; bigtech designa grandes empresas de tecnologia com plataformas e ecossistemas. As categorias podem se cruzar, mas não são equivalentes nem definem por si o enquadramento regulatório. Uma fintech pode ser instituição autorizada ou fornecer tecnologia em parceria, conforme sua atividade. Um aplicativo bonito não demonstra quem mantém a conta, emite o produto ou assume a obrigação."
+            },
+            {
+              "type": "list",
+              "title": "Perguntas para entender o modelo",
+              "items": [
+                "Quem é a instituição contratada e qual atividade efetivamente presta?",
+                "Como o serviço obtém receita: tarifa, intermediação, assinatura ou outro mecanismo identificado?",
+                "Que dados são tratados e para qual finalidade?",
+                "Qual risco é de crédito, mercado, operação ou dependência de plataforma?",
+                "Escala de usuários e inovação não garantem continuidade, proteção total ou remuneração futura."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma startup oferece app de pagamentos operado em parceria com uma instituição. O anúncio chama tudo de banco. Como analisar?",
+              "steps": [
+                "Separe a desenvolvedora da entidade que presta e responde pelo serviço.",
+                "Consulte contrato e identificação do participante competente, sem deduzir autorização pela marca."
+              ],
+              "answer": "O rótulo comercial não basta; é preciso entender atividade, parceria e responsabilidade.",
+              "check": "A mesma interface pode reunir serviços de participantes diferentes."
+            }
+          ],
+          "pitfalls": [
+            "Supor que toda fintech é banco.",
+            "Equiparar startup a qualquer empresa recém-aberta sem considerar modelo."
+          ],
+          "recap": [
+            "Termos de negócio não substituem enquadramento regulatório.",
+            "Parcerias exigem identificar responsabilidades.",
+            "Inovação e escala convivem com riscos."
+          ],
+          "retrieval": [
+            "Uma fintech pode atuar como fornecedora de tecnologia?",
+            "Que dado contratual a marca não revela sozinha?"
+          ],
+          "notes": "Fintechs, startups e bigtechs\nTermos de negócio não substituem enquadramento regulatório.\nParcerias exigem identificar responsabilidades.\nInovação e escala convivem com riscos.\nSupor que toda fintech é banco.\nEquiparar startup a qualquer empresa recém-aberta sem considerar modelo.",
+          "suggestions": [
+            "Compare fintech, startup e bigtech.",
+            "Analise um app com serviços de parceiros.",
+            "Identifique riscos de dependência de uma plataforma."
+          ],
+          "sources": [
+            {
+              "title": "BCB — fintechs",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/fintechs"
+            },
+            {
+              "title": "BCB — instituições de pagamento",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/instituicaopagamento"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a04-q01",
+              "prompt": "Fintech, startup e bigtech são:",
+              "options": [
+                "Descrições que podem se cruzar sem substituir licença",
+                "Três licenças bancárias idênticas",
+                "Garantias estatais de retorno",
+                "Nomes obrigatórios de seguradoras"
+              ],
+              "correctIndex": 0,
+              "explanation": "Os termos descrevem negócio, inovação e porte/plataforma, não autorização universal."
+            },
+            {
+              "id": "bb2026-a04-q02",
+              "prompt": "Toda fintech é necessariamente banco comercial?",
+              "options": [
+                "Sim, por usar tecnologia",
+                "Não; atividade e enquadramento precisam ser identificados",
+                "Sim, se tiver app",
+                "Não, pois nenhuma pode ser autorizada"
+              ],
+              "correctIndex": 1,
+              "explanation": "Há modelos e atividades distintos; o termo sozinho não decide a licença."
+            },
+            {
+              "id": "bb2026-a04-q03",
+              "prompt": "Uma bigtech se caracteriza principalmente por:",
+              "options": [
+                "Ausência de dados",
+                "Obrigação de oferecer só crédito",
+                "Grande atuação tecnológica e ecossistemas de plataforma",
+                "Ser um pequeno grupo de consórcio"
+              ],
+              "correctIndex": 2,
+              "explanation": "O termo refere-se a grandes empresas tecnológicas; não determina uma atividade financeira única."
+            },
+            {
+              "id": "bb2026-a04-q04",
+              "prompt": "Um app usa instituição parceira para a conta. O usuário precisa identificar:",
+              "options": [
+                "Só a cor do app",
+                "Apenas o número de downloads",
+                "O influenciador mais famoso",
+                "Quem presta o serviço e assume a obrigação contratual"
+              ],
+              "correctIndex": 3,
+              "explanation": "Parceria e contrato definem responsabilidades; a marca da interface não é suficiente."
+            },
+            {
+              "id": "bb2026-a04-q05",
+              "prompt": "Uma plataforma cresce muito em usuários. Esse crescimento prova segurança total?",
+              "options": [
+                "Não; controles, modelo e riscos continuam relevantes",
+                "Sim, popularidade é garantia",
+                "Sim, dados nunca vazam em escala",
+                "Não, porque crescimento sempre gera fraude"
+              ],
+              "correctIndex": 0,
+              "explanation": "Escala não substitui avaliação de controles e dependências; também não prova fraude."
+            },
+            {
+              "id": "bb2026-a04-q06",
+              "prompt": "Uma empresa fornece software bancário a terceiros. Ser chamada fintech prova que ela capta depósitos à vista?",
+              "options": [
+                "Sim, qualquer software pode captar",
+                "Não; a atividade descrita é tecnológica e o enquadramento precisa ser examinado",
+                "Sim, se o software for móvel",
+                "Não, porque bancos nunca contratam tecnologia"
+              ],
+              "correctIndex": 1,
+              "explanation": "A prestação tecnológica não autoriza inferir atividade bancária sem verificar contrato e regulação."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a04-q01",
+                "bb2026-a04-q02",
+                "bb2026-a04-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/fintechs",
+                "https://www.bcb.gov.br/estabilidadefinanceira/instituicaopagamento"
+              ]
+            },
+            {
+              "referenceItem": "6",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a04-q04",
+                "bb2026-a04-q05",
+                "bb2026-a04-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/fintechs",
+                "https://www.bcb.gov.br/estabilidadefinanceira/instituicaopagamento"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a05",
+          "researchId": "A05",
+          "title": "Intermediação não bancária",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir atividades financeiras fora do banco comercial · Comparar modelos regulados e riscos de intermediação",
+          "objectives": [
+            "Distinguir atividades financeiras fora do banco comercial",
+            "Comparar modelos regulados e riscos de intermediação"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Não bancário não significa clandestino",
+              "text": "Instituições não bancárias podem prestar serviços legitimamente sob regras e supervisão, como sociedades de crédito, financiamento e investimento. Bancos de investimento são instituições não monetárias; essa classificação deve ser distinguida do uso do termo não bancário. Instituição de pagamento organiza serviços de pagamento no seu âmbito e não se torna banco comercial apenas por oferecer conta de pagamento. Intermediação não bancária descreve atividades e cadeias fora do modelo tradicional de captação e crédito bancário. A expressão shadow banking, encontrada em referências históricas, destaca certos riscos de intermediação e não identifica automaticamente crime ou ausência total de regras."
+            },
+            {
+              "type": "list",
+              "title": "Crédito por tecnologia e circulação do risco",
+              "items": [
+                "SCD e SEP são modelos distintos regulados pelo BCB: a SCD realiza operações com recursos próprios nas condições de seu regime; a SEP intermedeia entre pessoas por plataforma eletrônica.",
+                "Não transportar para qualquer participante a característica de captar depósitos à vista de banco comercial.",
+                "Securitização transforma direitos/fluxos em instrumentos negociáveis sob estrutura própria; não apaga risco dos devedores.",
+                "A distribuição do risco pode mudar, mas devem ser compreendidos origem dos recursos, garantias, participantes e vencimentos."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma plataforma intermedeia recursos de credores para tomadores e é identificada como SEP. Um aluno diz que ela empresta apenas recursos próprios como uma SCD. Como corrigir?",
+              "steps": [
+                "Identifique a SEP pela intermediação entre pessoas.",
+                "Compare com o modelo de recursos próprios da SCD, respeitando os regimes."
+              ],
+              "answer": "Os modelos foram trocados; tecnologia compartilhada não torna as atividades iguais.",
+              "check": "O critério do caso é origem/intermediação do recurso, não a presença de um app."
+            }
+          ],
+          "pitfalls": [
+            "Traduzir não bancário como ilegal em todo caso.",
+            "Confundir SCD, SEP e banco comercial."
+          ],
+          "recap": [
+            "Atividade e regime identificam o participante.",
+            "SCD e SEP usam modelos de crédito distintos.",
+            "Transferência de risco não significa ausência de risco."
+          ],
+          "retrieval": [
+            "Que diferença existe entre conta de pagamento e banco comercial?",
+            "O que examinar numa cadeia de intermediação?"
+          ],
+          "notes": "Intermediação não bancária\nAtividade e regime identificam o participante.\nSCD e SEP usam modelos de crédito distintos.\nTransferência de risco não significa ausência de risco.\nTraduzir não bancário como ilegal em todo caso.\nConfundir SCD, SEP e banco comercial.",
+          "suggestions": [
+            "Compare SCD e SEP com fluxos.",
+            "Explique por que não bancário não significa ilegal.",
+            "Analise risco num caso de securitização."
+          ],
+          "sources": [
+            {
+              "title": "BCB — instituições não bancárias",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/instituicoesnaobancarias"
+            },
+            {
+              "title": "BCB — fintechs",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/fintechs"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a05-q01",
+              "prompt": "“Não bancário” implica necessariamente:",
+              "options": [
+                "Crime",
+                "Ausência de supervisão",
+                "Risco zero",
+                "Nenhuma dessas conclusões isoladamente"
+              ],
+              "correctIndex": 3,
+              "explanation": "O enquadramento precisa ser verificado; existem atividades não bancárias legítimas e reguladas."
+            },
+            {
+              "id": "bb2026-a05-q02",
+              "prompt": "No modelo descrito, a SEP se caracteriza por:",
+              "options": [
+                "Intermediar entre pessoas por plataforma eletrônica",
+                "Ser o conselho normativo do SFN",
+                "Captar obrigatoriamente depósitos à vista como banco comercial",
+                "Vender apenas cédulas estrangeiras"
+              ],
+              "correctIndex": 0,
+              "explanation": "Esse mecanismo distingue a SEP da SCD e de outros participantes."
+            },
+            {
+              "id": "bb2026-a05-q03",
+              "prompt": "Securitizar créditos torna o risco dos devedores inexistente?",
+              "options": [
+                "Sim, pois título apaga risco",
+                "Não; estrutura e distribuição mudam, mas riscos precisam ser analisados",
+                "Sim, se a negociação for digital",
+                "Não, porque títulos nunca podem ser negociados"
+              ],
+              "correctIndex": 1,
+              "explanation": "A transformação/distribuição dos fluxos não garante pagamento dos devedores."
+            },
+            {
+              "id": "bb2026-a05-q04",
+              "prompt": "Um app intermedeia recursos de pessoas e se apresenta como SEP. Associá-lo automaticamente a recursos próprios de SCD é:",
+              "options": [
+                "Correto por usar tecnologia",
+                "Correto em todo contrato",
+                "Confundir modelos distintos",
+                "Definir um órgão de seguros"
+              ],
+              "correctIndex": 2,
+              "explanation": "A origem e a circulação de recursos distinguem os modelos, apesar da plataforma eletrônica."
+            },
+            {
+              "id": "bb2026-a05-q05",
+              "prompt": "Um serviço oferece conta de pagamento. Isso prova que ele é banco comercial?",
+              "options": [
+                "Sim, qualquer conta é depósito bancário",
+                "Sim, porque o nome conta basta",
+                "Sim, sem verificar regime",
+                "Não; conta e participante devem ser identificados"
+              ],
+              "correctIndex": 3,
+              "explanation": "Serviço de pagamento e atividade bancária não se tornam idênticos pelo nome da interface."
+            },
+            {
+              "id": "bb2026-a05-q06",
+              "prompt": "Crédito foi transferido a uma estrutura negociável. A análise adequada é:",
+              "options": [
+                "Examinar fluxos, devedores, garantias e distribuição de risco",
+                "Pressupor pagamento garantido",
+                "Ignorar prazo",
+                "Considerar a tecnologia como única garantia"
+              ],
+              "correctIndex": 0,
+              "explanation": "Origem e destino dos riscos continuam importantes, mesmo quando sua distribuição muda."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a05-q01",
+                "bb2026-a05-q02",
+                "bb2026-a05-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/instituicoesnaobancarias",
+                "https://www.bcb.gov.br/estabilidadefinanceira/fintechs"
+              ]
+            },
+            {
+              "referenceItem": "7",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a05-q04",
+                "bb2026-a05-q05",
+                "bb2026-a05-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/instituicoesnaobancarias",
+                "https://www.bcb.gov.br/estabilidadefinanceira/fintechs"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a06",
+          "researchId": "A06",
+          "title": "Funções da moeda",
+          "level": "Fundamentos e aplicação",
+          "summary": "Comparar meio de troca, unidade de conta e reserva de valor · Distinguir instrumento de pagamento, saldo e ativo",
+          "objectives": [
+            "Comparar meio de troca, unidade de conta e reserva de valor",
+            "Distinguir instrumento de pagamento, saldo e ativo"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Forma e função não são idênticas",
+              "text": "Meio de troca facilita transações sem coincidência direta de necessidades; unidade de conta permite expressar valores; reserva de valor transfere poder de compra no tempo, sujeita a perda real pela inflação. Moeda fiduciária apoia-se no regime institucional e na confiança, sem exigir que cada unidade seja conversível em quantidade fixa de ouro. Saldo em conta, dinheiro em espécie, instrumento de pagamento e ativo digital precisam ser distinguidos. Um cartão é instrumento de acesso/pagamento; não é uma nova moeda. O Pix move recursos no ecossistema de pagamento; não cria uma criptomoeda própria."
+            },
+            {
+              "type": "list",
+              "title": "Compare critérios, não slogans",
+              "items": [
+                "Escambo exige encontrar contrapartes e negociar proporções de troca; unidade comum reduz essa dificuldade.",
+                "Um ativo com preço muito volátil pode dificultar função de reserva de valor ou unidade de conta, ainda que seja transferível.",
+                "Cifrar ou digitalizar uma operação não define o direito econômico sobre o saldo.",
+                "Inflação não retira automaticamente todas as funções da moeda, mas afeta seu poder de compra.",
+                "Moeda escritural e meios de pagamento eletrônicos participam de fluxos sob regras distintas."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma loja fixa preço de um curso em R$120 e recebe via Pix. Qual papel têm o real e o Pix?",
+              "steps": [
+                "O real expressa o preço numa unidade comum.",
+                "O Pix é o meio/sistema usado para transferir os recursos do pagamento."
+              ],
+              "answer": "Real como unidade de conta; Pix como mecanismo de pagamento, sem moeda nova.",
+              "check": "O preço continua em reais antes e depois da transferência."
+            }
+          ],
+          "pitfalls": [
+            "Chamar qualquer app de moeda.",
+            "Confundir poder de compra estável com saldo nominal estável."
+          ],
+          "recap": [
+            "Funções da moeda explicam usos econômicos.",
+            "Forma digital não decide sozinha a natureza do ativo.",
+            "Instrumento de pagamento não é necessariamente moeda."
+          ],
+          "retrieval": [
+            "Um cartão define a unidade em que os preços são expressos?",
+            "Como inflação afeta uma reserva nominal?"
+          ],
+          "notes": "Funções da moeda\nFunções da moeda explicam usos econômicos.\nForma digital não decide sozinha a natureza do ativo.\nInstrumento de pagamento não é necessariamente moeda.\nChamar qualquer app de moeda.\nConfundir poder de compra estável com saldo nominal estável.",
+          "suggestions": [
+            "Explique três funções da moeda com um caso.",
+            "Compare saldo, cartão e Pix.",
+            "Mostre diferença entre valor nominal e poder de compra."
+          ],
+          "sources": [
+            {
+              "title": "BCB — cidadania financeira",
+              "url": "https://www.bcb.gov.br/cidadaniafinanceira"
+            },
+            {
+              "title": "BCB — Pix",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/pix"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a06-q01",
+              "prompt": "A unidade de conta permite:",
+              "options": [
+                "Eliminar toda inflação",
+                "Expressar valores numa referência comum",
+                "Garantir retorno de ativos",
+                "Transformar cartão em moeda estrangeira"
+              ],
+              "correctIndex": 1,
+              "explanation": "Preços podem ser comparados na mesma unidade; isso não garante poder de compra constante."
+            },
+            {
+              "id": "bb2026-a06-q02",
+              "prompt": "Reserva de valor relaciona-se a:",
+              "options": [
+                "Somente emitir faturas",
+                "Apenas trocar cédulas de cor",
+                "Transferir poder de compra no tempo",
+                "Determinar o prazo de todo contrato"
+              ],
+              "correctIndex": 2,
+              "explanation": "A função tem dimensão temporal e pode ser prejudicada por perda de poder de compra."
+            },
+            {
+              "id": "bb2026-a06-q03",
+              "prompt": "Um cartão é, no caso geral descrito:",
+              "options": [
+                "Uma nova moeda nacional",
+                "Garantia de renda permanente",
+                "Unidade de conta obrigatória",
+                "Instrumento de pagamento/acesso"
+              ],
+              "correctIndex": 3,
+              "explanation": "O instrumento permite operar recursos ou crédito; a unidade monetária é outra questão."
+            },
+            {
+              "id": "bb2026-a06-q04",
+              "prompt": "Uma loja precifica em reais e recebe via Pix. A conclusão correta é:",
+              "options": [
+                "Real expressa preço; Pix viabiliza transferência",
+                "Pix vira a moeda em que o preço foi fixado",
+                "O real deixa de existir",
+                "Toda transferência cria criptomoeda"
+              ],
+              "correctIndex": 0,
+              "explanation": "O mecanismo de pagamento não substitui a unidade de conta do preço."
+            },
+            {
+              "id": "bb2026-a06-q05",
+              "prompt": "O saldo fica em R$500 enquanto os preços aumentam. O poder de compra desse saldo tende a:",
+              "options": [
+                "Aumentar necessariamente",
+                "Diminuir diante do conjunto de preços considerado",
+                "Ficar idêntico por ser nominalmente igual",
+                "Virar dividendo"
+              ],
+              "correctIndex": 1,
+              "explanation": "O mesmo saldo compra menos quando os preços do conjunto relevante aumentam."
+            },
+            {
+              "id": "bb2026-a06-q06",
+              "prompt": "Escambo requer troca direta de bens. A moeda facilita porque:",
+              "options": [
+                "Dispensa qualquer confiança",
+                "Apaga toda diferença de valor",
+                "Reduz a necessidade de coincidência de necessidades entre as partes",
+                "Garante que todo bem seja gratuito"
+              ],
+              "correctIndex": 2,
+              "explanation": "Um meio aceito permite vender e depois comprar, sem troca direta simultânea de bens desejados."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a06-q01",
+                "bb2026-a06-q02",
+                "bb2026-a06-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.bcb.gov.br/estabilidadefinanceira/pix"
+              ]
+            },
+            {
+              "referenceItem": "8",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a06-q04",
+                "bb2026-a06-q05",
+                "bb2026-a06-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.bcb.gov.br/estabilidadefinanceira/pix"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a07",
+          "researchId": "A07",
+          "title": "Blockchain e criptoativos",
+          "level": "Fundamentos e aplicação",
+          "summary": "Separar registro distribuído, consenso e ativo · Avaliar riscos e enquadramento sem promessas tecnológicas",
+          "objectives": [
+            "Separar registro distribuído, consenso e ativo",
+            "Avaliar riscos e enquadramento sem promessas tecnológicas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Tecnologia e direito sobre o ativo",
+              "text": "Blockchain encadeia registros por mecanismos criptográficos; redes podem ter regras diferentes de acesso, validação e consenso. No desenho original do Bitcoin, prova de trabalho apoia a validação e a escolha de histórico sob hipóteses de segurança. Isso não significa que toda blockchain use o mesmo consenso nem que todo registro seja impossível de alterar sob qualquer condição. Chave privada autoriza operações dentro do sistema; perder ou expor essa chave pode causar perda de controle. Hash não é o mesmo que cifrar uma mensagem para recuperá-la depois."
+            },
+            {
+              "type": "text",
+              "title": "Nem todo token tem a mesma natureza",
+              "text": "Criptoativo não se torna depósito bancário só por estar numa carteira. Preço, liquidez, custódia, fraude e falhas de operação merecem análise. Stablecoin busca manter referência, mas mecanismo, reservas e resgate têm riscos. O marco de ativos virtuais e a regulamentação do BCB em vigor em 2026 têm escopo definido; ativos que sejam valores mobiliários permanecem no âmbito competente da CVM. Regulação não promete retorno ou indenização universal. Uma transferência válida no protocolo não prova que a oferta econômica seja legítima."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma oferta diz: “registrado em blockchain, portanto lucro garantido e sem risco de custódia”. Qual avaliação cabe?",
+              "steps": [
+                "Separe validade/registro da transação da promessa de resultado.",
+                "Examine emissor, direitos, preço, liquidez, custódia e enquadramento."
+              ],
+              "answer": "A tecnologia não fundamenta a garantia anunciada.",
+              "check": "Um histórico de registros não obriga um emissor a pagar lucro nem protege automaticamente uma chave exposta."
+            }
+          ],
+          "pitfalls": [
+            "Confundir blockchain com Bitcoin ou banco digital.",
+            "Tratar stablecoin como estabilidade garantida em qualquer situação."
+          ],
+          "recap": [
+            "Rede, consenso e ativo são conceitos diferentes.",
+            "Proteção da chave e custódia importam.",
+            "Enquadramento depende do ativo e atividade, sem promessa de retorno."
+          ],
+          "retrieval": [
+            "Hash e criptografia reversível são iguais?",
+            "Registro prova lucratividade de um investimento?"
+          ],
+          "notes": "Blockchain e criptoativos\nRede, consenso e ativo são conceitos diferentes.\nProteção da chave e custódia importam.\nEnquadramento depende do ativo e atividade, sem promessa de retorno.\nConfundir blockchain com Bitcoin ou banco digital.\nTratar stablecoin como estabilidade garantida em qualquer situação.",
+          "suggestions": [
+            "Compare blockchain, Bitcoin e criptoativo.",
+            "Explique riscos de custódia num caso fictício.",
+            "Analise uma promessa de retorno sem recomendação financeira."
+          ],
+          "sources": [
+            {
+              "title": "Bitcoin — artigo original",
+              "url": "https://bitcoin.org/bitcoin.pdf"
+            },
+            {
+              "title": "BCB — regulação de ativos virtuais",
+              "url": "https://www.bcb.gov.br/detalhenoticia/20930/noticia"
+            },
+            {
+              "title": "Lei 14.478 — marco de ativos virtuais",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a07-q01",
+              "prompt": "Blockchain e Bitcoin são:",
+              "options": [
+                "Termos necessariamente idênticos",
+                "Um banco e sua agência",
+                "Sinônimos de toda conta digital",
+                "Tecnologia/conceito de registro e uma aplicação com regras próprias"
+              ],
+              "correctIndex": 3,
+              "explanation": "Bitcoin utiliza uma estrutura e consenso específicos; blockchain não se limita a essa aplicação."
+            },
+            {
+              "id": "bb2026-a07-q02",
+              "prompt": "No desenho original do Bitcoin, o consenso apresentado usa:",
+              "options": [
+                "Prova de trabalho",
+                "Votação obrigatória por CPF",
+                "Autorização do CMN para cada bloco",
+                "Senha compartilhada entre usuários"
+              ],
+              "correctIndex": 0,
+              "explanation": "O artigo descreve prova de trabalho sob hipóteses de segurança; outras redes podem usar outros mecanismos."
+            },
+            {
+              "id": "bb2026-a07-q03",
+              "prompt": "Hash e cifragem reversível são:",
+              "options": [
+                "A mesma operação sempre",
+                "Mecanismos distintos; hash não é cifragem para decifrar depois",
+                "Necessariamente senhas de banco",
+                "Garantias de valor de mercado"
+              ],
+              "correctIndex": 1,
+              "explanation": "Hash produz uma representação de tamanho definido; não funciona como mensagem cifrada a ser decifrada."
+            },
+            {
+              "id": "bb2026-a07-q04",
+              "prompt": "Uma chave privada foi exposta. A existência de blockchain garante controle seguro da carteira?",
+              "options": [
+                "Sim, registros escondem todas as chaves",
+                "Sim, todo protocolo devolve ativos",
+                "Não; a exposição da chave cria risco de controle e transferência",
+                "Não, porque blockchain proíbe qualquer transferência"
+              ],
+              "correctIndex": 2,
+              "explanation": "A segurança do registro não resolve a perda de credencial que autoriza operações."
+            },
+            {
+              "id": "bb2026-a07-q05",
+              "prompt": "Um token é classificado como valor mobiliário. O marco de ativos virtuais implica que todo seu regime passou exclusivamente ao BCB?",
+              "options": [
+                "Sim, sem qualquer distinção",
+                "Sim, a CVM deixou de atuar",
+                "Sim, basta ser digital",
+                "Não; o âmbito de valores mobiliários deve ser respeitado"
+              ],
+              "correctIndex": 3,
+              "explanation": "A classificação e o escopo legal importam; digitalização não elimina a competência da CVM."
+            },
+            {
+              "id": "bb2026-a07-q06",
+              "prompt": "Uma stablecoin busca referência estável. A análise adequada é:",
+              "options": [
+                "Verificar mecanismo, reservas, resgate e riscos",
+                "Pressupor estabilidade e pagamento universais",
+                "Ignorar o emissor",
+                "Tratar qualquer token como poupança"
+              ],
+              "correctIndex": 0,
+              "explanation": "O objetivo de estabilidade não prova sua manutenção; estrutura e riscos precisam ser examinados."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a07-q01",
+                "bb2026-a07-q02",
+                "bb2026-a07-q03"
+              ],
+              "sourceUrls": [
+                "https://bitcoin.org/bitcoin.pdf",
+                "https://www.bcb.gov.br/detalhenoticia/20930/noticia",
+                "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+              ]
+            },
+            {
+              "referenceItem": "9",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a07-q04",
+                "bb2026-a07-q05",
+                "bb2026-a07-q06"
+              ],
+              "sourceUrls": [
+                "https://bitcoin.org/bitcoin.pdf",
+                "https://www.bcb.gov.br/detalhenoticia/20930/noticia",
+                "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a08",
+          "researchId": "A08",
+          "title": "Marketplaces",
+          "level": "Fundamentos e aplicação",
+          "summary": "Identificar plataforma, vendedor e serviços associados · Analisar conveniência, dados e responsabilidade no fluxo",
+          "objectives": [
+            "Identificar plataforma, vendedor e serviços associados",
+            "Analisar conveniência, dados e responsabilidade no fluxo"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "O catálogo reúne ofertas, mas papéis variam",
+              "text": "Marketplace conecta fornecedores e usuários num ambiente de ofertas. Pode reunir produtos de vários vendedores e integrar pagamento, logística ou crédito. Plataforma e vendedor podem ser entidades distintas; contrato, atividade e legislação definem responsabilidades. No ambiente financeiro, comparar propostas numa plataforma não significa que ela mesma seja a emissora de todos os produtos. Efeito de rede ocorre quando o valor percebido pode aumentar com a participação de mais usuários/fornecedores, mas concentração também cria dependência. Número de ofertas não garante comparação neutra."
+            },
+            {
+              "type": "list",
+              "title": "Leia o percurso da contratação",
+              "items": [
+                "Identifique quem oferta, quem contrata, quem recebe pagamento e quem presta suporte.",
+                "Destaque publicidade/patrocínio e critérios de ordenação; posição na tela não é prova de melhor custo.",
+                "Compare valores, prazos e condições equivalentes. Uma taxa isolada pode esconder diferenças de fluxo.",
+                "Observe finalidade dos dados usados para recomendar e personalizar, sem assumir permissão ilimitada.",
+                "Conveniente agregação não afasta segurança, direitos do usuário e riscos de fraude."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma plataforma lista três empréstimos e coloca um no topo porque recebeu patrocínio. O aluno conclui que é o menor custo. Como conferir?",
+              "steps": [
+                "Verifique o critério de posição e a identificação de anúncio.",
+                "Compare condições e custo total de cada proposta para o mesmo cenário."
+              ],
+              "answer": "A posição patrocinada não demonstra menor custo.",
+              "check": "Patrocínio explica visibilidade; a conclusão econômica exige dados das propostas."
+            }
+          ],
+          "pitfalls": [
+            "Confundir plataforma com fornecedor de toda oferta.",
+            "Considerar ordem da tela prova de adequação."
+          ],
+          "recap": [
+            "Papéis e contratos explicam o serviço.",
+            "Rede pode ampliar opções e criar dependência.",
+            "Comparação exige critérios transparentes e dados equivalentes."
+          ],
+          "retrieval": [
+            "Como identificar publicidade numa recomendação?",
+            "Que dados faltam para comparar duas propostas?"
+          ],
+          "notes": "Marketplaces\nPapéis e contratos explicam o serviço.\nRede pode ampliar opções e criar dependência.\nComparação exige critérios transparentes e dados equivalentes.\nConfundir plataforma com fornecedor de toda oferta.\nConsiderar ordem da tela prova de adequação.",
+          "suggestions": [
+            "Mapeie participantes de um marketplace.",
+            "Analise uma ordenação patrocinada fictícia.",
+            "Compare propostas sem escolher por posição."
+          ],
+          "sources": [
+            {
+              "title": "BCB — cidadania financeira",
+              "url": "https://www.bcb.gov.br/cidadaniafinanceira"
+            },
+            {
+              "title": "CDC — contratação e informação",
+              "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a08-q01",
+              "prompt": "Marketplace é principalmente um ambiente que:",
+              "options": [
+                "Conecta ofertas de fornecedores e usuários",
+                "Garante lucro a todos",
+                "Substitui todo contrato",
+                "Emite qualquer produto listado por definição"
+              ],
+              "correctIndex": 0,
+              "explanation": "A plataforma organiza conexão/ofertas; o fornecedor efetivo deve ser identificado."
+            },
+            {
+              "id": "bb2026-a08-q02",
+              "prompt": "Efeito de rede está associado a:",
+              "options": [
+                "Preço fixo obrigatório",
+                "Valor percebido que pode crescer com participação",
+                "Ausência de dependência",
+                "Obrigação de excluir concorrentes"
+              ],
+              "correctIndex": 1,
+              "explanation": "Mais participantes podem ampliar oportunidades; isso não garante benefício universal nem elimina concentração."
+            },
+            {
+              "id": "bb2026-a08-q03",
+              "prompt": "Uma oferta no topo da tela é necessariamente a mais adequada?",
+              "options": [
+                "Sim, por ser a primeira",
+                "Sim, qualquer lista é neutra",
+                "Não; critérios e patrocínio precisam ser identificados",
+                "Não, porque nenhuma oferta pode ser comparada"
+              ],
+              "correctIndex": 2,
+              "explanation": "Ordenação pode refletir publicidade ou outros critérios, e adequação depende do contexto."
+            },
+            {
+              "id": "bb2026-a08-q04",
+              "prompt": "Uma plataforma lista produto de uma instituição parceira. Para contratar, o usuário deve:",
+              "options": [
+                "Supor que só a plataforma existe",
+                "Ignorar termos",
+                "Considerar o logotipo como contrato",
+                "Identificar fornecedor, contrato, custo e suporte"
+              ],
+              "correctIndex": 3,
+              "explanation": "A interface não substitui identificação das partes e condições."
+            },
+            {
+              "id": "bb2026-a08-q05",
+              "prompt": "Um anúncio patrocinado tem taxa nominal baixa e tarifa desconhecida. A conclusão segura é:",
+              "options": [
+                "Faltam dados para comparar custo efetivo",
+                "É sempre o mais barato",
+                "A tarifa é automaticamente zero",
+                "Patrocínio garante adequação"
+              ],
+              "correctIndex": 0,
+              "explanation": "Taxa e destaque não bastam; os demais fluxos e condições alteram a comparação."
+            },
+            {
+              "id": "bb2026-a08-q06",
+              "prompt": "Uma plataforma usa dados coletados para finalidade diferente sem avaliação. A integração de serviços justifica automaticamente o uso?",
+              "options": [
+                "Sim, marketplace dispensa finalidade",
+                "Não; base, compatibilidade e transparência devem ser avaliadas",
+                "Sim, se houver várias ofertas",
+                "Não, porque nenhum dado pode apoiar recomendação"
+              ],
+              "correctIndex": 1,
+              "explanation": "A conveniência não cria autorização ilimitada; cada tratamento exige análise pertinente."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a08-q01",
+                "bb2026-a08-q02",
+                "bb2026-a08-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "10",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a08-q04",
+                "bb2026-a08-q05",
+                "bb2026-a08-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a09",
+          "researchId": "A09",
+          "title": "Correspondentes",
+          "level": "Fundamentos e aplicação",
+          "summary": "Explicar atuação em nome da instituição contratante · Verificar escopo, identificação e atendimento",
+          "objectives": [
+            "Explicar atuação em nome da instituição contratante",
+            "Verificar escopo, identificação e atendimento"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Um canal contratado tem limites",
+              "text": "Correspondente presta atividades previstas no contrato em nome da instituição contratante, dentro das regras aplicáveis. Pode ampliar acesso por estabelecimento físico ou plataforma digital. Não se transforma automaticamente em banco nem recebe autorização irrestrita para qualquer atividade financeira. A instituição contratante responde pelo atendimento realizado por seu correspondente nos termos da regulamentação. Identificação clara ajuda o usuário a saber quem contratou o serviço e onde encaminhar dúvidas ou reclamações. A CMN 4.935 deve ser lida com alterações vigentes; o material histórico não fixa sozinho todas as condições atuais."
+            },
+            {
+              "type": "list",
+              "title": "Atividades e verificação",
+              "items": [
+                "Recebimentos/pagamentos e recepção/encaminhamento de propostas podem integrar o escopo autorizado conforme o contrato.",
+                "Decisão e concessão de produto devem respeitar processo e responsabilidades da instituição; um ponto de atendimento não pode prometer aprovação sem critérios.",
+                "O usuário deve conferir dados do canal e da instituição por caminho oficial, especialmente quando houver pedido de valor antecipado.",
+                "Credenciais e códigos não devem ser entregues a intermediários por confiança informal.",
+                "Acesso ampliado exige informação, treinamento e controles; proximidade geográfica não garante qualidade por si."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma loja diz ser correspondente e pede depósito pessoal para “liberar crédito garantido”. Qual verificação cabe?",
+              "steps": [
+                "Não trate o anúncio como comprovação de vínculo ou aprovação.",
+                "Confirme identificação e serviço pelo canal oficial da instituição, sem pagar ao contato suspeito."
+              ],
+              "answer": "Verificar vínculo e condições antes de prosseguir; promessa e pedido pessoal são sinais relevantes.",
+              "check": "Ser um ponto próximo não demonstra autorização para a cobrança ou aprovação prometida."
+            }
+          ],
+          "pitfalls": [
+            "Afirmar que correspondente opera com licença própria de banco em todo caso.",
+            "Presumir que canal físico é automaticamente confiável."
+          ],
+          "recap": [
+            "Correspondente atua no escopo de contrato e regras.",
+            "Contratante e canal precisam estar identificados.",
+            "Ampliar acesso exige proteção e controles."
+          ],
+          "retrieval": [
+            "O que distingue correspondente de banco comercial?",
+            "Por que conferir vínculo por caminho independente?"
+          ],
+          "notes": "Correspondentes\nCorrespondente atua no escopo de contrato e regras.\nContratante e canal precisam estar identificados.\nAmpliar acesso exige proteção e controles.\nAfirmar que correspondente opera com licença própria de banco em todo caso.\nPresumir que canal físico é automaticamente confiável.",
+          "suggestions": [
+            "Explique correspondente e instituição contratante.",
+            "Analise um pedido suspeito de crédito fictício.",
+            "Compare atendimento físico e digital de correspondentes."
+          ],
+          "sources": [
+            {
+              "title": "CMN 4.935 — correspondentes",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4935&tipo=Resolu%C3%A7%C3%A3o+CMN"
+            },
+            {
+              "title": "CERT.br — segurança digital",
+              "url": "https://cartilha.cert.br/fasciculos/"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a09-q01",
+              "prompt": "Correspondente atua, nas atividades contratadas:",
+              "options": [
+                "Como CMN",
+                "Como supervisor de qualquer banco",
+                "Em nome da instituição contratante",
+                "Sem qualquer limite de atividade"
+              ],
+              "correctIndex": 2,
+              "explanation": "Contrato e regulação delimitam a atuação; o ponto de atendimento não vira órgão normativo."
+            },
+            {
+              "id": "bb2026-a09-q02",
+              "prompt": "Correspondente pode usar plataforma digital conforme regras aplicáveis?",
+              "options": [
+                "Nunca, apenas papel",
+                "Só se virar bolsa",
+                "Somente se emitir moeda",
+                "Sim; o canal não precisa ser exclusivamente físico"
+              ],
+              "correctIndex": 3,
+              "explanation": "A prestação pode usar meios digitais, respeitando o regime e as condições do serviço."
+            },
+            {
+              "id": "bb2026-a09-q03",
+              "prompt": "O vínculo de correspondente permite:",
+              "options": [
+                "Atividades do escopo autorizado, sem licença bancária irrestrita",
+                "Toda operação possível sem contrato",
+                "Prometer qualquer crédito aprovado",
+                "Dispensar identificação da contratante"
+              ],
+              "correctIndex": 0,
+              "explanation": "A abrangência deve ser verificada; vínculo contratual não é autorização universal."
+            },
+            {
+              "id": "bb2026-a09-q04",
+              "prompt": "Uma loja pede depósito em conta pessoal para liberar crédito garantido. A melhor conduta é:",
+              "options": [
+                "Pagar por proximidade",
+                "Verificar canal e condições com a instituição por caminho oficial",
+                "Informar senha ao lojista",
+                "Tratar como prova de aprovação"
+              ],
+              "correctIndex": 1,
+              "explanation": "O pedido e a promessa exigem cautela e confirmação independente; não se deduz legitimidade do local."
+            },
+            {
+              "id": "bb2026-a09-q05",
+              "prompt": "Um correspondente omite quem o contratou. Qual informação precisa ficar clara?",
+              "options": [
+                "Somente decoração da loja",
+                "Apenas nome do bairro",
+                "A instituição e o serviço em cujo nome atua",
+                "A preferência do vendedor"
+              ],
+              "correctIndex": 2,
+              "explanation": "Identificar contratante e escopo permite compreender responsabilidade e buscar suporte."
+            },
+            {
+              "id": "bb2026-a09-q06",
+              "prompt": "Um ponto encaminha proposta de crédito. Isso prova aprovação final?",
+              "options": [
+                "Sim, encaminhar é sempre aprovar",
+                "Sim, se imprimir comprovante",
+                "Sim, quando há app",
+                "Não; análise e concessão seguem o processo competente"
+              ],
+              "correctIndex": 3,
+              "explanation": "Recepção/encaminhamento são etapas; não substituem os critérios de decisão da operação."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a09-q01",
+                "bb2026-a09-q02",
+                "bb2026-a09-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4935&tipo=Resolu%C3%A7%C3%A3o+CMN",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            },
+            {
+              "referenceItem": "11",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a09-q04",
+                "bb2026-a09-q05",
+                "bb2026-a09-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=4935&tipo=Resolu%C3%A7%C3%A3o+CMN",
+                "https://cartilha.cert.br/fasciculos/"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a10",
+          "researchId": "A10",
+          "title": "Arranjos de pagamento",
+          "level": "Fundamentos e aplicação",
+          "summary": "Distinguir regras do arranjo e serviços dos participantes · Seguir autorização, compensação e liquidação de pagamento",
+          "objectives": [
+            "Distinguir regras do arranjo e serviços dos participantes",
+            "Seguir autorização, compensação e liquidação de pagamento"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Regras, atores e infraestrutura",
+              "text": "Arranjo de pagamento organiza regras e procedimentos para prestação de serviço de pagamento aceito por mais de um recebedor, no âmbito de suas condições. Instituidor estabelece e administra o arranjo. Emissor fornece instrumento/serviço ao pagador conforme o modelo; credenciador habilita recebedores em determinados arranjos. Instituição de pagamento presta serviços definidos no seu regime, sem se tornar banco por isso. Nem todo arranjo tem a mesma configuração ou pertence automaticamente ao recorte regulatório do SPB: regras de enquadramento importam."
+            },
+            {
+              "type": "list",
+              "title": "Etapas de um fluxo",
+              "items": [
+                "Autorização verifica e decide a operação conforme regras; não equivale sempre à transferência final já concluída.",
+                "Compensação organiza e apura obrigações entre participantes quando aplicável.",
+                "Liquidação efetiva a transferência financeira para cumprir obrigações.",
+                "Cartão pode envolver pagador, recebedor, emissor, credenciador e instituidor; o nome comercial não deve esconder esses papéis.",
+                "Riscos operacionais, de crédito e de liquidação exigem controles; rapidez da interface não garante finalização sem falha."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma compra recebe autorização no terminal, mas o repasse ao estabelecimento ocorre depois conforme o arranjo. Autorização e liquidação são o mesmo evento?",
+              "steps": [
+                "Identifique a decisão sobre a compra no terminal.",
+                "Separe o evento de transferência/repasse que ocorre no fluxo posterior."
+              ],
+              "answer": "São etapas distintas no caso; a aprovação não prova que todo repasse já ocorreu.",
+              "check": "O prazo descrito mostra diferença temporal entre decidir e cumprir a obrigação financeira."
+            }
+          ],
+          "pitfalls": [
+            "Confundir instituidor com cada participante que oferece conta.",
+            "Equiparar mensagem de autorização à conclusão de todos os fluxos."
+          ],
+          "recap": [
+            "Arranjo organiza regras; participantes prestam serviços.",
+            "Papéis variam segundo o modelo.",
+            "Autorização, compensação e liquidação são conceitos distintos."
+          ],
+          "retrieval": [
+            "Quem habilita um recebedor no modelo com credenciador?",
+            "Qual diferença entre apurar obrigações e liquidá-las?"
+          ],
+          "notes": "Arranjos de pagamento\nArranjo organiza regras; participantes prestam serviços.\nPapéis variam segundo o modelo.\nAutorização, compensação e liquidação são conceitos distintos.\nConfundir instituidor com cada participante que oferece conta.\nEquiparar mensagem de autorização à conclusão de todos os fluxos.",
+          "suggestions": [
+            "Mapeie os participantes de uma compra com cartão.",
+            "Compare autorização, compensação e liquidação.",
+            "Explique arranjo e instituição de pagamento."
+          ],
+          "sources": [
+            {
+              "title": "BCB — arranjos de pagamento",
+              "url": "https://bcb.gov.br/estabilidadefinanceira/arranjospagamento"
+            },
+            {
+              "title": "BCB — instituições de pagamento",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/instituicaopagamento"
+            },
+            {
+              "title": "BCB 150 — arranjos",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=150&tipo=Resolu%C3%A7%C3%A3o+BCB"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a10-q01",
+              "prompt": "O instituidor de um arranjo é quem:",
+              "options": [
+                "Estabelece e administra suas regras",
+                "Deve ser sempre o consumidor",
+                "É qualquer loja que aceita o pagamento",
+                "Fixa a meta de inflação"
+              ],
+              "correctIndex": 0,
+              "explanation": "A função do instituidor refere-se ao arranjo; emissor e credenciador têm outros papéis."
+            },
+            {
+              "id": "bb2026-a10-q02",
+              "prompt": "No modelo descrito, o credenciador:",
+              "options": [
+                "Emite toda moeda nacional",
+                "Habilita recebedores a aceitar instrumentos no arranjo",
+                "Substitui o consumidor",
+                "Julga crimes financeiros"
+              ],
+              "correctIndex": 1,
+              "explanation": "O credenciamento envolve a aceitação pelo recebedor segundo as regras."
+            },
+            {
+              "id": "bb2026-a10-q03",
+              "prompt": "Liquidação financeira significa:",
+              "options": [
+                "Apenas mostrar uma mensagem",
+                "Somente calcular preço",
+                "Cumprir obrigações por transferência financeira",
+                "Abrir um cadastro"
+              ],
+              "correctIndex": 2,
+              "explanation": "Apurar ou autorizar não é necessariamente o mesmo que transferir para cumprir a obrigação."
+            },
+            {
+              "id": "bb2026-a10-q04",
+              "prompt": "Um terminal aprova a compra e o repasse ocorre depois. É correto concluir:",
+              "options": [
+                "Todo dinheiro já foi recebido no instante da aprovação",
+                "Autorização sempre elimina todas as etapas",
+                "A compra não pode existir",
+                "O fluxo descrito separa autorização e repasse/liquidação"
+              ],
+              "correctIndex": 3,
+              "explanation": "A distinção temporal do caso impede igualar automaticamente esses eventos."
+            },
+            {
+              "id": "bb2026-a10-q05",
+              "prompt": "Uma plataforma oferece conta de pagamento. Seu nome prova que institui todo arranjo utilizado?",
+              "options": [
+                "Não; serviço e papéis do participante precisam ser identificados",
+                "Sim, todas as contas instituem arranjos",
+                "Sim, toda plataforma é banco central",
+                "Não, porque arranjos não têm regras"
+              ],
+              "correctIndex": 0,
+              "explanation": "Um participante pode usar regras de arranjo instituído por outra entidade."
+            },
+            {
+              "id": "bb2026-a10-q06",
+              "prompt": "Um analista afirma que todo arranjo existente integra automaticamente o mesmo recorte do SPB. Deve-se:",
+              "options": [
+                "Aceitar sem consultar regras",
+                "Verificar enquadramento e critérios aplicáveis",
+                "Classificar apenas pela cor da marca",
+                "Ignorar natureza e abrangência"
+              ],
+              "correctIndex": 1,
+              "explanation": "A norma distingue enquadramentos; não se presume participação idêntica de todos os arranjos."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "12",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a10-q01",
+                "bb2026-a10-q02",
+                "bb2026-a10-q03"
+              ],
+              "sourceUrls": [
+                "https://bcb.gov.br/estabilidadefinanceira/arranjospagamento",
+                "https://www.bcb.gov.br/estabilidadefinanceira/instituicaopagamento",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=150&tipo=Resolu%C3%A7%C3%A3o+BCB"
+              ]
+            },
+            {
+              "referenceItem": "12",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a10-q04",
+                "bb2026-a10-q05",
+                "bb2026-a10-q06"
+              ],
+              "sourceUrls": [
+                "https://bcb.gov.br/estabilidadefinanceira/arranjospagamento",
+                "https://www.bcb.gov.br/estabilidadefinanceira/instituicaopagamento",
+                "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=150&tipo=Resolu%C3%A7%C3%A3o+BCB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a11",
+          "researchId": "A11",
+          "title": "Pix",
+          "level": "Fundamentos e aplicação",
+          "summary": "Explicar pagamento instantâneo, chave e confirmação · Avaliar prevenção e devolução sem garantias indevidas",
+          "objectives": [
+            "Explicar pagamento instantâneo, chave e confirmação",
+            "Avaliar prevenção e devolução sem garantias indevidas"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Instantâneo não significa infalível",
+              "text": "Pix é o sistema/arranjo brasileiro de pagamentos instantâneos, com operação contínua prevista no modelo. Permite transferir recursos entre participantes e usar identificadores como chaves ou QR Code. Chave é um identificador associado à conta; não é senha nem prova isolada de que o recebedor corresponde à intenção do pagador. Confira nome, instituição, valor e contexto antes de confirmar. Operação 24 horas não significa ausência de manutenção, falha, controles de segurança ou limites definidos conforme as regras. Pix não é criptomoeda."
+            },
+            {
+              "type": "text",
+              "title": "Proteção e condições",
+              "text": "Tarifação depende do usuário, canal, finalidade e hipóteses da regra: não afirmar que todo Pix é sempre gratuito. O Mecanismo Especial de Devolução (MED) trata hipóteses de fraude e falha operacional previstas no regime; não é garantia de ressarcimento nem mecanismo geral para todo desacordo comercial. Análise, rastreamento e recursos disponíveis afetam a recuperação. Expansões de mecanismos em 2026 devem ser lidas nas fontes atuais, sem transportar cronogramas de lives antigas. Em suspeita, use suporte oficial e preserve evidências, sem enviar senhas ou códigos."
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Uma cobrança usa QR Code com nome de pessoa diferente do fornecedor esperado. A mensagem insiste que rapidez é mais importante que conferir. O que fazer?",
+              "steps": [
+                "Compare o destinatário mostrado ao combinado e o valor.",
+                "Interrompa a autorização e confirme por contato oficial independente."
+              ],
+              "answer": "Não confirmar enquanto a divergência não for esclarecida.",
+              "check": "Uma liquidação rápida não corrige destinatário errado; o MED não garante recuperar qualquer pagamento."
+            }
+          ],
+          "pitfalls": [
+            "Tratar chave como senha ou garantia de honestidade.",
+            "Prometer devolução integral em qualquer situação."
+          ],
+          "recap": [
+            "Confira destinatário, valor e contexto antes de pagar.",
+            "Pix transfere recursos; não cria criptomoeda.",
+            "Tarifas e devolução têm hipóteses e condições."
+          ],
+          "retrieval": [
+            "Por que QR Code não dispensa leitura do destinatário?",
+            "MED e desacordo comercial são a mesma hipótese?"
+          ],
+          "notes": "Pix\nConfira destinatário, valor e contexto antes de pagar.\nPix transfere recursos; não cria criptomoeda.\nTarifas e devolução têm hipóteses e condições.\nTratar chave como senha ou garantia de honestidade.\nPrometer devolução integral em qualquer situação.",
+          "suggestions": [
+            "Explique chave Pix sem usar dados pessoais.",
+            "Analise um QR Code descrito num caso fictício.",
+            "Compare prevenção e limites do MED."
+          ],
+          "sources": [
+            {
+              "title": "BCB — Pix",
+              "url": "https://www.bcb.gov.br/estabilidadefinanceira/pix"
+            },
+            {
+              "title": "BCB — Mecanismo Especial de Devolução",
+              "url": "https://www.bcb.gov.br/meubc/faqs/p/o-que-e-e-como-funciona-o-mecanismo-especial-de-devolucao-med"
+            },
+            {
+              "title": "BCB — tarifas do Pix",
+              "url": "https://www.bcb.gov.br/meubc/faqs/p/quanto-o-cidadao-paga-para-usar-o-pix"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a11-q01",
+              "prompt": "Chave Pix é:",
+              "options": [
+                "Garantia de honestidade",
+                "Senha bancária",
+                "Identificador associado à conta",
+                "Uma nova moeda"
+              ],
+              "correctIndex": 2,
+              "explanation": "A chave facilita identificação de conta, sem provar a intenção ou legitimidade da cobrança."
+            },
+            {
+              "id": "bb2026-a11-q02",
+              "prompt": "Operação contínua do Pix significa:",
+              "options": [
+                "Impossibilidade de falhas",
+                "Ausência de controles",
+                "Valor ilimitado em toda hipótese",
+                "Modelo de disponibilidade contínua, sujeito a regras e condições operacionais"
+              ],
+              "correctIndex": 3,
+              "explanation": "O desenho contínuo não elimina limites, manutenção, falhas ou medidas de segurança."
+            },
+            {
+              "id": "bb2026-a11-q03",
+              "prompt": "O MED deve ser compreendido como:",
+              "options": [
+                "Mecanismo com hipóteses e análise, sem ressarcimento universal garantido",
+                "Garantia para qualquer desacordo comercial",
+                "Reversão automática de todos os pagamentos",
+                "Seguro obrigatório de qualquer compra"
+              ],
+              "correctIndex": 0,
+              "explanation": "O regime tem finalidades específicas; análise e disponibilidade de recursos importam."
+            },
+            {
+              "id": "bb2026-a11-q04",
+              "prompt": "O QR Code mostra nome divergente do fornecedor esperado. Antes de pagar, é adequado:",
+              "options": [
+                "Confirmar porque o código foi gerado",
+                "Interromper e verificar destinatário por canal independente",
+                "Enviar a senha ao fornecedor",
+                "Ignorar o nome para concluir rápido"
+              ],
+              "correctIndex": 1,
+              "explanation": "A identificação deve corresponder à intenção; urgência não substitui a conferência."
+            },
+            {
+              "id": "bb2026-a11-q05",
+              "prompt": "Uma loja não entrega o produto. Todo desacordo comercial recebe automaticamente devolução via MED?",
+              "options": [
+                "Sim, qualquer disputa é fraude confirmada",
+                "Sim, MED é garantia comercial universal",
+                "Não; é preciso distinguir a disputa das hipóteses próprias do mecanismo",
+                "Não, porque nunca há mecanismo de devolução"
+              ],
+              "correctIndex": 2,
+              "explanation": "Descumprimento comercial e as hipóteses do MED não são categorias idênticas."
+            },
+            {
+              "id": "bb2026-a11-q06",
+              "prompt": "Um anúncio diz que toda transação Pix de qualquer usuário e canal é gratuita. A revisão deve:",
+              "options": [
+                "Aceitar por ser instantâneo",
+                "Aceitar porque usa reais",
+                "Aceitar se o anúncio for popular",
+                "Conferir hipóteses de tarifação nas regras aplicáveis"
+              ],
+              "correctIndex": 3,
+              "explanation": "Tarifação depende das condições do uso; a afirmação universal ignora hipóteses previstas."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a11-q01",
+                "bb2026-a11-q02",
+                "bb2026-a11-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/pix",
+                "https://www.bcb.gov.br/meubc/faqs/p/o-que-e-e-como-funciona-o-mecanismo-especial-de-devolucao-med",
+                "https://www.bcb.gov.br/meubc/faqs/p/quanto-o-cidadao-paga-para-usar-o-pix"
+              ]
+            },
+            {
+              "referenceItem": "13",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a11-q04",
+                "bb2026-a11-q05",
+                "bb2026-a11-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/estabilidadefinanceira/pix",
+                "https://www.bcb.gov.br/meubc/faqs/p/o-que-e-e-como-funciona-o-mecanismo-especial-de-devolucao-med",
+                "https://www.bcb.gov.br/meubc/faqs/p/quanto-o-cidadao-paga-para-usar-o-pix"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bb2026-a12",
+          "researchId": "A12",
+          "title": "Segmentação e interação digital",
+          "level": "Fundamentos e aplicação",
+          "summary": "Relacionar necessidades e critérios de segmentação · Avaliar personalização com evidência e respeito ao usuário",
+          "objectives": [
+            "Relacionar necessidades e critérios de segmentação",
+            "Avaliar personalização com evidência e respeito ao usuário"
+          ],
+          "prerequisites": [],
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Um grupo ajuda a formular hipótese",
+              "text": "Segmentar é organizar públicos por critérios pertinentes para compreender necessidades e adequar comunicação e serviço. Critérios podem ser geográficos, demográficos, comportamentais ou psicográficos, sem justificar discriminação ilícita ou coleta excessiva. Agrupamento não descreve perfeitamente cada indivíduo. No ambiente digital, dados de navegação e uso podem apoiar hipóteses, mas são incompletos e precisam de finalidade e tratamento adequados. Interação pode ser assíncrona ou síncrona, automatizada ou humana; disponibilidade de um chatbot não garante solução de toda demanda."
+            },
+            {
+              "type": "list",
+              "title": "Da recomendação à avaliação",
+              "items": [
+                "Identifique necessidade e contexto antes de escolher canal ou oferta.",
+                "Uma pessoa que pesquisa um assunto não declarou automaticamente vontade de contratar.",
+                "Meça resposta e qualidade por indicadores pertinentes, distinguindo clique, conversão e resolução.",
+                "Apoie acessibilidade e saída para atendimento adequado quando a automação não resolve.",
+                "Revise vieses e uso de dados; aparência de precisão estatística não demonstra justiça ou adequação."
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Aplicação resolvida",
+              "problem": "Um app recomenda crédito a quem clicou num artigo sobre orçamento. Todos esses usuários precisam contratar?",
+              "steps": [
+                "Separe comportamento observado da necessidade individual.",
+                "Teste a hipótese com critérios e informação adequada, sem pressão ou coleta desnecessária."
+              ],
+              "answer": "O clique é uma pista limitada, não prova de necessidade nem consentimento para qualquer uso.",
+              "check": "Artigo pode interessar por estudo, prevenção ou dúvida; várias motivações são compatíveis com o mesmo evento."
+            }
+          ],
+          "pitfalls": [
+            "Tratar grupo estatístico como descrição completa de uma pessoa.",
+            "Confundir clique com contratação ou resolução."
+          ],
+          "recap": [
+            "Critério deve servir a uma necessidade identificada.",
+            "Dados digitais apoiam hipóteses com limites.",
+            "Personalização deve respeitar direitos e contexto."
+          ],
+          "retrieval": [
+            "Qual diferença entre clique e resolução de demanda?",
+            "Quando um canal humano pode ser necessário?"
+          ],
+          "notes": "Segmentação e interação digital\nCritério deve servir a uma necessidade identificada.\nDados digitais apoiam hipóteses com limites.\nPersonalização deve respeitar direitos e contexto.\nTratar grupo estatístico como descrição completa de uma pessoa.\nConfundir clique com contratação ou resolução.",
+          "suggestions": [
+            "Crie segmentos por necessidades num caso fictício.",
+            "Avalie limites de uma recomendação por clique.",
+            "Compare métricas de interação e resolução."
+          ],
+          "sources": [
+            {
+              "title": "BCB — cidadania financeira",
+              "url": "https://www.bcb.gov.br/cidadaniafinanceira"
+            },
+            {
+              "title": "LGPD — finalidade e tratamento de dados",
+              "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+            }
+          ],
+          "updatedAt": "2026-10-01",
+          "lessonIds": [
+            "bb2026-atualidades-video-1",
+            "bb2026-atualidades-video-2"
+          ],
+          "questions": [
+            {
+              "id": "bb2026-a12-q01",
+              "prompt": "Segmentação de públicos serve principalmente para:",
+              "options": [
+                "Compreender diferenças relevantes e adequar ações",
+                "Provar que todos num grupo são iguais",
+                "Autorizar discriminação ilícita",
+                "Eliminar pesquisa de necessidades"
+              ],
+              "correctIndex": 0,
+              "explanation": "Grupos ajudam a formular ações; não substituem avaliação individual e respeito a direitos."
+            },
+            {
+              "id": "bb2026-a12-q02",
+              "prompt": "Critério comportamental observa, por exemplo:",
+              "options": [
+                "Somente localização",
+                "Padrões de uso e interação pertinentes",
+                "Apenas idade",
+                "Unicamente relevo geográfico"
+              ],
+              "correctIndex": 1,
+              "explanation": "Comportamento se relaciona ao uso/ação, enquanto outros critérios classificam por dimensões distintas."
+            },
+            {
+              "id": "bb2026-a12-q03",
+              "prompt": "Um clique num artigo indica necessariamente desejo de contratar?",
+              "options": [
+                "Sim, é um contrato",
+                "Sim, todo clique tem uma única motivação",
+                "Não; é um sinal limitado com interpretações possíveis",
+                "Não, porque comportamento nunca traz informação"
+              ],
+              "correctIndex": 2,
+              "explanation": "O sinal pode apoiar hipótese, mas não prova necessidade, intenção ou contratação."
+            },
+            {
+              "id": "bb2026-a12-q04",
+              "prompt": "Um chatbot não resolve uma dúvida e repete a mesma mensagem. Uma melhoria é:",
+              "options": [
+                "Impedir qualquer saída",
+                "Contar repetição como resolução",
+                "Pedir todos os dados pessoais sem finalidade",
+                "Oferecer encaminhamento adequado e revisar o fluxo"
+              ],
+              "correctIndex": 3,
+              "explanation": "A automação precisa de limites e caminhos úteis; repetição não equivale a atender a necessidade."
+            },
+            {
+              "id": "bb2026-a12-q05",
+              "prompt": "Campanha tem muitos cliques, mas poucas demandas resolvidas. Pode-se anunciar qualidade total só pelos cliques?",
+              "options": [
+                "Não; métricas medem eventos diferentes",
+                "Sim, cliques provam resolução",
+                "Sim, qualquer alcance prova satisfação",
+                "Não, porque toda campanha falha"
+              ],
+              "correctIndex": 0,
+              "explanation": "Interação, conversão e resolução são dimensões distintas; a conclusão precisa de evidência pertinente."
+            },
+            {
+              "id": "bb2026-a12-q06",
+              "prompt": "Modelo recomenda produto com base em dados excessivos e sem finalidade clara. A resposta adequada é:",
+              "options": [
+                "Manter porque algoritmo é objetivo",
+                "Rever finalidade, necessidade, vieses e adequação",
+                "Ignorar direitos por ser digital",
+                "Presumir que grupo substitui consentimento e base"
+              ],
+              "correctIndex": 1,
+              "explanation": "Personalização deve respeitar tratamento adequado de dados e contexto; estatística não afasta esses deveres."
+            }
+          ],
+          "writingTasks": [],
+          "coverage": [
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 0,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a12-q01",
+                "bb2026-a12-q02",
+                "bb2026-a12-q03"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            },
+            {
+              "referenceItem": "14",
+              "objectiveIndex": 1,
+              "blockIndexes": [
+                0,
+                1
+              ],
+              "exampleBlockIndex": 2,
+              "questionIds": [
+                "bb2026-a12-q04",
+                "bb2026-a12-q05",
+                "bb2026-a12-q06"
+              ],
+              "sourceUrls": [
+                "https://www.bcb.gov.br/cidadaniafinanceira",
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "portugues",
