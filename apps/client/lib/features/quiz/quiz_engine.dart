@@ -32,14 +32,17 @@ class QuizEngine {
   final List<StudyQuestion> _questions;
   final Random random;
   late QuizState _state;
+  final Map<String, List<int>> _orders = {};
   QuizState get state => _state;
   void start() {
+    _orders.clear();
     final pool = _questions.toList()..shuffle(random);
     _state = QuizState(
       phase: QuizPhase.answering,
       roundQuestions: List.unmodifiable(
         pool.take(5).map((question) {
           final order = [0, 1, 2, 3]..shuffle(random);
+          _orders[question.id] = List.unmodifiable(order);
           return StudyQuestion(
             question.id,
             question.prompt,
@@ -50,6 +53,12 @@ class QuizEngine {
         }),
       ),
     );
+  }
+
+  int canonicalOptionIndex(int displayedIndex) {
+    final order = _orders[_state.question.id]!;
+    RangeError.checkValidIndex(displayedIndex, order);
+    return order[displayedIndex];
   }
 
   bool answer(int optionIndex) {
