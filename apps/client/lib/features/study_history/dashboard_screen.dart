@@ -53,9 +53,9 @@ class DashboardScreen extends ConsumerWidget {
               ),
           ],
           if (data != null) ...[
-          Card(
-            semanticContainer:false,
-            child: Padding(
+            Card(
+              semanticContainer: false,
+              child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,

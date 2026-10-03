@@ -16,6 +16,8 @@ import '../features/settings/settings_controller.dart';
 import '../design_system/gallery.dart';
 import 'shell.dart';
 import '../features/study_history/dashboard_screen.dart';
+import '../features/study_history/errors_screen.dart';
+import '../features/study_history/error_review_screen.dart';
 import '../features/learning/learning_controller.dart';
 import '../features/learning/learning_entry.dart';
 import '../features/learning/learning_entry_view.dart';
@@ -36,6 +38,20 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/meu-estudo',
             builder: (context, state) => const DashboardScreen(),
+          ),
+          GoRoute(
+            path: '/meus-erros',
+            builder: (context, state) => const ErrorsScreen(),
+          ),
+          GoRoute(
+            path: '/meus-erros/:topicId/:contentVersion/:questionId',
+            builder: (context, state) => ErrorReviewScreen(
+              topicId: state.pathParameters['topicId']!,
+              contentVersion: int.tryParse(
+                state.pathParameters['contentVersion']!,
+              ),
+              questionId: state.pathParameters['questionId']!,
+            ),
           ),
           GoRoute(
             path: '/concursos',
