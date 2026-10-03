@@ -83,5 +83,11 @@ test('real PostgreSQL preserves quota under independent concurrent connections',
     assert.equal((await setup.query('SELECT status FROM "StudyQuestionError"')).rows[0].status,'reviewed');
     await historyB.confirmAnswer(user.id,goal.id,randomUUID(),input);
     assert.equal((await setup.query('SELECT status FROM "StudyQuestionError"')).rows[0].status,'pending');
+    const dashboard=await historyA.readDashboard(user.id,goal.id);
+    assert.equal(dashboard.today.differentQuestions,1);
+    assert.ok(dashboard.today.attempts>=4);
+    const errors=await historyB.listErrors(user.id,goal.id,{status:'pending',limit:1});
+    assert.equal(errors.items.length,1);assert.equal(errors.items[0]!.questionId,question.id);
+    await assert.rejects(historyB.readDashboard(other.id,goal.id),(e:any)=>e.getStatus()===404);
   } finally { await a.close(); await b.close(); await setup.end(); }
 });

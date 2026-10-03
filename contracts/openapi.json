@@ -407,6 +407,357 @@
           "Steve"
         ]
       }
+    },
+    "/v1/study-contexts/{scope}/ensure": {
+      "post": {
+        "operationId": "StudyController_ensure",
+        "parameters": [
+          {
+            "name": "scope",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "enum": [
+                "freeStudy",
+                "bb2026"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmptyStudyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyGoalDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida."
+          },
+          "401": {
+            "description": "Entre na sua conta."
+          },
+          "404": {
+            "description": "Meta não encontrada."
+          },
+          "409": {
+            "description": "CONFLICT ou CONTENT_CHANGED."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Histórico temporariamente indisponível."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/goals/{goalId}/daily-target": {
+      "patch": {
+        "operationId": "StudyController_target",
+        "parameters": [
+          {
+            "name": "goalId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DailyTargetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyGoalDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida."
+          },
+          "401": {
+            "description": "Entre na sua conta."
+          },
+          "404": {
+            "description": "Meta não encontrada."
+          },
+          "409": {
+            "description": "CONFLICT ou CONTENT_CHANGED."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Histórico temporariamente indisponível."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/goals/{goalId}/answers/{answerId}": {
+      "put": {
+        "operationId": "StudyController_answer",
+        "parameters": [
+          {
+            "name": "goalId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "answerId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyAnswerDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfirmedAnswerDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida."
+          },
+          "401": {
+            "description": "Entre na sua conta."
+          },
+          "404": {
+            "description": "Meta não encontrada."
+          },
+          "409": {
+            "description": "CONFLICT ou CONTENT_CHANGED."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Histórico temporariamente indisponível."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/goals/{goalId}/dashboard": {
+      "get": {
+        "operationId": "StudyController_dashboard",
+        "parameters": [
+          {
+            "name": "goalId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyDashboardDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida."
+          },
+          "401": {
+            "description": "Entre na sua conta."
+          },
+          "404": {
+            "description": "Meta não encontrada."
+          },
+          "409": {
+            "description": "CONFLICT ou CONTENT_CHANGED."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Histórico temporariamente indisponível."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/goals/{goalId}/errors": {
+      "get": {
+        "operationId": "StudyController_errors",
+        "parameters": [
+          {
+            "name": "goalId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "default": "pending",
+              "type": "string",
+              "enum": [
+                "pending",
+                "reviewed"
+              ]
+            }
+          },
+          {
+            "name": "subjectId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 50,
+              "default": 20,
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Object"
+                }
+              ]
+            }
+          },
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyErrorPageDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida."
+          },
+          "401": {
+            "description": "Entre na sua conta."
+          },
+          "404": {
+            "description": "Meta não encontrada."
+          },
+          "409": {
+            "description": "CONFLICT ou CONTENT_CHANGED."
+          },
+          "429": {
+            "description": "Aguarde antes de tentar novamente."
+          },
+          "503": {
+            "description": "Histórico temporariamente indisponível."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "study"
+        ]
+      }
     }
   },
   "info": {
@@ -464,6 +815,8 @@
               "UNAUTHENTICATED",
               "FORBIDDEN",
               "NOT_FOUND",
+              "CONFLICT",
+              "CONTENT_CHANGED",
               "PAYLOAD_TOO_LARGE",
               "RATE_LIMITED",
               "UNAVAILABLE",
@@ -1048,6 +1401,870 @@
           "sources",
           "quota",
           "requestId"
+        ]
+      },
+      "EmptyStudyDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "StudyGoalDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "freeStudy",
+              "bb2026"
+            ]
+          },
+          "timezone": {
+            "type": "string",
+            "example": "America/Sao_Paulo"
+          },
+          "dailyTarget": {
+            "type": "number",
+            "enum": [
+              5,
+              10,
+              20
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "scope",
+          "timezone",
+          "dailyTarget"
+        ]
+      },
+      "DailyTargetDto": {
+        "type": "object",
+        "properties": {
+          "dailyTarget": {
+            "type": "number",
+            "enum": [
+              5,
+              10,
+              20
+            ]
+          }
+        },
+        "required": [
+          "dailyTarget"
+        ]
+      },
+      "StudyAnswerDto": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "enum": [
+              "porcentagem",
+              "interpretacao-texto",
+              "ecologia",
+              "bb2026-b01",
+              "bb2026-b02",
+              "bb2026-b03",
+              "bb2026-b04",
+              "bb2026-b05",
+              "bb2026-b06",
+              "bb2026-b07",
+              "bb2026-b08",
+              "bb2026-b09",
+              "bb2026-b10",
+              "bb2026-b11",
+              "bb2026-b12",
+              "bb2026-b13",
+              "bb2026-b14",
+              "bb2026-b15",
+              "bb2026-b16",
+              "bb2026-b17",
+              "bb2026-b18",
+              "bb2026-b19",
+              "bb2026-b20",
+              "bb2026-b21",
+              "bb2026-b22",
+              "bb2026-a01",
+              "bb2026-a02",
+              "bb2026-a03",
+              "bb2026-a04",
+              "bb2026-a05",
+              "bb2026-a06",
+              "bb2026-a07",
+              "bb2026-a08",
+              "bb2026-a09",
+              "bb2026-a10",
+              "bb2026-a11",
+              "bb2026-a12",
+              "bb2026-p01",
+              "bb2026-p02",
+              "bb2026-p03",
+              "bb2026-p04",
+              "bb2026-p05",
+              "bb2026-p06",
+              "bb2026-p07",
+              "bb2026-p08",
+              "bb2026-p09",
+              "bb2026-p10",
+              "bb2026-p11",
+              "bb2026-p12",
+              "bb2026-p13",
+              "bb2026-m01",
+              "bb2026-m02",
+              "bb2026-m03",
+              "bb2026-m04",
+              "bb2026-m05",
+              "bb2026-m06",
+              "bb2026-m07",
+              "bb2026-m08",
+              "bb2026-m09",
+              "bb2026-m10",
+              "bb2026-m11",
+              "bb2026-m12",
+              "bb2026-m13",
+              "bb2026-m14",
+              "bb2026-m15",
+              "bb2026-m16",
+              "bb2026-m17",
+              "bb2026-m18",
+              "bb2026-e01",
+              "bb2026-e02",
+              "bb2026-e03",
+              "bb2026-e04",
+              "bb2026-e05",
+              "bb2026-e06",
+              "bb2026-e07",
+              "bb2026-e08",
+              "bb2026-v01",
+              "bb2026-v02",
+              "bb2026-v03",
+              "bb2026-v04",
+              "bb2026-v05",
+              "bb2026-v06",
+              "bb2026-v07",
+              "bb2026-v08",
+              "bb2026-v09",
+              "bb2026-v10",
+              "bb2026-v11",
+              "bb2026-v12",
+              "bb2026-v13",
+              "bb2026-v14",
+              "bb2026-v15",
+              "bb2026-v16",
+              "bb2026-v17",
+              "bb2026-v18",
+              "bb2026-v19",
+              "bb2026-v20",
+              "bb2026-f01",
+              "bb2026-f02",
+              "bb2026-f03",
+              "bb2026-f04",
+              "bb2026-f05",
+              "bb2026-f06",
+              "bb2026-f07",
+              "bb2026-i01",
+              "bb2026-i02",
+              "bb2026-i03",
+              "bb2026-i04",
+              "bb2026-i05",
+              "bb2026-i06",
+              "bb2026-i07",
+              "bb2026-i08",
+              "bb2026-i09",
+              "bb2026-i10",
+              "bb2026-i11",
+              "bb2026-i12",
+              "bb2026-i13",
+              "bb2026-i14",
+              "bb2026-i15",
+              "bb2026-i16",
+              "bb2026-i17",
+              "bb2026-i18",
+              "bb2026-i19",
+              "bb2026-i20",
+              "bb2026-i21",
+              "bb2026-r01",
+              "bb2026-r02",
+              "bb2026-r03",
+              "bb2026-r04",
+              "bb2026-r05"
+            ]
+          },
+          "contentVersion": {
+            "type": "number",
+            "minimum": 1
+          },
+          "questionId": {
+            "type": "string"
+          },
+          "optionIndex": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "quiz",
+              "review"
+            ]
+          }
+        },
+        "required": [
+          "topicId",
+          "contentVersion",
+          "questionId",
+          "optionIndex",
+          "source"
+        ]
+      },
+      "ConfirmedAnswerDto": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "enum": [
+              "porcentagem",
+              "interpretacao-texto",
+              "ecologia",
+              "bb2026-b01",
+              "bb2026-b02",
+              "bb2026-b03",
+              "bb2026-b04",
+              "bb2026-b05",
+              "bb2026-b06",
+              "bb2026-b07",
+              "bb2026-b08",
+              "bb2026-b09",
+              "bb2026-b10",
+              "bb2026-b11",
+              "bb2026-b12",
+              "bb2026-b13",
+              "bb2026-b14",
+              "bb2026-b15",
+              "bb2026-b16",
+              "bb2026-b17",
+              "bb2026-b18",
+              "bb2026-b19",
+              "bb2026-b20",
+              "bb2026-b21",
+              "bb2026-b22",
+              "bb2026-a01",
+              "bb2026-a02",
+              "bb2026-a03",
+              "bb2026-a04",
+              "bb2026-a05",
+              "bb2026-a06",
+              "bb2026-a07",
+              "bb2026-a08",
+              "bb2026-a09",
+              "bb2026-a10",
+              "bb2026-a11",
+              "bb2026-a12",
+              "bb2026-p01",
+              "bb2026-p02",
+              "bb2026-p03",
+              "bb2026-p04",
+              "bb2026-p05",
+              "bb2026-p06",
+              "bb2026-p07",
+              "bb2026-p08",
+              "bb2026-p09",
+              "bb2026-p10",
+              "bb2026-p11",
+              "bb2026-p12",
+              "bb2026-p13",
+              "bb2026-m01",
+              "bb2026-m02",
+              "bb2026-m03",
+              "bb2026-m04",
+              "bb2026-m05",
+              "bb2026-m06",
+              "bb2026-m07",
+              "bb2026-m08",
+              "bb2026-m09",
+              "bb2026-m10",
+              "bb2026-m11",
+              "bb2026-m12",
+              "bb2026-m13",
+              "bb2026-m14",
+              "bb2026-m15",
+              "bb2026-m16",
+              "bb2026-m17",
+              "bb2026-m18",
+              "bb2026-e01",
+              "bb2026-e02",
+              "bb2026-e03",
+              "bb2026-e04",
+              "bb2026-e05",
+              "bb2026-e06",
+              "bb2026-e07",
+              "bb2026-e08",
+              "bb2026-v01",
+              "bb2026-v02",
+              "bb2026-v03",
+              "bb2026-v04",
+              "bb2026-v05",
+              "bb2026-v06",
+              "bb2026-v07",
+              "bb2026-v08",
+              "bb2026-v09",
+              "bb2026-v10",
+              "bb2026-v11",
+              "bb2026-v12",
+              "bb2026-v13",
+              "bb2026-v14",
+              "bb2026-v15",
+              "bb2026-v16",
+              "bb2026-v17",
+              "bb2026-v18",
+              "bb2026-v19",
+              "bb2026-v20",
+              "bb2026-f01",
+              "bb2026-f02",
+              "bb2026-f03",
+              "bb2026-f04",
+              "bb2026-f05",
+              "bb2026-f06",
+              "bb2026-f07",
+              "bb2026-i01",
+              "bb2026-i02",
+              "bb2026-i03",
+              "bb2026-i04",
+              "bb2026-i05",
+              "bb2026-i06",
+              "bb2026-i07",
+              "bb2026-i08",
+              "bb2026-i09",
+              "bb2026-i10",
+              "bb2026-i11",
+              "bb2026-i12",
+              "bb2026-i13",
+              "bb2026-i14",
+              "bb2026-i15",
+              "bb2026-i16",
+              "bb2026-i17",
+              "bb2026-i18",
+              "bb2026-i19",
+              "bb2026-i20",
+              "bb2026-i21",
+              "bb2026-r01",
+              "bb2026-r02",
+              "bb2026-r03",
+              "bb2026-r04",
+              "bb2026-r05"
+            ]
+          },
+          "contentVersion": {
+            "type": "number",
+            "minimum": 1
+          },
+          "questionId": {
+            "type": "string"
+          },
+          "optionIndex": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "quiz",
+              "review"
+            ]
+          },
+          "answerId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "goalId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "correct": {
+            "type": "boolean"
+          },
+          "receivedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "topicId",
+          "contentVersion",
+          "questionId",
+          "optionIndex",
+          "source",
+          "answerId",
+          "goalId",
+          "correct",
+          "receivedAt"
+        ]
+      },
+      "DailyActivityDto": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "differentQuestions": {
+            "type": "number",
+            "minimum": 0
+          },
+          "attempts": {
+            "type": "number",
+            "minimum": 0
+          },
+          "correct": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "date",
+          "differentQuestions",
+          "attempts",
+          "correct"
+        ]
+      },
+      "SubjectStatsDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "attempts": {
+            "type": "number",
+            "minimum": 0
+          },
+          "correct": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "attempts",
+          "correct"
+        ]
+      },
+      "ResumeStudyDto": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "enum": [
+              "porcentagem",
+              "interpretacao-texto",
+              "ecologia",
+              "bb2026-b01",
+              "bb2026-b02",
+              "bb2026-b03",
+              "bb2026-b04",
+              "bb2026-b05",
+              "bb2026-b06",
+              "bb2026-b07",
+              "bb2026-b08",
+              "bb2026-b09",
+              "bb2026-b10",
+              "bb2026-b11",
+              "bb2026-b12",
+              "bb2026-b13",
+              "bb2026-b14",
+              "bb2026-b15",
+              "bb2026-b16",
+              "bb2026-b17",
+              "bb2026-b18",
+              "bb2026-b19",
+              "bb2026-b20",
+              "bb2026-b21",
+              "bb2026-b22",
+              "bb2026-a01",
+              "bb2026-a02",
+              "bb2026-a03",
+              "bb2026-a04",
+              "bb2026-a05",
+              "bb2026-a06",
+              "bb2026-a07",
+              "bb2026-a08",
+              "bb2026-a09",
+              "bb2026-a10",
+              "bb2026-a11",
+              "bb2026-a12",
+              "bb2026-p01",
+              "bb2026-p02",
+              "bb2026-p03",
+              "bb2026-p04",
+              "bb2026-p05",
+              "bb2026-p06",
+              "bb2026-p07",
+              "bb2026-p08",
+              "bb2026-p09",
+              "bb2026-p10",
+              "bb2026-p11",
+              "bb2026-p12",
+              "bb2026-p13",
+              "bb2026-m01",
+              "bb2026-m02",
+              "bb2026-m03",
+              "bb2026-m04",
+              "bb2026-m05",
+              "bb2026-m06",
+              "bb2026-m07",
+              "bb2026-m08",
+              "bb2026-m09",
+              "bb2026-m10",
+              "bb2026-m11",
+              "bb2026-m12",
+              "bb2026-m13",
+              "bb2026-m14",
+              "bb2026-m15",
+              "bb2026-m16",
+              "bb2026-m17",
+              "bb2026-m18",
+              "bb2026-e01",
+              "bb2026-e02",
+              "bb2026-e03",
+              "bb2026-e04",
+              "bb2026-e05",
+              "bb2026-e06",
+              "bb2026-e07",
+              "bb2026-e08",
+              "bb2026-v01",
+              "bb2026-v02",
+              "bb2026-v03",
+              "bb2026-v04",
+              "bb2026-v05",
+              "bb2026-v06",
+              "bb2026-v07",
+              "bb2026-v08",
+              "bb2026-v09",
+              "bb2026-v10",
+              "bb2026-v11",
+              "bb2026-v12",
+              "bb2026-v13",
+              "bb2026-v14",
+              "bb2026-v15",
+              "bb2026-v16",
+              "bb2026-v17",
+              "bb2026-v18",
+              "bb2026-v19",
+              "bb2026-v20",
+              "bb2026-f01",
+              "bb2026-f02",
+              "bb2026-f03",
+              "bb2026-f04",
+              "bb2026-f05",
+              "bb2026-f06",
+              "bb2026-f07",
+              "bb2026-i01",
+              "bb2026-i02",
+              "bb2026-i03",
+              "bb2026-i04",
+              "bb2026-i05",
+              "bb2026-i06",
+              "bb2026-i07",
+              "bb2026-i08",
+              "bb2026-i09",
+              "bb2026-i10",
+              "bb2026-i11",
+              "bb2026-i12",
+              "bb2026-i13",
+              "bb2026-i14",
+              "bb2026-i15",
+              "bb2026-i16",
+              "bb2026-i17",
+              "bb2026-i18",
+              "bb2026-i19",
+              "bb2026-i20",
+              "bb2026-i21",
+              "bb2026-r01",
+              "bb2026-r02",
+              "bb2026-r03",
+              "bb2026-r04",
+              "bb2026-r05"
+            ]
+          },
+          "contentVersion": {
+            "type": "number",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "topicId",
+          "contentVersion"
+        ]
+      },
+      "StudyDashboardDto": {
+        "type": "object",
+        "properties": {
+          "goal": {
+            "$ref": "#/components/schemas/StudyGoalDto"
+          },
+          "today": {
+            "$ref": "#/components/schemas/DailyActivityDto"
+          },
+          "pendingErrors": {
+            "type": "number",
+            "minimum": 0
+          },
+          "activity": {
+            "minItems": 7,
+            "maxItems": 7,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyActivityDto"
+            }
+          },
+          "subjects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubjectStatsDto"
+            }
+          },
+          "resume": {
+            "nullable": true,
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ResumeStudyDto"
+              }
+            ]
+          }
+        },
+        "required": [
+          "goal",
+          "today",
+          "pendingErrors",
+          "activity",
+          "subjects",
+          "resume"
+        ]
+      },
+      "Object": {
+        "type": "object",
+        "properties": {}
+      },
+      "StudyErrorItemDto": {
+        "type": "object",
+        "properties": {
+          "topicId": {
+            "type": "string",
+            "enum": [
+              "porcentagem",
+              "interpretacao-texto",
+              "ecologia",
+              "bb2026-b01",
+              "bb2026-b02",
+              "bb2026-b03",
+              "bb2026-b04",
+              "bb2026-b05",
+              "bb2026-b06",
+              "bb2026-b07",
+              "bb2026-b08",
+              "bb2026-b09",
+              "bb2026-b10",
+              "bb2026-b11",
+              "bb2026-b12",
+              "bb2026-b13",
+              "bb2026-b14",
+              "bb2026-b15",
+              "bb2026-b16",
+              "bb2026-b17",
+              "bb2026-b18",
+              "bb2026-b19",
+              "bb2026-b20",
+              "bb2026-b21",
+              "bb2026-b22",
+              "bb2026-a01",
+              "bb2026-a02",
+              "bb2026-a03",
+              "bb2026-a04",
+              "bb2026-a05",
+              "bb2026-a06",
+              "bb2026-a07",
+              "bb2026-a08",
+              "bb2026-a09",
+              "bb2026-a10",
+              "bb2026-a11",
+              "bb2026-a12",
+              "bb2026-p01",
+              "bb2026-p02",
+              "bb2026-p03",
+              "bb2026-p04",
+              "bb2026-p05",
+              "bb2026-p06",
+              "bb2026-p07",
+              "bb2026-p08",
+              "bb2026-p09",
+              "bb2026-p10",
+              "bb2026-p11",
+              "bb2026-p12",
+              "bb2026-p13",
+              "bb2026-m01",
+              "bb2026-m02",
+              "bb2026-m03",
+              "bb2026-m04",
+              "bb2026-m05",
+              "bb2026-m06",
+              "bb2026-m07",
+              "bb2026-m08",
+              "bb2026-m09",
+              "bb2026-m10",
+              "bb2026-m11",
+              "bb2026-m12",
+              "bb2026-m13",
+              "bb2026-m14",
+              "bb2026-m15",
+              "bb2026-m16",
+              "bb2026-m17",
+              "bb2026-m18",
+              "bb2026-e01",
+              "bb2026-e02",
+              "bb2026-e03",
+              "bb2026-e04",
+              "bb2026-e05",
+              "bb2026-e06",
+              "bb2026-e07",
+              "bb2026-e08",
+              "bb2026-v01",
+              "bb2026-v02",
+              "bb2026-v03",
+              "bb2026-v04",
+              "bb2026-v05",
+              "bb2026-v06",
+              "bb2026-v07",
+              "bb2026-v08",
+              "bb2026-v09",
+              "bb2026-v10",
+              "bb2026-v11",
+              "bb2026-v12",
+              "bb2026-v13",
+              "bb2026-v14",
+              "bb2026-v15",
+              "bb2026-v16",
+              "bb2026-v17",
+              "bb2026-v18",
+              "bb2026-v19",
+              "bb2026-v20",
+              "bb2026-f01",
+              "bb2026-f02",
+              "bb2026-f03",
+              "bb2026-f04",
+              "bb2026-f05",
+              "bb2026-f06",
+              "bb2026-f07",
+              "bb2026-i01",
+              "bb2026-i02",
+              "bb2026-i03",
+              "bb2026-i04",
+              "bb2026-i05",
+              "bb2026-i06",
+              "bb2026-i07",
+              "bb2026-i08",
+              "bb2026-i09",
+              "bb2026-i10",
+              "bb2026-i11",
+              "bb2026-i12",
+              "bb2026-i13",
+              "bb2026-i14",
+              "bb2026-i15",
+              "bb2026-i16",
+              "bb2026-i17",
+              "bb2026-i18",
+              "bb2026-i19",
+              "bb2026-i20",
+              "bb2026-i21",
+              "bb2026-r01",
+              "bb2026-r02",
+              "bb2026-r03",
+              "bb2026-r04",
+              "bb2026-r05"
+            ]
+          },
+          "contentVersion": {
+            "type": "number",
+            "minimum": 1
+          },
+          "questionId": {
+            "type": "string"
+          },
+          "wrongCount": {
+            "type": "number",
+            "minimum": 1
+          },
+          "firstWrongAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastWrongAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastAnswerAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastOptionIndex": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "reviewed"
+            ]
+          },
+          "contentStatus": {
+            "type": "string",
+            "enum": [
+              "current",
+              "outdated"
+            ]
+          }
+        },
+        "required": [
+          "topicId",
+          "contentVersion",
+          "questionId",
+          "wrongCount",
+          "firstWrongAt",
+          "lastWrongAt",
+          "lastAnswerAt",
+          "lastOptionIndex",
+          "status",
+          "contentStatus"
+        ]
+      },
+      "StudyErrorPageDto": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyErrorItemDto"
+            }
+          },
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "items",
+          "nextCursor"
         ]
       }
     }

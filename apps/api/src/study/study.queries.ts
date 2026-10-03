@@ -1,5 +1,11 @@
 import {Prisma} from '@prisma/client';
 import {StudyAnswerInput,StudyScope} from './study.models';
+import {StudyDirectory} from '../catalog/study-directory';
+export function catalogRows(directory:StudyDirectory,scope:StudyScope){
+ const rows=directory.topicIds.map(id=>directory.find(id)!).filter(e=>scope==='freeStudy'?e.area==='freeStudy':e.courseId==='bb2026');
+ return Prisma.sql`catalog("topicId",version,subject,title,questions) AS (VALUES ${Prisma.join(rows.map(e=>Prisma.sql`(${e.topic.id}::text,${e.contentVersion}::integer,${scope==='freeStudy'?e.topic.id:e.disciplineId!}::text,${scope==='freeStudy'?e.topic.title:e.topic.subject}::text,ARRAY[${Prisma.join(e.topic.questions.map(q=>Prisma.sql`${q.id}`))}]::text[])`))})`;
+}
+export const activeAnswers=(userId:string,goalId:string)=>Prisma.sql`FROM "StudyAnswer" a JOIN catalog c ON a."topicId"=c."topicId" AND a."contentVersion"=c.version AND a."questionId"=ANY(c.questions) WHERE a."userId"=${userId}::uuid AND a."goalId"=${goalId}::uuid`;
 export const goalQuery=(userId:string,goalId:string,lock=false)=>Prisma.sql`SELECT id,"userId","contextKey",timezone,"dailyTarget" FROM "StudyGoal" WHERE "userId"=${userId}::uuid AND id=${goalId}::uuid ${lock?Prisma.sql`FOR UPDATE`:Prisma.empty}`;
 export const ensureQuery=(id:string,userId:string,scope:StudyScope)=>Prisma.sql`INSERT INTO "StudyGoal" (id,"userId",name,category,"contextKey","updatedAt") VALUES (${id}::uuid,${userId}::uuid,${scope==='bb2026'?'Banco do Brasil 2026':'Estudo livre'},${scope==='bb2026'?'contest':'school'},${scope},CURRENT_TIMESTAMP) ON CONFLICT ("userId","contextKey") DO NOTHING`;
 export const answerQuery=(id:string)=>Prisma.sql`SELECT * FROM "StudyAnswer" WHERE id=${id}::uuid`;

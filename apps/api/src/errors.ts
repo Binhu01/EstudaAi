@@ -19,6 +19,9 @@ const errors: Record<number, readonly [string, string]> = {
 export class SafeExceptionFilter implements ExceptionFilter {
   catch(error: unknown, host: ArgumentsHost) {
     const response = host.switchToHttp().getResponse<Response>();
+    if(error instanceof HistoryConflict||error instanceof HistoryContentChanged){
+      response.status(409).json({code:error instanceof HistoryConflict?'CONFLICT':'CONTENT_CHANGED',message:error.message,requestId:response.getHeader('x-request-id')});return;
+    }
     const parserError = error as {type?:unknown;status?:unknown} | null;
     const status = error instanceof HttpException ? error.getStatus()
       : parserError?.type === 'entity.too.large' && parserError.status === 413 ? 413
