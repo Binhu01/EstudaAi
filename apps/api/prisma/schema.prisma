@@ -37,7 +37,44 @@ model StudyGoal {
   timezone String @default("America/Sao_Paulo") @db.VarChar(80)
   createdAt DateTime @default(now()) @db.Timestamptz(3)
   updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  contextKey String? @db.VarChar(40)
+  dailyTarget Int @default(10)
+  answers StudyAnswer[]
+  errors StudyQuestionError[]
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   @@unique([userId, id])
+  @@unique([userId, contextKey])
   @@index([userId, createdAt, id])
+}
+model StudyAnswer {
+  id String @id @db.Uuid
+  userId String @db.Uuid
+  goalId String @db.Uuid
+  topicId String @db.VarChar(100)
+  contentVersion Int
+  questionId String @db.VarChar(100)
+  optionIndex Int
+  source String @db.VarChar(8)
+  correct Boolean
+  receivedAt DateTime @db.Timestamptz(3)
+  ordinal BigInt @unique @default(autoincrement())
+  goal StudyGoal @relation(fields: [userId, goalId], references: [userId, id], onDelete: Cascade)
+  @@index([userId, goalId, receivedAt], map: "StudyAnswer_context_date_idx")
+  @@index([userId, goalId, topicId, contentVersion], map: "StudyAnswer_context_topic_idx")
+}
+model StudyQuestionError {
+  userId String @db.Uuid
+  goalId String @db.Uuid
+  topicId String @db.VarChar(100)
+  contentVersion Int
+  questionId String @db.VarChar(100)
+  wrongCount Int
+  firstWrongAt DateTime @db.Timestamptz(3)
+  lastWrongAt DateTime @db.Timestamptz(3)
+  lastAnswerAt DateTime @db.Timestamptz(3)
+  lastOptionIndex Int
+  status String @db.VarChar(8)
+  goal StudyGoal @relation(fields: [userId, goalId], references: [userId, id], onDelete: Cascade)
+  @@id([userId, goalId, topicId, contentVersion, questionId])
+  @@index([userId, goalId, status, lastWrongAt(sort: Desc), topicId, contentVersion, questionId], map: "StudyQuestionError_context_status_date_idx")
 }

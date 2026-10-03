@@ -26,7 +26,13 @@
     "openapi": "npm run build && node tools/openapi.mjs",
     "test:visual": "node tools/verify-web.mjs",
     "test:study": "node tools/verify-study.mjs",
-    "test:contests": "node tools/verify-contests.mjs"
+    "test:contests": "node tools/verify-contests.mjs",
+    "test:routine": "node tools/verify-routine.mjs",
+    "pg:local": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/local-postgres.ps1",
+    "test:local-config": "node --test tools/test/local-config.test.mjs",
+    "test:local-postgres": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/test-local-postgres.ps1",
+    "check:config": "node --env-file-if-exists=.env tools/check-local-config.mjs",
+    "verify:live": "node --env-file-if-exists=.env --env-file-if-exists=.env.live tools/verify-live-study.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"

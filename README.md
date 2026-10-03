@@ -10,7 +10,9 @@ Plataforma de aprendizagem adaptativa com metas de estudo independentes, em proj
 
 A API NestJS integra cadastro/login/recuperação Firebase, perfil interno e Steve pela API Responses, com limites por usuário e cota diária persistida no PostgreSQL. A integração Prisma/PostgreSQL foi verificada em banco isolado real. Credenciais Firebase/OpenAI ainda precisam ser fornecidas ao ambiente para validar login e respostas reais; o produto não usa uma conta ou IA simulada.
 
-Docker/Compose e CI foram preparados, mas Docker não está disponível nesta máquina e o workflow não foi executado remotamente. Nenhum deploy ou publicação foi feito. Os diretórios de plataforma gerados pelo SDK não representam builds Android, iOS ou Windows homologados. Veja [Validação](docs/VALIDACAO.md) para comandos realmente executados e pendências.
+**Rotina de estudo implementada:** Meu estudo reúne meta diária, questões diferentes/tentativas, sete dias de atividade e desempenho por matéria. O caderno organiza erros pendentes/revisados e oferece prática contextual. Respostas confirmadas são persistidas por conta e área, com reenvio idempotente. Veja [Rotina](docs/ROTINA-ESTUDO.md) e [Configuração](docs/ROTINA-CONFIGURACAO.md).
+
+O workflow anterior do PR#1 foi executado remotamente; esta fase da rotina ainda tem somente evidência local. Docker não está disponível nesta máquina. Nenhum deploy foi feito. Os diretórios de plataforma gerados pelo SDK não representam builds Android, iOS ou Windows homologados. Veja [Validação](docs/VALIDACAO.md) para comandos executados e pendências.
 
 ## Começar
 
@@ -57,6 +59,10 @@ EstudaAi/
 | `GET /v1/me` | ID token Firebase verificado | ID interno e plano FREE |
 | `GET /v1/me/entitlements` | ID token Firebase verificado | Capacidades atuais; Premium indisponível |
 | `POST /v1/steve/messages` | ID token Firebase verificado | Tutor por assunto, fontes do catálogo e cota retornada pelo servidor |
+| `POST /v1/study-contexts/:scope/ensure` | ID token Firebase verificado | Meta interna de Estudo livre ou BB2026 do proprietário |
+| `PATCH /v1/goals/:goalId/daily-target` | Proprietário verificado | Alvo5/10/20 |
+| `PUT /v1/goals/:goalId/answers/:answerId` | Proprietário verificado | Resposta idempotente e atualização atômica do caderno |
+| `GET /v1/goals/:goalId/dashboard`, `/errors` | Proprietário verificado | Painel atual e caderno filtrado/paginado |
 
 O backend determina identidade e benefícios. A UI não concede Premium nem autoriza dados de outra meta. Segredos de banco/Firebase/IA ficam fora do cliente e do Git. Progresso, sequências e conquistas só devem aparecer quando houver dados reais das fases correspondentes.
 
@@ -65,6 +71,7 @@ O backend determina identidade e benefícios. A UI não concede Premium nem auto
 - [Instalação](docs/INSTALACAO.md): versões, comandos, configuração e execução local.
 - [Experiência de estudo](docs/EXPERIENCIA-ESTUDO.md): assuntos, quiz, aulas e funcionamento do Steve.
 - [Concursos](docs/CONCURSOS.md): preparação Banco do Brasil, conteúdo autoral, versões e fontes.
+- [Rotina de estudo](docs/ROTINA-ESTUDO.md) e [Configuração real](docs/ROTINA-CONFIGURACAO.md): painel, caderno, banco local e validação ao vivo.
 - [Arquitetura](docs/ARQUITETURA.md) e [shader](docs/SHADER.md): fronteiras, isolamento e adaptação visual.
 - [Validação](docs/VALIDACAO.md): resultados comprovados e limitações por plataforma.
 - [Operação e deploy](docs/DEPLOY.md): migração explícita, containers, pendências e release.

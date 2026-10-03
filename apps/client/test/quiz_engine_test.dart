@@ -8,6 +8,27 @@ import 'package:estuda_ai/features/quiz/quiz_engine.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   test(
+    'displayed options map to their canonical positions across every question',
+    () async {
+      final topic = (await loadCatalog(rootBundle)).find('porcentagem')!;
+      final engine = QuizEngine(questions: topic.questions, random: Random(42))
+        ..start();
+      for (var round = 0; round < 5; round++) {
+        final q = engine.state.question,
+            original = topic.questions.firstWhere((v) => v.id == q.id);
+        for (var displayed = 0; displayed < 4; displayed++) {
+          expect(
+            original.options[engine.canonicalOptionIndex(displayed)],
+            q.options[displayed],
+          );
+        }
+        expect(() => engine.canonicalOptionIndex(4), throwsRangeError);
+        engine.answer(0);
+        engine.next();
+      }
+    },
+  );
+  test(
     'a full perfect round has five unique questions and 700 points',
     () async {
       final topic = (await loadCatalog(rootBundle)).find('porcentagem')!;

@@ -89,6 +89,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 onChooseTopic: _choose,
               ),
               const SizedBox(height: 48),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton.icon(
+                  onPressed: () => context.go('/meu-estudo'),
+                  icon: const Icon(Icons.today_outlined),
+                  label: const Text('Meu estudo'),
+                ),
+              ),
+              const SizedBox(height: 24),
               Column(
                 key: _topics,
                 crossAxisAlignment: CrossAxisAlignment.start,

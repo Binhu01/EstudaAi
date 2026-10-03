@@ -1,6 +1,6 @@
 # Instalação e execução local
 
-Execute os comandos na raiz do **EstudaAi**, separada da AlmaPet. Cliente Flutter e API NestJS oferecem Home, aulas, desafios, conta e Steve. Home/aulas/quiz abrem sem API; conta e chat requerem configuração do backend. Operações de metas ainda não são expostas.
+Execute os comandos na raiz do **EstudaAi**, separada da AlmaPet. Cliente Flutter e API NestJS oferecem Home, aulas, desafios, concursos, conta, Steve, painel diário e caderno de erros. Home/aulas/quiz abrem sem API; conta, chat e histórico privado requerem configuração do backend. Siga [Configuração da rotina](ROTINA-CONFIGURACAO.md) para preparar o banco local e os provedores reais.
 
 ## Ferramentas e versões
 
@@ -40,7 +40,7 @@ npm run openapi
 
 `npm ci --ignore-scripts` usa o lockfile da raiz sem executar scripts de dependências. A geração Prisma é explícita. `npm run openapi` gera metadados Nest sem listener ou conta simulada. `npm test` inclui HTTP real com transportes controlados e SQL em PGlite; não configura Firebase/OpenAI reais.
 
-Com binários PostgreSQL 18 instalados em `C:\Program Files\PostgreSQL\18\bin`, `npm run test:pg:local` cria um cluster temporário próprio em loopback55432, aplica as duas migrações em banco vazio, testa concorrência pelo Prisma e o encerra. Não usa nem altera um banco de estudo existente. O script Windows pressupõe esse caminho; para outras instalações, use um banco de teste isolado e `npm run test:integration -w apps/api`. Na CI, esse comando usa `TEST_DATABASE_URL` de banco novo chamado exatamente `estuda_ai_integration_test`; o teste recusa tabelas pré-existentes e nunca usa `DATABASE_URL` como fallback.
+Com binários PostgreSQL 18 instalados em `C:\Program Files\PostgreSQL\18\bin`, `npm run test:pg:local` cria um cluster temporário próprio em loopback55432, aplica todas as migrações em banco vazio, testa concorrência pelo Prisma e o encerra. Não usa nem altera um banco de estudo existente. O script Windows pressupõe esse caminho; para outras instalações, use um banco de teste isolado e `npm run test:integration -w apps/api`. Na CI, esse comando usa `TEST_DATABASE_URL` de banco novo chamado exatamente `estuda_ai_integration_test`; o teste recusa tabelas pré-existentes e nunca usa `DATABASE_URL` como fallback.
 
 ## Instalar e abrir o cliente
 
@@ -123,12 +123,12 @@ Só prossiga para a API se o job de migração terminar com código 0. Ele execu
 Para rodar a API diretamente no host, use um PostgreSQL configurado, aplique as migrações carregando o `.env` e depois inicie o processo:
 
 ```powershell
-node --env-file=.env --run db:deploy
+node --env-file=.env node_modules/prisma/build/index.js migrate deploy --schema apps/api/prisma/schema.prisma
 npm run build
 npm run dev:api
 ```
 
-O comando Node 24 carrega o `.env` e executa o script `db:deploy` da raiz, que encaminha à CLI Prisma no workspace. Se `DATABASE_URL` já estiver no ambiente do processo, `npm run db:deploy` também é suficiente. O script `dev:api` carrega o `.env` da raiz e executa a saída compilada; não é um watcher. Se editar TypeScript, refaça o build.
+O comando Node 24 carrega o `.env` diretamente no processo da CLI Prisma e usa o schema da API. Se `DATABASE_URL` já estiver no ambiente do processo, `npm run db:deploy` também é suficiente. O script `dev:api` carrega o `.env` da raiz e executa a saída compilada; não é um watcher. Se editar TypeScript, refaça o build.
 
 ## Conferir saúde e contrato
 

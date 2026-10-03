@@ -9,6 +9,7 @@ import { loadStudyDirectory } from './catalog/study-directory';
 import { QuotaRepository } from './steve/quota.repository';
 import { SteveService } from './steve/steve.service';
 import { OpenAiSteveProvider } from './steve/openai.provider';
+import { StudyHistoryService } from './study/study.service';
 
 async function bootstrap() {
   const config = readConfig(process.env);
@@ -17,10 +18,12 @@ async function bootstrap() {
   const identity = new FirebaseIdentityVerifier(getAuth(firebase));
   const quota = new QuotaRepository(database,{userDaily:config.steveDailyLimit,globalDaily:config.steveGlobalDailyLimit});
   const provider = config.openaiApiKey && config.steveModel ? new OpenAiSteveProvider(config.openaiApiKey,config.steveModel) : undefined;
+  const directory=loadStudyDirectory();
   const app = await createApp({
     identity, users: database,
     auth: new FirebaseRestAuth(config.firebaseWebApiKey, identity),
-    steve: new SteveService(loadStudyDirectory(),quota,provider),
+    steve: new SteveService(directory,quota,provider),
+    study: new StudyHistoryService(database,directory),
     steveDailyLimit: config.steveDailyLimit,
     ready: () => database.ready(), origins: config.origins,
     log: (event) => process.stdout.write(JSON.stringify(event) + '\n'),

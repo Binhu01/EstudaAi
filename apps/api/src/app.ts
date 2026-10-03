@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import { randomUUID } from 'node:crypto';
 import { Request, Response, NextFunction, json } from 'express';
 import { SteveController } from './steve/steve.controller';
+import { StudyController } from './study/study.controller';
 import { AppDependencies, DEPENDENCIES } from './contracts';
 import { AuthController } from './auth/auth.controller';
 import { IpThrottlerGuard, UserThrottlerGuard } from './auth/rate.guards';
@@ -33,7 +34,7 @@ class EntitlementsResponse {
   @ApiProperty({type:LimitsResponse}) limits!: LimitsResponse;
 }
 class SafeErrorResponse {
-  @ApiProperty({ enum: ['INVALID_INPUT', 'UNAUTHENTICATED', 'FORBIDDEN', 'NOT_FOUND', 'PAYLOAD_TOO_LARGE', 'RATE_LIMITED', 'UNAVAILABLE', 'INTERNAL_ERROR'] }) code!: string;
+  @ApiProperty({ enum: ['INVALID_INPUT', 'UNAUTHENTICATED', 'FORBIDDEN', 'NOT_FOUND', 'CONFLICT', 'CONTENT_CHANGED', 'PAYLOAD_TOO_LARGE', 'RATE_LIMITED', 'UNAVAILABLE', 'INTERNAL_ERROR'] }) code!: string;
   @ApiProperty({ description: 'Mensagem segura em português, sem detalhes internos.' }) message!: string;
   @ApiProperty({ format: 'uuid' }) requestId!: string;
 }
@@ -82,7 +83,7 @@ class MeController {
 export async function createApp(dependencies: AppDependencies) {
   @Module({
     imports: [ThrottlerModule.forRoot([{ ttl: 60_000, limit: dependencies.rateLimit ?? 60 }])],
-    controllers: [HealthController, MeController, AuthController, SteveController],
+    controllers: [HealthController, MeController, AuthController, SteveController, StudyController],
     providers: [
       { provide: DEPENDENCIES, useValue: dependencies },
       { provide: APP_GUARD, useClass: IpThrottlerGuard },
@@ -117,7 +118,7 @@ export async function createApp(dependencies: AppDependencies) {
 export function createOpenApi(app: INestApplication, topicIds: readonly string[]) {
   const document = SwaggerModule.createDocument(app, new DocumentBuilder()
     .setTitle('Estuda Aí API').setVersion('0.1.0').addBearerAuth().build());
-  for (const name of ['SteveInputDto', 'SteveReplyDto']) {
+  for (const name of ['SteveInputDto', 'SteveReplyDto', 'StudyAnswerDto', 'ConfirmedAnswerDto', 'StudyErrorItemDto', 'ResumeStudyDto']) {
     const schema = document.components?.schemas?.[name];
     if (schema && 'properties' in schema && schema.properties?.topicId) {
       schema.properties.topicId = {type:'string', enum:[...topicIds]};

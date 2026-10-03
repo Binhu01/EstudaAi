@@ -1,11 +1,14 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
 import { Pool } from 'pg';
 import { Prisma } from '@prisma/client';
 import { PrismaDatabase } from '../../src/database/prisma';
 import { QuotaRepository } from '../../src/steve/quota.repository';
 import { SqlTransactionProvider } from '../../src/database/transaction';
+import { StudyHistoryService } from '../../src/study/study.service';
+import { loadStudyDirectory } from '../../src/catalog/study-directory';
+import { readTestMigrations } from '../helpers/test-migrations';
 
 test('real PostgreSQL preserves quota under independent concurrent connections', async () => {
   const url = process.env.TEST_DATABASE_URL;
@@ -15,7 +18,7 @@ test('real PostgreSQL preserves quota under independent concurrent connections',
   try {
     const existing = await setup.query("SELECT tablename FROM pg_tables WHERE schemaname='public'");
     if (existing.rows.length) throw Error('Integration database must be new and empty; refusing to change existing data.');
-    for (const name of ['202609290001_foundation','202609300001_ai_quotas']) await setup.query(await readFile('prisma/migrations/'+name+'/migration.sql','utf8'));
+    for (const migration of await readTestMigrations()) await setup.query(migration.sql);
     const user = await a.resolve('integration-owner'), other = await b.resolve('integration-other');
     const first = new QuotaRepository(a,{userDaily:10,globalDaily:1000});
     const second = new QuotaRepository(b,{userDaily:10,globalDaily:1000});
@@ -47,5 +50,44 @@ test('real PostgreSQL preserves quota under independent concurrent connections',
     const continued = await first.reserve(user.id,new Date('2026-10-04T00:01:00Z'));
     assert.equal(await second.releaseUnsent(continued.id,user.id),true);
     assert.equal(await first.releaseUnsent(continued.id,user.id),false);
+
+    const directory=loadStudyDirectory();
+    const historyA=new StudyHistoryService(a,directory,()=>day),historyB=new StudyHistoryService(b,directory,()=>day);
+    const goals=await Promise.all([historyA.ensureContext(user.id,'freeStudy'),historyB.ensureContext(user.id,'freeStudy')]);
+    assert.equal(goals[0]!.id,goals[1]!.id);
+    const goal=goals[0]!;
+    const question=directory.find('porcentagem')!.topic.questions[0]!;
+    const input={topicId:'porcentagem',contentVersion:1,questionId:question.id,optionIndex:(question.correctIndex+1)%4,source:'quiz' as const};
+    const answerId=randomUUID();
+    const confirmations=await Promise.all([historyA.confirmAnswer(user.id,goal.id,answerId,input),historyB.confirmAnswer(user.id,goal.id,answerId,input)]);
+    assert.deepEqual(confirmations[0],confirmations[1]);
+    assert.equal((await setup.query('SELECT count(*)::int n FROM "StudyAnswer"')).rows[0].n,1);
+    assert.equal((await setup.query('SELECT "wrongCount" FROM "StudyQuestionError"')).rows[0].wrongCount,1);
+    const competingId=randomUUID();
+    const competing=await Promise.allSettled([historyA.confirmAnswer(user.id,goal.id,competingId,input),historyB.confirmAnswer(user.id,goal.id,competingId,{...input,optionIndex:question.correctIndex})]);
+    assert.equal(competing.filter(r=>r.status==='fulfilled').length,1);
+    assert.equal(competing.filter(r=>r.status==='rejected'&&r.reason.getStatus()===409).length,1);
+    const bb=await historyA.ensureContext(user.id,'bb2026');
+    const contestQuestion=directory.find('bb2026-b01')!.topic.questions[0]!;
+    const crossId=randomUUID();
+    const cross=await Promise.allSettled([historyA.confirmAnswer(user.id,goal.id,crossId,input),historyB.confirmAnswer(user.id,bb.id,crossId,{topicId:'bb2026-b01',contentVersion:1,questionId:contestQuestion.id,optionIndex:0,source:'quiz'})]);
+    assert.equal(cross.filter(r=>r.status==='fulfilled').length,1);
+    assert.equal(cross.filter(r=>r.status==='rejected'&&r.reason.getStatus?.()===409).length,1);
+    await assert.rejects(historyB.confirmAnswer(other.id,goal.id,randomUUID(),input),(e:any)=>e.getStatus()===404);
+    await assert.rejects(historyA.confirmAnswer(user.id,bb.id,randomUUID(),input),(e:any)=>e.getStatus()===400);
+    const brokenHistory={query:a.query.bind(a),transaction:<T>(work:any)=>a.transaction(tx=>work({query<R>(sql:Prisma.Sql){if(sql.text.includes('INSERT INTO "StudyQuestionError"'))throw Error('deliberate history failure');return tx.query<R>(sql);}})) as Promise<T>};
+    const failureId=randomUUID();
+    await assert.rejects(new StudyHistoryService(brokenHistory,directory,()=>day).confirmAnswer(user.id,goal.id,failureId,input));
+    assert.equal((await setup.query('SELECT count(*)::int n FROM "StudyAnswer" WHERE id=$1',[failureId])).rows[0].n,0);
+    await historyA.confirmAnswer(user.id,goal.id,randomUUID(),{...input,optionIndex:question.correctIndex,source:'review'});
+    assert.equal((await setup.query('SELECT status FROM "StudyQuestionError"')).rows[0].status,'reviewed');
+    await historyB.confirmAnswer(user.id,goal.id,randomUUID(),input);
+    assert.equal((await setup.query('SELECT status FROM "StudyQuestionError"')).rows[0].status,'pending');
+    const dashboard=await historyA.readDashboard(user.id,goal.id);
+    assert.equal(dashboard.today.differentQuestions,1);
+    assert.ok(dashboard.today.attempts>=4);
+    const errors=await historyB.listErrors(user.id,goal.id,{status:'pending',limit:1});
+    assert.equal(errors.items.length,1);assert.equal(errors.items[0]!.questionId,question.id);
+    await assert.rejects(historyB.readDashboard(other.id,goal.id),(e:any)=>e.getStatus()===404);
   } finally { await a.close(); await b.close(); await setup.end(); }
 });

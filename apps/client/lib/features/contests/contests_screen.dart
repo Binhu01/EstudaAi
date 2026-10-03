@@ -22,6 +22,15 @@ class ContestsScreen extends ConsumerWidget {
               'Escolha sua preparação e estude um módulo de cada vez.',
             ),
             const SizedBox(height: 28),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: OutlinedButton.icon(
+                onPressed: () => context.go('/meu-estudo'),
+                icon: const Icon(Icons.today_outlined),
+                label: const Text('Meu estudo'),
+              ),
+            ),
+            const SizedBox(height: 20),
             Card(
               child: InkWell(
                 onTap: () => context.go('/concursos/${course.id}'),

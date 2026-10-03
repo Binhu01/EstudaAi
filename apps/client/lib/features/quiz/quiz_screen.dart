@@ -11,6 +11,7 @@ import 'quiz_engine.dart';
 import 'quiz_controller.dart';
 import 'answer_tile.dart';
 import 'quiz_result.dart';
+import '../study_history/answer_submission.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({
@@ -199,8 +200,46 @@ class _Round extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
+                  if (view.history.status == SubmissionStatus.sending) ...[
+                    Semantics(
+                      liveRegion: true,
+                      child: const Text('Confirmando sua resposta…'),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
+                  if (view.history.status == SubmissionStatus.confirmed) ...[
+                    Semantics(
+                      liveRegion: true,
+                      child: const Text('Resposta salva na sua conta.'),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
+                  if (view.history.status == SubmissionStatus.unconfirmed) ...[
+                    Semantics(
+                      liveRegion: true,
+                      child: const Text(
+                        'Não foi possível confirmar o registro desta resposta. Tente novamente ou continue estudando.',
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Wrap(
+                      spacing: 12,
+                      runSpacing: 8,
+                      children: [
+                        OutlinedButton(
+                          onPressed: controller.retryHistory,
+                          child: const Text('Tentar novamente'),
+                        ),
+                        TextButton(
+                          onPressed: controller.continueStudy,
+                          child: const Text('Continuar estudo'),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                  ],
                   FilledButton(
-                    onPressed: controller.next,
+                    onPressed: view.canAdvance ? controller.next : null,
                     child: Text(
                       round.questionIndex == 4
                           ? 'Ver resultado'
