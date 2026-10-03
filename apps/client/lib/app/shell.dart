@@ -15,7 +15,10 @@ class AppShell extends ConsumerWidget {
   final Widget child;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final selected = location.startsWith('/preferencias')
+    final selected =
+        location.startsWith('/meu-estudo') || location.startsWith('/meus-erros')
+        ? 6
+        : location.startsWith('/preferencias')
         ? 5
         : location.startsWith('/concursos')
         ? (location.endsWith('/steve')
@@ -38,6 +41,10 @@ class AppShell extends ConsumerWidget {
         .asData
         ?.value;
     void navigate(int index) {
+      if (index == 6) {
+        context.go('/meu-estudo');
+        return;
+      }
       if (index == 0) {
         context.go('/');
         return;
@@ -75,8 +82,8 @@ class AppShell extends ConsumerWidget {
                     child: SafeArea(
                       child: Padding(
                         padding: const EdgeInsets.all(AppSpacing.xl),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        child: ListView(
+                          padding: EdgeInsets.zero,
                           children: [
                             const Brand(light: true),
                             const SizedBox(height: AppSpacing.section),
@@ -121,7 +128,14 @@ class AppShell extends ConsumerWidget {
                               selected: selected == 5,
                               onPressed: () => navigate(5),
                             ),
-                            const Spacer(),
+                            const SizedBox(height: 24),
+                            NavigationItem(
+                              label: 'Meu estudo',
+                              icon: Icons.today_outlined,
+                              selected: selected == 6,
+                              onPressed: () => navigate(6),
+                            ),
+                            const SizedBox(height: AppSpacing.sm),
                             NavigationItem(
                               label: 'Conta',
                               icon: Icons.account_circle_outlined,
@@ -192,6 +206,10 @@ class AppShell extends ConsumerWidget {
                         icon: Icon(AppIcons.settings),
                         label: Text('Preferências'),
                       ),
+                      NavigationRailDestination(
+                        icon: Icon(Icons.today_outlined),
+                        label: Text('Meu estudo'),
+                      ),
                     ],
                   ),
                 ),
@@ -204,6 +222,11 @@ class AppShell extends ConsumerWidget {
           appBar: AppBar(
             title: const Brand(),
             actions: [
+              IconButton(
+                tooltip: 'Meu estudo',
+                onPressed: () => context.go('/meu-estudo'),
+                icon: const Icon(Icons.today_outlined),
+              ),
               IconButton(
                 tooltip: 'Preferências',
                 onPressed: () => context.go('/preferencias'),

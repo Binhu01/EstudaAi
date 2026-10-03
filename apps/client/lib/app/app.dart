@@ -15,6 +15,7 @@ import '../features/settings/settings_screen.dart';
 import '../features/settings/settings_controller.dart';
 import '../design_system/gallery.dart';
 import 'shell.dart';
+import '../features/study_history/dashboard_screen.dart';
 import '../features/learning/learning_controller.dart';
 import '../features/learning/learning_entry.dart';
 import '../features/learning/learning_entry_view.dart';
@@ -32,6 +33,10 @@ final routerProvider = Provider<GoRouter>((ref) {
             AppShell(location: state.uri.path, child: child),
         routes: [
           GoRoute(path: '/', builder: (context, state) => const _FreeHome()),
+          GoRoute(
+            path: '/meu-estudo',
+            builder: (context, state) => const DashboardScreen(),
+          ),
           GoRoute(
             path: '/concursos',
             builder: (context, state) => const ContestsScreen(),
