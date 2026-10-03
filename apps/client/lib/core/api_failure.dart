@@ -17,6 +17,15 @@ ApiFailure apiFailure(DioException error) {
   if (status == 401) {
     return const ApiFailure('UNAUTHENTICATED');
   }
+  if (status == 404) return const ApiFailure('NOT_FOUND');
+  if (status == 409) {
+    final body = error.response?.data, code = body is Map ? body['code'] : null;
+    return ApiFailure(
+      code == 'CONFLICT' || code == 'CONTENT_CHANGED'
+          ? code as String
+          : 'UNAVAILABLE',
+    );
+  }
   if (status == 413) {
     return const ApiFailure('PAYLOAD_TOO_LARGE');
   }
@@ -41,6 +50,11 @@ ApiFailure apiFailure(DioException error) {
 }
 
 String safeFailureMessage(String? code) => switch (code) {
+  'CONTENT_CHANGED' =>
+    'O conteúdo foi atualizado. Abra a versão atual para continuar.',
+  'CONFLICT' => 'Não foi possível confirmar este envio. Volte ao desafio e tente novamente.',
+  'NOT_FOUND' =>
+    'Não foi possível encontrar este registro. Volte ao seu estudo.',
   'INVALID_INPUT' => 'Confira os dados e tente novamente.',
   'UNAUTHENTICATED' =>
     'Não foi possível validar o acesso. Entre novamente ou confira os dados.',
