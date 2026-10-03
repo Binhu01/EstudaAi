@@ -1,5 +1,7 @@
 import { ArgumentsHost, Catch, ExceptionFilter, HttpException } from '@nestjs/common';
 import { Response } from 'express';
+export class HistoryConflict extends HttpException { constructor(){super('Resposta incompatível com o registro existente.',409);} }
+export class HistoryContentChanged extends HttpException { constructor(){super('O conteúdo foi atualizado. Abra a versão atual.',409);} }
 export class DailyQuotaExceeded extends HttpException {
   constructor(readonly resetAt:string) { super('Limite diário atingido.',429); }
 }

@@ -1,0 +1,12 @@
+export type StudyScope='freeStudy'|'bb2026';
+export type StudyGoalContext={id:string;scope:StudyScope;timezone:string;dailyTarget:5|10|20};
+export type StudyAnswerInput={topicId:string;contentVersion:number;questionId:string;optionIndex:number;source:'quiz'|'review'};
+export type ConfirmedAnswer=StudyAnswerInput & {answerId:string;goalId:string;correct:boolean;receivedAt:string};
+export type SubjectStats={id:string;title:string;attempts:number;correct:number};
+export type DailyActivity={date:string;differentQuestions:number;attempts:number;correct:number};
+export type StudyDashboard={goal:StudyGoalContext;today:DailyActivity;pendingErrors:number;activity:DailyActivity[];subjects:SubjectStats[];resume:{topicId:string;contentVersion:number}|null};
+export type StudyErrorItem={topicId:string;contentVersion:number;questionId:string;wrongCount:number;firstWrongAt:string;lastWrongAt:string;lastAnswerAt:string;lastOptionIndex:number;status:'pending'|'reviewed';contentStatus:'current'|'outdated'};
+export type ErrorQuery={status:'pending'|'reviewed';subjectId?:string;limit:number;cursor?:string};
+export type StudyErrorPage={items:StudyErrorItem[];nextCursor:string|null};
+export type GoalRow={id:string;userId:string;contextKey:StudyScope|null;timezone:string;dailyTarget:5|10|20};
+export type AnswerRow=StudyAnswerInput & {id:string;userId:string;goalId:string;correct:boolean;receivedAt:Date;ordinal:bigint};
