@@ -1,5 +1,30 @@
 # Evidências da experiência de estudo
 
+## Rotina diária — 02/10/2026
+
+Branch `codex/rotina-estudo`, baseada em `ed17772`, no worktree isolado do EstudaAi. AlmaPet e a branch do PR#1 foram preservados. Implementação direta, testes por etapa e uma revisão independente do conjunto prevista ao final.
+
+| Verificação local | Resultado |
+| --- | --- |
+| API, geração Prisma e OpenAPI | 84/84 testes; contrato gerado |
+| Ferramentas de conteúdo/configuração | 29/29; configuração ausente não fabrica prontidão ou chama provedores |
+| PostgreSQL18 real | 1/1 ciclo dedicado de quota/histórico; duas conexões, UUID concorrente, propriedade, rollback, painel/paginação |
+| Operação PostgreSQL persistente | Init idempotente, sentinela preservada após reinício, senha preservada, portas/pastas/cluster alheio recusados, `.env` preservado |
+| Cliente Flutter | 101/101; três viewports, texto200%, revisão correta pelo teclado, paginação/contexto e confirmação perdida |
+| Geração/formatação/análise | Modelos versionados sem diff;113 arquivos formatados, zero mudanças; análise sem problemas |
+| Build Web release | Concluído sem recursos CDN; `FLUTTER_WINDOWS=false` somente no processo |
+| Visual/estudo livre/Concursos | Temas/shader/teclado nos três tamanhos;9 percursos/45 respostas livres e27/135 de Concursos, zero erro interno |
+| Nova rotina no navegador | 30 percursos em360×800,768×1024,1440×1000; zero erro interno; login gate, alvo, conta/área, erro→revisão e retry |
+| Conteúdo autoral | 126 módulos/756 questões/seis propostas; `errors:[]`; catálogos sem diff desde a base |
+
+Transporte de conta/histórico do `test:routine` é controlado somente no teste. Confirmação perdida grava a resposta na fixture e devolve503; retry usa o mesmo UUID/corpo, sem duplicar o evento. As demais suítes Web continuam verificando a fronteira local de login indisponível. Isso não comprova Firebase/OpenAI reais. As projeções SQL foram verificadas em GREEN no banco real; a falha RED isolada dessas projeções não foi executada antes da implementação, embora a ausência das rotas tenha sido observada em RED.
+
+O cluster de estudo `.tooling/pg-local` foi inicializado em127.0.0.1:55433 com SCRAM e arquivos privados com ACL restrita. As três migrações foram aplicadas; diagnóstico de schema confirmou `verified` antes/depois do reinício. O cluster ficou parado, com dados preservados. Um teste separado usa55434; integração usa55432. Nenhum cluster/serviço externo foi alterado. A migração foi executada carregando `.env` diretamente no processo da CLI Prisma; `--env-file` com `--run` não encaminhou DATABASE_URL neste ambiente, e o guia foi corrigido.
+
+`verify-live-study.mjs` encerrou como **pending**, sem criação de conta ou chamada externa. Firebase e OpenAI continuam ausentes. Configuração plausível é `configured`; somente execução real comprova login/IA. O [guia](ROTINA-CONFIGURACAO.md) e o roteiro separado estão disponíveis. Recuperação de senha exige comando explícito do operador.
+
+Relatórios/capturas: `artifacts/rotina-estudo`, mais os relatórios anteriores de Web/estudo/Concursos. CI acrescenta diagnóstico e nova rotina com fixtures públicas; esta fase não foi executada remotamente. A execução anterior do PR#1 e seus resultados continuam registrados abaixo. Docker, builds nativos, leitura de tela real, carga comercial e deploy permanecem fora da evidência desta etapa.
+
 ## CI do Pull Request #1 — 02/10/2026
 
 A primeira execução remota, no commit `79d112e`, comprovou geração, testes e build da API, o verificador integral do catálogo e a integração com PostgreSQL 17.11. O job Flutter comprovou geração, lockfile, formatação, análise, testes, build Web e verificação visual nos três tamanhos.
@@ -7,6 +32,8 @@ A primeira execução remota, no commit `79d112e`, comprovou geração, testes e
 O percurso de Estudo livre falhou ao localizar a mensagem de indisponibilidade do login: o Flutter disponibilizou o mesmo texto no conteúdo e no anúncio para leitores de tela. O seletor global encontrou dois elementos. A correção limita essa verificação à árvore semântica do aplicativo, exige uma única mensagem e preserva o anúncio acessível. O percurso de Concursos não chegou a executar nessa primeira tentativa.
 
 As verificações da nova execução e do commit atual podem ser consultadas no [Pull Request #1](https://github.com/Binhu01/EstudaAi/pull/1). Os registros locais abaixo descrevem o fechamento anterior ao envio ao GitHub; seus limites de CI e PostgreSQL não substituem esta evidência remota posterior. Login/IA reais, builds nativos e deploy continuam sem validação ao vivo.
+
+A execução posterior [37073422237](https://github.com/Binhu01/EstudaAi/actions/runs/37073422237) concluiu com sucesso os dois jobs, incluindo81 testes Flutter,66 API,22 de ferramentas, uma integração PostgreSQL e todos os percursos Web existentes. Essa evidência pertence à versão anterior; não valida automaticamente as mudanças da rotina.
 
 ## Concursos — 02/10/2026
 

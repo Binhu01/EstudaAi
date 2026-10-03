@@ -46,7 +46,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run db:generate
       - run: npm test
-      - run: node --test tools/test/contest-content.test.mjs tools/test/contest-editorial.test.mjs tools/test/contest-originality.test.mjs
+      - run: node --test tools/test/contest-content.test.mjs tools/test/contest-editorial.test.mjs tools/test/contest-originality.test.mjs tools/test/local-config.test.mjs
       - run: node tools/verify-contest-content.mjs --all
       - run: npm run test:integration -w apps/api
       - run: npm run build
@@ -89,6 +89,8 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Verificar build no navegador
         working-directory: .
+        env:
+          PREVIEW_URL: http://127.0.0.1:4173
         run: |
           mkdir -p artifacts
           node tools/preview.mjs > artifacts/preview.log 2>&1 &
@@ -98,6 +100,7 @@ jobs:
           npm run test:visual
           npm run test:study
           npm run test:contests
+          npm run test:routine
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: always()
         with:

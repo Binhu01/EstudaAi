@@ -27,6 +27,7 @@
     "test:visual": "node tools/verify-web.mjs",
     "test:study": "node tools/verify-study.mjs",
     "test:contests": "node tools/verify-contests.mjs",
+    "test:routine": "node tools/verify-routine.mjs",
     "pg:local": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/local-postgres.ps1",
     "test:local-config": "node --test tools/test/local-config.test.mjs",
     "test:local-postgres": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/test-local-postgres.ps1",

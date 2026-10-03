@@ -4,10 +4,13 @@ const url=process.env.PREVIEW_URL??'http://127.0.0.1:4174';
 const output='artifacts/rotina-estudo/browser';await mkdir(output,{recursive:true});
 const userA='11111111-1111-4111-8111-111111111111',userB='22222222-2222-4222-8222-222222222222';
 const goals={freeStudy:'33333333-3333-4333-8333-333333333333',bb2026:'44444444-4444-4444-8444-444444444444'};
+const otherGoals={freeStudy:'66666666-6666-4666-8666-666666666666',bb2026:'77777777-7777-4777-8777-777777777777'};
+const scopeForPath=path=>path.includes(goals.bb2026)||path.includes(otherGoals.bb2026)?'bb2026':'freeStudy';
 const browser=await chromium.launch({headless:true});const reports=[];let lastPage;
 const free=JSON.parse(await readFile('apps/client/assets/study/catalog.json','utf8'));
 const contests=JSON.parse(await readFile('apps/client/assets/contests/bb2026/catalog.json','utf8'));
 const topics=[...free.topics,...contests.disciplines.flatMap(d=>d.modules)];
+const subjectFor=id=>{const d=contests.disciplines.find(d=>d.modules.some(m=>m.id===id));const t=free.topics.find(t=>t.id===id);return d?{id:d.id,title:d.title}:{id:t.id,title:t.title};};
 async function click(page,text){const l=page.locator('flt-semantics').getByText(text,{exact:true}).first();await l.scrollIntoViewIfNeeded();await l.click();}
 async function login(page,email){
  await page.goto(url+'/#/conta');
@@ -20,20 +23,20 @@ try{
  for(const viewport of [{width:360,height:800},{width:768,height:1024},{width:1440,height:1000}]){
   const context=await browser.newContext({viewport,reducedMotion:'reduce'});const page=await context.newPage();lastPage=page;const pageErrors=[];page.on('pageerror',e=>pageErrors.push(e.message));
   const history=new Map(),targets=new Map(),acks=new Map(),errors=new Map(),reviewCalls=[];let loseReview=true;const currentDate='2026-10-02';
-  const goal=(scope)=>({id:goals[scope],scope,timezone:'America/Sao_Paulo',dailyTarget:targets.get(scope)??10});
+  const goal=(scope,owner=userA)=>({id:(owner===userA?goals:otherGoals)[scope],scope,timezone:'America/Sao_Paulo',dailyTarget:targets.get(owner+scope)??10});
   await context.route('http://127.0.0.1:3001/**',async route=>{
    const request=route.request(),path=new URL(request.url()).pathname,body=request.postDataJSON(),owner=request.headers().authorization?.includes('token-b')?userB:userA;
    let data={},status=200;
    if(path.endsWith('/login')||path.endsWith('/register'))data={idToken:body.email==='b@example.com'?'token-b':'token-a',refreshToken:'test-refresh',expiresInSeconds:3600};
    else if(path==='/v1/me')data={id:owner,plan:'FREE'};
-   else if(path.endsWith('/ensure'))data=goal(path.includes('/bb2026/')?'bb2026':'freeStudy');
-   else if(path.endsWith('/daily-target')){const scope=path.includes(goals.bb2026)?'bb2026':'freeStudy';targets.set(scope,body.dailyTarget);data=goal(scope);}
+   else if(path.endsWith('/ensure'))data=goal(path.includes('/bb2026/')?'bb2026':'freeStudy',owner);
+   else if(path.endsWith('/daily-target')){const scope=scopeForPath(path);targets.set(owner+scope,body.dailyTarget);data=goal(scope,owner);}
    else if(request.method()==='PUT'&&path.includes('/answers/')){
-    const scope=path.includes(goals.bb2026)?'bb2026':'freeStudy',id=path.split('/').at(-1),key=owner+scope+id;
+    const scope=scopeForPath(path),id=path.split('/').at(-1),key=owner+scope+id;
     const topic=topics.find(t=>t.id===body.topicId),q=topic.questions.find(q=>q.id===body.questionId);
     if(body.source==='review')reviewCalls.push({id,body});
     if(!acks.has(key)){
-     const ack={...body,answerId:id,goalId:goals[scope],correct:body.optionIndex===q.correctIndex,receivedAt:'2026-10-02T12:00:00.000Z'};
+     const ack={...body,answerId:id,goalId:goal(scope,owner).id,correct:body.optionIndex===q.correctIndex,receivedAt:'2026-10-02T12:00:00.000Z'};
      acks.set(key,ack);history.set(owner+scope,[...(history.get(owner+scope)??[]),ack]);
      const errorKey=owner+scope+body.topicId+body.questionId,previous=errors.get(errorKey);
      if(!ack.correct||previous)errors.set(errorKey,{topicId:body.topicId,contentVersion:body.contentVersion,questionId:body.questionId,wrongCount:(previous?.wrongCount??0)+(ack.correct?0:1),firstWrongAt:previous?.firstWrongAt??ack.receivedAt,lastWrongAt:ack.correct?previous.lastWrongAt:ack.receivedAt,lastAnswerAt:ack.receivedAt,lastOptionIndex:body.optionIndex,status:ack.correct?'reviewed':'pending',contentStatus:'current'});
@@ -41,10 +44,11 @@ try{
     data=acks.get(key);if(body.source==='review'&&loseReview){loseReview=false;status=503;data={code:'UNAVAILABLE'};}
    }
    else if(path.endsWith('/dashboard')){
-    const scope=path.includes(goals.bb2026)?'bb2026':'freeStudy',events=history.get(owner+scope)??[];
-    const today={date:currentDate,differentQuestions:new Set(events.map(e=>e.topicId+':'+e.questionId)).size,attempts:events.length,correct:events.filter(e=>e.correct).length};
-    data={goal:goal(scope),today,pendingErrors:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status==='pending').length,activity:[...['2026-09-26','2026-09-27','2026-09-28','2026-09-29','2026-09-30','2026-10-01'].map(date=>({date,differentQuestions:0,attempts:0,correct:0})),today],subjects:[],resume:events.length?{topicId:events.at(-1).topicId,contentVersion:scope==='freeStudy'?free.catalogVersion:contests.catalogVersion}:null};
-   }else if(path.endsWith('/errors')){const scope=path.includes(goals.bb2026)?'bb2026':'freeStudy',query=new URL(request.url()).searchParams;data={items:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status===(query.get('status')??'pending')).map(([,e])=>e),nextCursor:null};}
+    const scope=scopeForPath(path),events=history.get(owner+scope)??[],stats=new Map();
+    for(const event of events){const subject=subjectFor(event.topicId),stat=stats.get(subject.id)??{...subject,attempts:0,correct:0};stat.attempts++;stat.correct+=event.correct?1:0;stats.set(subject.id,stat);}
+    const today={date:currentDate,differentQuestions:new Set(events.map(e=>e.topicId+':'+e.contentVersion+':'+e.questionId)).size,attempts:events.length,correct:events.filter(e=>e.correct).length};
+    data={goal:goal(scope,owner),today,pendingErrors:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status==='pending').length,activity:[...['2026-09-26','2026-09-27','2026-09-28','2026-09-29','2026-09-30','2026-10-01'].map(date=>({date,differentQuestions:0,attempts:0,correct:0})),today],subjects:[...stats.values()],resume:events.length?{topicId:events.at(-1).topicId,contentVersion:scope==='freeStudy'?free.catalogVersion:contests.catalogVersion}:null};
+   }else if(path.endsWith('/errors')){const scope=scopeForPath(path),query=new URL(request.url()).searchParams;data={items:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status===(query.get('status')??'pending')&&(!query.has('subjectId')||subjectFor(e.topicId).id===query.get('subjectId'))).map(([,e])=>e),nextCursor:null};}
    else if(request.method()==='OPTIONS')data={};else{status=503;data={code:'UNAVAILABLE'};}
    await route.fulfill({status,json:data,headers:{'access-control-allow-origin':new URL(url).origin,'access-control-allow-headers':'authorization,content-type','access-control-allow-methods':'GET,POST,PUT,PATCH,OPTIONS'}});
   });
@@ -52,7 +56,7 @@ try{
   await expect(page.locator('flt-semantics').getByText('Entrar para salvar meu estudo',{exact:true})).toBeVisible();
   await login(page,'a@example.com');await page.getByRole('button',{name:/^Meu estudo(?:\s|$)/}).first().click();
   await expect(page.locator('flt-semantics').getByText('0 de 10 questões diferentes',{exact:true})).toBeVisible();
-  history.set(userA+'freeStudy',[{topicId:'porcentagem',questionId:'fixture-one',correct:true},{topicId:'porcentagem',questionId:'fixture-two',correct:false},{topicId:'porcentagem',questionId:'fixture-two',correct:false}]);
+  const seed=free.topics.find(t=>t.id==='porcentagem');history.set(userA+'freeStudy',[{topicId:seed.id,contentVersion:free.catalogVersion,questionId:seed.questions[0].id,correct:true},{topicId:seed.id,contentVersion:free.catalogVersion,questionId:seed.questions[1].id,correct:false},{topicId:seed.id,contentVersion:free.catalogVersion,questionId:seed.questions[1].id,correct:false}]);
   await click(page,'Atualizar meu estudo');
   await expect(page.locator('flt-semantics').getByText('2 de 10 questões diferentes',{exact:true})).toBeVisible();
   await expect(page.locator('flt-semantics').getByText('1 acerto em 3 tentativas',{exact:true})).toBeVisible();

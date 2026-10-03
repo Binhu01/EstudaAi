@@ -10,7 +10,8 @@ foreach($p in @((Join-Path $repo '.tooling'),$parent)){if((Test-Path -LiteralPat
 if(-not $run.StartsWith($parent+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)){throw 'Test path escaped its root.'}
 New-Item -ItemType Directory -Path $run -Force|Out-Null
 $cluster=Join-Path $run 'cluster'
-$envPath=Join-Path $repo '.env';$envBefore=if(Test-Path -LiteralPath $envPath){(Get-FileHash -LiteralPath $envPath).Hash}else{$null}
+function Hash-File([string]$Path){$hash=[Security.Cryptography.SHA256]::Create();try{return [Convert]::ToBase64String($hash.ComputeHash([IO.File]::ReadAllBytes($Path)))}finally{$hash.Dispose()}}
+$envPath=Join-Path $repo '.env';$envBefore=if(Test-Path -LiteralPath $envPath){Hash-File $envPath}else{$null}
 function Call-Local([string]$Action,[string]$Path=$cluster,[bool]$ShouldPass=$true){
  $callId=[Guid]::NewGuid().ToString('N')
  $args=@('-NoProfile','-ExecutionPolicy','Bypass','-File',('"'+$helper+'"'),'-Action',$Action,'-DataRoot',('"'+$Path+'"'),'-Port',"$Port")
@@ -25,8 +26,8 @@ function Query([string]$Sql){
  try{$env:PGPASSWORD=[IO.File]::ReadAllText((Join-Path $cluster 'password.txt')).Trim();$result=& (Join-Path $bin 'psql.exe') -X -w -h 127.0.0.1 -p $Port -U estuda_ai_local -d estuda_ai -At -v ON_ERROR_STOP=1 -c $Sql 2>&1;if($LASTEXITCODE-ne0){throw 'Test SQL failed.'};return $result}finally{$env:PGPASSWORD=$old}
 }
 try{
- Call-Local Init; $passwordHash=(Get-FileHash -LiteralPath (Join-Path $cluster 'password.txt')).Hash
- Call-Local Init; if((Get-FileHash -LiteralPath (Join-Path $cluster 'password.txt')).Hash-ne$passwordHash){throw 'Repeated Init changed the password.'}
+ Call-Local Init; $passwordHash=Hash-File (Join-Path $cluster 'password.txt')
+ Call-Local Init; if((Hash-File (Join-Path $cluster 'password.txt'))-ne$passwordHash){throw 'Repeated Init changed the password.'}
  Call-Local Start
  if([IO.Path]::GetFullPath((Query "SELECT current_setting('data_directory')").Trim())-ne[IO.Path]::GetFullPath((Join-Path $cluster 'data'))){throw 'Test cluster identity mismatch.'}
  Query 'CREATE TABLE routine_sentinel (value text); INSERT INTO routine_sentinel VALUES (''preserved'')'|Out-Null
@@ -38,7 +39,7 @@ try{
  Call-Local Init (Join-Path $repo 'artifacts/outside-tooling') $false
  $foreign=Join-Path $run 'foreign';New-Item -ItemType Directory -Path (Join-Path $foreign 'data') -Force|Out-Null;[IO.File]::WriteAllText((Join-Path $foreign 'data/PG_VERSION'),'18')
  Call-Local Stop $foreign $false;Call-Local Init $foreign $false
- $envAfter=if(Test-Path -LiteralPath $envPath){(Get-FileHash -LiteralPath $envPath).Hash}else{$null}
+ $envAfter=if(Test-Path -LiteralPath $envPath){Hash-File $envPath}else{$null}
  if($envBefore-ne$envAfter){throw 'Existing .env changed.'}
  $replica=Join-Path $run 'replica';New-Item -ItemType Directory -Path (Join-Path $replica 'tools') -Force|Out-Null
  Copy-Item -LiteralPath $helper -Destination (Join-Path $replica 'tools/local-postgres.ps1')
