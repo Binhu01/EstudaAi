@@ -47,7 +47,7 @@ DateTime historyTime(Object? value) {
 }
 
 String historyDate(Object? value) {
-  final v = historyText(value), p = DateTime.tryParse(v);
+  final v = historyText(value), p = DateTime.tryParse('${v}T00:00:00Z');
   if (p == null ||
       !RegExp(r'^\d{4}-\d{2}-\d{2}$').hasMatch(v) ||
       p.toIso8601String().substring(0, 10) != v) {
@@ -204,8 +204,8 @@ class StudyDashboard {
       invalidHistory();
     }
     for (var i = 1; i < days.length; i++) {
-      if (DateTime.parse(days[i].date)
-              .difference(DateTime.parse(days[i - 1].date))
+      if (DateTime.parse('${days[i].date}T00:00:00Z')
+              .difference(DateTime.parse('${days[i - 1].date}T00:00:00Z'))
               .inDays !=
           1) {
         invalidHistory();

@@ -21,8 +21,10 @@ async function login(page,email){
 }
 try{
  for(const viewport of [{width:360,height:800},{width:768,height:1024},{width:1440,height:1000}]){
-  const context=await browser.newContext({viewport,reducedMotion:'reduce'});const page=await context.newPage();lastPage=page;const pageErrors=[];page.on('pageerror',e=>pageErrors.push(e.message));
-  const history=new Map(),targets=new Map(),acks=new Map(),errors=new Map(),reviewCalls=[];let loseReview=true;const currentDate='2026-10-02';
+  const timezoneId=viewport.width===360?'America/New_York':'America/Sao_Paulo';
+  const dates=viewport.width===360?['2026-03-03','2026-03-04','2026-03-05','2026-03-06','2026-03-07','2026-03-08','2026-03-09']:['2026-09-26','2026-09-27','2026-09-28','2026-09-29','2026-09-30','2026-10-01','2026-10-02'];
+  const context=await browser.newContext({viewport,timezoneId,reducedMotion:'reduce'});const page=await context.newPage();lastPage=page;const pageErrors=[];page.on('pageerror',e=>pageErrors.push(e.message));
+  const history=new Map(),targets=new Map(),acks=new Map(),errors=new Map(),reviewCalls=[];let loseReview=true;const currentDate=dates.at(-1);
   const goal=(scope,owner=userA)=>({id:(owner===userA?goals:otherGoals)[scope],scope,timezone:'America/Sao_Paulo',dailyTarget:targets.get(owner+scope)??10});
   await context.route('http://127.0.0.1:3001/**',async route=>{
    const request=route.request(),path=new URL(request.url()).pathname,body=request.postDataJSON(),owner=request.headers().authorization?.includes('token-b')?userB:userA;
@@ -36,7 +38,7 @@ try{
     const topic=topics.find(t=>t.id===body.topicId),q=topic.questions.find(q=>q.id===body.questionId);
     if(body.source==='review')reviewCalls.push({id,body});
     if(!acks.has(key)){
-     const ack={...body,answerId:id,goalId:goal(scope,owner).id,correct:body.optionIndex===q.correctIndex,receivedAt:'2026-10-02T12:00:00.000Z'};
+     const ack={...body,answerId:id,goalId:goal(scope,owner).id,correct:body.optionIndex===q.correctIndex,receivedAt:currentDate+'T12:00:00.000Z'};
      acks.set(key,ack);history.set(owner+scope,[...(history.get(owner+scope)??[]),ack]);
      const errorKey=owner+scope+body.topicId+body.questionId,previous=errors.get(errorKey);
      if(!ack.correct||previous)errors.set(errorKey,{topicId:body.topicId,contentVersion:body.contentVersion,questionId:body.questionId,wrongCount:(previous?.wrongCount??0)+(ack.correct?0:1),firstWrongAt:previous?.firstWrongAt??ack.receivedAt,lastWrongAt:ack.correct?previous.lastWrongAt:ack.receivedAt,lastAnswerAt:ack.receivedAt,lastOptionIndex:body.optionIndex,status:ack.correct?'reviewed':'pending',contentStatus:'current'});
@@ -47,7 +49,7 @@ try{
     const scope=scopeForPath(path),events=history.get(owner+scope)??[],stats=new Map();
     for(const event of events){const subject=subjectFor(event.topicId),stat=stats.get(subject.id)??{...subject,attempts:0,correct:0};stat.attempts++;stat.correct+=event.correct?1:0;stats.set(subject.id,stat);}
     const today={date:currentDate,differentQuestions:new Set(events.map(e=>e.topicId+':'+e.contentVersion+':'+e.questionId)).size,attempts:events.length,correct:events.filter(e=>e.correct).length};
-    data={goal:goal(scope,owner),today,pendingErrors:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status==='pending').length,activity:[...['2026-09-26','2026-09-27','2026-09-28','2026-09-29','2026-09-30','2026-10-01'].map(date=>({date,differentQuestions:0,attempts:0,correct:0})),today],subjects:[...stats.values()],resume:events.length?{topicId:events.at(-1).topicId,contentVersion:scope==='freeStudy'?free.catalogVersion:contests.catalogVersion}:null};
+    data={goal:goal(scope,owner),today,pendingErrors:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status==='pending').length,activity:[...dates.slice(0,-1).map(date=>({date,differentQuestions:0,attempts:0,correct:0})),today],subjects:[...stats.values()],resume:events.length?{topicId:events.at(-1).topicId,contentVersion:scope==='freeStudy'?free.catalogVersion:contests.catalogVersion}:null};
    }else if(path.endsWith('/errors')){const scope=scopeForPath(path),query=new URL(request.url()).searchParams;data={items:[...errors.entries()].filter(([key,e])=>key.startsWith(owner+scope)&&e.status===(query.get('status')??'pending')&&(!query.has('subjectId')||subjectFor(e.topicId).id===query.get('subjectId'))).map(([,e])=>e),nextCursor:null};}
    else if(request.method()==='OPTIONS')data={};else{status=503;data={code:'UNAVAILABLE'};}
    await route.fulfill({status,json:data,headers:{'access-control-allow-origin':new URL(url).origin,'access-control-allow-headers':'authorization,content-type','access-control-allow-methods':'GET,POST,PUT,PATCH,OPTIONS'}});
@@ -79,7 +81,7 @@ try{
   await page.getByRole('checkbox',{name:'Banco do Brasil',exact:true}).click();await expect(page.locator('flt-semantics').getByText('1 de 10 questões diferentes',{exact:true})).toBeVisible();
   await page.goto(url+'/#/conta');await click(page,'Sair da conta');await login(page,'b@example.com');await page.getByRole('button',{name:/^Meu estudo(?:\s|$)/}).first().click();
   await expect(page.locator('flt-semantics').getByText('0 de 10 questões diferentes',{exact:true})).toBeVisible();
-  expect(pageErrors).toEqual([]);reports.push({viewport,flows:10,internalErrors:pageErrors,transport:'controlled test fixture; no live Firebase/OpenAI'});await context.close();
+  expect(pageErrors).toEqual([]);reports.push({viewport,timezoneId,activityDates:dates,flows:10,internalErrors:pageErrors,transport:'controlled test fixture; no live Firebase/OpenAI'});await context.close();
  }
  await writeFile(`${output}/report.json`,JSON.stringify({reports},null,2));console.log(JSON.stringify({viewports:reports.length,flows:reports.reduce((n,r)=>n+r.flows,0),internalErrors:0,transport:'controlled'},null,2));
 }catch(error){if(lastPage&&!lastPage.isClosed()){await lastPage.screenshot({path:`${output}/failure.png`});await writeFile(`${output}/failure-aria.txt`,await lastPage.locator('body').ariaSnapshot());}throw error;}finally{await browser.close();}

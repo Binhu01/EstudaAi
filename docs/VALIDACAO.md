@@ -25,6 +25,14 @@ O cluster de estudo `.tooling/pg-local` foi inicializado em127.0.0.1:55433 com S
 
 Relatórios/capturas: `artifacts/rotina-estudo`, mais os relatórios anteriores de Web/estudo/Concursos. CI acrescenta diagnóstico e nova rotina com fixtures públicas; esta fase não foi executada remotamente. A execução anterior do PR#1 e seus resultados continuam registrados abaixo. Docker, builds nativos, leitura de tela real, carga comercial e deploy permanecem fora da evidência desta etapa.
 
+## Revisão e fechamento da rotina — 03/10/2026
+
+A [revisão independente](ROTINA-REVISAO.md) de `ed17772..b2ccb83` encontrou um problema importante no calendário do cliente e um ajuste menor no enum OpenAPI das identidades históricas. O autor confirmou ambos; corrigiu o calendário em uma passagem e adiou o ajuste documental. Nenhum problema crítico foi encontrado. A tentativa anterior de revisão foi interrompida por limite de uso antes de produzir parecer; não houve segunda revisão após a correção.
+
+O teste Web recebeu sete datas civis consecutivas de03 a09/03/2026, com dispositivo em `America/New_York` e meta em São Paulo. No build anterior, o painel rejeitou o payload após o salto de horário de verão de23 horas. O cliente passou a validar datas/continuidade em UTC, sem modificar o dia determinado pelo servidor. O mesmo percurso passou após novo build:30 fluxos/3 tamanhos/zero erro interno; os dois outros tamanhos preservam São Paulo e a semana que cruza setembro/outubro. O relatório guarda fuso/datas para reprodução. API84/84, ferramentas29/29, Flutter101/101, format113/zero mudanças e análise limpa foram repetidos na árvore corrigida. Checks PostgreSQL/conteúdo e demais percursos Web da Task8 não foram repetidos porque a correção não os altera.
+
+Login/Steve reais permanecem pendentes. As decisões, seus custos e o ajuste menor adiado estão na revisão. A integração escolhida pelo usuário é enviar a branch e criar PR separado sobre `codex/concursos-bb2026`; o PR#1 não é alterado.
+
 ## CI do Pull Request #1 — 02/10/2026
 
 A primeira execução remota, no commit `79d112e`, comprovou geração, testes e build da API, o verificador integral do catálogo e a integração com PostgreSQL 17.11. O job Flutter comprovou geração, lockfile, formatação, análise, testes, build Web e verificação visual nos três tamanhos.
