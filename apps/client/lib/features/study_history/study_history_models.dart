@@ -156,10 +156,75 @@ class DailyActivity {
   }
 }
 
+class SubjectProgress {
+  const SubjectProgress({
+    required this.practicedQuestions,
+    required this.latestCorrectQuestions,
+    required this.catalogQuestions,
+  });
+  final int practicedQuestions, latestCorrectQuestions, catalogQuestions;
+  factory SubjectProgress.fromJson(Object? value, {required int attempts}) {
+    final v = historyObject(value);
+    final catalog = historyInt(v['catalogQuestions'], min: 1);
+    final practiced = historyInt(v['practicedQuestions'], min: 1, max: catalog);
+    if (practiced > attempts) invalidHistory();
+    return SubjectProgress(
+      practicedQuestions: practiced,
+      latestCorrectQuestions: historyInt(
+        v['latestCorrectQuestions'],
+        max: practiced,
+      ),
+      catalogQuestions: catalog,
+    );
+  }
+}
+
+class StudyProgress {
+  const StudyProgress({
+    required this.practicedQuestions,
+    required this.catalogQuestions,
+    required this.reviewedErrors,
+    required this.correctReviewQuestions,
+    required this.activeDays,
+    required this.currentStreak,
+    required this.bestStreak,
+  });
+  final int practicedQuestions, catalogQuestions, reviewedErrors;
+  // Each question contributes once after a confirmed correct review answer.
+  final int correctReviewQuestions;
+  final int activeDays, currentStreak, bestStreak;
+  factory StudyProgress.fromJson(Object? value) {
+    final v = historyObject(value);
+    final catalog = historyInt(v['catalogQuestions']);
+    final practiced = historyInt(v['practicedQuestions'], max: catalog);
+    final active = historyInt(v['activeDays']);
+    final best = historyInt(v['bestStreak'], max: active);
+    return StudyProgress(
+      practicedQuestions: practiced,
+      catalogQuestions: catalog,
+      reviewedErrors: historyInt(v['reviewedErrors'], max: practiced),
+      correctReviewQuestions: historyInt(
+        v['correctReviewQuestions'],
+        max: practiced,
+      ),
+      activeDays: active,
+      currentStreak: historyInt(v['currentStreak'], max: best),
+      bestStreak: best,
+    );
+  }
+}
+
 class SubjectStats {
-  const SubjectStats(this.id, this.title, this.attempts, this.correct);
+  const SubjectStats(
+    this.id,
+    this.title,
+    this.attempts,
+    this.correct, {
+    this.progress,
+  });
   final String id, title;
   final int attempts, correct;
+  final SubjectProgress? progress;
   factory SubjectStats.fromJson(Object? value) {
     final v = historyObject(value), a = historyInt(v['attempts'], min: 1);
     return SubjectStats(
@@ -167,6 +232,9 @@ class SubjectStats {
       historyText(v['title']),
       a,
       historyInt(v['correct'], max: a),
+      progress: v['progress'] == null
+          ? null
+          : SubjectProgress.fromJson(v['progress'], attempts: a),
     );
   }
 }
@@ -185,6 +253,7 @@ class StudyDashboard {
     required this.activity,
     required this.subjects,
     this.resume,
+    this.progress,
   });
   final StudyGoalContext goal;
   final DailyActivity today;
@@ -192,6 +261,7 @@ class StudyDashboard {
   final List<DailyActivity> activity;
   final List<SubjectStats> subjects;
   final StudyResume? resume;
+  final StudyProgress? progress;
   factory StudyDashboard.fromJson(Object? value) {
     final v = historyObject(value),
         days = historyList(v['activity'], DailyActivity.fromJson),
@@ -222,6 +292,9 @@ class StudyDashboard {
       pendingErrors: historyInt(v['pendingErrors']),
       activity: days,
       subjects: subjects,
+      progress: v['progress'] == null
+          ? null
+          : StudyProgress.fromJson(v['progress']),
       resume: r == null
           ? null
           : StudyResume(

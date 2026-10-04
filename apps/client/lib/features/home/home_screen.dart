@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 
 import '../settings/settings_controller.dart';
 import '../learning/learning_controller.dart';
+import '../../design_system/tokens.dart';
+import '../../design_system/components/page_heading.dart';
 import 'education_hero.dart';
 import 'topic_picker.dart';
 
@@ -69,103 +71,107 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
     controller: _scroll,
-    child: Align(
-      alignment: Alignment.topCenter,
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 1440),
-        child: Padding(
-          padding: EdgeInsets.all(
-            MediaQuery.sizeOf(context).width < 600 ? 16 : 32,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              EducationHero(
-                key: _hero,
-                gradientKey: _gradient,
-                shaderVisible: _shaderVisible,
-                animate: ref.watch(settingsProvider).animate,
-                visible: _visible,
-                onChooseTopic: _choose,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        EducationHero(
+          key: _hero,
+          gradientKey: _gradient,
+          shaderVisible: _shaderVisible,
+          animate: ref.watch(settingsProvider).animate,
+          visible: _visible,
+          onChooseTopic: _choose,
+        ),
+        Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 1280),
+            child: Padding(
+              padding: EdgeInsets.all(
+                MediaQuery.sizeOf(context).width < 600 ? 20 : 40,
               ),
-              const SizedBox(height: 48),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: OutlinedButton.icon(
-                  onPressed: () => context.go('/meu-estudo'),
-                  icon: const Icon(Icons.today_outlined),
-                  label: const Text('Meu estudo'),
-                ),
-              ),
-              const SizedBox(height: 24),
-              Column(
-                key: _topics,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    'Estudo livre',
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  const SizedBox(height: 8),
-                  const Text(
-                    'Escolha uma curiosidade para transformar em conhecimento.',
+                  const SizedBox(height: 24),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: OutlinedButton.icon(
+                      onPressed: () => context.go('/meu-estudo'),
+                      icon: const Icon(Icons.today_outlined),
+                      label: const Text('Meu estudo'),
+                    ),
                   ),
                   const SizedBox(height: 24),
-                  ref
-                      .watch(catalogProvider)
-                      .when(
-                        loading: () =>
-                            const Center(child: CircularProgressIndicator()),
-                        error: (error, stack) => Column(
-                          children: [
-                            const Text(
-                              'Não foi possível carregar os assuntos.',
-                            ),
-                            TextButton(
-                              onPressed: () => ref.invalidate(catalogProvider),
-                              child: const Text('Tentar novamente'),
-                            ),
-                          ],
-                        ),
-                        data: (catalog) => TopicPicker(
-                          topics: catalog.topics,
-                          selectedId: ref.watch(learningProvider).topicId,
-                          onSelected: ref
-                              .read(learningProvider.notifier)
-                              .selectTopic,
-                        ),
+                  Column(
+                    key: _topics,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const PageHeading(
+                        eyebrow: 'Seu próximo assunto',
+                        title: 'Estudo livre',
+                        description: 'Escolha uma curiosidade para transformar em conhecimento.',
                       ),
-                  const SizedBox(height: 24),
-                  FilledButton.icon(
-                    onPressed: () => context.go(
-                      '/aprender/${ref.read(learningProvider).topicId}',
-                    ),
-                    icon: const Icon(Icons.play_circle_outline),
-                    label: const Text('Aprender com videoaulas'),
+                      const SizedBox(height: 24),
+                      ref
+                          .watch(catalogProvider)
+                          .when(
+                            loading: () => const Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                            error: (error, stack) => Column(
+                              children: [
+                                const Text(
+                                  'Não foi possível carregar os assuntos.',
+                                ),
+                                TextButton(
+                                  onPressed: () =>
+                                      ref.invalidate(catalogProvider),
+                                  child: const Text('Tentar novamente'),
+                                ),
+                              ],
+                            ),
+                            data: (catalog) => TopicPicker(
+                              topics: catalog.topics,
+                              selectedId: ref.watch(learningProvider).topicId,
+                              onSelected: ref
+                                  .read(learningProvider.notifier)
+                                  .selectTopic,
+                            ),
+                          ),
+                      const SizedBox(height: 24),
+                      FilledButton.icon(
+                        onPressed: () => context.go(
+                          '/aprender/${ref.read(learningProvider).topicId}',
+                        ),
+                        icon: const Icon(Icons.play_circle_outline),
+                        label: const Text('Aprender com videoaulas'),
+                      ),
+                      const SizedBox(height: 12),
+                      OutlinedButton.icon(
+                        onPressed: () => context.go(
+                          '/desafios/${ref.read(learningProvider).topicId}',
+                        ),
+                        icon: const Icon(Icons.quiz_outlined),
+                        label: const Text('Jogar um desafio'),
+                      ),
+                      const SizedBox(height: 12),
+                      OutlinedButton.icon(
+                        onPressed: () => context.go(
+                          '/steve/${ref.read(learningProvider).topicId}',
+                        ),
+                        icon: const Icon(Icons.chat_bubble_outline),
+                        label: const Text('Conversar com o Steve'),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 12),
-                  OutlinedButton.icon(
-                    onPressed: () => context.go(
-                      '/desafios/${ref.read(learningProvider).topicId}',
-                    ),
-                    icon: const Icon(Icons.quiz_outlined),
-                    label: const Text('Jogar um desafio'),
-                  ),
-                  const SizedBox(height: 12),
-                  OutlinedButton.icon(
-                    onPressed: () => context.go(
-                      '/steve/${ref.read(learningProvider).topicId}',
-                    ),
-                    icon: const Icon(Icons.chat_bubble_outline),
-                    label: const Text('Conversar com o Steve'),
-                  ),
+                  const SizedBox(height: AppSpacing.section),
                 ],
               ),
-              const SizedBox(height: 48),
-            ],
+            ),
           ),
         ),
-      ),
+      ],
     ),
   );
 }

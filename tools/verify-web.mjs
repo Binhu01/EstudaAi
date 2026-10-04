@@ -1,92 +1,102 @@
 import { chromium, expect } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
+import { enableSemantics, heroClip, navigate, navigationControl, revealPainted } from './web-verification-helpers.mjs';
 
 const url = process.env.PREVIEW_URL ?? 'http://127.0.0.1:4173';
 const output = 'artifacts/screenshots';
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch();
 const reports = [];
-async function enableSemantics(page) {
-  await page.locator('flt-semantics-placeholder').waitFor();
-  await page.locator('flt-semantics-placeholder').dispatchEvent('click');
+
+async function openHome(page) {
+  await enableSemantics(page);
   await expect(page.getByText('Seu próximo nível começa com uma descoberta.', { exact: true })).toBeVisible();
 }
-async function stableFrame(page, label) {
+
+async function motionFrames(page, target, moving, label) {
+  const clip = await heroClip(page, target);
   await page.waitForTimeout(700);
-  const clip = await shaderClip(page);
-  const first = await page.screenshot({ clip });
-  await page.waitForTimeout(600);
-  const second = await page.screenshot({ clip });
-  await page.screenshot({ path: `${output}/${label}.png` });
-  expect(second.equals(first), `Paused shader keeps its pixels unchanged: ${label}`).toBe(true);
+  const first = await page.screenshot({ clip, path: output + '/' + label + '-' + target + '-a.png' });
+  await page.waitForTimeout(800);
+  const second = await page.screenshot({ clip, path: output + '/' + label + '-' + target + '-b.png' });
+  expect(second.equals(first), target + (moving ? ' visibly changes: ' : ' keeps its own pixels unchanged: ') + label).toBe(!moving);
+  return { target, clip, moving, intervalMs: 800 };
 }
-async function shaderClip(page) {
-  const hint = page.getByText('Explore os assuntos abaixo', { exact: true });
-  await hint.scrollIntoViewIfNeeded();
-  const bottom = await hint.boundingBox();
-  const brand = await page.getByText('Estuda Aí', { exact: true }).last().boundingBox();
-  expect(bottom).toBeTruthy();
-  expect(brand).toBeTruthy();
-  const width = page.viewportSize().width;
-  const right = width - (width < 600 ? 16 + 24 : 32 + 40);
-  const inline = brand.x + brand.width + 24 + 92 <= right;
-  // Inner pixels of the 92×48 shader, clear of rounded edges and text.
-  return { x: (inline ? brand.x + brand.width + 24 : brand.x) + 12,
-    y: bottom.y - 16 - 48 + 12, width: 64, height: 16 };
+
+async function disableHero(page) {
+  await navigate(page, 'Preferências');
+  await expect(page.getByText('Aparência', { exact: true })).toBeVisible();
+  const motion = page.getByRole('switch', { name: /^Animação do hero(?:\s|$)/ });
+  const readingSpacing = page.getByRole('switch', { name: /^Mais espaço entre linhas(?:\s|$)/ });
+  await expect(motion).toBeChecked();
+  await expect(readingSpacing).not.toBeChecked();
+  await revealPainted(page, motion);
+  await motion.click();
+  await expect(motion).not.toBeChecked();
+  await expect(readingSpacing).not.toBeChecked();
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('flutter.animate'))).toBe('false');
 }
-function navigation(page, name) {
-  const prefix = new RegExp(`^${name}(?:\\s|$)`);
-  return page.getByRole('button', { name: prefix }).or(page.getByRole('tab', { name: prefix })).first();
-}
+
 try {
   for (const viewport of [{ width: 1440, height: 1000 }, { width: 360, height: 800 }, { width: 768, height: 1024 }]) {
-    const context = await browser.newContext({ viewport, colorScheme: 'light' });
+    const context = await browser.newContext({ viewport, colorScheme: 'light', reducedMotion: 'no-preference' });
     const page = await context.newPage();
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
     await page.goto(url);
-    await enableSemantics(page);
+    await openHome(page);
     await page.waitForTimeout(500);
-    await page.screenshot({ path: `${output}/${viewport.width}-light.png` });
-    const clip = await shaderClip(page);
-    const light = await page.screenshot({ clip });
-    await page.waitForTimeout(800);
-    const animated = await page.screenshot({ clip });
-    expect(animated.equals(light), 'Shader visibly changes').toBe(false);
-    await navigation(page, 'Preferências').click();
+    await page.screenshot({ path: output + '/' + viewport.width + '-light.png' });
+    const active = [
+      await motionFrames(page, 'shader', true, viewport.width + '-active'),
+      await motionFrames(page, 'brain', true, viewport.width + '-active'),
+    ];
+    await navigate(page, 'Preferências');
     await expect(page.getByText('Aparência', { exact: true })).toBeVisible();
     await page.getByRole('checkbox', { name: 'Escuro', exact: true }).click();
-    const motion = page.getByRole('switch');
-    await motion.scrollIntoViewIfNeeded();
-    await motion.click();
-    await page.waitForTimeout(300);
-    expect(await page.evaluate(() => localStorage.getItem('flutter.theme'))).toBe('"dark"');
-    expect(await page.evaluate(() => localStorage.getItem('flutter.animate'))).toBe('false');
-    await navigation(page, 'Início').click();
-    await expect(page.getByText('Seu próximo nível começa com uma descoberta.', { exact: true })).toBeVisible();
-    await stableFrame(page, `${viewport.width}-dark-paused`);
+    await expect.poll(() => page.evaluate(() => localStorage.getItem('flutter.theme'))).toBe('"dark"');
+    await disableHero(page);
+    await navigate(page, 'Início');
+    await openHome(page);
+    const paused = [
+      await motionFrames(page, 'shader', false, viewport.width + '-dark-paused'),
+      await motionFrames(page, 'brain', false, viewport.width + '-dark-paused'),
+    ];
+    await page.screenshot({ path: output + '/' + viewport.width + '-dark-paused.png' });
     await page.reload();
-    await enableSemantics(page);
-    await stableFrame(page, `${viewport.width}-dark-reopened`);
-    expect(await page.evaluate(() => localStorage.getItem('flutter.theme'))).toBe('"dark"');
-    // A real keyboard pass: Tab focuses a control and Enter opens preferences.
-    await navigation(page, 'Preferências').focus();
+    await openHome(page);
+    const reopened = [
+      await motionFrames(page, 'shader', false, viewport.width + '-dark-reopened'),
+      await motionFrames(page, 'brain', false, viewport.width + '-dark-reopened'),
+    ];
+    await expect.poll(() => page.evaluate(() => localStorage.getItem('flutter.theme'))).toBe('"dark"');
+    await expect.poll(() => page.evaluate(() => localStorage.getItem('flutter.animate'))).toBe('false');
+    // Focus a real navigation control; utility pages may need the drawer.
+    await (await navigationControl(page, 'Preferências')).focus();
     await page.keyboard.press('Enter');
     await expect(page.getByText('Aparência', { exact: true })).toBeVisible();
     await page.keyboard.press('Tab');
     const focused = await page.evaluate(() => document.activeElement?.getAttribute('role'));
     expect(focused).toBeTruthy();
     expect(errors).toEqual([]);
-    reports.push({ viewport, consoleErrors: errors.length, animated: true, paused: true, persisted: true, keyboard: true });
+    reports.push({ viewport, consoleErrors: errors.length, active, paused, reopened, persisted: true, keyboard: true });
     await context.close();
   }
   const reduced = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
   const page = await reduced.newPage();
   await page.goto(url);
-  await enableSemantics(page);
-  await stableFrame(page, 'desktop-reduced-motion');
+  await openHome(page);
+  const reducedMotion = {
+    shader: await motionFrames(page, 'shader', false, 'desktop-reduced-motion'),
+    // The user explicitly requested the brain to loop despite reduced motion.
+    brain: await motionFrames(page, 'brain', true, 'desktop-reduced-motion-user-loop'),
+  };
+  await disableHero(page);
+  await navigate(page, 'Início');
+  await openHome(page);
+  reducedMotion.brainDisabled = await motionFrames(page, 'brain', false, 'desktop-reduced-motion-disabled');
   await reduced.close();
-  await writeFile('artifacts/web-verification.json', JSON.stringify({ reports, reducedMotion: true }, null, 2) + '\n');
-  console.log(JSON.stringify({ reports, reducedMotion: true }));
+  await writeFile('artifacts/web-verification.json', JSON.stringify({ reports, reducedMotion }, null, 2) + '\n');
+  console.log(JSON.stringify({ reports, reducedMotion }));
 } finally { await browser.close(); }

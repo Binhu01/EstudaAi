@@ -1,3 +1,5 @@
+import { isIP } from 'node:net';
+
 export interface Configuration {
   databaseUrl: string;
   firebaseProject: string;
@@ -7,6 +9,7 @@ export interface Configuration {
   steveDailyLimit: number;
   steveGlobalDailyLimit: number;
   origins: string[];
+  trustedProxyCidrs: string[];
   port: number;
   production: boolean;
 }
@@ -17,6 +20,17 @@ export function readConfig(env: NodeJS.ProcessEnv): Configuration {
   const origins = (env.CORS_ORIGINS ?? '').split(',').map((origin) => origin.trim());
   const port = Number(env.PORT ?? 3001);
   const invalid = (field: string): never => { throw new Error(`Configuração inválida: ${field}.`); };
+  const proxyValue = env.TRUSTED_PROXY_CIDRS?.trim() ?? '';
+  const trustedProxyCidrs = proxyValue ? proxyValue.split(',').map(value => value.trim()) : [];
+  if (trustedProxyCidrs.length > 32 || trustedProxyCidrs.some(value => {
+    const parts = value.split('/');
+    const family = isIP(parts[0] ?? '');
+    if (!family || parts.length > 2) return true;
+    if (parts.length === 1) return false;
+    if (!/^[0-9]+$/.test(parts[1] ?? '')) return true;
+    const prefix = Number(parts[1]);
+    return prefix < 1 || prefix > (family === 4 ? 32 : 128);
+  })) invalid('TRUSTED_PROXY_CIDRS');
   let database: URL;
   try { database = new URL(databaseUrl); } catch { return invalid('DATABASE_URL'); }
   if (!['postgres:', 'postgresql:'].includes(database.protocol) || !database.hostname) invalid('DATABASE_URL');
@@ -38,5 +52,5 @@ export function readConfig(env: NodeJS.ProcessEnv): Configuration {
   const steveGlobalDailyLimit = Number(env.STEVE_GLOBAL_DAILY_LIMIT ?? 1000);
   if (!Number.isSafeInteger(steveDailyLimit) || steveDailyLimit < 1 || steveDailyLimit > 1000) invalid('STEVE_DAILY_LIMIT');
   if (!Number.isSafeInteger(steveGlobalDailyLimit) || steveGlobalDailyLimit < steveDailyLimit || steveGlobalDailyLimit > 100000) invalid('STEVE_GLOBAL_DAILY_LIMIT');
-  return { databaseUrl, firebaseProject, firebaseWebApiKey, openaiApiKey, steveModel, steveDailyLimit, steveGlobalDailyLimit, origins, port, production };
+  return { databaseUrl, firebaseProject, firebaseWebApiKey, openaiApiKey, steveModel, steveDailyLimit, steveGlobalDailyLimit, origins, trustedProxyCidrs, port, production };
 }

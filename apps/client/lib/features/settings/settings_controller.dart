@@ -16,12 +16,20 @@ class SettingsController extends Notifier<AppSettings> {
   @override
   AppSettings build() =>
       SettingsRepository(ref.watch(preferencesProvider)).read();
-  Future<void> update({ThemeMode? theme, bool? animate}) {
+  Future<void> update({
+    ThemeMode? theme,
+    bool? animate,
+    ReadingTextSize? readingTextSize,
+    bool? readingComfortableSpacing,
+  }) {
     final operation = _pending.then((_) async {
       if (!ref.mounted) return;
       final next = AppSettings(
         theme: theme ?? state.theme,
         animate: animate ?? state.animate,
+        readingTextSize: readingTextSize ?? state.readingTextSize,
+        readingComfortableSpacing:
+            readingComfortableSpacing ?? state.readingComfortableSpacing,
       );
       await SettingsRepository(ref.read(preferencesProvider)).save(next);
       if (ref.mounted) state = next;

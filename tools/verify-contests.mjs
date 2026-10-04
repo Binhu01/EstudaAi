@@ -1,5 +1,6 @@
 import { chromium, expect } from '@playwright/test';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { navigate, navigationControl } from './web-verification-helpers.mjs';
 
 const url = process.env.PREVIEW_URL ?? 'http://127.0.0.1:4173';
 const output = 'artifacts/concursos-bb2026/verification';
@@ -12,10 +13,6 @@ const browser = await chromium.launch();
 const reports = [];
 let lastPage;
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-function navigation(page, name) {
-  const prefix = new RegExp(`^${name}(?:\\s|$)`);
-  return page.getByRole('button', {name:prefix}).or(page.getByRole('tab', {name:prefix})).first();
-}
 async function click(page, name, exact = true) {
   const item = page.getByRole('button', {name:exact ? name : new RegExp(escape(name)), exact}).first();
   await item.scrollIntoViewIfNeeded(); await item.click();
@@ -54,7 +51,7 @@ try {
     page.on('console', message => {if(message.type()==='error')consoleErrors.push({text:message.text(),url:message.location().url});});
     await page.goto(url); await enable(page);
     await expect(page.getByText('Seu próximo nível começa com uma descoberta.',{exact:true})).toBeVisible();
-    await navigation(page,'Concursos').click(); await route(page,'/concursos');
+    await navigate(page,'Concursos'); await route(page,'/concursos');
     await click(page,catalog.course.title,false); await route(page,'/concursos/bb2026');
     await expect(page.getByText('Preparação',{exact:true})).toBeVisible();
     await page.screenshot({path:`${output}/${viewport.width}-curso.png`});
@@ -113,7 +110,7 @@ try {
       await click(page,'Perguntar ao Steve'); await route(page,`${prefix}/steve`);
       await expect(page.getByText('Entre na sua conta para conversar com o Steve.',{exact:true})).toBeVisible();
       await click(page,'Entrar para conversar'); await route(page,'/conta');
-      await navigation(page,'Steve').click(); await route(page,`${prefix}/steve`);
+      await navigate(page,'Steve'); await route(page,`${prefix}/steve`);
       await click(page,'Material'); await route(page,`${prefix}/material`);
       await click(page,'Voltar à disciplina'); await route(page,`/concursos/bb2026/${discipline.id}`);
       await click(page,'Voltar ao concurso');await route(page,'/concursos/bb2026');
@@ -128,15 +125,19 @@ try {
     await click(page,'Voltar ao início');
     await click(page,'Escolher meu assunto');await click(page,'Interpretação de texto',false);
     await click(page,'Aprender com videoaulas');await route(page,'/aprender/interpretacao-texto');
-    await navigation(page,'Concursos').click();await click(page,catalog.course.title,false);
-    await navigation(page,'Início').click();await navigation(page,'Aprender').click();await route(page,'/aprender/interpretacao-texto');
-    await navigation(page,'Preferências').focus();await page.keyboard.press('Enter');
+    await navigate(page,'Concursos');await click(page,catalog.course.title,false);
+    await navigate(page,'Início');await navigate(page,'Aprender');await route(page,'/aprender/interpretacao-texto');
+    await (await navigationControl(page,'Preferências')).focus();await page.keyboard.press('Enter');
     await expect(page.getByText('Aparência',{exact:true})).toBeVisible();
     await page.getByRole('checkbox',{name:'Escuro',exact:true}).click();
     expect(await page.evaluate(()=>localStorage.getItem('flutter.theme'))).toBe('"dark"');
-    await navigation(page,'Concursos').click();await click(page,catalog.course.title,false);
+    await navigate(page,'Concursos');await click(page,catalog.course.title,false);
     await page.screenshot({path:`${output}/${viewport.width}-curso-escuro.png`});
-    await page.keyboard.press('Tab');await page.keyboard.press('Control+,');
+    await page.keyboard.press('Tab');await page.keyboard.press('Control+k');
+    const search=page.getByRole('textbox',{name:/Buscar atalhos/});
+    await expect(search).toBeVisible();await search.focus();
+    await search.pressSequentially('Preferências',{delay:15});
+    await page.keyboard.press('Enter');
     await expect(page.getByText('Aparência',{exact:true})).toBeVisible();
     expect(pageErrors).toEqual([]);
     const internalErrors=consoleErrors.filter(error=>!external(error.url));expect(internalErrors).toEqual([]);

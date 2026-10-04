@@ -45,7 +45,10 @@ class DashboardController extends Notifier<DashboardViewState> {
       if (previous?.generation != next.generation) _reset();
     });
     ref.listen(studyContextProvider, (previous, next) {
-      if (next.snapshot != null && previous?.revision != next.revision) {
+      if (next.snapshot != null &&
+          previous?.revision != next.revision &&
+          previous?.snapshot?.goal.dailyTarget ==
+              next.snapshot!.goal.dailyTarget) {
         unawaited(load());
       }
     });
@@ -152,6 +155,7 @@ class DashboardController extends Notifier<DashboardViewState> {
           activity: previous.activity,
           subjects: previous.subjects,
           resume: previous.resume,
+          progress: previous.progress,
         ),
       );
       controller.updateGoal(snapshot, goal);

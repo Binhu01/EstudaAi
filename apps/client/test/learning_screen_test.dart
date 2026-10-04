@@ -77,6 +77,7 @@ void main() {
         container.read(routerProvider).go('/aprender/${entry.key}');
         await tester.pumpAndSettle();
         expect(find.text('Abrir no YouTube'), findsNothing);
+        await tester.ensureVisible(find.text(entry.value));
         await tester.tap(find.text(entry.value));
         await tester.pumpAndSettle();
         expect(find.text('Abrir no YouTube'), findsOneWidget);

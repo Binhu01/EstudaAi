@@ -8,6 +8,7 @@ import {HistoryConflict,HistoryContentChanged} from '../errors';
 import {StudyScope,StudyGoalContext,StudyAnswerInput,ConfirmedAnswer,GoalRow,AnswerRow,StudyDashboard,DailyActivity,SubjectStats,ErrorQuery,StudyErrorItem,StudyErrorPage} from './study.models';
 import {goalQuery,ensureQuery,answerQuery,insertAnswer,updateError,catalogRows,activeAnswers} from './study.queries';
 import {studyDates} from './study.calendar';
+import {studyConsistency} from './study.progress';
 const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 function identity(...ids:string[]){if(ids.some(id=>!uuid.test(id)))throw new BadRequestException();}
 function context(goal:GoalRow):StudyGoalContext{
@@ -66,14 +67,26 @@ export class StudyHistoryService {
   }
   async readDashboard(userId:string,goalId:string):Promise<StudyDashboard>{
     return this.database.transaction(async tx=>{
-      const row=await this.goal(tx,userId,goalId,true),goal=context(row),dates=studyDates(this.clock(),goal.timezone);
-      const catalog=catalogRows(this.directory,goal.scope),answers=activeAnswers(userId,goalId);
+      const row=await this.goal(tx,userId,goalId,true),goal=context(row),now=this.clock(),dates=studyDates(now,goal.timezone);
+      const catalog=catalogRows(this.directory,goal.scope),answers=Prisma.sql`${activeAnswers(userId,goalId)} AND a."receivedAt"<=${now}`;
       const activityRows=await tx.query<DailyActivity>(Prisma.sql`WITH ${catalog} SELECT (a."receivedAt" AT TIME ZONE ${goal.timezone})::date::text AS date,count(DISTINCT (a."topicId",a."contentVersion",a."questionId"))::int AS "differentQuestions",count(*)::int AS attempts,count(*) FILTER (WHERE a.correct)::int AS correct ${answers} AND a."receivedAt">=${dates[0]!.start} AND a."receivedAt"<${dates[6]!.end} GROUP BY date`);
       const activity=dates.map(d=>activityRows.find(r=>r.date===d.date)??{date:d.date,differentQuestions:0,attempts:0,correct:0});
-      const subjects=await tx.query<SubjectStats>(Prisma.sql`WITH ${catalog} SELECT c.subject AS id,c.title,count(*)::int AS attempts,count(*) FILTER (WHERE a.correct)::int AS correct ${answers} GROUP BY c.subject,c.title ORDER BY c.title,c.subject`);
+      const latest=Prisma.sql`latest AS (SELECT DISTINCT ON (a."topicId",a."contentVersion",a."questionId") a."topicId",a."contentVersion",a."questionId",a.correct,c.subject ${answers} ORDER BY a."topicId",a."contentVersion",a."questionId",a.ordinal DESC)`;
+      const subjectRows=await tx.query<Omit<SubjectStats,'progress'> & {practicedQuestions:number;latestCorrectQuestions:number}>(Prisma.sql`WITH ${catalog},${latest} SELECT c.subject AS id,c.title,count(*)::int AS attempts,count(*) FILTER (WHERE a.correct)::int AS correct,count(DISTINCT (a."topicId",a."contentVersion",a."questionId"))::int AS "practicedQuestions",(SELECT count(*)::int FROM latest l WHERE l.subject=c.subject AND l.correct) AS "latestCorrectQuestions" ${answers} GROUP BY c.subject,c.title ORDER BY c.title,c.subject`);
+      const entries=this.directory.topicIds.map(id=>this.directory.find(id)!).filter(e=>goal.scope==='freeStudy'?e.area==='freeStudy':e.courseId==='bb2026');
+      const catalogCounts=new Map<string,number>();
+      for(const entry of entries){
+        const subject=goal.scope==='freeStudy'?entry.topic.id:entry.disciplineId!;
+        catalogCounts.set(subject,(catalogCounts.get(subject)??0)+entry.topic.questions.length);
+      }
+      const subjects=subjectRows.map(({practicedQuestions,latestCorrectQuestions,...subject})=>({...subject,progress:{practicedQuestions,latestCorrectQuestions,catalogQuestions:catalogCounts.get(subject.id)!}}));
+      const counts=(await tx.query<{practicedQuestions:number;correctReviewQuestions:number}>(Prisma.sql`WITH ${catalog} SELECT count(DISTINCT (a."topicId",a."contentVersion",a."questionId"))::int AS "practicedQuestions",count(DISTINCT (a."topicId",a."contentVersion",a."questionId")) FILTER (WHERE a.correct AND a.source='review')::int AS "correctReviewQuestions" ${answers}`))[0]!;
+      const reviewedErrors=(await tx.query<{n:number}>(Prisma.sql`WITH ${catalog},${latest} SELECT count(*)::int AS n FROM latest l JOIN "StudyQuestionError" e ON e."topicId"=l."topicId" AND e."contentVersion"=l."contentVersion" AND e."questionId"=l."questionId" WHERE e."userId"=${userId}::uuid AND e."goalId"=${goalId}::uuid AND e."firstWrongAt"<=${now} AND l.correct`))[0]!.n;
+      const activeDates=await tx.query<{date:string}>(Prisma.sql`WITH ${catalog} SELECT DISTINCT (a."receivedAt" AT TIME ZONE ${goal.timezone})::date::text AS date ${answers} ORDER BY date`);
+      const progress={...counts,catalogQuestions:entries.reduce((n,e)=>n+e.topic.questions.length,0),reviewedErrors,...studyConsistency(activeDates.map(v=>v.date),activity[6]!.date)};
       const resume=(await tx.query<{topicId:string;contentVersion:number}>(Prisma.sql`WITH ${catalog} SELECT a."topicId",a."contentVersion" ${answers} ORDER BY a.ordinal DESC LIMIT 1`))[0]??null;
-      const pending=(await tx.query<{n:number}>(Prisma.sql`WITH ${catalog} SELECT count(*)::int AS n FROM "StudyQuestionError" e JOIN catalog c ON e."topicId"=c."topicId" AND e."contentVersion"=c.version AND e."questionId"=ANY(c.questions) WHERE e."userId"=${userId}::uuid AND e."goalId"=${goalId}::uuid AND e.status='pending'`))[0]!.n;
-      return {goal,today:activity[6]!,pendingErrors:pending,activity,subjects,resume};
+      const pending=(await tx.query<{n:number}>(Prisma.sql`WITH ${catalog},${latest} SELECT count(*)::int AS n FROM latest l JOIN "StudyQuestionError" e ON e."topicId"=l."topicId" AND e."contentVersion"=l."contentVersion" AND e."questionId"=l."questionId" WHERE e."userId"=${userId}::uuid AND e."goalId"=${goalId}::uuid AND NOT l.correct`))[0]!.n;
+      return {goal,today:activity[6]!,pendingErrors:pending,activity,subjects,resume,progress};
     });
   }
   async listErrors(userId:string,goalId:string,query:ErrorQuery):Promise<StudyErrorPage>{

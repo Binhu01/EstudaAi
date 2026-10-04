@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../design_system/tokens.dart';
 import 'contest_models.dart';
 import 'contest_widgets.dart';
 
@@ -15,40 +16,37 @@ class MaterialBlocks extends StatelessWidget {
           title: block.title,
           children: switch (block) {
             TextBlock() => [
-              SelectableText(block.text, semanticsLabel: block.text),
+              SelectableText(
+                block.text,
+                semanticsLabel: block.text,
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
             ],
             ListBlock() => [StudyBullets(block.items)],
-            ExampleBlock() => [
-              Text(block.problem),
-              const SizedBox(height: 12),
-              for (var i = 0; i < block.steps.length; i++)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Text('${i + 1}. ${block.steps[i]}'),
-                ),
-              Text(
-                'Resposta: ${block.answer}',
-                style: const TextStyle(fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(height: 8),
-              Text('Confira: ${block.check}'),
-            ],
+            ExampleBlock() => [_WorkedExample(block: block)],
             FormulaBlock() => [
-              SelectableText(
-                block.expression,
-                semanticsLabel: block.expression,
-                style: Theme.of(context).textTheme.titleMedium,
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: AppColors.of(context).primarySoft,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: SelectableText(
+                  block.expression,
+                  semanticsLabel: block.expression,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 20),
               StudyBullets([
-                for (final v in block.variables)
-                  '${v.name}: ${v.meaning} (${v.unit})',
+                for (final variable in block.variables)
+                  '${variable.name}: ${variable.meaning} (${variable.unit})',
               ]),
               const Text(
                 'Condições de uso',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 12),
               StudyBullets(block.conditions),
             ],
             TableBlock() => [_MaterialTable(block: block)],
@@ -56,6 +54,60 @@ class MaterialBlocks extends StatelessWidget {
         ),
     ],
   );
+}
+
+class _WorkedExample extends StatelessWidget {
+  const _WorkedExample({required this.block});
+  final ExampleBlock block;
+  @override
+  Widget build(BuildContext context) {
+    final colors = AppColors.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(block.problem, style: Theme.of(context).textTheme.bodyLarge),
+        const SizedBox(height: 20),
+        for (var i = 0; i < block.steps.length; i++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 32,
+                  child: Text(
+                    '${i + 1}.',
+                    style: TextStyle(
+                      color: colors.linkInk,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                Expanded(child: Text(block.steps[i])),
+              ],
+            ),
+          ),
+        Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: colors.primarySoft,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Resposta: ${block.answer}',
+                style: const TextStyle(fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(height: 12),
+              Text('Confira: ${block.check}'),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class _MaterialTable extends StatefulWidget {
@@ -77,8 +129,12 @@ class _MaterialTableState extends State<_MaterialTable> {
   Widget build(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.stretch,
     children: [
-      const Text('A tabela pode ser rolada horizontalmente.'),
-      const SizedBox(height: 12),
+      Text(
+        'A tabela pode ser rolada horizontalmente.',
+        style: Theme.of(context).textTheme.bodySmall
+            ?.copyWith(color: AppColors.of(context).muted),
+      ),
+      const SizedBox(height: 16),
       Scrollbar(
         controller: controller,
         thumbVisibility: true,
@@ -89,13 +145,16 @@ class _MaterialTableState extends State<_MaterialTable> {
             width: 240.0 * widget.block.columns.length,
             child: Table(
               defaultColumnWidth: const FixedColumnWidth(240),
-              border: TableBorder.all(color: Theme.of(context).dividerColor),
+              border: TableBorder.all(color: AppColors.of(context).border),
               children: [
                 TableRow(
+                  decoration: BoxDecoration(
+                    color: AppColors.of(context).primarySoft,
+                  ),
                   children: [
                     for (final column in widget.block.columns)
                       Padding(
-                        padding: const EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(16),
                         child: Semantics(
                           header: true,
                           child: Text(
@@ -111,7 +170,7 @@ class _MaterialTableState extends State<_MaterialTable> {
                     children: [
                       for (final cell in row)
                         Padding(
-                          padding: const EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(16),
                           child: Text(cell),
                         ),
                     ],
@@ -121,7 +180,7 @@ class _MaterialTableState extends State<_MaterialTable> {
           ),
         ),
       ),
-      const SizedBox(height: 16),
+      const SizedBox(height: 20),
       Text(widget.block.caption),
     ],
   );

@@ -1,5 +1,6 @@
 import { chromium, expect } from '@playwright/test';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { navigate } from './web-verification-helpers.mjs';
 
 const url = process.env.PREVIEW_URL ?? 'http://127.0.0.1:4173';
 const output = 'artifacts/study';
@@ -9,10 +10,6 @@ const browser = await chromium.launch();
 const reports = [];
 let lastPage;
 const escape = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-function navigation(page, name) {
-  const prefix = new RegExp(`^${name}(?:\\s|$)`);
-  return page.getByRole('button', { name: prefix }).or(page.getByRole('tab', { name: prefix })).first();
-}
 async function clickText(page, text) {
   const item = page.getByText(text, { exact: true }).first();
   await item.scrollIntoViewIfNeeded();
@@ -59,7 +56,7 @@ try {
         await popup.close();
         lessonChecks.push({videoId:lesson.videoId,iframe:true,fallbackGesture:true});
       }
-      await navigation(page,'Desafios').click();await route(page,`/desafios/${topic.id}`);
+      await navigate(page,'Desafios');await route(page,`/desafios/${topic.id}`);
       await clickText(page,'Começar desafio');
       for(let i=0;i<5;i++) {
         await expect(page.getByText(`QUESTÃO ${i+1}/5`,{exact:true})).toBeVisible();
@@ -98,8 +95,8 @@ try {
         await expect(failure).toBeVisible();
         await page.screenshot({path:`${output}/${viewport.width}-account-unavailable.png`});
       }
-      await navigation(page,'Steve').click();await route(page,`/steve/${topic.id}`);
-      await navigation(page,'Início').click();
+      await navigate(page,'Steve');await route(page,`/steve/${topic.id}`);
+      await navigate(page,'Início');
       topicReports.push({id:topic.id,lessons:lessonChecks,questions:5,feedback:true,result:true,contextPreserved:true});
     }
     expect(pageErrors).toEqual([]);

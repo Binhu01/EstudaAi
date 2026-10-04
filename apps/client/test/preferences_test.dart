@@ -11,17 +11,33 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     final prefs = await SharedPreferences.getInstance();
     final store = SettingsRepository(prefs);
-    await store.save(const AppSettings(theme: ThemeMode.dark, animate: false));
+    await store.save(
+      const AppSettings(
+        theme: ThemeMode.dark,
+        animate: false,
+        readingTextSize: ReadingTextSize.extraLarge,
+        readingComfortableSpacing: true,
+      ),
+    );
     final reopened = SettingsRepository(prefs).read();
     expect(reopened.theme, ThemeMode.dark);
     expect(reopened.animate, false);
+    expect(reopened.readingTextSize, ReadingTextSize.extraLarge);
+    expect(reopened.readingComfortableSpacing, true);
   });
   test('corrupted preferences recover to safe defaults', () async {
-    SharedPreferences.setMockInitialValues({'theme': 21, 'animate': 'no'});
+    SharedPreferences.setMockInitialValues({
+      'theme': 21,
+      'animate': 'no',
+      'readingTextSize': 'unknown',
+      'readingComfortableSpacing': 'more',
+    });
     final settings = SettingsRepository(await SharedPreferences.getInstance())
         .read();
     expect(settings.theme, ThemeMode.system);
     expect(settings.animate, true);
+    expect(settings.readingTextSize, ReadingTextSize.standard);
+    expect(settings.readingComfortableSpacing, false);
   });
   test('simultaneous preference changes preserve both choices', () async {
     SharedPreferences.setMockInitialValues({});
@@ -34,11 +50,20 @@ void main() {
     await Future.wait([
       controller.update(theme: ThemeMode.dark),
       controller.update(animate: false),
+      controller.update(readingTextSize: ReadingTextSize.large),
+      controller.update(readingComfortableSpacing: true),
     ]);
     expect(container.read(settingsProvider).theme, ThemeMode.dark);
     expect(container.read(settingsProvider).animate, false);
+    expect(
+      container.read(settingsProvider).readingTextSize,
+      ReadingTextSize.large,
+    );
+    expect(container.read(settingsProvider).readingComfortableSpacing, true);
     final persisted = SettingsRepository(prefs).read();
     expect(persisted.theme, ThemeMode.dark);
     expect(persisted.animate, false);
+    expect(persisted.readingTextSize, ReadingTextSize.large);
+    expect(persisted.readingComfortableSpacing, true);
   });
 }

@@ -1,6 +1,6 @@
 # Configurar conta, Steve e histórico reais
 
-Painel e caderno usam respostas confirmadas no PostgreSQL, separadas por conta e área. Os testes controlados não comprovam acesso ao Firebase/OpenAI. Nesta entrega, esses serviços permanecem **pendentes de configuração e validação real**.
+Painel e caderno usam respostas confirmadas no PostgreSQL, separadas por conta e área. Os testes controlados não comprovam acesso ao Firebase/OpenAI. Firebase, banco e histórico já foram configurados e validados com acesso real local. A OpenAI continua pendente por escolha do usuário. O restante deste guia explica a instalação em um ambiente novo.
 
 ## Banco local no Windows
 
