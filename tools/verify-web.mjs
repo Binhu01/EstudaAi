@@ -7,6 +7,7 @@ const output = 'artifacts/screenshots';
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch();
 const reports = [];
+let lastPage;
 
 async function openHome(page) {
   await enableSemantics(page);
@@ -41,6 +42,7 @@ try {
   for (const viewport of [{ width: 1440, height: 1000 }, { width: 360, height: 800 }, { width: 768, height: 1024 }]) {
     const context = await browser.newContext({ viewport, colorScheme: 'light', reducedMotion: 'no-preference' });
     const page = await context.newPage();
+    lastPage = page;
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
@@ -54,7 +56,9 @@ try {
     ];
     await navigate(page, 'Preferências');
     await expect(page.getByText('Aparência', { exact: true })).toBeVisible();
-    await page.getByRole('checkbox', { name: 'Escuro', exact: true }).click();
+    const dark = page.getByRole('button', { name: 'Escuro', exact: true });
+    await revealPainted(page, dark);
+    await dark.click();
     await expect.poll(() => page.evaluate(() => localStorage.getItem('flutter.theme'))).toBe('"dark"');
     await disableHero(page);
     await navigate(page, 'Início');
@@ -85,6 +89,7 @@ try {
   }
   const reduced = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
   const page = await reduced.newPage();
+  lastPage = page;
   await page.goto(url);
   await openHome(page);
   const reducedMotion = {
@@ -99,4 +104,12 @@ try {
   await reduced.close();
   await writeFile('artifacts/web-verification.json', JSON.stringify({ reports, reducedMotion }, null, 2) + '\n');
   console.log(JSON.stringify({ reports, reducedMotion }));
+} catch (error) {
+  if (lastPage && !lastPage.isClosed()) {
+    await Promise.allSettled([
+      lastPage.screenshot({ path: output + '/failure.png' }),
+      lastPage.locator('body').ariaSnapshot().then(snapshot => writeFile(output + '/failure-aria.txt', snapshot)),
+    ]);
+  }
+  throw error;
 } finally { await browser.close(); }

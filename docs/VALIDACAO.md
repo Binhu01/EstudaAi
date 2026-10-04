@@ -21,7 +21,9 @@ A prévia e a API locais foram retomadas; `/health/ready` respondeu200 com banco
 
 O [ensaio de backup](BACKUP.md) verificou conteúdo, colunas, índices e constraints, incluindo uma regressão CHECK que preserva expressões equivalentes e detecta mudanças reais. Os arquivos e bancos de ensaio ficaram privados/preservados.
 
-O job remoto de publicação constrói as imagens runtime/migration, verifica ambos os catálogos e valida o Caddyfile. Esses checks e os quatro percursos de navegador serão executados após o envio; sua preparação local não comprova publicação nem HTTPS público. Captura atual de Concursos salva no diretório de visualizações da conversa.
+O [PR#3](https://github.com/Binhu01/EstudaAi/pull/3) foi enviado sobre a base da rotina. Na primeira [execução remota37208198834](https://github.com/Binhu01/EstudaAi/actions/runs/37208198834), passaram API/backup com PostgreSQL17 e os builds runtime/migration com catálogos e Caddyfile. Também passaram geração, formatação, análise,130 testes Flutter e build Web. Isso valida o preparo de HTTPS, sem domínio/certificado público.
+
+O percurso de navegador conferiu o movimento do shader/cérebro no desktop, mas parou buscando o tema Escuro como checkbox. O controle atual é button, confirmado na CUA. A correção preserva o produto e as verificações de persistência; os quatro percursos aguardam nova execução. Captura atual de Concursos salva no diretório de visualizações da conversa.
 
 ## Aprendizagem integrada — 04/10/2026
 

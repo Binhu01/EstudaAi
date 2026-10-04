@@ -129,8 +129,9 @@ try {
     await navigate(page,'Início');await navigate(page,'Aprender');await route(page,'/aprender/interpretacao-texto');
     await (await navigationControl(page,'Preferências')).focus();await page.keyboard.press('Enter');
     await expect(page.getByText('Aparência',{exact:true})).toBeVisible();
-    await page.getByRole('checkbox',{name:'Escuro',exact:true}).click();
-    expect(await page.evaluate(()=>localStorage.getItem('flutter.theme'))).toBe('"dark"');
+    const dark=page.getByRole('button',{name:'Escuro',exact:true});
+    await revealPainted(page,dark);await dark.click();
+    await expect.poll(()=>page.evaluate(()=>localStorage.getItem('flutter.theme'))).toBe('"dark"');
     await navigate(page,'Concursos');await click(page,catalog.course.title,false);
     await page.screenshot({path:`${output}/${viewport.width}-curso-escuro.png`});
     await page.keyboard.press('Tab');await page.keyboard.press('Control+k');

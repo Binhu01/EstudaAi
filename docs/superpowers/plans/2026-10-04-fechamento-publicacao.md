@@ -18,9 +18,9 @@
 - [x] Alinhar scripts web ao menu/gaveta, preferências e recortes reais de shader/cérebro; conferir via CUA; execução integral agendada na CI.
 - [x] Corrigir permissão INTERNET do Android principal; documentar SDK, aparelho e assinatura ainda ausentes.
 - [x] Atualizar README/guias com o estado atual e resultados executados, repetir testes apropriados e build Web.
-- [ ] Revisar arquivos sem segredos, criar commit, enviar branch e abrir PR sobre codex/rotina-estudo, que contém a base atual.
+- [x] Revisar arquivos sem segredos, criar commit, enviar branch e abrir PR sobre codex/rotina-estudo, que contém a base atual. PR#3 criado; base/head conferidos.
 
-Verificação local: API96/96, Flutter130/130, ferramentas54/54, integração PostgreSQL1/1, build/análise limpos. Backup real de7tabelas/1sequência passou, com original preservado. A revisão independente e o envio precedem a conferência dos três jobs remotos; resultados posteriores devem ser registrados no PR.
+Verificação local: API96/96, Flutter130/130, ferramentas54/54, integração PostgreSQL1/1, build/análise limpos. Backup real de7tabelas/1sequência passou, com original preservado. Revisão independente sem bloqueadores. A primeira CI do PR#3 passou API/backup e imagens/HTTPS, além de geração/análise/testes/build Flutter. O percurso Web encontrou seletor antigo de tema; correção limitada ao verificador e nova execução pendente. Os resultados finais serão registrados no PR.
 
 ## Pontos de revisão
 
