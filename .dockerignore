@@ -7,6 +7,9 @@
 !apps/client/assets/
 !apps/client/assets/study/
 !apps/client/assets/study/catalog.json
+!apps/client/assets/contests/
+!apps/client/assets/contests/bb2026/
+!apps/client/assets/contests/bb2026/catalog.json
 !tools/
 !tools/package-catalog.mjs
 !apps/api/

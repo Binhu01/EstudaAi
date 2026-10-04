@@ -34,9 +34,24 @@ export class DailyActivityDto{
  @ApiProperty({minimum:0}) attempts!:number;
  @ApiProperty({minimum:0}) correct!:number;
 }
+export class SubjectProgressDto{
+ @ApiProperty({minimum:0}) practicedQuestions!:number;
+ @ApiProperty({minimum:0}) latestCorrectQuestions!:number;
+ @ApiProperty({minimum:0}) catalogQuestions!:number;
+}
+export class StudyProgressDto{
+ @ApiProperty({minimum:0}) practicedQuestions!:number;
+ @ApiProperty({minimum:0}) catalogQuestions!:number;
+ @ApiProperty({minimum:0,description:'Erros da versão atual cuja última resposta confirmada foi correta.'}) reviewedErrors!:number;
+ @ApiProperty({minimum:0,description:'Questões diferentes com pelo menos uma resposta correta confirmada em revisão.'}) correctReviewQuestions!:number;
+ @ApiProperty({minimum:0}) activeDays!:number;
+ @ApiProperty({minimum:0,description:'Dias seguidos com respostas confirmadas, terminando hoje ou ontem no fuso da meta.'}) currentStreak!:number;
+ @ApiProperty({minimum:0}) bestStreak!:number;
+}
 export class SubjectStatsDto{
  @ApiProperty() id!:string; @ApiProperty() title!:string;
  @ApiProperty({minimum:0}) attempts!:number; @ApiProperty({minimum:0}) correct!:number;
+ @ApiPropertyOptional({type:SubjectProgressDto}) progress?:SubjectProgressDto;
 }
 export class ResumeStudyDto{@ApiProperty() topicId!:string; @ApiProperty({minimum:1}) contentVersion!:number;}
 export class StudyDashboardDto{
@@ -46,6 +61,7 @@ export class StudyDashboardDto{
  @ApiProperty({type:[DailyActivityDto],minItems:7,maxItems:7}) activity!:DailyActivityDto[];
  @ApiProperty({type:[SubjectStatsDto]}) subjects!:SubjectStatsDto[];
  @ApiProperty({type:ResumeStudyDto,nullable:true}) resume!:ResumeStudyDto|null;
+ @ApiPropertyOptional({type:StudyProgressDto}) progress?:StudyProgressDto;
 }
 export class StudyErrorItemDto{
  @ApiProperty() topicId!:string; @ApiProperty({minimum:1}) contentVersion!:number; @ApiProperty() questionId!:string;

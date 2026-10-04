@@ -26,6 +26,7 @@ async function bootstrap() {
     study: new StudyHistoryService(database,directory),
     steveDailyLimit: config.steveDailyLimit,
     ready: () => database.ready(), origins: config.origins,
+    trustedProxyCidrs: config.trustedProxyCidrs,
     log: (event) => process.stdout.write(JSON.stringify(event) + '\n'),
   });
   async function shutdown() { await app.close(); await database.close(); }

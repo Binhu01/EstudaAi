@@ -3,7 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/api_failure.dart';
+import '../../design_system/components/page_heading.dart';
 import '../../design_system/components/pixel_avatar.dart';
+import '../../design_system/components/study_card.dart';
+import '../../design_system/tokens.dart';
 import '../auth/session_controller.dart';
 import '../learning/learning_controller.dart';
 import '../learning/learning_entry.dart';
@@ -77,97 +80,184 @@ class _ChatState extends ConsumerState<_Chat> {
 
   @override
   Widget build(BuildContext context) {
-    final key = widget.chatContext;
+    final key = widget.chatContext, colors = AppColors.of(context);
     final state = key == null ? null : ref.watch(steveProvider(key));
     final entry = widget.entry, suggestions = entry.suggestions;
     return SingleChildScrollView(
       child: Center(
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 820),
+          constraints: const BoxConstraints(maxWidth: 1000),
           child: Padding(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(
+              MediaQuery.sizeOf(context).width < 600 ? 20 : 40,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: PixelAvatar(size: 64),
-                ),
-                const SizedBox(height: 16),
-                Text('Steve', style: Theme.of(context).textTheme.headlineLarge),
-                const SizedBox(height: 8),
-                Text(
-                  entry.area == LearningArea.contest
+                PageHeading(
+                  eyebrow: 'PERGUNTE. ENTENDA. APRENDA.',
+                  title: 'Steve',
+                  description: entry.area == LearningArea.contest
                       ? 'Seu companheiro de estudo · Concursos · ${entry.courseTitle}'
                       : 'Seu companheiro de estudo · Estudo livre',
+                  trailing: MediaQuery.sizeOf(context).width < 600
+                      ? null
+                      : Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: colors.primarySoft,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: const PixelAvatar(size: 64),
+                        ),
                 ),
-                const SizedBox(height: 24),
-                LearningEntrySelector(entry: entry, action: StudyAction.steve),
-                if (entry.area == LearningArea.contest) ...[
-                  const SizedBox(height: 20),
-                  ContestModuleActions(
-                    entry: entry,
-                    selected: StudyAction.steve,
-                  ),
-                  const SizedBox(height: 12),
-                  Text('${entry.topic.subject} · ${entry.topic.title}'),
-                  if (entry.disciplineId == 'redacao')
-                    const Padding(
-                      padding: EdgeInsets.only(top: 12),
-                      child: Text(
-                        'Apoio formativo à escrita, sem nota oficial.',
+                const SizedBox(height: 28),
+                StudyCard(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        'CONTEXTO DA CONVERSA',
+                        style: Theme.of(context).textTheme.labelSmall
+                            ?.copyWith(color: colors.muted),
                       ),
-                    ),
-                ],
-                const SizedBox(height: 24),
-                if (key == null) ...[
-                  const Text('Entre na sua conta para conversar com o Steve.'),
-                  const SizedBox(height: 16),
-                  FilledButton(
-                    onPressed: () => context.go('/conta'),
-                    child: const Text('Entrar para conversar'),
-                  ),
-                  const SizedBox(height: 16),
-                  TextButton(
-                    onPressed: () => context.go(
-                      StudyRoutes.path(entry, StudyAction.lessons),
-                    ),
-                    child: const Text('Ver videoaulas deste assunto'),
-                  ),
-                ] else ...[
-                  if (state!.turns.isEmpty) ...[
-                    const Text('O que você quer descobrir hoje?'),
-                    const SizedBox(height: 12),
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: [
-                        for (final suggestion in suggestions)
-                          OutlinedButton(
-                            onPressed: state.pending
-                                ? null
-                                : () {
-                                    _message.text = suggestion;
-                                    _focus.requestFocus();
-                                  },
-                            child: Text(suggestion),
+                      const SizedBox(height: 16),
+                      LearningEntrySelector(
+                        entry: entry,
+                        action: StudyAction.steve,
+                      ),
+                      if (entry.area == LearningArea.contest) ...[
+                        const SizedBox(height: 20),
+                        ContestModuleActions(
+                          entry: entry,
+                          selected: StudyAction.steve,
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          '${entry.topic.subject} · ${entry.topic.title}',
+                          style: TextStyle(color: colors.muted),
+                        ),
+                        if (entry.disciplineId == 'redacao')
+                          const Padding(
+                            padding: EdgeInsets.only(top: 12),
+                            child: Text(
+                              'Apoio formativo à escrita, sem nota oficial.',
+                            ),
                           ),
                       ],
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 24),
+                if (key == null)
+                  StudyCard(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.chat_bubble_outline_rounded,
+                          color: colors.primary,
+                          size: 28,
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          'Uma dúvida pode abrir um caminho.',
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          'Entre na sua conta para conversar com o Steve.',
+                          style: Theme.of(context).textTheme.bodyLarge
+                              ?.copyWith(color: colors.muted),
+                        ),
+                        const SizedBox(height: 24),
+                        FilledButton.icon(
+                          onPressed: () => context.go('/conta'),
+                          icon: const Icon(Icons.arrow_forward_rounded),
+                          label: const Text('Entrar para conversar'),
+                        ),
+                        const SizedBox(height: 12),
+                        TextButton(
+                          onPressed: () => context.go(
+                            StudyRoutes.path(entry, StudyAction.lessons),
+                          ),
+                          child: const Text('Ver videoaulas deste assunto'),
+                        ),
+                      ],
                     ),
-                  ],
+                  )
+                else ...[
+                  if (state!.turns.isEmpty)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'O que você quer descobrir hoje?',
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            'Comece com uma sugestão ou escreva sua própria pergunta.',
+                            style: TextStyle(color: colors.muted),
+                          ),
+                          const SizedBox(height: 20),
+                          Wrap(
+                            spacing: 12,
+                            runSpacing: 12,
+                            children: [
+                              for (final suggestion in suggestions)
+                                OutlinedButton(
+                                  onPressed: state.pending
+                                      ? null
+                                      : () {
+                                          _message.text = suggestion;
+                                          _focus.requestFocus();
+                                        },
+                                  child: Text(suggestion),
+                                ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   for (final turn in state.turns) SteveMessage(turn: turn),
                   if (state.pending)
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       child: Semantics(
                         liveRegion: true,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(state.pendingQuestion!),
-                            const SizedBox(height: 8),
-                            const Text('Steve está pensando…'),
-                          ],
+                        child: StudyCard(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Você',
+                                style: Theme.of(context).textTheme.labelLarge
+                                    ?.copyWith(color: colors.muted),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(state.pendingQuestion!),
+                              const SizedBox(height: 20),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox.square(
+                                    dimension: 18,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: colors.primary,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  const Expanded(
+                                    child: Text('Steve está pensando…'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -176,61 +266,99 @@ class _ChatState extends ConsumerState<_Chat> {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       child: Semantics(
                         liveRegion: true,
-                        child: Text(safeFailureMessage(state.error!.code)),
+                        child: Container(
+                          padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: colors.errorSoft,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            safeFailureMessage(state.error!.code),
+                            style: TextStyle(color: colors.errorInk),
+                          ),
+                        ),
                       ),
                     ),
                   if (state.error?.resetAt != null)
-                    Text('Cota renovada em ${_when(state.error!.resetAt!)}'),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: Text(
+                        'Cota renovada em ${_when(state.error!.resetAt!)}',
+                        style: TextStyle(color: colors.muted),
+                      ),
+                    ),
                   if (state.quota != null)
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       child: Text(
                         '${state.quota!.remaining} mensagens disponíveis hoje',
+                        style: Theme.of(context).textTheme.labelLarge
+                            ?.copyWith(color: colors.muted),
                       ),
                     ),
                   const SizedBox(height: 16),
-                  TextField(
-                    key: const ValueKey('steve-message-field'),
-                    controller: _message,
-                    focusNode: _focus,
-                    enabled: !state.pending,
-                    minLines: 2,
-                    maxLines: 6,
-                    maxLength: 2000,
-                    keyboardType: TextInputType.multiline,
-                    textInputAction: TextInputAction.send,
-                    decoration: const InputDecoration(
-                      labelText: 'Sua pergunta',
-                      border: OutlineInputBorder(),
+                  StudyCard(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        TextField(
+                          key: const ValueKey('steve-message-field'),
+                          controller: _message,
+                          focusNode: _focus,
+                          enabled: !state.pending,
+                          minLines: 2,
+                          maxLines: 6,
+                          maxLength: 2000,
+                          keyboardType: TextInputType.multiline,
+                          textInputAction: TextInputAction.send,
+                          decoration: const InputDecoration(
+                            labelText: 'Sua pergunta',
+                            hintText: 'O que você gostaria de entender melhor?',
+                          ),
+                          onSubmitted: (_) => _send(),
+                        ),
+                        const SizedBox(height: 16),
+                        Wrap(
+                          spacing: 12,
+                          runSpacing: 12,
+                          children: [
+                            FilledButton.icon(
+                              key: const ValueKey('steve-send'),
+                              onPressed: state.pending ? null : _send,
+                              icon: const Icon(Icons.arrow_upward_rounded),
+                              label: Text(
+                                state.pending
+                                    ? 'Aguarde a resposta'
+                                    : 'Enviar pergunta',
+                              ),
+                            ),
+                            OutlinedButton.icon(
+                              key: const ValueKey('steve-new'),
+                              onPressed: () {
+                                ref
+                                    .read(steveProvider(key).notifier)
+                                    .newConversation();
+                                _message.clear();
+                              },
+                              icon: const Icon(Icons.add_comment_outlined),
+                              label: const Text('Nova conversa'),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    onSubmitted: (_) => _send(),
                   ),
-                  const SizedBox(height: 12),
-                  FilledButton.icon(
-                    key: const ValueKey('steve-send'),
-                    onPressed: state.pending ? null : _send,
-                    icon: const Icon(Icons.send_outlined),
-                    label: Text(
-                      state.pending ? 'Aguarde a resposta' : 'Enviar pergunta',
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  OutlinedButton.icon(
-                    key: const ValueKey('steve-new'),
-                    onPressed: () {
-                      ref.read(steveProvider(key).notifier).newConversation();
-                      _message.clear();
-                    },
-                    icon: const Icon(Icons.add_comment_outlined),
-                    label: const Text('Nova conversa'),
-                  ),
-                  const SizedBox(height: 16),
-                  const Text(
+                  const SizedBox(height: 20),
+                  Text(
                     'As respostas são geradas por IA e podem conter erros. Confira as fontes e os passos da explicação.',
+                    style: Theme.of(context).textTheme.bodySmall
+                        ?.copyWith(color: colors.muted),
                   ),
                   const SizedBox(height: 12),
-                  const Text(
+                  Text(
                     'Uma pergunta enviada pode consumir o limite diário mesmo se a resposta não chegar. Nova conversa interrompe o pedido.',
+                    style: Theme.of(context).textTheme.bodySmall
+                        ?.copyWith(color: colors.muted),
                   ),
                 ],
                 const SizedBox(height: 24),

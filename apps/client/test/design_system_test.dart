@@ -10,6 +10,18 @@ double contrast(Color a, Color b) {
 }
 
 void main() {
+  test('hero copy and gradient action meet readable contrast', () {
+    for (final pair in [
+      (AppColors.white, AurosColors.abyss),
+      (AurosColors.silver, AurosColors.abyss),
+      (AurosColors.mist, AurosColors.kelp),
+      (AurosColors.abyss, AurosColors.cyan),
+      (AurosColors.abyss, AppColors.white),
+      (AurosColors.abyss, AurosColors.lavender),
+    ]) {
+      expect(contrast(pair.$1, pair.$2), greaterThanOrEqualTo(4.5));
+    }
+  });
   test(
     'quiz alternatives preserve contrast without relying on color alone',
     () {
@@ -34,6 +46,9 @@ void main() {
         );
         for (final pair in [
           (colors.text, colors.surface),
+          (colors.linkInk, colors.surface),
+          (colors.linkInk, colors.primarySoft),
+          (colors.accentText, colors.background),
           (colors.muted, colors.background),
           (colors.onPrimary, colors.primary),
           (colors.successInk, colors.successSoft),

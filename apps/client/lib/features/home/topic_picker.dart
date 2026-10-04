@@ -17,12 +17,16 @@ class TopicPicker extends StatelessWidget {
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
       final colors = AppColors.of(context);
-      final width = constraints.maxWidth >= 800
-          ? (constraints.maxWidth - 32) / 3
-          : constraints.maxWidth;
+      final columns = constraints.maxWidth >= 850
+          ? 3
+          : constraints.maxWidth >= 560 &&
+                MediaQuery.textScalerOf(context).scale(16) <= 20
+          ? 2
+          : 1;
+      final width = (constraints.maxWidth - 24 * (columns - 1)) / columns;
       return Wrap(
-        spacing: 16,
-        runSpacing: 16,
+        spacing: 24,
+        runSpacing: 24,
         children: [
           for (var i = 0; i < topics.length; i++)
             SizedBox(
@@ -35,7 +39,7 @@ class TopicPicker extends StatelessWidget {
                       ? colors.primarySoft
                       : colors.surface,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(AppRadius.card),
                     side: BorderSide(
                       color: topics[i].id == selectedId
                           ? colors.primary
@@ -43,51 +47,62 @@ class TopicPicker extends StatelessWidget {
                       width: topics[i].id == selectedId ? 2 : 1,
                     ),
                   ),
+                  clipBehavior: Clip.antiAlias,
                   child: InkWell(
-                    borderRadius: BorderRadius.circular(12),
                     onTap: () => onSelected(topics[i].id),
                     child: Padding(
                       padding: const EdgeInsets.all(24),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Wrap(
-                            spacing: 12,
-                            runSpacing: 8,
+                          Row(
                             children: [
                               Icon(
                                 [
                                   Icons.percent_rounded,
-                                  Icons.menu_book_rounded,
+                                  Icons.menu_book_outlined,
                                   Icons.eco_outlined,
                                 ][i % 3],
-                                color: colors.primary,
+                                size: 32,
+                                color: colors.text,
                               ),
-                              Text(
-                                topics[i].subject,
-                                style: TextStyle(
-                                  color: colors.primary,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
+                              const Spacer(),
                               if (topics[i].id == selectedId)
-                                const Icon(
+                                Icon(
                                   Icons.check_circle_outline,
+                                  color: colors.text,
                                   semanticLabel: 'Assunto selecionado',
+                                )
+                              else
+                                Text(
+                                  '0${i + 1}',
+                                  style: TextStyle(color: colors.muted),
                                 ),
                             ],
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: 24),
+                          Text(
+                            topics[i].subject,
+                            style: Theme.of(context).textTheme.labelMedium
+                                ?.copyWith(color: colors.muted),
+                          ),
+                          const SizedBox(height: 8),
                           Text(
                             topics[i].title,
                             style: Theme.of(context).textTheme.titleLarge,
                           ),
                           const SizedBox(height: 12),
-                          Text(topics[i].summary),
-                          const SizedBox(height: 20),
                           Text(
-                            '2 aulas · desafios de 5 questões',
-                            style: TextStyle(color: colors.muted, fontSize: 13),
+                            topics[i].summary,
+                            style: TextStyle(color: colors.muted, height: 1.6),
+                          ),
+                          const SizedBox(height: 24),
+                          Divider(color: colors.border),
+                          const SizedBox(height: 12),
+                          Text(
+                            '${topics[i].lessons.length} aulas · desafios de 5 questões',
+                            style: Theme.of(context).textTheme.labelMedium
+                                ?.copyWith(color: colors.muted),
                           ),
                         ],
                       ),

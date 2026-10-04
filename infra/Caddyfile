@@ -1,0 +1,18 @@
+# Configure ESTUDA_AI_DOMAIN (host sem protocolo) e ESTUDA_AI_WEB_ROOT (caminho absoluto).
+# DNS deve apontar para o servidor; use Caddy com diretório de certificados persistente.
+{$ESTUDA_AI_DOMAIN} {
+    root * {$ESTUDA_AI_WEB_ROOT}
+    encode zstd gzip
+
+    handle /v1/* {
+        reverse_proxy 127.0.0.1:3001
+    }
+    handle /health/* {
+        reverse_proxy 127.0.0.1:3001
+    }
+    handle {
+        header Cache-Control "no-cache"
+        try_files {path} /index.html
+        file_server
+    }
+}

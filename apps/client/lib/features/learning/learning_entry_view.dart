@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../design_system/tokens.dart';
 import 'learning_catalog_providers.dart';
 import 'learning_controller.dart';
 import 'learning_entry.dart';
@@ -71,12 +72,22 @@ class LearningEntrySelector extends ConsumerWidget {
               .map((t) => LearningEntry.fromFree(t, entry.contentVersion))
               .toList();
     return DropdownButtonFormField<String>(
+      style: Theme.of(context).textTheme.bodyLarge,
       key: ValueKey('${entry.area}-${entry.topic.id}-${action.name}'),
       initialValue: entry.topic.id,
       isExpanded: true,
       itemHeight: null,
       decoration: InputDecoration(
         labelText: entry.area == LearningArea.contest ? 'Módulo' : 'Assunto',
+        prefixIcon: Icon(
+          entry.area == LearningArea.contest
+              ? Icons.menu_book_outlined
+              : Icons.school_outlined,
+        ),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 20,
+        ),
         border: const OutlineInputBorder(),
       ),
       items: [
@@ -107,7 +118,18 @@ class CatalogRecovery extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text('Não foi possível carregar os conteúdos.'),
+          Icon(
+            Icons.cloud_off_outlined,
+            size: 40,
+            color: AppColors.of(context).primary,
+          ),
+          const SizedBox(height: 20),
+          Text(
+            'Não foi possível carregar os conteúdos.',
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const SizedBox(height: 12),
           TextButton(onPressed: onRetry, child: const Text('Tentar novamente')),
         ],
       ),
@@ -124,9 +146,17 @@ class ContestRecovery extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.search_off, size: 48),
+          Icon(
+            Icons.search_off,
+            size: 40,
+            color: AppColors.of(context).primary,
+          ),
           const SizedBox(height: 16),
-          const Text('Conteúdo de concurso não encontrado'),
+          Text(
+            'Conteúdo de concurso não encontrado',
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
           const SizedBox(height: 16),
           FilledButton(
             onPressed: () => context.go('/concursos'),

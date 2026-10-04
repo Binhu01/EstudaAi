@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../design_system/tokens.dart';
 import '../../design_system/shader/study_gradient.dart';
+import 'hero_particle_orb.dart';
 import 'word_reveal.dart';
 
 class EducationHero extends StatelessWidget {
@@ -10,163 +11,236 @@ class EducationHero extends StatelessWidget {
     required this.onChooseTopic,
     required this.animate,
     required this.visible,
-    this.imagePath = 'assets/images/study-hero.webp',
     this.gradientKey,
     this.shaderVisible,
   });
   final VoidCallback onChooseTopic;
   final bool animate, visible;
-  final String imagePath;
   final Key? gradientKey;
   final bool? shaderVisible;
   @override
-  Widget build(BuildContext context) {
-    final compact = MediaQuery.sizeOf(context).width < 600;
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: Stack(
-        children: [
-          Positioned.fill(
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.cover,
-              alignment: const Alignment(.2, 0),
-              excludeFromSemantics: true,
-              errorBuilder: (_, error, stack) =>
-                  const ColoredBox(color: AppColors.heroFallback),
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final largeText = MediaQuery.textScalerOf(context).scale(16) > 24;
+      final compact = constraints.maxWidth < 800 || largeText;
+      final minHeight = compact
+          ? (MediaQuery.sizeOf(context).height - 144).clamp(620.0, 760.0)
+          : (MediaQuery.sizeOf(context).height - 64).clamp(720.0, 860.0);
+      final orbSize = largeText ? 200.0 : (compact ? 240.0 : 300.0);
+      return ColoredBox(
+        color: AurosColors.abyss,
+        child: DecoratedBox(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [AurosColors.abyss, AurosColors.deep],
             ),
           ),
-          const Positioned.fill(
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [AppColors.heroScrimTop, AppColors.heroScrimBottom],
+          child: Center(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 1440, minHeight: minHeight),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: constraints.maxWidth < 600 ? 20 : 48,
+                  vertical: compact ? 28 : 40,
+                ),
+                child: DefaultTextStyle.merge(
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontFamily: AppTypography.bodyFamily),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 680),
+                        child: Wrap(
+                          alignment: WrapAlignment.center,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          spacing: 12,
+                          runSpacing: 10,
+                          children: [
+                            ExcludeSemantics(
+                              child: SizedBox(
+                                width: 28,
+                                height: 4,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(4),
+                                  child: StudyGradient(
+                                    key: gradientKey,
+                                    animate: animate,
+                                    visible: shaderVisible ?? visible,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const Text(
+                              'CONHECIMENTO ABRE CAMINHOS',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: AurosColors.mist,
+                                fontFamily: AppTypography.bodyFamily,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 1.1,
+                                height: 1.5,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Semantics(
+                        header: true,
+                        child: WordReveal(
+                          'Estuda Aí',
+                          animate: animate,
+                          visible: visible,
+                          style: TextStyle(
+                            fontFamily: AppTypography.headingFamily,
+                            color: Colors.white,
+                            fontSize: largeText
+                                ? 52
+                                : (constraints.maxWidth < 600
+                                      ? 64
+                                      : (compact ? 76 : 112)),
+                            fontWeight: FontWeight.w500,
+                            height: 1.05,
+                            letterSpacing: -1,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 680),
+                        child: WordReveal(
+                          'Seu próximo nível começa com uma descoberta.',
+                          animate: animate,
+                          visible: visible,
+                          style: TextStyle(
+                            fontFamily: AppTypography.bodyFamily,
+                            color: AurosColors.mist,
+                            fontSize: compact ? 20 : 24,
+                            fontWeight: FontWeight.w400,
+                            height: 1.4,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 600),
+                        child: const Text(
+                          'Escolha um assunto, aprenda com videoaulas, teste seus conhecimentos e conte com o Steve.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: AppTypography.bodyFamily,
+                            color: AurosColors.silver,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            height: 1.5,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 28),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(6),
+                        child: DecoratedBox(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              stops: [0, .2625, .4757, .8896],
+                              colors: [
+                                AurosColors.cyan,
+                                AurosColors.mist,
+                                Color(0xFFFFFDFA),
+                                Color(0xFFFAD1FF),
+                              ],
+                            ),
+                          ),
+                          child: FilledButton.icon(
+                            style:
+                                FilledButton.styleFrom(
+                                  backgroundColor: Colors.transparent,
+                                  foregroundColor: AurosColors.deep,
+                                  shadowColor: Colors.transparent,
+                                  elevation: 0,
+                                  minimumSize: const Size(48, 56),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 24,
+                                    vertical: 18,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  textStyle: const TextStyle(
+                                    fontFamily: AppTypography.bodyFamily,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ).copyWith(
+                                  side: WidgetStateProperty.resolveWith(
+                                    (states) =>
+                                        states.contains(WidgetState.focused)
+                                        ? const BorderSide(
+                                            color: AurosColors.deep,
+                                            width: 2,
+                                          )
+                                        : BorderSide.none,
+                                  ),
+                                ),
+                            onPressed: onChooseTopic,
+                            icon: const Icon(
+                              Icons.arrow_forward_rounded,
+                              size: 18,
+                            ),
+                            label: const Text('Escolher meu assunto'),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox.square(
+                        dimension: orbSize,
+                        child: HeroParticleOrb(
+                          animate: animate,
+                          visible: visible,
+                          // The user explicitly requested this hero to loop.
+                          respectReducedMotion: false,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      const Wrap(
+                        alignment: WrapAlignment.center,
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        spacing: 10,
+                        runSpacing: 8,
+                        children: [
+                          Text(
+                            'Explore os assuntos abaixo',
+                            style: TextStyle(
+                              color: AurosColors.silver,
+                              fontFamily: AppTypography.bodyFamily,
+                              fontSize: 12,
+                              height: 1.5,
+                            ),
+                          ),
+                          ExcludeSemantics(
+                            child: Icon(
+                              Icons.arrow_downward,
+                              color: AurosColors.silver,
+                              size: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-          Container(
-            constraints: const BoxConstraints(minHeight: 550),
-            padding: EdgeInsets.all(compact ? 24 : 40),
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Wrap(
-                  spacing: 8,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Icon(AppIcons.brand, color: AppColors.white, size: 20),
-                    Text(
-                      'UM MUNDO PARA DESCOBRIR',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: 12,
-                        letterSpacing: 1.4,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 56),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 590),
-                  child: WordReveal(
-                    'Seu próximo nível começa com uma descoberta.',
-                    animate: animate,
-                    visible: visible,
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontSize: compact ? 32 : 44,
-                      height: 1.12,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 480),
-                  child: const Text(
-                    'Escolha um assunto, aprenda com videoaulas, teste seus conhecimentos e conte com o Steve.',
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontSize: 16,
-                      height: 1.6,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 28),
-                FilledButton.icon(
-                  style: FilledButton.styleFrom(
-                    backgroundColor: AppColors.white,
-                    foregroundColor: AppColors.heroFallback,
-                    minimumSize: const Size(48, 52),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 16,
-                    ),
-                  ),
-                  onPressed: onChooseTopic,
-                  icon: const Icon(AppIcons.forward),
-                  label: const Text('Escolher meu assunto'),
-                ),
-                const SizedBox(height: 56),
-                Wrap(
-                  spacing: 24,
-                  runSpacing: 16,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Text(
-                      'Estuda Aí',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: compact ? 48 : 76,
-                        height: 1,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: -2,
-                      ),
-                    ),
-                    ExcludeSemantics(
-                      child: SizedBox(
-                        width: 92,
-                        height: 48,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(24),
-                          child: StudyGradient(
-                            key: gradientKey,
-                            animate: animate,
-                            visible: shaderVisible ?? visible,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 16),
-                const Wrap(
-                  spacing: 8,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Text(
-                      'Explore os assuntos abaixo',
-                      style: TextStyle(color: AppColors.white, fontSize: 13),
-                    ),
-                    ExcludeSemantics(
-                      child: Icon(
-                        Icons.arrow_downward,
-                        color: AppColors.white,
-                        size: 16,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+        ),
+      );
+    },
+  );
 }

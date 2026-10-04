@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:estuda_ai/app/app.dart';
+import 'package:estuda_ai/features/contests/contest_course_screen.dart';
 import 'package:estuda_ai/features/learning/learning_controller.dart';
 import 'package:estuda_ai/features/learning/learning_catalog_providers.dart';
 import 'package:estuda_ai/features/learning/learning_entry.dart';
@@ -43,7 +44,13 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Voltar ao concurso'));
     await tester.pumpAndSettle();
-    expect(find.text('Banco do Brasil 2026'), findsOneWidget);
+    expect(
+      find.descendant(
+        of: find.byType(ContestCourseScreen),
+        matching: find.text('Banco do Brasil 2026'),
+      ),
+      findsOneWidget,
+    );
     c.read(routerProvider).go('/');
     await tester.pumpAndSettle();
     expect(c.read(learningProvider).area, LearningArea.freeStudy);

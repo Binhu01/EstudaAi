@@ -13,11 +13,13 @@ class QuizState {
     this.score = 0,
     this.streak = 0,
     this.correctCount = 0,
+    this.selectedOptions = const [],
   });
   final QuizPhase phase;
   final List<StudyQuestion> roundQuestions;
   final int questionIndex, score, streak, correctCount;
   final int? selectedIndex;
+  final List<int> selectedOptions;
   StudyQuestion get question => roundQuestions[questionIndex];
 }
 
@@ -72,6 +74,10 @@ class QuizEngine {
       roundQuestions: _state.roundQuestions,
       questionIndex: _state.questionIndex,
       selectedIndex: optionIndex,
+      selectedOptions: List.unmodifiable([
+        ..._state.selectedOptions,
+        optionIndex,
+      ]),
       score: _state.score + (correct ? 100 + min(80, 20 * _state.streak) : 0),
       streak: correct ? _state.streak + 1 : 0,
       correctCount: _state.correctCount + (correct ? 1 : 0),
@@ -88,6 +94,7 @@ class QuizEngine {
       phase: done ? QuizPhase.completed : QuizPhase.answering,
       roundQuestions: _state.roundQuestions,
       questionIndex: done ? 4 : _state.questionIndex + 1,
+      selectedOptions: _state.selectedOptions,
       score: _state.score,
       streak: _state.streak,
       correctCount: _state.correctCount,

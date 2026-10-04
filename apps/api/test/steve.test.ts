@@ -134,7 +134,7 @@ test('contest_context_uses_trusted_notes', () => {
     for (const text of ['Concursos','Banco do Brasil 2026','Agente Comercial','2022/001','2026-10-01',entry.topic.title,entry.topic.subject,entry.topic.notes,entry.topic.sources[0]!.url]) assert.ok(prompt.includes(text), text);
     assert.ok(!prompt.includes('private-uid'));
     assert.ok(!prompt.includes(entry.topic.questions[0]!.prompt));
-    for (const task of entry.contestLocation!.module.writingTasks) assert.ok(!prompt.includes(task.prompt));
+    for (const task of entry.contestLocation!.module.writingTasks) assert.ok(prompt.includes(task.prompt));
     assert.ok(!prompt.includes('correctIndex'));
   }
 });

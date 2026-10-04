@@ -72,10 +72,29 @@ flutter:
   assets:
     - assets/study/catalog.json
     - assets/contests/bb2026/catalog.json
-    - assets/images/study-hero.webp
+    - assets/fonts/Oswald-LICENSE.txt
+    - assets/fonts/Poppins-LICENSE.txt
+    - assets/fonts/OFL.txt
   shaders:
     - shaders/study_gradient.frag
   fonts:
+    - family: Oswald
+      fonts:
+        - asset: assets/fonts/OswaldVariable.ttf
+          weight: 500
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Italic.ttf
+          weight: 400
+          style: italic
     - family: PressStart2P
       fonts:
         - asset: assets/fonts/PressStart2P-Regular.ttf

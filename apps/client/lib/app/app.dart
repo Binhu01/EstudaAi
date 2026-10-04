@@ -18,6 +18,7 @@ import 'shell.dart';
 import '../features/study_history/dashboard_screen.dart';
 import '../features/study_history/errors_screen.dart';
 import '../features/study_history/error_review_screen.dart';
+import '../features/study_history/error_review_batch.dart';
 import '../features/learning/learning_controller.dart';
 import '../features/learning/learning_entry.dart';
 import '../features/learning/learning_entry_view.dart';
@@ -42,6 +43,14 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/meus-erros',
             builder: (context, state) => const ErrorsScreen(),
+          ),
+          GoRoute(
+            path: '/meus-erros/revisao',
+            builder: (context, state) => ErrorReviewBatchScreen(
+              batch: state.extra is ErrorReviewBatch
+                  ? state.extra as ErrorReviewBatch
+                  : null,
+            ),
           ),
           GoRoute(
             path: '/meus-erros/:topicId/:contentVersion/:questionId',

@@ -24,6 +24,7 @@ void main() {
         await tester.tap(lessons);
         await tester.pumpAndSettle();
         expect(find.text(topic.lessons.first.title), findsOneWidget);
+        await tester.ensureVisible(find.text(topic.lessons.first.title));
         await tester.tap(find.text(topic.lessons.first.title));
         await tester.pumpAndSettle();
         expect(find.text('Abrir no YouTube'), findsOneWidget);

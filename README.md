@@ -4,15 +4,15 @@ Plataforma de aprendizagem adaptativa com metas de estudo independentes, em proj
 
 ## Estado atual
 
-**Experiência de estudo implementada.** O cliente Flutter oferece hero educacional com fotografia e shader, três assuntos, seis videoaulas incorporadas, desafios individuais de cinco questões em estilo 8 bits e Steve, tutor com IA pelo backend. Tema e movimento são configuráveis. Aulas e quiz abrem sem conta; o chat exige acesso verificado.
+**Experiência de estudo implementada.** O cliente Flutter oferece hero educacional com cérebro animado em looping e shader, três assuntos, seis videoaulas incorporadas, desafios individuais de cinco questões em estilo 8 bits e Steve, tutor com IA pelo backend. Tema e movimento são configuráveis. Aulas e quiz abrem sem conta; o chat exige acesso verificado.
 
 **Concursos implementado em branch de trabalho:** Banco do Brasil 2026 como preparação com referência histórica, nove disciplinas, 126 módulos autorais, 756 questões comentadas, seis propostas de Redação e 18 aulas externas de apoio. Material, aulas, desafios e Steve conservam o módulo selecionado. Veja [Concursos](docs/CONCURSOS.md) para cobertura, fontes, funcionamento e limites de validação.
 
-A API NestJS integra cadastro/login/recuperação Firebase, perfil interno e Steve pela API Responses, com limites por usuário e cota diária persistida no PostgreSQL. A integração Prisma/PostgreSQL foi verificada em banco isolado real. Credenciais Firebase/OpenAI ainda precisam ser fornecidas ao ambiente para validar login e respostas reais; o produto não usa uma conta ou IA simulada.
+A API NestJS integra cadastro/login/recuperação Firebase, perfil interno e Steve pela API Responses, com limites por usuário e cota diária persistida no PostgreSQL. A integração Prisma/PostgreSQL foi verificada em banco isolado real. Firebase, banco e histórico já foram configurados e validados com acesso real no ambiente local. A ativação e as respostas reais da OpenAI continuam pendentes por escolha do usuário; o produto não usa uma conta ou IA simulada.
 
-**Rotina de estudo implementada:** Meu estudo reúne meta diária, questões diferentes/tentativas, sete dias de atividade e desempenho por matéria. O caderno organiza erros pendentes/revisados e oferece prática contextual. Respostas confirmadas são persistidas por conta e área, com reenvio idempotente. Veja [Rotina](docs/ROTINA-ESTUDO.md) e [Configuração](docs/ROTINA-CONFIGURACAO.md).
+**Rotina de estudo implementada:** Meu estudo reúne meta diária, continuidade do último assunto, revisões pendentes, cobertura por matéria e sequências confirmadas. O caderno organiza erros pendentes/revisados, explica a última resposta e oferece rodadas de até cinco questões. Leitura com três tamanhos, espaçamento ajustável e navegação entre módulos. Respostas confirmadas são persistidas por conta e área, com reenvio idempotente. Veja [Rotina](docs/ROTINA-ESTUDO.md) e [Configuração](docs/ROTINA-CONFIGURACAO.md).
 
-O workflow anterior do PR#1 foi executado remotamente; esta fase da rotina ainda tem somente evidência local. Docker não está disponível nesta máquina. Nenhum deploy foi feito. Os diretórios de plataforma gerados pelo SDK não representam builds Android, iOS ou Windows homologados. Veja [Validação](docs/VALIDACAO.md) para comandos executados e pendências.
+Os workflows dos PRs #1 e #2 passaram remotamente. A revisão atual acrescenta checks de imagens Docker e HTTPS, cuja execução deve ser conferida no novo commit. Docker não está disponível nesta máquina. Nenhum deploy foi feito. Os diretórios de plataforma gerados pelo SDK não representam builds Android, iOS ou Windows homologados. Veja [Validação](docs/VALIDACAO.md) para comandos executados e pendências.
 
 ## Começar
 
@@ -74,10 +74,12 @@ O backend determina identidade e benefícios. A UI não concede Premium nem auto
 - [Rotina de estudo](docs/ROTINA-ESTUDO.md) e [Configuração real](docs/ROTINA-CONFIGURACAO.md): painel, caderno, banco local e validação ao vivo.
 - [Arquitetura](docs/ARQUITETURA.md) e [shader](docs/SHADER.md): fronteiras, isolamento e adaptação visual.
 - [Validação](docs/VALIDACAO.md): resultados comprovados e limitações por plataforma.
-- [Operação e deploy](docs/DEPLOY.md): migração explícita, containers, pendências e release.
+- [Operação e deploy](docs/DEPLOY.md): HTTPS, migração explícita, containers, pendências e release.
+- [Backup e restauração](docs/BACKUP.md): cópia privada, verificação e ensaio em banco novo.
+- [Aprendizagem integrada](docs/APRENDIZAGEM.md): painel, revisão, leitura e contexto do Steve.
 - [OpenAPI](contracts/openapi.json): contrato dos endpoints existentes.
 - [Requisitos originais](docs/REQUISITOS-ORIGINAIS.txt): escopo integral do produto.
 - [Especificação da fundação](docs/superpowers/specs/2026-09-29-estuda-ai-fundacao-design.md) e [plano](docs/superpowers/plans/2026-09-29-fundacao.md): decisões e critérios da Fase 1.
 - [Diagnóstico inicial](docs/DIAGNOSTICO-INICIAL.md): registro histórico anterior à implementação.
 
-CRUD de metas, estudo adaptativo, missão do dia, revisões, dashboard, simulados e Premium comercial continuam fora desta entrega. Os desafios de Estudo livre não produzem XP global nem ranking compartilhado.
+CRUD de metas gerais, estudo adaptativo, simulados completos e Premium comercial continuam fora desta entrega. O painel diário e as revisões do caderno já estão disponíveis. Os desafios de Estudo livre não produzem XP global nem ranking compartilhado.

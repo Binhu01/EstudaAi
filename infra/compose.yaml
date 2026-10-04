@@ -37,6 +37,7 @@ services:
       STEVE_DAILY_LIMIT: ${STEVE_DAILY_LIMIT:-10}
       STEVE_GLOBAL_DAILY_LIMIT: ${STEVE_GLOBAL_DAILY_LIMIT:-1000}
       GOOGLE_APPLICATION_CREDENTIALS: /run/secrets/firebase_admin
+      TRUSTED_PROXY_CIDRS: ${TRUSTED_PROXY_CIDRS:-}
       CORS_ORIGINS: ${CORS_ORIGINS:?Defina CORS_ORIGINS no arquivo .env}
     secrets:
       - firebase_admin

@@ -56,7 +56,7 @@
             "0,35%"
           ],
           "correctIndex": 1,
-          "explanation": "0,35 equivale a 35/100, portanto 35%. Para obter a quantidade de pontos percentuais, multiplicamos o decimal por 100."
+          "explanation": "0,35 equivale a 35/100, portanto 35%. Para converter o decimal em porcentagem, multiplicamos por 100 e acrescentamos o símbolo %."
         },
         {
           "id": "porcentagem-q3",

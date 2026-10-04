@@ -87,7 +87,7 @@ void main() {
       expect(tester.takeException(), isNull);
     });
   }
-  testWidgets('large text does not overflow and shader has a motion toggle', (
+  testWidgets('large text does not overflow and the hero has a motion toggle', (
     tester,
   ) async {
     await openApp(tester, scale: 2);
@@ -101,7 +101,7 @@ void main() {
     expect(tester.takeException(), isNull);
     await tester.tap(find.byTooltip('Preferências'));
     await tester.pumpAndSettle();
-    expect(find.text('Animação de fundo'), findsOneWidget);
+    expect(find.text('Animação do hero'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 }

@@ -1,5 +1,6 @@
 import {chromium,expect} from '@playwright/test';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
+import { navigate, revealPainted } from './web-verification-helpers.mjs';
 const url=process.env.PREVIEW_URL??'http://127.0.0.1:4174';
 const output='artifacts/rotina-estudo/browser';await mkdir(output,{recursive:true});
 const userA='11111111-1111-4111-8111-111111111111',userB='22222222-2222-4222-8222-222222222222';
@@ -56,13 +57,17 @@ try{
   });
   await page.goto(url+'/#/meu-estudo');await page.locator('flt-semantics-placeholder').dispatchEvent('click');
   await expect(page.locator('flt-semantics').getByText('Entrar para salvar meu estudo',{exact:true})).toBeVisible();
-  await login(page,'a@example.com');await page.getByRole('button',{name:/^Meu estudo(?:\s|$)/}).first().click();
+  await login(page,'a@example.com');await navigate(page,'Meu estudo');
   await expect(page.locator('flt-semantics').getByText('0 de 10 questões diferentes',{exact:true})).toBeVisible();
   const seed=free.topics.find(t=>t.id==='porcentagem');history.set(userA+'freeStudy',[{topicId:seed.id,contentVersion:free.catalogVersion,questionId:seed.questions[0].id,correct:true},{topicId:seed.id,contentVersion:free.catalogVersion,questionId:seed.questions[1].id,correct:false},{topicId:seed.id,contentVersion:free.catalogVersion,questionId:seed.questions[1].id,correct:false}]);
   await click(page,'Atualizar meu estudo');
   await expect(page.locator('flt-semantics').getByText('2 de 10 questões diferentes',{exact:true})).toBeVisible();
   await expect(page.locator('flt-semantics').getByText('1 acerto em 3 tentativas',{exact:true})).toBeVisible();
-  await click(page,'10 questões');await page.getByRole('menuitem',{name:'5 questões',exact:true}).click();
+  const dailyTarget=page.getByRole('button',{name:/^Questões por dia(?:\s|$)/});
+  await expect(dailyTarget).toHaveAccessibleName('Questões por dia 10 questões');
+  await revealPainted(page,dailyTarget);await dailyTarget.click();
+  await page.getByRole('menuitem',{name:'5 questões',exact:true}).click();
+  await expect(dailyTarget).toHaveAccessibleName('Questões por dia 5 questões');
   await expect(page.locator('flt-semantics').getByText('2 de 5 questões diferentes',{exact:true})).toBeVisible();
   await page.screenshot({path:`${output}/${viewport.width}-dashboard.png`,fullPage:true});
   for(const [scope,topic,quizPath]of [['freeStudy',free.topics[0],`/desafios/${free.topics[0].id}`],['bb2026',contests.disciplines[0].modules[0],`/concursos/${contests.course.id}/${contests.disciplines[0].id}/${contests.disciplines[0].modules[0].id}/desafio`]]){
@@ -79,7 +84,7 @@ try{
   }
   await page.goto(url+'/#/meu-estudo');await page.getByRole('checkbox',{name:'Estudo livre',exact:true}).click();
   await page.getByRole('checkbox',{name:'Banco do Brasil',exact:true}).click();await expect(page.locator('flt-semantics').getByText('1 de 10 questões diferentes',{exact:true})).toBeVisible();
-  await page.goto(url+'/#/conta');await click(page,'Sair da conta');await login(page,'b@example.com');await page.getByRole('button',{name:/^Meu estudo(?:\s|$)/}).first().click();
+  await page.goto(url+'/#/conta');await click(page,'Sair da conta');await login(page,'b@example.com');await navigate(page,'Meu estudo');
   await expect(page.locator('flt-semantics').getByText('0 de 10 questões diferentes',{exact:true})).toBeVisible();
   expect(pageErrors).toEqual([]);reports.push({viewport,timezoneId,activityDates:dates,flows:10,internalErrors:pageErrors,transport:'controlled test fixture; no live Firebase/OpenAI'});await context.close();
  }

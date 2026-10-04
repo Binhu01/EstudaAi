@@ -9,6 +9,7 @@ export interface AppDependencies {
   users: UserRepository;
   ready: () => Promise<boolean>;
   origins: string[];
+  trustedProxyCidrs?: readonly string[];
   rateLimit?: number;
   auth?: AuthGateway;
   steve?: SteveService;

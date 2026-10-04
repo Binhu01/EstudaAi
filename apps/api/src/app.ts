@@ -94,6 +94,7 @@ export async function createApp(dependencies: AppDependencies) {
   class AppModule {}
   const app = await NestFactory.create(AppModule, { logger: false, bodyParser: false });
   app.getHttpAdapter().getInstance().disable('x-powered-by');
+  app.getHttpAdapter().getInstance().set('trust proxy', dependencies.trustedProxyCidrs?.length ? [...dependencies.trustedProxyCidrs] : false);
   app.use(helmet());
   app.use((request: Request, response: Response, next: NextFunction) => {
     response.setHeader('x-request-id', randomUUID());

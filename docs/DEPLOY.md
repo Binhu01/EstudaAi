@@ -1,6 +1,6 @@
 # Operação e preparação de deploy
 
-**Nenhum deploy foi feito.** Docker/Compose e integração Firebase/OpenAI real não foram executados nesta sessão. Prisma/PostgreSQL18 foi testado em cluster temporário isolado; isso não homologa migrações nem credenciais de produção. Este guia define o procedimento a validar no destino.
+**Nenhum deploy público foi feito.** Firebase e histórico foram validados com serviços reais no ambiente local; a OpenAI foi adiada pelo usuário. O banco PostgreSQL18 local preserva os dados de estudo. Imagens, HTTPS, migrações e credenciais precisam ser conferidos no destino antes de liberar tráfego. Este guia descreve esse procedimento e distingue preparo de publicação efetiva.
 
 ## Imagem e migração
 
@@ -24,7 +24,7 @@ O Compose é um ponto de partida local de instância única: portas ficam em loo
 ## Pendências antes de expor a API
 
 - Configurar domínio e terminação HTTPS; CORS exige origens exatas, sem wildcard.
-- Implementar e testar confiança em proxies conhecidos no backend antes de depender de IP encaminhado. O código atual não configura `trust proxy`; atrás de um proxy, o limite por IP pode agrupar clientes pelo endereço do proxy.
+- Configurar `TRUSTED_PROXY_CIDRS` somente com os IPs/CIDRs dos proxies que conectam diretamente à API. O padrão vazio ignora headers encaminhados; wildcards, nomes e quantidade de saltos são recusados. Os testes HTTP comprovam separação por IP com peer confiável e recusa de header forjado em peer não confiável. Nunca confiar em toda a rede por conveniência.
 - Manter uma instância enquanto o rate limiter usar memória. Armazenamento compartilhado e testes de múltiplas réplicas são pré-requisitos para escala horizontal.
 - Ensaiar o job de migração e a versão PostgreSQL do destino; o teste local usa18 e a CI preparada usa17. Configurar e validar credenciais Firebase e provedor/modelo Steve.
 - Verificar token inválido, expirado, revogado e de outro projeto com o serviço Firebase real, sem registrar tokens.
@@ -32,11 +32,21 @@ O Compose é um ponto de partida local de instância única: portas ficam em loo
 
 `/health/live` e `/health/ready` são públicos. Readiness executa `SELECT 1`, portanto não verifica Firebase ou presença das tabelas. O monitoramento deve incluir também um teste privado controlado após migrações. Logs da API contêm request ID, rota, método, status e duração; não acrescente credenciais ou payloads pessoais ao coletor.
 
+## HTTPS com o stack atual
+
+O arquivo [infra/Caddyfile](../infra/Caddyfile) serve o build Web e encaminha `/v1/*` e `/health/*` à API em `127.0.0.1:3001`, no mesmo domínio. Configure `ESTUDA_AI_DOMAIN` com o host, sem protocolo, e `ESTUDA_AI_WEB_ROOT` com o caminho absoluto do build. Compile Flutter com `API_ORIGIN=https://seu-dominio.example` e use essa mesma origem em `CORS_ORIGINS` e `PREVIEW_URL` do diagnóstico de produção.
+
+DNS A/AAAA deve apontar para o servidor; portas 80/443 precisam ser acessíveis e o armazenamento de certificados do Caddy deve permanecer persistente. Valide com `caddy validate --config infra/Caddyfile --adapter caddyfile` antes de iniciar o serviço. O job da CI valida o arquivo com domínio de exemplo; isso não emite nem comprova certificado público. Veja [HTTPS automático](https://caddyserver.com/docs/automatic-https) e [reverse proxy](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy).
+
+Se Caddy e Node estiverem no mesmo host, os peers de loopback podem ser configurados como `127.0.0.1/32,::1/128`. Se a API estiver em container, descubra o endereço real que chega pelo mapeamento de portas e configure somente esse peer; não suponha que seja loopback e não use contagem de saltos. Mantenha a API/banco em loopback, sem expor as portas diretamente à internet. A validação do proxy deve ocorrer no destino antes de alunos reais.
+
+Backup e ensaio de restauração: siga [BACKUP.md](BACKUP.md). Guarde cópia diária privada, antes de migrações e fora do host de produção, com retenção definida pelo operador. O utilitário não envia dados para um serviço remoto nem remove cópias antigas. Agendamento e destino externo dependem da hospedagem escolhida. Confira o ensaio e a integridade antes de confiar na cópia.
+
 ## Cliente Web
 
-O build `flutter build web --release --no-web-resources-cdn --dart-define=API_ORIGIN=https://api.seu-dominio.example` gera `apps/client/build/web` com renderizador local e origem pública da API. Confira `npm run preview`, `npm run test:visual` e `npm run test:study`, seguindo [Instalação](INSTALACAO.md). Configure HTTPS e fallback `index.html`. Home, aulas e quiz são públicos; conta e Steve usam a API. Firebase Email/Password deve estar habilitado; configure o par chave/modelo exclusivamente no backend. Login fica apenas em memória e requer novo acesso ao recarregar.
+O build `flutter build web --release --no-web-resources-cdn --dart-define=API_ORIGIN=https://seu-dominio.example` gera `apps/client/build/web` com renderizador local e origem pública da API. Confira `npm run preview`, `npm run test:visual` e `npm run test:study`, seguindo [Instalação](INSTALACAO.md). Configure HTTPS e fallback `index.html`. Home, aulas e quiz são públicos; conta e Steve usam a API. Firebase Email/Password deve estar habilitado; configure o par chave/modelo exclusivamente no backend. Login fica apenas em memória e requer novo acesso ao recarregar.
 
-A CI preparada verifica API, PostgreSQL17 isolado, Flutter Web e fluxos Chromium, disponibilizando build/capturas como artefatos. Ela não publica, migra banco remoto nem fornece credenciais de produção. **O workflow ainda não foi executado no GitHub; não há resultado remoto verde declarado.**
+A CI verifica API, PostgreSQL17 isolado, restauração de backup, Flutter Web e fluxos Chromium, disponibilizando build/capturas como artefatos. O cliente17 de backup vem do repositório apt do PostgreSQL, seguindo as [instruções oficiais para Ubuntu](https://www.postgresql.org/download/linux/ubuntu/), para acompanhar a versão do serviço. A [execução 37209591233](https://github.com/Binhu01/EstudaAi/actions/runs/37209591233), no commit `75a1070` do PR#3, aprovou os três jobs, incluindo as imagens runtime/migration, ambos os catálogos dentro da imagem e a validação do Caddyfile. Ela não publica, emite certificado público, migra banco remoto nem fornece credenciais de produção. O ensaio no destino continua necessário antes de liberar tráfego.
 
 As actions foram fixadas por SHA após consulta das tags oficiais em 30/09/2026: [checkout v7](https://github.com/actions/checkout/tree/v7), [setup-node v7](https://github.com/actions/setup-node/tree/v7), [upload-artifact v7](https://github.com/actions/upload-artifact/tree/v7) e [flutter-action v2](https://github.com/subosito/flutter-action/tree/v2). A existência dessas referências não confirma uma execução da CI.
 

@@ -1,5 +1,52 @@
 # Evidências da experiência de estudo
 
+## Fechamento e preparo de publicação — 04/10/2026
+
+A versão atual acrescenta correção dos destinos pós-login, proxies explicitamente confiáveis, backup privado e atualização dos verificadores para a sidebar e os dois elementos animados do hero.
+
+| Verificação desta execução | Resultado |
+| --- | --- |
+| API | 96/96; build TypeScript e ambos os catálogos incluídos |
+| Flutter | 130/130; análise limpa, formatação e build Web release concluídos |
+| Ferramentas | 54/54 com regressão PostgreSQL de backup ativada; sintaxe dos sete scripts aprovada |
+| Conteúdo | 126 módulos, 756 questões, seis propostas; `errors:[]` |
+| PostgreSQL isolado | 1/1 integração com concorrência/quota/histórico; cluster de estudo preservado |
+| Backup real | 7 tabelas e1 sequência restauradas em banco UUID; dados/schema conferidos e original preservado |
+| Navegador integrado | Layout do hero em 1440×900 e 360×800, navegação móvel por teclado, menu→painel→conta; proteção sem sessão e console sem erros/avisos |
+| Android | Permissão INTERNET incluída no manifesto principal; sem build/homologação nativa |
+
+Os quatro destinos pós-login (aulas/Steve × Estudo livre/Concursos) passaram em testes de widgets, incluindo texto ampliado. Os testes HTTP do proxy comprovam que headers forjados não mudam o IP sem um proxy configurado e que clientes encaminhados por um proxy permitido têm limites separados.
+
+A prévia e a API locais foram retomadas; `/health/ready` respondeu200 com banco identificado e dados preservados. A sessão autenticada no navegador aguarda entrada do usuário. A OpenAI foi adiada novamente por sua escolha; não houve chamada real ao Steve. Domínio, hospedagem e orçamento ainda não foram informados. Testes de tela estreita não substituem um aparelho real.
+
+O [ensaio de backup](BACKUP.md) verificou conteúdo, colunas, índices e constraints, incluindo uma regressão CHECK que preserva expressões equivalentes e detecta mudanças reais. Os arquivos e bancos de ensaio ficaram privados/preservados.
+
+O [PR#3](https://github.com/Binhu01/EstudaAi/pull/3) foi enviado sobre a base da rotina. Na primeira [execução remota37208198834](https://github.com/Binhu01/EstudaAi/actions/runs/37208198834), passaram API/backup com PostgreSQL17 e os builds runtime/migration com catálogos e Caddyfile. Também passaram geração, formatação, análise,130 testes Flutter e build Web. Isso valida o preparo de HTTPS, sem domínio/certificado público.
+
+O percurso de navegador conferiu o movimento do shader/cérebro no desktop, mas parou buscando o tema Escuro como checkbox. O controle atual é button, confirmado na CUA. A correção preserva o produto e as verificações de persistência; os quatro percursos aguardavam nova execução. Captura atual de Concursos salva no diretório de visualizações da conversa.
+
+A segunda [execução37208732395](https://github.com/Binhu01/EstudaAi/actions/runs/37208732395), em c81a45f, passou visual nos três tamanhos e movimento reduzido, nove percursos livres/45 questões e27 de Concursos/135 questões, sem erros internos. A rotina parou procurando o texto isolado10 questões; a captura/semântica mostra o botão Questões por dia10 questões abaixo da primeira dobra. O verificador passa a localizar esse botão, rolar a tela pintada e conferir a troca real10→5, mantendo os demais asserts de contas, metas e revisão. Essa correção motivou a execução final registrada a seguir.
+
+A [execução final 37209591233](https://github.com/Binhu01/EstudaAi/actions/runs/37209591233), no commit `75a1070`, concluiu com sucesso os três jobs: API; imagens de publicação/HTTPS; Flutter/Web. Os quatro percursos Chromium passaram: visual em três tamanhos com movimento/pausa/persistência/teclado, nove percursos livres/45 questões, 27 de Concursos/135 questões e 30 da rotina em três tamanhos. Todos reportaram zero erros internos. A rotina inclui meta 10→5, confirmação perdida/reenvio e separação de contas/áreas; seu transporte de autenticação/histórico é controlado. Esses resultados não comprovam login Firebase real no navegador, respostas OpenAI, certificado público ou homologação nativa. Os logs e metadados dessa execução foram conferidos antes de registrar esta evidência.
+
+## Aprendizagem integrada — 04/10/2026
+
+Implementação no worktree de Concursos, branch `codex/visual-dala-playdate`. O visual, a sidebar e a animação do hero existentes foram preservados. Esta seção registra a entrega anterior ao fechamento de publicação documentado acima.
+
+| Verificação local | Resultado |
+| --- | --- |
+| API | 92/92 testes, incluindo cobertura, sequência, limite temporal e contexto completo do Steve; build e catálogo incluídos |
+| Flutter | 126/126 testes e análise sem problemas; nove testes dirigidos do catálogo, quiz e revisão também passaram durante os ajustes finais de texto e contraste |
+| Web release | Compilado com API local, sem recursos CDN e com `FLUTTER_WINDOWS=false` somente no processo |
+| Serviços reais | Banco pronto, login Firebase, identidade verificada, progresso e caderno em Estudo livre e Banco do Brasil; acesso privado sem sessão devolve 401 |
+| Navegador real | Leitura e controles em 1440×900 e 360×800; módulo anterior dentro da disciplina e próximo desativado no último módulo; rodada pública com acertos, erro, explicação e resumo |
+
+O painel e a rodada de revisão autenticados foram verificados em testes de widgets e HTTP/SQL; não se afirma uma sessão autenticada no navegador nesta entrega. O percurso público foi conferido no navegador integrado. A checagem de console não encontrou avisos ou erros internos. Capturas da leitura desktop/mobile e do resumo estão salvas no diretório de visualizações da conversa.
+
+O banco local foi retomado com os dados preservados. Firebase e histórico foram exercitados com a conta dedicada de validação e configuração privada, sem expor credenciais. A OpenAI permanece pendente por escolha do usuário: não houve chamada ao provedor nem comprovação de resposta real do Steve. As instruções e o conteúdo contextual do tutor passaram nos testes locais. Não houve migração, build nativo, publicação, push ou criação de PR nesta etapa.
+
+Os comportamentos e limites estão descritos em [Aprendizagem](APRENDIZAGEM.md).
+
 ## Rotina diária — 02/10/2026
 
 Branch `codex/rotina-estudo`, baseada em `ed17772`, no worktree isolado do EstudaAi. AlmaPet e a branch do PR#1 foram preservados. Implementação direta, testes por etapa e uma revisão independente do conjunto prevista ao final.
