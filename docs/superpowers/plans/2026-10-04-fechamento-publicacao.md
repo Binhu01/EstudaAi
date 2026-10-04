@@ -20,7 +20,7 @@
 - [x] Atualizar README/guias com o estado atual e resultados executados, repetir testes apropriados e build Web.
 - [x] Revisar arquivos sem segredos, criar commit, enviar branch e abrir PR sobre codex/rotina-estudo, que contém a base atual. PR#3 criado; base/head conferidos.
 
-Verificação local: API96/96, Flutter130/130, ferramentas54/54, integração PostgreSQL1/1, build/análise limpos. Backup real de7tabelas/1sequência passou, com original preservado. Revisão independente sem bloqueadores. A primeira CI do PR#3 passou API/backup e imagens/HTTPS, além de geração/análise/testes/build Flutter. O percurso Web encontrou seletor antigo de tema; correção limitada ao verificador e nova execução pendente. Os resultados finais serão registrados no PR.
+Verificação local: API96/96, Flutter130/130, ferramentas54/54, integração PostgreSQL1/1, build/análise limpos. Backup real de7tabelas/1sequência passou, com original preservado. Revisão independente sem bloqueadores. A [execução final 37209591233](https://github.com/Binhu01/EstudaAi/actions/runs/37209591233), no commit `75a1070`, aprovou os três jobs e os quatro percursos Web. Inclui visual nos três tamanhos, nove percursos livres/45 questões, 27 de Concursos/135 questões e 30 da rotina, sem erros internos. Os dois seletores antigos foram corrigidos somente nos verificadores; comportamento e asserts do produto foram preservados. Evidência final registrada também no PR#3 e em VALIDACAO.md. A autenticação dos percursos de rotina usa transporte controlado, sem comprovar uma sessão Firebase real no navegador.
 
 ## Pontos de revisão
 
